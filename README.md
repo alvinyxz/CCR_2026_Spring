@@ -14,6 +14,56 @@ The GitHub page is organized into eight folders (Day 0 through Day 7), each corr
 
 ## Schedule
 
+### 2026/01/22
+
+Foundational Readings
+
+### 2026/01/29
+
+Text
+
+### 2026/02/05
+
+STM, Embedding
+
+### 2026/02/12
+
+### 2026/02/19
+
+### 2026/02/26
+
+### 2026/03/05
+
+Group Project Proposal and Submit
+
+### 2026/03/19
+
+
+
+### 2026/03/26
+
+Network
+
+### 2026/04/02
+
+IGRAPH
+
+### 2026/04/09
+
+Visualization
+
+### 2026/04/16
+
+GGPlot2, Shiny
+
+### 2026/04/23
+
+Ethics, Open Science, and Reproducibility
+
+### 2026/04/30
+
+Group Project Presentation
+
 ### Day 0 - Foundational Readings
 
 - **Readings:** https://github.com/alvinyxz/CSS_Workshop/blob/main/Day0
