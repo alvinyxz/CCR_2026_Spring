@@ -1,8 +1,10 @@
 # Syllabus
 
-- **Date:** June 2–6 and June 9–10, 2025
-- **Time:** Every day, 9:00 AM–12:00 PM and 1:00 PM–4:00 PM; Catered Lunch on Day 1 and Day 6 after guest lectures
-- **Location:** In person, Room 32 (basement), Murphy Hall, UMN Twin Cities
+- **Course Title:** JOUR 8500: Computational Communication Research
+- **Date:** Thursdays, Jan 22 – Apr 30, 2026 (No class on Mar 12)
+- **Format:** Seminar + Lab (every week)
+- **Primary Language:** R (no prior coding assumed)
+- **Location:** In person, Murphy Hall 25 (basement)
 
 Welcome to the inaugural Computational Social Science (CSS) Workshop, hosted by the College of Liberal Arts (CLA) Data Science Initiative at the University of Minnesota.
 
