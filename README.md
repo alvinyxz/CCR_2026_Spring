@@ -8,33 +8,44 @@
 
 ## Weekly Structure
 
-- Discussion (≈45–60 min): Reading Discussion - Research Design, Theory, Concepts, and Critique.
-- Deliverable (≈30-45 min): R package demonstration (script, figure, memo, or notebook)
-- Lab (≈90 min): Hands-on coding session with step-by-step instructions.
+- Reading Discussion (40min): Research design, theory, concepts, and critique
+- Deliverable (30min x 2): R package demonstration (script, presentation, and memo)
+- Lab + Assignment (45min): Hands-on coding session with assignments
 
-## Assignments
+## Grading
 
-Component %
-Participation & weekly discussion posts 15%
-Weekly labs (10 × 2%) 20%
-Computational Toolkit Demo + R Markdown Note 15%
-Project milestones (pitch, proposal, feedback) 20%
-Final paper OR proposal (individual or group) 30%
+- Reading Discussion 30%
+  - [Every Week] Canvas weekly discussion posts & in-class participation: 10%
+    - The course is organized as a seminar, which means all students are expected to attend all classes, to have read and thought about all readings prior to the class, and to participate actively and productively in class discussion.
+    - In general, before class, you should have carefully thought about: 1) how the computational methods used in each study helped address the specific research questions of interest to the authors, 2) in what sense these computational methods could extend conventional methods, 3) what are their major assumptions and limitations, and 4) what new arenas for future research these computational methods could open.
+    - To facilitate discussion, each week, all students will submit (to me as well as the whole class) at least ONE thoughtful question or comment of interest to you emerging from the week's readings. You do not need to post additional questions/comments for readings you are already assigned as Reading Discussion Lead. These discussion questions/comments should be posted to the Discussions section on Canvas at least 24 hours earlier than the scheduled class meeting.
+  - [Four Times] Reading Discussion Lead (annotation + response Letter + lead Discussant): 5%x4 = 20%
+    - Throughout this semester, you are required to sign up as the lead discussant for 4 research papers on the reading list.
+    - 
+- Deliverable 30%
+  - [Twice] R package demonstration (15% × 2) = 30%
+- Final Paper 30%
+  - Paper Idea Pitch (5% ×2 = 10%)
+  - Final paper OR proposal (individual or group) 30%
 
 
 ### 2026/01/22
 
-Foundational Readings
+- Introduction
+- Install R and RStudio
+- Try out Google Colab or Jupyter Notebook for Python
 
 ### 2026/01/29
 
-Text
+Foundational Readings
 
 ### 2026/02/05
 
-STM, Embedding
+Text
 
 ### 2026/02/12
+
+STM, Embedding
 
 ### 2026/02/19
 
