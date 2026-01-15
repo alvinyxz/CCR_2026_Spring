@@ -6,25 +6,46 @@
 - **Location:** In person, Murphy Hall 25 (basement)
 - **Materials:** https://z.umn.edu/CCR_2026_Spring
 
-## Weekly Structure
+## Structure and Grading
 
-- Reading Discussion (40min): Research design, theory, concepts, and critique
-- Deliverable (30min x 2): R package demonstration (script, presentation, and memo)
-- Lab + Assignment (45min): Hands-on coding session with assignments
+### Reading Discussion (40min per week, 30%)
 
-## Grading
+#### [Every Week] Canvas weekly discussion posts & in-class participation: 10%
 
-- Reading Discussion 30%
-  - [Every Week] Canvas weekly discussion posts & in-class participation: 10%
-    - The course is organized as a seminar, which means all students are expected to attend all classes, to have read and thought about all readings prior to the class, and to participate actively and productively in class discussion.
-    - In general, before class, you should have carefully thought about: 1) how the computational methods used in each study helped address the specific research questions of interest to the authors, 2) in what sense these computational methods could extend conventional methods, 3) what are their major assumptions and limitations, and 4) what new arenas for future research these computational methods could open.
-    - To facilitate discussion, each week, all students will submit (to me as well as the whole class) at least ONE thoughtful question or comment of interest to you emerging from the week's readings. You do not need to post additional questions/comments for readings you are already assigned as Reading Discussion Lead. These discussion questions/comments should be posted to the Discussions section on Canvas at least 24 hours earlier than the scheduled class meeting.
-  - [Four Times] Reading Discussion Lead (annotation + response Letter + lead Discussant): 5%x4 = 20%
-    - Throughout this semester, you are required to sign up as the lead discussant for 4 research papers on the reading list.
-    - 
-- Deliverable 30%
+The course is organized as a seminar, which means all students are expected to attend all classes, to have read and thought about all readings prior to the class, and to participate actively and productively in class discussion.
+
+In general, before class, you should have carefully thought about: 1) how the computational methods used in each study helped address the specific research questions of interest to the authors, 2) in what sense these computational methods could extend conventional methods, 3) what are their major assumptions and limitations, and 4) what new arenas for future research these computational methods could open.
+
+To facilitate discussion, each week, all students will submit (to me as well as the whole class) at least ONE thoughtful question or comment of interest to you emerging from the week's readings. You do not need to post additional questions/comments for readings you are already assigned as Reading Discussion Lead. These discussion questions/comments should be posted to the "Discussions" section on Canvas at least 24 hours earlier than the scheduled class meeting.
+
+#### [Four Times] Reading Discussion Lead (Response Letter with Annotation + Lead Discussant): 5%x4 = 20%
+
+Throughout this semester, you are required to sign up for 4 research papers on the reading list. For each reading, you will: 1) prepare a brief response paper with annotations, and 2) serve as the lead discussant for those assigned articles.
+
+You are expected to post your response letter with annotation to Canvas at least 24 hours earlier than the scheduled class meeting. If for some reason you will be unable to attend a class for which you are assigned to provide a discussion guide, it is your responsibility to either trade assigned readings with someone else in the class who can attend, or arrange someone else to distribute your discussion guides at the start of the relevant class period.
+
+[Extra Credit] If you volunteer to be a lead discussant for an extra reading (i.e., 5 total), you will receive 5% extra credit added to your final grade.
+
+##### Response Letter with Annotation
+
+Each response paper starts with annotations, which should take the format of astructured outline or an extended abstract that briefly summarizes (1) the background information and motivation for the study, (2) hypotheses and research questions, (3) the method session (study design, sample, data, measures, analytical strategies), and (4) results with copied main tables/figures. Annotations should focus on summarizing what has been done. The length may vary depending on the complexity of the paper.
+
+Following the annotation, the response letter should highlight your own assessment and reflections about the reading (roughly 300-600 words). These short response papers serve four purposes: (1) they summarize a reading to focus attention on main points and to highlight its relevance to issues of concern in the course, (2) they outline the strengths and weaknesses of the computational method(s) used in the study (no need to cover all the technical details), (3) they raise questions about a reading that can be used to stimulate discussion especially with regards to the strengths and weaknesses of the computational method(s), and (4) they connect new readings to old readings in order to highlight common themes and to point out how current readings raise, address, or underscore questions sparked by previous reading assignments. By the end of the course, each student will have access to summaries and analyses of every major reading covered during the semester.
+
+##### Lead Discussant
+
+You will also serve as the lead discussant for these assigned articles. In class, you will present a brief summary of the main substantive findings as well as the analytical approach, will work with me to keep conversation moving forward, providing examples from the reading when appropriate and posing questions for all seminar participants to answer.
+
+You are expected to take the lion's share of the responsibility to help other students understand how the computational method(s) in the reading work. The focus is to provide the conceptual ground rather than all the technical details. It would be most fruitful to sign up for readings overlapping with your computational toolkit demo.
+
+While not required, you can use your own way of presentation (e.g., PowerPoint slides, whiteboard, handouts, etc.). You may also want to prepare a few questions to stimulate discussion. Treat this also as a way to practice your presentation/teaching/discussant skills, which are very important in both academia and industry and useful when attending and moderating conference panels.
+
+### Computational Toolkit Demo (30min x 2, 30%)
+
+  
   - [Twice] R package demonstration (15% × 2) = 30%
-- Final Paper 30%
+
+### Final Paper (40%)
   - Paper Idea Pitch (5% ×2 = 10%)
   - Final paper OR proposal (individual or group) 30%
 
