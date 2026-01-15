@@ -1,16 +1,52 @@
-# JOUR 8500: Computational Communication Research
+- [Syllabus, Components, and Assignments](#syllabus-components-and-assignments)
+  - [Reading Discussion (40min per week, 30%)](#reading-discussion-40min-per-week-30)
+    - [\[Every Week\] Canvas weekly discussion posts \& in-class participation: 10%](#every-week-canvas-weekly-discussion-posts--in-class-participation-10)
+    - [\[Four Times\] Reading Discussion Lead (Response Letter with Annotation + Lead Discussant): 5%x4 = 20%](#four-times-reading-discussion-lead-response-letter-with-annotation--lead-discussant-5x4--20)
+      - [Response Letter with Annotation](#response-letter-with-annotation)
+      - [Lead Discussant](#lead-discussant)
+  - [Computational Toolkit Demo (30min x 2, 30%)](#computational-toolkit-demo-30min-x-2-30)
+  - [Final Paper (40%)](#final-paper-40)
+- [Course Schedule](#course-schedule)
+    - [2026/01/22](#20260122)
+    - [2026/01/29](#20260129)
+    - [2026/02/05](#20260205)
+    - [2026/02/12](#20260212)
+    - [2026/02/19](#20260219)
+    - [2026/02/26](#20260226)
+    - [2026/03/05](#20260305)
+    - [2026/03/19](#20260319)
+    - [2026/03/26](#20260326)
+    - [2026/04/02](#20260402)
+    - [2026/04/09](#20260409)
+    - [2026/04/16](#20260416)
+    - [2026/04/23](#20260423)
+    - [2026/04/30](#20260430)
+    - [Day 0 - Foundational Readings](#day-0---foundational-readings)
+    - [Day 1 - Welcome and Get Ready](#day-1---welcome-and-get-ready)
+    - [Day 2 - Text (Basic: Dictionary and Classification)](#day-2---text-basic-dictionary-and-classification)
+    - [Day 3 - Text (Advanced: API, Topic Modeling, Embedding, and Innovative Use)](#day-3---text-advanced-api-topic-modeling-embedding-and-innovative-use)
+    - [Day 4 - Networks](#day-4---networks)
+    - [Day 5 - The Web, Computational Infrastructure, and Innovative Datasets](#day-5---the-web-computational-infrastructure-and-innovative-datasets)
+    - [Day 6 - Image/Audio/Video](#day-6---imageaudiovideo)
+    - [Day 7 - Looking Ahead and LLM](#day-7---looking-ahead-and-llm)
+- [Additional Resources](#additional-resources)
+    - [Day 1: CSS Overview](#day-1-css-overview)
+    - [Day 2-3: Text](#day-2-3-text)
+    - [Day 4: Networks](#day-4-networks)
+    - [Day 5: The Web, Computational Infrastructure, and Public Datasets](#day-5-the-web-computational-infrastructure-and-public-datasets)
+    - [Day 6: Images/Videos/Audio](#day-6-imagesvideosaudio)
+    - [Day 7: Looking Ahead and LLM](#day-7-looking-ahead-and-llm)
 
-- **Date:** Thursdays, Jan 22 – Apr 30, 2026 (No class on Mar 12)
-- **Format:** Seminar + Lab (every week)
-- **Primary Language:** R (no prior coding assumed)
-- **Location:** In person, Murphy Hall 25 (basement)
-- **Materials:** https://z.umn.edu/CCR_2026_Spring
+# Syllabus, Components, and Assignments
 
-## Structure and Grading
+- Date: Thursdays, Jan 22 – Apr 30, 2026 (No class on Mar 12)
+- Location: In person, Murphy Hall 25 (basement)
+- Primary Language: R (no prior coding assumed)
+- Materials: https://z.umn.edu/J8500
 
-### Reading Discussion (40min per week, 30%)
+## Reading Discussion (40min per week, 30%)
 
-#### [Every Week] Canvas weekly discussion posts & in-class participation: 10%
+### [Every Week] Canvas weekly discussion posts & in-class participation: 10%
 
 The course is organized as a seminar, which means all students are expected to attend all classes, to have read and thought about all readings prior to the class, and to participate actively and productively in class discussion.
 
@@ -18,7 +54,7 @@ In general, before class, you should have carefully thought about: 1) how the co
 
 To facilitate discussion, each week, all students will submit (to me as well as the whole class) at least ONE thoughtful question or comment of interest to you emerging from the week's readings. You do not need to post additional questions/comments for readings you are already assigned as Reading Discussion Lead. These discussion questions/comments should be posted to the "Discussions" section on Canvas at least 24 hours earlier than the scheduled class meeting.
 
-#### [Four Times] Reading Discussion Lead (Response Letter with Annotation + Lead Discussant): 5%x4 = 20%
+### [Four Times] Reading Discussion Lead (Response Letter with Annotation + Lead Discussant): 5%x4 = 20%
 
 Throughout this semester, you are required to sign up for 4 research papers on the reading list. For each reading, you will: 1) prepare a brief response paper with annotations, and 2) serve as the lead discussant for those assigned articles.
 
@@ -26,13 +62,13 @@ You are expected to post your response letter with annotation to Canvas at least
 
 [Extra Credit] If you volunteer to be a lead discussant for an extra reading (i.e., 5 total), you will receive 5% extra credit added to your final grade.
 
-##### Response Letter with Annotation
+#### Response Letter with Annotation
 
 Each response paper starts with annotations, which should take the format of astructured outline or an extended abstract that briefly summarizes (1) the background information and motivation for the study, (2) hypotheses and research questions, (3) the method session (study design, sample, data, measures, analytical strategies), and (4) results with copied main tables/figures. Annotations should focus on summarizing what has been done. The length may vary depending on the complexity of the paper.
 
 Following the annotation, the response letter should highlight your own assessment and reflections about the reading (roughly 300-600 words). These short response papers serve four purposes: (1) they summarize a reading to focus attention on main points and to highlight its relevance to issues of concern in the course, (2) they outline the strengths and weaknesses of the computational method(s) used in the study (no need to cover all the technical details), (3) they raise questions about a reading that can be used to stimulate discussion especially with regards to the strengths and weaknesses of the computational method(s), and (4) they connect new readings to old readings in order to highlight common themes and to point out how current readings raise, address, or underscore questions sparked by previous reading assignments. By the end of the course, each student will have access to summaries and analyses of every major reading covered during the semester.
 
-##### Lead Discussant
+#### Lead Discussant
 
 You will also serve as the lead discussant for these assigned articles. In class, you will present a brief summary of the main substantive findings as well as the analytical approach, will work with me to keep conversation moving forward, providing examples from the reading when appropriate and posing questions for all seminar participants to answer.
 
@@ -40,15 +76,16 @@ You are expected to take the lion's share of the responsibility to help other st
 
 While not required, you can use your own way of presentation (e.g., PowerPoint slides, whiteboard, handouts, etc.). You may also want to prepare a few questions to stimulate discussion. Treat this also as a way to practice your presentation/teaching/discussant skills, which are very important in both academia and industry and useful when attending and moderating conference panels.
 
-### Computational Toolkit Demo (30min x 2, 30%)
+## Computational Toolkit Demo (30min x 2, 30%)
 
   
   - [Twice] R package demonstration (15% × 2) = 30%
 
-### Final Paper (40%)
+## Final Paper (40%)
   - Paper Idea Pitch (5% ×2 = 10%)
   - Final paper OR proposal (individual or group) 30%
 
+# Course Schedule
 
 ### 2026/01/22
 
@@ -254,7 +291,7 @@ Group Project Presentation
     - Park, J. S., O’Brien, J., Cai, C. J., Morris, M. R., Liang, P., & Bernstein, M. S. (2023). Generative agents: Interactive simulacra of human behavior. *Proceedings of the 36th Annual ACM Symposium on User Interface Software and Technology*, 1–22. https://doi.org/10.1145/3586183.3606763
     - Ashokkumar, A., Hewitt, L., Ghezae, I., & Willer, R. (2024). Predicting results of social science experiments using large language models. https://docsend.com/view/ity6yf2dansesucf
 
-## Additional Resources
+# Additional Resources
 
 To keep the workshop content fresh, assigned readings are mostly very-recent publications. Below, I provide a list of supplementary materials and resources that may enhance your understanding of the topics covered in the workshop, many of which are considered classics in the field of computational social science.
 
