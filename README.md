@@ -7,28 +7,28 @@
   - [1.2. Computational Toolkit Demo (15%x2 = 30%)](#12-computational-toolkit-demo-15x2--30)
   - [1.3. Final Paper (40%)](#13-final-paper-40)
 - [2. Course Schedule](#2-course-schedule)
-    - [2.0.1. 2026/01/22](#201-20260122)
-    - [2.0.2. 2026/01/29](#202-20260129)
-    - [2.0.3. 2026/02/05](#203-20260205)
-    - [2.0.4. 2026/02/12](#204-20260212)
-    - [2.0.5. 2026/02/19](#205-20260219)
-    - [2.0.6. 2026/02/26](#206-20260226)
-    - [2.0.7. 2026/03/05](#207-20260305)
-    - [2.0.8. 2026/03/19](#208-20260319)
-    - [2.0.9. 2026/03/26](#209-20260326)
-    - [2.0.10. 2026/04/02](#2010-20260402)
-    - [2.0.11. 2026/04/09](#2011-20260409)
-    - [2.0.12. 2026/04/16](#2012-20260416)
-    - [2.0.13. 2026/04/23](#2013-20260423)
-    - [2.0.14. 2026/04/30](#2014-20260430)
-    - [2.0.15. Day 0 - Foundational Readings](#2015-day-0---foundational-readings)
-    - [2.0.16. Day 1 - Welcome and Get Ready](#2016-day-1---welcome-and-get-ready)
-    - [2.0.17. Day 2 - Text (Basic: Dictionary and Classification)](#2017-day-2---text-basic-dictionary-and-classification)
-    - [2.0.18. Day 3 - Text (Advanced: API, Topic Modeling, Embedding, and Innovative Use)](#2018-day-3---text-advanced-api-topic-modeling-embedding-and-innovative-use)
-    - [2.0.19. Day 4 - Networks](#2019-day-4---networks)
-    - [2.0.20. Day 5 - The Web, Computational Infrastructure, and Innovative Datasets](#2020-day-5---the-web-computational-infrastructure-and-innovative-datasets)
-    - [2.0.21. Day 6 - Image/Audio/Video](#2021-day-6---imageaudiovideo)
-    - [2.0.22. Day 7 - Looking Ahead and LLM](#2022-day-7---looking-ahead-and-llm)
+  - [2.1. 2026/01/22](#21-20260122)
+  - [2.2. 2026/01/29](#22-20260129)
+  - [2.3. 2026/02/05](#23-20260205)
+  - [2.4. 2026/02/12](#24-20260212)
+  - [2.5. 2026/02/19](#25-20260219)
+  - [2.6. 2026/02/26](#26-20260226)
+  - [2.7. 2026/03/05](#27-20260305)
+  - [2.8. 2026/03/19](#28-20260319)
+  - [2.9. 2026/03/26](#29-20260326)
+  - [2.10. 2026/04/02](#210-20260402)
+  - [2.11. 2026/04/09](#211-20260409)
+  - [2.12. 2026/04/16](#212-20260416)
+  - [2.13. 2026/04/23](#213-20260423)
+  - [2.14. 2026/04/30](#214-20260430)
+  - [2.15. 2026/05/07](#215-20260507)
+    - [2.15.1. Day 1 - Welcome and Get Ready](#2151-day-1---welcome-and-get-ready)
+    - [2.15.2. Day 2 - Text (Basic: Dictionary and Classification)](#2152-day-2---text-basic-dictionary-and-classification)
+    - [2.15.3. Day 3 - Text (Advanced: API, Topic Modeling, Embedding, and Innovative Use)](#2153-day-3---text-advanced-api-topic-modeling-embedding-and-innovative-use)
+    - [2.15.4. Day 4 - Networks](#2154-day-4---networks)
+    - [2.15.5. Day 5 - The Web, Computational Infrastructure, and Innovative Datasets](#2155-day-5---the-web-computational-infrastructure-and-innovative-datasets)
+    - [2.15.6. Day 6 - Image/Audio/Video](#2156-day-6---imageaudiovideo)
+    - [2.15.7. Day 7 - Looking Ahead and LLM](#2157-day-7---looking-ahead-and-llm)
 - [3. Additional Resources](#3-additional-resources)
     - [3.0.1. Day 1: CSS Overview](#301-day-1-css-overview)
     - [3.0.2. Day 2-3: Text](#302-day-2-3-text)
@@ -36,6 +36,7 @@
     - [3.0.4. Day 5: The Web, Computational Infrastructure, and Public Datasets](#304-day-5-the-web-computational-infrastructure-and-public-datasets)
     - [3.0.5. Day 6: Images/Videos/Audio](#305-day-6-imagesvideosaudio)
     - [3.0.6. Day 7: Looking Ahead and LLM](#306-day-7-looking-ahead-and-llm)
+
 
 # 1. Syllabus, Components, and Assignments
 
@@ -46,7 +47,7 @@
 - Location: In person, Murphy Hall 25 (basement)
 - Primary Language: R (no prior coding assumed)
 - Materials: https://z.umn.edu/J8500
-- In-person office hours: Thursdays 1:30-2:30 pm, Murphy Hall 325
+- In-Person Office Hours: Thursdays 1:30-2:30 pm, Murphy Hall 325
 - Or book me for virtual office hours on Google Calendar: https://z.umn.edu/Alvin_Meeting and we will meet on Zoom
 
 ## 1.1. Reading Discussion (30%)
@@ -93,70 +94,69 @@ You can use your own way of presentation (e.g., PowerPoint slides, whiteboard, h
 
 # 2. Course Schedule
 
-### 2.0.1. 2026/01/22
+## 2.1. 2026/01/22
 
 - Introduction
 - Install R and RStudio
 - Try out Google Colab or Jupyter Notebook for Python
 
-### 2.0.2. 2026/01/29
+## 2.2. 2026/01/29
 
-Foundational Readings
-
-### 2.0.3. 2026/02/05
-
-Text
-
-### 2.0.4. 2026/02/12
-
-STM, Embedding
-
-### 2.0.5. 2026/02/19
-
-### 2.0.6. 2026/02/26
-
-### 2.0.7. 2026/03/05
-
-Group Project Proposal and Submit
-
-### 2.0.8. 2026/03/19
-
-
-
-### 2.0.9. 2026/03/26
-
-Network
-
-### 2.0.10. 2026/04/02
-
-IGRAPH
-
-### 2.0.11. 2026/04/09
-
-Visualization
-
-### 2.0.12. 2026/04/16
-
-GGPlot2, Shiny
-
-### 2.0.13. 2026/04/23
-
-Ethics, Open Science, and Reproducibility
-
-### 2.0.14. 2026/04/30
-
-Group Project Presentation
-
-### 2.0.15. Day 0 - Foundational Readings
-
-- **Readings:** https://github.com/alvinyxz/CSS_Workshop/blob/main/Day0
+- **Foundational Readings:**
   - Lazer, D., Pentland, A., Adamic, L., Aral, S., Barabasi, A.-L., Brewer, D., Christakis, N., Contractor, N., Fowler, J., Gutmann, M., Jebara, T., King, G., Macy, M., Roy, D., & Van Alstyne, M. (2009). Computational social science. *Science, 323*(5915), 721–723. https://doi.org/10.1126/science.1167742
   - Lazer, D., Pentland, A., Watts, D. J., Aral, S., Contractor, N., Freelon, D., Gonzalez-Bailon, S., King, G., Nelson, A., Salganik, J., Strohmaier, M., Vespignani, A., & Wagner, C. (2020). Computational social science: Obstacles and opportunities. *Science, 369*(6507), 1060–1062. https://doi.org/10.1126/science.aaz8170
   - Lazer, D., Hargittai, E., Freelon, D., Gonzalez-Bailon, S., Munger, K., Ognyanova, K., & Radford, J. (2021). Meaningful measures of human society in the twenty-first century. *Nature, 595*(7866), 189–196. https://doi.org/10.1038/s41586-021-03660-7
   - Hofman, J. M., Watts, D. J., Athey, S., Garip, F., Griffiths, T. L., Kleinberg, J., Margetts, H., Mullainathan, S., Salganik, M. J., Vazire, S., Vespignani, A., & Yarkoni, T. (2021). Integrating explanation and prediction in computational social science. *Nature, 595*(7866), 181–188. https://doi.org/10.1038/s41586-021-03659-0
   - Wallach, H. (2018). Computational social science ≠ computer science + social data. *Communications of the ACM, 61*(3), 42–44. https://doi.org/10.1145/3132698
 
-### 2.0.16. Day 1 - Welcome and Get Ready
+## 2.3. 2026/02/05
+
+Text
+
+## 2.4. 2026/02/12
+
+STM, Embedding
+
+## 2.5. 2026/02/19
+
+## 2.6. 2026/02/26
+
+## 2.7. 2026/03/05
+
+Group Project Proposal and Submit
+
+## 2.8. 2026/03/19
+
+
+
+## 2.9. 2026/03/26
+Network
+
+## 2.10. 2026/04/02
+
+IGRAPH
+
+## 2.11. 2026/04/09
+
+Visualization
+
+## 2.12. 2026/04/16
+
+GGPlot2, Shiny
+
+## 2.13. 2026/04/23
+
+Ethics, Open Science, and Reproducibility
+
+## 2.14. 2026/04/30
+
+Group Project Presentation
+
+## 2.15. 2026/05/07
+
+
+
+### 2.15.1. Day 1 - Welcome and Get Ready
 
 - **Morning**
   - **[Solomon Messing](https://solomonmg.github.io/) Guest Lecture with Catered Lunch**
@@ -167,7 +167,7 @@ Group Project Presentation
   - **Seminar - Welcome:** https://github.com/alvinyxz/CSS_Workshop/blob/main/Day1/Day1.pdf
   - **Lab - Get Started with R/Python:** https://github.com/alvinyxz/CSS_Workshop/blob/main/Day1/Lab/Day1.md
 
-### 2.0.17. Day 2 - Text (Basic: Dictionary and Classification)
+### 2.15.2. Day 2 - Text (Basic: Dictionary and Classification)
 
 - **Morning**
   - **Presentation:** Nicole Marie Klevanskaya, Raj Wahlquist, Sijin Chen
@@ -186,7 +186,7 @@ Group Project Presentation
     - **Classifier in R**
     - Register for **Google Perspective** which we will use at our next class: https://www.perspectiveapi.com/
 
-### 2.0.18. Day 3 - Text (Advanced: API, Topic Modeling, Embedding, and Innovative Use)
+### 2.15.3. Day 3 - Text (Advanced: API, Topic Modeling, Embedding, and Innovative Use)
 
 - **Morning**
   - **Presentation:** Jialu Fan, Jiacheng Huang, Michael Ofori
@@ -203,7 +203,7 @@ Group Project Presentation
       - Roberts, M. E., Stewart, B. M., Tingley, D., Lucas, C., Leder-Luis, J., Gadarian, S. K., Albertson, B., & Rand, D. G. (2014). Structural topic models for open-ended survey responses. *American Journal of Political Science, 58*(4), 1064–1082. https://doi.org/10.1111/ajps.12103
       - Roberts, M. E., Stewart, B. M., & Tingley, D. (2019). Stm: An R package for structural topic models. *Journal of Statistical Software, 91*(2). https://doi.org/10.18637/jss.v091.i02
 
-### 2.0.19. Day 4 - Networks
+### 2.15.4. Day 4 - Networks
 
 - **Morning**
   - **Presentation:** Eunsun Kyoung, Dongwook Kim, Rita Tang
@@ -222,7 +222,7 @@ Group Project Presentation
       - Zhou, A., Liu, W., & Yang, A. (2024). Politicization of science in COVID-19 vaccine communication: Comparing US politicians, medical experts, and government agencies. *Political Communication, 41*(4), 649–671. https://doi.org/10.1080/10584609.2023.2201184
     - **Network Visualization**
 
-### 2.0.20. Day 5 - The Web, Computational Infrastructure, and Innovative Datasets
+### 2.15.5. Day 5 - The Web, Computational Infrastructure, and Innovative Datasets
 
 - **Morning**
   - **Presentation:** Jikai Sun, Jong Won Lee, Shreepriya Dogra
@@ -252,7 +252,7 @@ Group Project Presentation
       - I have heard mixed success with applying for the TikTok API, but it is worth a try.
       - Apply it here https://developers.tiktok.com/docs/getting-started
 
-### 2.0.21. Day 6 - Image/Audio/Video
+### 2.15.6. Day 6 - Image/Audio/Video
 
 - **Morning**
   - **[Yingdan Lu](https://yingdanlu.com) Guest Lecture with Catered Lunch**
@@ -271,7 +271,7 @@ Group Project Presentation
     - **Athec:** Peng, Y. (2022). Athec: A Python library for computational aesthetic analysis of visual media in social science research. *Computational Communication Research, 4*(1). https://doi.org/10.5117/CCR2022.1.009.PENG
     - **Face++: API Application**
 
-### 2.0.22. Day 7 - Looking Ahead and LLM
+### 2.15.7. Day 7 - Looking Ahead and LLM
 
 - **Morning**
   - **Presentation:** Gretchen Corcoran, Paulina Vergara, Jinny Zhang
