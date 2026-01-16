@@ -1,147 +1,153 @@
-- [Syllabus, Components, and Assignments](#syllabus-components-and-assignments)
-  - [Reading Discussion (40min per week, 30%)](#reading-discussion-40min-per-week-30)
-    - [\[Every Week\] Canvas weekly discussion posts \& in-class participation: 10%](#every-week-canvas-weekly-discussion-posts--in-class-participation-10)
-    - [\[Four Times\] Reading Discussion Lead (Response Letter with Annotation + Lead Discussant): 5%x4 = 20%](#four-times-reading-discussion-lead-response-letter-with-annotation--lead-discussant-5x4--20)
-      - [Response Letter with Annotation](#response-letter-with-annotation)
-      - [Lead Discussant](#lead-discussant)
-  - [Computational Toolkit Demo (30min x 2, 30%)](#computational-toolkit-demo-30min-x-2-30)
-  - [Final Paper (40%)](#final-paper-40)
-- [Course Schedule](#course-schedule)
-    - [2026/01/22](#20260122)
-    - [2026/01/29](#20260129)
-    - [2026/02/05](#20260205)
-    - [2026/02/12](#20260212)
-    - [2026/02/19](#20260219)
-    - [2026/02/26](#20260226)
-    - [2026/03/05](#20260305)
-    - [2026/03/19](#20260319)
-    - [2026/03/26](#20260326)
-    - [2026/04/02](#20260402)
-    - [2026/04/09](#20260409)
-    - [2026/04/16](#20260416)
-    - [2026/04/23](#20260423)
-    - [2026/04/30](#20260430)
-    - [Day 0 - Foundational Readings](#day-0---foundational-readings)
-    - [Day 1 - Welcome and Get Ready](#day-1---welcome-and-get-ready)
-    - [Day 2 - Text (Basic: Dictionary and Classification)](#day-2---text-basic-dictionary-and-classification)
-    - [Day 3 - Text (Advanced: API, Topic Modeling, Embedding, and Innovative Use)](#day-3---text-advanced-api-topic-modeling-embedding-and-innovative-use)
-    - [Day 4 - Networks](#day-4---networks)
-    - [Day 5 - The Web, Computational Infrastructure, and Innovative Datasets](#day-5---the-web-computational-infrastructure-and-innovative-datasets)
-    - [Day 6 - Image/Audio/Video](#day-6---imageaudiovideo)
-    - [Day 7 - Looking Ahead and LLM](#day-7---looking-ahead-and-llm)
-- [Additional Resources](#additional-resources)
-    - [Day 1: CSS Overview](#day-1-css-overview)
-    - [Day 2-3: Text](#day-2-3-text)
-    - [Day 4: Networks](#day-4-networks)
-    - [Day 5: The Web, Computational Infrastructure, and Public Datasets](#day-5-the-web-computational-infrastructure-and-public-datasets)
-    - [Day 6: Images/Videos/Audio](#day-6-imagesvideosaudio)
-    - [Day 7: Looking Ahead and LLM](#day-7-looking-ahead-and-llm)
+- [1. Syllabus, Components, and Assignments](#1-syllabus-components-and-assignments)
+  - [1.1. Reading Discussion (30%)](#11-reading-discussion-30)
+    - [1.1.1. Canvas Discussion \& In-Class Participation (10%)](#111-canvas-discussion--in-class-participation-10)
+    - [1.1.2. Reading Lead (5%x4 = 20%)](#112-reading-lead-5x4--20)
+      - [1.1.2.1. Response Letter with Annotations (RLA)](#1121-response-letter-with-annotations-rla)
+      - [1.1.2.2. Lead Discussant](#1122-lead-discussant)
+  - [1.2. Computational Toolkit Demo (15%x2 = 30%)](#12-computational-toolkit-demo-15x2--30)
+  - [1.3. Final Paper (40%)](#13-final-paper-40)
+- [2. Course Schedule](#2-course-schedule)
+    - [2.0.1. 2026/01/22](#201-20260122)
+    - [2.0.2. 2026/01/29](#202-20260129)
+    - [2.0.3. 2026/02/05](#203-20260205)
+    - [2.0.4. 2026/02/12](#204-20260212)
+    - [2.0.5. 2026/02/19](#205-20260219)
+    - [2.0.6. 2026/02/26](#206-20260226)
+    - [2.0.7. 2026/03/05](#207-20260305)
+    - [2.0.8. 2026/03/19](#208-20260319)
+    - [2.0.9. 2026/03/26](#209-20260326)
+    - [2.0.10. 2026/04/02](#2010-20260402)
+    - [2.0.11. 2026/04/09](#2011-20260409)
+    - [2.0.12. 2026/04/16](#2012-20260416)
+    - [2.0.13. 2026/04/23](#2013-20260423)
+    - [2.0.14. 2026/04/30](#2014-20260430)
+    - [2.0.15. Day 0 - Foundational Readings](#2015-day-0---foundational-readings)
+    - [2.0.16. Day 1 - Welcome and Get Ready](#2016-day-1---welcome-and-get-ready)
+    - [2.0.17. Day 2 - Text (Basic: Dictionary and Classification)](#2017-day-2---text-basic-dictionary-and-classification)
+    - [2.0.18. Day 3 - Text (Advanced: API, Topic Modeling, Embedding, and Innovative Use)](#2018-day-3---text-advanced-api-topic-modeling-embedding-and-innovative-use)
+    - [2.0.19. Day 4 - Networks](#2019-day-4---networks)
+    - [2.0.20. Day 5 - The Web, Computational Infrastructure, and Innovative Datasets](#2020-day-5---the-web-computational-infrastructure-and-innovative-datasets)
+    - [2.0.21. Day 6 - Image/Audio/Video](#2021-day-6---imageaudiovideo)
+    - [2.0.22. Day 7 - Looking Ahead and LLM](#2022-day-7---looking-ahead-and-llm)
+- [3. Additional Resources](#3-additional-resources)
+    - [3.0.1. Day 1: CSS Overview](#301-day-1-css-overview)
+    - [3.0.2. Day 2-3: Text](#302-day-2-3-text)
+    - [3.0.3. Day 4: Networks](#303-day-4-networks)
+    - [3.0.4. Day 5: The Web, Computational Infrastructure, and Public Datasets](#304-day-5-the-web-computational-infrastructure-and-public-datasets)
+    - [3.0.5. Day 6: Images/Videos/Audio](#305-day-6-imagesvideosaudio)
+    - [3.0.6. Day 7: Looking Ahead and LLM](#306-day-7-looking-ahead-and-llm)
 
-# Syllabus, Components, and Assignments
+# 1. Syllabus, Components, and Assignments
 
+- Course: JOUR 8500 Computational Communication Research
+- Instructor: Alvin Zhou
+- Email: alvinyxz@umn.edu
 - Date: Thursdays, Jan 22 – Apr 30, 2026 (No class on Mar 12)
 - Location: In person, Murphy Hall 25 (basement)
 - Primary Language: R (no prior coding assumed)
 - Materials: https://z.umn.edu/J8500
+- In-person office hours: Thursdays 1:30-2:30 pm, Murphy Hall 325
+- Or book me for virtual office hours on Google Calendar: https://z.umn.edu/Alvin_Meeting and we will meet on Zoom
 
-## Reading Discussion (40min per week, 30%)
+## 1.1. Reading Discussion (30%)
 
-### [Every Week] Canvas weekly discussion posts & in-class participation: 10%
+### 1.1.1. Canvas Discussion & In-Class Participation (10%)
 
-The course is organized as a seminar, which means all students are expected to attend all classes, to have read and thought about all readings prior to the class, and to participate actively and productively in class discussion.
+The course is organized as a seminar, which means all students are expected to attend all classes, have read and thought about all readings prior to each class, and participate actively and productively in class discussion.
 
 In general, before class, you should have carefully thought about: 1) how the computational methods used in each study helped address the specific research questions of interest to the authors, 2) in what sense these computational methods could extend conventional methods, 3) what are their major assumptions and limitations, and 4) what new arenas for future research these computational methods could open.
 
-To facilitate discussion, each week, all students will submit (to me as well as the whole class) at least ONE thoughtful question or comment of interest to you emerging from the week's readings. You do not need to post additional questions/comments for readings you are already assigned as Reading Discussion Lead. These discussion questions/comments should be posted to the "Discussions" section on Canvas at least 24 hours earlier than the scheduled class meeting.
+<span style="color: orange;">**TODO EVERY WEEK**</span> To facilitate discussion, each week all students will submit (to the whole class and me) at least ONE thoughtful question or comment of interest to you emerging from the week's readings. These discussion questions/comments should be posted to the "Discussions" section on Canvas (named "[Week X] Readings") at least 24 hours before the scheduled class meeting. You do not need to post additional questions/comments for readings you are already assigned as Reading Lead.
 
-### [Four Times] Reading Discussion Lead (Response Letter with Annotation + Lead Discussant): 5%x4 = 20%
+### 1.1.2. Reading Lead (5%x4 = 20%)
 
-Throughout this semester, you are required to sign up for 4 research papers on the reading list. For each reading, you will: 1) prepare a brief response paper with annotations, and 2) serve as the lead discussant for those assigned articles.
+Throughout this semester, you are required to sign up for 4 research papers on the reading list. For each reading, you will: 1) prepare a response letter with annotations (RLA), and 2) serve as the lead discussant for those assigned articles.
 
-You are expected to post your response letter with annotation to Canvas at least 24 hours earlier than the scheduled class meeting. If for some reason you will be unable to attend a class for which you are assigned to provide a discussion guide, it is your responsibility to either trade assigned readings with someone else in the class who can attend, or arrange someone else to distribute your discussion guides at the start of the relevant class period.
+<span style="color: orange;">**TODO FOUR TIMES**</span> You are expected to post your RLA as PDFs to the "Assignment" section on Canvas (named "[Week X] RLA") at least 24 hours before the scheduled class meeting. If for some reason you will be unable to attend a class for which you are assigned to provide a discussion guide, it is your responsibility to either trade assigned readings with someone else in the class who can attend, or arrange someone else to distribute your discussion guides at the start of the relevant class period. [Extra Credit] If you volunteer to be a lead discussant for an extra reading (i.e., 5 total), you will receive 5% extra credit added to your final grade.
 
-[Extra Credit] If you volunteer to be a lead discussant for an extra reading (i.e., 5 total), you will receive 5% extra credit added to your final grade.
+#### 1.1.2.1. Response Letter with Annotations (RLA)
 
-#### Response Letter with Annotation
+A template for RLA is provided in this repository's root folder as "RLA_Template.docx".
 
-Each response paper starts with annotations, which should take the format of astructured outline or an extended abstract that briefly summarizes (1) the background information and motivation for the study, (2) hypotheses and research questions, (3) the method session (study design, sample, data, measures, analytical strategies), and (4) results with copied main tables/figures. Annotations should focus on summarizing what has been done. The length may vary depending on the complexity of the paper.
+Each RLA starts with annotations, which should take the format of astructured outline or an extended abstract that briefly summarizes (1) the background information and motivation for the study, (2) hypotheses and research questions, (3) the method session (study design, sample, data, measures, analytical strategies), and (4) results with copied main tables/figures. Annotations should focus on summarizing what has been done. The length may vary depending on the complexity of the paper.
 
-Following the annotation, the response letter should highlight your own assessment and reflections about the reading (roughly 300-600 words). These short response papers serve four purposes: (1) they summarize a reading to focus attention on main points and to highlight its relevance to issues of concern in the course, (2) they outline the strengths and weaknesses of the computational method(s) used in the study (no need to cover all the technical details), (3) they raise questions about a reading that can be used to stimulate discussion especially with regards to the strengths and weaknesses of the computational method(s), and (4) they connect new readings to old readings in order to highlight common themes and to point out how current readings raise, address, or underscore questions sparked by previous reading assignments. By the end of the course, each student will have access to summaries and analyses of every major reading covered during the semester.
+Following the annotation, the RLA should highlight your own assessment and reflections about the reading (roughly ~600 words). These short RLAs serve four purposes: (1) they summarize a reading to focus attention on main points and to highlight its relevance to issues of concern in the course, (2) they outline the strengths and weaknesses of the computational method(s) used in the study (no need to cover all the technical details), (3) they raise questions about a reading that can be used to stimulate discussion especially with regards to the strengths and weaknesses of the computational method(s), and (4) they connect new readings to old readings in order to highlight common themes and to point out how current readings raise, address, or underscore questions sparked by previous reading assignments. In short, the response letter is a quasi-peer-review of the paper, with a slight emphasis on the computational method(s) used in the study.
 
-#### Lead Discussant
+All RLAs will be distributed back to the class. Therefore, by the end of the course, each student will have access to summaries and analyses of every major reading covered during the semester.
+
+#### 1.1.2.2. Lead Discussant
 
 You will also serve as the lead discussant for these assigned articles. In class, you will present a brief summary of the main substantive findings as well as the analytical approach, will work with me to keep conversation moving forward, providing examples from the reading when appropriate and posing questions for all seminar participants to answer.
 
 You are expected to take the lion's share of the responsibility to help other students understand how the computational method(s) in the reading work. The focus is to provide the conceptual ground rather than all the technical details. It would be most fruitful to sign up for readings overlapping with your computational toolkit demo.
 
-While not required, you can use your own way of presentation (e.g., PowerPoint slides, whiteboard, handouts, etc.). You may also want to prepare a few questions to stimulate discussion. Treat this also as a way to practice your presentation/teaching/discussant skills, which are very important in both academia and industry and useful when attending and moderating conference panels.
+You can use your own way of presentation (e.g., PowerPoint slides, whiteboard, handouts, etc.). You may also want to prepare a few questions to stimulate discussion. Treat this also as a way to practice your presentation/teaching/discussant skills, which are very important in both academia and industry and useful when attending and moderating conference panels.
 
-## Computational Toolkit Demo (30min x 2, 30%)
+## 1.2. Computational Toolkit Demo (15%x2 = 30%)
 
-  
-  - [Twice] R package demonstration (15% × 2) = 30%
 
-## Final Paper (40%)
+
+## 1.3. Final Paper (40%)
   - Paper Idea Pitch (5% ×2 = 10%)
   - Final paper OR proposal (individual or group) 30%
 
-# Course Schedule
+# 2. Course Schedule
 
-### 2026/01/22
+### 2.0.1. 2026/01/22
 
 - Introduction
 - Install R and RStudio
 - Try out Google Colab or Jupyter Notebook for Python
 
-### 2026/01/29
+### 2.0.2. 2026/01/29
 
 Foundational Readings
 
-### 2026/02/05
+### 2.0.3. 2026/02/05
 
 Text
 
-### 2026/02/12
+### 2.0.4. 2026/02/12
 
 STM, Embedding
 
-### 2026/02/19
+### 2.0.5. 2026/02/19
 
-### 2026/02/26
+### 2.0.6. 2026/02/26
 
-### 2026/03/05
+### 2.0.7. 2026/03/05
 
 Group Project Proposal and Submit
 
-### 2026/03/19
+### 2.0.8. 2026/03/19
 
 
 
-### 2026/03/26
+### 2.0.9. 2026/03/26
 
 Network
 
-### 2026/04/02
+### 2.0.10. 2026/04/02
 
 IGRAPH
 
-### 2026/04/09
+### 2.0.11. 2026/04/09
 
 Visualization
 
-### 2026/04/16
+### 2.0.12. 2026/04/16
 
 GGPlot2, Shiny
 
-### 2026/04/23
+### 2.0.13. 2026/04/23
 
 Ethics, Open Science, and Reproducibility
 
-### 2026/04/30
+### 2.0.14. 2026/04/30
 
 Group Project Presentation
 
-### Day 0 - Foundational Readings
+### 2.0.15. Day 0 - Foundational Readings
 
 - **Readings:** https://github.com/alvinyxz/CSS_Workshop/blob/main/Day0
   - Lazer, D., Pentland, A., Adamic, L., Aral, S., Barabasi, A.-L., Brewer, D., Christakis, N., Contractor, N., Fowler, J., Gutmann, M., Jebara, T., King, G., Macy, M., Roy, D., & Van Alstyne, M. (2009). Computational social science. *Science, 323*(5915), 721–723. https://doi.org/10.1126/science.1167742
@@ -150,7 +156,7 @@ Group Project Presentation
   - Hofman, J. M., Watts, D. J., Athey, S., Garip, F., Griffiths, T. L., Kleinberg, J., Margetts, H., Mullainathan, S., Salganik, M. J., Vazire, S., Vespignani, A., & Yarkoni, T. (2021). Integrating explanation and prediction in computational social science. *Nature, 595*(7866), 181–188. https://doi.org/10.1038/s41586-021-03659-0
   - Wallach, H. (2018). Computational social science ≠ computer science + social data. *Communications of the ACM, 61*(3), 42–44. https://doi.org/10.1145/3132698
 
-### Day 1 - Welcome and Get Ready
+### 2.0.16. Day 1 - Welcome and Get Ready
 
 - **Morning**
   - **[Solomon Messing](https://solomonmg.github.io/) Guest Lecture with Catered Lunch**
@@ -161,7 +167,7 @@ Group Project Presentation
   - **Seminar - Welcome:** https://github.com/alvinyxz/CSS_Workshop/blob/main/Day1/Day1.pdf
   - **Lab - Get Started with R/Python:** https://github.com/alvinyxz/CSS_Workshop/blob/main/Day1/Lab/Day1.md
 
-### Day 2 - Text (Basic: Dictionary and Classification)
+### 2.0.17. Day 2 - Text (Basic: Dictionary and Classification)
 
 - **Morning**
   - **Presentation:** Nicole Marie Klevanskaya, Raj Wahlquist, Sijin Chen
@@ -180,7 +186,7 @@ Group Project Presentation
     - **Classifier in R**
     - Register for **Google Perspective** which we will use at our next class: https://www.perspectiveapi.com/
 
-### Day 3 - Text (Advanced: API, Topic Modeling, Embedding, and Innovative Use)
+### 2.0.18. Day 3 - Text (Advanced: API, Topic Modeling, Embedding, and Innovative Use)
 
 - **Morning**
   - **Presentation:** Jialu Fan, Jiacheng Huang, Michael Ofori
@@ -197,7 +203,7 @@ Group Project Presentation
       - Roberts, M. E., Stewart, B. M., Tingley, D., Lucas, C., Leder-Luis, J., Gadarian, S. K., Albertson, B., & Rand, D. G. (2014). Structural topic models for open-ended survey responses. *American Journal of Political Science, 58*(4), 1064–1082. https://doi.org/10.1111/ajps.12103
       - Roberts, M. E., Stewart, B. M., & Tingley, D. (2019). Stm: An R package for structural topic models. *Journal of Statistical Software, 91*(2). https://doi.org/10.18637/jss.v091.i02
 
-### Day 4 - Networks
+### 2.0.19. Day 4 - Networks
 
 - **Morning**
   - **Presentation:** Eunsun Kyoung, Dongwook Kim, Rita Tang
@@ -216,7 +222,7 @@ Group Project Presentation
       - Zhou, A., Liu, W., & Yang, A. (2024). Politicization of science in COVID-19 vaccine communication: Comparing US politicians, medical experts, and government agencies. *Political Communication, 41*(4), 649–671. https://doi.org/10.1080/10584609.2023.2201184
     - **Network Visualization**
 
-### Day 5 - The Web, Computational Infrastructure, and Innovative Datasets
+### 2.0.20. Day 5 - The Web, Computational Infrastructure, and Innovative Datasets
 
 - **Morning**
   - **Presentation:** Jikai Sun, Jong Won Lee, Shreepriya Dogra
@@ -246,7 +252,7 @@ Group Project Presentation
       - I have heard mixed success with applying for the TikTok API, but it is worth a try.
       - Apply it here https://developers.tiktok.com/docs/getting-started
 
-### Day 6 - Image/Audio/Video
+### 2.0.21. Day 6 - Image/Audio/Video
 
 - **Morning**
   - **[Yingdan Lu](https://yingdanlu.com) Guest Lecture with Catered Lunch**
@@ -265,7 +271,7 @@ Group Project Presentation
     - **Athec:** Peng, Y. (2022). Athec: A Python library for computational aesthetic analysis of visual media in social science research. *Computational Communication Research, 4*(1). https://doi.org/10.5117/CCR2022.1.009.PENG
     - **Face++: API Application**
 
-### Day 7 - Looking Ahead and LLM
+### 2.0.22. Day 7 - Looking Ahead and LLM
 
 - **Morning**
   - **Presentation:** Gretchen Corcoran, Paulina Vergara, Jinny Zhang
@@ -291,11 +297,11 @@ Group Project Presentation
     - Park, J. S., O’Brien, J., Cai, C. J., Morris, M. R., Liang, P., & Bernstein, M. S. (2023). Generative agents: Interactive simulacra of human behavior. *Proceedings of the 36th Annual ACM Symposium on User Interface Software and Technology*, 1–22. https://doi.org/10.1145/3586183.3606763
     - Ashokkumar, A., Hewitt, L., Ghezae, I., & Willer, R. (2024). Predicting results of social science experiments using large language models. https://docsend.com/view/ity6yf2dansesucf
 
-# Additional Resources
+# 3. Additional Resources
 
 To keep the workshop content fresh, assigned readings are mostly very-recent publications. Below, I provide a list of supplementary materials and resources that may enhance your understanding of the topics covered in the workshop, many of which are considered classics in the field of computational social science.
 
-### Day 1: CSS Overview
+### 3.0.1. Day 1: CSS Overview
 
 - Salganik, M. J. (2018). Bit by bit: Social research in the digital age. Princeton University Press.
 - Grimmer, J., Roberts, M. E., & Stewart, B. M. (2022). Text as data: A new framework for machine learning and the social sciences. Princeton University Press.
@@ -306,7 +312,7 @@ To keep the workshop content fresh, assigned readings are mostly very-recent pub
 - Mohr, J., Bail, C. A., Frye, M., Lena, J. C., Lizardo, O., McDonnell, T. E., Mische, A., Tavory, I., & Wherry, F. F. (2020). Measuring culture. Columbia University Press.
 - Edelmann, A., Wolff, T., Montagne, D., & Bail, C. A. (2020). Computational social science and sociology. *Annual Review of Sociology, 46*(1), 61–81. https://doi.org/10.1146/annurev-soc-121919-054621
 
-### Day 2-3: Text
+### 3.0.2. Day 2-3: Text
 
 - Garg, N., Schiebinger, L., Jurafsky, D., & Zou, J. (2018). Word embeddings quantify 100 years of gender and ethnic stereotypes. *Proceedings of the National Academy of Sciences, 115*(16), E3635–E3644. https://doi.org/10.1073/pnas.1720347115
 - Li, K., Mai, F., Shen, R., & Yan, X. (2021). Measuring corporate culture using machine learning. *The Review of Financial Studies, 34*(7), 3265–3315. https://doi.org/10.1093/rfs/hhaa079
@@ -315,7 +321,7 @@ To keep the workshop content fresh, assigned readings are mostly very-recent pub
 - Eichstaedt, J. C., Schwartz, H. A., Kern, M. L., Park, G., Labarthe, D. R., Merchant, R. M., Jha, S., Agrawal, M., Dziurzynski, L. A., Sap, M., Weeg, C., Larson, E. E., Ungar, L. H., & Seligman, M. E. P. (2015). Psychological language on Twitter predicts county-level heart disease mortality. *Psychological Science, 26*(2), 159–169. https://doi.org/10.1177/0956797614557867
 - Barberá, P., Casas, A., Nagler, J., Egan, P. J., Bonneau, R., Jost, J. T., & Tucker, J. A. (2019). Who leads? Who follows? Measuring issue attention and agenda setting by legislators and the mass public using social media data. *American Political Science Review, 113*(4), 883–901. https://doi.org/10.1017/S0003055419000352
 
-### Day 4: Networks
+### 3.0.3. Day 4: Networks
 
 - Barabási, A.-L., & Albert, R. (1999). Emergence of scaling in random networks. *Science, 286*(5439), 509–512. https://doi.org/10.1126/science.286.5439.509
 - Watts, D. J., & Strogatz, S. H. (1998). Collective dynamics of “small-world” networks. *Nature, 393*(6684), 440–442. https://doi.org/10.1038/30918
@@ -332,7 +338,7 @@ To keep the workshop content fresh, assigned readings are mostly very-recent pub
 - DellaPosta, D., Shi, Y., & Macy, M. (2015). Why do liberals drink lattes? *American Journal of Sociology, 120*(5), 1473–1511. https://doi.org/10.1086/681254
 - Shi, F., Shi, Y., Dokshin, F. A., Evans, J. A., & Macy, M. W. (2017). Millions of online book co-purchases reveal partisan differences in the consumption of science. *Nature Human Behaviour, 1*(4), 0079. https://doi.org/10.1038/s41562-017-0079
 
-### Day 5: The Web, Computational Infrastructure, and Public Datasets
+### 3.0.4. Day 5: The Web, Computational Infrastructure, and Public Datasets
 
 - Guess, A. M., Nyhan, B., & Reifler, J. (2020). Exposure to untrustworthy websites in the 2016 US election. *Nature Human Behaviour, 4*(5), 472–480. https://doi.org/10.1038/s41562-020-0833-x
 - King, G., Pan, J., & Roberts, M. E. (2013). How censorship in China allows government criticism but silences collective expression. *American Political Science Review, 107*(2), 326–343. https://doi.org/10.1017/S0003055413000014
@@ -340,7 +346,7 @@ To keep the workshop content fresh, assigned readings are mostly very-recent pub
 - Freelon, D. (2018). Computational research in the post-API age. *Political Communication, 35*(4), 665–668. https://doi.org/10.1080/10584609.2018.1477506
 - Zhou, A., Metaxa, D., Kim, Y. M., & Jaidka, K. (2024). User-centric behavioral tracking: Lessons from three case studies with do-it-yourself computational pipelines. *Journal of Advertising, 53*(5), 791–809. https://doi.org/10.1080/00913367.2024.2403613
 
-### Day 6: Images/Videos/Audio
+### 3.0.5. Day 6: Images/Videos/Audio
 
 - Peng, Y. (2018). Same candidates, different faces: Uncovering media bias in visual portrayals of presidential candidates with computer vision. *Journal of Communication, 68*(5), 920–941. https://doi.org/10.1093/joc/jqy041
 - Zhang, H., & Peng, Y. (2024). Image clustering: An unsupervised approach to categorize visual data in social science research. *Sociological Methods & Research, 53*(3), 1534–1587. https://doi.org/10.1177/00491241221082603
@@ -349,7 +355,7 @@ To keep the workshop content fresh, assigned readings are mostly very-recent pub
 - Joo, J., & Steinert-Threlkeld, Z. C. (2022). Image as data: Automated content analysis for visual presentations of political actors and events. *Computational Communication Research, 4*(1). https://doi.org/10.5117/CCR2022.1.001.JOO
 - Stephens, K. K., Waller, M. J., & Sohrab, S. G. (2019). Over-emoting and perceptions of sincerity: Effects of nuanced displays of emotions and chosen words on credibility perceptions during a crisis. *Public Relations Review, 45*(5), 101841. https://doi.org/10.1016/j.pubrev.2019.101841
 
-### Day 7: Looking Ahead and LLM
+### 3.0.6. Day 7: Looking Ahead and LLM
 
 - Bail, C. A. (2016). Combining natural language processing and network analysis to examine how advocacy organizations stimulate conversation on social media. *Proceedings of the National Academy of Sciences, 113*(42), 11823–11828. https://doi.org/10.1073/pnas.1607151113
 - Ludwig, J., & Mullainathan, S. (2024). Machine learning as a tool for hypothesis generation. *The Quarterly Journal of Economics, 139*(2), 751–827. https://doi.org/10.1093/qje/qjad055
