@@ -39,7 +39,7 @@
 - Course: JOUR 8500 Computational Communication Research
 - Instructor: Alvin Zhou
 - Email: alvinyxz@umn.edu
-- Date: Thursdays, Jan 22 – Apr 30, 2026 (No class on Mar 12)
+- Date: Thursdays 2:30-5pm, Jan 22 – Apr 30, 2026 (No class on Mar 12)
 - Location: In person, Murphy Hall 25 (basement)
 - Primary Language: R (no prior coding assumed)
 - Materials: https://z.umn.edu/J8500
@@ -88,9 +88,9 @@ Throughout this semester, each student will sign up to demonstrate the functiona
 
 There are three things that need to be done to complete this assignment:
 
-- First, <span style="color: orange;">the group responsible for the particular R package must prepare a problem set with an associated dataset and distribute these materials to the class by the end of the Friday prior to the scheduled presentation.</span> To do so, upload the problem set to the "Discussion" section on Canvas (named "[Week X] Computational Toolkit Demo"). The rest of the class is encouraged to work on the problem set during the weekend and explore the package themselves, although no grading is required. The presentation group can determine the number and scope of questions as deemed appropriate for the learning goals of the demo. For example, for the igraph package about network analysis, the problem set can include a network matrix and a few questions such as: (1) visualize the network with different layouts, (2) calculate basic node-level statistics (e.g., degree centrality, betweenness centrality, closeness centrality), (3) detect communities in the network, and (4) plot the degree distribution of the network.
+- First, <span style="color: orange;">the group responsible for the particular R package must prepare a problem set with an associated dataset and distribute these materials to the class by the end of Monday before the class.</span> To do so, one student can upload the problem set to the "Discussion" section on Canvas (named "[Week X] Computational Toolkit Demo") on behalf of the group. The rest of the class is encouraged to work on the problem set during the weekend and explore the package themselves, although no grading is required. The presentation group can determine the number and scope of questions, as deemed appropriate for the demo's learning goals. For example, for the igraph package about network analysis, the problem set can include a network matrix and a few questions such as: (1) visualize the network with different layouts, (2) calculate basic node-level statistics (e.g., degree centrality, betweenness centrality, closeness centrality), (3) detect communities in the network, and (4) plot the degree distribution of the network.
 - Second, <span style="color: orange;">the group responsible for the particular R package should present the demo, taking the format of a short workshop (~30 minutes long), during the scheduled class time.</span> The presentation should cover (1) an introduction to the package and its major functionalities, (2) a step-by-step demonstration of how to use the package to carry out a specific kind of computational analyses, and (3) a walk-through of the problem set distributed prior to the class, as well as other questions/problems that the package can solve. Demos should seek to involve the audiences through interactive exercises as much as possible, and the presentation group should be ready to answer questions about the package and help fellow students debug any issues they may encounter when using the package.
-- Third, after the class, <span style="color: orange;">the group responsible for the particular R package should submit one compiled R notebook/markdown file to the same "Discussion" section on Canvas (named "[Week X] Computational Toolkit Demo").</span> The file should contain the main content of the demo for circulation among all enrolled students, including answer keys/codes to the problem set, sample code, and other materials. In this way, all of you will have access to a collection of tutorials and R codes for future use by the end of the semester.
+- Third, after the class, <span style="color: orange;">the group responsible for the particular R package should submit one compiled R notebook/markdown file to the same "Discussion" section on Canvas (named "[Week X] Computational Toolkit Demo").</span> Again, one student can submit it on behalf of the group. The file should contain the main content of the demo for circulation among all enrolled students, including answer keys/codes to the problem set, sample code, and other materials. In this way, all of you will have access to a collection of tutorials and R codes for future use by the end of the semester.
 
 ## 1.3. Final Paper (40%)
 
@@ -171,13 +171,13 @@ Regardless of which option you choose, your final paper is graded for each of th
 ## 2.1. 2026/01/22
 
 1. Introduction
-2. RLA and Computational Toolkit Demo Sign-Up Due (2026/01/28)
+2. Sign-Up Due (2026/01/26): RLA and Computational Toolkit Demo
 3. Getting Started with R
    1. Install R and RStudio: https://github.com/alvinyxz/CSS_Workshop/blob/main/Day1/Lab/Day1.md
 
 ## 2.2. 2026/01/29
 
-1. Due at the beginning of Week 2: [Week 2] Readings + [Week 2] RLA
+1. Readings
    - Lazer, D., Pentland, A., Adamic, L., Aral, S., Barabasi, A.-L., Brewer, D., Christakis, N., Contractor, N., Fowler, J., Gutmann, M., Jebara, T., King, G., Macy, M., Roy, D., & Van Alstyne, M. (2009). Computational social science. *Science, 323*(5915), 721–723. https://doi.org/10.1126/science.1167742
    - Lazer, D., Pentland, A., Watts, D. J., Aral, S., Contractor, N., Freelon, D., Gonzalez-Bailon, S., King, G., Nelson, A., Salganik, J., Strohmaier, M., Vespignani, A., & Wagner, C. (2020). Computational social science: Obstacles and opportunities. *Science, 369*(6507), 1060–1062. https://doi.org/10.1126/science.aaz8170
    - Lazer, D., Hargittai, E., Freelon, D., Gonzalez-Bailon, S., Munger, K., Ognyanova, K., & Radford, J. (2021). Meaningful measures of human society in the twenty-first century. *Nature, 595*(7866), 189–196. https://doi.org/10.1038/s41586-021-03660-7
@@ -285,6 +285,11 @@ Network
 ## 2.13. 2026/04/23
 
 1. Reading: Ethics, Open Science, Academic Drama, and Reproducibility
+   - Dienlin, T., Johannes, N., Bowman, N. D., Masur, P. K., Engesser, S., Kümpel, A. S., Lukito, J., Bier, L. M., Zhang, R., Johnson, B. K., Huskey, R., Schneider, F. M., Breuer, J., Parry, D. A., Vermeulen, I., Fisher, J. T., Banks, J., Weber, R., Ellis, D. A., … De Vreese, C. (2021). An agenda for open science in communication. *Journal of Communication, 71*(1), 1–26. https://doi.org/10.1093/joc/jqz052
+   - Freiling, I., Krause, N. M., Scheufele, D. A., & Chen, K. (2021). The science of open (communication) science: Toward an evidence-driven understanding of quality criteria in communication research. *Journal of Communication, 71*(5), 686–714. https://doi.org/10.1093/joc/jqab032
+   - Fox, J., Pearce, K. E., Massanari, A. L., Riles, J. M., Szulc, Ł., Ranjit, Y. S., Trevisan, F., Soriano, C. R. R., Vitak, J., Arora, P., Ahn, S. J. (Grace), Alper, M., Gambino, A., Gonzalez, C., Lynch, T., Williamson, L. D., & L Gonzales, A. (2021). Open science, closed doors? Countering marginalization through an agenda for ethical, inclusive research in communication. *Journal of Communication, 71*(5), 764–784. https://doi.org/10.1093/joc/jqab029
+   - Lewis, N. A. (2020). Open communication science: A primer on why and some recommendations for how. *Communication Methods and Measures, 14*(2), 71–82. https://doi.org/10.1080/19312458.2019.1685660
+   - Nosek, B. A., Ebersole, C. R., DeHaven, A. C., & Mellor, D. T. (2018). The preregistration revolution. *Proceedings of the National Academy of Sciences, 115*(11), 2600–2606. https://doi.org/10.1073/pnas.1708274114
    - González-Bailón, S., Lazer, D., Barberá, P., Zhang, M., Allcott, H., Brown, T., Crespo-Tenorio, A., Freelon, D., Gentzkow, M., Guess, A. M., Iyengar, S., Kim, Y. M., Malhotra, N., Moehler, D., Nyhan, B., Pan, J., Rivera, C. V., Settle, J., Thorson, E., … Tucker, J. A. (2023). Asymmetric ideological segregation in exposure to political news on Facebook. *Science, 381*(6656), 392–398. https://doi.org/10.1126/science.ade7138
    - Guess, A. M., Malhotra, N., Pan, J., Barberá, P., Allcott, H., Brown, T., Crespo-Tenorio, A., Dimmery, D., Freelon, D., Gentzkow, M., González-Bailón, S., Kennedy, E., Kim, Y. M., Lazer, D., Moehler, D., Nyhan, B., Rivera, C. V., Settle, J., Thomas, D. R., … Tucker, J. A. (2023). How do social media feed algorithms affect attitudes and behavior in an election campaign? *Science, 381*(6656), 398–404. https://doi.org/10.1126/science.abp9364
    - Guess, A. M., Malhotra, N., Pan, J., Barberá, P., Allcott, H., Brown, T., Crespo-Tenorio, A., Dimmery, D., Freelon, D., Gentzkow, M., González-Bailón, S., Kennedy, E., Kim, Y. M., Lazer, D., Moehler, D., Nyhan, B., Rivera, C. V., Settle, J., Thomas, D. R., … Tucker, J. A. (2023). Reshares on social media amplify political news but do not detectably affect beliefs or opinions. *Science, 381*(6656), 404–408. https://doi.org/10.1126/science.add8424
@@ -303,6 +308,8 @@ Network
 3. Optional Reading
    - Nyhan, B., Settle, J., Thorson, E., Wojcieszak, M., Barberá, P., Chen, A. Y., Allcott, H., Brown, T., Crespo-Tenorio, A., Dimmery, D., Freelon, D., Gentzkow, M., González-Bailón, S., Guess, A. M., Kennedy, E., Kim, Y. M., Lazer, D., Malhotra, N., Moehler, D., … Tucker, J. A. (2023). Like-minded sources on Facebook are prevalent but not polarizing. *Nature, 620*(7972), 137–144. https://doi.org/10.1038/s41586-023-06297-w
    - Allcott, H., Gentzkow, M., Mason, W., Wilkins, A., Barberá, P., Brown, T., Cisneros, J. C., Crespo-Tenorio, A., Dimmery, D., Freelon, D., González-Bailón, S., Guess, A. M., Kim, Y. M., Lazer, D., Malhotra, N., Moehler, D., Nair-Desai, S., Nait El Barj, H., Nyhan, B., … Tucker, J. A. (2024). The effects of Facebook and Instagram on the 2020 election: A deactivation experiment. *Proceedings of the National Academy of Sciences, 121*(21), e2321584121. https://doi.org/10.1073/pnas.2321584121
+   - Open Science Collaboration. (2015). Estimating the reproducibility of psychological science. *Science, 349*(6251), aac4716–aac4716. https://doi.org/10.1126/science.aac4716
+   - https://retractionwatch.com
    
 
 ## 2.14. 2026/04/30
