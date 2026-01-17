@@ -21,7 +21,6 @@
   - [2.12. 2026/04/16](#212-20260416)
   - [2.13. 2026/04/23](#213-20260423)
   - [2.14. 2026/04/30](#214-20260430)
-    - [2.15.3. Day 3 - Text (Advanced: API, Topic Modeling, Embedding, and Innovative Use)](#2153-day-3---text-advanced-api-topic-modeling-embedding-and-innovative-use)
     - [2.15.4. Day 4 - Networks](#2154-day-4---networks)
     - [2.15.5. Day 5 - The Web, Computational Infrastructure, and Innovative Datasets](#2155-day-5---the-web-computational-infrastructure-and-innovative-datasets)
     - [2.15.6. Day 6 - Image/Audio/Video](#2156-day-6---imageaudiovideo)
@@ -193,6 +192,7 @@ Regardless of which option you choose, your final paper is graded for each of th
 
 1. Reading
    - Feuerriegel, S., Maarouf, A., Bär, D., Geissler, D., Schweisthal, J., Pröllochs, N., Robertson, C. E., Rathje, S., Hartmann, J., Mohammad, S. M., Netzer, O., Siegel, A. A., Plank, B., & Van Bavel, J. J. (2025). Using natural language processing to analyse text data in behavioural science. *Nature Reviews Psychology, 4*(2), 96–111. https://doi.org/10.1038/s44159-024-00392-z
+   - Grimmer, J., & Stewart, B. M. (2013). Text as data: The promise and pitfalls of automatic content analysis methods for political texts. *Political Analysis, 21*(3), 267–297. https://doi.org/10.1093/pan/mps028
 2. Computational Toolkits Demo: "From Excel/SPSS to R" - Advanced
    - tidyverse (dplyr, readr, tidyr, stringr, lubridate)
    - Qualtrics API in R
@@ -214,6 +214,7 @@ Regardless of which option you choose, your final paper is graded for each of th
 
 1. Reading
    - Duan, Z., Li, J., Lukito, J., Yang, K.-C., Chen, F., Shah, D. V., & Yang, S. (2022). Algorithmic agents in the hybrid media system: Social bots, selective amplification, and partisan news about COVID-19. *Human Communication Research, 48*(3), 516–542. https://doi.org/10.1093/hcr/hqac012
+   - Song, H., Eberl, J.-M., & Eisele, O. (2020). Less fragmented than we thought? Toward clarification of a subdisciplinary linkage in communication science, 2010–2019. Journal of Communication, 70(3), 310–334. https://doi.org/10.1093/joc/jqaa009
    - Zhou, A. (2021). Communicating corporate LGBTQ advocacy: A computational comparison of the global CSR discourse. *Public Relations Review, 47*(4), 102061. https://doi.org/10.1016/j.pubrev.2021.102061
    - Mukerjee, S., Yang, T., & Peng, Y. (2023). Metrics in action: How social media metrics shape news production on Facebook. *Journal of Communication, 73*(3), 260–272. https://doi.org/10.1093/joc/jqad012
 2. Computational Toolkits Demo: "Text Analysis Advanced"
@@ -224,6 +225,8 @@ Regardless of which option you choose, your final paper is graded for each of th
 ## 2.6. 2026/02/26
 
 1. Reading
+   - Toubia, O., Berger, J., & Eliashberg, J. (2021). How quantifying the shape of stories predicts their success. *Proceedings of the National Academy of Sciences, 118*(26), e2011695118. https://doi.org/10.1073/pnas.2011695118
+   - Kozlowski, A. C., Taddy, M., & Evans, J. A. (2019). The geometry of culture: Analyzing the meanings of class through word embeddings. *American Sociological Review, 84*(5), 905–949. https://doi.org/10.1177/0003122419877135
 2. Computational Toolkits Demo
    - caret
    - text2vec
@@ -235,7 +238,7 @@ Regardless of which option you choose, your final paper is graded for each of th
    - Qian, S., Lu, Y., Peng, Y., Shen, C., & Xu, H. (2024). Convergence or divergence? A cross-platform analysis of climate change visual content categories, features, and social media engagement on Twitter and Instagram. *Public Relations Review, 50*(2), 102454. https://doi.org/10.1016/j.pubrev.2024.102454
    - Lu, Y., Pan, J., Xu, X., & Xu, Y. (2025). Decentralized propaganda in the era of digital media: The massive presence of the Chinese state on Douyin. *American Journal of Political Science*. https://doi.org/10.1111/ajps.12990
 2. Computational Toolkits Demo
-   - athec (Python; if you are familiar with Python, sign up here)
+   - athec (Python; if you are familiar with Python, sign up here; https://doi.org/10.5117/CCR2022.1.009.PENG)
    - text2vec
 
 ## 2.8. 2026/03/19
@@ -243,6 +246,9 @@ Regardless of which option you choose, your final paper is graded for each of th
 Network
 
 1. Reading
+   - Vosoughi, S., Roy, D., & Aral, S. (2018). The spread of true and false news online. *Science, 359*(6380), 1146–1151. https://doi.org/10.1126/science.aap9559
+   - González-Bailón, S., & Wang, N. (2016). Networked discontent: The anatomy of protest campaigns in social media. *Social Networks, 44*, 95–104. https://doi.org/10.1016/j.socnet.2015.07.003
+   - Boutyline, A., & Vaisey, S. (2017). Belief network analysis: A relational approach to understanding the structure of attitudes. American Journal of Sociology, 122(5), 1371–1447. https://doi.org/10.1086/691274
 2. Computational Toolkits Demo: "Network Analysis Basics"
    - igraph
    - ggraph
@@ -278,43 +284,32 @@ Network
 
 ## 2.13. 2026/04/23
 
-1. Reading: Ethics, Open Science, and Reproducibility
+1. Reading: Ethics, Open Science, Academic Drama, and Reproducibility
+   - González-Bailón, S., Lazer, D., Barberá, P., Zhang, M., Allcott, H., Brown, T., Crespo-Tenorio, A., Freelon, D., Gentzkow, M., Guess, A. M., Iyengar, S., Kim, Y. M., Malhotra, N., Moehler, D., Nyhan, B., Pan, J., Rivera, C. V., Settle, J., Thorson, E., … Tucker, J. A. (2023). Asymmetric ideological segregation in exposure to political news on Facebook. *Science, 381*(6656), 392–398. https://doi.org/10.1126/science.ade7138
+   - Guess, A. M., Malhotra, N., Pan, J., Barberá, P., Allcott, H., Brown, T., Crespo-Tenorio, A., Dimmery, D., Freelon, D., Gentzkow, M., González-Bailón, S., Kennedy, E., Kim, Y. M., Lazer, D., Moehler, D., Nyhan, B., Rivera, C. V., Settle, J., Thomas, D. R., … Tucker, J. A. (2023). How do social media feed algorithms affect attitudes and behavior in an election campaign? *Science, 381*(6656), 398–404. https://doi.org/10.1126/science.abp9364
+   - Guess, A. M., Malhotra, N., Pan, J., Barberá, P., Allcott, H., Brown, T., Crespo-Tenorio, A., Dimmery, D., Freelon, D., Gentzkow, M., González-Bailón, S., Kennedy, E., Kim, Y. M., Lazer, D., Moehler, D., Nyhan, B., Rivera, C. V., Settle, J., Thomas, D. R., … Tucker, J. A. (2023). Reshares on social media amplify political news but do not detectably affect beliefs or opinions. *Science, 381*(6656), 404–408. https://doi.org/10.1126/science.add8424
+   - Commentary
+     - Wagner, M. W. (2023). Independence by permission. *Science, 381*(6656), 388–391. https://doi.org/10.1126/science.adi2430
+   - Critique and Response 1
+     - Messing, S. (2023). Are algorithmic bias claims supported? *Science, 381*(6665), 1420–1420. https://doi.org/10.1126/science.adk1211
+     - González-Bailón, S., & Lazer, D. (2023). Are algorithmic bias claims supported?—Response. *Science, 381*(6665), 1420–1420. https://doi.org/10.1126/science.adk4899
+   - Critique and Response 2
+     - Krause, N. M., Freiling, I., & Scheufele, D. A. (2025). Our changing information ecosystem for science and why it matters for effective science communication. *Proceedings of the National Academy of Sciences, 122*(27), e2400928121. https://doi.org/10.1073/pnas.2400928121
+     - González-Bailón, S., & Lazer, D. (2025). Scientific standards suffer from misrepresenting past work. *Proceedings of the National Academy of Sciences, 122*(47), e2522011122. https://doi.org/10.1073/pnas.2522011122
+     - Freiling, I., & Scheufele, D. A. (2025). Reply to González-Bailón and Lazer: Industry control and conflicts of interest in social media research. *Proceedings of the National Academy of Sciences, 122*(47), e2522924122. https://doi.org/10.1073/pnas.2522924122
 2. Computational Tookkits Demo
    - OSF Walkthrough (Preprint and Preregistration)
    - Github
+3. Optional Reading
+   - Nyhan, B., Settle, J., Thorson, E., Wojcieszak, M., Barberá, P., Chen, A. Y., Allcott, H., Brown, T., Crespo-Tenorio, A., Dimmery, D., Freelon, D., Gentzkow, M., González-Bailón, S., Guess, A. M., Kennedy, E., Kim, Y. M., Lazer, D., Malhotra, N., Moehler, D., … Tucker, J. A. (2023). Like-minded sources on Facebook are prevalent but not polarizing. *Nature, 620*(7972), 137–144. https://doi.org/10.1038/s41586-023-06297-w
+   - Allcott, H., Gentzkow, M., Mason, W., Wilkins, A., Barberá, P., Brown, T., Cisneros, J. C., Crespo-Tenorio, A., Dimmery, D., Freelon, D., González-Bailón, S., Guess, A. M., Kim, Y. M., Lazer, D., Malhotra, N., Moehler, D., Nair-Desai, S., Nait El Barj, H., Nyhan, B., … Tucker, J. A. (2024). The effects of Facebook and Instagram on the 2020 election: A deactivation experiment. *Proceedings of the National Academy of Sciences, 121*(21), e2321584121. https://doi.org/10.1073/pnas.2321584121
+   
 
 ## 2.14. 2026/04/30
 
 - Final Paper Presentations (due at the end of Week 14: [Week 14] Final Paper - Presentation)
 - Final Paper (due at the end of Week 15: [End] Final Paper)
 
-
-
-
-- **Afternoon**
-  - **Lab - Text (Basic):** https://github.com/alvinyxz/CSS_Workshop/blob/main/Day2/Lab/Day2.md
-    - **LIWC:** 
-    - **Sentiment:**
-      - `AFINN`, `bing`, and `nrc` in `tidytext`
-    - **Classifier in R**
-    - Register for **Google Perspective** which we will use at our next class: https://www.perspectiveapi.com/
-
-### 2.15.3. Day 3 - Text (Advanced: API, Topic Modeling, Embedding, and Innovative Use)
-
-- **Morning**
-  - **Presentation:** Jialu Fan, Jiacheng Huang, Michael Ofori
-  - **Slides:** https://github.com/alvinyxz/CSS_Workshop/blob/main/Day3/Day3.pdf
-  - **Readings:** https://github.com/alvinyxz/CSS_Workshop/blob/main/Day3
-    - **[Text But Used Differently]** Toubia, O., Berger, J., & Eliashberg, J. (2021). How quantifying the shape of stories predicts their success. *Proceedings of the National Academy of Sciences, 118*(26), e2011695118. https://doi.org/10.1073/pnas.2011695118 [Presentation and Discussion Lead: Jialu Fan]
-    - **[Text But Used Differently]** Zhou, A., Capizzo, L. W., Page, T. G., & Toth, E. L. (2023). Exploring public relations research topics and inter-cluster dynamics through computational modeling (2010-2020): A study based on two SSCI journals. *Journal of Public Relations Research, 35*(3), 135–161. https://doi.org/10.1080/1062726X.2023.2180373
-    - **[Measuring Culture]** Kozlowski, A. C., Taddy, M., & Evans, J. A. (2019). The geometry of culture: Analyzing the meanings of class through word embeddings. *American Sociological Review, 84*(5), 905–949. https://doi.org/10.1177/0003122419877135 [Presentation and Discussion Lead: Jiacheng Huang]
-    - **[Sociology and History]** Knight, C. (2022). When corporations are people: Agent talk and the development of organizational actorhood, 1890–1934. *Sociological Methods & Research, 51*(4), 1634–1680. https://doi.org/10.1177/0049124122112<<2528 [Presentation and Discussion Lead: Michael Ofori]
-- **Afternoon**
-  - **Lab - Text (Advanced):** https://github.com/alvinyxz/CSS_Workshop/blob/main/Day3/Lab/Day3.md
-    - **Google Perspective**: https://www.perspectiveapi.com/
-    - **Topic Modeling**:
-      - Roberts, M. E., Stewart, B. M., Tingley, D., Lucas, C., Leder-Luis, J., Gadarian, S. K., Albertson, B., & Rand, D. G. (2014). Structural topic models for open-ended survey responses. *American Journal of Political Science, 58*(4), 1064–1082. https://doi.org/10.1111/ajps.12103
-      - Roberts, M. E., Stewart, B. M., & Tingley, D. (2019). Stm: An R package for structural topic models. *Journal of Statistical Software, 91*(2). https://doi.org/10.18637/jss.v091.i02
 
 ### 2.15.4. Day 4 - Networks
 
@@ -324,7 +319,7 @@ Network
   - **Reading:** https://github.com/alvinyxz/CSS_Workshop/blob/main/Day4
     - **[The "Network Wormhole" Study]** Park, P. S., Blumenstock, J. E., & Macy, M. W. (2018). The strength of long-range ties in population-scale social networks. *Science, 362*(6421), 1410–1413. https://doi.org/10.1126/science.aau9735
     - **[How to Make Network Description Engaging]** Schlosser, F., Maier, B. F., Jack, O., Hinrichs, D., Zachariae, A., & Brockmann, D. (2020). COVID-19 lockdown induces disease-mitigating structural changes in mobility networks. *Proceedings of the National Academy of Sciences, 117*(52), 32883–32890. https://doi.org/10.1073/pnas.2012326117 [Presentation and Discussion Lead: Eunsun Kyoung]
-    - **[Create New Measures for Network Analysis]** Vosoughi, S., Roy, D., & Aral, S. (2018). The spread of true and false news online. *Science, 359*(6380), 1146–1151. https://doi.org/10.1126/science.aap9559 [Presentation and Discussion Lead: Dongwook Kim]
+    - **[Create New Measures for Network Analysis]**  [Presentation and Discussion Lead: Dongwook Kim]
     - **[Projection Data]** González-Bailón, S., Lazer, D., Barberá, P., Zhang, M., Allcott, H., Brown, T., Crespo-Tenorio, A., Freelon, D., Gentzkow, M., Guess, A. M., Iyengar, S., Kim, Y. M., Malhotra, N., Moehler, D., Nyhan, B., Pan, J., Rivera, C. V., Settle, J., Thorson, E., … Tucker, J. A. (2023). Asymmetric ideological segregation in exposure to political news on Facebook. *Science, 381*(6656), 392–398. https://doi.org/10.1126/science.ade7138
     - **[Historical Sociology - Network is Everywhere]** Zhao, J., Wei, Y., & Wu, B. (2022). Analysis of the social network and the evolution of the influence of ancient Chinese poets. *Social Science Computer Review, 40*(4), 1014–1034. https://doi.org/10.1177/08944393211028182 [Presentation and Discussion Lead: Rita Tang]
 - **Afternoon**
