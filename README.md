@@ -1,10 +1,10 @@
 - [1. Syllabus, Components, and Assignments](#1-syllabus-components-and-assignments)
-  - [1.1. Reading Discussion (30%)](#11-reading-discussion-30)
+  - [1.1. Reading (30%)](#11-reading-30)
     - [1.1.1. Canvas Discussion \& In-Class Participation (10%)](#111-canvas-discussion--in-class-participation-10)
-    - [1.1.2. Reading Lead (5%x4 = 20%)](#112-reading-lead-5x4--20)
+    - [1.1.2. Reading Lead (5%\*4 = 20%)](#112-reading-lead-54--20)
       - [1.1.2.1. Response Letter with Annotations (RLA)](#1121-response-letter-with-annotations-rla)
       - [1.1.2.2. Lead Discussant](#1122-lead-discussant)
-  - [1.2. Computational Toolkit Demo (15%x2 = 30%)](#12-computational-toolkit-demo-15x2--30)
+  - [1.2. Computational Toolkit Demo (15%\*2 = 30%)](#12-computational-toolkit-demo-152--30)
   - [1.3. Final Paper (40%)](#13-final-paper-40)
 - [2. Course Schedule](#2-course-schedule)
   - [2.1. 2026/01/22](#21-20260122)
@@ -21,7 +21,7 @@
   - [2.12. 2026/04/16](#212-20260416)
   - [2.13. 2026/04/23](#213-20260423)
   - [2.14. 2026/04/30](#214-20260430)
-  - [2.15. 2026/05/07](#215-20260507)
+  - [2.15. 2026/05/13](#215-20260513)
     - [2.15.1. Day 1 - Welcome and Get Ready](#2151-day-1---welcome-and-get-ready)
     - [2.15.2. Day 2 - Text (Basic: Dictionary and Classification)](#2152-day-2---text-basic-dictionary-and-classification)
     - [2.15.3. Day 3 - Text (Advanced: API, Topic Modeling, Embedding, and Innovative Use)](#2153-day-3---text-advanced-api-topic-modeling-embedding-and-innovative-use)
@@ -50,31 +50,31 @@
 - In-Person Office Hours: Thursdays 1:30-2:30 pm, Murphy Hall 325
 - Or book me for virtual office hours on Google Calendar: https://z.umn.edu/Alvin_Meeting and we will meet on Zoom
 
-## 1.1. Reading Discussion (30%)
+## 1.1. Reading (30%)
 
 ### 1.1.1. Canvas Discussion & In-Class Participation (10%)
 
 The course is organized as a seminar, which means all students are expected to attend all classes, have read and thought about all readings prior to each class, and participate actively and productively in class discussion.
 
-In general, before class, you should have carefully thought about: 1) how the computational methods used in each study helped address the specific research questions of interest to the authors, 2) in what sense these computational methods could extend conventional methods, 3) what are their major assumptions and limitations, and 4) what new arenas for future research these computational methods could open.
+In general, before class, you should have carefully thought about: (1) how the computational methods used in each study helped address the specific research questions of interest to the authors, (2) in what sense these computational methods could extend conventional methods, (3) what are their major assumptions and limitations, and (4) what new arenas for future research these computational methods could open.
 
-<span style="color: orange;">**TODO EVERY WEEK**</span> To facilitate discussion, each week all students will submit (to the whole class and me) at least ONE thoughtful question or comment of interest to you emerging from the week's readings. These discussion questions/comments should be posted to the "Discussions" section on Canvas (named "[Week X] Readings") at least 24 hours before the scheduled class meeting. You do not need to post additional questions/comments for readings you are already assigned as Reading Lead.
+To facilitate discussion, each week, all students will submit (to the whole class and me) at least one thoughtful question or comment of interest to you emerging from the week's readings. <span style="color: orange;">You are expected to post discussion questions/comments to the "Discussions" section on Canvas (named "[Week X] Readings") at least 24 hours before the scheduled class meeting.</span> You are also encouraged to read other students' questions/comments and reply to them. Regardless of whether you are the Reading Lead for a certain week's readings, you should still post to participate in the discussion.
 
-### 1.1.2. Reading Lead (5%x4 = 20%)
+### 1.1.2. Reading Lead (5%*4 = 20%)
 
-Throughout this semester, you are required to sign up for 4 research papers on the reading list. For each reading, you will: 1) prepare a response letter with annotations (RLA), and 2) serve as the lead discussant for those assigned articles.
+Throughout this semester, you are required to sign up for 4 research papers on the reading list. For each reading, you will: (1) prepare a response letter with annotations (RLA), and (2) serve as the lead discussant for those assigned articles.
 
-<span style="color: orange;">**TODO FOUR TIMES**</span> You are expected to post your RLA as PDFs to the "Assignment" section on Canvas (named "[Week X] RLA") at least 24 hours before the scheduled class meeting. If for some reason you will be unable to attend a class for which you are assigned to provide a discussion guide, it is your responsibility to either trade assigned readings with someone else in the class who can attend, or arrange someone else to distribute your discussion guides at the start of the relevant class period. [Extra Credit] If you volunteer to be a lead discussant for an extra reading (i.e., 5 total), you will receive 5% extra credit added to your final grade.
+<span style="color: orange;">You are expected to post your RLA as PDFs to the "Discussion" section on Canvas (named "[Week X] RLA") at least 24 hours before the scheduled class meeting.</span> If for some reason you will be unable to attend a class for which you are assigned to provide a discussion guide, it is your responsibility to either trade assigned readings with someone else in the class who can attend, or arrange someone else to distribute your discussion guides at the start of the relevant class period. [Extra Credit] If you volunteer to be a lead discussant for an extra reading (i.e., 5 total), you will receive 5% extra credit added to your final grade.
 
 #### 1.1.2.1. Response Letter with Annotations (RLA)
 
-A template for RLA is provided in this repository's root folder as "RLA_Template.docx".
+A template for RLA is provided in [this repository's root folder](https://z.umn.edu/J8500) as "RLA_Template.docx".
 
 Each RLA starts with annotations, which should take the format of astructured outline or an extended abstract that briefly summarizes (1) the background information and motivation for the study, (2) hypotheses and research questions, (3) the method session (study design, sample, data, measures, analytical strategies), and (4) results with copied main tables/figures. Annotations should focus on summarizing what has been done. The length may vary depending on the complexity of the paper.
 
 Following the annotation, the RLA should highlight your own assessment and reflections about the reading (roughly ~600 words). These short RLAs serve four purposes: (1) they summarize a reading to focus attention on main points and to highlight its relevance to issues of concern in the course, (2) they outline the strengths and weaknesses of the computational method(s) used in the study (no need to cover all the technical details), (3) they raise questions about a reading that can be used to stimulate discussion especially with regards to the strengths and weaknesses of the computational method(s), and (4) they connect new readings to old readings in order to highlight common themes and to point out how current readings raise, address, or underscore questions sparked by previous reading assignments. In short, the response letter is a quasi-peer-review of the paper, with a slight emphasis on the computational method(s) used in the study.
 
-All RLAs will be distributed back to the class. Therefore, by the end of the course, each student will have access to summaries and analyses of every major reading covered during the semester.
+All RLAs are available to all students enrolled in the class. Therefore, by the end of the course, each student will have access to summaries and analyses of every major reading covered during the semester.
 
 #### 1.1.2.2. Lead Discussant
 
@@ -84,13 +84,91 @@ You are expected to take the lion's share of the responsibility to help other st
 
 You can use your own way of presentation (e.g., PowerPoint slides, whiteboard, handouts, etc.). You may also want to prepare a few questions to stimulate discussion. Treat this also as a way to practice your presentation/teaching/discussant skills, which are very important in both academia and industry and useful when attending and moderating conference panels.
 
-## 1.2. Computational Toolkit Demo (15%x2 = 30%)
+## 1.2. Computational Toolkit Demo (15%*2 = 30%)
 
+The primary goal for this assignment is two-fold: (1) to help you get more comfortable with R programming, and (2) to help you develop the know-how to crack any new R package through googling, stack-overflowing, and even asking AI models about debugging. The field of computational social science is evolving so rapidly that there is simply no way to keep up with every possible package out there. Also, the best way for learning is probably through teaching others.
 
+Throughout this semester, each student will sign up to demonstrate the functionalities and workflow of two R packages related to computational analyses. The list of candidate packages can be found in the Course Schedule. At maximum, 3 students can sign up for the same package and work as a group to collaboratively prepare and deliver the demo. When there are multiple packages scheduled on the same day, groups responsible for those packages should coordinate with each other to ensure a coherent presentation without too much overlap. You are welcome, and in fact *encouraged*, to "steal" existing tutorials and datasets available online.
+
+There are three things that need to be done to complete this assignment:
+
+- First, <span style="color: orange;">the group responsible for the particular R package must prepare a problem set with an associated dataset and distribute these materials to the class by the end of the Friday prior to the scheduled presentation.</span> To do so, upload the problem set to the "Discussion" section on Canvas (named "[Week X] Computational Toolkit Demo"). The rest of the class is encouraged to work on the problem set during the weekend and explore the package themselves, although no grading is required. The presentation group can determine the number and scope of questions as deemed appropriate for the learning goals of the demo. For example, for the igraph package about network analysis, the problem set can include a network matrix and a few questions such as: (1) visualize the network with different layouts, (2) calculate basic node-level statistics (e.g., degree centrality, betweenness centrality, closeness centrality), (3) detect communities in the network, and (4) plot the degree distribution of the network.
+- Second, <span style="color: orange;">the group responsible for the particular R package should present the demo, taking the format of a short workshop (~30 minutes long), during the scheduled class time.</span> The presentation should cover (1) an introduction to the package and its major functionalities, (2) a step-by-step demonstration of how to use the package to carry out a specific kind of computational analyses, and (3) a walk-through of the problem set distributed prior to the class, as well as other questions/problems that the package can solve. Demos should seek to involve the audiences through interactive exercises as much as possible, and the presentation group should be ready to answer questions about the package and help fellow students debug any issues they may encounter when using the package.
+- Third, after the class, <span style="color: orange;">the group responsible for the particular R package should submit one compiled R notebook/markdown file to the same "Discussion" section on Canvas (named "[Week X] Computational Toolkit Demo").</span> The file should contain the main content of the demo for circulation among all enrolled students, including answer keys/codes to the problem set, sample code, and other materials. In this way, all of you will have access to a collection of tutorials and R codes for future use by the end of the semester.
 
 ## 1.3. Final Paper (40%)
-  - Paper Idea Pitch (5% ×2 = 10%)
-  - Final paper OR proposal (individual or group) 30%
+
+The goal of the final paper is to contribute, no matter how modestly, to the burgeoning literature on computational communication science. The paper must apply one or more computational methods covered in this class (e.g., topic modeling, sentiment analyses, network analyses, neural network models, word embedding, computer vision, regularized regression, causal heterogeneity analyses) to propose, test and advance communication theory or to address a practical communication/media-related issue of significance. You are allowed to extend work developed in previous classes or research groups, but you should state so in your paper clearly and explain what new contributions your current work makes beyond prior work.
+
+You have three options for the final research paper:
+
+1. [Group Option] A complete research paper written collectively as a small group (maximum 3 students per group)
+
+    This option requires students to collaborate in small groups (2-3 students per group). Your group should apply one or more computational methods covered in the course to an appropriate dataset to address a coherent set of hypotheses/research questions that could advance the literature in an area of your interest. There is no better way to learn methods than practice. Choosing this option is likely to generate the maximum value in taking this course, preparing you for submissions to academic conferences and/or journals.
+
+    You are encouraged to take advantage of the tweets archival made available to all enrolled students. Additionally, you are also encouraged to scrape digital sources or locate publicized datasets whenever necessary. Using datasets from previous work is also possible as long as the datasets are suitable for computational analyses. Given the tight timeline, gathering additional data from human subjects should be minimized.
+
+2. [Individual Option 1] An individual research proposal
+
+    You are also welcome to use the final paper as an opportunity to design a new study that involves computational methods. You do not need to report results from data analyses or discuss your findings in a research proposal. No collaboration is allowed for this option. The originality of your paper, its implications for communication theory and practice, and the appropriateness of the proposed computational method(s) will be the key criteria for evaluation.
+
+3. [Individual Option 2] A complete individual research paper
+
+    You also have the option to write up a complete research paper by yourself. The expectations and criteria for evaluation will be identical to the Group Option Complete Paper.
+
+Regardless of which option you choose, your final paper is graded for each of these building steps:
+
+1. Paper Idea Pitch (5%)
+
+    <span style="color: orange;">Regardless of which option (group vs. individual) you choose, each student should submit two *individual* Paper Idea Pitches to the "Discussion" section on Canvas (named "[Week 4] Final Paper - Paper Idea Pitch") by the end of Week 4.</span> Each pitch should have no more than 300 words. The focus is to identify at least one computational method from any reading on the course schedule and explain how the identified method(s) could be applied to address one specific hypothesis/research question. Each pitch should include at least the following components: (1) a significance statement that provides background information and justifies why the hypothesis/research question is important to study, (2) a method statement that identifies the computational method(s) and justifies why the method(s) is/are appropriate, and (3) a data statement that explains what kind of dataset is needed to carry out the analyses.
+
+    Submitted to the "Discussion" section, all pitches will be shared with the whole class. You can browse other students' pitches to get inspiration. More importantly, you should use this opportunity to decide which paper option (group vs. individual) you want to pursue: you may find classmates who share your interests in a specific topic domain or a computational method.
+
+2. Peer Review (5%*2 = 10%)
+
+    Providing constructive peer reviews is an essential skill in academic careers. You will complete two reviews throughout this semester, one for a randomly selected student's paper idea pitches and the other for a randomly assigned proposal draft (group or individual). This is done in the same "Discussion" threads for Paper Idea Pitch and Proposal Draft. <span style="color: orange;">Peer reviews are due one week after the due dates of the Paper Idea Pitch and the Proposal Draft.</span>
+    
+    Resources on how to be an effective and constructive reviewer:
+    
+    - https://authorservices.wiley.com/Reviewers/journal-reviewers/how-to-perform-a-peer-review/index.html
+    - https://doi.org/10.1093/ije/dyae154
+    - https://researcheracademy.elsevier.com/navigating-peer-review/becoming-peer-reviewer
+
+3. Proposal Draft (5%)
+
+    After reviewing peers' and my comments on your paper idea pitches and deciding which final paper option (group vs. individual) you want to pursue, you will develop a proposal draft based on the selected paper idea pitch. A proposal draft should expand on that idea and include the following components: (1) statement of hypotheses and research questions, (2) an outline of literature review to justify the significance of RQs/Hs, and (3) an outline of the method session that includes at least a brief description of study design, dataset to collect/use, measures, and analytical strategies. You should identify at least one computational method in the proposal. Students choosing the group final paper option only need to designate one student to submit the proposal on behalf of the group.
+    
+    <span style="color: orange;">This proposal draft should be between 1000 and 1500 words in length and submitted to the "Discussion" section on Canvas (named "[Week 9] Final Paper - Proposal Draft") by the end of Week 9.</span> The peer review for the proposal draft is due one week later.
+
+4. Final Paper Presentation (5%)
+
+    The format for this research presentation models academic conference presentations (e.g., ICA, AEJMC). Each group/student will present their key findings, interpretation of results, methods, background information, limitations and future directions, and key takeaway points (10-15-minute presentation + 5 minutes of Q&A). Those choosing the individual research proposal option do not need to present results. Final paper presentations will be held in Week 14, and <span style="color: orange;">the slides should be submitted to Canvas (named "[Week 14] Final Paper - Presentation").</span>
+
+5. Final Paper (15%)
+
+    Your final paper should follow standard APA (7th edition) formatting guidelines and be 18-25 pages in length for complete papers or 9-12 pages in length for research proposals. Students choosing the group final paper option only need to designate one student to submit the paper on behalf of the group. <span style="color: orange;">The final paper is due at the end of the semester and should be submitted to Canvas (named "[End] Final Paper").</span> While the structure may differ, they should generally include the following information:
+
+    - Introduction
+      - Background information
+      - Statement of significance
+    - Literature review
+      - Review of relevant aspects of your theory/theories
+      - Review of existing empirical research on the topic
+      - Justification in terms of why we should use the proposed computational method(s)
+      - Statement of hypotheses or research questions
+    - Methods
+      - Study design and data
+      - Measures
+      - Analytical strategies with justifications
+    - Results (only for complete papers)
+      - Findings with respect to your hypotheses and research questions
+      - Tables and figures when appropriate
+    - Discussion (only for complete papers)
+      - What we have learned
+      - Theoretical and practical contributions to the literature
+      - Limitations and future directions
+    - Conclusion (only for complete papers)
+      - Summary of key takeaways
 
 # 2. Course Schedule
 
@@ -102,12 +180,15 @@ You can use your own way of presentation (e.g., PowerPoint slides, whiteboard, h
 
 ## 2.2. 2026/01/29
 
-- **Foundational Readings:**
-  - Lazer, D., Pentland, A., Adamic, L., Aral, S., Barabasi, A.-L., Brewer, D., Christakis, N., Contractor, N., Fowler, J., Gutmann, M., Jebara, T., King, G., Macy, M., Roy, D., & Van Alstyne, M. (2009). Computational social science. *Science, 323*(5915), 721–723. https://doi.org/10.1126/science.1167742
-  - Lazer, D., Pentland, A., Watts, D. J., Aral, S., Contractor, N., Freelon, D., Gonzalez-Bailon, S., King, G., Nelson, A., Salganik, J., Strohmaier, M., Vespignani, A., & Wagner, C. (2020). Computational social science: Obstacles and opportunities. *Science, 369*(6507), 1060–1062. https://doi.org/10.1126/science.aaz8170
-  - Lazer, D., Hargittai, E., Freelon, D., Gonzalez-Bailon, S., Munger, K., Ognyanova, K., & Radford, J. (2021). Meaningful measures of human society in the twenty-first century. *Nature, 595*(7866), 189–196. https://doi.org/10.1038/s41586-021-03660-7
-  - Hofman, J. M., Watts, D. J., Athey, S., Garip, F., Griffiths, T. L., Kleinberg, J., Margetts, H., Mullainathan, S., Salganik, M. J., Vazire, S., Vespignani, A., & Yarkoni, T. (2021). Integrating explanation and prediction in computational social science. *Nature, 595*(7866), 181–188. https://doi.org/10.1038/s41586-021-03659-0
-  - Wallach, H. (2018). Computational social science ≠ computer science + social data. *Communications of the ACM, 61*(3), 42–44. https://doi.org/10.1145/3132698
+1. Readings
+   - Lazer, D., Pentland, A., Adamic, L., Aral, S., Barabasi, A.-L., Brewer, D., Christakis, N., Contractor, N., Fowler, J., Gutmann, M., Jebara, T., King, G., Macy, M., Roy, D., & Van Alstyne, M. (2009). Computational social science. *Science, 323*(5915), 721–723. https://doi.org/10.1126/science.1167742
+   - Lazer, D., Pentland, A., Watts, D. J., Aral, S., Contractor, N., Freelon, D., Gonzalez-Bailon, S., King, G., Nelson, A., Salganik, J., Strohmaier, M., Vespignani, A., & Wagner, C. (2020). Computational social science: Obstacles and opportunities. *Science, 369*(6507), 1060–1062. https://doi.org/10.1126/science.aaz8170
+   - Lazer, D., Hargittai, E., Freelon, D., Gonzalez-Bailon, S., Munger, K., Ognyanova, K., & Radford, J. (2021). Meaningful measures of human society in the twenty-first century. *Nature, 595*(7866), 189–196. https://doi.org/10.1038/s41586-021-03660-7
+   - Hofman, J. M., Watts, D. J., Athey, S., Garip, F., Griffiths, T. L., Kleinberg, J., Margetts, H., Mullainathan, S., Salganik, M. J., Vazire, S., Vespignani, A., & Yarkoni, T. (2021). Integrating explanation and prediction in computational social science. *Nature, 595*(7866), 181–188. https://doi.org/10.1038/s41586-021-03659-0
+   - Wallach, H. (2018). Computational social science ≠ computer science + social data. *Communications of the ACM, 61*(3), 42–44. https://doi.org/10.1145/3132698
+2. Computational Toolkits Demo "From SPSS to R"
+   - lm, glm, lmr4
+   - modelsummary
 
 ## 2.3. 2026/02/05
 
@@ -150,11 +231,11 @@ Ethics, Open Science, and Reproducibility
 
 ## 2.14. 2026/04/30
 
-Group Project Presentation
+Final Paper Presentations
 
-## 2.15. 2026/05/07
+## 2.15. 2026/05/13
 
-
+Final Paper Due
 
 ### 2.15.1. Day 1 - Welcome and Get Ready
 
