@@ -21,9 +21,6 @@
   - [2.12. 2026/04/16](#212-20260416)
   - [2.13. 2026/04/23](#213-20260423)
   - [2.14. 2026/04/30](#214-20260430)
-  - [2.15. 2026/05/13](#215-20260513)
-    - [2.15.1. Day 1 - Welcome and Get Ready](#2151-day-1---welcome-and-get-ready)
-    - [2.15.2. Day 2 - Text (Basic: Dictionary and Classification)](#2152-day-2---text-basic-dictionary-and-classification)
     - [2.15.3. Day 3 - Text (Advanced: API, Topic Modeling, Embedding, and Innovative Use)](#2153-day-3---text-advanced-api-topic-modeling-embedding-and-innovative-use)
     - [2.15.4. Day 4 - Networks](#2154-day-4---networks)
     - [2.15.5. Day 5 - The Web, Computational Infrastructure, and Innovative Datasets](#2155-day-5---the-web-computational-infrastructure-and-innovative-datasets)
@@ -174,94 +171,129 @@ Regardless of which option you choose, your final paper is graded for each of th
 
 ## 2.1. 2026/01/22
 
-- Introduction
-- Install R and RStudio
-- Try out Google Colab or Jupyter Notebook for Python
+1. Introduction
+2. RLA and Computational Toolkit Demo Sign-Up Due (2026/01/28)
+3. Getting Started with R
+   1. Install R and RStudio: https://github.com/alvinyxz/CSS_Workshop/blob/main/Day1/Lab/Day1.md
 
 ## 2.2. 2026/01/29
 
-1. Readings
+1. Due at the beginning of Week 2: [Week 2] Readings + [Week 2] RLA
    - Lazer, D., Pentland, A., Adamic, L., Aral, S., Barabasi, A.-L., Brewer, D., Christakis, N., Contractor, N., Fowler, J., Gutmann, M., Jebara, T., King, G., Macy, M., Roy, D., & Van Alstyne, M. (2009). Computational social science. *Science, 323*(5915), 721–723. https://doi.org/10.1126/science.1167742
    - Lazer, D., Pentland, A., Watts, D. J., Aral, S., Contractor, N., Freelon, D., Gonzalez-Bailon, S., King, G., Nelson, A., Salganik, J., Strohmaier, M., Vespignani, A., & Wagner, C. (2020). Computational social science: Obstacles and opportunities. *Science, 369*(6507), 1060–1062. https://doi.org/10.1126/science.aaz8170
    - Lazer, D., Hargittai, E., Freelon, D., Gonzalez-Bailon, S., Munger, K., Ognyanova, K., & Radford, J. (2021). Meaningful measures of human society in the twenty-first century. *Nature, 595*(7866), 189–196. https://doi.org/10.1038/s41586-021-03660-7
    - Hofman, J. M., Watts, D. J., Athey, S., Garip, F., Griffiths, T. L., Kleinberg, J., Margetts, H., Mullainathan, S., Salganik, M. J., Vazire, S., Vespignani, A., & Yarkoni, T. (2021). Integrating explanation and prediction in computational social science. *Nature, 595*(7866), 181–188. https://doi.org/10.1038/s41586-021-03659-0
    - Wallach, H. (2018). Computational social science ≠ computer science + social data. *Communications of the ACM, 61*(3), 42–44. https://doi.org/10.1145/3132698
-2. Computational Toolkits Demo "From SPSS to R"
-   - lm, glm, lmr4
-   - modelsummary
+
+2. Computational Toolkits Demo: "From Excel/SPSS to R" - Basic
+   - lm, glm, lme4, lmerTest, beepr
+   - modelsummary, R Markdown
 
 ## 2.3. 2026/02/05
 
-Text
+1. Reading
+   - Feuerriegel, S., Maarouf, A., Bär, D., Geissler, D., Schweisthal, J., Pröllochs, N., Robertson, C. E., Rathje, S., Hartmann, J., Mohammad, S. M., Netzer, O., Siegel, A. A., Plank, B., & Van Bavel, J. J. (2025). Using natural language processing to analyse text data in behavioural science. *Nature Reviews Psychology, 4*(2), 96–111. https://doi.org/10.1038/s44159-024-00392-z
+2. Computational Toolkits Demo: "From Excel/SPSS to R" - Advanced
+   - tidyverse (dplyr, readr, tidyr, stringr, lubridate)
+   - Qualtrics API in R
 
 ## 2.4. 2026/02/12
 
-STM, Embedding
+1. Reading
+   - Barberá, P., Boydstun, A. E., Linn, S., McMahon, R., & Nagler, J. (2021). Automated text classification of news articles: A practical guide. *Political Analysis, 29*(1), 19–42. https://doi.org/10.1017/pan.2020.8
+   - Wang, S.-Y. N., & Inbar, Y. (2021). Moral-language use by U.S. political elites. *Psychological Science, 32*(1), 14–26. https://doi.org/10.1177/0956797620960397
+   - Seraj, S., Blackburn, K. G., & Pennebaker, J. W. (2021). Language left behind on social media exposes the emotional and cognitive costs of a romantic breakup. *Proceedings of the National Academy of Sciences, 118*(7), e2017154118. https://doi.org/10.1073/pnas.2017154118
+2. Computational Toolkits Demo: "Text Analysis Basics"
+   - quanteda (tidytext sentiment analysis)
+   - LIWC and Google Perspective API
+3. Due at the end of Week 4: [Week 4] Final Paper - Paper Idea Pitch
+4. Optional Reading
+   - Tausczik, Y. R., & Pennebaker, J. W. (2010). The psychological meaning of words: LIWC and computerized text analysis methods. *Journal of Language and Social Psychology, 29*(1), 24–54. https://doi.org/10.1177/0261927X09351676
 
 ## 2.5. 2026/02/19
 
+1. Reading
+   - Duan, Z., Li, J., Lukito, J., Yang, K.-C., Chen, F., Shah, D. V., & Yang, S. (2022). Algorithmic agents in the hybrid media system: Social bots, selective amplification, and partisan news about COVID-19. *Human Communication Research, 48*(3), 516–542. https://doi.org/10.1093/hcr/hqac012
+   - Zhou, A. (2021). Communicating corporate LGBTQ advocacy: A computational comparison of the global CSR discourse. *Public Relations Review, 47*(4), 102061. https://doi.org/10.1016/j.pubrev.2021.102061
+   - Mukerjee, S., Yang, T., & Peng, Y. (2023). Metrics in action: How social media metrics shape news production on Facebook. *Journal of Communication, 73*(3), 260–272. https://doi.org/10.1093/joc/jqad012
+2. Computational Toolkits Demo: "Text Analysis Advanced"
+   - stm
+   - topicmodels
+3. Due at the end of Week 5: [Week 5] Final Paper - Paper Idea Pitch Peer Review
+
 ## 2.6. 2026/02/26
+
+1. Reading
+2. Computational Toolkits Demo
+   - caret
+   - text2vec
 
 ## 2.7. 2026/03/05
 
-Group Project Proposal and Submit
+1. Reading
+   - Joo, J., & Steinert-Threlkeld, Z. C. (2022). Image as data: Automated content analysis for visual presentations of political actors and events. *Computational Communication Research, 4*(1). https://doi.org/10.5117/CCR2022.1.001.JOO
+   - Qian, S., Lu, Y., Peng, Y., Shen, C., & Xu, H. (2024). Convergence or divergence? A cross-platform analysis of climate change visual content categories, features, and social media engagement on Twitter and Instagram. *Public Relations Review, 50*(2), 102454. https://doi.org/10.1016/j.pubrev.2024.102454
+   - Lu, Y., Pan, J., Xu, X., & Xu, Y. (2025). Decentralized propaganda in the era of digital media: The massive presence of the Chinese state on Douyin. *American Journal of Political Science*. https://doi.org/10.1111/ajps.12990
+2. Computational Toolkits Demo
+   - athec (Python; if you are familiar with Python, sign up here)
+   - text2vec
 
 ## 2.8. 2026/03/19
 
+Network
 
+1. Reading
+2. Computational Toolkits Demo: "Network Analysis Basics"
+   - igraph
+   - ggraph
+3. Due at the end of Week 9: [Week 9] Final Paper - Proposal Draft
 
 ## 2.9. 2026/03/26
-Network
+
+1. Reading
+2. Computational Toolkits Demo: "Network Analysis Advanced"
+   - sna
+   - Gephi
+3. Due at the end of Week 10: [Week 10] Final Paper - Proposal Draft Peer Review
 
 ## 2.10. 2026/04/02
 
-IGRAPH
+1. Reading
+2. Computational Toolkits Demo
+   - ggplot2
+   - Google Draw and Affinity
 
 ## 2.11. 2026/04/09
 
-Visualization
+1. Reading
+2. Computational Toolkits Demo
+   - patchwork, cowplot, hrbrthemes
 
 ## 2.12. 2026/04/16
 
-GGPlot2, Shiny
+1. Reading
+2. Computational Toolkits Demo
+   - ellmer
+   - OpenAI API (Python; if you are familiar with Python, sign up here)
 
 ## 2.13. 2026/04/23
 
-Ethics, Open Science, and Reproducibility
+1. Reading: Ethics, Open Science, and Reproducibility
+2. Computational Tookkits Demo
+   - OSF Walkthrough (Preprint and Preregistration)
+   - Github
 
 ## 2.14. 2026/04/30
 
-Final Paper Presentations
+- Final Paper Presentations (due at the end of Week 14: [Week 14] Final Paper - Presentation)
+- Final Paper (due at the end of Week 15: [End] Final Paper)
 
-## 2.15. 2026/05/13
 
-Final Paper Due
 
-### 2.15.1. Day 1 - Welcome and Get Ready
 
-- **Morning**
-  - **[Solomon Messing](https://solomonmg.github.io/) Guest Lecture with Catered Lunch**
-  - **Readings:**
-    - Aggarwal, M., Allen, J., Coppock, A., Frankowski, D., Messing, S., Zhang, K., Barnes, J., Beasley, A., Hantman, H., & Zheng, S. (2023). A 2 million-person, campaign-wide field experiment shows how digital advertising affects voter turnout. *Nature Human Behaviour, 7*(3), 332–341. https://doi.org/10.1038/s41562-022-01487-4
-    - A secret embargoed paper to be sent via email; please do not share it with anyone outside the workshop---there is legal liability for doing so.
-- **Afternoon**
-  - **Seminar - Welcome:** https://github.com/alvinyxz/CSS_Workshop/blob/main/Day1/Day1.pdf
-  - **Lab - Get Started with R/Python:** https://github.com/alvinyxz/CSS_Workshop/blob/main/Day1/Lab/Day1.md
-
-### 2.15.2. Day 2 - Text (Basic: Dictionary and Classification)
-
-- **Morning**
-  - **Presentation:** Nicole Marie Klevanskaya, Raj Wahlquist, Sijin Chen
-  - **Slides:** https://github.com/alvinyxz/CSS_Workshop/blob/main/Day2/Day2.pdf
-  - **Readings:** https://github.com/alvinyxz/CSS_Workshop/blob/main/Day2
-    - **[Practical Guide]** Barberá, P., Boydstun, A. E., Linn, S., McMahon, R., & Nagler, J. (2021). Automated text classification of news articles: A practical guide. *Political Analysis, 29*(1), 19–42. https://doi.org/10.1017/pan.2020.8 [Presentation and Discussion Lead: Nicole Marie Klevanskaya]
-    - **[Overview]** Feuerriegel, S., Maarouf, A., Bär, D., Geissler, D., Schweisthal, J., Pröllochs, N., Robertson, C. E., Rathje, S., Hartmann, J., Mohammad, S. M., Netzer, O., Siegel, A. A., Plank, B., & Van Bavel, J. J. (2025). Using natural language processing to analyse text data in behavioural science. *Nature Reviews Psychology, 4*(2), 96–111. https://doi.org/10.1038/s44159-024-00392-z
-    - **[Psychology]** Wang, S.-Y. N., & Inbar, Y. (2021). Moral-language use by U.S. political elites. *Psychological Science, 32*(1), 14–26. https://doi.org/10.1177/0956797620960397 [Presentation and Discussion Lead: Raj Wahlquist]
-    - **[Embed NLP in a Bigger Design]** Jaidka, K., Zhou, A., & Lelkes, Y. (2019). Brevity is the soul of Twitter: The constraint affordance and political discussion. *Journal of Communication, 69*(4), 345–372. https://doi.org/10.1093/joc/jqz023 [Presentation by Sijin Chen]
-    - **[Simple Study Packaged Well]** Seraj, S., Blackburn, K. G., & Pennebaker, J. W. (2021). Language left behind on social media exposes the emotional and cognitive costs of a romantic breakup. *Proceedings of the National Academy of Sciences, 118*(7), e2017154118. https://doi.org/10.1073/pnas.2017154118
 - **Afternoon**
   - **Lab - Text (Basic):** https://github.com/alvinyxz/CSS_Workshop/blob/main/Day2/Lab/Day2.md
-    - **LIWC:** Tausczik, Y. R., & Pennebaker, J. W. (2010). The psychological meaning of words: LIWC and computerized text analysis methods. *Journal of Language and Social Psychology, 29*(1), 24–54. https://doi.org/10.1177/0261927X09351676
+    - **LIWC:** 
     - **Sentiment:**
       - `AFINN`, `bing`, and `nrc` in `tidytext`
     - **Classifier in R**
