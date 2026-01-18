@@ -172,8 +172,7 @@ Regardless of which option you choose, your final paper is graded for each of th
 
 1. Introduction
 2. Sign-Up Due (2026/01/26): RLA and Computational Toolkit Demo
-3. Getting Started with R
-   1. Install R and RStudio: https://github.com/alvinyxz/CSS_Workshop/blob/main/Day1/Lab/Day1.md
+3. Getting Started with R and Python: https://htmlpreview.github.io/?https://github.com/alvinyxz/CCR_2026_Spring/blob/main/Week01/Week01.html
 
 ## 2.2. 2026/01/29
 
@@ -253,6 +252,8 @@ Network
    - igraph
    - ggraph
 3. Due at the end of Week 9: [Week 9] Final Paper - Proposal Draft
+4. Optional Reading
+   - Newman, M. E. J. (2010). *Networks: An introduction*. Oxford University Press.
 
 ## 2.9. 2026/03/26
 
