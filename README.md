@@ -15,23 +15,12 @@
   - [2.6. 2026/02/26 Text as Data: Supervised Learning and Embeddings](#26-20260226-text-as-data-supervised-learning-and-embeddings)
   - [2.7. 2026/03/05 Multimodal](#27-20260305-multimodal)
   - [2.8. 2026/03/19 Networks: Descriptions and Representations](#28-20260319-networks-descriptions-and-representations)
-  - [2.9. 2026/03/26 Networks: Inference](#29-20260326-networks-inference)
+  - [2.9. 2026/03/26 Networks: Inference and Experimentation](#29-20260326-networks-inference-and-experimentation)
   - [2.10. 2026/04/02 Data Visualization: Basics](#210-20260402-data-visualization-basics)
   - [2.11. 2026/04/09 Data Visualization: Advanced](#211-20260409-data-visualization-advanced)
   - [2.12. 2026/04/16 LLM-Assisted Computational Methods](#212-20260416-llm-assisted-computational-methods)
   - [2.13. 2026/04/23 Ethics](#213-20260423-ethics)
   - [2.14. 2026/04/30 Final Week](#214-20260430-final-week)
-    - [2.15.4. Day 4 - Networks](#2154-day-4---networks)
-    - [2.15.5. Day 5 - The Web, Computational Infrastructure, and Innovative Datasets](#2155-day-5---the-web-computational-infrastructure-and-innovative-datasets)
-    - [2.15.6. Day 6 - Image/Audio/Video](#2156-day-6---imageaudiovideo)
-    - [2.15.7. Day 7 - Looking Ahead and LLM](#2157-day-7---looking-ahead-and-llm)
-- [3. Additional Resources](#3-additional-resources)
-    - [3.0.1. Day 1: CSS Overview](#301-day-1-css-overview)
-    - [3.0.2. Day 2-3: Text](#302-day-2-3-text)
-    - [3.0.3. Day 4: Networks](#303-day-4-networks)
-    - [3.0.4. Day 5: The Web, Computational Infrastructure, and Public Datasets](#304-day-5-the-web-computational-infrastructure-and-public-datasets)
-    - [3.0.5. Day 6: Images/Videos/Audio](#305-day-6-imagesvideosaudio)
-    - [3.0.6. Day 7: Looking Ahead and LLM](#306-day-7-looking-ahead-and-llm)
 
 
 # 1. Syllabus, Components, and Assignments
@@ -214,9 +203,9 @@ Regardless of which option you choose, your final paper is graded for each of th
    - van Atteveldt, W., & Peng, T.-Q. (2018). When communication meets computation: Opportunities, challenges, and pitfalls in computational communication science. *Communication Methods and Measures, 12*(2–3), 81–92. https://doi.org/10.1080/19312458.2018.1458084
 5. Optional Reading for the Overall Course (and some books I recommend)
    - Salganik, M. J. (2018). Bit by bit: Social research in the digital age. Princeton University Press. https://www.bitbybitbook.com/en/1st-ed/preface/
-   - Grimmer, J., Roberts, M. E., & Stewart, B. M. (2021). Machine learning for social science: An agnostic approach. *Annual Review of Political Science, 24*(1), 395–419. https://doi.org/10.1146/annurev-polisci-053119-015921
    - Wickham, H., Çetinkaya-Rundel, M., & Grolemund, G. (2023). *R for data science: Import, tidy, transform, visualize, and model data* (2nd edition). O’Reilly.
-   - Edelmann, A., Wolff, T., Montagne, D., & Bail, C. A. (2020). Computational social science and sociology. *Annual Review of Sociology, 46*(1), 61–81. https://doi.org/10.1146/annurev-soc-121919-054621
+   - Llaudet, E., & Imai, K. (2023). *Data analysis for social science: A friendly and practical introduction*. Princeton University Press.
+   - Grimmer, J., Roberts, M. E., & Stewart, B. M. (2021). Machine learning for social science: An agnostic approach. *Annual Review of Political Science, 24*(1), 395–419. https://doi.org/10.1146/annurev-polisci-053119-015921
    - Watts, D. J. (2017). Should social science be more solution-oriented? *Nature Human Behaviour, 1*(1), 0015. https://doi.org/10.1038/s41562-016-0015
    - Hofman, J. M., Watts, D. J., Athey, S., Garip, F., Griffiths, T. L., Kleinberg, J., Margetts, H., Mullainathan, S., Salganik, M. J., Vazire, S., Vespignani, A., & Yarkoni, T. (2021). Integrating explanation and prediction in computational social science. *Nature, 595*(7866), 181–188. https://doi.org/10.1038/s41586-021-03659-0
    - Shah, D. V., Cappella, J. N., & Neuman, W. R. (2015). Big data, digital media, and computational social science: Possibilities and perils. *The ANNALS of the American Academy of Political and Social Science, 659*(1), 6–13. https://doi.org/10.1177/0002716215572084
@@ -245,8 +234,8 @@ Regardless of which option you choose, your final paper is graded for each of th
 
 1. Reading
    - Ohme, J., Araujo, T., Boeschoten, L., Freelon, D., Ram, N., Reeves, B. B., & Robinson, T. N. (2024). Digital trace data collection for social media effects research: APIs, data donation, and (screen) tracking. *Communication Methods and Measures, 18*(2), 124–141. https://doi.org/10.1080/19312458.2023.2181319
-   - Fischer, S., Jaidka, K., & Lelkes, Y. (2020). Auditing local news presence on Google News. *Nature Human Behaviour, 4*(12), 1236–1244. https://doi.org/10.1038/s41562-020-00954-0
-   - Huang, S., & Yang, T. (2024). Auditing entertainment traps on YouTube: How do recommendation algorithms pull users away from news. *Political Communication, 41*(6), 903–920. https://doi.org/10.1080/10584609.2024.2343769
+   - Robertson, R. E., Green, J., Ruck, D. J., Ognyanova, K., Wilson, C., & Lazer, D. (2023). Users choose to engage with more partisan news than they are exposed to on Google Search. *Nature, 618*(7964), 342–348. https://doi.org/10.1038/s41586-023-06078-5
+   - Haroon, M., Wojcieszak, M., Chhabra, A., Liu, X., Mohapatra, P., & Shafiq, Z. (2023). Auditing YouTube’s recommendation system for ideologically congenial, extreme, and problematic recommendations. *Proceedings of the National Academy of Sciences, 120*(50), e2213020120. https://doi.org/10.1073/pnas.2213020120
    - Bail, C. A., Argyle, L. P., Brown, T. W., Bumpus, J. P., Chen, H., Hunzaker, M. B. F., Lee, J., Mann, M., Merhout, F., & Volfovsky, A. (2018). Exposure to opposing views on social media can increase political polarization. *Proceedings of the National Academy of Sciences, 115*(37), 9216–9221. https://doi.org/10.1073/pnas.1804840115
    - Guess, A. M. (2021). (Almost) everything in moderation: New evidence on Americans’ online media diets. *American Journal of Political Science, 65*(4), 1007–1022. https://doi.org/10.1111/ajps.12589
    - Zhou, A., Yang, T., & González-Bailón, S. (2025). The puzzle of misinformation: Exposure to unreliable content in the United States is higher among the better informed. *New Media & Society, 27*(3), 1526–1543. https://doi.org/10.1177/14614448231196863
@@ -259,6 +248,7 @@ Regardless of which option you choose, your final paper is graded for each of th
    - Freelon, D. (2018). Computational research in the post-API age. *Political Communication, 35*(4), 665–668. https://doi.org/10.1080/10584609.2018.1477506
    - Theocharis, Y., & Jungherr, A. (2021). Computational social science and the study of political communication. *Political Communication, 38*(1–2), 1–22. https://doi.org/10.1080/10584609.2020.1833121
    - Clemm Von Hohenberg, B., Stier, S., Cardenal, A. S., Guess, A. M., Menchen-Trevino, E., & Wojcieszak, M. (2024). Analysis of web browsing data: A guide. *Social Science Computer Review, 42*(6), 1479–1504. https://doi.org/10.1177/08944393241227868
+   - Guess, A. M., Nyhan, B., & Reifler, J. (2020). Exposure to untrustworthy websites in the 2016 US election. *Nature Human Behaviour, 4*(5), 472–480. https://doi.org/10.1038/s41562-020-0833-x
 
 ## 2.4. 2026/02/12 Text as Data: Basics and Dictionaries
 
@@ -267,9 +257,8 @@ Regardless of which option you choose, your final paper is graded for each of th
    - Welbers, K., Van Atteveldt, W., & Benoit, K. (2017). Text analysis in R. *Communication Methods and Measures, 11*(4), 245–265. https://doi.org/10.1080/19312458.2017.1387238
    - Grimmer, J., & Stewart, B. M. (2013). Text as data: The promise and pitfalls of automatic content analysis methods for political texts. *Political Analysis, 21*(3), 267–297. https://doi.org/10.1093/pan/mps028
    - Muddiman, A., McGregor, S. C., & Stroud, N. J. (2019). (Re)claiming our expertise: Parsing large text corpora with manually validated and organic dictionaries. *Political Communication, 36*(2), 214–226. https://doi.org/10.1080/10584609.2018.1517843
+   - Barari, S. (2024). Political speech from corporate America: Sparse, mostly for Democrats, and somewhat representative. *Journal of Quantitative Description: Digital Media, 4*. https://doi.org/10.51685/jqd.2024.icwsm.5
    - Brady, W. J., Wills, J. A., Jost, J. T., Tucker, J. A., & Van Bavel, J. J. (2017). Emotion shapes the diffusion of moralized content in social networks. *Proceedings of the National Academy of Sciences, 114*(28), 7313–7318. https://doi.org/10.1073/pnas.1618923114
-   - Ashokkumar, A., & Pennebaker, J. W. (2021). Social media conversations reveal large psychological shifts caused by COVID-19’s onset across U.S. cities. *Science Advances, 7*(39), eabg7843. https://doi.org/10.1126/sciadv.abg7843
-   - Wang, S.-Y. N., & Inbar, Y. (2021). Moral-language use by U.S. political elites. *Psychological Science, 32*(1), 14–26. https://doi.org/10.1177/0956797620960397
    - Van Atteveldt, W., Van Der Velden, M. A. C. G., & Boukes, M. (2021). The validity of sentiment analysis: Comparing manual annotation, crowd-coding, dictionary approaches, and machine learning algorithms. *Communication Methods and Measures, 15*(2), 121–140. https://doi.org/10.1080/19312458.2020.1869198
 
 2. Computational Toolkits Demo: "Text Analysis Basics"
@@ -285,10 +274,14 @@ Regardless of which option you choose, your final paper is graded for each of th
    - Grimmer, J., Roberts, M. E., & Stewart, B. M. (2022). Text as data: A new framework for machine learning and the social sciences. Princeton University Press.
    - Voigt, R., Camp, N. P., Prabhakaran, V., Hamilton, W. L., Hetey, R. C., Griffiths, C. M., Jurgens, D., Jurafsky, D., & Eberhardt, J. L. (2017). Language from police body camera footage shows racial disparities in officer respect. *Proceedings of the National Academy of Sciences, 114*(25), 6521–6526. https://doi.org/10.1073/pnas.1702413114
    - Zamith, R., & Lewis, S. C. (2015). Content analysis and the algorithmic coder: What computational social science means for traditional modes of media analysis. *The ANNALS of the American Academy of Political and Social Science, 659*(1), 307–318. https://doi.org/10.1177/0002716215570576
+   - Ashokkumar, A., & Pennebaker, J. W. (2021). Social media conversations reveal large psychological shifts caused by COVID-19’s onset across U.S. cities. *Science Advances, 7*(39), eabg7843. https://doi.org/10.1126/sciadv.abg7843
+   - Eichstaedt, J. C., Schwartz, H. A., Kern, M. L., Park, G., Labarthe, D. R., Merchant, R. M., Jha, S., Agrawal, M., Dziurzynski, L. A., Sap, M., Weeg, C., Larson, E. E., Ungar, L. H., & Seligman, M. E. P. (2015). Psychological language on Twitter predicts county-level heart disease mortality. *Psychological Science, 26*(2), 159–169. https://doi.org/10.1177/0956797614557867
+   - Wang, S.-Y. N., & Inbar, Y. (2021). Moral-language use by U.S. political elites. *Psychological Science, 32*(1), 14–26. https://doi.org/10.1177/0956797620960397
 
 ## 2.5. 2026/02/19 Text as Data: Unsupervised Learning
 
 1. Reading
+   - Barberá, P., Casas, A., Nagler, J., Egan, P. J., Bonneau, R., Jost, J. T., & Tucker, J. A. (2019). Who leads? Who follows? Measuring issue attention and agenda setting by legislators and the mass public using social media data. *American Political Science Review, 113*(4), 883–901. https://doi.org/10.1017/S0003055419000352
    - Roberts, M. E., Stewart, B. M., Tingley, D., Lucas, C., Leder-Luis, J., Gadarian, S. K., Albertson, B., & Rand, D. G. (2014). Structural topic models for open-ended survey responses. *American Journal of Political Science, 58*(4), 1064–1082. https://doi.org/10.1111/ajps.12103
    - Duan, Z., Li, J., Lukito, J., Yang, K.-C., Chen, F., Shah, D. V., & Yang, S. (2022). Algorithmic agents in the hybrid media system: Social bots, selective amplification, and partisan news about COVID-19. *Human Communication Research, 48*(3), 516–542. https://doi.org/10.1093/hcr/hqac012
    - Walter, D., & Ophir, Y. (2019). News frame analysis: An inductive mixed-method computational approach. *Communication Methods and Measures, 13*(4), 248–266. https://doi.org/10.1080/19312458.2019.1639145
@@ -342,24 +335,36 @@ Regardless of which option you choose, your final paper is graded for each of th
 
 2. Computational Toolkits Demo
    - athec (Python; if you are familiar with Python, sign up here; https://doi.org/10.5117/CCR2022.1.009.PENG)
+   - Face++ API
 
 3. Optional Reading
    - Lu, Y., & Pan, J. (2022). The pervasive presence of Chinese government content on Douyin trending videos. *Computational Communication Research, 4*(1). https://doi.org/10.5117/CCR2022.2.002.LU
+   - Peng, Y. (2018). Same candidates, different faces: Uncovering media bias in visual portrayals of presidential candidates with computer vision. *Journal of Communication, 68*(5), 920–941. https://doi.org/10.1093/joc/jqy041
+   - Zhang, H., & Peng, Y. (2024). Image clustering: An unsupervised approach to categorize visual data in social science research. *Sociological Methods & Research, 53*(3), 1534–1587. https://doi.org/10.1177/00491241221082603
+   - Jean, N., Burke, M., Xie, M., Davis, W. M., Lobell, D. B., & Ermon, S. (2016). Combining satellite imagery and machine learning to predict poverty. *Science, 353*(6301), 790–794. https://doi.org/10.1126/science.aaf7894
+   - Stephens, K. K., Waller, M. J., & Sohrab, S. G. (2019). Over-emoting and perceptions of sincerity: Effects of nuanced displays of emotions and chosen words on credibility perceptions during a crisis. *Public Relations Review, 45*(5), 101841. https://doi.org/10.1016/j.pubrev.2019.101841
    - Gebru, T., Krause, J., Wang, Y., Chen, D., Deng, J., Aiden, E. L., & Fei-Fei, L. (2017). Using deep learning and Google Street View to estimate the demographic makeup of neighborhoods across the United States. *Proceedings of the National Academy of Sciences, 114*(50), 13108–13113. https://doi.org/10.1073/pnas.1700035114
    - Dietrich, B. J., & Sands, M. L. (2023). Seeing racial avoidance on New York City streets. *Nature Human Behaviour, 7*(8), 1275–1281. https://doi.org/10.1038/s41562-023-01589-7
    - Lukito, J., Greenfield, J., Yang, Y., Dahlke, R., Brown, M. A., Lewis, R., & Chen, B. (2024). Audio-as-data tools: Replicating computational data processing. *Media and Communication, 12*, 7851. https://doi.org/10.17645/mac.7851
    - Jürgens, P., Meltzer, C. E., & Scharkow, M. (2022). Age and gender representation on german TV: A longitudinal computational analysis. *Computational Communication Research, 4*(1). https://doi.org/10.5117/CCR2022.1.005.JURG
+   - Guilbeault, D., Delecourt, S., Hull, T., Desikan, B. S., Chu, M., & Nadler, E. (2024). Online images amplify gender bias. *Nature, 626*(8001), 1049–1055. https://doi.org/10.1038/s41586-024-07068-x
+   - Adukia, A., Eble, A., Harrison, E., Runesha, H. B., & Szasz, T. (2023). What we teach about race and gender: Representation in images and text of children’s books. *The Quarterly Journal of Economics, 138*(4), 2225–2285. https://doi.org/10.1093/qje/qjad028
+   - Negro, G., Kovács, B., & Carroll, G. R. (2022). What’s next? Artists’ music after Grammy awards. *American Sociological Review, 87*(4), 644–674. https://doi.org/10.1177/00031224221103257
    - Webb Williams, N., Casas, A., & Wilkerson, J. D. (2020b). Images as data for social science research: An introduction to convolutional neural nets for image classification. Cambridge University Press. https://doi.org/10.1017/9781108860741
    - Webb Williams, N., Casas, A., & Wilkerson, J. D. (2020a). Images as Data for Social Science Research (Version 1.1) [Computer software]. Code Ocean. https://doi.org/10.24433/CO.2462313.V1
+   - Legewie, N. M., & Nassauer, A. (2023). Current and future debates in video data analysis. *Sociological Methods & Research, 52*(3), 1107–1119. https://doi.org/10.1177/00491241231178275
 
 ## 2.8. 2026/03/19 Networks: Descriptions and Representations
 
 1. Reading
+   - Kolaczyk, E. D., & Csárdi, G. (2020). *Statistical analysis of network data with R*. Springer International Publishing. https://doi.org/10.1007/978-3-030-44129-6 Chapter 4
    - Vosoughi, S., Roy, D., & Aral, S. (2018). The spread of true and false news online. *Science, 359*(6380), 1146–1151. https://doi.org/10.1126/science.aap9559
    - Park, P. S., Blumenstock, J. E., & Macy, M. W. (2018). The strength of long-range ties in population-scale social networks. *Science, 362*(6421), 1410–1413. https://doi.org/10.1126/science.aau9735
    - González-Bailón, S., & Wang, N. (2016). Networked discontent: The anatomy of protest campaigns in social media. *Social Networks, 44*, 95–104. https://doi.org/10.1016/j.socnet.2015.07.003
    - Boutyline, A., & Vaisey, S. (2017). Belief network analysis: A relational approach to understanding the structure of attitudes. *American Journal of Sociology, 122*(5), 1371–1447. https://doi.org/10.1086/691274
    - Zhou, A., & Yang, A. (2021). The longitudinal dimension of social-mediated movements: Hidden brokerage and the unsung tales of movement spilloverers. *Social Media + Society, 7*(3), 205630512110475. https://doi.org/10.1177/20563051211047545
+   - Zhao, J., Wei, Y., & Wu, B. (2022). Analysis of the social network and the evolution of the influence of ancient Chinese poets. *Social Science Computer Review, 40*(4), 1014–1034. https://doi.org/10.1177/08944393211028182
+   - Clauset, A., Arbesman, S., & Larremore, D. B. (2015). Systematic inequality and hierarchy in faculty hiring networks. *Science Advances, 1*(1), e1400005. https://doi.org/10.1126/sciadv.1400005
 
 2. Computational Toolkits Demo: "Network Analysis Basics"
    - igraph
@@ -372,21 +377,33 @@ Regardless of which option you choose, your final paper is graded for each of th
    - Wu, L., Wang, D., & Evans, J. A. (2019). Large teams develop and small teams disrupt science and technology. *Nature, 566*(7744), 378–382. https://doi.org/10.1038/s41586-019-0941-9
    - Lydon-Staley, D. M., Zhou, D., Blevins, A. S., Zurn, P., & Bassett, D. S. (2021). Hunters, busybodies and the knowledge network building associated with deprivation curiosity. *Nature Human Behaviour, 5*(3), 327–336. https://doi.org/10.1038/s41562-020-00985-7
    - Bail, C. A. (2016). Combining natural language processing and network analysis to examine how advocacy organizations stimulate conversation on social media. *Proceedings of the National Academy of Sciences, 113*(42), 11823–11828. https://doi.org/10.1073/pnas.1607151113
+   - Shi, F., Shi, Y., Dokshin, F. A., Evans, J. A., & Macy, M. W. (2017). Millions of online book co-purchases reveal partisan differences in the consumption of science. *Nature Human Behaviour, 1*(4), 0079. https://doi.org/10.1038/s41562-017-0079
+   - Barabási, A.-L., & Albert, R. (1999). Emergence of scaling in random networks. *Science, 286*(5439), 509–512. https://doi.org/10.1126/science.286.5439.509
+   - Watts, D. J., & Strogatz, S. H. (1998). Collective dynamics of “small-world” networks. *Nature, 393*(6684), 440–442. https://doi.org/10.1038/30918
+   - Granovetter, M. S. (1973). The strength of weak ties. *American Journal of Sociology, 78*(6), 1360–1380. https://doi.org/10.1086/225469
+   - Burt, R. S. (2004). Structural holes and good ideas. *American Journal of Sociology, 110*(2), 349–399. https://doi.org/10.1086/421787
 
-## 2.9. 2026/03/26 Networks: Inference
+## 2.9. 2026/03/26 Networks: Inference and Experimentation
 
 1. Reading
+   - Kolaczyk, E. D., & Csárdi, G. (2020). *Statistical analysis of network data with R*. Springer International Publishing. https://doi.org/10.1007/978-3-030-44129-6 Chapter 6
    - Chen, H.-T., Guo, L., & Su, C. C. (2020). Network agenda setting, partisan selective exposure, and opinion repertoire: The effects of pro- and counter-attitudinal media in hong kong. *Journal of Communication, 70*(1), 35–59. https://doi.org/10.1093/joc/jqz042
    - Shumate, M., & Palazzolo, E. T. (2010). Exponential random graph (p*) models as a method for social network analysis in communication research. *Communication Methods and Measures, 4*(4), 341–371. https://doi.org/10.1080/19312458.2010.527869
    - Liang, H. (2014). Coevolution of political discussion and common ground in web discussion forum. *Social Science Computer Review, 32*(2), 155–169. https://doi.org/10.1177/0894439313506844
+   - Centola, D., Becker, J., Brackbill, D., & Baronchelli, A. (2018). Experimental evidence for tipping points in social convention. *Science, 360*(6393), 1116–1119. https://doi.org/10.1126/science.aas8827
+   - Kolaczyk, E. D., & Csárdi, G. (2020). Statistical analysis of network data with R. Springer.
+
 2. Computational Toolkits Demo: "Network Analysis Advanced"
    - sna
    - Gephi
+
 3. Due at the end of Week 10: [Week 10] Final Paper - Proposal Draft Peer Review
 
 4. Optional Reading
    - Borgatti, S. P., Everett, M. G., & Johnson, J. C. (2018). *Analyzing social networks* (2nd edition). SAGE Publications.
    - Robins, G., Pattison, P., Kalish, Y., & Lusher, D. (2007). An introduction to exponential random graph (p*) models for social networks. *Social Networks, 29*(2), 173–191. https://doi.org/10.1016/j.socnet.2006.08.002
+   - Centola, D., & Macy, M. (2007). Complex contagions and the weakness of long ties. *American Journal of Sociology, 113*(3), 702–734. https://doi.org/10.1086/521848
+   - Rajkumar, K., Saint-Jacques, G., Bojinov, I., Brynjolfsson, E., & Aral, S. (2022). A causal test of the strength of weak ties. *Science, 377*(6612), 1304–1310. https://doi.org/10.1126/science.abl4476
 
 ## 2.10. 2026/04/02 Data Visualization: Basics
 
@@ -408,10 +425,12 @@ Regardless of which option you choose, your final paper is graded for each of th
 ## 2.12. 2026/04/16 LLM-Assisted Computational Methods
 
 1. Reading
+   - Lee, T. B., & Trott, S. (2023, July 27). Large language models, explained with a minimum of math and jargon. *Understanding AI*. https://www.understandingai.org/p/large-language-models-explained-with
    - Gilardi, F., Alizadeh, M., & Kubli, M. (2023). ChatGPT outperforms crowd workers for text-annotation tasks. *Proceedings of the National Academy of Sciences, 120*(30), e2305016120. https://doi.org/10.1073/pnas.2305016120
    - Park, J. S., O’Brien, J., Cai, C. J., Morris, M. R., Liang, P., & Bernstein, M. S. (2023). Generative agents: Interactive simulacra of human behavior. *Proceedings of the 36th Annual ACM Symposium on User Interface Software and Technology*, 1–22. https://doi.org/10.1145/3586183.3606763
    - Ziems, C., Held, W., Shaikh, O., Chen, J., Zhang, Z., & Yang, D. (2024). Can large language models transform computational social science? *Computational Linguistics, 50*(1), 237–291. https://doi.org/10.1162/coli_a_00502
    - Abdurahman, S., Atari, M., Karimi-Malekabadi, F., Xue, M. J., Trager, J., Park, P. S., Golazizian, P., Omrani, A., & Dehghani, M. (2024). Perils and opportunities in using large language models in psychological research. *PNAS Nexus, 3*(7), pgae245. https://doi.org/10.1093/pnasnexus/pgae245
+   - Than, N., Fan, L., Law, T., Nelson, L. K., & McCall, L. (2025). Updating “the future of coding”: Qualitative coding with generative large language models. *Sociological Methods & Research*. https://doi.org/10.1177/00491241251339188
 
 2. Computational Toolkits Demo
    - ellmer
@@ -462,163 +481,3 @@ Regardless of which option you choose, your final paper is graded for each of th
 
 - Final Paper Presentations (due at the end of Week 14: [Week 14] Final Paper - Presentation)
 - Final Paper (due at the end of Week 15: [End] Final Paper)
-
-### 2.15.4. Day 4 - Networks
-
-- **Morning**
-  - **Presentation:** Eunsun Kyoung, Dongwook Kim, Rita Tang
-  - **Slides:** https://github.com/alvinyxz/CSS_Workshop/blob/main/Day4/Day4.pdf
-  - **Reading:** https://github.com/alvinyxz/CSS_Workshop/blob/main/Day4
-    - **[The "Network Wormhole" Study]** Park, P. S., Blumenstock, J. E., & Macy, M. W. (2018). The strength of long-range ties in population-scale social networks. *Science, 362*(6421), 1410–1413. https://doi.org/10.1126/science.aau9735
-    - **[How to Make Network Description Engaging]** Schlosser, F., Maier, B. F., Jack, O., Hinrichs, D., Zachariae, A., & Brockmann, D. (2020). COVID-19 lockdown induces disease-mitigating structural changes in mobility networks. *Proceedings of the National Academy of Sciences, 117*(52), 32883–32890. https://doi.org/10.1073/pnas.2012326117 [Presentation and Discussion Lead: Eunsun Kyoung]
-    - **[Create New Measures for Network Analysis]**  [Presentation and Discussion Lead: Dongwook Kim]
-    - **[Projection Data]** González-Bailón, S., Lazer, D., Barberá, P., Zhang, M., Allcott, H., Brown, T., Crespo-Tenorio, A., Freelon, D., Gentzkow, M., Guess, A. M., Iyengar, S., Kim, Y. M., Malhotra, N., Moehler, D., Nyhan, B., Pan, J., Rivera, C. V., Settle, J., Thorson, E., … Tucker, J. A. (2023). Asymmetric ideological segregation in exposure to political news on Facebook. *Science, 381*(6656), 392–398. https://doi.org/10.1126/science.ade7138
-    - **[Historical Sociology - Network is Everywhere]** Zhao, J., Wei, Y., & Wu, B. (2022). Analysis of the social network and the evolution of the influence of ancient Chinese poets. *Social Science Computer Review, 40*(4), 1014–1034. https://doi.org/10.1177/08944393211028182 [Presentation and Discussion Lead: Rita Tang]
-- **Afternoon**
-  - **Lab - Networks:** https://github.com/alvinyxz/CSS_Workshop/blob/main/Day4/Lab/Day4.md
-    - **What Networks Could Be** slides: https://github.com/alvinyxz/CSS_Workshop/blob/main/Day4/Lab/Day4_Lab.pdf
-    - **ERGM**
-    - **Semantic Networks**
-      - Zhou, A., Liu, W., & Yang, A. (2024). Politicization of science in COVID-19 vaccine communication: Comparing US politicians, medical experts, and government agencies. *Political Communication, 41*(4), 649–671. https://doi.org/10.1080/10584609.2023.2201184
-    - **Network Visualization**
-
-### 2.15.5. Day 5 - The Web, Computational Infrastructure, and Innovative Datasets
-
-- **Morning**
-  - **Presentation:** Jikai Sun, Jong Won Lee, Shreepriya Dogra
-  - **Slides:** https://github.com/alvinyxz/CSS_Workshop/blob/main/Day5/Day5.pdf
-  - **Reading:** https://github.com/alvinyxz/CSS_Workshop/blob/main/Day5
-    - **[Sock Puppet]** Haroon, M., Wojcieszak, M., Chhabra, A., Liu, X., Mohapatra, P., & Shafiq, Z. (2023). Auditing YouTube’s recommendation system for ideologically congenial, extreme, and problematic recommendations. *Proceedings of the National Academy of Sciences, 120*(50), e2213020120. https://doi.org/10.1073/pnas.2213020120 [Presentation and Discussion Lead: Jikai Sun]
-    - **[AirBnb]** Park, M., Yu, C., & Macy, M. (2023). Fighting bias with bias: How same-race endorsements reduce racial discrimination on Airbnb. *Science Advances, 9*(6), eadd2315. https://doi.org/10.1126/sciadv.add2315 [Presentation by Jong Won Lee]
-    - **[User-Centric Behavioral Tracking]** Robertson, R. E., Green, J., Ruck, D. J., Ognyanova, K., Wilson, C., & Lazer, D. (2023). Users choose to engage with more partisan news than they are exposed to on Google Search. *Nature, 618*(7964), 342–348. https://doi.org/10.1038/s41586-023-06078-5 [Presentation and Discussion Lead: Shreepriya Dogra]
-    - **[Overview]** Ohme, J., Araujo, T., Boeschoten, L., Freelon, D., Ram, N., Reeves, B. B., & Robinson, T. N. (2024). Digital trace data collection for social media effects research: APIs, data donation, and (screen) tracking. *Communication Methods and Measures, 18*(2), 124–141. https://doi.org/10.1080/19312458.2023.2181319
-    - **[Web Browsing Data]** Clemm Von Hohenberg, B., Stier, S., Cardenal, A. S., Guess, A. M., Menchen-Trevino, E., & Wojcieszak, M. (2024). Analysis of web browsing data: A guide. *Social Science Computer Review, 42*(6), 1479–1504. https://doi.org/10.1177/08944393241227868
-    - **[Industry Collaboration]** Althoff, T., Sosič, R., Hicks, J. L., King, A. C., Delp, S. L., & Leskovec, J. (2017). Large-scale physical activity data reveal worldwide activity inequality. *Nature, 547*(7663), 336–339. https://doi.org/10.1038/nature23018
-    - **[Data that Companies are More Comfortable Sharing]** Zagheni, E., Weber, I., & Gummadi, K. (2017). Leveraging Facebook’s advertising platform to monitor stocks of migrants. *Population and Development Review, 43*(4), 721–734. https://doi.org/10.1111/padr.12102
-- **Afternoon**
-  - **Lab - The Web, Computational Infrastructure, and Innovative Datasets:** https://github.com/alvinyxz/CSS_Workshop/blob/main/Day5/Lab/Day5.md
-    - **Web Scraping**:
-      - `Rvest`
-      - `Selenium`
-    - **Reddit API**:
-      - Used to be the gold standard: https://pushshift.io/signup
-      - PushShift's new successor: https://www.pullpush.io/
-      - Download different dumps provided by PushShift Subreddit: https://www.reddit.com/r/pushshift/search/?q=dump&cId=1006e135-94ac-4185-ab53-ae88d0d16caa&iId=0d68e038-4a15-4658-bf63-0ba4bcd599b9
-      - For example, https://github.com/ArthurHeitmann/arctic_shift/blob/master/download_links.md this link provides the download links for the Reddit comments and submissions from 2005 to 2025, basically the whole history of Reddit --- but the files are huge!
-    - **YouTube API**:
-      - Follow "Before you start" in https://developers.google.com/youtube/v3/getting-started
-      - We will be using its Python client library: https://github.com/googleapis/google-api-python-client
-    - **TikTok API**:
-      - I have heard mixed success with applying for the TikTok API, but it is worth a try.
-      - Apply it here https://developers.tiktok.com/docs/getting-started
-
-### 2.15.6. Day 6 - Image/Audio/Video
-
-- **Morning**
-  - **[Yingdan Lu](https://yingdanlu.com) Guest Lecture with Catered Lunch**
-  - **Reading:** https://github.com/alvinyxz/CSS_Workshop/blob/main/Day6
-    - **[Google Map]** Gebru, T., Krause, J., Wang, Y., Chen, D., Deng, J., Aiden, E. L., & Fei-Fei, L. (2017). Using deep learning and Google Street View to estimate the demographic makeup of neighborhoods across the United States. *Proceedings of the National Academy of Sciences, 114*(50), 13108–13113. https://doi.org/10.1073/pnas.1700035114
-    - **[Google Image]** Guilbeault, D., Delecourt, S., Hull, T., Desikan, B. S., Chu, M., & Nadler, E. (2024). Online images amplify gender bias. *Nature, 626*(8001), 1049–1055. https://doi.org/10.1038/s41586-024-07068-x
-    - **[Book]** Adukia, A., Eble, A., Harrison, E., Runesha, H. B., & Szasz, T. (2023). What we teach about race and gender: Representation in images and text of children’s books. *The Quarterly Journal of Economics, 138*(4), 2225–2285. https://doi.org/10.1093/qje/qjad028
-    - **[Music]** Negro, G., Kovács, B., & Carroll, G. R. (2022). What’s next? Artists’ music after Grammy awards. *American Sociological Review, 87*(4), 644–674. https://doi.org/10.1177/00031224221103257
-    - **[Audio Tools]** 
-    - **[Audio Analysis]** 
-    - **[Text, Audio, Video]** Kim, S. J., Villanueva, I. I., & Chen, K. (2024). Going beyond affective polarization: How emotions and identities are used in anti-vaccination TikTok videos. *Political Communication, 41*(4), 588–607. https://doi.org/10.1080/10584609.2023.2243852
-    - **[Video]** Lu, Y., Pan, J., Xu, X., & Xu, Y. (2025). Decentralized propaganda in the era of digital media: The massive presence of the Chinese state on Douyin. *SSRN Electronic Journal*. https://doi.org/10.2139/ssrn.5145803
-    - **[Video]** Legewie, N. M., & Nassauer, A. (2023). Current and future debates in video data analysis. *Sociological Methods & Research, 52*(3), 1107–1119. https://doi.org/10.1177/00491241231178275
-- **Afternoon**
-  - **Lab - Image/Audio/Video:** https://github.com/alvinyxz/CSS_Workshop/blob/main/Day6/Lab/Day6.md
-    - **Athec:** Peng, Y. (2022). Athec: A Python library for computational aesthetic analysis of visual media in social science research. *Computational Communication Research, 4*(1). https://doi.org/10.5117/CCR2022.1.009.PENG
-    - **Face++: API Application**
-
-### 2.15.7. Day 7 - Looking Ahead and LLM
-
-- **Morning**
-  - **Presentation:** Gretchen Corcoran, Paulina Vergara, Jinny Zhang
-  - **Slides:** https://github.com/alvinyxz/CSS_Workshop/blob/main/Day7/Day7.pdf
-  - **Reading:** https://github.com/alvinyxz/CSS_Workshop/blob/main/Day7
-    - **Computational Storytelling and the DEMM (Description-Experimentation-Mediator-Moderator) Framework**
-      - **[Philosophy]** Watts, D. J. (2017). Should social science be more solution-oriented? *Nature Human Behaviour, 1*(1), 0015. https://doi.org/10.1038/s41562-016-0015
-      - **[DEMM]** Lee, J. K. (2021). Emotional expressions and brand status. *Journal of Marketing Research, 58*(6), 1178–1196. https://doi.org/10.1177/00222437211037340 [Presentation and Discussion Lead: Gretchen Corcoran]
-      - **[Industry Collaboration]** Yuan, Y., Liu, T. X., Tan, C., Chen, Q., Pentland, A. S., & Tang, J. (2024). Gift contagion in online groups: Evidence from virtual red packets. *Management Science, 70*(7), 4465–4479. https://doi.org/10.1287/mnsc.2023.4906
-      - **[One Story, Explained To Extreme Detail]** Barari, S. (2024). Political speech from corporate America: Sparse, mostly for Democrats, and somewhat representative. *Journal of Quantitative Description: Digital Media, 4*. https://doi.org/10.51685/jqd.2024.icwsm.5
-    - **Methodological Triangulation**
-      - **[Computational Grounded Theory]** 
-      - **[Computational + Ethnography]** 
-      - **[Qualitative Coding with LLMs]** Than, N., Fan, L., Law, T., Nelson, L. K., & McCall, L. (2025). Updating “the future of coding”: Qualitative coding with generative large language models. *Sociological Methods & Research*. https://doi.org/10.1177/00491241251339188
-    - **Social Good**
-      - **[GIS]** Yang, T., Ticona, J., & Lelkes, Y. (2021). Policing the digital divide: Institutional gate-keeping & criminalizing digital inclusion. *Journal of Communication, 71*(4), 572–597. https://doi.org/10.1093/joc/jqab019 [Presentation and Discussion Lead: Paulina Vergara]
-      - **[BLM]** Wang, Y., Qin, M. S., Luo, X., & Kou, Y. (Eric). (2022). Frontiers: How support for black lives matter impacts consumer responses on social media. *Marketing Science, 41*(6), 1029–1044. https://doi.org/10.1287/mksc.2022.1372 [Presentation and Discussion Lead: Jinny Zhang]
-- **Afternoon**
-  - **Lab - Looking Ahead and LLM (Jiacheng Huang):** https://github.com/alvinyxz/CSS_Workshop/blob/main/Day7/Lab/
-    - **LLM Text and Image Coding**
-    - Lee, T. B., & Trott, S. (2023, July 27). Large language models, explained with a minimum of math and jargon. *Understanding AI*. https://www.understandingai.org/p/large-language-models-explained-with
-    - Argyle, L. P., Bail, C. A., Busby, E. C., Gubler, J. R., Howe, T., Rytting, C., Sorensen, T., & Wingate, D. (2023). Leveraging AI for democratic discourse: Chat interventions can improve online political conversations at scale. *Proceedings of the National Academy of Sciences, 120*(41), e2311627120. https://doi.org/10.1073/pnas.2311627120
-    - Park, J. S., O’Brien, J., Cai, C. J., Morris, M. R., Liang, P., & Bernstein, M. S. (2023). Generative agents: Interactive simulacra of human behavior. *Proceedings of the 36th Annual ACM Symposium on User Interface Software and Technology*, 1–22. https://doi.org/10.1145/3586183.3606763
-    - Ashokkumar, A., Hewitt, L., Ghezae, I., & Willer, R. (2024). Predicting results of social science experiments using large language models. https://docsend.com/view/ity6yf2dansesucf
-
-# 3. Additional Resources
-
-To keep the workshop content fresh, assigned readings are mostly very-recent publications. Below, I provide a list of supplementary materials and resources that may enhance your understanding of the topics covered in the workshop, many of which are considered classics in the field of computational social science.
-
-### 3.0.1. Day 1: CSS Overview
-
-- Salganik, M. J. (2018). Bit by bit: Social research in the digital age. Princeton University Press.
-- Grimmer, J., Roberts, M. E., & Stewart, B. M. (2022). Text as data: A new framework for machine learning and the social sciences. Princeton University Press.
-- Wickham, H., Çetinkaya-Rundel, M., & Grolemund, G. (2023). R for data science: Import, tidy, transform, visualize, and model data (2nd edition). O’Reilly.
-- McKinney, W. (2017). Python for data analysis: Data wrangling with Pandas, NumPy, and IPython (Second edition). O’Reilly.
-- Llaudet, E., & Imai, K. (2023). Data analysis for social science: A friendly and practical introduction. Princeton University Press.
-- Pearl, J., & Mackenzie, D. (2018). The book of why: The new science of cause and effect. Basic Books.
-- Mohr, J., Bail, C. A., Frye, M., Lena, J. C., Lizardo, O., McDonnell, T. E., Mische, A., Tavory, I., & Wherry, F. F. (2020). Measuring culture. Columbia University Press.
-- Edelmann, A., Wolff, T., Montagne, D., & Bail, C. A. (2020). Computational social science and sociology. *Annual Review of Sociology, 46*(1), 61–81. https://doi.org/10.1146/annurev-soc-121919-054621
-
-### 3.0.2. Day 2-3: Text
-
-- Garg, N., Schiebinger, L., Jurafsky, D., & Zou, J. (2018). Word embeddings quantify 100 years of gender and ethnic stereotypes. *Proceedings of the National Academy of Sciences, 115*(16), E3635–E3644. https://doi.org/10.1073/pnas.1720347115
-- Li, K., Mai, F., Shen, R., & Yan, X. (2021). Measuring corporate culture using machine learning. *The Review of Financial Studies, 34*(7), 3265–3315. https://doi.org/10.1093/rfs/hhaa079
-- DiMaggio, P. (2015). Adapting computational text analysis to social science (and vice versa). *Big Data & Society, 2*(2), 2053951715602908. https://doi.org/10.1177/2053951715602908
-- Mitts, T. (2019). From isolation to radicalization: Anti-muslim hostility and support for ISIS in the West. *American Political Science Review, 113*(1), 173–194. https://doi.org/10.1017/S0003055418000618
-- Eichstaedt, J. C., Schwartz, H. A., Kern, M. L., Park, G., Labarthe, D. R., Merchant, R. M., Jha, S., Agrawal, M., Dziurzynski, L. A., Sap, M., Weeg, C., Larson, E. E., Ungar, L. H., & Seligman, M. E. P. (2015). Psychological language on Twitter predicts county-level heart disease mortality. *Psychological Science, 26*(2), 159–169. https://doi.org/10.1177/0956797614557867
-- Barberá, P., Casas, A., Nagler, J., Egan, P. J., Bonneau, R., Jost, J. T., & Tucker, J. A. (2019). Who leads? Who follows? Measuring issue attention and agenda setting by legislators and the mass public using social media data. *American Political Science Review, 113*(4), 883–901. https://doi.org/10.1017/S0003055419000352
-
-### 3.0.3. Day 4: Networks
-
-- Barabási, A.-L., & Albert, R. (1999). Emergence of scaling in random networks. *Science, 286*(5439), 509–512. https://doi.org/10.1126/science.286.5439.509
-- Watts, D. J., & Strogatz, S. H. (1998). Collective dynamics of “small-world” networks. *Nature, 393*(6684), 440–442. https://doi.org/10.1038/30918
-- Granovetter, M. S. (1973). The strength of weak ties. *American Journal of Sociology, 78*(6), 1360–1380. https://doi.org/10.1086/225469
-- Rajkumar, K., Saint-Jacques, G., Bojinov, I., Brynjolfsson, E., & Aral, S. (2022). A causal test of the strength of weak ties. *Science, 377*(6612), 1304–1310. https://doi.org/10.1126/science.abl4476
-- Centola, D., & Macy, M. (2007). Complex contagions and the weakness of long ties. *American Journal of Sociology, 113*(3), 702–734. https://doi.org/10.1086/521848
-- Burt, R. S. (2004). Structural holes and good ideas. *American Journal of Sociology, 110*(2), 349–399. https://doi.org/10.1086/421787
-- Centola, D., Becker, J., Brackbill, D., & Baronchelli, A. (2018). Experimental evidence for tipping points in social convention. *Science, 360*(6393), 1116–1119. https://doi.org/10.1126/science.aas8827
-- González-Bailón, S., & Wang, N. (2016). Networked discontent: The anatomy of protest campaigns in social media. *Social Networks, 44*, 95–104. https://doi.org/10.1016/j.socnet.2015.07.003
-- Clauset, A., Arbesman, S., & Larremore, D. B. (2015). Systematic inequality and hierarchy in faculty hiring networks. *Science Advances, 1*(1), e1400005. https://doi.org/10.1126/sciadv.1400005
-- Kolaczyk, E. D., & Csárdi, G. (2020). Statistical analysis of network data with R. Springer.
-- Lydon-Staley, D. M., Zhou, D., Blevins, A. S., Zurn, P., & Bassett, D. S. (2021). Hunters, busybodies and the knowledge network building associated with deprivation curiosity. *Nature Human Behaviour, 5*(3), 327–336. https://doi.org/10.1038/s41562-020-00985-7
-- Bearman, P. S., Moody, J., & Stovel, K. (2004). Chains of affection: The structure of adolescent romantic and sexual networks. *American Journal of Sociology, 110*(1), 44–91. https://doi.org/10.1086/386272
-- DellaPosta, D., Shi, Y., & Macy, M. (2015). Why do liberals drink lattes? *American Journal of Sociology, 120*(5), 1473–1511. https://doi.org/10.1086/681254
-- Shi, F., Shi, Y., Dokshin, F. A., Evans, J. A., & Macy, M. W. (2017). Millions of online book co-purchases reveal partisan differences in the consumption of science. *Nature Human Behaviour, 1*(4), 0079. https://doi.org/10.1038/s41562-017-0079
-
-### 3.0.4. Day 5: The Web, Computational Infrastructure, and Public Datasets
-
-- Guess, A. M., Nyhan, B., & Reifler, J. (2020). Exposure to untrustworthy websites in the 2016 US election. *Nature Human Behaviour, 4*(5), 472–480. https://doi.org/10.1038/s41562-020-0833-x
-- King, G., Pan, J., & Roberts, M. E. (2013). How censorship in China allows government criticism but silences collective expression. *American Political Science Review, 107*(2), 326–343. https://doi.org/10.1017/S0003055413000014
-- Yang, T., & Peng, Y. (2022). The importance of trending topics in the gatekeeping of social media news engagement: A natural experiment on Weibo. *Communication Research, 49*(7), 994–1015. https://doi.org/10.1177/0093650220933729
-- Freelon, D. (2018). Computational research in the post-API age. *Political Communication, 35*(4), 665–668. https://doi.org/10.1080/10584609.2018.1477506
-- Zhou, A., Metaxa, D., Kim, Y. M., & Jaidka, K. (2024). User-centric behavioral tracking: Lessons from three case studies with do-it-yourself computational pipelines. *Journal of Advertising, 53*(5), 791–809. https://doi.org/10.1080/00913367.2024.2403613
-
-### 3.0.5. Day 6: Images/Videos/Audio
-
-- Peng, Y. (2018). Same candidates, different faces: Uncovering media bias in visual portrayals of presidential candidates with computer vision. *Journal of Communication, 68*(5), 920–941. https://doi.org/10.1093/joc/jqy041
-- Zhang, H., & Peng, Y. (2024). Image clustering: An unsupervised approach to categorize visual data in social science research. *Sociological Methods & Research, 53*(3), 1534–1587. https://doi.org/10.1177/00491241221082603
-- Askin, N., & Mauskapf, M. (2017). What makes popular culture popular? Product features and optimal differentiation in music. *American Sociological Review, 82*(5), 910–944. https://doi.org/10.1177/0003122417728662
-- Jean, N., Burke, M., Xie, M., Davis, W. M., Lobell, D. B., & Ermon, S. (2016). Combining satellite imagery and machine learning to predict poverty. *Science, 353*(6301), 790–794. https://doi.org/10.1126/science.aaf7894
-- Joo, J., & Steinert-Threlkeld, Z. C. (2022). Image as data: Automated content analysis for visual presentations of political actors and events. *Computational Communication Research, 4*(1). https://doi.org/10.5117/CCR2022.1.001.JOO
-- Stephens, K. K., Waller, M. J., & Sohrab, S. G. (2019). Over-emoting and perceptions of sincerity: Effects of nuanced displays of emotions and chosen words on credibility perceptions during a crisis. *Public Relations Review, 45*(5), 101841. https://doi.org/10.1016/j.pubrev.2019.101841
-
-### 3.0.6. Day 7: Looking Ahead and LLM
-
-- Bail, C. A. (2016). Combining natural language processing and network analysis to examine how advocacy organizations stimulate conversation on social media. *Proceedings of the National Academy of Sciences, 113*(42), 11823–11828. https://doi.org/10.1073/pnas.1607151113
-- Ludwig, J., & Mullainathan, S. (2024). Machine learning as a tool for hypothesis generation. *The Quarterly Journal of Economics, 139*(2), 751–827. https://doi.org/10.1093/qje/qjad055
-- Bail, C. A. (2024). Can generative AI improve social science? *Proceedings of the National Academy of Sciences, 121*(21), e2314021121. https://doi.org/10.1073/pnas.2314021121
-- Gilardi, F., Alizadeh, M., & Kubli, M. (2023). ChatGPT outperforms crowd workers for text-annotation tasks. *Proceedings of the National Academy of Sciences, 120*(30), e2305016120. https://doi.org/10.1073/pnas.2305016120
-- Rathje, S., Mirea, D.-M., Sucholutsky, I., Marjieh, R., Robertson, C. E., & Van Bavel, J. J. (2024). GPT is an effective tool for multilingual psychological text analysis. *Proceedings of the National Academy of Sciences, 121*(34), e2308950121. https://doi.org/10.1073/pnas.2308950121
