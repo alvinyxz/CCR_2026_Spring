@@ -7,7 +7,7 @@
   - [1.2. Computational Toolkit Demo (15%\*2 = 30%)](#12-computational-toolkit-demo-152--30)
   - [1.3. Final Paper (40%)](#13-final-paper-40)
 - [2. Course Schedule](#2-course-schedule)
-  - [2.1. 2026/01/22](#21-20260122)
+  - [2.1. 2026/01/22 Introduction and Course Overview](#21-20260122-introduction-and-course-overview)
   - [2.2. 2026/01/29 Digital Trace Data: APIs, Social Media, and Scraping](#22-20260129-digital-trace-data-apis-social-media-and-scraping)
   - [2.3. 2026/02/05 Digital Trace Data: Panels, Platforms, Experimentation](#23-20260205-digital-trace-data-panels-platforms-experimentation)
   - [2.4. 2026/02/12 Text as Data: Basics and Dictionaries](#24-20260212-text-as-data-basics-and-dictionaries)
@@ -18,7 +18,7 @@
   - [2.9. 2026/03/26 Networks: Inference and Experimentation](#29-20260326-networks-inference-and-experimentation)
   - [2.10. 2026/04/02 Data Visualization: Basics](#210-20260402-data-visualization-basics)
   - [2.11. 2026/04/09 Data Visualization: Advanced](#211-20260409-data-visualization-advanced)
-  - [2.12. 2026/04/16 LLM-Assisted Computational Methods](#212-20260416-llm-assisted-computational-methods)
+  - [2.12. 2026/04/16 LLMs](#212-20260416-llms)
   - [2.13. 2026/04/23 Ethics](#213-20260423-ethics)
   - [2.14. 2026/04/30 Final Week](#214-20260430-final-week)
 
@@ -190,18 +190,20 @@ Regardless of which option you choose, your final paper is graded for each of th
 
 # 2. Course Schedule
 
-## 2.1. 2026/01/22
+## 2.1. 2026/01/22 Introduction and Course Overview
 
-1. Introduction and Course Overview
-2. Sign-Up Due (2026/01/26): RLA and Computational Toolkit Demo
-3. Getting Started with R and Python: https://htmlpreview.github.io/?https://github.com/alvinyxz/CCR_2026_Spring/blob/main/Week01/Week01.html
-4. Overall Course Readings
+1. Sign-Up Due (2026/01/26): RLA and Computational Toolkit Demo
+
+2. Getting Started with R and Python: https://htmlpreview.github.io/?https://github.com/alvinyxz/CCR_2026_Spring/blob/main/Week01/Week01.html
+
+3. Overall Course Readings
    - Lazer, D., Pentland, A., Adamic, L., Aral, S., Barabasi, A.-L., Brewer, D., Christakis, N., Contractor, N., Fowler, J., Gutmann, M., Jebara, T., King, G., Macy, M., Roy, D., & Van Alstyne, M. (2009). Computational social science. *Science, 323*(5915), 721–723. https://doi.org/10.1126/science.1167742
    - Lazer, D., Pentland, A., Watts, D. J., Aral, S., Contractor, N., Freelon, D., Gonzalez-Bailon, S., King, G., Nelson, A., Salganik, J., Strohmaier, M., Vespignani, A., & Wagner, C. (2020). Computational social science: Obstacles and opportunities. *Science, 369*(6507), 1060–1062. https://doi.org/10.1126/science.aaz8170
    - Wallach, H. (2018). Computational social science ≠ computer science + social data. *Communications of the ACM, 61*(3), 42–44. https://doi.org/10.1145/3132698
    - Hilbert, M., Barnett, G., Blumenstock, J., Contractor, N., Diesner, J., Frey, S., Gonzalez-Bailon, S., Lamberso, P., Pan, J., Peng, T.-Q., Shen, C., Smaldino, P. E., van Atteveldt, W., Waldherr, A., Zhang, J., & Zhu, J. J. H. (2019). Computational communication science: A methodological catalyzer for a maturing discipline. *International Journal of Communication, 13*, 3912–3934.
    - van Atteveldt, W., & Peng, T.-Q. (2018). When communication meets computation: Opportunities, challenges, and pitfalls in computational communication science. *Communication Methods and Measures, 12*(2–3), 81–92. https://doi.org/10.1080/19312458.2018.1458084
-5. Optional Reading for the Overall Course (and some books I recommend)
+
+4. Optional Reading for the Overall Course (and some books I recommend)
    - Salganik, M. J. (2018). Bit by bit: Social research in the digital age. Princeton University Press. https://www.bitbybitbook.com/en/1st-ed/preface/
    - Wickham, H., Çetinkaya-Rundel, M., & Grolemund, G. (2023). *R for data science: Import, tidy, transform, visualize, and model data* (2nd edition). O’Reilly.
    - Llaudet, E., & Imai, K. (2023). *Data analysis for social science: A friendly and practical introduction*. Princeton University Press.
@@ -287,6 +289,7 @@ Regardless of which option you choose, your final paper is graded for each of th
    - Walter, D., & Ophir, Y. (2019). News frame analysis: An inductive mixed-method computational approach. *Communication Methods and Measures, 13*(4), 248–266. https://doi.org/10.1080/19312458.2019.1639145
    - Zhou, A., Capizzo, L. W., Page, T. G., & Toth, E. L. (2023). Exploring public relations research topics and inter-cluster dynamics through computational modeling (2010-2020): A study based on two SSCI journals. *Journal of Public Relations Research, 35*(3), 135–161. https://doi.org/10.1080/1062726X.2023.2180373
    - Mukerjee, S., Yang, T., & Peng, Y. (2023). Metrics in action: How social media metrics shape news production on Facebook. *Journal of Communication, 73*(3), 260–272. https://doi.org/10.1093/joc/jqad012
+
 2. Computational Toolkits Demo: "Text Analysis Advanced"
    - stm
    - topicmodels
@@ -409,9 +412,11 @@ Regardless of which option you choose, your final paper is graded for each of th
 
 1. Reading
   - Healy, K., & Moody, J. (2014). Data visualization in sociology. *Annual Review of Sociology, 40*(1), 105–128. https://doi.org/10.1146/annurev-soc-071312-145551
+
 2. Computational Toolkits Demo
    - ggplot2
-   - Google Draw and Affinity
+   - Google Draw
+
 3. Optional Reading
    - Healy, K. (2019). *Data visualization: A practical introduction.* Princeton University Press. https://socviz.co
    - Wilke, C. (2019). *Fundamentals of data visualization: A primer on making informative and compelling figures*. O’Reilly Media. https://clauswilke.com/dataviz/
@@ -419,10 +424,14 @@ Regardless of which option you choose, your final paper is graded for each of th
 ## 2.11. 2026/04/09 Data Visualization: Advanced
 
 1. Reading
+
 2. Computational Toolkits Demo
    - patchwork, cowplot, hrbrthemes
+   - Google Draw and Affinity
 
-## 2.12. 2026/04/16 LLM-Assisted Computational Methods
+3. Optional Reading
+
+## 2.12. 2026/04/16 LLMs
 
 1. Reading
    - Lee, T. B., & Trott, S. (2023, July 27). Large language models, explained with a minimum of math and jargon. *Understanding AI*. https://www.understandingai.org/p/large-language-models-explained-with
@@ -464,9 +473,11 @@ Regardless of which option you choose, your final paper is graded for each of th
        - Krause, N. M., Freiling, I., & Scheufele, D. A. (2025). Our changing information ecosystem for science and why it matters for effective science communication. *Proceedings of the National Academy of Sciences, 122*(27), e2400928121. https://doi.org/10.1073/pnas.2400928121
        - González-Bailón, S., & Lazer, D. (2025). Scientific standards suffer from misrepresenting past work. *Proceedings of the National Academy of Sciences, 122*(47), e2522011122. https://doi.org/10.1073/pnas.2522011122
        - Freiling, I., & Scheufele, D. A. (2025). Reply to González-Bailón and Lazer: Industry control and conflicts of interest in social media research. *Proceedings of the National Academy of Sciences, 122*(47), e2522924122. https://doi.org/10.1073/pnas.2522924122
+
 2. Computational Tookkits Demo
    - OSF Walkthrough (Preprint and Preregistration)
    - Github and Github Desktop
+
 3. Optional Reading
    - Nyhan, B., Settle, J., Thorson, E., Wojcieszak, M., Barberá, P., Chen, A. Y., Allcott, H., Brown, T., Crespo-Tenorio, A., Dimmery, D., Freelon, D., Gentzkow, M., González-Bailón, S., Guess, A. M., Kennedy, E., Kim, Y. M., Lazer, D., Malhotra, N., Moehler, D., … Tucker, J. A. (2023). Like-minded sources on Facebook are prevalent but not polarizing. *Nature, 620*(7972), 137–144. https://doi.org/10.1038/s41586-023-06297-w
    - Allcott, H., Gentzkow, M., Mason, W., Wilkins, A., Barberá, P., Brown, T., Cisneros, J. C., Crespo-Tenorio, A., Dimmery, D., Freelon, D., González-Bailón, S., Guess, A. M., Kim, Y. M., Lazer, D., Malhotra, N., Moehler, D., Nair-Desai, S., Nait El Barj, H., Nyhan, B., … Tucker, J. A. (2024). The effects of Facebook and Instagram on the 2020 election: A deactivation experiment. *Proceedings of the National Academy of Sciences, 121*(21), e2321584121. https://doi.org/10.1073/pnas.2321584121
