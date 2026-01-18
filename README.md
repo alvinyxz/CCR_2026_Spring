@@ -22,7 +22,6 @@
   - [2.13. 2026/04/23 Ethics](#213-20260423-ethics)
   - [2.14. 2026/04/30 Final Week](#214-20260430-final-week)
 
-
 # 1. Syllabus, Components, and Assignments
 
 - Course: JOUR 8500 Computational Communication Research
