@@ -161,14 +161,14 @@
 <li><a href="#21-20260122-introduction-and-course-overview">2.1. 2026/01/22 Introduction and Course Overview</a></li>
 <li><a href="#22-20260129-digital-trace-data-apis-social-media-and-scraping">2.2. 2026/01/29 Digital Trace Data: APIs, Social Media, and Scraping</a></li>
 <li><a href="#23-20260205-digital-trace-data-panels-platforms-experimentation">2.3. 2026/02/05 Digital Trace Data: Panels, Platforms, Experimentation</a></li>
-<li><a href="#24-20260212-text-as-data-basics-and-dictionaries">2.4. 2026/02/12 Text as Data: Basics and Dictionaries</a></li>
+<li><a href="#24-20260212-text-as-data-overview-and-dictionaries">2.4. 2026/02/12 Text as Data: Overview and Dictionaries</a></li>
 <li><a href="#25-20260219-text-as-data-unsupervised-learning">2.5. 2026/02/19 Text as Data: Unsupervised Learning</a></li>
-<li><a href="#26-20260226-text-as-data-supervised-learning-and-embeddings">2.6. 2026/02/26 Text as Data: Supervised Learning and Embeddings</a></li>
+<li><a href="#26-20260226-text-as-data-supervised-learning-and-word-embeddings">2.6. 2026/02/26 Text as Data: Supervised Learning and Word Embeddings</a></li>
 <li><a href="#27-20260305-multimodal">2.7. 2026/03/05 Multimodal</a></li>
 <li><a href="#28-20260319-networks-descriptions-and-representations">2.8. 2026/03/19 Networks: Descriptions and Representations</a></li>
 <li><a href="#29-20260326-networks-inference-and-experimentation">2.9. 2026/03/26 Networks: Inference and Experimentation</a></li>
-<li><a href="#210-20260402-data-visualization-basics">2.10. 2026/04/02 Data Visualization: Basics</a></li>
-<li><a href="#211-20260409-data-visualization-advanced">2.11. 2026/04/09 Data Visualization: Advanced</a></li>
+<li><a href="#210-20260402-data-visualization-overview-and-practices">2.10. 2026/04/02 Data Visualization: Overview and Practices</a></li>
+<li><a href="#211-20260409-data-visualization-packaging-and-presentation">2.11. 2026/04/09 Data Visualization: Packaging and Presentation</a></li>
 <li><a href="#212-20260416-llms">2.12. 2026/04/16 LLMs</a></li>
 <li><a href="#213-20260423-ethics">2.13. 2026/04/23 Ethics</a></li>
 <li><a href="#214-20260430-final-week">2.14. 2026/04/30 Final Week</a></li>
@@ -190,10 +190,11 @@
 <h2 id="11-reading-30">1.1. Reading (30%)</h2>
 <h3 id="111-canvas-discussion--in-class-participation-10">1.1.1. Canvas Discussion &amp; In-Class Participation (10%)</h3>
 <p>The course is organized as a seminar, which means all students are expected to attend all classes, have read and thought about all readings prior to each class, and participate actively and productively in class discussion.</p>
-<p>In general, before class, you should have carefully thought about: (1) how the computational methods used in each study helped address the specific research questions of interest to the authors, (2) in what sense these computational methods could extend conventional methods, (3) what are their major assumptions and limitations, and (4) what new arenas for future research these computational methods could open.</p>
+<p>There are three types of readings for each week: (1) Required Instructional Readings, (2) Required Empirical Readings, and (3) Optional Readings. Required Instructional Readings are textbook-like instructional materials that introduce computational methods and analytical techniques. Required Empirical Readings are research articles that apply computational methods to address important communication/media-related research questions. I keep Required Instructional Readings and Required Empirical Readings at a manageable level so that you can finish them before class. Optional readings are a collection of articles related to the week’s topic that you may find interesting; you are not required to read them.</p>
+<p>In general, before class, you should have read both Required Instructional Readings and Required Empirical Readings, and carefully thought about: (1) how the computational methods used in each study helped address the specific research questions of interest to the authors, (2) in what sense these computational methods could extend conventional methods, (3) what are their major assumptions and limitations, and (4) what new arenas for future research these computational methods could open.</p>
 <p>To facilitate discussion, each week, all students will submit (to the whole class and me) at least TWO thoughtful questions or comments of interest to you emerging from the week's readings. <span style="color: orange;">You are expected to post discussion questions/comments to the &quot;Discussions&quot; section on Canvas (named &quot;[Week X] Readings&quot;) at least 24 hours before the scheduled class meeting.</span> You are also encouraged to read other students' questions/comments and reply to them. Regardless of whether you are the Reading Lead for a certain week's readings, you should still post to participate in the discussion.</p>
 <h3 id="112-reading-lead-54--20">1.1.2. Reading Lead (5%*4 = 20%)</h3>
-<p>Throughout this semester, you are required to sign up for 4 research papers on the reading list. For each reading, you will: (1) prepare a response letter with annotations (RLA), and (2) serve as the lead discussant for those assigned articles.</p>
+<p>Throughout this semester, you are required to sign up for 4 research papers on the <strong>Required Empirical Readings</strong> list. For each reading, you will: (1) prepare a response letter with annotations (RLA), and (2) serve as the lead discussant for those assigned articles.</p>
 <p><span style="color: orange;">You are expected to post your RLA as PDFs to the &quot;Discussion&quot; section on Canvas (named &quot;[Week X] RLA&quot;) at least 24 hours before the scheduled class meeting.</span> If for some reason you will be unable to attend a class for which you are assigned to provide a discussion guide, it is your responsibility to either trade assigned readings with someone else in the class who can attend, or arrange someone else to distribute your discussion guides at the start of the relevant class period. [Extra Credit] If you volunteer to be a lead discussant for an extra reading (i.e., 5 total), you will receive 5% extra credit added to your final grade.</p>
 <h4 id="1121-response-letter-with-annotations-rla">1.1.2.1. Response Letter with Annotations (RLA)</h4>
 <p>A template for RLA is provided in <a href="https://z.umn.edu/J8500">this repository's root folder</a> as &quot;RLA_Template.docx&quot;.</p>
@@ -201,29 +202,11 @@
 <p>Following the annotation, the RLA should highlight your own assessment and reflections about the reading (roughly ~600 words). These short RLAs serve four purposes: (1) they summarize a reading to focus attention on main points and to highlight its relevance to issues of concern in the course, (2) they outline the strengths and weaknesses of the computational method(s) used in the study (no need to cover all the technical details), (3) they raise questions about a reading that can be used to stimulate discussion especially with regards to the strengths and weaknesses of the computational method(s), and (4) they connect new readings to old readings in order to highlight common themes and to point out how current readings raise, address, or underscore questions sparked by previous reading assignments. In short, the response letter is a quasi-peer-review of the paper, with a slight emphasis on the computational method(s) used in the study.</p>
 <p>All RLAs are available to all students enrolled in the class. Therefore, by the end of the course, each student will have access to summaries and analyses of every major reading covered during the semester.</p>
 <h4 id="1122-lead-discussant">1.1.2.2. Lead Discussant</h4>
-<p>You will serve as the lead discussant for the assigned readings. In this role, you are responsible for helping the class understand both the substantive contributions and the computational or analytical approaches used in the readings.</p>
-<p>During class, you will:</p>
-<ul>
-<li>Provide a concise overview of each assigned reading, focusing on:
-<ul>
-<li>The core research question(s)</li>
-<li>Key substantive findings</li>
-<li>The computational or analytical method(s) employed (at a conceptual level)</li>
-<li>Take primary responsibility for helping other students understand how the computational methods work, emphasizing intuition, logic, and use cases rather than technical implementation details. [It would be most fruitful to sign up for readings overlapping with your computational toolkit demo.]</li>
-<li>Work with me to keep the discussion moving, drawing on concrete examples from the readings and posing questions to the class when appropriate.</li>
-</ul>
-</li>
-</ul>
-<p>You may use any presentation format that best supports your goals (e.g., slides, whiteboard, handouts). You should also prepare several discussion questions in advance to stimulate participation and deeper engagement. Treat this role as an opportunity to practice your presentation, teaching, and discussant skills, which are essential in both academic and professional settings (e.g., conference panels, industry briefings).</p>
-<p>Following the summaries, discussion leads will guide a class-wide conversation centered on key findings, open questions, and broader connections. The following guiding questions may help structure your presentation and discussion:</p>
-<ul>
-<li>What connections do you see across these readings? Are there shared themes or contrasting perspectives?</li>
-<li>What unique insights or ideas stand out, and how do they contribute to theory, methodology, or practice?</li>
-<li>Which aspects of the papers invite debate or further exploration?</li>
-<li>How do these readings relate to other scholarship in the field?</li>
-<li>What new research questions or projects could be inspired by this work?</li>
-</ul>
-<p>Discussion leads will be evaluated based on (1) the depth of their reflections and insights on the required readings, and (2) the organization and level of engagement in the discussion.</p>
+<p>You will serve as the lead discussant for the Required Empirical Reading that you signed up for. In this role, you are responsible for helping the class understand both the substantive contributions and the computational or analytical approaches used in the readings.</p>
+<p>During class, you will provide a concise overview of each assigned reading, focusing on: (1) the core research question(s); (2) key substantive findings; and (3) the computational or analytical method(s) employed (at least at a conceptual level). Following these summaries, discussion leads will guide a class-wide conversation centered on key findings, open questions, and broader connections. This should not be a lecture, but rather an interactive discussion in which you actively engage your peers. Accordingly, you should prepare several discussion questions in advance to stimulate participation and deeper engagement. Of course, I will work with you to help keep the discussion moving.</p>
+<p>You will also assume primary responsibility for helping other students understand how the computational methods work. For this reason, it will be most fruitful to sign up for readings that overlap with your computational toolkit demo.</p>
+<p>You may use any presentation format that best supports your goals (e.g., slides, whiteboard, handouts). Treat this role as an opportunity to practice your presentation, teaching, and discussant skills, which are essential in both academic and professional settings (e.g., conference panels, industry briefings).</p>
+<p>Discussion leads will be evaluated based on: (1) the depth of their reflections and insights on the required readings, and (2) the organization of and level of engagement in the discussion.</p>
 <h2 id="12-computational-toolkit-demo-152--30">1.2. Computational Toolkit Demo (15%*2 = 30%)</h2>
 <p>The primary goal for this assignment is two-fold: (1) to help you get more comfortable with R programming, and (2) to help you develop the know-how to crack any new R package through googling, stack-overflowing, and even asking AI models about debugging. The field of computational social science is evolving so rapidly that there is simply no way to keep up with every possible package out there. Also, the best way for learning is probably through teaching others.</p>
 <p>Throughout this semester, each student will sign up to demonstrate the functionalities and workflow of two R packages related to computational analyses. The list of candidate packages can be found in the Course Schedule, but they are simply recommended packages. If you find other packages that you think are relevant to the class, please discuss with me and we can change them. At maximum, 3 students can sign up for the same package and work as a group to collaboratively prepare and deliver the demo. When there are multiple packages scheduled on the same day, groups responsible for those packages should coordinate with each other to ensure a coherent presentation without too much overlap. You are welcome, and in fact <em>encouraged</em>, to &quot;steal&quot; existing tutorials and datasets available online.</p>
@@ -366,7 +349,7 @@
 </ul>
 </li>
 <li>
-<p>Optional Reading for the Overall Course (and some books I recommend)</p>
+<p>Optional Course Readings</p>
 <ul>
 <li>Salganik, M. J. (2018). Bit by bit: Social research in the digital age. Princeton University Press. <a href="https://www.bitbybitbook.com/en/1st-ed/preface/">https://www.bitbybitbook.com/en/1st-ed/preface/</a></li>
 <li>Wickham, H., Çetinkaya-Rundel, M., &amp; Grolemund, G. (2023). <em>R for data science: Import, tidy, transform, visualize, and model data</em> (2nd edition). O’Reilly.</li>
@@ -381,14 +364,19 @@
 <h2 id="22-20260129-digital-trace-data-apis-social-media-and-scraping">2.2. 2026/01/29 Digital Trace Data: APIs, Social Media, and Scraping</h2>
 <ol>
 <li>
-<p>Readings</p>
+<p>Required Instructional Readings</p>
 <ul>
 <li>Salganik, M. J. (2018). Observing behavior. In <em>Bit by bit: Social research in the digital age</em> (pp. 13–84). Princeton University Press. <a href="https://www.bitbybitbook.com/en/1st-ed/observing-behavior/">https://www.bitbybitbook.com/en/1st-ed/observing-behavior/</a></li>
+</ul>
+</li>
+<li>
+<p>Required Empirical Readings</p>
+<ul>
 <li>Yang, T., Yang, X., Peng, Y., &amp; Mukerjee, S. (2025). Are partisan, unreliable, digital-born, and mass-oriented media more likely to thrive on social media? Comparing four information ecosystems. <em>Journal of Communication</em>, jqaf035. <a href="https://doi.org/10.1093/joc/jqaf035">https://doi.org/10.1093/joc/jqaf035</a></li>
 <li>King, G., Pan, J., &amp; Roberts, M. E. (2013). How censorship in China allows government criticism but silences collective expression. <em>American Political Science Review, 107</em>(2), 326–343. <a href="https://doi.org/10.1017/S0003055413000014">https://doi.org/10.1017/S0003055413000014</a></li>
 <li>Lee, J. K. (2021). Emotional expressions and brand status. <em>Journal of Marketing Research, 58</em>(6), 1178–1196. <a href="https://doi.org/10.1177/00222437211037340">https://doi.org/10.1177/00222437211037340</a></li>
-<li>Grinberg, N., Joseph, K., Friedland, L., Swire-Thompson, B., &amp; Lazer, D. (2019). Fake news on Twitter during the 2016 U.S. presidential election. <em>Science, 363</em>(6425), 374–378. <a href="https://doi.org/10.1126/science.aau2706">https://doi.org/10.1126/science.aau2706</a></li>
 <li>Zhang, Y., Lukito, J., Su, M.-H., Suk, J., Xia, Y., Kim, S. J., Doroshenko, L., &amp; Wells, C. (2021). Assembling the networks and audiences of disinformation: How successful russian IRA twitter accounts built their followings, 2015–2017. <em>Journal of Communication, 71</em>(2), 305–331. <a href="https://doi.org/10.1093/joc/jqaa042">https://doi.org/10.1093/joc/jqaa042</a></li>
+<li>Lu, X., Das, D., Huh, J., &amp; Srivastava, J. (2022). Influence of consumers’ temporary affect on ad engagement: A computational research approach. <em>Journal of Advertising, 51</em>(3), 352–368. <a href="https://doi.org/10.1080/00913367.2021.1977202">https://doi.org/10.1080/00913367.2021.1977202</a></li>
 </ul>
 </li>
 <li>
@@ -399,8 +387,9 @@
 </ul>
 </li>
 <li>
-<p>Optional Reading</p>
+<p>Optional Readings</p>
 <ul>
+<li>Grinberg, N., Joseph, K., Friedland, L., Swire-Thompson, B., &amp; Lazer, D. (2019). Fake news on Twitter during the 2016 U.S. presidential election. <em>Science, 363</em>(6425), 374–378. <a href="https://doi.org/10.1126/science.aau2706">https://doi.org/10.1126/science.aau2706</a></li>
 <li>Lazer, D., Hargittai, E., Freelon, D., Gonzalez-Bailon, S., Munger, K., Ognyanova, K., &amp; Radford, J. (2021). Meaningful measures of human society in the twenty-first century. <em>Nature, 595</em>(7866), 189–196. <a href="https://doi.org/10.1038/s41586-021-03660-7">https://doi.org/10.1038/s41586-021-03660-7</a></li>
 <li>Jünger, J. (2021). A brief history of APIs. In U. Engel, A. Quan-Haase, S. X. Liu, &amp; L. Lyberg, <em>Handbook of Computational Social Science, Volume 2</em> (pp. 17–32). Routledge. <a href="https://doi.org/10.4324/9781003025245-3">https://doi.org/10.4324/9781003025245-3</a></li>
 <li>Howison, J., Wiggins, A., &amp; Crowston, K. (2011). Validity issues in the use of social network analysis with digital trace data. <em>Journal of the Association for Information Systems, 12</em>(12), 767–797. <a href="https://doi.org/10.17705/1jais.00282">https://doi.org/10.17705/1jais.00282</a></li>
@@ -411,9 +400,15 @@
 <h2 id="23-20260205-digital-trace-data-panels-platforms-experimentation">2.3. 2026/02/05 Digital Trace Data: Panels, Platforms, Experimentation</h2>
 <ol>
 <li>
-<p>Reading</p>
+<p>Required Instructional Readings</p>
 <ul>
 <li>Ohme, J., Araujo, T., Boeschoten, L., Freelon, D., Ram, N., Reeves, B. B., &amp; Robinson, T. N. (2024). Digital trace data collection for social media effects research: APIs, data donation, and (screen) tracking. <em>Communication Methods and Measures, 18</em>(2), 124–141. <a href="https://doi.org/10.1080/19312458.2023.2181319">https://doi.org/10.1080/19312458.2023.2181319</a></li>
+<li>Freelon, D. (2018). Computational research in the post-API age. <em>Political Communication, 35</em>(4), 665–668. <a href="https://doi.org/10.1080/10584609.2018.1477506">https://doi.org/10.1080/10584609.2018.1477506</a></li>
+</ul>
+</li>
+<li>
+<p>Required Empirical Readings</p>
+<ul>
 <li>Robertson, R. E., Green, J., Ruck, D. J., Ognyanova, K., Wilson, C., &amp; Lazer, D. (2023). Users choose to engage with more partisan news than they are exposed to on Google Search. <em>Nature, 618</em>(7964), 342–348. <a href="https://doi.org/10.1038/s41586-023-06078-5">https://doi.org/10.1038/s41586-023-06078-5</a></li>
 <li>Haroon, M., Wojcieszak, M., Chhabra, A., Liu, X., Mohapatra, P., &amp; Shafiq, Z. (2023). Auditing YouTube’s recommendation system for ideologically congenial, extreme, and problematic recommendations. <em>Proceedings of the National Academy of Sciences, 120</em>(50), e2213020120. <a href="https://doi.org/10.1073/pnas.2213020120">https://doi.org/10.1073/pnas.2213020120</a></li>
 <li>Bail, C. A., Argyle, L. P., Brown, T. W., Bumpus, J. P., Chen, H., Hunzaker, M. B. F., Lee, J., Mann, M., Merhout, F., &amp; Volfovsky, A. (2018). Exposure to opposing views on social media can increase political polarization. <em>Proceedings of the National Academy of Sciences, 115</em>(37), 9216–9221. <a href="https://doi.org/10.1073/pnas.1804840115">https://doi.org/10.1073/pnas.1804840115</a></li>
@@ -429,25 +424,29 @@
 </ul>
 </li>
 <li>
-<p>Optional Reading</p>
+<p>Optional Readings</p>
 <ul>
-<li>Freelon, D. (2018). Computational research in the post-API age. <em>Political Communication, 35</em>(4), 665–668. <a href="https://doi.org/10.1080/10584609.2018.1477506">https://doi.org/10.1080/10584609.2018.1477506</a></li>
 <li>Theocharis, Y., &amp; Jungherr, A. (2021). Computational social science and the study of political communication. <em>Political Communication, 38</em>(1–2), 1–22. <a href="https://doi.org/10.1080/10584609.2020.1833121">https://doi.org/10.1080/10584609.2020.1833121</a></li>
 <li>Clemm Von Hohenberg, B., Stier, S., Cardenal, A. S., Guess, A. M., Menchen-Trevino, E., &amp; Wojcieszak, M. (2024). Analysis of web browsing data: A guide. <em>Social Science Computer Review, 42</em>(6), 1479–1504. <a href="https://doi.org/10.1177/08944393241227868">https://doi.org/10.1177/08944393241227868</a></li>
 <li>Guess, A. M., Nyhan, B., &amp; Reifler, J. (2020). Exposure to untrustworthy websites in the 2016 US election. <em>Nature Human Behaviour, 4</em>(5), 472–480. <a href="https://doi.org/10.1038/s41562-020-0833-x">https://doi.org/10.1038/s41562-020-0833-x</a></li>
 </ul>
 </li>
 </ol>
-<h2 id="24-20260212-text-as-data-basics-and-dictionaries">2.4. 2026/02/12 Text as Data: Basics and Dictionaries</h2>
+<h2 id="24-20260212-text-as-data-overview-and-dictionaries">2.4. 2026/02/12 Text as Data: Overview and Dictionaries</h2>
 <ol>
 <li>
-<p>Reading</p>
+<p>Required Instructional Readings</p>
 <ul>
 <li>Feuerriegel, S., Maarouf, A., Bär, D., Geissler, D., Schweisthal, J., Pröllochs, N., Robertson, C. E., Rathje, S., Hartmann, J., Mohammad, S. M., Netzer, O., Siegel, A. A., Plank, B., &amp; Van Bavel, J. J. (2025). Using natural language processing to analyse text data in behavioural science. <em>Nature Reviews Psychology, 4</em>(2), 96–111. <a href="https://doi.org/10.1038/s44159-024-00392-z">https://doi.org/10.1038/s44159-024-00392-z</a></li>
 <li>Welbers, K., Van Atteveldt, W., &amp; Benoit, K. (2017). Text analysis in R. <em>Communication Methods and Measures, 11</em>(4), 245–265. <a href="https://doi.org/10.1080/19312458.2017.1387238">https://doi.org/10.1080/19312458.2017.1387238</a></li>
-<li>Grimmer, J., &amp; Stewart, B. M. (2013). Text as data: The promise and pitfalls of automatic content analysis methods for political texts. <em>Political Analysis, 21</em>(3), 267–297. <a href="https://doi.org/10.1093/pan/mps028">https://doi.org/10.1093/pan/mps028</a></li>
+</ul>
+</li>
+<li>
+<p>Required Empirical Readings</p>
+<ul>
 <li>Muddiman, A., McGregor, S. C., &amp; Stroud, N. J. (2019). (Re)claiming our expertise: Parsing large text corpora with manually validated and organic dictionaries. <em>Political Communication, 36</em>(2), 214–226. <a href="https://doi.org/10.1080/10584609.2018.1517843">https://doi.org/10.1080/10584609.2018.1517843</a></li>
 <li>Barari, S. (2024). Political speech from corporate America: Sparse, mostly for Democrats, and somewhat representative. <em>Journal of Quantitative Description: Digital Media, 4</em>. <a href="https://doi.org/10.51685/jqd.2024.icwsm.5">https://doi.org/10.51685/jqd.2024.icwsm.5</a></li>
+<li>Chen, A., Chen, K., Zhang, J., Meng, J., &amp; Shen, C. (2022). When national identity meets conspiracies: The contagion of national identity language in public engagement and discourse about COVID-19 conspiracy theories. <em>Journal of Computer-Mediated Communication, 28</em>(1), zmac034. <a href="https://doi.org/10.1093/jcmc/zmac034">https://doi.org/10.1093/jcmc/zmac034</a></li>
 <li>Brady, W. J., Wills, J. A., Jost, J. T., Tucker, J. A., &amp; Van Bavel, J. J. (2017). Emotion shapes the diffusion of moralized content in social networks. <em>Proceedings of the National Academy of Sciences, 114</em>(28), 7313–7318. <a href="https://doi.org/10.1073/pnas.1618923114">https://doi.org/10.1073/pnas.1618923114</a></li>
 <li>Van Atteveldt, W., Van Der Velden, M. A. C. G., &amp; Boukes, M. (2021). The validity of sentiment analysis: Comparing manual annotation, crowd-coding, dictionary approaches, and machine learning algorithms. <em>Communication Methods and Measures, 15</em>(2), 121–140. <a href="https://doi.org/10.1080/19312458.2020.1869198">https://doi.org/10.1080/19312458.2020.1869198</a></li>
 </ul>
@@ -463,27 +462,35 @@
 <p>Due at the end of Week 4: [Week 4] Final Paper - Paper Idea Pitch</p>
 </li>
 <li>
-<p>Optional Reading</p>
+<p>Optional Readings</p>
 <ul>
-<li>Tausczik, Y. R., &amp; Pennebaker, J. W. (2010). The psychological meaning of words: LIWC and computerized text analysis methods. <em>Journal of Language and Social Psychology, 29</em>(1), 24–54. <a href="https://doi.org/10.1177/0261927X09351676">https://doi.org/10.1177/0261927X09351676</a></li>
+<li>Humphreys, A., &amp; Wang, R. J.-H. (2018). Automated text analysis for consumer research. <em>Journal of Consumer Research, 44</em>(6), 1274–1306. <a href="https://doi.org/10.1093/jcr/ucx104">https://doi.org/10.1093/jcr/ucx104</a></li>
+<li>Stuhler, O., Tavory, I., &amp; Wagner-Pacifici, R. (2026). Time and climate change: U.S. media representations of climate actions, horizons, and events (2000 to 2021). <em>American Sociological Review</em>, 00031224251403596. <a href="https://doi.org/10.1177/00031224251403596">https://doi.org/10.1177/00031224251403596</a></li>
 <li>Nelson, L. K. (2020). Computational grounded theory: A methodological framework. <em>Sociological Methods &amp; Research, 49</em>(1), 3–42. <a href="https://doi.org/10.1177/0049124117729703">https://doi.org/10.1177/0049124117729703</a></li>
+<li>Tausczik, Y. R., &amp; Pennebaker, J. W. (2010). The psychological meaning of words: LIWC and computerized text analysis methods. <em>Journal of Language and Social Psychology, 29</em>(1), 24–54. <a href="https://doi.org/10.1177/0261927X09351676">https://doi.org/10.1177/0261927X09351676</a></li>
 <li>Seraj, S., Blackburn, K. G., &amp; Pennebaker, J. W. (2021). Language left behind on social media exposes the emotional and cognitive costs of a romantic breakup. <em>Proceedings of the National Academy of Sciences, 118</em>(7), e2017154118. <a href="https://doi.org/10.1073/pnas.2017154118">https://doi.org/10.1073/pnas.2017154118</a></li>
-<li>Grimmer, J., Roberts, M. E., &amp; Stewart, B. M. (2022). Text as data: A new framework for machine learning and the social sciences. Princeton University Press.</li>
+<li>Grimmer, J., &amp; Stewart, B. M. (2013). Text as data: The promise and pitfalls of automatic content analysis methods for political texts. <em>Political Analysis, 21</em>(3), 267–297. <a href="https://doi.org/10.1093/pan/mps028">https://doi.org/10.1093/pan/mps028</a></li>
+<li>Or its book version: Grimmer, J., Roberts, M. E., &amp; Stewart, B. M. (2022). <em>Text as data: A new framework for machine learning and the social sciences</em>. Princeton University Press.</li>
 <li>Voigt, R., Camp, N. P., Prabhakaran, V., Hamilton, W. L., Hetey, R. C., Griffiths, C. M., Jurgens, D., Jurafsky, D., &amp; Eberhardt, J. L. (2017). Language from police body camera footage shows racial disparities in officer respect. <em>Proceedings of the National Academy of Sciences, 114</em>(25), 6521–6526. <a href="https://doi.org/10.1073/pnas.1702413114">https://doi.org/10.1073/pnas.1702413114</a></li>
-<li>Zamith, R., &amp; Lewis, S. C. (2015). Content analysis and the algorithmic coder: What computational social science means for traditional modes of media analysis. <em>The ANNALS of the American Academy of Political and Social Science, 659</em>(1), 307–318. <a href="https://doi.org/10.1177/0002716215570576">https://doi.org/10.1177/0002716215570576</a></li>
-<li>Ashokkumar, A., &amp; Pennebaker, J. W. (2021). Social media conversations reveal large psychological shifts caused by COVID-19’s onset across U.S. cities. <em>Science Advances, 7</em>(39), eabg7843. <a href="https://doi.org/10.1126/sciadv.abg7843">https://doi.org/10.1126/sciadv.abg7843</a></li>
 <li>Eichstaedt, J. C., Schwartz, H. A., Kern, M. L., Park, G., Labarthe, D. R., Merchant, R. M., Jha, S., Agrawal, M., Dziurzynski, L. A., Sap, M., Weeg, C., Larson, E. E., Ungar, L. H., &amp; Seligman, M. E. P. (2015). Psychological language on Twitter predicts county-level heart disease mortality. <em>Psychological Science, 26</em>(2), 159–169. <a href="https://doi.org/10.1177/0956797614557867">https://doi.org/10.1177/0956797614557867</a></li>
-<li>Wang, S.-Y. N., &amp; Inbar, Y. (2021). Moral-language use by U.S. political elites. <em>Psychological Science, 32</em>(1), 14–26. <a href="https://doi.org/10.1177/0956797620960397">https://doi.org/10.1177/0956797620960397</a></li>
+<li>Lee, J., &amp; Cho, M.-J. (2025). Online job scams: Unveiling the impact of overconfidence, digital literacy, and algorithmic literacy on user susceptibility to false job advertisements. <em>New Media &amp; Society</em>, 14614448251377994. <a href="https://doi.org/10.1177/14614448251377994">https://doi.org/10.1177/14614448251377994</a></li>
 </ul>
 </li>
 </ol>
 <h2 id="25-20260219-text-as-data-unsupervised-learning">2.5. 2026/02/19 Text as Data: Unsupervised Learning</h2>
 <ol>
 <li>
-<p>Reading</p>
+<p>Required Instructional Readings</p>
+<ul>
+<li>Roberts, M. E., Stewart, B. M., Tingley, D., Lucas, C., Leder-Luis, J., Gadarian, S. K., Albertson, B., &amp; Rand, D. G. (2014). Structural topic models for open-ended survey responses. <em>American Journal of Political Science, 58</em>(4), 1064–1082. <a href="https://doi.org/10.1111/ajps.12103">https://doi.org/10.1111/ajps.12103</a></li>
+<li>Maier, D., Waldherr, A., Miltner, P., Wiedemann, G., Niekler, A., Keinert, A., Pfetsch, B., Heyer, G., Reber, U., Häussler, T., Schmid-Petri, H., &amp; Adam, S. (2018). Applying LDA topic modeling in communication research: Toward a valid and reliable methodology. <em>Communication Methods and Measures, 12</em>(2–3), 93–118. <a href="https://doi.org/10.1080/19312458.2018.1430754">https://doi.org/10.1080/19312458.2018.1430754</a></li>
+<li>Chen, Y., Peng, Z., Kim, S.-H., &amp; Choi, C. W. (2023). What we can do and cannot do with topic modeling: A systematic review. <em>Communication Methods and Measures, 17</em>(2), 111–130. <a href="https://doi.org/10.1080/19312458.2023.2167965">https://doi.org/10.1080/19312458.2023.2167965</a></li>
+</ul>
+</li>
+<li>
+<p>Required Empirical Readings</p>
 <ul>
 <li>Barberá, P., Casas, A., Nagler, J., Egan, P. J., Bonneau, R., Jost, J. T., &amp; Tucker, J. A. (2019). Who leads? Who follows? Measuring issue attention and agenda setting by legislators and the mass public using social media data. <em>American Political Science Review, 113</em>(4), 883–901. <a href="https://doi.org/10.1017/S0003055419000352">https://doi.org/10.1017/S0003055419000352</a></li>
-<li>Roberts, M. E., Stewart, B. M., Tingley, D., Lucas, C., Leder-Luis, J., Gadarian, S. K., Albertson, B., &amp; Rand, D. G. (2014). Structural topic models for open-ended survey responses. <em>American Journal of Political Science, 58</em>(4), 1064–1082. <a href="https://doi.org/10.1111/ajps.12103">https://doi.org/10.1111/ajps.12103</a></li>
 <li>Duan, Z., Li, J., Lukito, J., Yang, K.-C., Chen, F., Shah, D. V., &amp; Yang, S. (2022). Algorithmic agents in the hybrid media system: Social bots, selective amplification, and partisan news about COVID-19. <em>Human Communication Research, 48</em>(3), 516–542. <a href="https://doi.org/10.1093/hcr/hqac012">https://doi.org/10.1093/hcr/hqac012</a></li>
 <li>Walter, D., &amp; Ophir, Y. (2019). News frame analysis: An inductive mixed-method computational approach. <em>Communication Methods and Measures, 13</em>(4), 248–266. <a href="https://doi.org/10.1080/19312458.2019.1639145">https://doi.org/10.1080/19312458.2019.1639145</a></li>
 <li>Zhou, A., Capizzo, L. W., Page, T. G., &amp; Toth, E. L. (2023). Exploring public relations research topics and inter-cluster dynamics through computational modeling (2010-2020): A study based on two SSCI journals. <em>Journal of Public Relations Research, 35</em>(3), 135–161. <a href="https://doi.org/10.1080/1062726X.2023.2180373">https://doi.org/10.1080/1062726X.2023.2180373</a></li>
@@ -501,29 +508,32 @@
 <p>Due at the end of Week 5: [Week 5] Final Paper - Paper Idea Pitch Peer Review</p>
 </li>
 <li>
-<p>Optional Reading</p>
+<p>Optional Readings</p>
 <ul>
 <li>Blei, D. M. (2003). Latent Dirichlet Allocation. <em>Journal of Machine Learning Research, 3</em>, 993–1022.</li>
 <li>Blei, D. M. (2012). Probabilistic topic models. <em>Communications of the ACM, 55</em>(4), 77–84. <a href="https://doi.org/10.1145/2133806.2133826">https://doi.org/10.1145/2133806.2133826</a></li>
-<li>Maier, D., Waldherr, A., Miltner, P., Wiedemann, G., Niekler, A., Keinert, A., Pfetsch, B., Heyer, G., Reber, U., Häussler, T., Schmid-Petri, H., &amp; Adam, S. (2018). Applying LDA topic modeling in communication research: Toward a valid and reliable methodology. <em>Communication Methods and Measures, 12</em>(2–3), 93–118. <a href="https://doi.org/10.1080/19312458.2018.1430754">https://doi.org/10.1080/19312458.2018.1430754</a></li>
 <li>Song, H., Eberl, J.-M., &amp; Eisele, O. (2020). Less fragmented than we thought? Toward clarification of a subdisciplinary linkage in communication science, 2010–2019. <em>Journal of Communication, 70</em>(3), 310–334. <a href="https://doi.org/10.1093/joc/jqaa009">https://doi.org/10.1093/joc/jqaa009</a></li>
 <li>Jacobi, C., Van Atteveldt, W., &amp; Welbers, K. (2016). Quantitative analysis of large amounts of journalistic texts using topic modelling. <em>Digital Journalism, 4</em>(1), 89–106. <a href="https://doi.org/10.1080/21670811.2015.1093271">https://doi.org/10.1080/21670811.2015.1093271</a></li>
 <li>Ophir, Y., Walter, D., &amp; Marchant, E. R. (2020). A collaborative way of knowing: Bridging computational communication research and grounded theory ethnography. <em>Journal of Communication, 70</em>(3), 447–472. <a href="https://doi.org/10.1093/joc/jqaa013">https://doi.org/10.1093/joc/jqaa013</a></li>
-<li>Chen, Y., Peng, Z., Kim, S.-H., &amp; Choi, C. W. (2023). What we can do and cannot do with topic modeling: A systematic review. <em>Communication Methods and Measures, 17</em>(2), 111–130. <a href="https://doi.org/10.1080/19312458.2023.2167965">https://doi.org/10.1080/19312458.2023.2167965</a></li>
 <li>Ying, L., Montgomery, J. M., &amp; Stewart, B. M. (2022). Topics, concepts, and measurement: A crowdsourced procedure for validating topics as measures. <em>Political Analysis, 30</em>(4), 570–589. <a href="https://doi.org/10.1017/pan.2021.33">https://doi.org/10.1017/pan.2021.33</a></li>
 </ul>
 </li>
 </ol>
-<h2 id="26-20260226-text-as-data-supervised-learning-and-embeddings">2.6. 2026/02/26 Text as Data: Supervised Learning and Embeddings</h2>
+<h2 id="26-20260226-text-as-data-supervised-learning-and-word-embeddings">2.6. 2026/02/26 Text as Data: Supervised Learning and Word Embeddings</h2>
 <ol>
 <li>
-<p>Reading</p>
+<p>Required Instructional Readings</p>
 <ul>
 <li>Barberá, P., Boydstun, A. E., Linn, S., McMahon, R., &amp; Nagler, J. (2021). Automated text classification of news articles: A practical guide. <em>Political Analysis, 29</em>(1), 19–42. <a href="https://doi.org/10.1017/pan.2020.8">https://doi.org/10.1017/pan.2020.8</a></li>
+<li>Rodriguez, P. L., &amp; Spirling, A. (2022). Word embeddings: What works, what doesn’t, and how to tell the difference for applied research. <em>The Journal of Politics, 84</em>(1), 101–115. <a href="https://doi.org/10.1086/715162">https://doi.org/10.1086/715162</a></li>
+</ul>
+</li>
+<li>
+<p>Required Empirical Readings</p>
+<ul>
 <li>Davidson, T., Warmsley, D., Macy, M., &amp; Weber, I. (2017). Automated hate speech detection and the problem of offensive language. <em>Proceedings of the International AAAI Conference on Web and Social Media, 11</em>(1), 512–515. <a href="https://doi.org/10.1609/icwsm.v11i1.14955">https://doi.org/10.1609/icwsm.v11i1.14955</a></li>
 <li>Hornik, R., Binns, S., Emery, S., Epstein, V. M., Jeong, M., Kim, K., Kim, Y., Kranzler, E. C., Jesch, E., Lee, S. J., Levin, A. V., Liu, J., O’Donnell, M. B., Siegel, L., Tran, H., Williams, S., Yang, Q., &amp; Gibson, L. A. (2022). The effects of tobacco coverage in the public communication environment on young people’s decisions to smoke combustible cigarettes. <em>Journal of Communication, 72</em>(2), 187–213. <a href="https://doi.org/10.1093/joc/jqab052">https://doi.org/10.1093/joc/jqab052</a></li>
 <li>Jaidka, K., Zhou, A., &amp; Lelkes, Y. (2019). Brevity is the soul of Twitter: The constraint affordance and political discussion. <em>Journal of Communication, 69</em>(4), 345–372. <a href="https://doi.org/10.1093/joc/jqz023">https://doi.org/10.1093/joc/jqz023</a></li>
-<li>Rodriguez, P. L., &amp; Spirling, A. (2022). Word embeddings: What works, what doesn’t, and how to tell the difference for applied research. <em>The Journal of Politics, 84</em>(1), 101–115. <a href="https://doi.org/10.1086/715162">https://doi.org/10.1086/715162</a></li>
 <li>Toubia, O., Berger, J., &amp; Eliashberg, J. (2021). How quantifying the shape of stories predicts their success. <em>Proceedings of the National Academy of Sciences, 118</em>(26), e2011695118. <a href="https://doi.org/10.1073/pnas.2011695118">https://doi.org/10.1073/pnas.2011695118</a></li>
 <li>Li, K., Mai, F., Shen, R., &amp; Yan, X. (2021). Measuring corporate culture using machine learning. <em>The Review of Financial Studies, 34</em>(7), 3265–3315. <a href="https://doi.org/10.1093/rfs/hhaa079">https://doi.org/10.1093/rfs/hhaa079</a></li>
 <li>Kozlowski, A. C., Taddy, M., &amp; Evans, J. A. (2019). The geometry of culture: Analyzing the meanings of class through word embeddings. <em>American Sociological Review, 84</em>(5), 905–949. <a href="https://doi.org/10.1177/0003122419877135">https://doi.org/10.1177/0003122419877135</a></li>
@@ -537,19 +547,27 @@
 </ul>
 </li>
 <li>
-<p>Optional Reading</p>
+<p>Optional Readings</p>
 <ul>
 <li>Garg, N., Schiebinger, L., Jurafsky, D., &amp; Zou, J. (2018). Word embeddings quantify 100 years of gender and ethnic stereotypes. <em>Proceedings of the National Academy of Sciences, 115</em>(16), E3635–E3644. <a href="https://doi.org/10.1073/pnas.1720347115">https://doi.org/10.1073/pnas.1720347115</a></li>
 <li>Rudkowsky, E., Haselmayer, M., Wastian, M., Jenny, M., Emrich, Š., &amp; Sedlmair, M. (2018). More than bags of words: Sentiment analysis with word embeddings. <em>Communication Methods and Measures, 12</em>(2–3), 140–157. <a href="https://doi.org/10.1080/19312458.2018.1455817">https://doi.org/10.1080/19312458.2018.1455817</a></li>
+<li>Wang, S.-Y. N., &amp; Inbar, Y. (2021). Moral-language use by U.S. political elites. <em>Psychological Science, 32</em>(1), 14–26. <a href="https://doi.org/10.1177/0956797620960397">https://doi.org/10.1177/0956797620960397</a></li>
 </ul>
 </li>
 </ol>
 <h2 id="27-20260305-multimodal">2.7. 2026/03/05 Multimodal</h2>
 <ol>
 <li>
-<p>Reading</p>
+<p>Required Instructional Readings</p>
 <ul>
 <li>Joo, J., &amp; Steinert-Threlkeld, Z. C. (2022). Image as data: Automated content analysis for visual presentations of political actors and events. <em>Computational Communication Research, 4</em>(1). <a href="https://doi.org/10.5117/CCR2022.1.001.JOO">https://doi.org/10.5117/CCR2022.1.001.JOO</a></li>
+<li>Peng, Y., &amp; Lu, Y. (2023). Computational visual analysis in political communication. In D. Lilleker &amp; A. Veneti (Eds.), Research Handbook on Visual Politics (pp. 42–54). Edward Elgar Publishing. <a href="https://doi.org/10.4337/9781800376939.00010">https://doi.org/10.4337/9781800376939.00010</a></li>
+<li>Webb Williams, N., Casas, A., &amp; Wilkerson, J. D. (2020b). Images as data for social science research: An introduction to convolutional neural nets for image classification. Cambridge University Press. <a href="https://doi.org/10.1017/9781108860741">https://doi.org/10.1017/9781108860741</a></li>
+</ul>
+</li>
+<li>
+<p>Required Empirical Readings</p>
+<ul>
 <li>Qian, S., Lu, Y., Peng, Y., Shen, C., &amp; Xu, H. (2024). Convergence or divergence? A cross-platform analysis of climate change visual content categories, features, and social media engagement on Twitter and Instagram. <em>Public Relations Review, 50</em>(2), 102454. <a href="https://doi.org/10.1016/j.pubrev.2024.102454">https://doi.org/10.1016/j.pubrev.2024.102454</a></li>
 <li>Kim, S. J., Villanueva, I. I., &amp; Chen, K. (2024). Going beyond affective polarization: How emotions and identities are used in anti-vaccination TikTok videos. <em>Political Communication, 41</em>(4), 588–607. <a href="https://doi.org/10.1080/10584609.2023.2243852">https://doi.org/10.1080/10584609.2023.2243852</a></li>
 <li>Lu, Y., Pan, J., Xu, X., &amp; Xu, Y. (2025). Decentralized propaganda in the era of digital media: The massive presence of the Chinese state on Douyin. <em>American Journal of Political Science</em>. <a href="https://doi.org/10.1111/ajps.12990">https://doi.org/10.1111/ajps.12990</a></li>
@@ -565,8 +583,10 @@
 </ul>
 </li>
 <li>
-<p>Optional Reading</p>
+<p>Optional Readings</p>
 <ul>
+<li>Webb Williams, N., Casas, A., &amp; Wilkerson, J. D. (2020a). Images as Data for Social Science Research (Version 1.1) [Computer software]. Code Ocean. <a href="https://doi.org/10.24433/CO.2462313.V1">https://doi.org/10.24433/CO.2462313.V1</a></li>
+<li>Legewie, N. M., &amp; Nassauer, A. (2023). Current and future debates in video data analysis. <em>Sociological Methods &amp; Research, 52</em>(3), 1107–1119. <a href="https://doi.org/10.1177/00491241231178275">https://doi.org/10.1177/00491241231178275</a></li>
 <li>Lu, Y., &amp; Pan, J. (2022). The pervasive presence of Chinese government content on Douyin trending videos. <em>Computational Communication Research, 4</em>(1). <a href="https://doi.org/10.5117/CCR2022.2.002.LU">https://doi.org/10.5117/CCR2022.2.002.LU</a></li>
 <li>Peng, Y. (2018). Same candidates, different faces: Uncovering media bias in visual portrayals of presidential candidates with computer vision. <em>Journal of Communication, 68</em>(5), 920–941. <a href="https://doi.org/10.1093/joc/jqy041">https://doi.org/10.1093/joc/jqy041</a></li>
 <li>Zhang, H., &amp; Peng, Y. (2024). Image clustering: An unsupervised approach to categorize visual data in social science research. <em>Sociological Methods &amp; Research, 53</em>(3), 1534–1587. <a href="https://doi.org/10.1177/00491241221082603">https://doi.org/10.1177/00491241221082603</a></li>
@@ -579,23 +599,25 @@
 <li>Guilbeault, D., Delecourt, S., Hull, T., Desikan, B. S., Chu, M., &amp; Nadler, E. (2024). Online images amplify gender bias. <em>Nature, 626</em>(8001), 1049–1055. <a href="https://doi.org/10.1038/s41586-024-07068-x">https://doi.org/10.1038/s41586-024-07068-x</a></li>
 <li>Adukia, A., Eble, A., Harrison, E., Runesha, H. B., &amp; Szasz, T. (2023). What we teach about race and gender: Representation in images and text of children’s books. <em>The Quarterly Journal of Economics, 138</em>(4), 2225–2285. <a href="https://doi.org/10.1093/qje/qjad028">https://doi.org/10.1093/qje/qjad028</a></li>
 <li>Negro, G., Kovács, B., &amp; Carroll, G. R. (2022). What’s next? Artists’ music after Grammy awards. <em>American Sociological Review, 87</em>(4), 644–674. <a href="https://doi.org/10.1177/00031224221103257">https://doi.org/10.1177/00031224221103257</a></li>
-<li>Webb Williams, N., Casas, A., &amp; Wilkerson, J. D. (2020b). Images as data for social science research: An introduction to convolutional neural nets for image classification. Cambridge University Press. <a href="https://doi.org/10.1017/9781108860741">https://doi.org/10.1017/9781108860741</a></li>
-<li>Webb Williams, N., Casas, A., &amp; Wilkerson, J. D. (2020a). Images as Data for Social Science Research (Version 1.1) [Computer software]. Code Ocean. <a href="https://doi.org/10.24433/CO.2462313.V1">https://doi.org/10.24433/CO.2462313.V1</a></li>
-<li>Legewie, N. M., &amp; Nassauer, A. (2023). Current and future debates in video data analysis. <em>Sociological Methods &amp; Research, 52</em>(3), 1107–1119. <a href="https://doi.org/10.1177/00491241231178275">https://doi.org/10.1177/00491241231178275</a></li>
 </ul>
 </li>
 </ol>
 <h2 id="28-20260319-networks-descriptions-and-representations">2.8. 2026/03/19 Networks: Descriptions and Representations</h2>
 <ol>
 <li>
-<p>Reading</p>
+<p>Required Instructional Readings</p>
 <ul>
+<li>Veritasium. <em>Something Strange Happens When You Trace How Connected We Are.</em> <a href="https://youtu.be/CYlon2tvywA">https://youtu.be/CYlon2tvywA</a></li>
+<li>Borgatti, S. P., Everett, M. G., &amp; Johnson, J. C. (2018). <em>Analyzing social networks</em> (2nd edition). SAGE Publications. Chapters 1, 2, &amp; 3</li>
 <li>Kolaczyk, E. D., &amp; Csárdi, G. (2020). <em>Statistical analysis of network data with R</em>. Springer International Publishing. <a href="https://doi.org/10.1007/978-3-030-44129-6">https://doi.org/10.1007/978-3-030-44129-6</a> Chapter 4</li>
+</ul>
+</li>
+<li>
+<p>Required Empirical Readings</p>
+<ul>
 <li>Vosoughi, S., Roy, D., &amp; Aral, S. (2018). The spread of true and false news online. <em>Science, 359</em>(6380), 1146–1151. <a href="https://doi.org/10.1126/science.aap9559">https://doi.org/10.1126/science.aap9559</a></li>
-<li>Park, P. S., Blumenstock, J. E., &amp; Macy, M. W. (2018). The strength of long-range ties in population-scale social networks. <em>Science, 362</em>(6421), 1410–1413. <a href="https://doi.org/10.1126/science.aau9735">https://doi.org/10.1126/science.aau9735</a></li>
-<li>González-Bailón, S., &amp; Wang, N. (2016). Networked discontent: The anatomy of protest campaigns in social media. <em>Social Networks, 44</em>, 95–104. <a href="https://doi.org/10.1016/j.socnet.2015.07.003">https://doi.org/10.1016/j.socnet.2015.07.003</a></li>
-<li>Boutyline, A., &amp; Vaisey, S. (2017). Belief network analysis: A relational approach to understanding the structure of attitudes. <em>American Journal of Sociology, 122</em>(5), 1371–1447. <a href="https://doi.org/10.1086/691274">https://doi.org/10.1086/691274</a></li>
-<li>Zhou, A., &amp; Yang, A. (2021). The longitudinal dimension of social-mediated movements: Hidden brokerage and the unsung tales of movement spilloverers. <em>Social Media + Society, 7</em>(3), 205630512110475. <a href="https://doi.org/10.1177/20563051211047545">https://doi.org/10.1177/20563051211047545</a></li>
+<li>Barberá, P., Wang, N., Bonneau, R., Jost, J. T., Nagler, J., Tucker, J., &amp; González-Bailón, S. (2015). The critical periphery in the growth of social protests. <em>PLoS ONE, 10</em>(11), e0143611. <a href="https://doi.org/10.1371/journal.pone.0143611">https://doi.org/10.1371/journal.pone.0143611</a></li>
+<li>Gong, X., Huskey, R., Xue, H., Shen, C., &amp; Frey, S. (2023). Broadcast information diffusion processes on social media networks: Exogenous events lead to more integrated public discourse. <em>Journal of Communication, 73</em>(3), 247–259. <a href="https://doi.org/10.1093/joc/jqad014">https://doi.org/10.1093/joc/jqad014</a></li>
 <li>Zhao, J., Wei, Y., &amp; Wu, B. (2022). Analysis of the social network and the evolution of the influence of ancient Chinese poets. <em>Social Science Computer Review, 40</em>(4), 1014–1034. <a href="https://doi.org/10.1177/08944393211028182">https://doi.org/10.1177/08944393211028182</a></li>
 <li>Clauset, A., Arbesman, S., &amp; Larremore, D. B. (2015). Systematic inequality and hierarchy in faculty hiring networks. <em>Science Advances, 1</em>(1), e1400005. <a href="https://doi.org/10.1126/sciadv.1400005">https://doi.org/10.1126/sciadv.1400005</a></li>
 </ul>
@@ -614,28 +636,38 @@
 <p>Optional Reading</p>
 <ul>
 <li>Newman, M. E. J. (2010). <em>Networks: An introduction</em>. Oxford University Press.</li>
-<li>Wu, L., Wang, D., &amp; Evans, J. A. (2019). Large teams develop and small teams disrupt science and technology. <em>Nature, 566</em>(7744), 378–382. <a href="https://doi.org/10.1038/s41586-019-0941-9">https://doi.org/10.1038/s41586-019-0941-9</a></li>
-<li>Lydon-Staley, D. M., Zhou, D., Blevins, A. S., Zurn, P., &amp; Bassett, D. S. (2021). Hunters, busybodies and the knowledge network building associated with deprivation curiosity. <em>Nature Human Behaviour, 5</em>(3), 327–336. <a href="https://doi.org/10.1038/s41562-020-00985-7">https://doi.org/10.1038/s41562-020-00985-7</a></li>
+<li>González-Bailón, S., &amp; Wang, N. (2016). Networked discontent: The anatomy of protest campaigns in social media. <em>Social Networks, 44</em>, 95–104. <a href="https://doi.org/10.1016/j.socnet.2015.07.003">https://doi.org/10.1016/j.socnet.2015.07.003</a></li>
+<li>Park, P. S., Blumenstock, J. E., &amp; Macy, M. W. (2018). The strength of long-range ties in population-scale social networks. <em>Science, 362</em>(6421), 1410–1413. <a href="https://doi.org/10.1126/science.aau9735">https://doi.org/10.1126/science.aau9735</a></li>
+<li>Zhou, A., &amp; Yang, A. (2021). The longitudinal dimension of social-mediated movements: Hidden brokerage and the unsung tales of movement spilloverers. <em>Social Media + Society, 7</em>(3), 205630512110475. <a href="https://doi.org/10.1177/20563051211047545">https://doi.org/10.1177/20563051211047545</a></li>
+<li>Boutyline, A., &amp; Vaisey, S. (2017). Belief network analysis: A relational approach to understanding the structure of attitudes. <em>American Journal of Sociology, 122</em>(5), 1371–1447. <a href="https://doi.org/10.1086/691274">https://doi.org/10.1086/691274</a></li>
 <li>Bail, C. A. (2016). Combining natural language processing and network analysis to examine how advocacy organizations stimulate conversation on social media. <em>Proceedings of the National Academy of Sciences, 113</em>(42), 11823–11828. <a href="https://doi.org/10.1073/pnas.1607151113">https://doi.org/10.1073/pnas.1607151113</a></li>
-<li>Shi, F., Shi, Y., Dokshin, F. A., Evans, J. A., &amp; Macy, M. W. (2017). Millions of online book co-purchases reveal partisan differences in the consumption of science. <em>Nature Human Behaviour, 1</em>(4), 0079. <a href="https://doi.org/10.1038/s41562-017-0079">https://doi.org/10.1038/s41562-017-0079</a></li>
 <li>Barabási, A.-L., &amp; Albert, R. (1999). Emergence of scaling in random networks. <em>Science, 286</em>(5439), 509–512. <a href="https://doi.org/10.1126/science.286.5439.509">https://doi.org/10.1126/science.286.5439.509</a></li>
 <li>Watts, D. J., &amp; Strogatz, S. H. (1998). Collective dynamics of “small-world” networks. <em>Nature, 393</em>(6684), 440–442. <a href="https://doi.org/10.1038/30918">https://doi.org/10.1038/30918</a></li>
 <li>Granovetter, M. S. (1973). The strength of weak ties. <em>American Journal of Sociology, 78</em>(6), 1360–1380. <a href="https://doi.org/10.1086/225469">https://doi.org/10.1086/225469</a></li>
 <li>Burt, R. S. (2004). Structural holes and good ideas. <em>American Journal of Sociology, 110</em>(2), 349–399. <a href="https://doi.org/10.1086/421787">https://doi.org/10.1086/421787</a></li>
+<li>Lydon-Staley, D. M., Zhou, D., Blevins, A. S., Zurn, P., &amp; Bassett, D. S. (2021). Hunters, busybodies and the knowledge network building associated with deprivation curiosity. <em>Nature Human Behaviour, 5</em>(3), 327–336. <a href="https://doi.org/10.1038/s41562-020-00985-7">https://doi.org/10.1038/s41562-020-00985-7</a></li>
+<li>Shen, C., Monge, P., &amp; Williams, D. (2014). Virtual brokerage and closure: Network structure and social capital in a massively multiplayer online game. <em>Communication Research, 41</em>(4), 459–480. <a href="https://doi.org/10.1177/0093650212455197">https://doi.org/10.1177/0093650212455197</a></li>
 </ul>
 </li>
 </ol>
 <h2 id="29-20260326-networks-inference-and-experimentation">2.9. 2026/03/26 Networks: Inference and Experimentation</h2>
 <ol>
 <li>
-<p>Reading</p>
+<p>Required Instructional Readings</p>
 <ul>
+<li>Borgatti, S. P., Everett, M. G., &amp; Johnson, J. C. (2018). <em>Analyzing social networks</em> (2nd edition). SAGE Publications. Chapter 8</li>
 <li>Kolaczyk, E. D., &amp; Csárdi, G. (2020). <em>Statistical analysis of network data with R</em>. Springer International Publishing. <a href="https://doi.org/10.1007/978-3-030-44129-6">https://doi.org/10.1007/978-3-030-44129-6</a> Chapter 6</li>
-<li>Chen, H.-T., Guo, L., &amp; Su, C. C. (2020). Network agenda setting, partisan selective exposure, and opinion repertoire: The effects of pro- and counter-attitudinal media in hong kong. <em>Journal of Communication, 70</em>(1), 35–59. <a href="https://doi.org/10.1093/joc/jqz042">https://doi.org/10.1093/joc/jqz042</a></li>
 <li>Shumate, M., &amp; Palazzolo, E. T. (2010). Exponential random graph (p*) models as a method for social network analysis in communication research. <em>Communication Methods and Measures, 4</em>(4), 341–371. <a href="https://doi.org/10.1080/19312458.2010.527869">https://doi.org/10.1080/19312458.2010.527869</a></li>
-<li>Liang, H. (2014). Coevolution of political discussion and common ground in web discussion forum. <em>Social Science Computer Review, 32</em>(2), 155–169. <a href="https://doi.org/10.1177/0894439313506844">https://doi.org/10.1177/0894439313506844</a></li>
+</ul>
+</li>
+<li>
+<p>Required Empirical Readings</p>
+<ul>
+<li>Chen, H.-T., Guo, L., &amp; Su, C. C. (2020). Network agenda setting, partisan selective exposure, and opinion repertoire: The effects of pro- and counter-attitudinal media in hong kong. <em>Journal of Communication, 70</em>(1), 35–59. <a href="https://doi.org/10.1093/joc/jqz042">https://doi.org/10.1093/joc/jqz042</a></li>
+<li>Wang, L., Yang, A., &amp; Thorson, K. (2021). Serial participants of social media climate discussion as a community of practice: A longitudinal network analysis. <em>Information, Communication &amp; Society, 24</em>(7), 941–959. <a href="https://doi.org/10.1080/1369118X.2019.1668457">https://doi.org/10.1080/1369118X.2019.1668457</a></li>
+<li>Xu, Y. (2024). Formation mechanisms of intra-organizational membership overlap: A longitudinal network analysis of membership data from the International Communication Association. Journal of Communication, 74(4), 333–345. <a href="https://doi.org/10.1093/joc/jqae021">https://doi.org/10.1093/joc/jqae021</a></li>
 <li>Centola, D., Becker, J., Brackbill, D., &amp; Baronchelli, A. (2018). Experimental evidence for tipping points in social convention. <em>Science, 360</em>(6393), 1116–1119. <a href="https://doi.org/10.1126/science.aas8827">https://doi.org/10.1126/science.aas8827</a></li>
-<li>Kolaczyk, E. D., &amp; Csárdi, G. (2020). Statistical analysis of network data with R. Springer.</li>
+<li>Zhang, J., Brackbill, D., Yang, S., Becker, J., Herbert, N., &amp; Centola, D. (2016). Support or competition? How online social networks increase physical activity: A randomized controlled trial. <em>Preventive Medicine Reports, 4</em>, 453–458. <a href="https://doi.org/10.1016/j.pmedr.2016.08.008">https://doi.org/10.1016/j.pmedr.2016.08.008</a></li>
 </ul>
 </li>
 <li>
@@ -652,49 +684,83 @@
 <p>Optional Reading</p>
 <ul>
 <li>Borgatti, S. P., Everett, M. G., &amp; Johnson, J. C. (2018). <em>Analyzing social networks</em> (2nd edition). SAGE Publications.</li>
+<li>Liang, H. (2014). Coevolution of political discussion and common ground in web discussion forum. <em>Social Science Computer Review, 32</em>(2), 155–169. <a href="https://doi.org/10.1177/0894439313506844">https://doi.org/10.1177/0894439313506844</a></li>
 <li>Robins, G., Pattison, P., Kalish, Y., &amp; Lusher, D. (2007). An introduction to exponential random graph (p*) models for social networks. <em>Social Networks, 29</em>(2), 173–191. <a href="https://doi.org/10.1016/j.socnet.2006.08.002">https://doi.org/10.1016/j.socnet.2006.08.002</a></li>
 <li>Centola, D., &amp; Macy, M. (2007). Complex contagions and the weakness of long ties. <em>American Journal of Sociology, 113</em>(3), 702–734. <a href="https://doi.org/10.1086/521848">https://doi.org/10.1086/521848</a></li>
 <li>Rajkumar, K., Saint-Jacques, G., Bojinov, I., Brynjolfsson, E., &amp; Aral, S. (2022). A causal test of the strength of weak ties. <em>Science, 377</em>(6612), 1304–1310. <a href="https://doi.org/10.1126/science.abl4476">https://doi.org/10.1126/science.abl4476</a></li>
+<li>Bearman, P. S., Moody, J., &amp; Stovel, K. (2004). Chains of affection: The structure of adolescent romantic and sexual networks. American Journal of Sociology, 110(1), 44–91. <a href="https://doi.org/10.1086/386272">https://doi.org/10.1086/386272</a></li>
 </ul>
 </li>
 </ol>
-<h2 id="210-20260402-data-visualization-basics">2.10. 2026/04/02 Data Visualization: Basics</h2>
+<h2 id="210-20260402-data-visualization-overview-and-practices">2.10. 2026/04/02 Data Visualization: Overview and Practices</h2>
 <ol>
-<li>Reading</li>
+<li>Required Instructional Readings</li>
 </ol>
 <ul>
-<li>Healy, K., &amp; Moody, J. (2014). Data visualization in sociology. <em>Annual Review of Sociology, 40</em>(1), 105–128. <a href="https://doi.org/10.1146/annurev-soc-071312-145551">https://doi.org/10.1146/annurev-soc-071312-145551</a></li>
+<li>Wickham, H., Çetinkaya-Rundel, M., &amp; Grolemund, G. (2023). R for data science: Import, tidy, transform, visualize, and model data (2nd edition). O’Reilly. <a href="https://r4ds.hadley.nz">https://r4ds.hadley.nz</a> Chapters Visualize, 9. Layers, 10. Exploratory</li>
+<li>Healy, K. (2019). <em>Data visualization: A practical introduction.</em> Princeton University Press. <a href="https://socviz.co">https://socviz.co</a> Chapters 1, 3, &amp; 4</li>
+<li>Schwabish, J. A. (2014). An economist’s guide to visualizing data. <em>Journal of Economic Perspectives, 28</em>(1), 209–234. <a href="https://doi.org/10.1257/jep.28.1.209">https://doi.org/10.1257/jep.28.1.209</a></li>
 </ul>
 <ol start="2">
+<li>Required Empirical Readings</li>
+</ol>
+<ul>
+<li>Wu, L., Wang, D., &amp; Evans, J. A. (2019). Large teams develop and small teams disrupt science and technology. <em>Nature, 566</em>(7744), 378–382. <a href="https://doi.org/10.1038/s41586-019-0941-9">https://doi.org/10.1038/s41586-019-0941-9</a></li>
+<li>Richardson, R. A. K., Hong, S. S., Byrne, J. A., Stoeger, T., &amp; Amaral, L. A. N. (2025). The entities enabling scientific fraud at scale are large, resilient, and growing rapidly. <em>Proceedings of the National Academy of Sciences, 122</em>(32), e2420092122. <a href="https://doi.org/10.1073/pnas.2420092122">https://doi.org/10.1073/pnas.2420092122</a></li>
+<li>Bailey, E. R., Matz, S. C., Youyou, W., &amp; Iyengar, S. S. (2020). Authentic self-expression on social media is associated with greater subjective well-being. <em>Nature Communications, 11</em>(1), 4889. <a href="https://doi.org/10.1038/s41467-020-18539-w">https://doi.org/10.1038/s41467-020-18539-w</a></li>
+<li>Shi, F., Shi, Y., Dokshin, F. A., Evans, J. A., &amp; Macy, M. W. (2017). Millions of online book co-purchases reveal partisan differences in the consumption of science. <em>Nature Human Behaviour, 1</em>(4), 0079. <a href="https://doi.org/10.1038/s41562-017-0079">https://doi.org/10.1038/s41562-017-0079</a></li>
+<li>Mukerjee, S., Majó-Vázquez, S., &amp; González-Bailón, S. (2018). Networks of audience overlap in the consumption of digital news. <em>Journal of Communication, 68</em>(1), 26–50. <a href="https://doi.org/10.1093/joc/jqx007">https://doi.org/10.1093/joc/jqx007</a></li>
+</ul>
+<ol start="3">
 <li>
 <p>Computational Toolkits Demo</p>
 <ul>
 <li>ggplot2</li>
-<li>Google Draw</li>
+<li>patchwork, cowplot, hrbrthemes</li>
 </ul>
 </li>
 <li>
 <p>Optional Reading</p>
 <ul>
-<li>Healy, K. (2019). <em>Data visualization: A practical introduction.</em> Princeton University Press. <a href="https://socviz.co">https://socviz.co</a></li>
+<li>Healy, K., &amp; Moody, J. (2014). Data visualization in sociology. <em>Annual Review of Sociology, 40</em>(1), 105–128. <a href="https://doi.org/10.1146/annurev-soc-071312-145551">https://doi.org/10.1146/annurev-soc-071312-145551</a></li>
 <li>Wilke, C. (2019). <em>Fundamentals of data visualization: A primer on making informative and compelling figures</em>. O’Reilly Media. <a href="https://clauswilke.com/dataviz/">https://clauswilke.com/dataviz/</a></li>
+<li>R graph gallery: <a href="https://r-graph-gallery.com">https://r-graph-gallery.com</a></li>
 </ul>
 </li>
 </ol>
-<h2 id="211-20260409-data-visualization-advanced">2.11. 2026/04/09 Data Visualization: Advanced</h2>
+<h2 id="211-20260409-data-visualization-packaging-and-presentation">2.11. 2026/04/09 Data Visualization: Packaging and Presentation</h2>
 <ol>
 <li>
-<p>Reading</p>
+<p>Required Instructional Readings</p>
+<ul>
+<li>Wickham, H., Çetinkaya-Rundel, M., &amp; Grolemund, G. (2023). R for data science: Import, tidy, transform, visualize, and model data (2nd edition). O’Reilly. <a href="https://r4ds.hadley.nz">https://r4ds.hadley.nz</a> Chapter 11. Communication</li>
+<li>Healy, K. (2019). <em>Data visualization: A practical introduction.</em> Princeton University Press. <a href="https://socviz.co">https://socviz.co</a> Chapters 5 &amp; 8</li>
+<li>Venturini, T., Jacomy, M., &amp; Jensen, P. (2021). What do we see when we look at networks: Visual network analysis, relational ambiguity, and force-directed layouts. <em>Big Data &amp; Society, 8</em>(1), 205395172110184. <a href="https://doi.org/10.1177/20539517211018488">https://doi.org/10.1177/20539517211018488</a></li>
+</ul>
+</li>
+<li>
+<p>Required Empirical Readings</p>
+<ul>
+<li>Way, S. F., Morgan, A. C., Larremore, D. B., &amp; Clauset, A. (2019). Productivity, prominence, and the effects of academic environment. <em>Proceedings of the National Academy of Sciences, 116</em>(22), 10729–10733. <a href="https://doi.org/10.1073/pnas.1817431116">https://doi.org/10.1073/pnas.1817431116</a></li>
+<li>Schneider, P. J., &amp; Rizoiu, M.-A. (2023). The effectiveness of moderating harmful online content. <em>Proceedings of the National Academy of Sciences, 120</em>(34), e2307360120. <a href="https://doi.org/10.1073/pnas.2307360120">https://doi.org/10.1073/pnas.2307360120</a></li>
+<li>Dash Nelson, G., &amp; Rae, A. (2016). An economic geography of the united states: From commutes to megaregions. <em>PLOS ONE, 11</em>(11), e0166083. <a href="https://doi.org/10.1371/journal.pone.0166083">https://doi.org/10.1371/journal.pone.0166083</a></li>
+<li>Huang, J., Hurst, B., Capizzo, L. W., &amp; Zhou, A. (2026). \textit{Mapping conceptual boundaries: Using structural topic modeling and word embedding to contrast CSA and CSR in public relations research}. Working Paper.</li>
+<li>Waller, I., &amp; Anderson, A. (2021). Quantifying social organization and political polarization in online platforms. <em>Nature, 600</em>(7888), 264–268. <a href="https://doi.org/10.1038/s41586-021-04167-x">https://doi.org/10.1038/s41586-021-04167-x</a></li>
+</ul>
 </li>
 <li>
 <p>Computational Toolkits Demo</p>
 <ul>
-<li>patchwork, cowplot, hrbrthemes</li>
-<li>Google Draw and Affinity</li>
+<li>Google Draw</li>
+<li>Affinity</li>
 </ul>
 </li>
 <li>
 <p>Optional Reading</p>
+<ul>
+<li>Bansak, K., Hainmueller, J., &amp; Hangartner, D. (2016). How economic, humanitarian, and religious concerns shape European attitudes toward asylum seekers. <em>Science, 354</em>(6309), 217–222. <a href="https://doi.org/10.1126/science.aag2147">https://doi.org/10.1126/science.aag2147</a></li>
+<li>Börner, K., &amp; Polley, D. E. (2014). <em>Visual insights: A practical guide to making sense of data</em>. The MIT Press.</li>
+</ul>
 </li>
 </ol>
 <h2 id="212-20260416-llms">2.12. 2026/04/16 LLMs</h2>
@@ -708,6 +774,7 @@
 <li>Ziems, C., Held, W., Shaikh, O., Chen, J., Zhang, Z., &amp; Yang, D. (2024). Can large language models transform computational social science? <em>Computational Linguistics, 50</em>(1), 237–291. <a href="https://doi.org/10.1162/coli_a_00502">https://doi.org/10.1162/coli_a_00502</a></li>
 <li>Abdurahman, S., Atari, M., Karimi-Malekabadi, F., Xue, M. J., Trager, J., Park, P. S., Golazizian, P., Omrani, A., &amp; Dehghani, M. (2024). Perils and opportunities in using large language models in psychological research. <em>PNAS Nexus, 3</em>(7), pgae245. <a href="https://doi.org/10.1093/pnasnexus/pgae245">https://doi.org/10.1093/pnasnexus/pgae245</a></li>
 <li>Than, N., Fan, L., Law, T., Nelson, L. K., &amp; McCall, L. (2025). Updating “the future of coding”: Qualitative coding with generative large language models. <em>Sociological Methods &amp; Research</em>. <a href="https://doi.org/10.1177/00491241251339188">https://doi.org/10.1177/00491241251339188</a></li>
+<li>Lu, L., Kwon, H., Wang, W., M. Cotter, L., A. Kriss, L., Minich, M., Liu, J., N. Cascio, C., &amp; Yang, S. (2025). Cannabis warning labels, sensory marketing, and electronic word-of-mouth: AI-facilitated textual analysis of a randomized experiment among youth and young adults. <em>International Journal of Advertising</em>, 1–26. <a href="https://doi.org/10.1080/02650487.2025.2548647">https://doi.org/10.1080/02650487.2025.2548647</a></li>
 </ul>
 </li>
 <li>
@@ -724,6 +791,7 @@
 <li>Törnberg, P. (2025). Large language models outperform expert coders and supervised classifiers at annotating political social media messages. <em>Social Science Computer Review, 43</em>(6), 1181–1195. <a href="https://doi.org/10.1177/08944393241286471">https://doi.org/10.1177/08944393241286471</a></li>
 <li>Schulze Buschoff, L. M., Akata, E., Bethge, M., &amp; Schulz, E. (2025). Visual cognition in multimodal large language models. <em>Nature Machine Intelligence, 7</em>(1), 96–106. <a href="https://doi.org/10.1038/s42256-024-00963-y">https://doi.org/10.1038/s42256-024-00963-y</a></li>
 <li>Rathje, S., Mirea, D.-M., Sucholutsky, I., Marjieh, R., Robertson, C. E., &amp; Van Bavel, J. J. (2024). GPT is an effective tool for multilingual psychological text analysis. <em>Proceedings of the National Academy of Sciences, 121</em>(34), e2308950121. <a href="https://doi.org/10.1073/pnas.2308950121">https://doi.org/10.1073/pnas.2308950121</a></li>
+<li>Chuang, Y.-S., Goyal, A., Harlalka, N., Suresh, S., Hawkins, R., Yang, S., Shah, D., Hu, J., &amp; Rogers, T. (2024). Simulating opinion dynamics with networks of LLM-based agents. <em>Findings of the Association for Computational Linguistics: NAACL 2024</em>, 3326–3346. <a href="https://doi.org/10.18653/v1/2024.findings-naacl.211">https://doi.org/10.18653/v1/2024.findings-naacl.211</a></li>
 </ul>
 </li>
 </ol>
