@@ -1,10 +1,4 @@
-- [1. Week01](#1-week01)
-  - [1.1. R](#11-r)
-    - [1.1.1. R - Basic Setup](#111-r---basic-setup)
-    - [1.1.2. R - Basic Commands 1](#112-r---basic-commands-1)
-    - [1.1.3. R - Basic Commands 2](#113-r---basic-commands-2)
-    - [1.1.4. R - Common Commands](#114-r---common-commands)
-  - [1.2. Python](#12-python)
+[1.2. Python](#12-python)
     - [1.2.1. Python - Google Colab](#121-python---google-colab)
     - [1.2.2. Python - IDE](#122-python---ide)
     - [1.2.3. Python - Basic Commands 1](#123-python---basic-commands-1)
@@ -13,9 +7,7 @@
   - [1.3. Learn how to debug your code with ChatGPT](#13-learn-how-to-debug-your-code-with-chatgpt)
   - [1.4. Focus on R and One More Add-On](#14-focus-on-r-and-one-more-add-on)
 
-# 1. Week01
-
-Today, we will get ready for the workshop by installing R/Python environments and getting familiar with the tools we will be using.
+You should only proceed after completing the SICSS Boot Camp https://sicss.io/boot_camp/ which focused on R and RStudio. Below, I will mostly focus on how we can efficiently set up Python environments.
 
 In the end, I will also introduce you to debugging with ChatGPT, which is a very useful skill to have when you are learning to code. I will also introduce the Copilot add-on for RStudio, which is a great tool to help you write code faster and more efficiently. **However, I think we should all be cautious of using AI tools, as relying on them too much might hinder our learning process.** In fact, I have recently disabled GitHub Copilot in my own RStudio for some time.
 
@@ -25,29 +17,25 @@ The model code scripts are stored in this folder as well. However, I do not reco
 
 ### 1.1.1. R - Basic Setup
 
-Dr. Josephine Lukito has a great installation guide for R and RStudio. Please follow her instructions to set up your environment: https://jolukito.quarto.pub/j381m-textbook/01-installation.html
-
-1. Install R from [CRAN](https://cran.r-project.org/)
-2. Install RStudio from [RStudio](https://posit.co/download/rstudio-desktop/)
-3. Creating a new .R file in RStudio:
+1. Creating a new .R file in RStudio:
    - Open RStudio
    - Click on "File" in the top left corner
    - Select "New File" and then "R Script"
    - A new tab will open with a blank script file
-4. Write this the following script, and hit "Ctrl + Enter" or clicking the "Run" button in RStudio.
+2. Write this the following script, and hit "Ctrl + Enter" or clicking the "Run" button in RStudio.
 ```r
 install.packages("praise")
 ```
-5. Load the package in RStudio:
+3. Load the package in RStudio:
 ```r
 library("praise")
 ```
-6. Run the following code in RStudio and get a random praise message:
+4. Run the following code in RStudio and get a random praise message:
 ```r
 praise()
 ```
-7. Save the file as `praise.R` locally.
-8. Open `praise.R` again, make sure .R is associated with RStudio from now on. Run the code again to get a new random praise message.
+5. Save the file as `praise.R` locally.
+6. Open `praise.R` again, make sure .R is associated with RStudio from now on. Run the code again to get a new random praise message.
 
 ### 1.1.2. R - Basic Commands 1
 

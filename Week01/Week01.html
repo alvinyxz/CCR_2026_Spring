@@ -2,7 +2,7 @@
         <html>
         <head>
             <meta charset="UTF-8">
-            <title>1&period; Week01</title>
+            <title>1&period;1&period; R</title>
             <style>
 /* From extension vscode.github */
 /*---------------------------------------------------------------------------------------------
@@ -139,41 +139,22 @@
         
         </head>
         <body class="vscode-body vscode-light">
-            <ul>
-<li><a href="#1-week01">1. Week01</a>
+            <p><a href="#12-python">1.2. Python</a>
+- <a href="#121-python---google-colab">1.2.1. Python - Google Colab</a>
+- <a href="#122-python---ide">1.2.2. Python - IDE</a>
+- <a href="#123-python---basic-commands-1">1.2.3. Python - Basic Commands 1</a>
+- <a href="#124-python---basic-commands-2">1.2.4. Python - Basic Commands 2</a>
+- <a href="#125-python---common-commands">1.2.5. Python - Common Commands</a></p>
 <ul>
-<li><a href="#11-r">1.1. R</a>
-<ul>
-<li><a href="#111-r---basic-setup">1.1.1. R - Basic Setup</a></li>
-<li><a href="#112-r---basic-commands-1">1.1.2. R - Basic Commands 1</a></li>
-<li><a href="#113-r---basic-commands-2">1.1.3. R - Basic Commands 2</a></li>
-<li><a href="#114-r---common-commands">1.1.4. R - Common Commands</a></li>
-</ul>
-</li>
-<li><a href="#12-python">1.2. Python</a>
-<ul>
-<li><a href="#121-python---google-colab">1.2.1. Python - Google Colab</a></li>
-<li><a href="#122-python---ide">1.2.2. Python - IDE</a></li>
-<li><a href="#123-python---basic-commands-1">1.2.3. Python - Basic Commands 1</a></li>
-<li><a href="#124-python---basic-commands-2">1.2.4. Python - Basic Commands 2</a></li>
-<li><a href="#125-python---common-commands">1.2.5. Python - Common Commands</a></li>
-</ul>
-</li>
 <li><a href="#13-learn-how-to-debug-your-code-with-chatgpt">1.3. Learn how to debug your code with ChatGPT</a></li>
 <li><a href="#14-focus-on-r-and-one-more-add-on">1.4. Focus on R and One More Add-On</a></li>
 </ul>
-</li>
-</ul>
-<h1 id="1-week01">1. Week01</h1>
-<p>Today, we will get ready for the workshop by installing R/Python environments and getting familiar with the tools we will be using.</p>
+<p>You should only proceed after completing the SICSS Boot Camp <a href="https://sicss.io/boot_camp/">https://sicss.io/boot_camp/</a> which focused on R and RStudio. Below, I will mostly focus on how we can efficiently set up Python environments.</p>
 <p>In the end, I will also introduce you to debugging with ChatGPT, which is a very useful skill to have when you are learning to code. I will also introduce the Copilot add-on for RStudio, which is a great tool to help you write code faster and more efficiently. <strong>However, I think we should all be cautious of using AI tools, as relying on them too much might hinder our learning process.</strong> In fact, I have recently disabled GitHub Copilot in my own RStudio for some time.</p>
 <p>The model code scripts are stored in this folder as well. However, I do not recommend you to use it. Instead, follow the steps below and create your own files. The model code scripts are just there when you encounter serious problems.</p>
 <h2 id="11-r">1.1. R</h2>
 <h3 id="111-r---basic-setup">1.1.1. R - Basic Setup</h3>
-<p>Dr. Josephine Lukito has a great installation guide for R and RStudio. Please follow her instructions to set up your environment: <a href="https://jolukito.quarto.pub/j381m-textbook/01-installation.html">https://jolukito.quarto.pub/j381m-textbook/01-installation.html</a></p>
 <ol>
-<li>Install R from <a href="https://cran.r-project.org/">CRAN</a></li>
-<li>Install RStudio from <a href="https://posit.co/download/rstudio-desktop/">RStudio</a></li>
 <li>Creating a new .R file in RStudio:
 <ul>
 <li>Open RStudio</li>
@@ -186,17 +167,17 @@
 </ol>
 <pre><code class="language-r">install.packages<span class="hljs-punctuation">(</span><span class="hljs-string">&quot;praise&quot;</span><span class="hljs-punctuation">)</span>
 </code></pre>
-<ol start="5">
+<ol start="3">
 <li>Load the package in RStudio:</li>
 </ol>
 <pre><code class="language-r">library<span class="hljs-punctuation">(</span><span class="hljs-string">&quot;praise&quot;</span><span class="hljs-punctuation">)</span>
 </code></pre>
-<ol start="6">
+<ol start="4">
 <li>Run the following code in RStudio and get a random praise message:</li>
 </ol>
 <pre><code class="language-r">praise<span class="hljs-punctuation">(</span><span class="hljs-punctuation">)</span>
 </code></pre>
-<ol start="7">
+<ol start="5">
 <li>Save the file as <code>praise.R</code> locally.</li>
 <li>Open <code>praise.R</code> again, make sure .R is associated with RStudio from now on. Run the code again to get a new random praise message.</li>
 </ol>

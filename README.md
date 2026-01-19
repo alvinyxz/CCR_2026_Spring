@@ -31,6 +31,7 @@
 - Location: In person, Murphy Hall 25 (basement)
 - Primary Language: R (no prior coding assumed)
 - Materials: https://z.umn.edu/J8500
+- Syllabus: https://z.umn.edu/J8500_Syllabus
 - In-Person Office Hours: Thursdays 1:30-2:30 pm, Murphy Hall 325
 - Or book me for virtual office hours on Google Calendar: https://z.umn.edu/Alvin_Meeting and we will meet on Zoom
 
@@ -48,7 +49,7 @@ To facilitate discussion, each week, all students will submit (to the whole clas
 
 ### 1.1.2. Reading Lead (5%*4 = 20%)
 
-Throughout this semester, you are required to sign up for 4 research papers on the **Required Empirical Readings** list. For each reading, you will: (1) prepare a response letter with annotations (RLA), and (2) serve as the lead discussant for those assigned articles.
+Throughout this semester, you are required to sign up for 4 research papers on the Required Empirical Readings list. For each reading, you will: (1) prepare a response letter with annotations (RLA), and (2) serve as the lead discussant for those assigned articles.
 
 <span style="color: orange;">You are expected to post your RLA as PDFs to the "Discussion" section on Canvas (named "[Week X] RLA") at least 24 hours before the scheduled class meeting.</span> If for some reason you will be unable to attend a class for which you are assigned to provide a discussion guide, it is your responsibility to either trade assigned readings with someone else in the class who can attend, or arrange someone else to distribute your discussion guides at the start of the relevant class period. [Extra Credit] If you volunteer to be a lead discussant for an extra reading (i.e., 5 total), you will receive 5% extra credit added to your final grade.
 
@@ -180,18 +181,22 @@ Regardless of which option you choose, your final paper is graded for each of th
 
 ## 2.1. 2026/01/22 Introduction and Course Overview
 
-1. Sign-Up Due (2026/01/26): RLA and Computational Toolkit Demo
+1. Introduction and Course Overview
 
-2. Getting Started with R and Python: https://htmlpreview.github.io/?https://github.com/alvinyxz/CCR_2026_Spring/blob/main/Week01/Week01.html
+2. Sign-Up for RLA and Computational Toolkit Demo (Due 2026/01/26)
 
-3. Overall Course Readings
+3. SICSS Boot Camp (Finish Before Next Class): https://sicss.io/boot_camp/
+
+4. Getting Started with Python: https://htmlpreview.github.io/?https://github.com/alvinyxz/CCR_2026_Spring/blob/main/Week01/Week01.html
+
+5. Overall Course Readings
    - Lazer, D., Pentland, A., Adamic, L., Aral, S., Barabasi, A.-L., Brewer, D., Christakis, N., Contractor, N., Fowler, J., Gutmann, M., Jebara, T., King, G., Macy, M., Roy, D., & Van Alstyne, M. (2009). Computational social science. *Science, 323*(5915), 721–723. https://doi.org/10.1126/science.1167742
    - Lazer, D., Pentland, A., Watts, D. J., Aral, S., Contractor, N., Freelon, D., Gonzalez-Bailon, S., King, G., Nelson, A., Salganik, J., Strohmaier, M., Vespignani, A., & Wagner, C. (2020). Computational social science: Obstacles and opportunities. *Science, 369*(6507), 1060–1062. https://doi.org/10.1126/science.aaz8170
    - Wallach, H. (2018). Computational social science ≠ computer science + social data. *Communications of the ACM, 61*(3), 42–44. https://doi.org/10.1145/3132698
    - Hilbert, M., Barnett, G., Blumenstock, J., Contractor, N., Diesner, J., Frey, S., Gonzalez-Bailon, S., Lamberso, P., Pan, J., Peng, T.-Q., Shen, C., Smaldino, P. E., van Atteveldt, W., Waldherr, A., Zhang, J., & Zhu, J. J. H. (2019). Computational communication science: A methodological catalyzer for a maturing discipline. *International Journal of Communication, 13*, 3912–3934.
    - van Atteveldt, W., & Peng, T.-Q. (2018). When communication meets computation: Opportunities, challenges, and pitfalls in computational communication science. *Communication Methods and Measures, 12*(2–3), 81–92. https://doi.org/10.1080/19312458.2018.1458084
 
-4. Optional Course Readings
+6. Optional Course Readings
    - Salganik, M. J. (2018). Bit by bit: Social research in the digital age. Princeton University Press. https://www.bitbybitbook.com/en/1st-ed/preface/
    - Wickham, H., Çetinkaya-Rundel, M., & Grolemund, G. (2023). *R for data science: Import, tidy, transform, visualize, and model data* (2nd edition). O’Reilly.
    - Llaudet, E., & Imai, K. (2023). *Data analysis for social science: A friendly and practical introduction*. Princeton University Press.
@@ -203,7 +208,7 @@ Regardless of which option you choose, your final paper is graded for each of th
 ## 2.2. 2026/01/29 Digital Trace Data: APIs, Social Media, and Scraping
 
 1. Required Instructional Readings
-   - Salganik, M. J. (2018). Observing behavior. In *Bit by bit: Social research in the digital age* (pp. 13–84). Princeton University Press. https://www.bitbybitbook.com/en/1st-ed/observing-behavior/
+   - Salganik, M. J. (2018). *Bit by bit: Social research in the digital age*. Princeton University Press. https://www.bitbybitbook.com/en/1st-ed/ Chapters 2 & 4
 
 2. Required Empirical Readings
    - Yang, T., Yang, X., Peng, Y., & Mukerjee, S. (2025). Are partisan, unreliable, digital-born, and mass-oriented media more likely to thrive on social media? Comparing four information ecosystems. *Journal of Communication*, jqaf035. https://doi.org/10.1093/joc/jqaf035
