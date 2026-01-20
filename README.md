@@ -14,7 +14,7 @@
     - [1.3.3. Proposal Draft (5%)](#133-proposal-draft-5)
     - [1.3.4. Final Paper Presentation (5%)](#134-final-paper-presentation-5)
     - [1.3.5. Final Paper (15%)](#135-final-paper-15)
-  - [1.4. Other Class Policy](#14-other-class-policy)
+  - [1.4. Class Policies](#14-class-policies)
     - [1.4.1. Attendance and Participation](#141-attendance-and-participation)
     - [1.4.2. Late Assignments and Grading Policy](#142-late-assignments-and-grading-policy)
 - [2. Course Schedule](#2-course-schedule)
@@ -193,7 +193,7 @@ Your final paper should follow standard APA (7th edition) formatting guidelines 
 
    For Complete Papers, articulate what we have learned from the findings, theoretical and practical contributions, limitations, and future directions; for Research Proposals, articulate the expected analytical outcomes, future plans, and potential contributions of this research.
 
-## 1.4. Other Class Policy
+## 1.4. Class Policies
 
 ### 1.4.1. Attendance and Participation
 
@@ -248,8 +248,8 @@ Final grades will be assigned according to the University of Minnesota Letter Gr
    - Lu, X., Das, D., Huh, J., & Srivastava, J. (2022). Influence of consumers’ temporary affect on ad engagement: A computational research approach. *Journal of Advertising, 51*(3), 352–368. <https://doi.org/10.1080/00913367.2021.1977202>
 
 3. Computational Toolkit Demo: "From Excel/SPSS to R" - Basic
-   - lm, glm, lme4, lmerTest, beepr
-   - modelsummary, R Markdown
+   - lm, glm, lme4, lmerTest, plm, skim, beepr
+   - modelsummary, stargazer, R Markdown
 
 4. Optional Readings
    - Grinberg, N., Joseph, K., Friedland, L., Swire-Thompson, B., & Lazer, D. (2019). Fake news on Twitter during the 2016 U.S. presidential election. *Science, 363*(6425), 374–378. <https://doi.org/10.1126/science.aau2706>
@@ -346,7 +346,6 @@ Final grades will be assigned according to the University of Minnesota Letter Gr
    - Rodriguez, P. L., & Spirling, A. (2022). Word embeddings: What works, what doesn’t, and how to tell the difference for applied research. *The Journal of Politics, 84*(1), 101–115. <https://doi.org/10.1086/715162>
 
 2. Required Empirical Readings
-   - Davidson, T., Warmsley, D., Macy, M., & Weber, I. (2017). Automated hate speech detection and the problem of offensive language. *Proceedings of the International AAAI Conference on Web and Social Media, 11*(1), 512–515. <https://doi.org/10.1609/icwsm.v11i1.14955>
    - Hornik, R., Binns, S., Emery, S., Epstein, V. M., Jeong, M., Kim, K., Kim, Y., Kranzler, E. C., Jesch, E., Lee, S. J., Levin, A. V., Liu, J., O’Donnell, M. B., Siegel, L., Tran, H., Williams, S., Yang, Q., & Gibson, L. A. (2022). The effects of tobacco coverage in the public communication environment on young people’s decisions to smoke combustible cigarettes. *Journal of Communication, 72*(2), 187–213. <https://doi.org/10.1093/joc/jqab052>
    - Jaidka, K., Zhou, A., & Lelkes, Y. (2019). Brevity is the soul of Twitter: The constraint affordance and political discussion. *Journal of Communication, 69*(4), 345–372. <https://doi.org/10.1093/joc/jqz023>
    - Toubia, O., Berger, J., & Eliashberg, J. (2021). How quantifying the shape of stories predicts their success. *Proceedings of the National Academy of Sciences, 118*(26), e2011695118. <https://doi.org/10.1073/pnas.2011695118>
@@ -361,6 +360,7 @@ Final grades will be assigned according to the University of Minnesota Letter Gr
    - Garg, N., Schiebinger, L., Jurafsky, D., & Zou, J. (2018). Word embeddings quantify 100 years of gender and ethnic stereotypes. *Proceedings of the National Academy of Sciences, 115*(16), E3635–E3644. <https://doi.org/10.1073/pnas.1720347115>
    - Rudkowsky, E., Haselmayer, M., Wastian, M., Jenny, M., Emrich, Š., & Sedlmair, M. (2018). More than bags of words: Sentiment analysis with word embeddings. *Communication Methods and Measures, 12*(2–3), 140–157. <https://doi.org/10.1080/19312458.2018.1455817>
    - Wang, S.-Y. N., & Inbar, Y. (2021). Moral-language use by U.S. political elites. *Psychological Science, 32*(1), 14–26. <https://doi.org/10.1177/0956797620960397>
+   - Davidson, T., Warmsley, D., Macy, M., & Weber, I. (2017). Automated hate speech detection and the problem of offensive language. *Proceedings of the International AAAI Conference on Web and Social Media, 11*(1), 512–515. <https://doi.org/10.1609/icwsm.v11i1.14955>
 
 ## 2.7. 2026/03/05 Multimodal
 
@@ -412,11 +412,11 @@ Final grades will be assigned according to the University of Minnesota Letter Gr
 
 3. Computational Toolkit Demo: "Network Analysis Basics"
    - igraph
-   - ggraph
+   - ggraph, visNetwork, intergraph
 
 4. Due at the end of Week 9: [Week 9] Final Paper - Proposal Draft
 
-5. Optional Reading
+5. Optional Readings
    - Newman, M. E. J. (2010). *Networks: An introduction*. Oxford University Press.
    - González-Bailón, S., & Wang, N. (2016). Networked discontent: The anatomy of protest campaigns in social media. *Social Networks, 44*, 95–104. <https://doi.org/10.1016/j.socnet.2015.07.003>
    - Park, P. S., Blumenstock, J. E., & Macy, M. W. (2018). The strength of long-range ties in population-scale social networks. *Science, 362*(6421), 1410–1413. <https://doi.org/10.1126/science.aau9735>
@@ -445,12 +445,12 @@ Final grades will be assigned according to the University of Minnesota Letter Gr
    - Zhang, J., Brackbill, D., Yang, S., Becker, J., Herbert, N., & Centola, D. (2016). Support or competition? How online social networks increase physical activity: A randomized controlled trial. *Preventive Medicine Reports, 4*, 453–458. <https://doi.org/10.1016/j.pmedr.2016.08.008>
 
 3. Computational Toolkit Demo: "Network Analysis Advanced"
-   - sna
+   - ergm/tergm
    - Gephi
 
 4. Due at the end of Week 10: [Week 10] Final Paper - Proposal Draft Peer Review
 
-5. Optional Reading
+5. Optional Readings
    - Borgatti, S. P., Everett, M. G., & Johnson, J. C. (2018). *Analyzing social networks* (2nd edition). SAGE Publications.
    - Liang, H. (2014). Coevolution of political discussion and common ground in web discussion forum. *Social Science Computer Review, 32*(2), 155–169. <https://doi.org/10.1177/0894439313506844>
    - Robins, G., Pattison, P., Kalish, Y., & Lusher, D. (2007). An introduction to exponential random graph (p*) models for social networks. *Social Networks, 29*(2), 173–191. <https://doi.org/10.1016/j.socnet.2006.08.002>
@@ -474,9 +474,9 @@ Final grades will be assigned according to the University of Minnesota Letter Gr
 
 3. Computational Toolkit Demo
    - ggplot2
-   - patchwork, cowplot, hrbrthemes
+   - patchwork, cowplot, hrbrthemes, ggrepel
 
-4. Optional Reading
+4. Optional Readings
    - Healy, K., & Moody, J. (2014). Data visualization in sociology. *Annual Review of Sociology, 40*(1), 105–128. <https://doi.org/10.1146/annurev-soc-071312-145551>
    - Wilke, C. (2019). *Fundamentals of data visualization: A primer on making informative and compelling figures*. O’Reilly Media. <https://clauswilke.com/dataviz/>
    - R graph gallery: <https://r-graph-gallery.com>
@@ -499,7 +499,7 @@ Final grades will be assigned according to the University of Minnesota Letter Gr
    - Google Draw
    - Affinity
 
-4. Optional Reading
+4. Optional Readings
    - Bansak, K., Hainmueller, J., & Hangartner, D. (2016). How economic, humanitarian, and religious concerns shape European attitudes toward asylum seekers. *Science, 354*(6309), 217–222. <https://doi.org/10.1126/science.aag2147>
    - Börner, K., & Polley, D. E. (2014). *Visual insights: A practical guide to making sense of data*. The MIT Press.
 
@@ -520,7 +520,7 @@ Final grades will be assigned according to the University of Minnesota Letter Gr
    - ellmer
    - OpenAI API (Python; if you are familiar with Python, sign up here)
 
-4. Optional Reading
+4. Optional Readings
    - Bail, C. A. (2024). Can generative AI improve social science? *Proceedings of the National Academy of Sciences, 121*(21), e2314021121. <https://doi.org/10.1073/pnas.2314021121>
    - Törnberg, P. (2025). Large language models outperform expert coders and supervised classifiers at annotating political social media messages. *Social Science Computer Review, 43*(6), 1181–1195. <https://doi.org/10.1177/08944393241286471>
    - Schulze Buschoff, L. M., Akata, E., Bethge, M., & Schulz, E. (2025). Visual cognition in multimodal large language models. *Nature Machine Intelligence, 7*(1), 96–106. <https://doi.org/10.1038/s42256-024-00963-y>
