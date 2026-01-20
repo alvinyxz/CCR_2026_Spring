@@ -247,7 +247,7 @@ Final grades will be assigned according to the University of Minnesota Letter Gr
    - Zhang, Y., Lukito, J., Su, M.-H., Suk, J., Xia, Y., Kim, S. J., Doroshenko, L., & Wells, C. (2021). Assembling the networks and audiences of disinformation: How successful russian IRA twitter accounts built their followings, 2015–2017. *Journal of Communication, 71*(2), 305–331. <https://doi.org/10.1093/joc/jqaa042>
    - Lu, X., Das, D., Huh, J., & Srivastava, J. (2022). Influence of consumers’ temporary affect on ad engagement: A computational research approach. *Journal of Advertising, 51*(3), 352–368. <https://doi.org/10.1080/00913367.2021.1977202>
 
-3. Computational Toolkits Demo: "From Excel/SPSS to R" - Basic
+3. Computational Toolkit Demo: "From Excel/SPSS to R" - Basic
    - lm, glm, lme4, lmerTest, beepr
    - modelsummary, R Markdown
 
@@ -271,7 +271,7 @@ Final grades will be assigned according to the University of Minnesota Letter Gr
    - Guess, A. M. (2021). (Almost) everything in moderation: New evidence on Americans’ online media diets. *American Journal of Political Science, 65*(4), 1007–1022. <https://doi.org/10.1111/ajps.12589>
    - Zhou, A., Yang, T., & González-Bailón, S. (2025). The puzzle of misinformation: Exposure to unreliable content in the United States is higher among the better informed. *New Media & Society, 27*(3), 1526–1543. <https://doi.org/10.1177/14614448231196863>
 
-3. Computational Toolkits Demo: "From Excel/SPSS to R" - Advanced
+3. Computational Toolkit Demo: "From Excel/SPSS to R" - Advanced
    - tidyverse (dplyr, readr, tidyr, stringr, lubridate)
    - Qualtrics API in R
 
@@ -293,7 +293,7 @@ Final grades will be assigned according to the University of Minnesota Letter Gr
    - Brady, W. J., Wills, J. A., Jost, J. T., Tucker, J. A., & Van Bavel, J. J. (2017). Emotion shapes the diffusion of moralized content in social networks. *Proceedings of the National Academy of Sciences, 114*(28), 7313–7318. <https://doi.org/10.1073/pnas.1618923114>
    - Van Atteveldt, W., Van Der Velden, M. A. C. G., & Boukes, M. (2021). The validity of sentiment analysis: Comparing manual annotation, crowd-coding, dictionary approaches, and machine learning algorithms. *Communication Methods and Measures, 15*(2), 121–140. <https://doi.org/10.1080/19312458.2020.1869198>
 
-3. Computational Toolkits Demo: "Text Analysis Basics"
+3. Computational Toolkit Demo: "Text Analysis Basics"
    - quanteda (tidytext sentiment analysis) (<https://tutorials.quanteda.io>)
    - LIWC and Google Perspective API
 
@@ -325,7 +325,7 @@ Final grades will be assigned according to the University of Minnesota Letter Gr
    - Zhou, A., Capizzo, L. W., Page, T. G., & Toth, E. L. (2023). Exploring public relations research topics and inter-cluster dynamics through computational modeling (2010-2020): A study based on two SSCI journals. *Journal of Public Relations Research, 35*(3), 135–161. <https://doi.org/10.1080/1062726X.2023.2180373>
    - Mukerjee, S., Yang, T., & Peng, Y. (2023). Metrics in action: How social media metrics shape news production on Facebook. *Journal of Communication, 73*(3), 260–272. <https://doi.org/10.1093/joc/jqad012>
 
-3. Computational Toolkits Demo: "Text Analysis Advanced"
+3. Computational Toolkit Demo: "Text Analysis Advanced"
    - stm
    - topicmodels
 
@@ -353,7 +353,7 @@ Final grades will be assigned according to the University of Minnesota Letter Gr
    - Li, K., Mai, F., Shen, R., & Yan, X. (2021). Measuring corporate culture using machine learning. *The Review of Financial Studies, 34*(7), 3265–3315. <https://doi.org/10.1093/rfs/hhaa079>
    - Kozlowski, A. C., Taddy, M., & Evans, J. A. (2019). The geometry of culture: Analyzing the meanings of class through word embeddings. *American Sociological Review, 84*(5), 905–949. <https://doi.org/10.1177/0003122419877135>
 
-3. Computational Toolkits Demo
+3. Computational Toolkit Demo
    - caret
    - text2vec
 
@@ -376,7 +376,7 @@ Final grades will be assigned according to the University of Minnesota Letter Gr
    - Peng, Y. (2021). What makes politicians’ instagram posts popular? Analyzing social media strategies of candidates and office holders with computer vision. *The International Journal of Press/Politics, 26*(1), 143–166. <https://doi.org/10.1177/1940161220964769>
    - Dietrich, B. J., Hayes, M., & O’Brien, D. Z. (2019). Pitch perfect: Vocal pitch and the emotional intensity of congressional speech. *American Political Science Review, 113*(4), 941–962. <https://doi.org/10.1017/S0003055419000467>
 
-3. Computational Toolkits Demo
+3. Computational Toolkit Demo
    - athec (Python; if you are familiar with Python, sign up here; <https://doi.org/10.5117/CCR2022.1.009.PENG>)
    - Face++ API
 
@@ -410,7 +410,7 @@ Final grades will be assigned according to the University of Minnesota Letter Gr
    - Zhao, J., Wei, Y., & Wu, B. (2022). Analysis of the social network and the evolution of the influence of ancient Chinese poets. *Social Science Computer Review, 40*(4), 1014–1034. <https://doi.org/10.1177/08944393211028182>
    - Clauset, A., Arbesman, S., & Larremore, D. B. (2015). Systematic inequality and hierarchy in faculty hiring networks. *Science Advances, 1*(1), e1400005. <https://doi.org/10.1126/sciadv.1400005>
 
-3. Computational Toolkits Demo: "Network Analysis Basics"
+3. Computational Toolkit Demo: "Network Analysis Basics"
    - igraph
    - ggraph
 
@@ -444,7 +444,7 @@ Final grades will be assigned according to the University of Minnesota Letter Gr
    - Centola, D., Becker, J., Brackbill, D., & Baronchelli, A. (2018). Experimental evidence for tipping points in social convention. *Science, 360*(6393), 1116–1119. <https://doi.org/10.1126/science.aas8827>
    - Zhang, J., Brackbill, D., Yang, S., Becker, J., Herbert, N., & Centola, D. (2016). Support or competition? How online social networks increase physical activity: A randomized controlled trial. *Preventive Medicine Reports, 4*, 453–458. <https://doi.org/10.1016/j.pmedr.2016.08.008>
 
-3. Computational Toolkits Demo: "Network Analysis Advanced"
+3. Computational Toolkit Demo: "Network Analysis Advanced"
    - sna
    - Gephi
 
@@ -472,7 +472,7 @@ Final grades will be assigned according to the University of Minnesota Letter Gr
    - Shi, F., Shi, Y., Dokshin, F. A., Evans, J. A., & Macy, M. W. (2017). Millions of online book co-purchases reveal partisan differences in the consumption of science. *Nature Human Behaviour, 1*(4), 0079. <https://doi.org/10.1038/s41562-017-0079>
    - Mukerjee, S., Majó-Vázquez, S., & González-Bailón, S. (2018). Networks of audience overlap in the consumption of digital news. *Journal of Communication, 68*(1), 26–50. <https://doi.org/10.1093/joc/jqx007>
 
-3. Computational Toolkits Demo
+3. Computational Toolkit Demo
    - ggplot2
    - patchwork, cowplot, hrbrthemes
 
@@ -495,7 +495,7 @@ Final grades will be assigned according to the University of Minnesota Letter Gr
    - Huang, J., Hurst, B., Capizzo, L. W., & Zhou, A. (2026). *Mapping conceptual boundaries: Using structural topic modeling and word embedding to contrast CSA and CSR in public relations research*. Working Paper.
    - Waller, I., & Anderson, A. (2021). Quantifying social organization and political polarization in online platforms. *Nature, 600*(7888), 264–268. <https://doi.org/10.1038/s41586-021-04167-x>
 
-3. Computational Toolkits Demo
+3. Computational Toolkit Demo
    - Google Draw
    - Affinity
 
@@ -516,7 +516,7 @@ Final grades will be assigned according to the University of Minnesota Letter Gr
    - Than, N., Fan, L., Law, T., Nelson, L. K., & McCall, L. (2025). Updating “the future of coding”: Qualitative coding with generative large language models. *Sociological Methods & Research*. <https://doi.org/10.1177/00491241251339188>
    - Lu, L., Kwon, H., Wang, W., M. Cotter, L., A. Kriss, L., Minich, M., Liu, J., N. Cascio, C., & Yang, S. (2025). Cannabis warning labels, sensory marketing, and electronic word-of-mouth: AI-facilitated textual analysis of a randomized experiment among youth and young adults. *International Journal of Advertising*, 1–26. <https://doi.org/10.1080/02650487.2025.2548647>
 
-3. Computational Toolkits Demo
+3. Computational Toolkit Demo
    - ellmer
    - OpenAI API (Python; if you are familiar with Python, sign up here)
 
@@ -532,7 +532,6 @@ Final grades will be assigned according to the University of Minnesota Letter Gr
 1. Required Instructional Readings
    - [Chapter 6] Salganik, M. J. (2018). *Bit by bit: Social research in the digital age*. Princeton University Press. <https://www.bitbybitbook.com/en/1st-ed/ethics/>
    - Dienlin, T., Johannes, N., Bowman, N. D., Masur, P. K., Engesser, S., Kümpel, A. S., Lukito, J., Bier, L. M., Zhang, R., Johnson, B. K., Huskey, R., Schneider, F. M., Breuer, J., Parry, D. A., Vermeulen, I., Fisher, J. T., Banks, J., Weber, R., Ellis, D. A., … De Vreese, C. (2021). An agenda for open science in communication. *Journal of Communication, 71*(1), 1–26. <https://doi.org/10.1093/joc/jqz052>
-   - Nosek, B. A., Ebersole, C. R., DeHaven, A. C., & Mellor, D. T. (2018). The preregistration revolution. *Proceedings of the National Academy of Sciences, 115*(11), 2600–2606. <https://doi.org/10.1073/pnas.1708274114>
    - Lewis, N. A. (2020). Open communication science: A primer on why and some recommendations for how. *Communication Methods and Measures, 14*(2), 71–82. <https://doi.org/10.1080/19312458.2019.1685660>
 
 2. Required Empirical Readings "The Meta 2020 Project"
@@ -550,7 +549,7 @@ Final grades will be assigned according to the University of Minnesota Letter Gr
      - González-Bailón, S., & Lazer, D. (2025). Scientific standards suffer from misrepresenting past work. *Proceedings of the National Academy of Sciences, 122*(47), e2522011122. <https://doi.org/10.1073/pnas.2522011122>
      - Freiling, I., & Scheufele, D. A. (2025). Reply to González-Bailón and Lazer: Industry control and conflicts of interest in social media research. *Proceedings of the National Academy of Sciences, 122*(47), e2522924122. <https://doi.org/10.1073/pnas.2522924122>
 
-3. Computational Tookkits Demo
+3. Computational Tookit Demo
    - OSF Walkthrough (Preprint and Preregistration)
    - Github and Github Desktop
 
@@ -561,6 +560,7 @@ Final grades will be assigned according to the University of Minnesota Letter Gr
    - Fox, J., Pearce, K. E., Massanari, A. L., Riles, J. M., Szulc, Ł., Ranjit, Y. S., Trevisan, F., Soriano, C. R. R., Vitak, J., Arora, P., Ahn, S. J. (Grace), Alper, M., Gambino, A., Gonzalez, C., Lynch, T., Williamson, L. D., & L Gonzales, A. (2021). Open science, closed doors? Countering marginalization through an agenda for ethical, inclusive research in communication. *Journal of Communication, 71*(5), 764–784. <https://doi.org/10.1093/joc/jqab029>
    - Kramer, A. D. I., Guillory, J. E., & Hancock, J. T. (2014). Experimental evidence of massive-scale emotional contagion through social networks. *Proceedings of the National Academy of Sciences, 111*(24), 8788–8790. <https://doi.org/10.1073/pnas.1320040111>
    - Freese, J., & Peterson, D. (2017). Replication in social science. *Annual Review of Sociology, 43*(1), 147–165. <https://doi.org/10.1146/annurev-soc-060116-053450>
+   - Nosek, B. A., Ebersole, C. R., DeHaven, A. C., & Mellor, D. T. (2018). The preregistration revolution. *Proceedings of the National Academy of Sciences, 115*(11), 2600–2606. <https://doi.org/10.1073/pnas.1708274114>
    - Chung-hong  Chan, Tim Schatto-Eckrodt, & Johannes Gruber. (2024). What makes computational communication science (ir)reproducible? *Computational Communication Research, 6*(1), 1. <https://doi.org/10.5117/CCR2024.1.5.CHAN>
    - Open Science Collaboration. (2015). Estimating the reproducibility of psychological science. *Science, 349*(6251), aac4716–aac4716. <https://doi.org/10.1126/science.aac4716>
    - <https://retractionwatch.com>
