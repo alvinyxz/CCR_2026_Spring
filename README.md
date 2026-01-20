@@ -461,18 +461,16 @@ Final grades will be assigned according to the University of Minnesota Letter Gr
 ## 2.10. 2026/04/02 Data Visualization: Overview and Practices
 
 1. Required Instructional Readings
-
-- [Chapters Visualize, 9. Layers, & 10. Exploratory] Wickham, H., Çetinkaya-Rundel, M., & Grolemund, G. (2023). *R for data science: Import, tidy, transform, visualize, and model data* (2nd edition). O’Reilly. <https://r4ds.hadley.nz>
-- [Chapters 1, 3, & 4] Healy, K. (2019). *Data visualization: A practical introduction.* Princeton University Press. <https://socviz.co>
-- Schwabish, J. A. (2014). An economist’s guide to visualizing data. *Journal of Economic Perspectives, 28*(1), 209–234. <https://doi.org/10.1257/jep.28.1.209>
+   - [Chapters Visualize, 9. Layers, & 10. Exploratory] Wickham, H., Çetinkaya-Rundel, M., & Grolemund, G. (2023). *R for data science: Import, tidy, transform, visualize, and model data* (2nd edition). O’Reilly. <https://r4ds.hadley.nz>
+   - [Chapters 1, 3, & 4] Healy, K. (2019). *Data visualization: A practical introduction.* Princeton University Press. <https://socviz.co>
+   - Schwabish, J. A. (2014). An economist’s guide to visualizing data. *Journal of Economic Perspectives, 28*(1), 209–234. <https://doi.org/10.1257/jep.28.1.209>
 
 2. Required Empirical Readings
-
-- Wu, L., Wang, D., & Evans, J. A. (2019). Large teams develop and small teams disrupt science and technology. *Nature, 566*(7744), 378–382. <https://doi.org/10.1038/s41586-019-0941-9>
-- Richardson, R. A. K., Hong, S. S., Byrne, J. A., Stoeger, T., & Amaral, L. A. N. (2025). The entities enabling scientific fraud at scale are large, resilient, and growing rapidly. *Proceedings of the National Academy of Sciences, 122*(32), e2420092122. <https://doi.org/10.1073/pnas.2420092122>
-- Bailey, E. R., Matz, S. C., Youyou, W., & Iyengar, S. S. (2020). Authentic self-expression on social media is associated with greater subjective well-being. *Nature Communications, 11*(1), 4889. <https://doi.org/10.1038/s41467-020-18539-w>
-- Shi, F., Shi, Y., Dokshin, F. A., Evans, J. A., & Macy, M. W. (2017). Millions of online book co-purchases reveal partisan differences in the consumption of science. *Nature Human Behaviour, 1*(4), 0079. <https://doi.org/10.1038/s41562-017-0079>
-- Mukerjee, S., Majó-Vázquez, S., & González-Bailón, S. (2018). Networks of audience overlap in the consumption of digital news. *Journal of Communication, 68*(1), 26–50. <https://doi.org/10.1093/joc/jqx007>
+   - Wu, L., Wang, D., & Evans, J. A. (2019). Large teams develop and small teams disrupt science and technology. *Nature, 566*(7744), 378–382. <https://doi.org/10.1038/s41586-019-0941-9>
+   - Richardson, R. A. K., Hong, S. S., Byrne, J. A., Stoeger, T., & Amaral, L. A. N. (2025). The entities enabling scientific fraud at scale are large, resilient, and growing rapidly. *Proceedings of the National Academy of Sciences, 122*(32), e2420092122. <https://doi.org/10.1073/pnas.2420092122>
+   - Bailey, E. R., Matz, S. C., Youyou, W., & Iyengar, S. S. (2020). Authentic self-expression on social media is associated with greater subjective well-being. *Nature Communications, 11*(1), 4889. <https://doi.org/10.1038/s41467-020-18539-w>
+   - Shi, F., Shi, Y., Dokshin, F. A., Evans, J. A., & Macy, M. W. (2017). Millions of online book co-purchases reveal partisan differences in the consumption of science. *Nature Human Behaviour, 1*(4), 0079. <https://doi.org/10.1038/s41562-017-0079>
+   - Mukerjee, S., Majó-Vázquez, S., & González-Bailón, S. (2018). Networks of audience overlap in the consumption of digital news. *Journal of Communication, 68*(1), 26–50. <https://doi.org/10.1093/joc/jqx007>
 
 3. Computational Toolkits Demo
    - ggplot2
@@ -538,7 +536,7 @@ Final grades will be assigned according to the University of Minnesota Letter Gr
    - Lewis, N. A. (2020). Open communication science: A primer on why and some recommendations for how. *Communication Methods and Measures, 14*(2), 71–82. <https://doi.org/10.1080/19312458.2019.1685660>
 
 2. Required Empirical Readings "The Meta 2020 Project"
-   - Press Release: *New Facebook and Instagram Research Initiative to Look at US 2020 Presidential Election*. https://about.fb.com/news/2020/08/research-impact-of-facebook-and-instagram-on-us-election/
+   - Press Release: *New Facebook and Instagram Research Initiative to Look at US 2020 Presidential Election*. <https://about.fb.com/news/2020/08/research-impact-of-facebook-and-instagram-on-us-election/>
    - González-Bailón, S., Lazer, D., Barberá, P., Zhang, M., Allcott, H., Brown, T., Crespo-Tenorio, A., Freelon, D., Gentzkow, M., Guess, A. M., Iyengar, S., Kim, Y. M., Malhotra, N., Moehler, D., Nyhan, B., Pan, J., Rivera, C. V., Settle, J., Thorson, E., … Tucker, J. A. (2023). Asymmetric ideological segregation in exposure to political news on Facebook. *Science, 381*(6656), 392–398. <https://doi.org/10.1126/science.ade7138>
    - Guess, A. M., Malhotra, N., Pan, J., Barberá, P., Allcott, H., Brown, T., Crespo-Tenorio, A., Dimmery, D., Freelon, D., Gentzkow, M., González-Bailón, S., Kennedy, E., Kim, Y. M., Lazer, D., Moehler, D., Nyhan, B., Rivera, C. V., Settle, J., Thomas, D. R., … Tucker, J. A. (2023). How do social media feed algorithms affect attitudes and behavior in an election campaign? *Science, 381*(6656), 398–404. <https://doi.org/10.1126/science.abp9364>
    - Guess, A. M., Malhotra, N., Pan, J., Barberá, P., Allcott, H., Brown, T., Crespo-Tenorio, A., Dimmery, D., Freelon, D., Gentzkow, M., González-Bailón, S., Kennedy, E., Kim, Y. M., Lazer, D., Moehler, D., Nyhan, B., Rivera, C. V., Settle, J., Thomas, D. R., … Tucker, J. A. (2023). Reshares on social media amplify political news but do not detectably affect beliefs or opinions. *Science, 381*(6656), 404–408. <https://doi.org/10.1126/science.add8424>
