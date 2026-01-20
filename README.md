@@ -6,7 +6,7 @@
       - [1.1.2.2. Lead Discussant (3%)](#1122-lead-discussant-3)
   - [1.2. Computational Toolkit Demo (15%\*2 = 30%)](#12-computational-toolkit-demo-152--30)
     - [1.2.1. Pre-Demo Preparation (3%)](#121-pre-demo-preparation-3)
-    - [1.2.2. In-Class Demo Presentation (10%)](#122-in-class-demo-presentation-10)
+    - [1.2.2. In-Class Demo (10%)](#122-in-class-demo-10)
     - [1.2.3. Post-Demo Submission (2%)](#123-post-demo-submission-2)
   - [1.3. Final Paper (40%)](#13-final-paper-40)
     - [1.3.1. Paper Idea Pitch (5%)](#131-paper-idea-pitch-5)
@@ -106,7 +106,7 @@ To do so, one student can upload the problem set to the "Discussion" section on 
 
 For example, for the igraph package about network analysis, the problem set can include a network matrix and a few questions such as: (1) visualize the network with different layouts, (2) calculate basic node-level statistics (e.g., degree centrality, betweenness centrality, closeness centrality), (3) detect communities in the network, and (4) plot the degree distribution of the network.
 
-### 1.2.2. In-Class Demo Presentation (10%)
+### 1.2.2. In-Class Demo (10%)
 
 Second, <span style="color: orange;">the group responsible for the particular R package should present the demo, taking the format of a short workshop (~30 minutes long), during the scheduled class time.</span> The presentation should cover:
 
@@ -238,7 +238,7 @@ Final grades will be assigned according to the University of Minnesota Letter Gr
 ## 2.2. 2026/01/29 Digital Trace Data: APIs, Social Media, and Scraping
 
 1. Required Instructional Readings
-   - Salganik, M. J. (2018). *Bit by bit: Social research in the digital age*. Princeton University Press. <https://www.bitbybitbook.com/en/1st-ed/> Chapters 2 & 4
+   - [Chapters 2 & 4] Salganik, M. J. (2018). *Bit by bit: Social research in the digital age*. Princeton University Press. <https://www.bitbybitbook.com/en/1st-ed/>
 
 2. Required Empirical Readings
    - Yang, T., Yang, X., Peng, Y., & Mukerjee, S. (2025). Are partisan, unreliable, digital-born, and mass-oriented media more likely to thrive on social media? Comparing four information ecosystems. *Journal of Communication*, jqaf035. <https://doi.org/10.1093/joc/jqaf035>
@@ -366,8 +366,8 @@ Final grades will be assigned according to the University of Minnesota Letter Gr
 
 1. Required Instructional Readings
    - Joo, J., & Steinert-Threlkeld, Z. C. (2022). Image as data: Automated content analysis for visual presentations of political actors and events. *Computational Communication Research, 4*(1). <https://doi.org/10.5117/CCR2022.1.001.JOO>
-   - Peng, Y., & Lu, Y. (2023). Computational visual analysis in political communication. In D. Lilleker & A. Veneti (Eds.), Research Handbook on Visual Politics (pp. 42–54). Edward Elgar Publishing. <https://doi.org/10.4337/9781800376939.00010>
-   - Webb Williams, N., Casas, A., & Wilkerson, J. D. (2020b). Images as data for social science research: An introduction to convolutional neural nets for image classification. Cambridge University Press. <https://doi.org/10.1017/9781108860741>
+   - Peng, Y., & Lu, Y. (2023). Computational visual analysis in political communication. In D. Lilleker & A. Veneti (Eds.), *Research Handbook on Visual Politics* (pp. 42–54). Edward Elgar Publishing. <https://doi.org/10.4337/9781800376939.00010>
+   - Webb Williams, N., Casas, A., & Wilkerson, J. D. (2020). *Images as data for social science research: An introduction to convolutional neural nets for image classification*. Cambridge University Press. <https://doi.org/10.1017/9781108860741>
 
 2. Required Empirical Readings
    - Qian, S., Lu, Y., Peng, Y., Shen, C., & Xu, H. (2024). Convergence or divergence? A cross-platform analysis of climate change visual content categories, features, and social media engagement on Twitter and Instagram. *Public Relations Review, 50*(2), 102454. <https://doi.org/10.1016/j.pubrev.2024.102454>
@@ -381,7 +381,7 @@ Final grades will be assigned according to the University of Minnesota Letter Gr
    - Face++ API
 
 4. Optional Readings
-   - Webb Williams, N., Casas, A., & Wilkerson, J. D. (2020a). Images as Data for Social Science Research (Version 1.1) [Computer software]. Code Ocean. <https://doi.org/10.24433/CO.2462313.V1>
+   - Webb Williams, N., Casas, A., & Wilkerson, J. D. (2020). *Images as Data for Social Science Research* (Version 1.1) [Computer software]. Code Ocean. <https://doi.org/10.24433/CO.2462313.V1>
    - Legewie, N. M., & Nassauer, A. (2023). Current and future debates in video data analysis. *Sociological Methods & Research, 52*(3), 1107–1119. <https://doi.org/10.1177/00491241231178275>
    - Lu, Y., & Pan, J. (2022). The pervasive presence of Chinese government content on Douyin trending videos. *Computational Communication Research, 4*(1). <https://doi.org/10.5117/CCR2022.2.002.LU>
    - Peng, Y. (2018). Same candidates, different faces: Uncovering media bias in visual portrayals of presidential candidates with computer vision. *Journal of Communication, 68*(5), 920–941. <https://doi.org/10.1093/joc/jqy041>
@@ -400,8 +400,8 @@ Final grades will be assigned according to the University of Minnesota Letter Gr
 
 1. Required Instructional Readings
    - Veritasium. *Something Strange Happens When You Trace How Connected We Are.* <https://youtu.be/CYlon2tvywA>
-   - Borgatti, S. P., Everett, M. G., & Johnson, J. C. (2018). *Analyzing social networks* (2nd edition). SAGE Publications. Chapters 1, 2, & 3
-   - Kolaczyk, E. D., & Csárdi, G. (2020). *Statistical analysis of network data with R*. Springer International Publishing. <https://doi.org/10.1007/978-3-030-44129-6> Chapter 4
+   - [Chapters 1, 2, & 3] Borgatti, S. P., Everett, M. G., & Johnson, J. C. (2018). *Analyzing social networks* (2nd edition). SAGE Publications.
+   - [Chapter 4] Kolaczyk, E. D., & Csárdi, G. (2020). *Statistical analysis of network data with R*. Springer International Publishing. <https://doi.org/10.1007/978-3-030-44129-6>
 
 2. Required Empirical Readings
    - Vosoughi, S., Roy, D., & Aral, S. (2018). The spread of true and false news online. *Science, 359*(6380), 1146–1151. <https://doi.org/10.1126/science.aap9559>
@@ -433,14 +433,14 @@ Final grades will be assigned according to the University of Minnesota Letter Gr
 ## 2.9. 2026/03/26 Networks: Inference and Experimentation
 
 1. Required Instructional Readings
-   - Borgatti, S. P., Everett, M. G., & Johnson, J. C. (2018). *Analyzing social networks* (2nd edition). SAGE Publications. Chapter 8
-   - Kolaczyk, E. D., & Csárdi, G. (2020). *Statistical analysis of network data with R*. Springer International Publishing. <https://doi.org/10.1007/978-3-030-44129-6> Chapter 6
+   - [Chapter 8] Borgatti, S. P., Everett, M. G., & Johnson, J. C. (2018). *Analyzing social networks* (2nd edition). SAGE Publications.
+   - [Chapter 6] Kolaczyk, E. D., & Csárdi, G. (2020). *Statistical analysis of network data with R*. Springer International Publishing. <https://doi.org/10.1007/978-3-030-44129-6>
    - Shumate, M., & Palazzolo, E. T. (2010). Exponential random graph (p*) models as a method for social network analysis in communication research. *Communication Methods and Measures, 4*(4), 341–371. <https://doi.org/10.1080/19312458.2010.527869>
 
 2. Required Empirical Readings
    - Chen, H.-T., Guo, L., & Su, C. C. (2020). Network agenda setting, partisan selective exposure, and opinion repertoire: The effects of pro- and counter-attitudinal media in hong kong. *Journal of Communication, 70*(1), 35–59. <https://doi.org/10.1093/joc/jqz042>
    - Wang, L., Yang, A., & Thorson, K. (2021). Serial participants of social media climate discussion as a community of practice: A longitudinal network analysis. *Information, Communication & Society, 24*(7), 941–959. <https://doi.org/10.1080/1369118X.2019.1668457>
-   - Xu, Y. (2024). Formation mechanisms of intra-organizational membership overlap: A longitudinal network analysis of membership data from the International Communication Association. Journal of Communication, 74(4), 333–345. <https://doi.org/10.1093/joc/jqae021>
+   - Xu, Y. (2024). Formation mechanisms of intra-organizational membership overlap: A longitudinal network analysis of membership data from the International Communication Association. *Journal of Communication, 74*(4), 333–345. <https://doi.org/10.1093/joc/jqae021>
    - Centola, D., Becker, J., Brackbill, D., & Baronchelli, A. (2018). Experimental evidence for tipping points in social convention. *Science, 360*(6393), 1116–1119. <https://doi.org/10.1126/science.aas8827>
    - Zhang, J., Brackbill, D., Yang, S., Becker, J., Herbert, N., & Centola, D. (2016). Support or competition? How online social networks increase physical activity: A randomized controlled trial. *Preventive Medicine Reports, 4*, 453–458. <https://doi.org/10.1016/j.pmedr.2016.08.008>
 
@@ -456,17 +456,17 @@ Final grades will be assigned according to the University of Minnesota Letter Gr
    - Robins, G., Pattison, P., Kalish, Y., & Lusher, D. (2007). An introduction to exponential random graph (p*) models for social networks. *Social Networks, 29*(2), 173–191. <https://doi.org/10.1016/j.socnet.2006.08.002>
    - Centola, D., & Macy, M. (2007). Complex contagions and the weakness of long ties. *American Journal of Sociology, 113*(3), 702–734. <https://doi.org/10.1086/521848>
    - Rajkumar, K., Saint-Jacques, G., Bojinov, I., Brynjolfsson, E., & Aral, S. (2022). A causal test of the strength of weak ties. *Science, 377*(6612), 1304–1310. <https://doi.org/10.1126/science.abl4476>
-   - Bearman, P. S., Moody, J., & Stovel, K. (2004). Chains of affection: The structure of adolescent romantic and sexual networks. American Journal of Sociology, 110(1), 44–91. <https://doi.org/10.1086/386272>
+   - Bearman, P. S., Moody, J., & Stovel, K. (2004). Chains of affection: The structure of adolescent romantic and sexual networks. *American Journal of Sociology, 110*(1), 44–91. <https://doi.org/10.1086/386272>
 
 ## 2.10. 2026/04/02 Data Visualization: Overview and Practices
 
 1. Required Instructional Readings
 
-- Wickham, H., Çetinkaya-Rundel, M., & Grolemund, G. (2023). R for data science: Import, tidy, transform, visualize, and model data (2nd edition). O’Reilly. <https://r4ds.hadley.nz> Chapters Visualize, 9. Layers, 10. Exploratory
-- Healy, K. (2019). *Data visualization: A practical introduction.* Princeton University Press. <https://socviz.co> Chapters 1, 3, & 4
+- [Chapters Visualize, 9. Layers, & 10. Exploratory] Wickham, H., Çetinkaya-Rundel, M., & Grolemund, G. (2023). *R for data science: Import, tidy, transform, visualize, and model data* (2nd edition). O’Reilly. <https://r4ds.hadley.nz>
+- [Chapters 1, 3, & 4] Healy, K. (2019). *Data visualization: A practical introduction.* Princeton University Press. <https://socviz.co>
 - Schwabish, J. A. (2014). An economist’s guide to visualizing data. *Journal of Economic Perspectives, 28*(1), 209–234. <https://doi.org/10.1257/jep.28.1.209>
 
-1. Required Empirical Readings
+2. Required Empirical Readings
 
 - Wu, L., Wang, D., & Evans, J. A. (2019). Large teams develop and small teams disrupt science and technology. *Nature, 566*(7744), 378–382. <https://doi.org/10.1038/s41586-019-0941-9>
 - Richardson, R. A. K., Hong, S. S., Byrne, J. A., Stoeger, T., & Amaral, L. A. N. (2025). The entities enabling scientific fraud at scale are large, resilient, and growing rapidly. *Proceedings of the National Academy of Sciences, 122*(32), e2420092122. <https://doi.org/10.1073/pnas.2420092122>
@@ -474,11 +474,11 @@ Final grades will be assigned according to the University of Minnesota Letter Gr
 - Shi, F., Shi, Y., Dokshin, F. A., Evans, J. A., & Macy, M. W. (2017). Millions of online book co-purchases reveal partisan differences in the consumption of science. *Nature Human Behaviour, 1*(4), 0079. <https://doi.org/10.1038/s41562-017-0079>
 - Mukerjee, S., Majó-Vázquez, S., & González-Bailón, S. (2018). Networks of audience overlap in the consumption of digital news. *Journal of Communication, 68*(1), 26–50. <https://doi.org/10.1093/joc/jqx007>
 
-1. Computational Toolkits Demo
+3. Computational Toolkits Demo
    - ggplot2
    - patchwork, cowplot, hrbrthemes
 
-2. Optional Reading
+4. Optional Reading
    - Healy, K., & Moody, J. (2014). Data visualization in sociology. *Annual Review of Sociology, 40*(1), 105–128. <https://doi.org/10.1146/annurev-soc-071312-145551>
    - Wilke, C. (2019). *Fundamentals of data visualization: A primer on making informative and compelling figures*. O’Reilly Media. <https://clauswilke.com/dataviz/>
    - R graph gallery: <https://r-graph-gallery.com>
@@ -486,15 +486,15 @@ Final grades will be assigned according to the University of Minnesota Letter Gr
 ## 2.11. 2026/04/09 Data Visualization: Packaging and Presentation
 
 1. Required Instructional Readings
-   - Wickham, H., Çetinkaya-Rundel, M., & Grolemund, G. (2023). R for data science: Import, tidy, transform, visualize, and model data (2nd edition). O’Reilly. <https://r4ds.hadley.nz> Chapter 11. Communication
-   - Healy, K. (2019). *Data visualization: A practical introduction.* Princeton University Press. <https://socviz.co> Chapters 5 & 8
+   - [Chapter 11. Communication] Wickham, H., Çetinkaya-Rundel, M., & Grolemund, G. (2023). *R for data science: Import, tidy, transform, visualize, and model data* (2nd edition). O’Reilly. <https://r4ds.hadley.nz>
+   - [Chapters 5 & 8] Healy, K. (2019). *Data visualization: A practical introduction.* Princeton University Press. <https://socviz.co>
    - Venturini, T., Jacomy, M., & Jensen, P. (2021). What do we see when we look at networks: Visual network analysis, relational ambiguity, and force-directed layouts. *Big Data & Society, 8*(1), 205395172110184. <https://doi.org/10.1177/20539517211018488>
 
 2. Required Empirical Readings
    - Way, S. F., Morgan, A. C., Larremore, D. B., & Clauset, A. (2019). Productivity, prominence, and the effects of academic environment. *Proceedings of the National Academy of Sciences, 116*(22), 10729–10733. <https://doi.org/10.1073/pnas.1817431116>
    - Schneider, P. J., & Rizoiu, M.-A. (2023). The effectiveness of moderating harmful online content. *Proceedings of the National Academy of Sciences, 120*(34), e2307360120. <https://doi.org/10.1073/pnas.2307360120>
    - Dash Nelson, G., & Rae, A. (2016). An economic geography of the united states: From commutes to megaregions. *PLOS ONE, 11*(11), e0166083. <https://doi.org/10.1371/journal.pone.0166083>
-   - Huang, J., Hurst, B., Capizzo, L. W., & Zhou, A. (2026). \textit{Mapping conceptual boundaries: Using structural topic modeling and word embedding to contrast CSA and CSR in public relations research}. Working Paper.
+   - Huang, J., Hurst, B., Capizzo, L. W., & Zhou, A. (2026). *Mapping conceptual boundaries: Using structural topic modeling and word embedding to contrast CSA and CSR in public relations research*. Working Paper.
    - Waller, I., & Anderson, A. (2021). Quantifying social organization and political polarization in online platforms. *Nature, 600*(7888), 264–268. <https://doi.org/10.1038/s41586-021-04167-x>
 
 3. Computational Toolkits Demo
@@ -507,20 +507,22 @@ Final grades will be assigned according to the University of Minnesota Letter Gr
 
 ## 2.12. 2026/04/16 LLMs
 
-1. Reading
+1. Required Instructional Reading
    - Lee, T. B., & Trott, S. (2023, July 27). Large language models, explained with a minimum of math and jargon. *Understanding AI*. <https://www.understandingai.org/p/large-language-models-explained-with>
+   - Abdurahman, S., Atari, M., Karimi-Malekabadi, F., Xue, M. J., Trager, J., Park, P. S., Golazizian, P., Omrani, A., & Dehghani, M. (2024). Perils and opportunities in using large language models in psychological research. *PNAS Nexus, 3*(7), pgae245. <https://doi.org/10.1093/pnasnexus/pgae245>
+
+2. Required Empirical Readings
    - Gilardi, F., Alizadeh, M., & Kubli, M. (2023). ChatGPT outperforms crowd workers for text-annotation tasks. *Proceedings of the National Academy of Sciences, 120*(30), e2305016120. <https://doi.org/10.1073/pnas.2305016120>
    - Park, J. S., O’Brien, J., Cai, C. J., Morris, M. R., Liang, P., & Bernstein, M. S. (2023). Generative agents: Interactive simulacra of human behavior. *Proceedings of the 36th Annual ACM Symposium on User Interface Software and Technology*, 1–22. <https://doi.org/10.1145/3586183.3606763>
    - Ziems, C., Held, W., Shaikh, O., Chen, J., Zhang, Z., & Yang, D. (2024). Can large language models transform computational social science? *Computational Linguistics, 50*(1), 237–291. <https://doi.org/10.1162/coli_a_00502>
-   - Abdurahman, S., Atari, M., Karimi-Malekabadi, F., Xue, M. J., Trager, J., Park, P. S., Golazizian, P., Omrani, A., & Dehghani, M. (2024). Perils and opportunities in using large language models in psychological research. *PNAS Nexus, 3*(7), pgae245. <https://doi.org/10.1093/pnasnexus/pgae245>
    - Than, N., Fan, L., Law, T., Nelson, L. K., & McCall, L. (2025). Updating “the future of coding”: Qualitative coding with generative large language models. *Sociological Methods & Research*. <https://doi.org/10.1177/00491241251339188>
    - Lu, L., Kwon, H., Wang, W., M. Cotter, L., A. Kriss, L., Minich, M., Liu, J., N. Cascio, C., & Yang, S. (2025). Cannabis warning labels, sensory marketing, and electronic word-of-mouth: AI-facilitated textual analysis of a randomized experiment among youth and young adults. *International Journal of Advertising*, 1–26. <https://doi.org/10.1080/02650487.2025.2548647>
 
-2. Computational Toolkits Demo
+3. Computational Toolkits Demo
    - ellmer
    - OpenAI API (Python; if you are familiar with Python, sign up here)
 
-3. Optional Reading
+4. Optional Reading
    - Bail, C. A. (2024). Can generative AI improve social science? *Proceedings of the National Academy of Sciences, 121*(21), e2314021121. <https://doi.org/10.1073/pnas.2314021121>
    - Törnberg, P. (2025). Large language models outperform expert coders and supervised classifiers at annotating political social media messages. *Social Science Computer Review, 43*(6), 1181–1195. <https://doi.org/10.1177/08944393241286471>
    - Schulze Buschoff, L. M., Akata, E., Bethge, M., & Schulz, E. (2025). Visual cognition in multimodal large language models. *Nature Machine Intelligence, 7*(1), 96–106. <https://doi.org/10.1038/s42256-024-00963-y>
@@ -529,34 +531,36 @@ Final grades will be assigned according to the University of Minnesota Letter Gr
 
 ## 2.13. 2026/04/23 Ethics
 
-1. Reading
+1. Required Instructional Readings
+   - [Chapter 6] Salganik, M. J. (2018). *Bit by bit: Social research in the digital age*. Princeton University Press. <https://www.bitbybitbook.com/en/1st-ed/ethics/>
    - Dienlin, T., Johannes, N., Bowman, N. D., Masur, P. K., Engesser, S., Kümpel, A. S., Lukito, J., Bier, L. M., Zhang, R., Johnson, B. K., Huskey, R., Schneider, F. M., Breuer, J., Parry, D. A., Vermeulen, I., Fisher, J. T., Banks, J., Weber, R., Ellis, D. A., … De Vreese, C. (2021). An agenda for open science in communication. *Journal of Communication, 71*(1), 1–26. <https://doi.org/10.1093/joc/jqz052>
-   - Salganik, M. J. (2018). Ethics. In *Bit by bit: Social research in the digital age* (pp. 281–354). Princeton University Press. <https://www.bitbybitbook.com/en/1st-ed/ethics/>
-   - Freiling, I., Krause, N. M., Scheufele, D. A., & Chen, K. (2021). The science of open (communication) science: Toward an evidence-driven understanding of quality criteria in communication research. *Journal of Communication, 71*(5), 686–714. <https://doi.org/10.1093/joc/jqab032>
-   - Fox, J., Pearce, K. E., Massanari, A. L., Riles, J. M., Szulc, Ł., Ranjit, Y. S., Trevisan, F., Soriano, C. R. R., Vitak, J., Arora, P., Ahn, S. J. (Grace), Alper, M., Gambino, A., Gonzalez, C., Lynch, T., Williamson, L. D., & L Gonzales, A. (2021). Open science, closed doors? Countering marginalization through an agenda for ethical, inclusive research in communication. *Journal of Communication, 71*(5), 764–784. <https://doi.org/10.1093/joc/jqab029>
-   - Lewis, N. A. (2020). Open communication science: A primer on why and some recommendations for how. *Communication Methods and Measures, 14*(2), 71–82. <https://doi.org/10.1080/19312458.2019.1685660>
    - Nosek, B. A., Ebersole, C. R., DeHaven, A. C., & Mellor, D. T. (2018). The preregistration revolution. *Proceedings of the National Academy of Sciences, 115*(11), 2600–2606. <https://doi.org/10.1073/pnas.1708274114>
-   - The Meta-2020 Project
-     - González-Bailón, S., Lazer, D., Barberá, P., Zhang, M., Allcott, H., Brown, T., Crespo-Tenorio, A., Freelon, D., Gentzkow, M., Guess, A. M., Iyengar, S., Kim, Y. M., Malhotra, N., Moehler, D., Nyhan, B., Pan, J., Rivera, C. V., Settle, J., Thorson, E., … Tucker, J. A. (2023). Asymmetric ideological segregation in exposure to political news on Facebook. *Science, 381*(6656), 392–398. <https://doi.org/10.1126/science.ade7138>
-     - Guess, A. M., Malhotra, N., Pan, J., Barberá, P., Allcott, H., Brown, T., Crespo-Tenorio, A., Dimmery, D., Freelon, D., Gentzkow, M., González-Bailón, S., Kennedy, E., Kim, Y. M., Lazer, D., Moehler, D., Nyhan, B., Rivera, C. V., Settle, J., Thomas, D. R., … Tucker, J. A. (2023). How do social media feed algorithms affect attitudes and behavior in an election campaign? *Science, 381*(6656), 398–404. <https://doi.org/10.1126/science.abp9364>
-     - Guess, A. M., Malhotra, N., Pan, J., Barberá, P., Allcott, H., Brown, T., Crespo-Tenorio, A., Dimmery, D., Freelon, D., Gentzkow, M., González-Bailón, S., Kennedy, E., Kim, Y. M., Lazer, D., Moehler, D., Nyhan, B., Rivera, C. V., Settle, J., Thomas, D. R., … Tucker, J. A. (2023). Reshares on social media amplify political news but do not detectably affect beliefs or opinions. *Science, 381*(6656), 404–408. <https://doi.org/10.1126/science.add8424>
-     - Commentary
-       - Wagner, M. W. (2023). Independence by permission. *Science, 381*(6656), 388–391. <https://doi.org/10.1126/science.adi2430>
-     - Critique and Response 1
-       - Messing, S. (2023). Are algorithmic bias claims supported? *Science, 381*(6665), 1420–1420. <https://doi.org/10.1126/science.adk1211>
-       - González-Bailón, S., & Lazer, D. (2023). Are algorithmic bias claims supported?—Response. *Science, 381*(6665), 1420–1420. <https://doi.org/10.1126/science.adk4899>
-     - Critique and Response 2
-       - Krause, N. M., Freiling, I., & Scheufele, D. A. (2025). Our changing information ecosystem for science and why it matters for effective science communication. *Proceedings of the National Academy of Sciences, 122*(27), e2400928121. <https://doi.org/10.1073/pnas.2400928121>
-       - González-Bailón, S., & Lazer, D. (2025). Scientific standards suffer from misrepresenting past work. *Proceedings of the National Academy of Sciences, 122*(47), e2522011122. <https://doi.org/10.1073/pnas.2522011122>
-       - Freiling, I., & Scheufele, D. A. (2025). Reply to González-Bailón and Lazer: Industry control and conflicts of interest in social media research. *Proceedings of the National Academy of Sciences, 122*(47), e2522924122. <https://doi.org/10.1073/pnas.2522924122>
+   - Lewis, N. A. (2020). Open communication science: A primer on why and some recommendations for how. *Communication Methods and Measures, 14*(2), 71–82. <https://doi.org/10.1080/19312458.2019.1685660>
 
-2. Computational Tookkits Demo
+2. Required Empirical Readings "The Meta 2020 Project"
+   - Press Release: *New Facebook and Instagram Research Initiative to Look at US 2020 Presidential Election*. https://about.fb.com/news/2020/08/research-impact-of-facebook-and-instagram-on-us-election/
+   - González-Bailón, S., Lazer, D., Barberá, P., Zhang, M., Allcott, H., Brown, T., Crespo-Tenorio, A., Freelon, D., Gentzkow, M., Guess, A. M., Iyengar, S., Kim, Y. M., Malhotra, N., Moehler, D., Nyhan, B., Pan, J., Rivera, C. V., Settle, J., Thorson, E., … Tucker, J. A. (2023). Asymmetric ideological segregation in exposure to political news on Facebook. *Science, 381*(6656), 392–398. <https://doi.org/10.1126/science.ade7138>
+   - Guess, A. M., Malhotra, N., Pan, J., Barberá, P., Allcott, H., Brown, T., Crespo-Tenorio, A., Dimmery, D., Freelon, D., Gentzkow, M., González-Bailón, S., Kennedy, E., Kim, Y. M., Lazer, D., Moehler, D., Nyhan, B., Rivera, C. V., Settle, J., Thomas, D. R., … Tucker, J. A. (2023). How do social media feed algorithms affect attitudes and behavior in an election campaign? *Science, 381*(6656), 398–404. <https://doi.org/10.1126/science.abp9364>
+   - Guess, A. M., Malhotra, N., Pan, J., Barberá, P., Allcott, H., Brown, T., Crespo-Tenorio, A., Dimmery, D., Freelon, D., Gentzkow, M., González-Bailón, S., Kennedy, E., Kim, Y. M., Lazer, D., Moehler, D., Nyhan, B., Rivera, C. V., Settle, J., Thomas, D. R., … Tucker, J. A. (2023). Reshares on social media amplify political news but do not detectably affect beliefs or opinions. *Science, 381*(6656), 404–408. <https://doi.org/10.1126/science.add8424>
+   - Commentary
+     - Wagner, M. W. (2023). Independence by permission. *Science, 381*(6656), 388–391. <https://doi.org/10.1126/science.adi2430>
+   - Critique and Response 1
+     - Messing, S. (2023). Are algorithmic bias claims supported? *Science, 381*(6665), 1420–1420. <https://doi.org/10.1126/science.adk1211>
+     - González-Bailón, S., & Lazer, D. (2023). Are algorithmic bias claims supported?—Response. *Science, 381*(6665), 1420–1420. <https://doi.org/10.1126/science.adk4899>
+   - Critique and Response 2
+     - Krause, N. M., Freiling, I., & Scheufele, D. A. (2025). Our changing information ecosystem for science and why it matters for effective science communication. *Proceedings of the National Academy of Sciences, 122*(27), e2400928121. <https://doi.org/10.1073/pnas.2400928121>
+     - González-Bailón, S., & Lazer, D. (2025). Scientific standards suffer from misrepresenting past work. *Proceedings of the National Academy of Sciences, 122*(47), e2522011122. <https://doi.org/10.1073/pnas.2522011122>
+     - Freiling, I., & Scheufele, D. A. (2025). Reply to González-Bailón and Lazer: Industry control and conflicts of interest in social media research. *Proceedings of the National Academy of Sciences, 122*(47), e2522924122. <https://doi.org/10.1073/pnas.2522924122>
+
+3. Computational Tookkits Demo
    - OSF Walkthrough (Preprint and Preregistration)
    - Github and Github Desktop
 
-3. Optional Reading
+4. Optional Readings
    - Nyhan, B., Settle, J., Thorson, E., Wojcieszak, M., Barberá, P., Chen, A. Y., Allcott, H., Brown, T., Crespo-Tenorio, A., Dimmery, D., Freelon, D., Gentzkow, M., González-Bailón, S., Guess, A. M., Kennedy, E., Kim, Y. M., Lazer, D., Malhotra, N., Moehler, D., … Tucker, J. A. (2023). Like-minded sources on Facebook are prevalent but not polarizing. *Nature, 620*(7972), 137–144. <https://doi.org/10.1038/s41586-023-06297-w>
    - Allcott, H., Gentzkow, M., Mason, W., Wilkins, A., Barberá, P., Brown, T., Cisneros, J. C., Crespo-Tenorio, A., Dimmery, D., Freelon, D., González-Bailón, S., Guess, A. M., Kim, Y. M., Lazer, D., Malhotra, N., Moehler, D., Nair-Desai, S., Nait El Barj, H., Nyhan, B., … Tucker, J. A. (2024). The effects of Facebook and Instagram on the 2020 election: A deactivation experiment. *Proceedings of the National Academy of Sciences, 121*(21), e2321584121. <https://doi.org/10.1073/pnas.2321584121>
+   - Freiling, I., Krause, N. M., Scheufele, D. A., & Chen, K. (2021). The science of open (communication) science: Toward an evidence-driven understanding of quality criteria in communication research. *Journal of Communication, 71*(5), 686–714. <https://doi.org/10.1093/joc/jqab032>
+   - Fox, J., Pearce, K. E., Massanari, A. L., Riles, J. M., Szulc, Ł., Ranjit, Y. S., Trevisan, F., Soriano, C. R. R., Vitak, J., Arora, P., Ahn, S. J. (Grace), Alper, M., Gambino, A., Gonzalez, C., Lynch, T., Williamson, L. D., & L Gonzales, A. (2021). Open science, closed doors? Countering marginalization through an agenda for ethical, inclusive research in communication. *Journal of Communication, 71*(5), 764–784. <https://doi.org/10.1093/joc/jqab029>
    - Kramer, A. D. I., Guillory, J. E., & Hancock, J. T. (2014). Experimental evidence of massive-scale emotional contagion through social networks. *Proceedings of the National Academy of Sciences, 111*(24), 8788–8790. <https://doi.org/10.1073/pnas.1320040111>
    - Freese, J., & Peterson, D. (2017). Replication in social science. *Annual Review of Sociology, 43*(1), 147–165. <https://doi.org/10.1146/annurev-soc-060116-053450>
    - Chung-hong  Chan, Tim Schatto-Eckrodt, & Johannes Gruber. (2024). What makes computational communication science (ir)reproducible? *Computational Communication Research, 6*(1), 1. <https://doi.org/10.5117/CCR2024.1.5.CHAN>
