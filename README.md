@@ -249,7 +249,7 @@ Final grades will be assigned according to the University of Minnesota Letter Gr
    - Zhang, Y., Lukito, J., Su, M.-H., Suk, J., Xia, Y., Kim, S. J., Doroshenko, L., & Wells, C. (2021). Assembling the networks and audiences of disinformation: How successful russian IRA twitter accounts built their followings, 2015–2017. *Journal of Communication, 71*(2), 305–331. <https://doi.org/10.1093/joc/jqaa042>
    - Lu, X., Das, D., Huh, J., & Srivastava, J. (2022). Influence of consumers’ temporary affect on ad engagement: A computational research approach. *Journal of Advertising, 51*(3), 352–368. <https://doi.org/10.1080/00913367.2021.1977202>
 
-3. Computational Toolkit Demo: "From Excel/SPSS to R" - Basic
+3. Computational Toolkit Demo
    - lm, glm, lme4, lmerTest, plm, skim, beepr [Alvin Zhou]
    - modelsummary, stargazer, R Markdown [Alvin Zhou]
 
@@ -273,7 +273,7 @@ Final grades will be assigned according to the University of Minnesota Letter Gr
    - Guess, A. M. (2021). (Almost) everything in moderation: New evidence on Americans’ online media diets. *American Journal of Political Science, 65*(4), 1007–1022. <https://doi.org/10.1111/ajps.12589>
    - Zhou, A., Yang, T., & González-Bailón, S. (2025). The puzzle of misinformation: Exposure to unreliable content in the United States is higher among the better informed. *New Media & Society, 27*(3), 1526–1543. <https://doi.org/10.1177/14614448231196863>
 
-3. Computational Toolkit Demo: "From Excel/SPSS to R" - Advanced
+3. Computational Toolkit Demo
    - tidyverse (dplyr, readr, tidyr, stringr, lubridate)
    - Qualtrics API in R
 
@@ -295,7 +295,7 @@ Final grades will be assigned according to the University of Minnesota Letter Gr
    - Brady, W. J., Wills, J. A., Jost, J. T., Tucker, J. A., & Van Bavel, J. J. (2017). Emotion shapes the diffusion of moralized content in social networks. *Proceedings of the National Academy of Sciences, 114*(28), 7313–7318. <https://doi.org/10.1073/pnas.1618923114>
    - Van Atteveldt, W., Van Der Velden, M. A. C. G., & Boukes, M. (2021). The validity of sentiment analysis: Comparing manual annotation, crowd-coding, dictionary approaches, and machine learning algorithms. *Communication Methods and Measures, 15*(2), 121–140. <https://doi.org/10.1080/19312458.2020.1869198>
 
-3. Computational Toolkit Demo: "Text Analysis Basics"
+3. Computational Toolkit Demo
    - quanteda (<https://tutorials.quanteda.io>)
    - LIWC and Google Perspective API
 
@@ -327,7 +327,7 @@ Final grades will be assigned according to the University of Minnesota Letter Gr
    - Zhou, A., Capizzo, L. W., Page, T. G., & Toth, E. L. (2023). Exploring public relations research topics and inter-cluster dynamics through computational modeling (2010-2020): A study based on two SSCI journals. *Journal of Public Relations Research, 35*(3), 135–161. <https://doi.org/10.1080/1062726X.2023.2180373>
    - Mukerjee, S., Yang, T., & Peng, Y. (2023). Metrics in action: How social media metrics shape news production on Facebook. *Journal of Communication, 73*(3), 260–272. <https://doi.org/10.1093/joc/jqad012>
 
-3. Computational Toolkit Demo: "Text Analysis Advanced"
+3. Computational Toolkit Demo
    - stm
    - topicmodels
 
