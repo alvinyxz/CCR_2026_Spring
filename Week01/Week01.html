@@ -2,7 +2,7 @@
         <html>
         <head>
             <meta charset="UTF-8">
-            <title>1&period;1&period; R</title>
+            <title>1&period; R</title>
             <style>
 /* From extension vscode.github */
 /*---------------------------------------------------------------------------------------------
@@ -139,21 +139,32 @@
         
         </head>
         <body class="vscode-body vscode-light">
-            <p><a href="#12-python">1.2. Python</a>
-- <a href="#121-python---google-colab">1.2.1. Python - Google Colab</a>
-- <a href="#122-python---ide">1.2.2. Python - IDE</a>
-- <a href="#123-python---basic-commands-1">1.2.3. Python - Basic Commands 1</a>
-- <a href="#124-python---basic-commands-2">1.2.4. Python - Basic Commands 2</a>
-- <a href="#125-python---common-commands">1.2.5. Python - Common Commands</a></p>
+            <ul>
+<li><a href="#1-r">1. R</a>
 <ul>
-<li><a href="#13-learn-how-to-debug-your-code-with-chatgpt">1.3. Learn how to debug your code with ChatGPT</a></li>
-<li><a href="#14-focus-on-r-and-one-more-add-on">1.4. Focus on R and One More Add-On</a></li>
+<li><a href="#11-r---basic-setup">1.1. R - Basic Setup</a></li>
+<li><a href="#12-r---basic-commands-1">1.2. R - Basic Commands 1</a></li>
+<li><a href="#13-r---basic-commands-2">1.3. R - Basic Commands 2</a></li>
+<li><a href="#14-r---common-commands">1.4. R - Common Commands</a></li>
+</ul>
+</li>
+<li><a href="#2-python">2. Python</a>
+<ul>
+<li><a href="#21-python---google-colab">2.1. Python - Google Colab</a></li>
+<li><a href="#22-python---ide">2.2. Python - IDE</a></li>
+<li><a href="#23-python---basic-commands-1">2.3. Python - Basic Commands 1</a></li>
+<li><a href="#24-python---basic-commands-2">2.4. Python - Basic Commands 2</a></li>
+<li><a href="#25-python---common-commands">2.5. Python - Common Commands</a></li>
+</ul>
+</li>
+<li><a href="#3-learn-how-to-debug-your-code-with-chatgpt">3. Learn how to debug your code with ChatGPT</a></li>
+<li><a href="#4-focus-on-r-and-one-more-add-on">4. Focus on R and One More Add-On</a></li>
 </ul>
 <p>You should only proceed after completing the SICSS Boot Camp <a href="https://sicss.io/boot_camp/">https://sicss.io/boot_camp/</a> which focused on R and RStudio. Below, I will mostly focus on how we can efficiently set up Python environments.</p>
 <p>In the end, I will also introduce you to debugging with ChatGPT, which is a very useful skill to have when you are learning to code. I will also introduce the Copilot add-on for RStudio, which is a great tool to help you write code faster and more efficiently. <strong>However, I think we should all be cautious of using AI tools, as relying on them too much might hinder our learning process.</strong> In fact, I have recently disabled GitHub Copilot in my own RStudio for some time.</p>
 <p>The model code scripts are stored in this folder as well. However, I do not recommend you to use it. Instead, follow the steps below and create your own files. The model code scripts are just there when you encounter serious problems.</p>
-<h2 id="11-r">1.1. R</h2>
-<h3 id="111-r---basic-setup">1.1.1. R - Basic Setup</h3>
+<h2 id="1-r">1. R</h2>
+<h3 id="11-r---basic-setup">1.1. R - Basic Setup</h3>
 <ol>
 <li>Creating a new .R file in RStudio:
 <ul>
@@ -181,7 +192,7 @@
 <li>Save the file as <code>praise.R</code> locally.</li>
 <li>Open <code>praise.R</code> again, make sure .R is associated with RStudio from now on. Run the code again to get a new random praise message.</li>
 </ol>
-<h3 id="112-r---basic-commands-1">1.1.2. R - Basic Commands 1</h3>
+<h3 id="12-r---basic-commands-1">1.2. R - Basic Commands 1</h3>
 <ol>
 <li>Open RStudio and create a new R script file.</li>
 <li>Write the following code in the script:</li>
@@ -197,7 +208,7 @@ print<span class="hljs-punctuation">(</span>z<span class="hljs-punctuation">)</s
 <li>Run the code by selecting it and pressing &quot;Ctrl + Enter&quot; or clicking the &quot;Run&quot; button in RStudio.</li>
 <li>You should see the output <code>15</code> in the console.</li>
 </ol>
-<h3 id="113-r---basic-commands-2">1.1.3. R - Basic Commands 2</h3>
+<h3 id="13-r---basic-commands-2">1.3. R - Basic Commands 2</h3>
 <ol>
 <li>Open RStudio and create a new R script file.</li>
 <li>First, we will install the <code>datasets</code> package:</li>
@@ -268,7 +279,7 @@ number_variable <span class="hljs-operator">&lt;-</span> <span class="hljs-built
 <li>Save the file as <code>basic_commands_2.R</code> locally.</li>
 <li>For more information on data structures in R, see Jo's tutorial: <a href="https://jolukito.quarto.pub/j381m-textbook/05-structures.html">https://jolukito.quarto.pub/j381m-textbook/05-structures.html</a></li>
 </ol>
-<h3 id="114-r---common-commands">1.1.4. R - Common Commands</h3>
+<h3 id="14-r---common-commands">1.4. R - Common Commands</h3>
 <ol>
 <li>Open RStudio and create a new R script file.</li>
 <li>These few commands are widely used in R for logistic reasons:</li>
@@ -343,9 +354,9 @@ table<span class="hljs-punctuation">(</span>my_data<span class="hljs-operator">$
 </ul>
 </li>
 </ol>
-<h2 id="12-python">1.2. Python</h2>
+<h2 id="2-python">2. Python</h2>
 <p>There are two ways to run Python code: through an IDE (Integrated Development Environment) (like RStudio) or, more easily nowadays, through Google Colab.</p>
-<h3 id="121-python---google-colab">1.2.1. Python - Google Colab</h3>
+<h3 id="21-python---google-colab">2.1. Python - Google Colab</h3>
 <ol>
 <li>Go to <a href="https://colab.research.google.com/">https://colab.research.google.com/</a></li>
 <li>Click on &quot;New Notebook&quot; in the bottom right corner</li>
@@ -378,7 +389,7 @@ compliments = [
 <ol start="9">
 <li>Run the cell by clicking the “Run” button or pressing Shift + Enter</li>
 </ol>
-<h3 id="122-python---ide">1.2.2. Python - IDE</h3>
+<h3 id="22-python---ide">2.2. Python - IDE</h3>
 <p>If you prefer locally-run code, we can use the Anaconda distribution of Python. It includes Python, JupyterLab, and many essential libraries for data science and computational social science.</p>
 <ol>
 <li>Download and install Anaconda: <a href="https://www.anaconda.com/products/distribution">https://www.anaconda.com/products/distribution</a></li>
@@ -413,7 +424,7 @@ compliments = [
 <ol start="10">
 <li>Run the cell by clicking the “Run” button or pressing Shift + Enter</li>
 </ol>
-<h3 id="123-python---basic-commands-1">1.2.3. Python - Basic Commands 1</h3>
+<h3 id="23-python---basic-commands-1">2.3. Python - Basic Commands 1</h3>
 <ol>
 <li>Regardless of whether you are using Google Colab or JupyterLab, create a new notebook and name it <code>basic_commands_1.ipynb</code></li>
 <li>In the first cell, type:</li>
@@ -427,7 +438,7 @@ z = x + y
 <ol start="3">
 <li>Run the cell by clicking the “Run” button or pressing Shift + Enter. You should see the output: <code>15</code></li>
 </ol>
-<h3 id="124-python---basic-commands-2">1.2.4. Python - Basic Commands 2</h3>
+<h3 id="24-python---basic-commands-2">2.4. Python - Basic Commands 2</h3>
 <ol>
 <li>Regardless of whether you are using Google Colab or JupyterLab, create a new notebook and name it <code>basic_commands_2.ipynb</code></li>
 <li>In the first cell, import pandas and numpy (panda is the most widely used package for data analysis in Python, and numpy is the most widely used package for numerical analysis):</li>
@@ -502,7 +513,7 @@ df = iris.frame
 </ol>
 <pre><code class="language-python">df[<span class="hljs-string">&#x27;sepal length (cm)&#x27;</span>]
 </code></pre>
-<h3 id="125-python---common-commands">1.2.5. Python - Common Commands</h3>
+<h3 id="25-python---common-commands">2.5. Python - Common Commands</h3>
 <ol>
 <li>Regardless of whether you are using Google Colab or JupyterLab, create a new notebook and name it <code>common_commands.ipynb</code></li>
 <li>In the first cell, import pandas and numpy:</li>
@@ -633,7 +644,7 @@ X = sm.add_constant(X)
 model = sm.OLS(y, X).fit()
 <span class="hljs-built_in">print</span>(model.summary())
 </code></pre>
-<h2 id="13-learn-how-to-debug-your-code-with-chatgpt">1.3. Learn how to debug your code with ChatGPT</h2>
+<h2 id="3-learn-how-to-debug-your-code-with-chatgpt">3. Learn how to debug your code with ChatGPT</h2>
 <ol>
 <li>Open ChatGPT (I have it installed on my Mac) and start a new conversation</li>
 <li>Copy and paste your code into the chat</li>
@@ -651,7 +662,7 @@ model = sm.OLS(y, X).fit()
 <li>You should see the output without any errors</li>
 <li>You can also use ChatGPT to explain the code to you, so that you can understand it better.</li>
 </ol>
-<h2 id="14-focus-on-r-and-one-more-add-on">1.4. Focus on R and One More Add-On</h2>
+<h2 id="4-focus-on-r-and-one-more-add-on">4. Focus on R and One More Add-On</h2>
 <p>We will focus on R for the rest of the workshop. However, if you are interested in Python, you can use it as well. The code is similar, and you can easily convert it from R to Python or vice versa (using ChatGPT).</p>
 <p>One more add-on I highly recommend in R Studio is the GitHub Copilot. It is a paid service, but free for students. You can sign up for it here:</p>
 <p><a href="https://docs.github.com/en/copilot/managing-copilot/managing-copilot-as-an-individual-subscriber/getting-started-with-copilot-on-your-personal-account/getting-free-access-to-copilot-pro-as-a-student-teacher-or-maintainer">https://docs.github.com/en/copilot/managing-copilot/managing-copilot-as-an-individual-subscriber/getting-started-with-copilot-on-your-personal-account/getting-free-access-to-copilot-pro-as-a-student-teacher-or-maintainer</a></p>

@@ -4,10 +4,10 @@
     - [1.1.2. Reading Lead (5%\*4 = 20%)](#112-reading-lead-54--20)
       - [1.1.2.1. Response Letter with Annotations (RLA) (2%)](#1121-response-letter-with-annotations-rla-2)
       - [1.1.2.2. Lead Discussant (3%)](#1122-lead-discussant-3)
-  - [1.2. Computational Toolkit Demo (15%\*2 = 30%)](#12-computational-toolkit-demo-152--30)
-    - [1.2.1. Pre-Demo Preparation (3%)](#121-pre-demo-preparation-3)
-    - [1.2.2. In-Class Demo (10%)](#122-in-class-demo-10)
-    - [1.2.3. Post-Demo Submission (2%)](#123-post-demo-submission-2)
+  - [1.2. Computational Toolkit Demo (10%\*3 = 30%)](#12-computational-toolkit-demo-103--30)
+    - [1.2.1. Pre-Demo Preparation (2%)](#121-pre-demo-preparation-2)
+    - [1.2.2. In-Class Demo (7%)](#122-in-class-demo-7)
+    - [1.2.3. Post-Demo Submission (1%)](#123-post-demo-submission-1)
   - [1.3. Final Paper (40%)](#13-final-paper-40)
     - [1.3.1. Paper Idea Pitch (5%)](#131-paper-idea-pitch-5)
     - [1.3.2. Peer Review (5%\*2 = 10%)](#132-peer-review-52--10)
@@ -41,8 +41,9 @@
 - Date: Thursdays 2:30-5pm, Jan 22 – Apr 30, 2026 (No class on Mar 12)
 - Location: In person, Murphy Hall 25 (basement)
 - Primary Language: R (no prior coding assumed)
-- Materials: <https://z.umn.edu/J8500>
 - Syllabus: <https://z.umn.edu/J8500_Syllabus>
+- Materials: <https://z.umn.edu/J8500>
+- Reading and Demo Sign-Up Sheet: <https://z.umn.edu/J8500_SignUp>
 - In-Person Office Hours: Thursdays 1:30-2:30 pm, Murphy Hall 325
 - Or book me for virtual office hours on Google Calendar: <https://z.umn.edu/Alvin_Meeting> and we will meet on Zoom
 
@@ -86,19 +87,19 @@ During class, you will provide a concise overview of each assigned reading, focu
 
 You may use any presentation format that best supports your goals (e.g., slides, whiteboard, handouts). Treat this role as an opportunity to practice your presentation, teaching, and discussant skills, which are essential in both academic and professional settings (e.g., conference panels, industry briefings).
 
-## 1.2. Computational Toolkit Demo (15%*2 = 30%)
+## 1.2. Computational Toolkit Demo (10%*3 = 30%)
 
 The primary goal for this assignment is two-fold: (1) to help you get more comfortable with R programming, and (2) to help you develop the know-how to crack any new R package through googling, stack-overflowing, and even asking AI models about debugging. The field of computational social science is evolving so rapidly that there is simply no way to keep up with every possible package out there. Also, the best way for learning is probably through teaching others.
 
-Throughout this semester, each student will sign up to demonstrate the functionalities and workflow of TWO R packages related to computational analyses. The list of candidate packages can be found in the Course Schedule, but they are simply recommended packages. If you find other packages that you think are relevant to the class, please discuss with me and we can change them. At maximum, THREE students can sign up for the same package and work as a group to collaboratively prepare and deliver the demo. When there are multiple packages scheduled on the same day, groups responsible for those packages should coordinate with each other to ensure a coherent presentation without too much overlap. You are welcome, and in fact *encouraged*, to "steal" existing tutorials and datasets available online.
+Throughout this semester, each student will sign up to demonstrate the functionalities and workflow of THREE R packages related to computational analyses. The list of candidate packages can be found in the Course Schedule, but they are simply recommended packages. If you find other packages that you think are relevant to the class, please discuss with me and we can change them. At maximum, THREE students can sign up for the same package and work as a group to collaboratively prepare and deliver the demo. When there are multiple packages scheduled on the same day, groups responsible for those packages should coordinate with each other to ensure a coherent presentation without too much overlap. You are welcome, and in fact *encouraged*, to "steal" existing tutorials and datasets available online.
 
 There are three things that need to be done to complete this assignment, all of which will be used for evaluation purposes.
 
-### 1.2.1. Pre-Demo Preparation (3%)
+### 1.2.1. Pre-Demo Preparation (2%)
 
 First, <span style="color: orange;">the group responsible for the particular R package must prepare a problem set with an associated dataset and distribute these materials to the class by the end of Monday before the class.</span>
 
-To do so, one student can upload the problem set to the "Discussion" section on Canvas (named "[Week X] Computational Toolkit Demo") on behalf of the group. The circulated file should be well-annotated and self-explanatory for students who have no prior knowledge about this package. The rest of the class is encouraged to work on the problem set during the weekend and explore the package themselves. The presentation group can determine the number and scope of questions, as deemed appropriate for the demo's learning goals. The files should include:
+To do so, one student can upload the problem set to the "Discussion" section on Canvas (named "[Week X] Computational Toolkit Demo") on behalf of the group. The circulated file should be well-annotated and self-explanatory for students with no prior knowledge of this package. The rest of the class is encouraged to work on the problem set during the week and explore the package themselves. The presentation group can determine the number and scope of questions, as deemed appropriate for the demo's learning goals. The files should include:
 
 - A relevant dataset for code demonstration
 - A step-by-step analytical example demonstrating the key functions of the package
@@ -106,7 +107,7 @@ To do so, one student can upload the problem set to the "Discussion" section on 
 
 For example, for the igraph package about network analysis, the problem set can include a network matrix and a few questions such as: (1) visualize the network with different layouts, (2) calculate basic node-level statistics (e.g., degree centrality, betweenness centrality, closeness centrality), (3) detect communities in the network, and (4) plot the degree distribution of the network.
 
-### 1.2.2. In-Class Demo (10%)
+### 1.2.2. In-Class Demo (7%)
 
 Second, <span style="color: orange;">the group responsible for the particular R package should present the demo, taking the format of a short workshop (~30 minutes long), during the scheduled class time.</span> The presentation should cover:
 
@@ -116,9 +117,10 @@ Second, <span style="color: orange;">the group responsible for the particular R 
 - Live coding exercises: The teaching team will explain the coding exercise in each section. Students will then have time to work on the exercise individually or in groups, promoting active engagement. Once students have completed the exercise, the teaching team will show the solution, discussing various approaches and addressing any questions or misconceptions.
 - Interactive Q&A (~5 minutes): At the end of the teaching session, the tutorial teachers should allocate Q&A time for additional questions or feedback from students.
 
-### 1.2.3. Post-Demo Submission (2%)
+### 1.2.3. Post-Demo Submission (1%)
 
 Third, after the class, <span style="color: orange;">the group responsible for the particular R package should submit one compiled R notebook/markdown file or related files to the same "Discussion" section on Canvas (named "[Week X] Computational Toolkit Demo").</span> Again, one student can submit it on behalf of the group. The file should contain the main content of the demo for circulation among all enrolled students, including answer keys/codes to the problem set, sample code, any revisions from thier in-class instruction, and other materials.
+
 In this way, all of you will have access to a collection of tutorials and R codes for future use by the end of the semester.
 
 ## 1.3. Final Paper (40%)
@@ -145,7 +147,7 @@ Regardless of which option you choose, your final paper is graded for each of th
 
 ### 1.3.1. Paper Idea Pitch (5%)
 
-<span style="color: orange;">Regardless of which option (group vs. individual) you choose, each student should submit two *individual* Paper Idea Pitches to the "Discussion" section on Canvas (named "[Week 4] Final Paper - Paper Idea Pitch") by the end of Week 4.</span> Each pitch should have no more than 300 words. The focus is to identify at least one computational method from any reading on the course schedule and explain how the identified method(s) could be applied to address one specific hypothesis/research question. Each pitch should include at least the following components: (1) a significance statement that provides background information and justifies why the hypothesis/research question is important to study, (2) a method statement that identifies the computational method(s) and justifies why the method(s) is/are appropriate, and (3) a data statement that explains what kind of dataset is needed to carry out the analyses.
+<span style="color: orange;">Regardless of which option (group vs. individual) you choose, each student should submit two *individual* Paper Idea Pitches to the "Discussion" section on Canvas (named "[Week 5] Final Paper - Paper Idea Pitch") before the Week 5 class.</span> Each pitch should have no more than 300 words. The focus is to identify at least one computational method from any reading on the course schedule and explain how the identified method(s) could be applied to address one specific hypothesis/research question. Each pitch should include at least the following components: (1) a significance statement that provides background information and justifies why the hypothesis/research question is important to study, (2) a method statement that identifies the computational method(s) and justifies why the method(s) is/are appropriate, and (3) a data statement that explains what kind of dataset is needed to carry out the analyses.
 
 Submitted to the "Discussion" section, all pitches will be shared with the whole class. You can browse other students' pitches to get inspiration. More importantly, you should use this opportunity to decide which paper option (group vs. individual) you want to pursue: you may find classmates who share your interests in a specific topic domain or a computational method.
 
@@ -163,7 +165,7 @@ Resources on how to be an effective and constructive reviewer:
 
 After reviewing peers' and my comments on your paper idea pitches and deciding which final paper option (group vs. individual) you want to pursue, you will develop a proposal draft based on the selected paper idea pitch. A proposal draft should expand on that idea and include the following components: (1) statement of hypotheses and research questions, (2) an outline of literature review to justify the significance of RQs/Hs, and (3) an outline of the method session that includes at least a brief description of study design, dataset to collect/use, measures, and analytical strategies. You should identify at least one computational method in the proposal. Students choosing the group final paper option only need to designate one student to submit the proposal on behalf of the group.
 
-<span style="color: orange;">This proposal draft should be between 1000 and 1500 words in length and submitted to the "Discussion" section on Canvas (named "[Week 9] Final Paper - Proposal Draft") by the end of Week 9.</span> The peer review for the proposal draft is due one week later.
+<span style="color: orange;">This proposal draft should be between 1000 and 1500 words in length and submitted to the "Discussion" section on Canvas (named "[Week 10] Final Paper - Proposal Draft") before the Week 10 class.</span> The peer review for the proposal draft is due one week later.
 
 ### 1.3.4. Final Paper Presentation (5%)
 
@@ -179,11 +181,11 @@ Your final paper should follow standard APA (7th edition) formatting guidelines 
 
 - Literature Review
 
-   Review relevant readings, research, and literature related to the topic; Justify the use of computational method to examine the topic; Clearly articulate research questions that can advance the state of understanding of the topic of interest or fill a gap in knowledge exposed in the literature review.
+   Review relevant readings, research, and literature related to the topic; Justify the use of computational methods to examine the topic; Clearly articulate research questions that can advance the state of understanding of the topic of interest or fill a gap in knowledge exposed in the literature review.
 
 - Data and Methods
 
-   Articulate how the data have been (for Complete Papers) or will be (for Research Proposals) collected and sampled. Identify the computational method(s) or mixed methods to address the research questions; For Complete Papers, articulate the data analysis procedures, including variable coding, statistical analysis, ethical concerns, model selection, and validation procedures. For Research Proposals, provide a clear articulation of the data analysis plan of those elements. For students who plan to collect human subject data, they must secure IRB approval prior to data collection or articulate IRB planning in their final write-up.
+   Articulate how the data have been (for Complete Papers) or will be (for Research Proposals) collected and sampled. Identify the computational method(s) or mixed methods to address the research questions; For Complete Papers, articulate the data analysis procedures, including variable coding, statistical analysis, ethical concerns, model selection, and validation procedures. For Research Proposals, provide a clear articulation of the data analysis plan for those elements. Students who plan to collect human-subject data must secure IRB approval prior to data collection or articulate IRB planning in their final write-up.
 
 - Results (only for Complete Papers)
 
@@ -238,7 +240,7 @@ Final grades will be assigned according to the University of Minnesota Letter Gr
 ## 2.2. 2026/01/29 Digital Trace Data: APIs, Social Media, and Scraping
 
 1. Required Instructional Readings
-   - [Chapters 2 & 4] Salganik, M. J. (2018). *Bit by bit: Social research in the digital age*. Princeton University Press. <https://www.bitbybitbook.com/en/1st-ed/>
+   - [Chapters 2 & 4] Salganik, M. J. (2018). *Bit by bit: Social research in the digital age*. Princeton University Press. <https://www.bitbybitbook.com/en/1st-ed/observing-behavior/>
 
 2. Required Empirical Readings
    - Yang, T., Yang, X., Peng, Y., & Mukerjee, S. (2025). Are partisan, unreliable, digital-born, and mass-oriented media more likely to thrive on social media? Comparing four information ecosystems. *Journal of Communication*, jqaf035. <https://doi.org/10.1093/joc/jqaf035>
@@ -248,8 +250,8 @@ Final grades will be assigned according to the University of Minnesota Letter Gr
    - Lu, X., Das, D., Huh, J., & Srivastava, J. (2022). Influence of consumers’ temporary affect on ad engagement: A computational research approach. *Journal of Advertising, 51*(3), 352–368. <https://doi.org/10.1080/00913367.2021.1977202>
 
 3. Computational Toolkit Demo: "From Excel/SPSS to R" - Basic
-   - lm, glm, lme4, lmerTest, plm, skim, beepr
-   - modelsummary, stargazer, R Markdown
+   - lm, glm, lme4, lmerTest, plm, skim, beepr [Alvin Zhou]
+   - modelsummary, stargazer, R Markdown [Alvin Zhou]
 
 4. Optional Readings
    - Grinberg, N., Joseph, K., Friedland, L., Swire-Thompson, B., & Lazer, D. (2019). Fake news on Twitter during the 2016 U.S. presidential election. *Science, 363*(6425), 374–378. <https://doi.org/10.1126/science.aau2706>
@@ -294,10 +296,10 @@ Final grades will be assigned according to the University of Minnesota Letter Gr
    - Van Atteveldt, W., Van Der Velden, M. A. C. G., & Boukes, M. (2021). The validity of sentiment analysis: Comparing manual annotation, crowd-coding, dictionary approaches, and machine learning algorithms. *Communication Methods and Measures, 15*(2), 121–140. <https://doi.org/10.1080/19312458.2020.1869198>
 
 3. Computational Toolkit Demo: "Text Analysis Basics"
-   - quanteda (tidytext sentiment analysis) (<https://tutorials.quanteda.io>)
+   - quanteda (<https://tutorials.quanteda.io>)
    - LIWC and Google Perspective API
 
-4. Due at the end of Week 4: [Week 4] Final Paper - Paper Idea Pitch
+4. Due before the Week 5 class (2026/02/18): [Week 5] Final Paper - Paper Idea Pitch
 
 5. Optional Readings
    - Humphreys, A., & Wang, R. J.-H. (2018). Automated text analysis for consumer research. *Journal of Consumer Research, 44*(6), 1274–1306. <https://doi.org/10.1093/jcr/ucx104>
@@ -329,7 +331,7 @@ Final grades will be assigned according to the University of Minnesota Letter Gr
    - stm
    - topicmodels
 
-4. Due at the end of Week 5: [Week 5] Final Paper - Paper Idea Pitch Peer Review
+4. Due before the Week 6 class (2026/02/25): [Week 6] Final Paper - Paper Idea Pitch Peer Review
 
 5. Optional Readings
    - Blei, D. M. (2003). Latent Dirichlet Allocation. *Journal of Machine Learning Research, 3*, 993–1022.
@@ -414,9 +416,7 @@ Final grades will be assigned according to the University of Minnesota Letter Gr
    - igraph
    - ggraph, visNetwork, intergraph
 
-4. Due at the end of Week 9: [Week 9] Final Paper - Proposal Draft
-
-5. Optional Readings
+4. Optional Readings
    - Newman, M. E. J. (2010). *Networks: An introduction*. Oxford University Press.
    - González-Bailón, S., & Wang, N. (2016). Networked discontent: The anatomy of protest campaigns in social media. *Social Networks, 44*, 95–104. <https://doi.org/10.1016/j.socnet.2015.07.003>
    - Park, P. S., Blumenstock, J. E., & Macy, M. W. (2018). The strength of long-range ties in population-scale social networks. *Science, 362*(6421), 1410–1413. <https://doi.org/10.1126/science.aau9735>
@@ -448,7 +448,7 @@ Final grades will be assigned according to the University of Minnesota Letter Gr
    - ergm/tergm
    - Gephi
 
-4. Due at the end of Week 10: [Week 10] Final Paper - Proposal Draft Peer Review
+4. Due at the end of Week 9 (2026/04/01): [Week 9] Final Paper - Proposal Draft
 
 5. Optional Readings
    - Borgatti, S. P., Everett, M. G., & Johnson, J. C. (2018). *Analyzing social networks* (2nd edition). SAGE Publications.
@@ -476,9 +476,12 @@ Final grades will be assigned according to the University of Minnesota Letter Gr
    - ggplot2
    - patchwork, cowplot, hrbrthemes, ggrepel
 
-4. Optional Readings
+4. Due before the Week 11 class (2026/04/08): [Week 11] Final Paper - Proposal Draft Peer Review
+
+5. Optional Readings
    - Healy, K., & Moody, J. (2014). Data visualization in sociology. *Annual Review of Sociology, 40*(1), 105–128. <https://doi.org/10.1146/annurev-soc-071312-145551>
    - Wilke, C. (2019). *Fundamentals of data visualization: A primer on making informative and compelling figures*. O’Reilly Media. <https://clauswilke.com/dataviz/>
+   - Chang, W. (2019). *R graphics cookbook: Practical recipes for visualizing data*. O’Reilly. <https://r-graphics.org/>
    - R graph gallery: <https://r-graph-gallery.com>
 
 ## 2.11. 2026/04/09 Data Visualization: Packaging and Presentation
@@ -491,7 +494,7 @@ Final grades will be assigned according to the University of Minnesota Letter Gr
 2. Required Empirical Readings
    - Way, S. F., Morgan, A. C., Larremore, D. B., & Clauset, A. (2019). Productivity, prominence, and the effects of academic environment. *Proceedings of the National Academy of Sciences, 116*(22), 10729–10733. <https://doi.org/10.1073/pnas.1817431116>
    - Schneider, P. J., & Rizoiu, M.-A. (2023). The effectiveness of moderating harmful online content. *Proceedings of the National Academy of Sciences, 120*(34), e2307360120. <https://doi.org/10.1073/pnas.2307360120>
-   - Dash Nelson, G., & Rae, A. (2016). An economic geography of the united states: From commutes to megaregions. *PLOS ONE, 11*(11), e0166083. <https://doi.org/10.1371/journal.pone.0166083>
+   - Dash Nelson, G., & Rae, A. (2016). An economic geography of the United States: From commutes to megaregions. *PLoS ONE, 11*(11), e0166083. <https://doi.org/10.1371/journal.pone.0166083>
    - Huang, J., Hurst, B., Capizzo, L. W., & Zhou, A. (2026). *Mapping conceptual boundaries: Using structural topic modeling and word embedding to contrast CSA and CSR in public relations research*. Working Paper.
    - Waller, I., & Anderson, A. (2021). Quantifying social organization and political polarization in online platforms. *Nature, 600*(7888), 264–268. <https://doi.org/10.1038/s41586-021-04167-x>
 
@@ -512,7 +515,7 @@ Final grades will be assigned according to the University of Minnesota Letter Gr
 2. Required Empirical Readings
    - Gilardi, F., Alizadeh, M., & Kubli, M. (2023). ChatGPT outperforms crowd workers for text-annotation tasks. *Proceedings of the National Academy of Sciences, 120*(30), e2305016120. <https://doi.org/10.1073/pnas.2305016120>
    - Park, J. S., O’Brien, J., Cai, C. J., Morris, M. R., Liang, P., & Bernstein, M. S. (2023). Generative agents: Interactive simulacra of human behavior. *Proceedings of the 36th Annual ACM Symposium on User Interface Software and Technology*, 1–22. <https://doi.org/10.1145/3586183.3606763>
-   - Ziems, C., Held, W., Shaikh, O., Chen, J., Zhang, Z., & Yang, D. (2024). Can large language models transform computational social science? *Computational Linguistics, 50*(1), 237–291. <https://doi.org/10.1162/coli_a_00502>
+   - Witte, M., Heitmann, M., Hartmann, J., & Tetzlaff, K. (2026). Language of images: Classifying marketing images with transformers and vision language models. *International Journal of Research in Marketing*, S0167811626000017. <https://doi.org/10.1016/j.ijresmar.2026.01.001>
    - Than, N., Fan, L., Law, T., Nelson, L. K., & McCall, L. (2025). Updating “the future of coding”: Qualitative coding with generative large language models. *Sociological Methods & Research*. <https://doi.org/10.1177/00491241251339188>
    - Lu, L., Kwon, H., Wang, W., M. Cotter, L., A. Kriss, L., Minich, M., Liu, J., N. Cascio, C., & Yang, S. (2025). Cannabis warning labels, sensory marketing, and electronic word-of-mouth: AI-facilitated textual analysis of a randomized experiment among youth and young adults. *International Journal of Advertising*, 1–26. <https://doi.org/10.1080/02650487.2025.2548647>
 
@@ -522,6 +525,7 @@ Final grades will be assigned according to the University of Minnesota Letter Gr
 
 4. Optional Readings
    - Bail, C. A. (2024). Can generative AI improve social science? *Proceedings of the National Academy of Sciences, 121*(21), e2314021121. <https://doi.org/10.1073/pnas.2314021121>
+   - Ziems, C., Held, W., Shaikh, O., Chen, J., Zhang, Z., & Yang, D. (2024). Can large language models transform computational social science? *Computational Linguistics, 50*(1), 237–291. <https://doi.org/10.1162/coli_a_00502>
    - Törnberg, P. (2025). Large language models outperform expert coders and supervised classifiers at annotating political social media messages. *Social Science Computer Review, 43*(6), 1181–1195. <https://doi.org/10.1177/08944393241286471>
    - Schulze Buschoff, L. M., Akata, E., Bethge, M., & Schulz, E. (2025). Visual cognition in multimodal large language models. *Nature Machine Intelligence, 7*(1), 96–106. <https://doi.org/10.1038/s42256-024-00963-y>
    - Rathje, S., Mirea, D.-M., Sucholutsky, I., Marjieh, R., Robertson, C. E., & Van Bavel, J. J. (2024). GPT is an effective tool for multilingual psychological text analysis. *Proceedings of the National Academy of Sciences, 121*(34), e2308950121. <https://doi.org/10.1073/pnas.2308950121>
@@ -567,5 +571,5 @@ Final grades will be assigned according to the University of Minnesota Letter Gr
 
 ## 2.14. 2026/04/30 Final Week
 
-- Final Paper Presentations (due at the end of Week 14: [Week 14] Final Paper - Presentation)
-- Final Paper (due at the end of Week 15: [End] Final Paper)
+- Final Paper Presentations (due before the Week 14 class (2026/04/29): [Week 14] Final Paper - Presentation)
+- Final Paper (due at the end of the whole semester (2026/05/13): [End] Final Paper)
