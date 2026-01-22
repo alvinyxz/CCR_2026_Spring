@@ -85,7 +85,7 @@ You will serve as the lead discussant for the Required Empirical Reading that yo
 
 During class, you will provide a concise overview of each assigned reading, focusing on: (1) the core research question(s); (2) key substantive findings; and (3) the computational or analytical method(s) employed (at least at a conceptual level). Following these summaries, discussion leads will guide a class-wide conversation centered on key findings, open questions, and broader connections. This should not be a lecture, but rather an interactive discussion in which you actively engage your peers. Accordingly, you should prepare several discussion questions in advance to stimulate participation and deeper engagement. Of course, I will work with you to help keep the discussion moving.
 
-You may use any presentation format that best supports your goals (e.g., slides, whiteboard, handouts). Treat this role as an opportunity to practice your presentation, teaching, and discussant skills, which are essential in both academic and professional settings (e.g., conference panels, industry briefings).
+You may use any presentation format that best supports your goals (e.g., whiteboard, printed handouts, slides). Treat this role as an opportunity to practice your presentation, teaching, and discussant skills, which are essential in both academic and professional settings (e.g., conference panels, industry briefings).
 
 ## 1.2. Computational Toolkit Demo (10%*3 = 30%)
 
@@ -109,12 +109,12 @@ For example, for the igraph package about network analysis, the problem set can 
 
 ### 1.2.2. In-Class Demo (7%)
 
-Second, <span style="color: orange;">the group responsible for the particular R package should present the demo, taking the format of a short workshop (~30 minutes long), during the scheduled class time.</span> The presentation should cover:
+Second, <span style="color: orange;">the group responsible for the particular R package should present the demo, taking the format of a short workshop (~40 minutes long), during the scheduled class time.</span> The presentation should cover:
 
 - Introduction (~5 minutes): A brief overview of the package and the computational task it supports, emphasizing key concepts, methodologies, and applications. The tutorial teachers are expected to use slides to illustrate their points.
-- Interactive walk-through and coding exercises (~20 minutes): The teaching team guides the class through the analytical example, explaining code segments clearly, and engaging students in coding exercises. This includes:
-- Example code walk-through: For each section of the analytical example, walk the class through the code, explaining the purpose and functionality of each chunk of codes. Encourage students to follow along on their own devices.
-- Live coding exercises: The teaching team will explain the coding exercise in each section. Students will then have time to work on the exercise individually or in groups, promoting active engagement. Once students have completed the exercise, the teaching team will show the solution, discussing various approaches and addressing any questions or misconceptions.
+- Interactive walk-through and coding exercises (~30 minutes): The teaching team guides the class through the analytical example, explaining code segments clearly and engaging students in coding exercises, while sharing your screen. This includes:
+  - Example code walk-through: For each section of the analytical example, walk the class through the code, explaining the purpose and functionality of each chunk of codes. Encourage students to follow along on their own devices.
+  - Live coding exercises: The teaching team will explain the coding exercise in each section. Students will then have time to work on the exercise individually or in groups, promoting active engagement. Once students have completed the exercise, the teaching team will show the solution, discussing various approaches and addressing any questions or misconceptions.
 - Interactive Q&A (~5 minutes): At the end of the teaching session, the tutorial teachers should allocate Q&A time for additional questions or feedback from students.
 
 ### 1.2.3. Post-Demo Submission (1%)
