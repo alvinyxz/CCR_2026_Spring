@@ -219,7 +219,7 @@ Final grades will be assigned according to the University of Minnesota Letter Gr
 
 3. SICSS Boot Camp (Finish Before Next Class): <https://sicss.io/boot_camp/>
 
-4. Getting Started with Python: <https://htmlpreview.github.io/?https://github.com/alvinyxz/CCR_2026_Spring/blob/main/Week01/Week01.html>
+4. Getting Started: <https://htmlpreview.github.io/?https://github.com/alvinyxz/CCR_2026_Spring/blob/main/Week01/Week01.html>
 
 5. Overall Course Readings
    - Lazer, D., Pentland, A., Adamic, L., Aral, S., Barabasi, A.-L., Brewer, D., Christakis, N., Contractor, N., Fowler, J., Gutmann, M., Jebara, T., King, G., Macy, M., Roy, D., & Van Alstyne, M. (2009). Computational social science. *Science, 323*(5915), 721–723. <https://doi.org/10.1126/science.1167742>

@@ -1,0 +1,608 @@
+---
+title: "JOUR8500 Week02 Demo Problem Set (Completed)"
+author: "Alvin Zhou"
+date: "`r Sys.Date()`"
+output:
+  html_document:
+    toc: true
+    toc_depth: 2
+    number_sections: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+  echo = TRUE,
+  message = FALSE,
+  warning = FALSE
+)
+options(scipen = 999)
+```
+
+## Overview
+
+This problem set introduces a basic, but realistic, computational workflow commonly used in communication research on news framing, media bias, and audience engagement. The goal is to learn how computational workflow can substitute for manual analysis or SPSS/Excel. We will:
+
+1. Read/import data and understand what the data looks like in R
+2. Translate familiar communication-theory intuitions into statistical models
+3. Get comfortable running, inspecting, and interpreting models in R
+
+The dataset, `1_media_engagement.csv`, is an **article-level dataset** where each row represents a news article published by a major media outlet. The dataset includes information about framing, tone, political slant, production features (e.g., visuals, breaking news), and audience engagement.
+
+## Research Context
+
+Imagine you are studying **how news content characteristics affect audience engagement**, and whether these effects differ across media outlets.
+
+Substantive questions motivating this dataset include:
+
+- Do more politically slanted articles receive more engagement?
+- Does negative coverage attract more audience attention?
+- Are breaking news and visuals associated with higher engagement?
+- Do some outlets systematically generate more engagement than others?
+
+These are questions you could plausibly see in various top communication journals. They can also easily adapt to various other contexts (e.g., social media posts, advertising, political campaigns).
+
+## Key Variables
+
+### Identifiers and structure
+
+- `article_id`: unique article ID
+- `date`: publication date (YYYY-MM-DD)
+- `outlet`: outlet name
+- `outlet_type`: broad outlet category (e.g., legacy_mainstream, cable_news, wire_service)
+- `journalist_id`: journalist identifier (nested within outlet)
+
+### Content and production features
+
+- `topic`: article topic
+- `frame_type`: framing category
+- `tone`: tone score from -1 (very negative) to +1 (very positive)
+- `slant`: political slant from -1 (left) to +1 (right)
+- `breaking`: breaking news indicator (0/1)
+- `visuals`: visuals present indicator (0/1)
+- `length_words`: article length in words
+
+### Outcomes
+
+- `clicks`, `shares`, `comments`: engagement indicators (counts)
+- `engagement_index`: proprietary engagement measure (continuous)
+- `high_engagement`: binary indicator (1 = top 30% of engagement)
+
+## Part 0: Setup
+
+When coding, even if packages are invoked later, it's good practice to load all packages at the start of your script.
+
+If you have not yet installed the necessary packages, you should use install.packages() to install them first. Then load the packages using library().
+
+The packages we will use include: `skimr`, `lme4`, `lmerTest`, `plm`, `beepr`, and `modelsummary`. Google them, see their documentation, and get familiar with their functions. We will also use `glm`, which is a base R function for generalized linear models, so you do not need to install a separate package for it.
+
+```{r}
+# If needed (uncomment):
+# install.packages(c("skimr","lme4","lmerTest","plm","beepr","modelsummary"))
+
+library(skimr)
+library(lme4)
+library(lmerTest)
+library(plm)
+library(beepr)
+library(modelsummary)
+```
+
+Use plain language to describe what each package/function is used for in practical communication research workflows:
+
+- `skimr`: quick, readable descriptive statistics of data
+- `lm`: fits a linear regression model (ordinary least squares, OLS)
+- `lme4`: fits multilevel (mixed-effects) models to account for clustering/nesting (e.g., articles within outlets)  
+- `lmerTest`: adds p-values and inferential conveniences to `lme4` outputs, closer to what many reviewers expect  
+- `plm`: fits panel-data models (especially fixed effects) to compare units (e.g., outlets) to themselves over time 
+- `glm()`: base R function for generalized linear models (e.g., logistic regression for binary outcomes)  
+- `beepr`: plays a sound when code finishes (helpful for long-running models, bootstraps, or simulations)  
+- `modelsummary`: generates clean, publication-ready regression tables across many model types  
+
+## Part 1: Data Inspection and Descriptives
+
+### Task 1.1 - Load and inspect the data
+
+First load the dataset:
+
+```{r}
+# Load dataset.
+# file name: "1_media_engagement.csv"
+
+df <- read.csv("1_media_engagement.csv", stringsAsFactors = FALSE)
+```
+
+Answer the following with code and one sentence each:
+
+- How many rows and columns are in the dataset?
+- What is the unit of analysis?
+- Which variables are numeric? Which are categorical?
+
+Hint: Use `dim()`, `names()`, `str()`, `head()`.
+
+```{r}
+dim(df)
+names(df)
+str(df)
+head(df, 3)
+```
+
+**Answers:**
+
+- **Rows and columns:** 1200 rows and 17 columns.
+- **Unit of analysis:** one row is one news article.
+- **Numeric vs categorical:** numeric variables include `tone`, `slant`, `breaking`, `visuals`, `length_words`, `clicks`, `shares`, `comments`, `engagement_index`, `high_engagement`; categorical variables include variables like `topic`, `frame_type`, `outlet`, and `outlet_type`.
+
+### Task 1.2 - Descriptive statistics
+
+Produce descriptive statistics for the key variables below:
+
+- `topic`
+- `frame_type`
+- `engagement_index`
+- `tone`
+- `slant`
+- `length_words`
+
+You may use base R (`summary()`) or `skimr::skim()`. Questions to answer:
+
+- How many unique topics and frame types are there?
+- How are topic and frame_type distributed?
+- What is the mean and standard deviation of engagement_index, tone, slant, and length_words?
+- Is engagement highly skewed?
+- Are most articles neutral, positive, or negative in tone?
+- How polarized is the distribution of slant?
+
+```{r}
+# Quick skim of key variables
+skim(df$topic)
+skim(df$frame_type)
+skim(df$engagement_index)
+skim(df$tone)
+skim(df$slant)
+skim(df$length_words)
+skim(df$breaking)
+skim(df$visuals)
+```
+
+```{r}
+# Unique counts and distributions for key categorical variables
+length(unique(df$topic))
+table(df$topic)
+topic_counts <- table(df$topic)
+
+n_frames <- length(unique(df$frame_type))
+n_frames
+table(df$frame_type)
+frame_counts <- table(df$frame_type)
+
+topic_prop <- prop.table(topic_counts)
+topic_prop
+frame_prop <- prop.table(frame_counts)
+frame_prop
+```
+
+```{r}
+# Means and SDs for core continuous variables
+engagement_mean   <- mean(df$engagement_index, na.rm = TRUE)
+engagement_sd     <- sd(df$engagement_index, na.rm = TRUE)
+engagement_median <- median(df$engagement_index, na.rm = TRUE)
+
+tone_mean   <- mean(df$tone, na.rm = TRUE)
+tone_sd     <- sd(df$tone, na.rm = TRUE)
+
+slant_mean  <- mean(df$slant, na.rm = TRUE)
+slant_sd    <- sd(df$slant, na.rm = TRUE)
+
+abs_slant_mean <- mean(abs(df$slant), na.rm = TRUE)
+
+length_mean <- mean(df$length_words, na.rm = TRUE)
+length_sd   <- sd(df$length_words, na.rm = TRUE)
+
+desc_core <- data.frame(
+  variable = c("Engagement", "Tone", "Slant", "Absolute Slant", "Article Length"),
+  mean     = c(engagement_mean, tone_mean, slant_mean, abs_slant_mean, length_mean),
+  sd       = c(engagement_sd, tone_sd, slant_sd, NA, length_sd),
+  median   = c(engagement_median, NA, NA, NA, NA)
+)
+
+desc_core
+```
+
+**Answers:**
+
+- **Unique topics / frames:** 10 topics and 8 frame types.
+- **Topic/frame distributions:** see `topic_prop` and `frame_prop` above (some categories dominate).
+- **Means/SDs (selected):** engagement mean 4.795 (SD 0.593); tone mean 0.151 (SD 0.350); slant mean -0.001 (SD 0.358); length mean 724.036 (SD 229.059).
+- **Skew:** engagement is right-skewed if mean > median; here mean 4.795 vs median 4.778.
+- **Tone:** average tone is near neutral.
+- **Polarization:** mean absolute slant is 0.284 (higher implies more content away from center).
+
+### Task 1.3 - Outlet differences
+
+Compute mean engagement by outlet and identify the top 5 and bottom 5 outlets. Question to answer:
+
+- Do outlet differences look large enough to justify multilevel or fixed-effects modeling?
+
+```{r}
+# Step 1: get the list of outlets
+outlets <- unique(df$outlet)
+
+# Step 2: create an empty vector to store means
+outlet_mean_engagement <- numeric(length(outlets))
+names(outlet_mean_engagement) <- outlets
+
+# Step 3: compute mean engagement for each outlet
+for (i in seq_along(outlets)) {
+  current_outlet <- outlets[i]
+  
+  outlet_mean_engagement[i] <- mean(
+    df$engagement_index[df$outlet == current_outlet],
+    na.rm = TRUE
+  )
+}
+
+outlet_mean_engagement
+
+outlet_counts <- table(df$outlet)
+outlet_counts
+
+outlet_summary <- data.frame(
+  outlet = names(outlet_mean_engagement),
+  mean_engagement = as.numeric(outlet_mean_engagement),
+  n_articles = as.numeric(outlet_counts)
+)
+
+outlet_summary_sorted <- outlet_summary[
+  order(outlet_summary$mean_engagement, decreasing = TRUE),
+]
+
+outlet_summary_sorted
+
+top5 <- head(outlet_summary_sorted, 5)
+bottom5 <- tail(outlet_summary_sorted, 5)
+
+top5
+bottom5
+```
+
+**Answer:** Outlet differences are sizable: top-5 average engagement is ~5.152 versus bottom-5 ~4.477. This is large enough to justify either multilevel (random outlet intercepts) or fixed effects (outlet FE) approaches.
+
+## Part 2: Slant, Tone, and Engagement
+
+### Task 2.1 - Predicting engagement from content features
+
+Estimate a linear regression predicting engagement using three content features (`slant`, `tone`, and `length`):
+
+\[
+\text{engagement} = f(\text{slant}, \text{tone}, \text{length})
+\]
+
+Questions to answer:
+
+- Is political slant associated with engagement?
+- Is tone associated with engagement in the expected direction?
+- How substantively large are these effects?
+- If we consider slant as "absolute distance from neutral" (i.e., |slant|), how should we revise the model and does ideological extremity predict engagement? Name this model `m1`.
+
+```{r}
+# Baseline (signed slant)
+m1_signed <- lm(engagement_index ~ slant + tone + length_words, data = df)
+summary(m1_signed)
+
+# Revised model (absolute slant)
+df$abs_slant <-  abs(df$slant)
+m1 <- lm(engagement_index ~ abs_slant + tone + length_words, data = df)
+summary(m1)
+
+# Basic hygiene: ensure date is Date type
+# df$date <- as.Date(df$date)
+# however, in this practice, the above line is not strictly necessary
+```
+
+**Answer:**
+
+- **Political slant:** Yes. Signed slant tests left→right direction; absolute slant tests extremity. Here, `m1_signed` shows that right-leaning slant predicts higher engagement with a positive `slant` coefficient of 4.799.
+- **Tone direction:** In `m1_signed`, the tone coefficient is -0.644, consistent with the idea that more negative tone (lower values) predicts higher engagement.
+- **Substantive magnitude:** In `m1`, a 1 unit increase in absolute slant is associated with 0.979 positive change in engagement_index, holding other variables constant.  
+- **Extremity:** The absolute-slant model directly shows that ideological distance from neutral predicts engagement.
+
+### Task 2.2 - Add breaking news and visuals
+
+Going forward, let's use absolute slant (|slant|) as our slant measure.
+
+Estimate a linear regression predicting engagement using three content features (slant, tone, and length) plus breaking news and visuals:
+
+Name this model `m2`. Questions to answer:
+
+- Do breaking news and visuals predict engagement?
+- Do they change the slant/tone coefficients? Why might that happen?
+
+```{r}
+m2 <- lm(engagement_index ~ abs_slant + tone + breaking + visuals + length_words, data = df)
+summary(m2)
+```
+
+**Answer:**
+
+- **Breaking news effect:** Coefficient +0.541 which is the difference in engagement for breaking vs non-breaking.
+- **Visuals effect:** 0.337 (difference for visuals vs none).  
+- **Coefficient change:** If slant/tone coefficients shift compared to `m1`, it suggests breaking/visuals were correlated with content features and also mattered for engagement (classic omitted-variable story). However, here, slant/tone coefficients remain fairly stable.
+
+### Task 2.3 - Interpretation
+
+Pretend you are writing the results section using this dataset. Write a short paragraph (3-5 sentences) summarizing the key findings from tasks above, including coefficient estimates and substantive interpretations.
+
+**Answer:** In an OLS model predicting engagement, ideological extremity, negativity, and production cues all predict higher engagement. Holding other variables constant, the coefficient on absolute slant is positive and statistically significant ($B=1.00, se=.057, p<.001$), suggesting that articles further from the ideological center tend to receive more engagement. Tone is a significant negative predictor ($B=-.59, se=.035, p<.001$), consistent with the hypothesis regarding audiences' negativity bias that more negative coverage is associated with greater engagement. Breaking news is associated with an increase of engagement index of 0.541 ($se=.030, p<.001$), and visuals are associated with an increase of 0.337 ($se=.026, p<.001$). Overall, those results confirm our hypothesis: more extreme, more negative, and more packaging cues attracts attention.
+
+### Task 2.4 Robustness checks
+
+Re-run your main model using:
+
+- Only political topics (e.g., Politics, Elections, Immigration)
+- Excluding tabloid and partisan outlets
+- Only political topics (e.g., Politics, Elections, Immigration) and also excluding tabloid and partisan outlets
+
+```{r}
+# Let's create a new column/variable indicating if the article is on a political topic
+df$political_topic <- df$topic %in% c("Politics","Elections","Immigration") # this will be TRUE/FALSE
+# (A) Only political topics
+df_pol <- df[df$political_topic == TRUE, ]
+m2_pol <- lm(engagement_index ~ abs_slant + tone + breaking + visuals + length_words, data = df_pol)
+summary(m2_pol)
+
+df$partisan_or_tabloid <- df$outlet_type %in% c("tabloid","partisan_right")
+# (B) Excluding tabloid and partisan outlets
+df_no_tab_part <- df[df$partisan_or_tabloid == FALSE, ]
+m2_no_tab_part <- lm(engagement_index ~ abs_slant + tone + breaking + visuals + length_words, data = df_no_tab_part)
+summary(m2_no_tab_part)
+
+# (C) Political topics AND excluding tabloid/partisan
+df_pol_no_tab_part <- df[df$political_topic == TRUE & df$partisan_or_tabloid == FALSE, ]
+m2_pol_no_tab_part <- lm(engagement_index ~ abs_slant + tone + breaking + visuals + length_words, data = df_pol_no_tab_part)
+summary(m2_pol_no_tab_part)
+```
+
+**Answer:** The substantive conclusions are robust if core predictors keep the same sign and roughly comparable magnitudes across these restrictions. In practice, you should look for stability in the direction of `abs_slant`, `tone`, `breaking`, and `visuals`, and treat large swings as a diagnostic about which parts of the media ecosystem drive the headline result.
+
+What if the reviewer asks you to use the log of the sum of engagement indicators as the dependent variable instead of the proprietary score? Re-run your main model using log() as the DV. Does that change your conclusions? (also remember, be careful about zero values when using log; you can use log1p() to handle zeros).
+
+```{r}
+# let's create a variable for the sum of engagement
+df$engagement_sum <- df$clicks + df$shares + df$comments
+df$log_eng_sum <- log(df$engagement_sum) # alternative: log1p(df$engagement_sum)
+
+m2_logsum <- lm(log_eng_sum ~ abs_slant + tone + breaking + visuals + length_words, data = df)
+summary(m2_logsum)
+```
+
+Questions to answer: Are the substantive conclusions robust across this operationalization?
+
+**Answer:** Using `log1p(clicks + shares + comments)` preserves the story we just told, since the key predictors remain directionally consistent. Here, `abs_slant` is 1.034 and tone is -0.577 in the alternative DV specification.
+
+## Part 3: Binary Outcomes and Logistic Regression
+
+If audience engagement is operationalized as high vs. low attention, how should we proceed?
+
+### Task 3.1 - Logistic regression
+
+Use `high_engagement` as a binary dependent variable, estimate a logistic regression predicting `high_engagement` using three content features (`slant`, `tone`, and `length`) plus breaking news and visuals:
+
+Name this model `g1`. Questions to answer:
+
+- Which predictors increase the probability of high engagement?
+- How does interpretation differ from OLS?
+
+```{r}
+g1 <- glm(high_engagement ~ abs_slant + tone + breaking + visuals + length_words,
+          data = df, family = binomial())
+summary(g1)
+```
+
+**Answer:**
+
+- **Predictors increasing probability:** Positive coefficients increase the probability of high engagement; negative coefficients decrease it. In this dataset, absolute slant, breaking, and visuals typically increase the probability, while more positive tone tends to reduce it.
+- **OLS vs logit interpretation:** OLS changes the expected value of a continuous outcome; logit changes the probability of an event (high engagement), via log-odds. However, the qualitative story about directionality remains the same.
+
+### Task 3.2 - Predicted probabilities
+
+Compute predicted probabilities for two cases:
+
+- Case A: 0.1 absolute slant, +.5 tone, not breaking, no visuals
+- Case B: 0.9 absolute slant, -1 tone, breaking, visuals
+
+Question to answer:
+
+- How big is the substantive difference in predicted probability?
+
+```{r}
+caseA <- data.frame(
+  abs_slant = abs(0.1),
+  tone = 0.5,
+  breaking = 0,
+  visuals = 0,
+  length_words = mean(df$length_words, na.rm = TRUE)
+)
+
+caseB <- data.frame(
+  abs_slant = abs(0.9),
+  tone = -1,
+  breaking = 1,
+  visuals = 1,
+  length_words = mean(df$length_words, na.rm = TRUE)
+)
+
+pA <- predict(g1, newdata = caseA, type = "response")
+pB <- predict(g1, newdata = caseB, type = "response")
+
+pA
+pB
+```
+
+**Answer:** Predicted probability increases from 0.012 (Case A) to 0.998793 (Case B), which is a substantively large shift.
+
+## Part 4: Outlet-Level Differences (Multilevel)
+
+Articles are not independent. They are produced by outlets, and some outlets systematically generate more engagement than others. We can account for this nested structure using multilevel models.
+
+Estimate a multilevel model, with the same variables used above, with articles nested within outlets. Name this model `l1`.
+
+```{r}
+# No need to load specify "lmerTest"
+# lmerTest modifies lmer() output behind the scenes to add p-values, etc.
+l1 <- lmer(engagement_index ~ abs_slant + tone + breaking + visuals + length_words + (1 | outlet),
+           data = df)
+summary(l1)
+```
+
+Questions to answer:
+
+- Why is it reasonable to treat outlet as a random effect?
+- What does the random intercept capture substantively?
+- Compare this model vs the previous linear model: what changes, and why?
+
+**Answer:**
+
+- **Why outlet random effect:** articles within the same outlet share audiences, distribution strategies, and editorial style; treating them as independent inflates certainty.  
+- **Random intercept meaning:** baseline engagement differs by outlet; the random-effect model estimates that heterogeneity instead of forcing one global intercept.  
+- **What changes vs OLS:** standard errors become more conservative; coefficients can even shift if outlet-level differences were confounding the OLS relationship. However, here in our dataset, the story remains, despite the coefficients being slightly smaller in magnitude.
+
+## Part 5: Panel Logic (Fixed Effects)
+
+Another way to handle outlet differences is to compare outlets to themselves over time.
+
+Estimate a fixed-effects model with two fixed effects (outlet and date as fixed effects), using the same variables as above.
+
+You can use the `lm()` function with `factor()` to create fixed effects:
+
+```{r}
+fe_lm <- lm(engagement_index ~ abs_slant + tone + breaking + visuals + length_words +
+              factor(outlet) + factor(date),
+            data = df)
+summary(fe_lm)
+```
+
+However, a more efficient way is to use the `plm` package, which is designed for panel data. Use the `plm()` function to estimate the fixed effects model, and name this model `fe1`.
+
+```{r}
+fe1 <- plm(engagement_index ~ abs_slant + tone + breaking + visuals + length_words,
+           data = df, model = "within", index = c("outlet", "date"))
+summary(fe1)
+```
+
+Questions to answer:
+
+- What variation is used to estimate effects in fixed effects?
+- Which variables might shrink or lose significance, and why?
+- When would a reviewer prefer FE over a random-intercept multilevel model?
+
+**Answer:**
+
+- **Identifying variation:** FE uses within-outlet changes over time (outlet is compared to itself).  
+- **Why variables shrink:** predictors that vary mostly *between* outlets (not within) will weaken under FE models.
+- **When reviewers prefer FE:** when worried about unobserved outlet traits confounding slant/tone effects, FE is a conservative model.
+
+## Part 6: Model Comparison and Reporting
+
+### Task 6.1 - Create a regression table
+
+Using `modelsummary()` to create a table comparing at least three models:
+
+- OLS (m2)
+- Multilevel (l1)
+- Fixed effects (fe1)
+
+```{r}
+models <- list(
+  "OLS (m2)" = m2,
+  "Multilevel (l1)" = l1,
+  "Fixed effects (fe1)" = fe1
+)
+
+modelsummary(models)
+```
+
+Questions to answer:
+
+- Which results are most stable across models?
+- Which model do you think is most defensible for publication, and why?
+
+**Answers:**
+
+- **Most stable results:** Look for predictors that keep the same sign and remain non-trivial across OLS, multilevel, and FE. Overall, `tone` seems the most stable.
+- **Most defensible model:** FE is most conservative for causal-ish claims about within-outlet change; multilevel is best for generalization across outlets. In many papers, presenting both as robustness is strongest.
+
+### Task 6.2 - Clean up the model output
+
+`modelsummary()` gave you many rows of output that are sometimes cluttered or hard to read. Also, it will show variable names as they appear in the dataset, which are not publication-ready.
+
+Clean up the output by:
+
+- Renaming variables to more reader-friendly names (e.g., "Absolute Slant", "Tone", "Article Length", "Breaking News", "Visuals")
+- Removing unneeded rows (e.g., intercepts, random effects variance components, fixed effects dummies)
+- Adding model fit statistics (e.g., AIC, BIC, R-squared)
+- Adding a title and notes
+
+```{r}
+modelsummary(models,
+             coef_map = c(
+               "abs_slant" = "Absolute Slant",
+               "tone" = "Tone",
+               "breaking" = "Breaking News",
+               "visuals" = "Visuals Present",
+               "length_words" = "Article Length (words)"),
+             statistic = "({std.error})",
+             stars = TRUE,
+             title = "Predicting Audience Engagement from Content and Production Features",
+             notes = c("Standard errors in parentheses; OLS = Linear Regression; Multilevel includes random outlet intercept; FE estimates within-outlet effects."),
+             gof_map = data.frame(
+               raw = c("nobs","r.squared","adj.r.squared"),
+               clean = c("N","R-squared","Adj. R-squared"),
+               fmt = c(0,3,3)
+               )
+             )
+```
+
+### Task 6.3 - Save the table
+
+`modelsummary()` gave you many ways to save the table. Save your cleaned-up table as a .docx or .html file for easy sharing. Use `beepr::beep()` at the end to notify you when it's done.
+
+```{r}
+# Save as HTML (easy to view/share)
+modelsummary(models,
+             coef_map = c(
+               "abs_slant" = "Absolute Slant",
+               "tone" = "Tone",
+               "breaking" = "Breaking News",
+               "visuals" = "Visuals Present",
+               "length_words" = "Article Length (words)"),
+             statistic = "({std.error})",
+             stars = TRUE,
+             title = "Predicting Audience Engagement from Content and Production Features",
+             notes = c("Standard errors in parentheses; OLS = Linear Regression; Multilevel includes random outlet intercept; FE estimates within-outlet effects."),
+             gof_map = data.frame(
+               raw = c("nobs","r.squared","adj.r.squared"),
+               clean = c("N","R-squared","Adj. R-squared"),
+               fmt = c(0,3,3)
+               ),
+             output = "3_problem_set_output.html")
+# Save as docx (easy to copy paste)
+# might need to additionally install/load "pandoc" package for .docx output
+library("pandoc")
+modelsummary(models,
+             coef_map = c(
+               "abs_slant" = "Absolute Slant",
+               "tone" = "Tone",
+               "breaking" = "Breaking News",
+               "visuals" = "Visuals Present",
+               "length_words" = "Article Length (words)"),
+             statistic = "({std.error})",
+             stars = TRUE,
+             title = "Predicting Audience Engagement from Content and Production Features",
+             notes = c("Standard errors in parentheses; OLS = Linear Regression; Multilevel includes random outlet intercept; FE estimates within-outlet effects."),
+             gof_map = data.frame(
+               raw = c("nobs","r.squared","adj.r.squared"),
+               clean = c("N","R-squared","Adj. R-squared"),
+               fmt = c(0,3,3)),
+             output = "3_problem_set_output.docx")
+beep() # beep at end (comment out if annoying)
+```

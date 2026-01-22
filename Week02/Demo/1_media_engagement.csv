@@ -1,0 +1,1201 @@
+article_id,date,outlet,outlet_type,journalist_id,topic,frame_type,tone,slant,breaking,visuals,length_words,clicks,shares,comments,engagement_index,high_engagement
+a_00001,2025-08-16,USA Today,legacy_mainstream,j_17_009,Climate,Strategy/Game,-0.149,-0.145,0,0,894,368,22,42,4.6483,0
+a_00002,2025-12-12,Politico,digital_politics,j_09_019,Foreign Policy,Human Interest,0.429,-0.07,1,1,1127,987,120,40,5.6293,1
+a_00003,2025-11-22,The Daily Beast,digital_politics,j_19_020,Education,Human Interest,-0.497,0.04,0,1,711,362,43,36,4.8046,0
+a_00004,2025-10-15,BuzzFeed News,digital_viral,j_15_018,Elections,Economic Consequences,-0.245,-0.061,0,1,667,210,26,11,4.1617,0
+a_00005,2025-10-14,Breitbart,partisan_right,j_13_001,Foreign Policy,Conflict,0.54,1.0,0,1,882,539,60,45,5.1448,1
+a_00006,2025-12-27,New York Post,tabloid,j_18_002,Economy,Responsibility,0.026,0.366,0,0,747,387,37,22,4.6989,0
+a_00007,2025-08-15,Axios,digital_politics,j_10_024,Climate,Thematic,-0.501,-0.053,0,1,941,272,19,15,4.258,0
+a_00008,2025-11-29,The Daily Caller,partisan_right,j_14_012,Health,Economic Consequences,0.208,0.61,0,1,826,715,102,114,5.6262,1
+a_00009,2025-09-04,NPR,public_media,j_05_009,Health,Morality,-0.447,-0.289,0,1,860,588,72,22,5.1034,1
+a_00010,2025-08-17,The Daily Beast,digital_politics,j_19_010,Elections,Thematic,-0.161,0.015,0,0,830,532,44,50,5.0676,0
+a_00011,2025-10-31,HuffPost,digital_viral,j_12_016,Immigration,Episodic,0.027,-0.533,0,1,803,659,91,116,5.5551,1
+a_00012,2026-01-16,BuzzFeed News,digital_viral,j_15_015,Elections,Conflict,0.791,-0.256,0,0,614,401,49,42,4.9241,0
+a_00013,2025-12-06,Politico,digital_politics,j_09_014,Crime,Responsibility,0.789,0.164,0,1,606,198,23,8,4.0395,0
+a_00014,2025-12-10,USA Today,legacy_mainstream,j_17_008,Technology,Economic Consequences,0.281,0.256,0,1,1090,176,11,7,3.7494,0
+a_00015,2025-12-03,The Washington Post,legacy_mainstream,j_01_010,Technology,Economic Consequences,-0.096,-0.7,0,0,1072,726,125,37,5.4729,1
+a_00016,2025-12-14,The Wall Street Journal,legacy_mainstream,j_02_010,Politics,Economic Consequences,-0.578,0.544,0,1,979,414,36,33,4.8027,0
+a_00017,2025-10-28,Axios,digital_politics,j_10_006,Economy,Responsibility,0.267,0.015,0,1,668,169,23,14,4.0629,0
+a_00018,2025-08-23,The Daily Caller,partisan_right,j_14_015,Technology,Economic Consequences,0.391,0.079,0,0,783,366,37,14,4.5856,0
+a_00019,2025-12-24,The Guardian,international,j_16_021,Politics,Human Interest,0.32,-1.0,1,1,1104,1064,126,51,5.7289,1
+a_00020,2025-10-17,MSNBC,cable_news,j_08_003,Elections,Economic Consequences,0.289,-0.682,1,1,707,810,164,40,5.6236,1
+a_00021,2025-10-26,HuffPost,digital_viral,j_12_001,Politics,Human Interest,-0.307,-0.205,0,1,622,363,59,25,4.8285,0
+a_00022,2025-10-04,Vox,digital_explainer,j_11_004,Economy,Strategy/Game,0.092,-0.266,0,1,960,405,81,81,5.2065,1
+a_00023,2025-09-01,The Daily Beast,digital_politics,j_19_027,Education,Morality,0.63,-0.042,0,0,646,236,36,11,4.3143,0
+a_00024,2026-01-08,Breitbart,partisan_right,j_13_023,Politics,Human Interest,-0.375,0.513,0,1,600,776,121,35,5.4856,1
+a_00025,2025-12-14,MSNBC,cable_news,j_08_007,Elections,Responsibility,-0.044,-0.577,0,0,673,349,25,15,4.4609,0
+a_00026,2025-11-20,The Daily Beast,digital_politics,j_19_033,Education,Responsibility,0.183,-0.303,1,1,698,408,49,42,4.9327,0
+a_00027,2025-10-09,The Wall Street Journal,legacy_mainstream,j_02_008,Politics,Conflict,0.321,0.208,0,0,912,178,22,13,4.0622,0
+a_00028,2025-12-21,The Daily Beast,digital_politics,j_19_018,Immigration,Thematic,-0.305,-0.142,0,0,913,442,92,21,5.0248,0
+a_00029,2025-11-03,Reuters,wire_service,j_03_034,Immigration,Thematic,0.508,-0.197,0,1,882,184,21,11,4.0345,0
+a_00030,2025-10-16,NPR,public_media,j_05_002,Education,Responsibility,0.138,0.025,0,0,875,130,19,6,3.7255,0
+a_00031,2025-10-17,The Guardian,international,j_16_005,Foreign Policy,Responsibility,0.035,-0.455,1,1,910,350,51,30,4.8026,0
+a_00032,2025-09-09,The Daily Caller,partisan_right,j_14_016,Education,Strategy/Game,-0.244,0.333,0,1,656,658,134,187,5.7642,1
+a_00033,2025-08-16,The Daily Beast,digital_politics,j_19_006,Climate,Morality,0.764,-0.336,0,0,814,178,23,17,4.1252,0
+a_00034,2025-11-04,The Daily Caller,partisan_right,j_14_015,Health,Human Interest,-0.057,0.819,0,1,348,885,160,63,5.7496,1
+a_00035,2026-01-01,HuffPost,digital_viral,j_12_004,Immigration,Human Interest,0.469,-0.233,0,1,701,249,19,13,4.1873,0
+a_00036,2025-08-12,CNN,cable_news,j_06_004,Elections,Economic Consequences,0.518,-0.274,0,1,676,218,17,8,4.0011,0
+a_00037,2025-12-27,The New York Times,legacy_mainstream,j_00_006,Climate,Episodic,-0.056,-0.018,0,0,1397,397,24,43,4.7157,0
+a_00038,2025-12-22,The Wall Street Journal,legacy_mainstream,j_02_008,Immigration,Human Interest,-0.204,0.736,1,1,1142,2859,509,298,6.9897,1
+a_00039,2025-09-17,NPR,public_media,j_05_005,Crime,Human Interest,0.684,-0.148,0,0,778,178,30,10,4.1035,0
+a_00040,2025-11-18,The New York Times,legacy_mainstream,j_00_003,Education,Thematic,0.289,0.058,0,1,825,306,57,42,4.8338,0
+a_00041,2025-08-29,Axios,digital_politics,j_10_027,Elections,Responsibility,-0.363,0.309,1,1,829,875,93,66,5.5916,1
+a_00042,2025-12-10,BuzzFeed News,digital_viral,j_15_007,Politics,Responsibility,0.265,-0.201,1,0,499,229,25,25,4.3481,0
+a_00043,2025-11-30,The Daily Beast,digital_politics,j_19_009,Economy,Economic Consequences,0.064,-0.193,0,0,437,188,24,16,4.1532,0
+a_00044,2025-10-01,Politico,digital_politics,j_09_002,Technology,Human Interest,-0.46,-0.271,0,0,493,131,29,9,3.9223,0
+a_00045,2025-08-12,USA Today,legacy_mainstream,j_17_011,Technology,Strategy/Game,0.179,-0.101,0,0,771,368,90,17,4.8867,0
+a_00046,2026-01-15,The Daily Beast,digital_politics,j_19_007,Climate,Morality,-0.255,-0.357,0,1,421,714,128,49,5.5265,1
+a_00047,2025-10-17,USA Today,legacy_mainstream,j_17_024,Politics,Economic Consequences,-0.09,-0.151,1,0,882,528,80,60,5.276,1
+a_00048,2026-01-02,Politico,digital_politics,j_09_006,Crime,Episodic,0.16,-0.137,0,1,555,275,59,16,4.6051,0
+a_00049,2025-11-26,CNN,cable_news,j_06_032,Climate,Morality,0.0,-0.172,0,1,611,213,26,20,4.2806,0
+a_00050,2025-12-13,The Daily Beast,digital_politics,j_19_014,Climate,Strategy/Game,0.179,-0.067,0,1,681,304,36,13,4.4712,0
+a_00051,2025-12-10,AP News,wire_service,j_04_004,Immigration,Human Interest,-0.255,-0.03,0,0,589,297,38,33,4.6529,0
+a_00052,2025-09-03,MSNBC,cable_news,j_08_004,Education,Responsibility,0.472,-0.766,0,1,810,501,48,44,5.0382,0
+a_00053,2025-10-02,The Washington Post,legacy_mainstream,j_01_002,Immigration,Episodic,0.348,-0.337,0,0,999,231,29,9,4.2042,0
+a_00054,2025-10-20,BuzzFeed News,digital_viral,j_15_017,Foreign Policy,Thematic,0.638,-0.43,0,1,579,164,15,11,3.8817,0
+a_00055,2025-10-26,HuffPost,digital_viral,j_12_004,Climate,Economic Consequences,-0.098,-0.139,1,0,618,1061,206,126,6.0526,1
+a_00056,2025-08-08,The Washington Post,legacy_mainstream,j_01_018,Technology,Strategy/Game,-0.065,-0.024,0,1,775,314,51,12,4.5746,0
+a_00057,2025-11-03,AP News,wire_service,j_04_031,Climate,Thematic,0.478,0.064,0,0,562,59,13,3,3.1161,0
+a_00058,2025-08-27,Vox,digital_explainer,j_11_014,Politics,Strategy/Game,0.127,-0.447,0,1,862,280,21,20,4.3554,0
+a_00059,2025-12-07,Axios,digital_politics,j_10_017,Economy,Economic Consequences,-0.053,0.112,1,1,932,424,112,92,5.3508,1
+a_00060,2025-11-27,The Guardian,international,j_16_018,Technology,Economic Consequences,0.166,-0.418,0,1,684,331,26,18,4.4802,0
+a_00061,2026-01-07,NPR,public_media,j_05_002,Foreign Policy,Economic Consequences,-0.271,-0.485,1,0,703,587,52,56,5.1881,1
+a_00062,2025-12-07,New York Post,tabloid,j_18_009,Immigration,Conflict,0.563,0.385,1,1,542,683,74,58,5.3747,1
+a_00063,2025-10-03,MSNBC,cable_news,j_08_006,Politics,Episodic,0.375,-0.095,0,1,721,363,78,20,4.8683,0
+a_00064,2026-01-15,The Guardian,international,j_16_026,Climate,Thematic,0.331,-0.063,0,0,555,179,26,14,4.1268,0
+a_00065,2025-10-11,AP News,wire_service,j_04_010,Economy,Responsibility,0.417,-0.152,0,0,643,209,26,12,4.1753,0
+a_00066,2025-09-26,The New York Times,legacy_mainstream,j_00_031,Education,Responsibility,0.39,0.045,0,0,936,195,20,12,4.0654,0
+a_00067,2026-01-04,The Washington Post,legacy_mainstream,j_01_007,Foreign Policy,Episodic,0.217,-0.273,0,0,1061,988,83,32,5.4769,1
+a_00068,2025-10-04,Fox News,cable_news,j_07_035,Climate,Morality,-0.209,0.513,1,1,1051,1233,248,90,6.1164,1
+a_00069,2025-08-14,The Daily Beast,digital_politics,j_19_012,Climate,Morality,0.783,-0.328,0,1,1025,208,37,24,4.4062,0
+a_00070,2025-10-21,The New York Times,legacy_mainstream,j_00_014,Health,Responsibility,-0.358,-0.306,0,1,1091,394,86,30,5.016,0
+a_00071,2025-12-16,Fox News,cable_news,j_07_022,Crime,Human Interest,-0.278,-0.255,1,1,954,968,151,124,5.911,1
+a_00072,2025-09-02,The Wall Street Journal,legacy_mainstream,j_02_015,Foreign Policy,Conflict,0.67,0.125,0,1,1116,137,7,14,3.6291,0
+a_00073,2025-10-20,New York Post,tabloid,j_18_014,Education,Responsibility,0.487,0.223,0,0,479,295,26,21,4.4521,0
+a_00074,2025-08-23,Breitbart,partisan_right,j_13_021,Technology,Episodic,-0.043,0.547,1,1,695,743,118,40,5.4825,1
+a_00075,2025-11-27,BuzzFeed News,digital_viral,j_15_004,Health,Conflict,0.65,0.389,0,1,429,292,35,17,4.4932,0
+a_00076,2025-10-22,The Daily Caller,partisan_right,j_14_011,Politics,Economic Consequences,-0.449,0.259,0,1,739,383,43,14,4.6522,0
+a_00077,2025-09-27,Breitbart,partisan_right,j_13_004,Politics,Human Interest,-0.1,0.509,0,1,603,672,62,44,5.2601,1
+a_00078,2025-09-09,BuzzFeed News,digital_viral,j_15_005,Economy,Episodic,-0.512,-0.276,1,1,652,1155,218,92,6.0496,1
+a_00079,2025-11-06,The New York Times,legacy_mainstream,j_00_031,Crime,Responsibility,0.634,-0.391,0,1,613,665,106,116,5.6049,1
+a_00080,2025-11-24,USA Today,legacy_mainstream,j_17_009,Elections,Responsibility,-0.264,0.208,1,0,806,355,57,34,4.8667,0
+a_00081,2026-01-10,The Daily Caller,partisan_right,j_14_011,Technology,Strategy/Game,-0.283,0.92,0,1,594,1031,112,50,5.6742,1
+a_00082,2025-10-15,The Daily Caller,partisan_right,j_14_014,Economy,Human Interest,0.154,0.375,0,1,595,359,52,13,4.662,0
+a_00083,2025-08-28,Fox News,cable_news,j_07_012,Politics,Strategy/Game,0.619,0.169,0,1,353,194,16,13,4.0143,0
+a_00084,2025-12-23,The Guardian,international,j_16_023,Health,Conflict,0.302,-0.589,0,1,548,276,36,31,4.5884,0
+a_00085,2025-11-17,Fox News,cable_news,j_07_023,Foreign Policy,Conflict,0.571,0.677,1,0,493,827,46,55,5.3196,1
+a_00086,2025-11-30,The New York Times,legacy_mainstream,j_00_033,Crime,Episodic,0.561,0.03,0,0,571,171,13,17,3.9435,0
+a_00087,2025-08-17,New York Post,tabloid,j_18_013,Education,Strategy/Game,-0.065,0.174,1,0,525,1636,198,111,6.232,1
+a_00088,2025-09-24,AP News,wire_service,j_04_012,Foreign Policy,Economic Consequences,-0.128,-0.349,0,0,789,241,75,26,4.7029,0
+a_00089,2025-12-11,The Wall Street Journal,legacy_mainstream,j_02_010,Politics,Morality,0.319,-0.127,1,1,1172,397,29,13,4.5414,0
+a_00090,2025-12-22,HuffPost,digital_viral,j_12_023,Climate,Conflict,0.534,-0.157,0,1,766,264,23,44,4.5046,0
+a_00091,2025-10-15,AP News,wire_service,j_04_012,Elections,Strategy/Game,0.668,0.137,0,0,893,88,13,4,3.3579,0
+a_00092,2025-12-18,USA Today,legacy_mainstream,j_17_015,Crime,Episodic,0.494,-0.567,0,0,840,340,85,38,4.985,0
+a_00093,2025-12-24,MSNBC,cable_news,j_08_014,Politics,Human Interest,-0.301,-0.38,0,1,738,290,42,19,4.5642,0
+a_00094,2025-10-07,The New York Times,legacy_mainstream,j_00_008,Elections,Human Interest,0.357,0.155,0,1,1128,212,37,15,4.3264,0
+a_00095,2026-01-03,The Daily Beast,digital_politics,j_19_014,Elections,Economic Consequences,0.15,-0.254,1,0,965,498,60,33,5.0448,0
+a_00096,2025-09-19,Axios,digital_politics,j_10_007,Technology,Morality,-0.095,0.422,0,1,718,491,56,41,5.0597,0
+a_00097,2025-09-11,NPR,public_media,j_05_003,Climate,Human Interest,-0.138,-0.038,0,0,1079,335,47,31,4.7631,0
+a_00098,2025-11-27,Breitbart,partisan_right,j_13_004,Economy,Economic Consequences,-0.107,0.379,0,1,250,852,92,107,5.6706,1
+a_00099,2025-11-19,Axios,digital_politics,j_10_021,Foreign Policy,Morality,0.567,-0.023,0,1,798,237,41,36,4.5796,0
+a_00100,2025-08-25,The New York Times,legacy_mainstream,j_00_016,Technology,Episodic,-0.425,-0.282,0,1,725,490,38,43,4.9541,0
+a_00101,2025-12-23,BuzzFeed News,digital_viral,j_15_008,Politics,Episodic,-0.098,-0.288,0,1,887,592,109,104,5.5335,1
+a_00102,2025-09-04,MSNBC,cable_news,j_08_020,Immigration,Human Interest,-0.049,-0.542,0,1,883,362,50,28,4.8002,0
+a_00103,2025-12-18,Breitbart,partisan_right,j_13_026,Elections,Thematic,0.534,1.0,1,1,409,632,79,80,5.4187,1
+a_00104,2025-08-02,USA Today,legacy_mainstream,j_17_008,Foreign Policy,Economic Consequences,0.516,-0.294,0,0,1234,313,24,29,4.5206,0
+a_00105,2025-12-16,HuffPost,digital_viral,j_12_024,Economy,Thematic,-0.492,0.07,0,0,369,233,22,13,4.1961,0
+a_00106,2025-12-15,Breitbart,partisan_right,j_13_038,Politics,Human Interest,0.455,0.541,0,1,515,475,98,39,5.199,1
+a_00107,2025-12-14,NPR,public_media,j_05_012,Elections,Responsibility,0.705,-0.206,0,1,808,223,28,21,4.3342,0
+a_00108,2025-11-24,AP News,wire_service,j_04_012,Elections,Economic Consequences,-0.102,0.14,0,0,643,178,27,13,4.1212,0
+a_00109,2025-10-21,MSNBC,cable_news,j_08_003,Technology,Episodic,-0.856,-0.45,1,0,250,1230,122,112,5.9469,1
+a_00110,2025-11-30,USA Today,legacy_mainstream,j_17_031,Immigration,Human Interest,0.028,0.092,0,1,997,468,63,54,5.1244,1
+a_00111,2025-09-17,Axios,digital_politics,j_10_015,Crime,Episodic,0.737,-0.462,0,1,722,271,23,20,4.3652,0
+a_00112,2025-12-14,CNN,cable_news,j_06_016,Crime,Conflict,1.0,0.01,1,1,640,338,47,6,4.4635,0
+a_00113,2025-11-05,BuzzFeed News,digital_viral,j_15_023,Politics,Responsibility,-0.061,-0.667,0,1,602,570,88,98,5.4393,1
+a_00114,2025-10-19,USA Today,legacy_mainstream,j_17_001,Politics,Economic Consequences,0.576,-0.107,1,1,973,384,58,25,4.8515,0
+a_00115,2025-10-27,New York Post,tabloid,j_18_002,Economy,Thematic,-0.668,0.414,0,1,545,726,72,36,5.3038,1
+a_00116,2025-11-07,NPR,public_media,j_05_027,Foreign Policy,Morality,0.19,-0.044,0,0,1204,477,57,20,4.9118,0
+a_00117,2025-08-07,The Daily Caller,partisan_right,j_14_022,Politics,Strategy/Game,0.075,0.225,1,1,250,733,120,46,5.508,1
+a_00118,2025-08-25,Vox,digital_explainer,j_11_001,Economy,Thematic,0.346,-0.542,0,1,728,415,52,23,4.842,0
+a_00119,2025-09-12,MSNBC,cable_news,j_08_018,Technology,Responsibility,0.289,-0.472,1,1,501,527,64,27,5.0533,0
+a_00120,2025-08-20,Fox News,cable_news,j_07_016,Economy,Conflict,0.686,0.397,0,1,405,448,118,24,5.131,1
+a_00121,2025-10-16,The Wall Street Journal,legacy_mainstream,j_02_011,Politics,Economic Consequences,-0.355,-0.308,1,1,934,1148,111,111,5.8826,1
+a_00122,2025-11-24,NPR,public_media,j_05_010,Climate,Economic Consequences,0.309,-0.203,0,1,827,301,59,62,4.9121,0
+a_00123,2025-11-22,Axios,digital_politics,j_10_001,Health,Thematic,0.103,0.128,0,1,582,323,29,36,4.6329,0
+a_00124,2025-10-21,USA Today,legacy_mainstream,j_17_023,Climate,Thematic,-0.551,-0.121,0,0,942,466,79,61,5.2132,1
+a_00125,2025-12-26,USA Today,legacy_mainstream,j_17_013,Elections,Morality,-0.27,0.081,0,1,1043,558,97,34,5.2496,1
+a_00126,2025-11-06,Reuters,wire_service,j_03_033,Politics,Thematic,0.361,0.056,0,1,707,163,18,13,3.9611,0
+a_00127,2025-08-14,Breitbart,partisan_right,j_13_015,Elections,Economic Consequences,0.196,0.515,0,1,588,540,48,50,5.1006,1
+a_00128,2025-12-11,The Washington Post,legacy_mainstream,j_01_021,Elections,Strategy/Game,-0.086,-0.634,1,1,900,1422,97,76,5.8745,1
+a_00129,2025-11-08,Breitbart,partisan_right,j_13_005,Foreign Policy,Morality,0.138,0.683,1,0,719,842,92,51,5.5185,1
+a_00130,2025-11-18,CNN,cable_news,j_06_006,Immigration,Economic Consequences,0.159,-0.338,1,0,287,382,62,43,4.9738,0
+a_00131,2025-11-06,MSNBC,cable_news,j_08_021,Climate,Human Interest,-0.075,-0.445,0,1,733,470,44,60,5.0416,0
+a_00132,2025-11-04,The Daily Caller,partisan_right,j_14_009,Immigration,Morality,-0.316,0.67,1,0,539,583,82,45,5.2763,1
+a_00133,2025-08-16,MSNBC,cable_news,j_08_011,Immigration,Human Interest,0.616,0.054,0,1,827,377,30,15,4.5522,0
+a_00134,2025-11-05,The Guardian,international,j_16_021,Politics,Economic Consequences,0.451,-0.31,0,1,1066,221,28,14,4.2531,0
+a_00135,2025-12-16,Axios,digital_politics,j_10_016,Elections,Human Interest,-0.051,0.189,1,0,1011,413,37,15,4.6587,0
+a_00136,2025-09-22,The Daily Beast,digital_politics,j_19_030,Climate,Economic Consequences,-0.039,-0.561,0,0,618,342,45,26,4.7266,0
+a_00137,2025-11-13,HuffPost,digital_viral,j_12_007,Education,Thematic,-0.042,-0.139,0,1,413,363,41,31,4.763,0
+a_00138,2025-08-06,NPR,public_media,j_05_024,Crime,Morality,0.111,-0.215,0,0,426,155,14,10,3.8169,0
+a_00139,2025-09-30,BuzzFeed News,digital_viral,j_15_036,Politics,Conflict,0.547,0.257,0,1,553,266,29,22,4.4411,0
+a_00140,2025-10-15,MSNBC,cable_news,j_08_012,Technology,Responsibility,-0.499,-0.435,1,1,725,1067,104,98,5.802,1
+a_00141,2026-01-18,Axios,digital_politics,j_10_002,Technology,Thematic,-0.171,-0.01,0,0,918,236,20,20,4.2563,0
+a_00142,2025-09-07,The Wall Street Journal,legacy_mainstream,j_02_021,Crime,Human Interest,-0.101,0.465,0,1,523,368,73,15,4.8011,0
+a_00143,2025-09-17,The Wall Street Journal,legacy_mainstream,j_02_014,Health,Episodic,-0.235,0.177,0,1,748,553,66,36,5.1422,1
+a_00144,2025-10-10,Vox,digital_explainer,j_11_012,Economy,Responsibility,0.644,-0.527,0,1,886,150,9,14,3.741,0
+a_00145,2026-01-19,Reuters,wire_service,j_03_031,Technology,Strategy/Game,0.118,0.638,0,1,655,252,27,41,4.5139,0
+a_00146,2025-12-26,The Daily Beast,digital_politics,j_19_021,Crime,Human Interest,0.212,-0.47,1,1,283,525,98,34,5.2223,1
+a_00147,2025-08-07,USA Today,legacy_mainstream,j_17_017,Elections,Conflict,-0.153,-0.066,1,0,641,472,49,46,5.0232,0
+a_00148,2025-09-10,The Daily Caller,partisan_right,j_14_015,Politics,Human Interest,-0.229,0.637,1,1,808,843,193,97,5.8664,1
+a_00149,2025-12-21,The Daily Caller,partisan_right,j_14_008,Health,Thematic,0.088,0.617,0,0,250,397,40,27,4.7737,0
+a_00150,2025-08-11,Vox,digital_explainer,j_11_003,Health,Episodic,0.058,-0.297,1,1,770,602,97,79,5.4529,1
+a_00151,2025-12-27,The Washington Post,legacy_mainstream,j_01_030,Technology,Episodic,-0.646,-0.196,0,1,809,876,170,119,5.8883,1
+a_00152,2025-09-18,Fox News,cable_news,j_07_017,Technology,Thematic,-0.088,0.291,0,1,575,523,83,77,5.3313,1
+a_00153,2026-01-06,Politico,digital_politics,j_09_005,Immigration,Human Interest,0.16,-0.229,0,1,724,199,17,19,4.1154,0
+a_00154,2025-09-20,New York Post,tabloid,j_18_011,Elections,Human Interest,0.535,0.738,0,1,534,515,50,124,5.2683,1
+a_00155,2025-10-15,AP News,wire_service,j_04_029,Health,Thematic,-0.347,-0.055,1,0,752,449,92,25,5.066,0
+a_00156,2025-11-23,Politico,digital_politics,j_09_001,Immigration,Responsibility,-0.473,0.199,0,0,801,253,26,54,4.5589,0
+a_00157,2025-08-22,CNN,cable_news,j_06_021,Politics,Human Interest,-0.349,-0.184,1,1,584,789,150,86,5.7344,1
+a_00158,2025-11-05,The Wall Street Journal,legacy_mainstream,j_02_013,Economy,Human Interest,-0.329,0.111,0,1,887,395,46,57,4.9578,0
+a_00159,2025-10-27,The Wall Street Journal,legacy_mainstream,j_02_018,Crime,Thematic,0.471,0.086,0,0,799,165,23,10,3.989,0
+a_00160,2025-12-14,Fox News,cable_news,j_07_005,Politics,Conflict,-0.465,-0.037,1,1,1009,2922,243,331,6.8004,1
+a_00161,2026-01-20,The Washington Post,legacy_mainstream,j_01_021,Climate,Conflict,0.215,-0.19,0,0,1072,237,26,36,4.4471,0
+a_00162,2025-11-23,The Washington Post,legacy_mainstream,j_01_007,Immigration,Strategy/Game,0.728,-0.252,0,1,1099,384,38,17,4.6538,0
+a_00163,2025-10-10,Fox News,cable_news,j_07_022,Education,Conflict,0.252,0.643,0,1,390,373,55,26,4.8289,0
+a_00164,2025-10-10,AP News,wire_service,j_04_001,Technology,Economic Consequences,0.119,-0.299,1,1,456,437,61,11,4.7762,0
+a_00165,2025-10-12,Vox,digital_explainer,j_11_014,Climate,Thematic,-0.543,-0.394,0,0,908,666,106,45,5.419,1
+a_00166,2025-12-19,The New York Times,legacy_mainstream,j_00_021,Crime,Morality,-0.031,-0.475,0,1,704,386,44,19,4.7204,0
+a_00167,2025-09-25,CNN,cable_news,j_06_009,Politics,Strategy/Game,0.731,0.261,0,0,519,196,19,13,4.0681,0
+a_00168,2025-08-29,Politico,digital_politics,j_09_004,Politics,Morality,0.28,-0.167,0,1,1078,221,32,71,4.6056,0
+a_00169,2025-09-27,The Daily Beast,digital_politics,j_19_006,Immigration,Conflict,0.481,-0.059,0,1,909,200,19,35,4.2671,0
+a_00170,2025-08-04,HuffPost,digital_viral,j_12_010,Elections,Economic Consequences,-0.085,0.043,0,0,575,401,79,15,4.8674,0
+a_00171,2025-08-19,USA Today,legacy_mainstream,j_17_002,Politics,Episodic,0.23,-0.087,0,1,1096,229,30,22,4.3763,0
+a_00172,2025-08-16,CNN,cable_news,j_06_027,Climate,Conflict,0.006,-0.444,0,1,690,237,29,26,4.4157,0
+a_00173,2025-12-12,MSNBC,cable_news,j_08_009,Education,Responsibility,0.356,-0.641,0,1,630,799,127,50,5.5843,1
+a_00174,2025-12-03,MSNBC,cable_news,j_08_017,Foreign Policy,Human Interest,0.918,-0.085,0,0,458,109,14,9,3.6232,0
+a_00175,2025-11-29,USA Today,legacy_mainstream,j_17_025,Technology,Human Interest,-0.005,-0.365,0,1,754,379,29,32,4.6897,0
+a_00176,2025-10-19,The Daily Beast,digital_politics,j_19_002,Climate,Thematic,-0.24,-0.102,0,1,790,785,73,30,5.3115,1
+a_00177,2025-12-03,The Daily Beast,digital_politics,j_19_020,Immigration,Responsibility,-0.56,-0.171,0,0,862,366,72,16,4.8065,0
+a_00178,2025-08-28,BuzzFeed News,digital_viral,j_15_035,Foreign Policy,Responsibility,-0.255,0.044,0,1,567,335,47,27,4.7364,0
+a_00179,2026-01-03,Axios,digital_politics,j_10_024,Politics,Human Interest,0.416,0.168,1,0,400,226,17,18,4.1685,0
+a_00180,2025-10-26,Axios,digital_politics,j_10_011,Elections,Morality,0.041,-0.183,0,0,605,144,22,8,3.8685,0
+a_00181,2026-01-10,The Daily Beast,digital_politics,j_19_008,Politics,Strategy/Game,0.189,-0.444,0,0,839,349,39,17,4.6137,0
+a_00182,2025-08-27,NPR,public_media,j_05_001,Foreign Policy,Conflict,0.697,-0.021,0,1,911,186,19,13,4.0421,0
+a_00183,2025-10-26,CNN,cable_news,j_06_011,Politics,Economic Consequences,0.595,-0.257,0,1,1003,422,38,49,4.9052,0
+a_00184,2025-11-29,USA Today,legacy_mainstream,j_17_024,Economy,Responsibility,0.09,-0.738,0,0,985,384,74,27,4.9383,0
+a_00185,2025-10-25,Fox News,cable_news,j_07_026,Politics,Responsibility,-0.021,0.512,1,0,715,944,64,158,5.6917,1
+a_00186,2025-10-17,AP News,wire_service,j_04_002,Crime,Conflict,0.571,-0.259,1,0,494,113,11,6,3.5028,0
+a_00187,2025-08-29,Vox,digital_explainer,j_11_015,Health,Episodic,-0.088,-0.133,0,1,1049,418,59,34,4.9583,0
+a_00188,2025-10-05,CNN,cable_news,j_06_009,Politics,Responsibility,0.028,0.248,0,1,594,471,111,29,5.1743,1
+a_00189,2025-09-11,USA Today,legacy_mainstream,j_17_026,Crime,Economic Consequences,0.474,-0.046,0,1,705,408,67,41,5.0202,0
+a_00190,2025-09-22,New York Post,tabloid,j_18_002,Crime,Episodic,0.456,0.449,0,1,250,390,39,20,4.6999,0
+a_00191,2025-11-27,CNN,cable_news,j_06_022,Education,Thematic,0.489,-0.062,0,1,755,193,45,38,4.5152,0
+a_00192,2025-11-18,Axios,digital_politics,j_10_029,Elections,Morality,0.382,0.447,1,0,871,447,38,14,4.6931,0
+a_00193,2025-11-14,The Daily Beast,digital_politics,j_19_005,Immigration,Human Interest,0.395,-0.466,0,1,623,307,46,54,4.8216,0
+a_00194,2025-10-02,The Daily Caller,partisan_right,j_14_002,Politics,Human Interest,-0.271,0.548,0,1,699,819,131,64,5.6544,1
+a_00195,2026-01-14,AP News,wire_service,j_04_013,Health,Responsibility,0.258,0.168,0,1,692,181,18,18,4.0742,0
+a_00196,2025-08-16,Vox,digital_explainer,j_11_007,Elections,Conflict,0.333,-0.298,0,1,905,231,40,33,4.5427,0
+a_00197,2025-09-29,HuffPost,digital_viral,j_12_018,Politics,Morality,0.369,0.088,0,0,584,128,14,15,3.7968,0
+a_00198,2025-08-21,Breitbart,partisan_right,j_13_015,Crime,Conflict,0.757,0.542,1,1,352,777,134,40,5.5427,1
+a_00199,2025-09-28,The New York Times,legacy_mainstream,j_00_021,Elections,Conflict,0.565,0.267,0,1,991,598,43,60,5.1551,1
+a_00200,2026-01-14,NPR,public_media,j_05_014,Elections,Morality,0.972,0.331,1,1,786,329,50,62,4.9077,0
+a_00201,2025-10-03,USA Today,legacy_mainstream,j_17_016,Crime,Strategy/Game,0.828,0.021,1,1,648,391,46,19,4.7398,0
+a_00202,2026-01-05,AP News,wire_service,j_04_003,Immigration,Thematic,0.303,0.138,1,1,410,401,81,86,5.2134,1
+a_00203,2025-10-25,NPR,public_media,j_05_019,Crime,Conflict,0.879,0.098,0,0,664,144,19,13,3.9149,0
+a_00204,2025-11-30,CNN,cable_news,j_06_007,Education,Economic Consequences,0.479,-0.397,0,0,467,221,46,13,4.3842,0
+a_00205,2025-10-19,Reuters,wire_service,j_03_007,Politics,Morality,-0.181,-0.328,0,0,692,241,39,11,4.3481,0
+a_00206,2025-09-15,Reuters,wire_service,j_03_009,Politics,Responsibility,0.611,0.314,0,1,786,251,32,17,4.3917,0
+a_00207,2025-12-11,CNN,cable_news,j_06_020,Climate,Thematic,-0.447,-0.032,1,1,785,971,173,27,5.6538,1
+a_00208,2026-01-15,USA Today,legacy_mainstream,j_17_002,Economy,Strategy/Game,0.081,-0.107,0,1,1006,386,69,23,4.8894,0
+a_00209,2025-09-15,The New York Times,legacy_mainstream,j_00_028,Immigration,Responsibility,0.268,-0.247,1,1,979,566,90,37,5.251,1
+a_00210,2025-12-13,NPR,public_media,j_05_013,Health,Conflict,0.72,-0.797,0,0,707,246,15,11,4.0835,0
+a_00211,2025-09-15,The Washington Post,legacy_mainstream,j_01_025,Elections,Conflict,0.204,-0.198,0,1,828,314,30,34,4.6176,0
+a_00212,2025-12-03,Vox,digital_explainer,j_11_018,Foreign Policy,Economic Consequences,0.046,-0.438,0,0,812,302,66,20,4.7272,0
+a_00213,2025-12-15,NPR,public_media,j_05_027,Technology,Strategy/Game,0.129,0.03,0,1,593,304,27,16,4.4265,0
+a_00214,2025-10-17,BuzzFeed News,digital_viral,j_15_023,Education,Human Interest,-0.206,0.199,0,1,484,168,31,11,4.1017,0
+a_00215,2025-12-06,Vox,digital_explainer,j_11_004,Economy,Economic Consequences,0.356,-0.106,0,1,758,289,50,26,4.6737,0
+a_00216,2025-09-17,BuzzFeed News,digital_viral,j_15_031,Technology,Strategy/Game,1.0,0.049,0,1,497,170,18,13,3.982,0
+a_00217,2025-08-14,HuffPost,digital_viral,j_12_013,Economy,Episodic,0.276,-0.574,0,1,406,269,18,14,4.2242,0
+a_00218,2025-08-17,MSNBC,cable_news,j_08_014,Foreign Policy,Morality,0.079,-0.152,0,0,401,350,39,28,4.7105,0
+a_00219,2025-10-17,USA Today,legacy_mainstream,j_17_036,Foreign Policy,Thematic,-0.289,0.107,0,0,1127,230,64,17,4.5516,0
+a_00220,2026-01-04,Politico,digital_politics,j_09_020,Elections,Strategy/Game,0.302,0.361,0,1,715,318,32,13,4.4594,0
+a_00221,2025-08-23,New York Post,tabloid,j_18_019,Foreign Policy,Strategy/Game,0.068,0.73,0,1,499,1481,152,95,6.0726,1
+a_00222,2025-10-18,The Daily Beast,digital_politics,j_19_017,Elections,Episodic,0.44,-0.623,0,1,603,631,60,63,5.2895,1
+a_00223,2025-11-30,Vox,digital_explainer,j_11_012,Economy,Economic Consequences,0.236,-0.347,0,1,976,495,102,49,5.2761,1
+a_00224,2025-09-05,Breitbart,partisan_right,j_13_015,Elections,Episodic,0.161,0.464,0,1,917,704,88,47,5.3999,1
+a_00225,2025-12-03,NPR,public_media,j_05_008,Climate,Thematic,0.545,-0.157,0,1,777,180,20,19,4.1118,0
+a_00226,2025-09-22,The Guardian,international,j_16_008,Crime,Thematic,0.029,-0.297,0,0,671,527,117,24,5.2095,1
+a_00227,2025-12-18,Breitbart,partisan_right,j_13_002,Climate,Responsibility,0.064,0.591,0,0,863,732,121,34,5.4508,1
+a_00228,2025-11-09,New York Post,tabloid,j_18_003,Health,Episodic,0.292,0.457,0,0,250,299,29,20,4.4812,0
+a_00229,2025-11-03,NPR,public_media,j_05_023,Health,Thematic,0.218,-0.475,0,1,1104,206,18,32,4.249,0
+a_00230,2025-08-31,BuzzFeed News,digital_viral,j_15_015,Economy,Episodic,0.533,-0.31,0,1,1020,479,97,39,5.2002,1
+a_00231,2025-10-20,Politico,digital_politics,j_09_019,Politics,Thematic,0.179,-0.206,0,1,363,252,34,16,4.3999,0
+a_00232,2025-12-27,Reuters,wire_service,j_03_023,Technology,Episodic,0.215,-0.09,1,1,532,198,16,32,4.1959,0
+a_00233,2025-08-04,Reuters,wire_service,j_03_001,Elections,Morality,0.05,-0.307,1,1,571,437,32,28,4.7635,0
+a_00234,2025-12-10,Vox,digital_explainer,j_11_004,Immigration,Strategy/Game,0.575,-0.262,0,1,852,234,21,53,4.4549,0
+a_00235,2025-10-25,CNN,cable_news,j_06_008,Technology,Morality,0.321,-0.141,0,1,425,393,34,23,4.6904,0
+a_00236,2025-12-03,The Wall Street Journal,legacy_mainstream,j_02_022,Crime,Episodic,0.854,0.003,0,0,876,171,11,8,3.7587,0
+a_00237,2025-11-23,MSNBC,cable_news,j_08_008,Crime,Episodic,-0.201,-0.082,1,1,430,580,53,40,5.1218,1
+a_00238,2025-10-14,Breitbart,partisan_right,j_13_013,Economy,Thematic,-0.272,0.635,0,0,456,747,73,49,5.3823,1
+a_00239,2025-09-23,CNN,cable_news,j_06_030,Foreign Policy,Responsibility,0.497,0.166,0,1,669,238,27,12,4.2509,0
+a_00240,2025-11-17,The Daily Beast,digital_politics,j_19_037,Economy,Morality,-0.595,-0.249,0,1,843,459,112,125,5.4511,1
+a_00241,2025-08-25,BuzzFeed News,digital_viral,j_15_004,Education,Economic Consequences,0.098,-0.056,0,1,267,221,27,19,4.3001,0
+a_00242,2025-11-10,Axios,digital_politics,j_10_002,Education,Strategy/Game,0.418,-0.091,0,0,354,224,29,21,4.3466,0
+a_00243,2025-08-17,New York Post,tabloid,j_18_004,Climate,Responsibility,-0.173,0.198,1,0,959,851,138,50,5.6405,1
+a_00244,2025-11-21,MSNBC,cable_news,j_08_003,Foreign Policy,Responsibility,0.021,-0.122,1,1,584,965,120,54,5.6768,1
+a_00245,2025-11-17,The Wall Street Journal,legacy_mainstream,j_02_004,Health,Strategy/Game,-0.122,0.097,0,0,805,494,77,61,5.2347,1
+a_00246,2025-08-15,The New York Times,legacy_mainstream,j_00_011,Elections,Episodic,0.144,-0.12,0,1,858,260,39,8,4.3284,0
+a_00247,2025-12-10,New York Post,tabloid,j_18_022,Education,Economic Consequences,-0.198,-0.003,0,1,549,152,21,6,3.8317,0
+a_00248,2025-10-11,The Daily Beast,digital_politics,j_19_012,Foreign Policy,Morality,0.095,-0.01,0,1,1169,559,199,37,5.481,1
+a_00249,2025-12-15,The Daily Caller,partisan_right,j_14_021,Immigration,Strategy/Game,0.079,0.405,0,1,724,460,86,67,5.2504,1
+a_00250,2025-08-08,The Wall Street Journal,legacy_mainstream,j_02_008,Foreign Policy,Episodic,0.169,0.413,0,1,707,270,25,17,4.3566,0
+a_00251,2025-09-01,NPR,public_media,j_05_023,Elections,Episodic,0.115,-0.185,1,0,601,269,41,25,4.5721,0
+a_00252,2025-10-25,The New York Times,legacy_mainstream,j_00_023,Crime,Episodic,0.862,0.13,1,1,658,390,40,29,4.7787,0
+a_00253,2025-09-02,The Washington Post,legacy_mainstream,j_01_027,Foreign Policy,Episodic,0.132,-0.439,0,1,932,683,108,97,5.5884,1
+a_00254,2025-09-27,AP News,wire_service,j_04_030,Education,Thematic,-0.047,-0.369,0,0,250,206,17,7,3.9494,0
+a_00255,2025-11-23,Vox,digital_explainer,j_11_007,Crime,Responsibility,0.227,-0.404,0,1,897,650,60,70,5.3251,1
+a_00256,2025-08-26,The Washington Post,legacy_mainstream,j_01_002,Elections,Economic Consequences,0.073,-0.496,0,1,734,522,80,35,5.1648,1
+a_00257,2025-11-26,The Daily Beast,digital_politics,j_19_007,Crime,Responsibility,-0.111,-0.546,0,0,869,371,71,44,5.0038,0
+a_00258,2025-08-18,Politico,digital_politics,j_09_011,Climate,Strategy/Game,-0.271,0.205,0,0,1128,292,47,14,4.5431,0
+a_00259,2025-08-31,NPR,public_media,j_05_030,Politics,Conflict,0.088,-0.201,0,1,855,370,68,28,4.9018,0
+a_00260,2025-11-10,Axios,digital_politics,j_10_014,Economy,Episodic,0.105,-0.07,1,0,829,505,78,36,5.1463,1
+a_00261,2025-12-16,BuzzFeed News,digital_viral,j_15_018,Foreign Policy,Responsibility,0.573,-0.147,0,1,458,335,48,15,4.6306,0
+a_00262,2025-08-30,CNN,cable_news,j_06_010,Crime,Thematic,-0.286,-0.249,0,1,562,478,54,19,4.8872,0
+a_00263,2025-09-21,The New York Times,legacy_mainstream,j_00_005,Crime,Economic Consequences,0.185,0.163,0,1,640,390,70,22,4.8903,0
+a_00264,2026-01-08,The Washington Post,legacy_mainstream,j_01_010,Economy,Thematic,-0.51,-0.334,1,1,684,1157,224,92,6.0586,1
+a_00265,2026-01-19,USA Today,legacy_mainstream,j_17_013,Technology,Morality,-0.029,-0.381,0,1,728,316,42,16,4.5745,0
+a_00266,2025-11-09,The Wall Street Journal,legacy_mainstream,j_02_013,Foreign Policy,Responsibility,0.573,0.399,0,0,896,188,24,12,4.0995,0
+a_00267,2025-10-17,HuffPost,digital_viral,j_12_009,Elections,Strategy/Game,0.266,-0.254,0,1,571,266,63,8,4.4807,0
+a_00268,2025-09-30,Fox News,cable_news,j_07_009,Politics,Responsibility,0.186,0.86,0,0,871,515,69,32,5.0969,0
+a_00269,2025-11-14,BuzzFeed News,digital_viral,j_15_025,Climate,Thematic,0.287,-0.182,1,1,489,662,92,82,5.4919,1
+a_00270,2025-11-11,The Washington Post,legacy_mainstream,j_01_007,Crime,Economic Consequences,0.487,0.061,0,0,1042,325,52,34,4.7956,0
+a_00271,2025-09-20,USA Today,legacy_mainstream,j_17_031,Climate,Strategy/Game,-0.128,0.221,1,1,691,433,57,31,4.9478,0
+a_00272,2025-08-04,Breitbart,partisan_right,j_13_007,Crime,Thematic,0.298,0.52,0,0,761,358,36,30,4.7117,0
+a_00273,2025-08-27,MSNBC,cable_news,j_08_004,Crime,Economic Consequences,0.102,-0.486,0,1,267,337,52,17,4.6807,0
+a_00274,2026-01-13,AP News,wire_service,j_04_015,Technology,Human Interest,-0.024,0.185,0,0,550,208,28,35,4.3981,0
+a_00275,2025-10-12,The Daily Beast,digital_politics,j_19_015,Climate,Morality,0.305,-0.056,0,1,712,255,66,53,4.8318,0
+a_00276,2025-10-23,CNN,cable_news,j_06_008,Technology,Strategy/Game,-0.31,-0.453,0,0,438,349,62,28,4.8454,0
+a_00277,2025-10-20,Politico,digital_politics,j_09_018,Technology,Thematic,-0.097,-0.232,0,1,794,217,24,59,4.4768,0
+a_00278,2025-12-14,Fox News,cable_news,j_07_022,Foreign Policy,Episodic,0.215,-0.284,0,1,970,619,108,33,5.3275,1
+a_00279,2025-08-12,AP News,wire_service,j_04_009,Education,Episodic,0.063,0.149,1,0,764,270,41,11,4.4193,0
+a_00280,2025-08-15,MSNBC,cable_news,j_08_014,Health,Morality,0.299,-0.365,1,1,477,483,103,25,5.136,1
+a_00281,2025-09-17,Reuters,wire_service,j_03_017,Foreign Policy,Strategy/Game,0.493,-0.041,0,1,783,127,14,8,3.6779,0
+a_00282,2025-10-24,The New York Times,legacy_mainstream,j_00_003,Foreign Policy,Economic Consequences,0.109,-0.673,0,1,839,809,117,191,5.8312,1
+a_00283,2025-11-25,NPR,public_media,j_05_021,Politics,Morality,0.43,-0.475,1,1,722,335,44,22,4.6777,0
+a_00284,2025-10-24,The Wall Street Journal,legacy_mainstream,j_02_005,Climate,Economic Consequences,-0.212,0.081,0,1,724,255,35,12,4.3606,0
+a_00285,2025-10-16,MSNBC,cable_news,j_08_022,Health,Conflict,-0.146,-0.468,1,1,471,1309,130,62,5.8801,1
+a_00286,2026-01-10,USA Today,legacy_mainstream,j_17_002,Education,Episodic,-0.959,-0.021,0,1,825,548,91,72,5.3687,1
+a_00287,2025-08-28,Reuters,wire_service,j_03_030,Economy,Episodic,0.029,0.146,1,1,306,382,60,47,4.9815,0
+a_00288,2025-11-07,The New York Times,legacy_mainstream,j_00_008,Immigration,Responsibility,-0.046,0.317,0,1,872,511,108,30,5.2134,1
+a_00289,2025-11-02,The Wall Street Journal,legacy_mainstream,j_02_025,Economy,Conflict,0.519,0.195,0,0,1153,262,35,8,4.3006,0
+a_00290,2025-10-21,Axios,digital_politics,j_10_011,Technology,Conflict,-0.341,0.329,0,0,852,296,35,13,4.4497,0
+a_00291,2025-12-18,NPR,public_media,j_05_002,Elections,Conflict,0.356,-0.407,0,0,745,270,48,47,4.7428,0
+a_00292,2025-09-16,Politico,digital_politics,j_09_029,Crime,Strategy/Game,0.541,-0.369,1,1,349,659,68,69,5.3661,1
+a_00293,2026-01-13,The New York Times,legacy_mainstream,j_00_022,Foreign Policy,Economic Consequences,-0.209,-0.338,1,1,1063,1407,278,108,6.2526,1
+a_00294,2025-09-27,CNN,cable_news,j_06_027,Elections,Human Interest,0.273,-0.499,0,0,250,220,43,42,4.5866,0
+a_00295,2025-11-03,MSNBC,cable_news,j_08_017,Foreign Policy,Episodic,0.083,-0.296,0,0,900,505,106,100,5.4381,1
+a_00296,2025-10-30,MSNBC,cable_news,j_08_017,Politics,Thematic,0.04,-0.495,0,1,662,404,62,29,4.9251,0
+a_00297,2025-12-26,Vox,digital_explainer,j_11_018,Foreign Policy,Episodic,0.429,-0.739,0,1,1330,380,43,28,4.7801,0
+a_00298,2025-10-15,BuzzFeed News,digital_viral,j_15_023,Politics,Human Interest,0.336,0.384,0,0,369,234,33,13,4.3155,0
+a_00299,2025-09-19,Politico,digital_politics,j_09_008,Crime,Responsibility,0.328,-0.084,1,0,765,467,72,30,5.0482,0
+a_00300,2025-08-04,The Guardian,international,j_16_018,Foreign Policy,Economic Consequences,-0.044,-0.709,0,1,942,660,73,23,5.1737,1
+a_00301,2025-10-02,Axios,digital_politics,j_10_024,Immigration,Episodic,0.063,0.275,0,0,690,221,48,8,4.3083,0
+a_00302,2025-12-21,NPR,public_media,j_05_038,Technology,Conflict,0.441,-0.382,0,1,453,340,56,11,4.6258,0
+a_00303,2025-08-02,AP News,wire_service,j_04_013,Crime,Strategy/Game,0.194,0.273,0,0,607,187,19,24,4.1607,0
+a_00304,2026-01-03,CNN,cable_news,j_06_013,Foreign Policy,Responsibility,0.197,-0.283,0,0,822,289,76,10,4.6177,0
+a_00305,2025-11-02,Vox,digital_explainer,j_11_026,Immigration,Episodic,0.084,-0.385,0,1,1221,386,54,76,5.0502,0
+a_00306,2025-08-25,AP News,wire_service,j_04_013,Crime,Morality,0.419,0.086,0,0,681,137,13,7,3.6712,0
+a_00307,2025-09-22,New York Post,tabloid,j_18_012,Elections,Economic Consequences,-0.053,0.348,0,0,493,389,39,69,4.9394,0
+a_00308,2025-11-04,Politico,digital_politics,j_09_013,Economy,Episodic,-0.406,0.242,0,0,569,189,43,12,4.2718,0
+a_00309,2025-09-24,USA Today,legacy_mainstream,j_17_007,Politics,Strategy/Game,0.356,-0.072,1,1,734,553,142,19,5.2466,1
+a_00310,2025-08-19,Breitbart,partisan_right,j_13_023,Immigration,Morality,0.539,0.782,0,1,885,548,106,77,5.4272,1
+a_00311,2025-11-24,CNN,cable_news,j_06_004,Elections,Human Interest,-0.388,0.086,0,0,510,555,119,83,5.4828,1
+a_00312,2025-11-25,AP News,wire_service,j_04_005,Economy,Human Interest,0.111,0.05,0,1,916,116,24,5,3.7051,0
+a_00313,2025-08-21,The Daily Caller,partisan_right,j_14_016,Economy,Morality,0.425,0.514,1,0,715,624,103,39,5.35,1
+a_00314,2025-09-18,CNN,cable_news,j_06_013,Politics,Human Interest,0.229,-0.461,0,0,759,266,40,13,4.4355,0
+a_00315,2025-09-12,AP News,wire_service,j_04_018,Foreign Policy,Human Interest,-0.025,0.15,0,0,695,114,19,8,3.7106,0
+a_00316,2025-11-23,New York Post,tabloid,j_18_010,Economy,Human Interest,-0.283,0.211,0,1,669,541,95,42,5.2692,1
+a_00317,2025-12-05,Politico,digital_politics,j_09_004,Technology,Conflict,0.274,-0.053,0,0,647,343,36,21,4.6218,0
+a_00318,2025-12-04,The New York Times,legacy_mainstream,j_00_017,Elections,Thematic,0.224,0.069,0,0,864,253,44,8,4.3501,0
+a_00319,2026-01-10,Politico,digital_politics,j_09_006,Politics,Economic Consequences,0.079,-0.307,1,1,975,588,133,33,5.3638,1
+a_00320,2025-12-11,Politico,digital_politics,j_09_005,Climate,Economic Consequences,-0.004,0.461,0,1,774,215,27,23,4.3229,0
+a_00321,2025-09-25,USA Today,legacy_mainstream,j_17_008,Technology,Economic Consequences,-0.375,-0.056,0,0,636,137,17,9,3.7913,0
+a_00322,2025-08-19,The Daily Caller,partisan_right,j_14_013,Foreign Policy,Thematic,0.227,0.629,0,1,828,497,79,31,5.1131,1
+a_00323,2025-11-15,Reuters,wire_service,j_03_017,Health,Morality,0.191,-0.099,1,1,588,273,29,13,4.3547,0
+a_00324,2026-01-06,Reuters,wire_service,j_03_026,Crime,Human Interest,0.21,-0.417,1,0,588,274,23,15,4.3163,0
+a_00325,2026-01-16,HuffPost,digital_viral,j_12_014,Politics,Morality,0.183,-0.235,1,0,598,235,48,35,4.6162,0
+a_00326,2025-09-09,The New York Times,legacy_mainstream,j_00_007,Education,Conflict,0.754,-0.166,0,0,562,170,20,7,3.9001,0
+a_00327,2025-09-10,CNN,cable_news,j_06_013,Education,Human Interest,-0.337,0.069,0,0,812,485,66,52,5.1486,1
+a_00328,2025-08-07,The Wall Street Journal,legacy_mainstream,j_02_017,Politics,Economic Consequences,0.534,0.15,0,1,1258,512,56,39,5.0708,0
+a_00329,2025-08-25,The New York Times,legacy_mainstream,j_00_006,Crime,Episodic,0.18,-0.798,0,0,889,238,50,20,4.5267,0
+a_00330,2025-11-04,New York Post,tabloid,j_18_007,Elections,Conflict,0.883,-0.185,0,1,530,205,37,11,4.2522,0
+a_00331,2025-11-03,The Washington Post,legacy_mainstream,j_01_007,Politics,Morality,0.52,0.363,1,1,926,443,55,28,4.929,0
+a_00332,2025-10-04,The New York Times,legacy_mainstream,j_00_004,Health,Episodic,0.012,-0.523,0,0,1079,524,47,39,5.0308,0
+a_00333,2025-09-23,New York Post,tabloid,j_18_019,Climate,Episodic,0.598,0.557,0,1,536,284,34,16,4.4595,0
+a_00334,2025-12-22,Reuters,wire_service,j_03_026,Health,Responsibility,0.241,-0.234,0,1,486,305,50,27,4.7078,0
+a_00335,2025-10-19,The Guardian,international,j_16_002,Economy,Economic Consequences,-0.163,-0.346,0,1,1197,552,80,52,5.2701,1
+a_00336,2025-12-18,The New York Times,legacy_mainstream,j_00_013,Crime,Human Interest,0.138,-0.094,0,0,721,235,33,52,4.5839,0
+a_00337,2026-01-14,Reuters,wire_service,j_03_017,Economy,Economic Consequences,0.44,-0.205,0,1,968,306,45,26,4.6712,0
+a_00338,2025-09-24,The Wall Street Journal,legacy_mainstream,j_02_023,Technology,Strategy/Game,0.277,0.598,1,0,528,534,94,15,5.0618,0
+a_00339,2025-09-05,The Daily Caller,partisan_right,j_14_014,Immigration,Human Interest,-0.267,0.569,0,0,713,643,86,85,5.4645,1
+a_00340,2026-01-12,HuffPost,digital_viral,j_12_009,Climate,Strategy/Game,0.158,-0.085,0,1,1003,290,46,19,4.5909,0
+a_00341,2025-11-18,Politico,digital_politics,j_09_022,Politics,Strategy/Game,0.361,-0.017,0,0,855,113,11,23,3.7492,0
+a_00342,2025-09-20,AP News,wire_service,j_04_006,Foreign Policy,Thematic,-0.052,0.165,0,1,702,200,66,31,4.6062,0
+a_00343,2025-11-16,The Washington Post,legacy_mainstream,j_01_009,Politics,Human Interest,0.657,0.245,1,0,770,923,113,53,5.633,1
+a_00344,2025-10-29,Vox,digital_explainer,j_11_004,Education,Thematic,-0.08,-0.283,0,0,995,384,56,41,4.9371,0
+a_00345,2026-01-04,AP News,wire_service,j_04_010,Health,Morality,0.131,0.432,0,1,461,284,47,16,4.5542,0
+a_00346,2025-09-14,Vox,digital_explainer,j_11_010,Education,Strategy/Game,0.457,-0.403,0,1,783,249,29,19,4.3802,0
+a_00347,2026-01-19,Breitbart,partisan_right,j_13_008,Economy,Strategy/Game,0.04,0.841,1,1,398,1894,257,197,6.497,1
+a_00348,2026-01-09,The Guardian,international,j_16_029,Economy,Episodic,0.452,-0.178,0,0,1140,137,19,18,3.9512,0
+a_00349,2025-09-01,Politico,digital_politics,j_09_006,Technology,Morality,-0.45,-0.217,0,0,858,196,19,23,4.1759,0
+a_00350,2025-08-29,The New York Times,legacy_mainstream,j_00_006,Politics,Episodic,0.064,-0.197,0,0,974,250,39,19,4.4685,0
+a_00351,2025-11-01,NPR,public_media,j_05_004,Economy,Human Interest,0.315,-0.198,0,1,592,484,37,124,5.149,1
+a_00352,2025-08-08,USA Today,legacy_mainstream,j_17_007,Education,Morality,0.521,-0.263,0,1,1056,527,132,33,5.3069,1
+a_00353,2025-09-21,Axios,digital_politics,j_10_010,Foreign Policy,Morality,0.068,0.14,0,0,784,220,39,7,4.2216,0
+a_00354,2025-10-15,HuffPost,digital_viral,j_12_014,Politics,Strategy/Game,0.033,-0.163,0,0,481,221,37,8,4.2321,0
+a_00355,2026-01-15,Politico,digital_politics,j_09_009,Elections,Responsibility,0.47,0.032,0,1,483,111,8,17,3.5965,0
+a_00356,2026-01-19,Reuters,wire_service,j_03_023,Foreign Policy,Conflict,0.213,-0.017,1,0,634,220,23,16,4.2191,0
+a_00357,2025-08-27,USA Today,legacy_mainstream,j_17_015,Foreign Policy,Episodic,0.169,-0.073,0,1,718,263,58,21,4.6294,0
+a_00358,2026-01-02,BuzzFeed News,digital_viral,j_15_012,Immigration,Episodic,0.463,-0.142,0,1,468,331,192,19,5.0805,0
+a_00359,2025-08-16,The Daily Beast,digital_politics,j_19_020,Immigration,Conflict,0.287,-0.165,0,1,884,496,102,29,5.175,1
+a_00360,2025-12-08,USA Today,legacy_mainstream,j_17_014,Technology,Thematic,-0.74,-0.211,0,1,712,429,83,21,4.9793,0
+a_00361,2025-12-25,NPR,public_media,j_05_031,Immigration,Strategy/Game,-0.19,0.464,1,1,864,847,138,80,5.7307,1
+a_00362,2026-01-02,NPR,public_media,j_05_017,Elections,Conflict,0.553,-0.552,0,0,720,159,16,11,3.8845,0
+a_00363,2025-09-08,AP News,wire_service,j_04_024,Politics,Morality,-0.309,-0.146,0,1,762,297,57,27,4.7331,0
+a_00364,2026-01-02,New York Post,tabloid,j_18_033,Health,Episodic,-0.089,0.074,1,0,846,559,51,49,5.1317,1
+a_00365,2025-08-21,Vox,digital_explainer,j_11_023,Politics,Human Interest,-0.368,0.26,0,1,937,522,46,31,4.978,0
+a_00366,2025-10-29,Politico,digital_politics,j_09_012,Elections,Thematic,0.642,-0.28,0,1,869,289,25,10,4.2919,0
+a_00367,2025-10-21,The Daily Beast,digital_politics,j_19_003,Crime,Morality,1.0,-0.094,1,1,318,302,58,10,4.5597,0
+a_00368,2025-09-24,HuffPost,digital_viral,j_12_001,Immigration,Economic Consequences,-0.167,-0.138,0,1,854,591,78,199,5.5623,1
+a_00369,2025-08-04,New York Post,tabloid,j_18_015,Foreign Policy,Human Interest,0.177,0.283,0,1,564,254,36,40,4.5966,0
+a_00370,2025-12-12,The Daily Beast,digital_politics,j_19_014,Elections,Responsibility,0.012,0.109,0,0,989,192,26,28,4.2936,0
+a_00371,2025-09-28,The Washington Post,legacy_mainstream,j_01_011,Politics,Strategy/Game,0.207,0.154,0,0,958,271,25,14,4.3219,0
+a_00372,2025-11-23,Fox News,cable_news,j_07_015,Foreign Policy,Thematic,0.541,0.237,1,0,810,340,36,25,4.6508,0
+a_00373,2025-10-10,The Daily Caller,partisan_right,j_14_019,Elections,Economic Consequences,0.11,0.599,0,1,791,533,58,26,5.0226,0
+a_00374,2025-10-04,The Guardian,international,j_16_026,Politics,Thematic,-0.036,-0.766,0,1,879,569,47,22,4.9613,0
+a_00375,2026-01-01,The Wall Street Journal,legacy_mainstream,j_02_005,Education,Responsibility,-0.283,0.225,0,1,977,694,79,38,5.3193,1
+a_00376,2025-08-17,CNN,cable_news,j_06_008,Health,Economic Consequences,0.394,-0.298,0,1,413,375,35,54,4.8413,0
+a_00377,2025-12-06,Axios,digital_politics,j_10_016,Immigration,Thematic,-1.0,0.003,1,0,890,1119,185,127,6.0487,1
+a_00378,2025-12-08,BuzzFeed News,digital_viral,j_15_014,Technology,Human Interest,-0.283,-0.471,0,1,410,545,93,25,5.1659,1
+a_00379,2025-10-05,The Wall Street Journal,legacy_mainstream,j_02_035,Economy,Responsibility,0.136,0.301,0,0,943,276,24,18,4.3666,0
+a_00380,2025-09-15,HuffPost,digital_viral,j_12_028,Politics,Strategy/Game,0.102,-0.624,0,1,597,559,68,60,5.2564,1
+a_00381,2025-08-01,NPR,public_media,j_05_017,Politics,Conflict,0.709,-0.163,0,0,909,185,48,10,4.26,0
+a_00382,2026-01-10,AP News,wire_service,j_04_006,Politics,Economic Consequences,0.411,-0.307,1,0,557,443,43,34,4.8942,0
+a_00383,2026-01-11,Axios,digital_politics,j_10_008,Immigration,Strategy/Game,-0.224,-0.162,1,1,795,691,109,63,5.5117,1
+a_00384,2025-09-11,MSNBC,cable_news,j_08_010,Health,Human Interest,0.478,-0.011,1,0,558,183,26,17,4.1743,0
+a_00385,2025-08-06,HuffPost,digital_viral,j_12_022,Economy,Conflict,-0.027,-0.053,0,1,483,186,37,16,4.2735,0
+a_00386,2025-08-22,CNN,cable_news,j_06_030,Immigration,Conflict,0.737,0.187,1,0,590,312,47,17,4.6125,0
+a_00387,2025-08-12,The Guardian,international,j_16_009,Immigration,Episodic,0.245,0.09,0,0,884,93,11,5,3.3755,0
+a_00388,2025-12-22,The Washington Post,legacy_mainstream,j_01_023,Technology,Economic Consequences,-0.301,-0.343,1,0,669,1231,171,52,5.8965,1
+a_00389,2026-01-02,USA Today,legacy_mainstream,j_17_009,Elections,Conflict,0.427,0.325,0,0,907,274,38,9,4.368,0
+a_00390,2025-08-27,The New York Times,legacy_mainstream,j_00_004,Crime,Responsibility,0.29,-0.616,1,1,549,620,81,43,5.2945,1
+a_00391,2025-12-08,The Daily Caller,partisan_right,j_14_004,Foreign Policy,Conflict,0.563,0.737,0,0,1142,322,27,36,4.6107,0
+a_00392,2025-09-01,CNN,cable_news,j_06_002,Politics,Strategy/Game,0.024,-0.223,0,0,891,466,97,17,5.0267,0
+a_00393,2025-10-03,Fox News,cable_news,j_07_030,Education,Responsibility,-0.07,0.117,0,1,549,267,52,23,4.6222,0
+a_00394,2025-11-12,The New York Times,legacy_mainstream,j_00_014,Elections,Strategy/Game,0.169,-0.096,0,1,1141,252,24,28,4.4058,0
+a_00395,2025-12-03,The Daily Caller,partisan_right,j_14_014,Foreign Policy,Morality,-0.065,0.786,0,0,364,407,50,12,4.6982,0
+a_00396,2025-12-30,Reuters,wire_service,j_03_011,Climate,Episodic,-0.245,0.229,1,0,250,300,38,19,4.5518,0
+a_00397,2025-08-08,Breitbart,partisan_right,j_13_007,Climate,Strategy/Game,-0.145,0.704,0,1,598,992,90,168,5.8296,1
+a_00398,2025-09-03,The Daily Caller,partisan_right,j_14_006,Health,Morality,0.024,0.583,0,0,322,638,45,62,5.2072,1
+a_00399,2025-09-18,The Guardian,international,j_16_017,Immigration,Conflict,0.58,-0.168,0,0,817,263,28,8,4.2376,0
+a_00400,2025-09-23,The Daily Caller,partisan_right,j_14_011,Education,Human Interest,-0.114,0.626,0,1,557,656,78,68,5.4015,1
+a_00401,2026-01-20,CNN,cable_news,j_06_035,Elections,Economic Consequences,0.842,0.035,0,1,816,316,26,16,4.4348,0
+a_00402,2025-12-13,The Daily Caller,partisan_right,j_14_005,Technology,Conflict,-0.513,0.601,1,1,315,1229,177,129,6.0854,1
+a_00403,2025-09-25,The Guardian,international,j_16_015,Politics,Human Interest,0.091,-0.089,1,0,1032,232,47,12,4.3999,0
+a_00404,2026-01-16,CNN,cable_news,j_06_033,Climate,Economic Consequences,0.052,-0.507,0,1,653,381,69,28,4.9207,0
+a_00405,2025-10-26,The Wall Street Journal,legacy_mainstream,j_02_006,Politics,Conflict,0.695,0.167,0,1,1043,219,28,12,4.22,0
+a_00406,2025-10-26,USA Today,legacy_mainstream,j_17_011,Economy,Human Interest,0.215,-0.396,0,0,786,237,17,18,4.1921,0
+a_00407,2025-10-15,The Wall Street Journal,legacy_mainstream,j_02_023,Health,Responsibility,-0.049,0.269,1,0,1079,421,73,24,4.9575,0
+a_00408,2025-08-25,Vox,digital_explainer,j_11_008,Education,Economic Consequences,0.002,0.16,0,0,781,209,30,14,4.2454,0
+a_00409,2026-01-09,AP News,wire_service,j_04_007,Economy,Human Interest,-0.223,-0.119,0,0,969,239,38,10,4.319,0
+a_00410,2025-08-03,The Wall Street Journal,legacy_mainstream,j_02_018,Politics,Conflict,0.534,0.232,1,0,838,806,215,77,5.8306,1
+a_00411,2025-08-31,BuzzFeed News,digital_viral,j_15_009,Politics,Conflict,-0.214,0.139,1,1,814,475,48,39,4.988,0
+a_00412,2025-09-09,The Wall Street Journal,legacy_mainstream,j_02_028,Foreign Policy,Economic Consequences,0.433,-0.317,0,1,969,203,10,7,3.7943,0
+a_00413,2025-09-18,Breitbart,partisan_right,j_13_024,Immigration,Morality,0.243,0.519,0,0,561,321,30,39,4.6552,0
+a_00414,2025-08-23,Breitbart,partisan_right,j_13_012,Politics,Strategy/Game,0.154,0.741,0,0,834,899,144,61,5.7196,1
+a_00415,2025-08-04,The Washington Post,legacy_mainstream,j_01_029,Politics,Episodic,0.13,-0.874,0,1,926,584,80,47,5.2784,1
+a_00416,2025-11-26,Reuters,wire_service,j_03_008,Climate,Strategy/Game,0.152,-0.244,0,1,250,128,11,14,3.717,0
+a_00417,2026-01-15,BuzzFeed News,digital_viral,j_15_001,Health,Responsibility,0.489,0.225,0,1,250,316,26,28,4.5417,0
+a_00418,2025-08-22,Axios,digital_politics,j_10_017,Climate,Thematic,0.92,0.301,0,1,1029,311,37,41,4.7103,0
+a_00419,2025-09-21,The Wall Street Journal,legacy_mainstream,j_02_024,Crime,Human Interest,0.616,0.294,0,1,951,325,28,21,4.5218,0
+a_00420,2025-10-27,The Daily Beast,digital_politics,j_19_002,Elections,Episodic,0.13,0.021,0,1,1140,246,40,31,4.5619,0
+a_00421,2026-01-08,NPR,public_media,j_05_005,Health,Thematic,0.139,-0.146,0,0,747,200,23,16,4.1717,0
+a_00422,2025-11-29,The New York Times,legacy_mainstream,j_00_020,Immigration,Responsibility,0.302,-0.111,1,0,647,432,47,41,4.9443,0
+a_00423,2025-12-11,New York Post,tabloid,j_18_027,Politics,Episodic,-0.078,0.121,0,0,574,317,33,29,4.6192,0
+a_00424,2025-11-09,The New York Times,legacy_mainstream,j_00_004,Elections,Economic Consequences,-0.228,-0.221,1,1,932,817,121,113,5.7419,1
+a_00425,2025-10-12,Vox,digital_explainer,j_11_008,Elections,Thematic,0.131,-0.408,0,1,769,580,80,62,5.3293,1
+a_00426,2025-09-04,The Daily Beast,digital_politics,j_19_018,Education,Responsibility,0.242,0.116,0,1,947,340,49,20,4.6985,0
+a_00427,2025-12-28,Vox,digital_explainer,j_11_008,Crime,Economic Consequences,-0.234,0.13,1,1,1153,1213,175,65,5.9399,1
+a_00428,2025-12-18,Vox,digital_explainer,j_11_004,Economy,Conflict,0.184,0.095,0,1,986,463,61,34,5.0192,0
+a_00429,2025-08-05,Fox News,cable_news,j_07_004,Foreign Policy,Strategy/Game,0.522,0.248,0,1,698,393,37,20,4.6884,0
+a_00430,2025-12-02,The Wall Street Journal,legacy_mainstream,j_02_012,Education,Morality,0.063,-0.038,0,0,547,174,18,8,3.9052,0
+a_00431,2025-08-15,Vox,digital_explainer,j_11_013,Economy,Human Interest,0.425,0.069,0,0,1178,298,35,8,4.3647,0
+a_00432,2025-12-06,USA Today,legacy_mainstream,j_17_030,Crime,Morality,0.027,0.086,0,1,744,375,105,13,4.8916,0
+a_00433,2025-12-21,The Washington Post,legacy_mainstream,j_01_018,Crime,Thematic,0.956,-0.068,0,1,678,532,45,107,5.2243,1
+a_00434,2025-08-23,USA Today,legacy_mainstream,j_17_024,Foreign Policy,Morality,-0.161,-0.208,0,0,1067,381,45,20,4.7302,0
+a_00435,2025-10-15,MSNBC,cable_news,j_08_018,Immigration,Conflict,-0.159,-0.194,0,1,495,476,67,92,5.2561,1
+a_00436,2025-08-22,Axios,digital_politics,j_10_008,Immigration,Human Interest,0.032,-0.221,0,1,776,344,42,31,4.7433,0
+a_00437,2025-11-07,Reuters,wire_service,j_03_013,Immigration,Economic Consequences,-0.19,0.159,0,1,390,188,37,14,4.2538,0
+a_00438,2026-01-08,HuffPost,digital_viral,j_12_020,Economy,Strategy/Game,0.238,0.145,0,1,776,320,39,11,4.4894,0
+a_00439,2025-08-14,Reuters,wire_service,j_03_004,Crime,Episodic,0.378,0.408,0,0,481,157,20,12,3.9576,0
+a_00440,2025-10-08,NPR,public_media,j_05_030,Politics,Episodic,0.141,-0.023,0,1,1109,287,52,55,4.8276,0
+a_00441,2026-01-16,The Daily Caller,partisan_right,j_14_013,Education,Strategy/Game,-0.153,0.204,0,1,484,683,174,111,5.7571,1
+a_00442,2025-09-22,The Washington Post,legacy_mainstream,j_01_004,Crime,Episodic,0.53,-0.101,0,1,705,269,60,23,4.6681,0
+a_00443,2025-08-23,MSNBC,cable_news,j_08_012,Crime,Morality,0.355,0.235,0,1,250,264,34,11,4.3535,0
+a_00444,2025-10-24,Vox,digital_explainer,j_11_004,Economy,Strategy/Game,0.581,-0.467,0,1,1037,291,39,13,4.4729,0
+a_00445,2025-10-27,The Wall Street Journal,legacy_mainstream,j_02_004,Economy,Conflict,0.346,0.185,0,1,722,173,24,8,3.9846,0
+a_00446,2025-11-23,NPR,public_media,j_05_012,Climate,Responsibility,-0.289,0.153,1,0,762,883,126,124,5.8111,1
+a_00447,2025-09-24,CNN,cable_news,j_06_007,Economy,Responsibility,-0.456,0.054,1,0,600,499,50,84,5.1754,1
+a_00448,2026-01-13,Breitbart,partisan_right,j_13_016,Politics,Conflict,0.398,1.0,0,1,742,1124,211,92,6.0263,1
+a_00449,2025-10-30,The Daily Beast,digital_politics,j_19_019,Education,Responsibility,-0.381,-0.383,0,1,343,492,72,31,5.0805,0
+a_00450,2025-09-19,The Guardian,international,j_16_024,Crime,Strategy/Game,0.095,-0.547,0,0,668,347,46,56,4.8898,0
+a_00451,2026-01-14,Reuters,wire_service,j_03_009,Crime,Human Interest,0.308,0.306,1,0,643,250,22,11,4.2004,0
+a_00452,2026-01-07,The New York Times,legacy_mainstream,j_00_009,Crime,Responsibility,-0.233,-0.549,1,0,662,600,83,46,5.2986,1
+a_00453,2025-10-26,The Washington Post,legacy_mainstream,j_01_005,Foreign Policy,Human Interest,0.524,-0.199,0,1,940,237,17,22,4.2303,0
+a_00454,2025-08-05,Vox,digital_explainer,j_11_003,Health,Human Interest,-0.002,-0.266,0,1,879,656,72,32,5.2303,1
+a_00455,2025-11-12,Reuters,wire_service,j_03_015,Education,Economic Consequences,-0.063,0.259,0,0,527,168,19,9,3.9242,0
+a_00456,2025-11-05,AP News,wire_service,j_04_012,Elections,Human Interest,-0.26,0.154,1,0,515,466,70,24,4.9957,0
+a_00457,2025-08-26,The Guardian,international,j_16_009,Immigration,Episodic,0.329,-0.186,1,1,853,817,213,123,5.9273,1
+a_00458,2025-11-18,USA Today,legacy_mainstream,j_17_022,Crime,Thematic,0.249,-0.151,0,1,909,235,39,45,4.6043,0
+a_00459,2025-12-24,The Guardian,international,j_16_013,Education,Strategy/Game,-0.106,0.004,0,1,571,316,71,25,4.8141,0
+a_00460,2025-08-19,NPR,public_media,j_05_001,Crime,Responsibility,0.46,0.806,0,1,583,330,56,21,4.7322,0
+a_00461,2025-12-04,HuffPost,digital_viral,j_12_003,Crime,Responsibility,-0.105,-0.027,0,1,250,213,43,12,4.3312,0
+a_00462,2025-08-25,HuffPost,digital_viral,j_12_023,Technology,Morality,-0.541,-0.175,1,1,649,902,234,67,5.8846,1
+a_00463,2025-12-08,Reuters,wire_service,j_03_021,Health,Morality,-0.186,-0.324,0,1,583,294,31,17,4.4613,0
+a_00464,2025-10-12,Vox,digital_explainer,j_11_005,Politics,Responsibility,0.305,-0.409,0,0,847,257,26,18,4.3541,0
+a_00465,2025-08-02,Axios,digital_politics,j_10_023,Crime,Episodic,0.399,-0.003,0,0,617,161,28,15,4.1085,0
+a_00466,2026-01-15,Fox News,cable_news,j_07_026,Politics,Morality,0.565,0.216,0,1,483,278,38,17,4.4927,0
+a_00467,2025-08-29,BuzzFeed News,digital_viral,j_15_018,Crime,Responsibility,0.024,-0.054,1,0,250,816,119,55,5.5941,1
+a_00468,2025-11-12,Breitbart,partisan_right,j_13_004,Climate,Morality,0.322,1.0,0,0,407,305,38,21,4.5791,0
+a_00469,2025-09-01,Axios,digital_politics,j_10_002,Elections,Human Interest,0.016,0.362,1,1,608,723,79,46,5.377,1
+a_00470,2026-01-09,The Daily Caller,partisan_right,j_14_033,Politics,Human Interest,-0.233,0.51,0,1,964,669,160,40,5.5208,1
+a_00471,2025-12-06,BuzzFeed News,digital_viral,j_15_009,Climate,Conflict,0.466,-0.352,0,1,498,281,26,31,4.5029,0
+a_00472,2025-12-18,Vox,digital_explainer,j_11_011,Crime,Morality,0.43,0.084,0,1,834,216,37,7,4.1971,0
+a_00473,2025-10-14,NPR,public_media,j_05_022,Politics,Strategy/Game,0.111,-0.212,0,1,749,318,52,52,4.8677,0
+a_00474,2025-10-20,BuzzFeed News,digital_viral,j_15_004,Economy,Strategy/Game,0.263,-0.482,0,1,717,526,41,42,5.0071,0
+a_00475,2025-11-18,The Daily Caller,partisan_right,j_14_015,Politics,Thematic,0.011,0.728,0,1,535,707,72,71,5.4237,1
+a_00476,2025-12-14,The Daily Beast,digital_politics,j_19_018,Economy,Conflict,0.354,0.056,0,1,757,444,48,47,4.9908,0
+a_00477,2025-12-25,The Wall Street Journal,legacy_mainstream,j_02_013,Economy,Episodic,0.026,-0.406,0,0,890,509,84,27,5.1164,1
+a_00478,2025-08-04,MSNBC,cable_news,j_08_018,Crime,Episodic,0.009,-0.506,0,1,869,673,80,32,5.2743,1
+a_00479,2025-11-23,New York Post,tabloid,j_18_015,Technology,Morality,0.072,0.172,0,0,563,317,42,14,4.551,0
+a_00480,2025-08-19,Axios,digital_politics,j_10_011,Politics,Human Interest,-0.291,0.234,1,1,743,802,65,53,5.3989,1
+a_00481,2025-09-19,New York Post,tabloid,j_18_030,Politics,Human Interest,-0.356,0.071,1,1,773,1150,351,121,6.2441,1
+a_00482,2025-12-22,The New York Times,legacy_mainstream,j_00_014,Politics,Strategy/Game,0.228,-0.458,0,1,1365,385,53,21,4.7928,0
+a_00483,2025-09-13,The New York Times,legacy_mainstream,j_00_015,Technology,Episodic,0.22,-0.068,0,0,487,142,23,14,3.9764,0
+a_00484,2025-12-16,BuzzFeed News,digital_viral,j_15_009,Health,Strategy/Game,0.256,-0.167,0,0,378,107,12,2,3.3303,0
+a_00485,2025-10-20,Fox News,cable_news,j_07_004,Technology,Responsibility,-0.259,0.486,1,1,457,1081,116,66,5.7629,1
+a_00486,2025-09-10,Axios,digital_politics,j_10_010,Economy,Strategy/Game,0.079,-0.228,0,1,675,326,86,43,4.9916,0
+a_00487,2025-09-27,MSNBC,cable_news,j_08_012,Politics,Conflict,0.641,-0.638,0,1,640,283,20,19,4.337,0
+a_00488,2025-10-31,MSNBC,cable_news,j_08_017,Elections,Responsibility,-0.419,-0.111,0,1,415,562,84,28,5.1729,1
+a_00489,2025-12-11,New York Post,tabloid,j_18_017,Politics,Conflict,0.589,0.263,1,0,903,581,51,31,5.0618,0
+a_00490,2025-11-13,The Washington Post,legacy_mainstream,j_01_015,Politics,Thematic,-0.512,0.081,0,1,724,680,80,11,5.0771,0
+a_00491,2026-01-09,BuzzFeed News,digital_viral,j_15_029,Politics,Thematic,-0.375,-0.183,0,0,644,389,42,17,4.6895,0
+a_00492,2025-12-29,USA Today,legacy_mainstream,j_17_036,Elections,Responsibility,0.146,-0.249,0,1,1118,232,22,29,4.3464,0
+a_00493,2025-12-09,Breitbart,partisan_right,j_13_009,Climate,Human Interest,0.601,0.99,0,1,665,812,111,45,5.5316,1
+a_00494,2025-11-13,Fox News,cable_news,j_07_026,Climate,Strategy/Game,0.603,-0.031,1,0,474,442,24,26,4.6716,0
+a_00495,2025-09-20,Reuters,wire_service,j_03_015,Elections,Strategy/Game,0.612,0.313,0,0,457,109,13,3,3.4192,0
+a_00496,2025-10-11,Breitbart,partisan_right,j_13_011,Politics,Strategy/Game,0.407,0.98,0,0,679,419,55,14,4.7693,0
+a_00497,2025-08-21,Politico,digital_politics,j_09_007,Elections,Responsibility,-0.259,0.265,0,1,664,396,33,53,4.8477,0
+a_00498,2025-10-04,The Wall Street Journal,legacy_mainstream,j_02_019,Economy,Economic Consequences,0.147,0.028,0,0,917,183,42,19,4.335,0
+a_00499,2026-01-08,Fox News,cable_news,j_07_025,Climate,Conflict,0.185,0.146,0,1,398,492,54,19,4.9016,0
+a_00500,2025-10-13,The Daily Beast,digital_politics,j_19_011,Crime,Human Interest,-0.095,-0.253,1,1,746,621,77,34,5.2346,1
+a_00501,2025-08-20,NPR,public_media,j_05_034,Crime,Responsibility,0.346,-0.524,1,0,671,727,80,53,5.4113,1
+a_00502,2025-11-21,Reuters,wire_service,j_03_019,Elections,Morality,0.209,-0.24,0,0,734,70,9,3,3.0994,0
+a_00503,2026-01-14,Breitbart,partisan_right,j_13_009,Politics,Responsibility,0.461,0.811,0,1,979,751,161,20,5.4466,1
+a_00504,2025-12-29,Reuters,wire_service,j_03_016,Elections,Human Interest,-0.431,0.162,0,1,621,399,128,27,5.1201,1
+a_00505,2025-09-17,New York Post,tabloid,j_18_016,Crime,Thematic,0.273,-0.062,0,1,269,228,40,23,4.4665,0
+a_00506,2025-10-18,USA Today,legacy_mainstream,j_17_016,Immigration,Human Interest,-0.214,0.119,0,0,781,279,55,28,4.6985,0
+a_00507,2025-10-31,The Daily Beast,digital_politics,j_19_002,Elections,Episodic,0.177,-0.086,0,0,765,200,49,23,4.4609,0
+a_00508,2025-09-12,New York Post,tabloid,j_18_013,Politics,Morality,0.341,0.577,0,1,634,416,61,14,4.7963,0
+a_00509,2025-09-16,AP News,wire_service,j_04_028,Elections,Morality,0.015,0.142,0,0,550,162,38,12,4.1589,0
+a_00510,2025-09-10,AP News,wire_service,j_04_005,Climate,Responsibility,0.149,0.265,0,0,336,90,16,6,3.4946,0
+a_00511,2026-01-20,CNN,cable_news,j_06_023,Immigration,Human Interest,-0.114,0.019,1,0,499,451,64,32,5.0085,0
+a_00512,2025-12-08,Politico,digital_politics,j_09_012,Politics,Economic Consequences,-0.048,0.295,0,1,915,457,70,31,5.0354,0
+a_00513,2025-12-24,USA Today,legacy_mainstream,j_17_030,Technology,Morality,-0.091,-0.372,0,1,805,354,25,19,4.5126,0
+a_00514,2025-12-20,The Daily Caller,partisan_right,j_14_024,Immigration,Episodic,0.054,0.52,1,1,836,898,135,15,5.429,1
+a_00515,2026-01-13,HuffPost,digital_viral,j_12_011,Crime,Economic Consequences,0.12,-0.21,0,1,782,568,45,75,5.1867,1
+a_00516,2025-08-19,USA Today,legacy_mainstream,j_17_017,Politics,Morality,0.252,-0.111,0,1,1117,364,28,32,4.6594,0
+a_00517,2025-12-31,HuffPost,digital_viral,j_12_007,Economy,Strategy/Game,0.167,-0.089,0,0,829,192,28,7,4.0574,0
+a_00518,2025-08-12,Fox News,cable_news,j_07_013,Foreign Policy,Strategy/Game,0.167,0.509,0,0,838,264,24,25,4.4071,0
+a_00519,2025-10-22,MSNBC,cable_news,j_08_015,Politics,Morality,0.727,-0.202,0,0,1008,154,21,9,3.9095,0
+a_00520,2025-11-11,Axios,digital_politics,j_10_033,Immigration,Conflict,0.575,0.006,0,1,1083,258,37,16,4.4363,0
+a_00521,2025-10-01,The Washington Post,legacy_mainstream,j_01_001,Elections,Conflict,0.435,-0.334,0,1,1101,392,57,20,4.8139,0
+a_00522,2025-08-26,The Daily Caller,partisan_right,j_14_006,Politics,Morality,0.294,0.824,0,1,847,905,89,88,5.6522,1
+a_00523,2025-09-03,Breitbart,partisan_right,j_13_028,Politics,Episodic,-0.108,0.737,0,0,683,576,107,29,5.2638,1
+a_00524,2025-12-21,The Daily Caller,partisan_right,j_14_013,Immigration,Conflict,0.319,0.295,0,1,613,334,44,14,4.5907,0
+a_00525,2025-09-25,Axios,digital_politics,j_10_015,Politics,Thematic,-0.046,0.002,0,1,789,372,59,49,4.9715,0
+a_00526,2025-09-23,BuzzFeed News,digital_viral,j_15_002,Climate,Strategy/Game,-0.174,-0.486,0,1,742,433,39,29,4.8234,0
+a_00527,2026-01-07,New York Post,tabloid,j_18_010,Immigration,Conflict,0.466,0.209,1,0,420,507,64,35,5.0843,0
+a_00528,2025-08-25,Vox,digital_explainer,j_11_032,Climate,Human Interest,-0.202,-0.3,0,0,916,189,38,20,4.3315,0
+a_00529,2026-01-06,MSNBC,cable_news,j_08_002,Health,Economic Consequences,-0.057,-0.444,0,0,250,255,48,14,4.4817,0
+a_00530,2026-01-07,The Wall Street Journal,legacy_mainstream,j_02_015,Immigration,Thematic,-0.121,0.596,0,1,1190,844,86,50,5.4958,1
+a_00531,2025-11-12,BuzzFeed News,digital_viral,j_15_024,Climate,Responsibility,0.988,-0.339,0,0,590,141,16,12,3.8409,0
+a_00532,2025-08-29,New York Post,tabloid,j_18_002,Economy,Human Interest,-0.299,0.377,1,1,632,1535,147,53,5.9654,1
+a_00533,2025-08-27,Breitbart,partisan_right,j_13_018,Climate,Human Interest,-0.671,1.0,0,1,932,682,73,57,5.3666,1
+a_00534,2025-09-19,USA Today,legacy_mainstream,j_17_008,Elections,Responsibility,-0.18,0.219,0,1,984,308,26,16,4.4221,0
+a_00535,2025-11-08,USA Today,legacy_mainstream,j_17_025,Immigration,Conflict,0.578,-0.058,1,1,1140,453,58,52,5.0764,0
+a_00536,2025-08-27,BuzzFeed News,digital_viral,j_15_015,Technology,Human Interest,0.251,-0.334,0,1,256,567,96,55,5.3485,1
+a_00537,2025-10-18,Axios,digital_politics,j_10_031,Health,Economic Consequences,-0.155,-0.291,0,1,1132,319,33,29,4.6223,0
+a_00538,2025-08-20,The Washington Post,legacy_mainstream,j_01_005,Politics,Responsibility,0.584,-0.253,0,1,1176,398,52,13,4.7134,0
+a_00539,2025-11-02,The New York Times,legacy_mainstream,j_00_016,Economy,Strategy/Game,0.472,-0.422,0,0,918,486,61,34,5.0433,0
+a_00540,2025-08-04,AP News,wire_service,j_04_020,Politics,Morality,0.193,-0.18,0,1,1007,163,32,7,4.0148,0
+a_00541,2025-12-01,MSNBC,cable_news,j_08_009,Elections,Economic Consequences,0.172,-0.382,0,0,440,244,27,18,4.3392,0
+a_00542,2025-08-10,The Daily Caller,partisan_right,j_14_009,Economy,Human Interest,0.054,0.524,0,1,568,672,74,16,5.1178,1
+a_00543,2025-09-03,Politico,digital_politics,j_09_001,Foreign Policy,Episodic,0.513,0.171,0,1,1110,161,16,6,3.7829,0
+a_00544,2025-08-31,The New York Times,legacy_mainstream,j_00_023,Politics,Economic Consequences,0.269,-0.559,0,0,644,327,30,44,4.688,0
+a_00545,2025-12-22,AP News,wire_service,j_04_019,Health,Economic Consequences,-0.153,-0.171,0,0,701,275,45,25,4.6104,0
+a_00546,2025-08-10,The Daily Beast,digital_politics,j_19_011,Crime,Conflict,0.598,-0.24,0,1,696,364,47,23,4.7469,0
+a_00547,2025-10-14,The Daily Beast,digital_politics,j_19_018,Health,Episodic,0.694,-0.249,0,1,1054,268,37,13,4.4164,0
+a_00548,2025-11-11,Fox News,cable_news,j_07_021,Foreign Policy,Conflict,0.575,0.809,0,0,415,384,81,17,4.8767,0
+a_00549,2025-10-29,The Guardian,international,j_16_009,Elections,Responsibility,0.461,-0.242,1,1,1200,679,146,56,5.5668,1
+a_00550,2025-11-26,The Daily Caller,partisan_right,j_14_009,Foreign Policy,Thematic,0.262,0.147,0,1,619,475,36,30,4.8528,0
+a_00551,2025-12-17,New York Post,tabloid,j_18_011,Politics,Strategy/Game,0.382,0.305,0,1,570,330,56,53,4.9118,0
+a_00552,2025-10-08,USA Today,legacy_mainstream,j_17_005,Education,Morality,0.083,0.086,0,1,560,427,63,29,4.9575,0
+a_00553,2025-12-22,HuffPost,digital_viral,j_12_014,Politics,Economic Consequences,0.419,-0.231,0,1,484,489,56,37,5.0376,0
+a_00554,2025-09-25,Fox News,cable_news,j_07_030,Elections,Conflict,0.766,0.047,0,1,723,316,48,12,4.56,0
+a_00555,2026-01-18,HuffPost,digital_viral,j_12_006,Technology,Economic Consequences,-0.071,0.24,1,1,280,597,44,37,5.0663,0
+a_00556,2025-10-27,CNN,cable_news,j_06_024,Health,Thematic,-0.258,-0.367,0,0,683,279,63,23,4.7007,0
+a_00557,2025-12-06,CNN,cable_news,j_06_003,Politics,Economic Consequences,0.266,0.065,0,1,581,297,48,18,4.605,0
+a_00558,2025-12-30,HuffPost,digital_viral,j_12_021,Politics,Conflict,0.33,-0.15,1,1,462,558,56,33,5.0813,0
+a_00559,2025-12-16,Vox,digital_explainer,j_11_018,Economy,Episodic,0.058,-0.1,0,0,805,123,14,11,3.7195,0
+a_00560,2025-12-26,Vox,digital_explainer,j_11_030,Elections,Morality,1.0,0.177,1,1,1011,434,32,69,4.9363,0
+a_00561,2025-11-01,Fox News,cable_news,j_07_012,Foreign Policy,Human Interest,-0.362,0.49,0,1,650,1199,145,96,5.9551,1
+a_00562,2025-08-08,MSNBC,cable_news,j_08_007,Elections,Strategy/Game,0.688,-0.44,0,1,656,373,43,49,4.8798,0
+a_00563,2025-10-25,The New York Times,legacy_mainstream,j_00_005,Politics,Responsibility,-0.159,0.026,1,1,1105,669,57,68,5.3186,1
+a_00564,2025-09-01,HuffPost,digital_viral,j_12_002,Climate,Thematic,-0.011,-0.358,0,1,825,371,66,47,4.9951,0
+a_00565,2026-01-01,Vox,digital_explainer,j_11_003,Economy,Morality,0.971,-0.209,0,0,844,171,36,9,4.1175,0
+a_00566,2025-09-10,New York Post,tabloid,j_18_002,Technology,Strategy/Game,-0.189,-0.123,0,1,262,400,54,27,4.8656,0
+a_00567,2025-09-09,Axios,digital_politics,j_10_016,Health,Thematic,-0.267,-0.208,0,0,714,322,39,22,4.6226,0
+a_00568,2025-09-13,Politico,digital_politics,j_09_002,Health,Morality,0.145,0.063,0,1,785,386,61,38,4.9501,0
+a_00569,2025-11-20,The Washington Post,legacy_mainstream,j_01_002,Climate,Human Interest,-0.304,-0.058,0,0,667,415,56,46,4.9983,0
+a_00570,2025-11-07,Reuters,wire_service,j_03_024,Economy,Thematic,0.265,-0.426,0,1,490,133,12,11,3.7154,0
+a_00571,2026-01-12,CNN,cable_news,j_06_020,Crime,Economic Consequences,0.19,0.024,0,1,321,285,31,33,4.573,0
+a_00572,2025-10-12,Fox News,cable_news,j_07_014,Immigration,Conflict,0.646,0.145,0,1,563,280,34,16,4.4524,0
+a_00573,2025-09-18,Fox News,cable_news,j_07_010,Politics,Responsibility,-0.199,0.67,0,1,563,657,97,76,5.4889,1
+a_00574,2025-08-09,Fox News,cable_news,j_07_023,Elections,Thematic,-0.392,0.262,0,0,777,705,96,87,5.5477,1
+a_00575,2025-08-02,BuzzFeed News,digital_viral,j_15_015,Technology,Conflict,0.181,-0.331,0,0,250,406,59,42,4.9849,0
+a_00576,2025-10-04,The Wall Street Journal,legacy_mainstream,j_02_014,Foreign Policy,Episodic,-0.221,0.219,0,1,696,725,58,58,5.3325,1
+a_00577,2026-01-08,CNN,cable_news,j_06_028,Immigration,Episodic,0.655,-0.329,0,0,540,258,44,27,4.5869,0
+a_00578,2025-10-30,Reuters,wire_service,j_03_012,Education,Thematic,-0.609,0.317,0,0,518,220,30,10,4.2089,0
+a_00579,2026-01-02,CNN,cable_news,j_06_012,Education,Morality,-0.261,-0.1,0,1,250,322,106,26,4.9498,0
+a_00580,2025-08-18,Breitbart,partisan_right,j_13_009,Foreign Policy,Human Interest,0.224,0.612,0,1,611,330,39,28,4.6812,0
+a_00581,2025-08-17,The New York Times,legacy_mainstream,j_00_003,Climate,Responsibility,-0.076,-0.102,0,1,858,695,105,27,5.3381,1
+a_00582,2025-12-23,CNN,cable_news,j_06_020,Economy,Economic Consequences,-0.456,-0.351,1,1,529,869,317,82,5.9966,1
+a_00583,2025-08-19,The New York Times,legacy_mainstream,j_00_010,Politics,Episodic,0.712,-0.572,1,0,1007,646,94,26,5.2615,1
+a_00584,2025-08-09,The Daily Beast,digital_politics,j_19_004,Climate,Strategy/Game,-0.1,-0.098,0,1,681,498,66,30,5.0545,0
+a_00585,2025-10-09,The Daily Caller,partisan_right,j_14_009,Politics,Morality,0.091,0.275,1,1,986,595,57,45,5.179,1
+a_00586,2026-01-07,AP News,wire_service,j_04_030,Economy,Responsibility,-0.013,-0.275,1,1,738,305,70,16,4.7072,0
+a_00587,2025-11-28,Reuters,wire_service,j_03_011,Politics,Strategy/Game,0.513,0.209,0,0,605,199,18,15,4.087,0
+a_00588,2025-08-18,The Washington Post,legacy_mainstream,j_01_027,Technology,Responsibility,0.139,-0.019,0,1,797,319,50,24,4.7075,0
+a_00589,2025-12-23,Politico,digital_politics,j_09_027,Politics,Episodic,-0.048,-0.263,0,0,872,232,27,11,4.2222,0
+a_00590,2025-12-24,BuzzFeed News,digital_viral,j_15_003,Climate,Thematic,-0.148,-0.205,0,1,849,405,51,40,4.9313,0
+a_00591,2025-12-17,Vox,digital_explainer,j_11_029,Foreign Policy,Thematic,0.032,-0.476,0,1,892,617,51,31,5.0918,0
+a_00592,2026-01-04,USA Today,legacy_mainstream,j_17_007,Foreign Policy,Responsibility,0.475,0.394,0,0,1118,399,86,93,5.2442,1
+a_00593,2025-09-11,CNN,cable_news,j_06_008,Health,Strategy/Game,-0.15,0.127,0,0,558,176,22,12,4.0417,0
+a_00594,2026-01-17,NPR,public_media,j_05_018,Technology,Human Interest,0.355,-0.305,1,0,968,750,66,31,5.2653,1
+a_00595,2025-09-25,Politico,digital_politics,j_09_029,Climate,Conflict,0.122,0.194,0,1,1032,465,98,21,5.0688,0
+a_00596,2025-12-17,AP News,wire_service,j_04_006,Technology,Morality,0.047,-0.339,0,0,585,166,19,22,4.0848,0
+a_00597,2025-11-09,The Daily Beast,digital_politics,j_19_023,Immigration,Episodic,-0.148,-0.368,0,1,703,337,51,20,4.7058,0
+a_00598,2025-12-13,Reuters,wire_service,j_03_007,Economy,Economic Consequences,-0.289,0.026,0,1,741,349,63,13,4.7044,0
+a_00599,2025-11-17,Politico,digital_politics,j_09_013,Elections,Responsibility,-0.062,0.163,1,0,768,547,87,62,5.325,1
+a_00600,2025-11-20,Axios,digital_politics,j_10_014,Politics,Economic Consequences,-0.241,0.026,1,0,1152,297,19,18,4.3362,0
+a_00601,2025-11-15,The Washington Post,legacy_mainstream,j_01_016,Foreign Policy,Morality,0.176,-0.088,0,1,994,344,59,35,4.8668,0
+a_00602,2025-12-13,Politico,digital_politics,j_09_012,Climate,Economic Consequences,-0.244,0.07,0,1,727,1139,149,135,6.0051,1
+a_00603,2025-12-06,Politico,digital_politics,j_09_006,Economy,Strategy/Game,0.459,0.009,0,1,667,242,29,21,4.3851,0
+a_00604,2025-08-24,NPR,public_media,j_05_016,Education,Episodic,-0.235,-0.274,0,1,482,262,34,64,4.6876,0
+a_00605,2025-12-21,The Wall Street Journal,legacy_mainstream,j_02_021,Politics,Episodic,-0.168,0.093,1,1,1080,568,44,18,4.9028,0
+a_00606,2025-11-01,The New York Times,legacy_mainstream,j_00_020,Education,Strategy/Game,-0.018,-0.192,0,1,632,781,113,39,5.4896,1
+a_00607,2025-09-25,The New York Times,legacy_mainstream,j_00_003,Climate,Economic Consequences,0.348,-0.147,0,0,1128,355,30,23,4.6033,0
+a_00608,2025-10-28,Politico,digital_politics,j_09_016,Politics,Responsibility,0.264,0.1,0,0,617,312,38,72,4.8303,0
+a_00609,2026-01-15,The Washington Post,legacy_mainstream,j_01_007,Politics,Conflict,0.42,-0.445,0,0,1003,324,46,59,4.8658,0
+a_00610,2025-12-27,The Daily Beast,digital_politics,j_19_003,Education,Human Interest,-0.58,-0.45,0,0,857,885,174,125,5.9101,1
+a_00611,2025-12-23,AP News,wire_service,j_04_009,Health,Responsibility,-0.243,0.1,0,1,250,142,14,7,3.7097,0
+a_00612,2025-10-20,Breitbart,partisan_right,j_13_011,Elections,Strategy/Game,0.016,1.0,0,0,1033,902,203,48,5.7767,1
+a_00613,2025-12-14,Breitbart,partisan_right,j_13_027,Education,Conflict,0.642,0.688,0,1,443,622,117,31,5.3416,1
+a_00614,2025-10-06,Politico,digital_politics,j_09_009,Immigration,Episodic,0.259,-0.053,1,1,775,738,86,37,5.3699,1
+a_00615,2025-11-27,USA Today,legacy_mainstream,j_17_030,Economy,Morality,-0.058,0.006,0,1,983,327,30,51,4.717,0
+a_00616,2025-11-19,The Wall Street Journal,legacy_mainstream,j_02_015,Immigration,Thematic,-0.119,-0.084,0,1,1011,289,24,19,4.3997,0
+a_00617,2025-09-13,AP News,wire_service,j_04_012,Elections,Responsibility,0.052,0.327,0,0,749,217,32,15,4.2957,0
+a_00618,2025-09-16,NPR,public_media,j_05_019,Politics,Responsibility,-0.066,-0.153,0,0,1080,128,13,14,3.7632,0
+a_00619,2025-08-11,The Wall Street Journal,legacy_mainstream,j_02_015,Health,Strategy/Game,0.338,0.033,0,0,923,90,19,3,3.4314,0
+a_00620,2025-08-25,NPR,public_media,j_05_011,Economy,Episodic,0.064,-0.242,0,0,1117,314,34,24,4.5867,0
+a_00621,2025-10-15,CNN,cable_news,j_06_031,Crime,Economic Consequences,0.874,-0.232,1,0,544,290,29,12,4.37,0
+a_00622,2025-10-22,BuzzFeed News,digital_viral,j_15_020,Education,Responsibility,0.375,0.278,0,0,834,239,35,15,4.3699,0
+a_00623,2025-08-29,CNN,cable_news,j_06_021,Technology,Conflict,0.643,-0.151,0,1,662,345,37,19,4.6136,0
+a_00624,2025-10-12,USA Today,legacy_mainstream,j_17_019,Climate,Morality,0.351,-0.011,0,0,605,303,41,16,4.5465,0
+a_00625,2025-11-13,BuzzFeed News,digital_viral,j_15_030,Health,Episodic,-0.027,0.093,0,0,1000,357,68,30,4.8973,0
+a_00626,2025-09-10,New York Post,tabloid,j_18_002,Politics,Episodic,0.379,0.015,0,0,547,476,67,39,5.0874,0
+a_00627,2025-09-28,The Wall Street Journal,legacy_mainstream,j_02_013,Economy,Human Interest,-0.105,0.248,0,1,1149,597,84,40,5.2723,1
+a_00628,2025-10-03,The Daily Beast,digital_politics,j_19_016,Foreign Policy,Morality,0.789,-0.131,0,1,855,252,37,23,4.4936,0
+a_00629,2025-10-27,HuffPost,digital_viral,j_12_026,Climate,Responsibility,0.221,-0.589,0,0,821,444,33,21,4.7252,0
+a_00630,2025-10-03,The Daily Beast,digital_politics,j_19_012,Crime,Morality,0.429,-0.137,1,1,476,282,44,29,4.645,0
+a_00631,2025-12-06,Fox News,cable_news,j_07_014,Education,Economic Consequences,-0.012,0.339,0,1,613,764,109,51,5.5203,1
+a_00632,2025-09-26,The Daily Beast,digital_politics,j_19_039,Politics,Human Interest,0.572,-0.168,0,1,804,110,20,6,3.6573,0
+a_00633,2025-10-15,Vox,digital_explainer,j_11_013,Economy,Morality,-0.23,-0.241,0,1,1184,360,60,18,4.7666,0
+a_00634,2025-10-05,The Washington Post,legacy_mainstream,j_01_006,Economy,Responsibility,0.701,-0.085,0,1,959,278,35,18,4.4795,0
+a_00635,2025-09-01,MSNBC,cable_news,j_08_006,Elections,Thematic,0.094,0.034,0,0,818,187,36,35,4.4182,0
+a_00636,2025-11-27,The Wall Street Journal,legacy_mainstream,j_02_002,Immigration,Responsibility,-0.322,-0.095,1,0,490,410,50,30,4.8756,0
+a_00637,2025-09-10,New York Post,tabloid,j_18_001,Climate,Morality,-0.076,0.114,0,0,585,654,97,27,5.2842,1
+a_00638,2025-09-21,CNN,cable_news,j_06_014,Politics,Strategy/Game,-0.195,0.067,0,1,774,677,82,80,5.4641,1
+a_00639,2025-12-16,AP News,wire_service,j_04_019,Economy,Episodic,0.346,0.12,0,0,690,100,16,6,3.5467,0
+a_00640,2026-01-12,Vox,digital_explainer,j_11_022,Immigration,Morality,-0.061,-0.135,0,1,1073,301,36,26,4.5977,0
+a_00641,2025-11-25,MSNBC,cable_news,j_08_002,Crime,Morality,0.401,0.388,1,1,384,362,87,20,4.8993,0
+a_00642,2026-01-06,The Washington Post,legacy_mainstream,j_01_012,Elections,Economic Consequences,0.59,0.004,0,1,939,299,82,42,4.9298,0
+a_00643,2025-12-26,The Guardian,international,j_16_007,Education,Episodic,-0.202,-0.017,0,0,973,239,44,13,4.4101,0
+a_00644,2025-10-23,The Guardian,international,j_16_016,Crime,Episodic,0.32,-0.377,0,0,300,105,24,16,3.864,0
+a_00645,2025-12-12,The Daily Caller,partisan_right,j_14_007,Education,Economic Consequences,-0.441,0.302,0,1,626,632,50,28,5.0782,0
+a_00646,2025-09-26,HuffPost,digital_viral,j_12_016,Elections,Human Interest,0.033,-0.279,0,1,570,477,39,31,4.8846,0
+a_00647,2025-10-19,MSNBC,cable_news,j_08_007,Crime,Human Interest,1.0,-0.122,0,1,286,281,34,42,4.6398,0
+a_00648,2025-11-01,Axios,digital_politics,j_10_017,Immigration,Thematic,0.283,0.152,0,1,811,292,40,24,4.5979,0
+a_00649,2026-01-14,Axios,digital_politics,j_10_010,Elections,Conflict,0.471,0.151,0,1,1021,220,28,51,4.4995,0
+a_00650,2025-12-25,Reuters,wire_service,j_03_017,Economy,Economic Consequences,-0.184,-0.054,1,0,837,590,45,38,5.0722,0
+a_00651,2025-10-24,The Washington Post,legacy_mainstream,j_01_005,Elections,Human Interest,0.137,-0.243,0,1,906,364,74,31,4.9383,0
+a_00652,2025-11-21,NPR,public_media,j_05_020,Politics,Responsibility,0.239,-0.245,0,0,1058,269,77,52,4.9003,0
+a_00653,2025-09-05,Politico,digital_politics,j_09_020,Immigration,Economic Consequences,-0.076,0.231,1,0,906,429,91,15,4.9429,0
+a_00654,2025-12-18,Reuters,wire_service,j_03_015,Education,Responsibility,0.159,0.21,0,0,534,175,35,6,4.0495,0
+a_00655,2025-11-04,The Wall Street Journal,legacy_mainstream,j_02_023,Climate,Strategy/Game,-0.086,-0.052,0,1,805,192,28,10,4.1211,0
+a_00656,2025-11-01,USA Today,legacy_mainstream,j_17_024,Technology,Episodic,-0.388,0.141,1,1,666,633,64,71,5.3337,1
+a_00657,2025-12-11,Fox News,cable_news,j_07_008,Climate,Conflict,0.461,0.187,0,1,801,223,31,7,4.1614,0
+a_00658,2025-11-18,Vox,digital_explainer,j_11_010,Politics,Economic Consequences,-0.201,-0.133,0,1,992,300,85,30,4.8767,0
+a_00659,2025-08-13,Axios,digital_politics,j_10_007,Economy,Conflict,0.619,0.002,0,0,562,209,25,20,4.2599,0
+a_00660,2025-09-19,The Daily Caller,partisan_right,j_14_009,Economy,Thematic,-0.004,0.941,0,0,317,466,54,95,5.1882,1
+a_00661,2025-08-31,The Daily Caller,partisan_right,j_14_019,Climate,Strategy/Game,-0.348,0.445,0,1,820,1048,209,131,6.0585,1
+a_00662,2025-12-06,NPR,public_media,j_05_034,Crime,Responsibility,0.333,-0.155,1,1,552,713,146,64,5.6174,1
+a_00663,2025-08-07,The Guardian,international,j_16_015,Economy,Episodic,-0.356,-0.148,0,1,919,395,40,58,4.9203,0
+a_00664,2025-09-05,Fox News,cable_news,j_07_009,Elections,Responsibility,0.408,0.132,1,1,873,886,109,86,5.6972,1
+a_00665,2025-11-12,The Guardian,international,j_16_015,Crime,Economic Consequences,0.275,-0.318,0,1,474,336,38,20,4.618,0
+a_00666,2025-11-29,MSNBC,cable_news,j_08_029,Crime,Responsibility,0.955,-0.367,0,0,442,216,30,9,4.1807,0
+a_00667,2025-10-27,The Wall Street Journal,legacy_mainstream,j_02_024,Crime,Strategy/Game,0.821,0.072,0,1,699,248,49,14,4.4739,0
+a_00668,2025-12-27,BuzzFeed News,digital_viral,j_15_005,Economy,Conflict,0.082,-0.16,0,1,648,741,76,54,5.4093,1
+a_00669,2026-01-06,The New York Times,legacy_mainstream,j_00_013,Education,Responsibility,-0.606,0.028,0,1,1003,396,78,32,5.0021,0
+a_00670,2025-08-23,BuzzFeed News,digital_viral,j_15_027,Crime,Morality,0.223,-0.2,0,1,250,231,32,6,4.1615,0
+a_00671,2026-01-12,The New York Times,legacy_mainstream,j_00_007,Politics,Conflict,0.084,-0.108,0,0,1083,203,62,14,4.4436,0
+a_00672,2025-11-15,AP News,wire_service,j_04_018,Elections,Human Interest,0.698,0.079,0,0,886,179,27,13,4.124,0
+a_00673,2025-11-19,HuffPost,digital_viral,j_12_021,Foreign Policy,Morality,0.297,-0.549,0,1,646,679,89,66,5.4519,1
+a_00674,2025-08-17,New York Post,tabloid,j_18_026,Education,Human Interest,0.13,0.33,0,1,425,431,71,72,5.1753,1
+a_00675,2025-11-16,MSNBC,cable_news,j_08_035,Foreign Policy,Human Interest,0.014,-0.653,0,0,775,237,29,19,4.3556,0
+a_00676,2025-12-04,The Wall Street Journal,legacy_mainstream,j_02_024,Elections,Strategy/Game,0.346,0.357,0,1,992,276,20,13,4.2532,0
+a_00677,2025-11-09,AP News,wire_service,j_04_011,Health,Morality,0.14,-0.127,0,1,705,261,32,8,4.2726,0
+a_00678,2025-08-15,USA Today,legacy_mainstream,j_17_005,Climate,Morality,0.482,-0.048,0,1,1031,223,28,23,4.3516,0
+a_00679,2025-10-30,The Daily Caller,partisan_right,j_14_017,Climate,Episodic,0.193,0.226,0,1,493,411,32,20,4.6684,0
+a_00680,2026-01-09,The Wall Street Journal,legacy_mainstream,j_02_010,Economy,Conflict,0.083,0.231,0,0,1058,241,32,28,4.4669,0
+a_00681,2025-12-04,Fox News,cable_news,j_07_010,Economy,Human Interest,0.487,0.582,0,1,810,672,44,100,5.3209,1
+a_00682,2025-08-24,NPR,public_media,j_05_019,Politics,Conflict,0.362,-0.402,0,1,933,359,43,12,4.5913,0
+a_00683,2026-01-14,Reuters,wire_service,j_03_011,Immigration,Thematic,-0.087,-0.152,0,1,381,224,33,22,4.3931,0
+a_00684,2026-01-13,The Guardian,international,j_16_024,Education,Economic Consequences,-0.899,-0.186,0,1,739,552,77,78,5.3386,1
+a_00685,2025-08-30,HuffPost,digital_viral,j_12_013,Education,Episodic,0.19,-0.08,0,1,515,434,51,54,5.0245,0
+a_00686,2025-12-17,Reuters,wire_service,j_03_009,Health,Economic Consequences,-0.02,-0.609,1,0,394,434,57,11,4.7528,0
+a_00687,2025-10-10,Breitbart,partisan_right,j_13_004,Economy,Human Interest,0.03,1.0,0,1,555,664,68,32,5.2194,1
+a_00688,2025-11-11,MSNBC,cable_news,j_08_005,Crime,Responsibility,0.279,-0.168,0,1,250,300,41,12,4.4878,0
+a_00689,2025-10-17,The Washington Post,legacy_mainstream,j_01_024,Technology,Episodic,-0.173,0.024,0,1,889,468,65,45,5.0979,1
+a_00690,2025-12-14,MSNBC,cable_news,j_08_018,Elections,Economic Consequences,0.039,-0.336,1,0,680,994,98,91,5.7343,1
+a_00691,2026-01-20,Reuters,wire_service,j_03_004,Foreign Policy,Economic Consequences,0.339,-0.464,0,0,454,174,26,3,3.8484,0
+a_00692,2025-12-16,AP News,wire_service,j_04_013,Elections,Thematic,0.342,0.169,0,0,763,98,15,6,3.5185,0
+a_00693,2026-01-09,USA Today,legacy_mainstream,j_17_023,Foreign Policy,Human Interest,0.031,-0.191,0,0,970,190,24,21,4.21,0
+a_00694,2026-01-11,The Daily Caller,partisan_right,j_14_001,Elections,Economic Consequences,0.535,0.686,0,1,763,518,164,41,5.4053,1
+a_00695,2025-08-16,The Wall Street Journal,legacy_mainstream,j_02_013,Crime,Strategy/Game,0.476,0.145,0,0,660,234,30,19,4.3591,0
+a_00696,2025-09-13,USA Today,legacy_mainstream,j_17_004,Politics,Conflict,0.299,0.01,0,1,836,255,31,16,4.379,0
+a_00697,2025-12-03,Vox,digital_explainer,j_11_014,Politics,Episodic,0.26,-0.444,0,1,861,242,28,11,4.2537,0
+a_00698,2025-11-11,USA Today,legacy_mainstream,j_17_011,Crime,Thematic,-0.158,0.166,0,1,633,211,20,16,4.1583,0
+a_00699,2025-08-09,The Daily Caller,partisan_right,j_14_003,Economy,Episodic,0.12,0.253,1,1,623,436,75,33,5.0445,0
+a_00700,2025-08-17,CNN,cable_news,j_06_001,Politics,Human Interest,-0.513,0.461,1,1,727,461,49,47,5.0156,0
+a_00701,2025-10-30,Axios,digital_politics,j_10_023,Elections,Conflict,0.242,0.609,0,1,766,366,41,39,4.8118,0
+a_00702,2025-11-15,Axios,digital_politics,j_10_001,Economy,Morality,-0.406,0.458,0,1,674,1220,137,95,5.9448,1
+a_00703,2025-08-30,The Daily Caller,partisan_right,j_14_013,Elections,Human Interest,0.097,0.869,0,0,607,1239,119,159,6.0127,1
+a_00704,2025-08-30,AP News,wire_service,j_04_003,Education,Thematic,0.233,-0.021,1,0,1001,209,15,13,4.0331,0
+a_00705,2025-08-23,CNN,cable_news,j_06_017,Immigration,Strategy/Game,0.265,0.192,0,1,461,375,43,14,4.6417,0
+a_00706,2025-11-06,AP News,wire_service,j_04_009,Immigration,Thematic,0.243,-0.024,0,1,550,91,17,9,3.5885,0
+a_00707,2025-08-02,NPR,public_media,j_05_015,Health,Episodic,0.706,-0.588,1,0,1343,320,46,25,4.6924,0
+a_00708,2025-11-08,Reuters,wire_service,j_03_002,Immigration,Strategy/Game,0.421,0.376,0,0,726,112,26,11,3.8494,0
+a_00709,2025-10-22,The New York Times,legacy_mainstream,j_00_021,Economy,Conflict,0.17,0.032,0,1,632,263,46,10,4.4226,0
+a_00710,2025-10-20,New York Post,tabloid,j_18_028,Elections,Conflict,0.362,0.192,0,1,752,369,60,67,5.0339,0
+a_00711,2025-11-26,The Washington Post,legacy_mainstream,j_01_001,Health,Conflict,0.35,-0.456,0,1,666,389,102,41,5.121,1
+a_00712,2025-10-30,USA Today,legacy_mainstream,j_17_006,Economy,Responsibility,-0.04,-0.197,0,1,1044,438,57,28,4.9338,0
+a_00713,2025-12-04,The New York Times,legacy_mainstream,j_00_028,Education,Economic Consequences,-0.217,-0.705,0,1,742,576,80,27,5.1637,1
+a_00714,2025-12-11,BuzzFeed News,digital_viral,j_15_013,Immigration,Thematic,0.246,0.186,1,0,501,427,58,54,5.0543,0
+a_00715,2026-01-07,CNN,cable_news,j_06_005,Crime,Economic Consequences,0.658,-0.501,0,1,740,241,56,10,4.437,0
+a_00716,2025-12-17,Axios,digital_politics,j_10_008,Immigration,Thematic,-0.544,0.122,1,0,852,356,48,82,4.9902,0
+a_00717,2025-10-29,NPR,public_media,j_05_024,Politics,Strategy/Game,0.055,-0.411,0,1,1075,204,22,11,4.0991,0
+a_00718,2025-10-25,Politico,digital_politics,j_09_014,Immigration,Conflict,0.311,-0.307,0,1,828,447,74,78,5.2215,1
+a_00719,2025-09-10,Politico,digital_politics,j_09_012,Economy,Conflict,0.48,0.11,1,0,670,282,29,19,4.4422,0
+a_00720,2025-11-12,Axios,digital_politics,j_10_038,Economy,Morality,0.543,-0.033,0,1,860,107,17,18,3.7971,0
+a_00721,2025-08-25,Fox News,cable_news,j_07_019,Politics,Human Interest,0.861,0.56,0,1,918,383,60,20,4.8175,0
+a_00722,2026-01-09,Axios,digital_politics,j_10_009,Health,Human Interest,-0.19,-0.267,0,1,724,231,29,17,4.3218,0
+a_00723,2025-12-25,The Guardian,international,j_16_019,Health,Responsibility,-0.025,-0.489,0,0,1134,667,110,74,5.5285,1
+a_00724,2025-08-21,MSNBC,cable_news,j_08_013,Crime,Economic Consequences,0.427,-0.897,1,1,603,759,61,78,5.4287,1
+a_00725,2025-12-14,Fox News,cable_news,j_07_008,Economy,Economic Consequences,-0.105,-0.196,0,1,638,653,94,84,5.4962,1
+a_00726,2025-08-21,The Wall Street Journal,legacy_mainstream,j_02_002,Economy,Strategy/Game,0.208,0.65,0,1,925,691,80,40,5.3308,1
+a_00727,2025-12-03,Fox News,cable_news,j_07_006,Technology,Thematic,-0.275,0.871,0,1,525,594,219,46,5.5824,1
+a_00728,2025-08-16,The Wall Street Journal,legacy_mainstream,j_02_020,Politics,Human Interest,-0.736,0.223,0,1,755,621,89,86,5.4596,1
+a_00729,2025-10-24,Reuters,wire_service,j_03_001,Immigration,Thematic,0.087,-0.206,0,0,634,179,20,9,3.9704,0
+a_00730,2025-11-22,The Daily Beast,digital_politics,j_19_011,Elections,Human Interest,0.095,-0.275,0,1,840,451,38,45,4.9216,0
+a_00731,2025-12-05,The Washington Post,legacy_mainstream,j_01_019,Crime,Human Interest,0.531,0.068,1,1,655,477,102,32,5.1745,1
+a_00732,2025-10-12,Politico,digital_politics,j_09_013,Elections,Conflict,0.552,-0.079,0,0,861,127,15,10,3.7374,0
+a_00733,2026-01-07,The Guardian,international,j_16_025,Politics,Morality,-0.226,-0.241,1,0,964,704,72,55,5.3713,1
+a_00734,2025-12-12,The Daily Beast,digital_politics,j_19_023,Politics,Morality,0.173,-0.203,0,1,989,299,46,15,4.5615,0
+a_00735,2025-09-06,The Wall Street Journal,legacy_mainstream,j_02_015,Education,Strategy/Game,-0.527,0.058,0,1,899,557,95,36,5.2537,1
+a_00736,2025-11-25,Reuters,wire_service,j_03_002,Education,Economic Consequences,-0.413,-0.132,0,0,580,247,42,20,4.494,0
+a_00737,2025-12-05,Fox News,cable_news,j_07_018,Foreign Policy,Economic Consequences,0.391,0.423,0,0,454,378,52,27,4.8263,0
+a_00738,2025-09-27,Vox,digital_explainer,j_11_019,Politics,Morality,0.176,-0.494,0,1,1322,604,86,98,5.4614,1
+a_00739,2025-12-06,The Daily Beast,digital_politics,j_19_009,Education,Conflict,0.527,-0.087,0,1,624,338,50,42,4.8448,0
+a_00740,2026-01-03,AP News,wire_service,j_04_001,Crime,Economic Consequences,-0.24,-0.118,0,0,485,242,37,21,4.456,0
+a_00741,2025-12-20,Reuters,wire_service,j_03_009,Health,Strategy/Game,0.027,0.032,1,1,538,584,92,30,5.2324,1
+a_00742,2025-12-10,NPR,public_media,j_05_014,Politics,Thematic,-0.093,0.146,0,1,812,269,53,13,4.5237,0
+a_00743,2025-11-18,USA Today,legacy_mainstream,j_17_008,Elections,Responsibility,0.587,-0.092,0,1,1208,253,35,50,4.6301,0
+a_00744,2025-09-16,The New York Times,legacy_mainstream,j_00_004,Politics,Economic Consequences,0.252,-0.02,1,1,1229,838,85,38,5.4351,1
+a_00745,2025-12-16,Fox News,cable_news,j_07_015,Foreign Policy,Thematic,0.293,-0.098,0,0,780,226,29,18,4.3217,0
+a_00746,2025-10-03,The Wall Street Journal,legacy_mainstream,j_02_027,Immigration,Responsibility,0.562,0.082,1,0,861,209,37,19,4.364,0
+a_00747,2025-11-01,Reuters,wire_service,j_03_006,Education,Strategy/Game,-0.01,0.007,0,1,661,235,17,15,4.1535,0
+a_00748,2025-09-24,New York Post,tabloid,j_18_028,Education,Economic Consequences,0.351,0.681,0,1,463,504,37,23,4.8392,0
+a_00749,2025-09-24,The New York Times,legacy_mainstream,j_00_001,Foreign Policy,Responsibility,-0.063,-0.74,0,0,946,336,63,17,4.7358,0
+a_00750,2025-08-28,CNN,cable_news,j_06_021,Economy,Conflict,0.076,-0.124,0,0,661,319,73,18,4.7643,0
+a_00751,2026-01-14,New York Post,tabloid,j_18_027,Politics,Strategy/Game,0.526,0.564,0,0,571,594,52,31,5.0785,0
+a_00752,2025-08-26,HuffPost,digital_viral,j_12_001,Climate,Economic Consequences,-0.401,-0.396,0,1,675,337,47,49,4.8553,0
+a_00753,2025-08-15,The Washington Post,legacy_mainstream,j_01_029,Health,Thematic,0.122,-0.203,0,1,867,499,59,37,5.0631,0
+a_00754,2026-01-09,Politico,digital_politics,j_09_033,Politics,Conflict,0.38,0.133,1,1,959,200,25,11,4.1261,0
+a_00755,2025-11-05,The Daily Beast,digital_politics,j_19_019,Economy,Strategy/Game,0.572,-0.154,0,1,639,210,32,16,4.2915,0
+a_00756,2025-10-15,MSNBC,cable_news,j_08_021,Health,Economic Consequences,0.032,0.091,0,1,678,625,54,65,5.2598,1
+a_00757,2025-12-06,Axios,digital_politics,j_10_011,Politics,Strategy/Game,0.217,0.162,1,1,687,488,45,31,4.9379,0
+a_00758,2025-10-06,Axios,digital_politics,j_10_003,Politics,Morality,0.403,0.382,0,1,747,296,36,35,4.6468,0
+a_00759,2025-08-23,Breitbart,partisan_right,j_13_014,Elections,Thematic,-0.049,0.56,0,1,575,1009,130,40,5.6641,1
+a_00760,2025-12-05,Reuters,wire_service,j_03_010,Health,Strategy/Game,-0.012,-0.185,0,1,407,100,9,13,3.5261,0
+a_00761,2025-08-31,The Guardian,international,j_16_024,Elections,Human Interest,0.292,-0.356,0,0,1093,329,59,24,4.7716,0
+a_00762,2025-11-04,The Daily Beast,digital_politics,j_19_012,Elections,Conflict,0.541,-0.49,0,1,626,332,39,24,4.6545,0
+a_00763,2026-01-12,The Wall Street Journal,legacy_mainstream,j_02_018,Politics,Responsibility,0.078,0.321,0,1,854,718,84,38,5.3544,1
+a_00764,2026-01-09,The Guardian,international,j_16_005,Education,Morality,0.025,-0.396,0,1,986,265,40,11,4.4028,0
+a_00765,2025-10-02,The Guardian,international,j_16_024,Climate,Conflict,0.828,-0.468,0,0,807,179,23,6,3.9391,0
+a_00766,2025-12-13,The Daily Caller,partisan_right,j_14_003,Immigration,Responsibility,0.067,0.675,0,1,586,525,95,27,5.1684,1
+a_00767,2025-11-14,Fox News,cable_news,j_07_025,Politics,Economic Consequences,0.008,0.064,0,0,518,193,19,19,4.1318,0
+a_00768,2025-10-22,Politico,digital_politics,j_09_017,Economy,Economic Consequences,-0.412,0.243,0,1,900,657,55,30,5.139,1
+a_00769,2025-08-25,The Guardian,international,j_16_014,Politics,Conflict,0.437,-0.42,0,1,1112,351,43,12,4.5801,0
+a_00770,2025-10-05,Reuters,wire_service,j_03_017,Climate,Human Interest,0.147,0.29,0,1,833,202,28,10,4.1464,0
+a_00771,2025-11-21,The Guardian,international,j_16_010,Elections,Economic Consequences,0.501,-0.398,0,0,1007,206,18,13,4.0775,0
+a_00772,2026-01-18,New York Post,tabloid,j_18_038,Immigration,Conflict,0.482,0.358,0,1,563,378,31,24,4.6523,0
+a_00773,2025-08-01,Breitbart,partisan_right,j_13_014,Education,Morality,0.337,0.695,0,1,426,485,70,34,5.083,0
+a_00774,2025-12-03,CNN,cable_news,j_06_006,Elections,Economic Consequences,0.369,0.086,1,1,503,314,33,39,4.672,0
+a_00775,2025-12-25,Vox,digital_explainer,j_11_007,Immigration,Economic Consequences,0.484,-0.223,0,1,1132,264,21,37,4.4447,0
+a_00776,2026-01-12,The Washington Post,legacy_mainstream,j_01_006,Politics,Morality,0.545,-0.566,0,0,1118,282,54,57,4.837,0
+a_00777,2025-10-13,New York Post,tabloid,j_18_016,Foreign Policy,Conflict,0.971,0.452,0,0,525,193,21,6,3.9504,0
+a_00778,2025-08-21,CNN,cable_news,j_06_029,Health,Thematic,-0.101,-0.122,0,1,557,385,78,19,4.8879,0
+a_00779,2025-09-16,The Washington Post,legacy_mainstream,j_01_021,Politics,Morality,-0.248,0.047,1,1,926,758,104,80,5.5911,1
+a_00780,2025-12-26,BuzzFeed News,digital_viral,j_15_004,Technology,Thematic,-0.051,0.123,1,1,277,459,69,27,5.0066,0
+a_00781,2025-12-30,Breitbart,partisan_right,j_13_034,Elections,Thematic,0.284,0.457,1,1,702,919,115,105,5.771,1
+a_00782,2025-11-19,HuffPost,digital_viral,j_12_013,Economy,Thematic,0.471,-0.429,0,1,505,760,41,63,5.2704,1
+a_00783,2025-08-22,The Washington Post,legacy_mainstream,j_01_018,Technology,Responsibility,0.384,0.014,0,0,609,384,35,63,4.8835,0
+a_00784,2025-08-22,BuzzFeed News,digital_viral,j_15_009,Politics,Morality,0.834,-0.126,0,1,414,137,18,17,3.925,0
+a_00785,2025-10-22,HuffPost,digital_viral,j_12_019,Politics,Strategy/Game,0.486,0.034,0,1,399,177,27,22,4.2177,0
+a_00786,2025-11-10,BuzzFeed News,digital_viral,j_15_026,Politics,Conflict,0.519,-0.095,0,1,613,170,12,10,3.8199,0
+a_00787,2025-08-06,The Guardian,international,j_16_005,Education,Episodic,-0.415,-0.044,0,0,745,400,53,28,4.8671,0
+a_00788,2025-11-27,AP News,wire_service,j_04_012,Foreign Policy,Human Interest,0.192,0.106,0,0,592,115,11,7,3.5382,0
+a_00789,2025-11-03,AP News,wire_service,j_04_031,Politics,Conflict,0.184,0.072,1,0,867,282,41,10,4.4236,0
+a_00790,2025-08-03,New York Post,tabloid,j_18_005,Health,Economic Consequences,0.113,0.106,0,1,488,892,120,138,5.8229,1
+a_00791,2025-08-17,Axios,digital_politics,j_10_003,Economy,Economic Consequences,0.116,0.108,0,0,854,249,44,27,4.5692,0
+a_00792,2025-10-18,MSNBC,cable_news,j_08_022,Politics,Conflict,0.492,-0.002,1,1,667,637,125,40,5.4228,1
+a_00793,2025-12-04,NPR,public_media,j_05_013,Climate,Strategy/Game,0.171,-0.214,0,1,708,288,46,41,4.7358,0
+a_00794,2025-12-21,HuffPost,digital_viral,j_12_002,Immigration,Conflict,0.731,-0.067,0,1,601,223,41,12,4.3401,0
+a_00795,2025-10-14,BuzzFeed News,digital_viral,j_15_012,Immigration,Episodic,-0.617,-0.038,0,1,353,579,69,17,5.0341,0
+a_00796,2025-09-21,The New York Times,legacy_mainstream,j_00_026,Crime,Morality,0.507,-0.219,0,1,827,256,93,31,4.8307,0
+a_00797,2026-01-15,Vox,digital_explainer,j_11_006,Climate,Strategy/Game,0.561,0.181,0,0,781,294,26,12,4.3452,0
+a_00798,2025-10-19,The Daily Beast,digital_politics,j_19_010,Politics,Human Interest,0.611,0.1,0,1,1015,243,27,16,4.3149,0
+a_00799,2025-09-24,NPR,public_media,j_05_013,Politics,Economic Consequences,0.37,-0.18,0,1,839,185,34,15,4.234,0
+a_00800,2025-10-16,NPR,public_media,j_05_018,Elections,Economic Consequences,0.755,-0.146,0,0,1041,98,17,9,3.6252,0
+a_00801,2025-08-03,USA Today,legacy_mainstream,j_17_020,Education,Strategy/Game,0.151,-0.225,0,1,578,229,37,26,4.4695,0
+a_00802,2025-09-22,The Washington Post,legacy_mainstream,j_01_007,Elections,Strategy/Game,0.401,-0.193,0,1,808,250,43,25,4.5496,0
+a_00803,2025-10-29,Fox News,cable_news,j_07_034,Elections,Human Interest,0.209,0.427,1,1,719,363,24,35,4.6309,0
+a_00804,2026-01-06,Politico,digital_politics,j_09_014,Immigration,Human Interest,0.049,0.263,0,1,961,329,78,16,4.777,0
+a_00805,2025-12-06,BuzzFeed News,digital_viral,j_15_003,Elections,Thematic,-0.085,0.137,0,1,930,386,49,33,4.8581,0
+a_00806,2025-12-14,The Wall Street Journal,legacy_mainstream,j_02_022,Crime,Episodic,0.245,-0.077,0,0,737,318,67,11,4.6454,0
+a_00807,2025-11-03,MSNBC,cable_news,j_08_016,Politics,Morality,-0.184,-0.056,1,1,1031,857,57,139,5.5838,1
+a_00808,2025-08-20,Reuters,wire_service,j_03_004,Politics,Economic Consequences,0.309,-0.022,0,0,698,89,13,3,3.3189,0
+a_00809,2025-10-07,BuzzFeed News,digital_viral,j_15_004,Politics,Human Interest,0.053,-0.297,0,1,878,353,39,22,4.6684,0
+a_00810,2026-01-20,HuffPost,digital_viral,j_12_014,Politics,Responsibility,0.092,0.134,0,0,510,246,41,9,4.3365,0
+a_00811,2025-08-08,Politico,digital_politics,j_09_001,Health,Responsibility,-0.07,0.416,0,1,776,685,104,35,5.3783,1
+a_00812,2025-12-31,Fox News,cable_news,j_07_009,Immigration,Economic Consequences,0.302,0.416,0,0,250,218,34,16,4.3278,0
+a_00813,2025-11-27,Reuters,wire_service,j_03_004,Foreign Policy,Conflict,0.734,0.177,0,0,548,76,7,4,3.1176,0
+a_00814,2025-09-19,New York Post,tabloid,j_18_009,Climate,Morality,-0.189,0.392,0,1,684,415,55,55,5.028,0
+a_00815,2025-12-13,HuffPost,digital_viral,j_12_014,Politics,Episodic,-0.186,0.149,0,1,444,274,35,23,4.5191,0
+a_00816,2025-12-23,CNN,cable_news,j_06_016,Education,Economic Consequences,0.236,0.082,0,1,577,329,53,19,4.6954,0
+a_00817,2025-08-08,MSNBC,cable_news,j_08_006,Health,Morality,-0.263,-0.632,0,1,713,664,127,46,5.4755,1
+a_00818,2025-08-19,The Daily Caller,partisan_right,j_14_001,Politics,Economic Consequences,0.314,1.0,0,0,630,891,127,122,5.8148,1
+a_00819,2025-11-24,The Daily Caller,partisan_right,j_14_020,Health,Economic Consequences,0.535,0.816,0,1,396,734,64,86,5.4454,1
+a_00820,2026-01-20,Politico,digital_politics,j_09_009,Health,Responsibility,0.586,-0.077,0,1,615,466,65,20,4.939,0
+a_00821,2025-08-05,CNN,cable_news,j_06_015,Economy,Human Interest,0.121,-0.357,1,1,426,669,226,35,5.5978,1
+a_00822,2025-11-24,Breitbart,partisan_right,j_13_004,Foreign Policy,Human Interest,0.213,0.776,1,1,702,1204,290,113,6.1964,1
+a_00823,2025-08-24,Breitbart,partisan_right,j_13_001,Education,Thematic,0.426,0.58,1,1,538,691,33,61,5.1531,1
+a_00824,2025-11-21,Vox,digital_explainer,j_11_007,Immigration,Economic Consequences,-0.55,-0.168,0,1,845,561,78,25,5.1282,1
+a_00825,2025-11-16,The Washington Post,legacy_mainstream,j_01_011,Politics,Economic Consequences,0.011,0.036,0,1,1281,450,84,49,5.1709,1
+a_00826,2025-08-16,Politico,digital_politics,j_09_010,Foreign Policy,Thematic,0.355,-0.092,0,1,721,350,44,17,4.6505,0
+a_00827,2025-11-26,HuffPost,digital_viral,j_12_028,Immigration,Responsibility,0.099,-0.479,0,1,830,344,40,49,4.8182,0
+a_00828,2026-01-03,The Daily Beast,digital_politics,j_19_006,Economy,Conflict,0.772,-0.104,0,1,563,265,33,26,4.5088,0
+a_00829,2025-12-28,Axios,digital_politics,j_10_020,Immigration,Morality,0.238,-0.083,0,1,763,306,50,13,4.5708,0
+a_00830,2025-08-06,CNN,cable_news,j_06_012,Technology,Responsibility,0.04,-0.063,0,1,713,356,32,20,4.5967,0
+a_00831,2025-09-12,Vox,digital_explainer,j_11_001,Crime,Human Interest,0.168,-0.586,0,0,954,269,55,15,4.5613,0
+a_00832,2025-09-11,Reuters,wire_service,j_03_016,Politics,Responsibility,-0.057,-0.063,1,1,674,509,68,41,5.135,1
+a_00833,2025-10-18,The Washington Post,legacy_mainstream,j_01_012,Technology,Strategy/Game,-0.064,0.029,0,0,880,621,61,42,5.2069,1
+a_00834,2025-08-25,Breitbart,partisan_right,j_13_016,Politics,Human Interest,0.131,0.801,0,1,796,542,109,23,5.1943,1
+a_00835,2025-12-26,The Daily Beast,digital_politics,j_19_004,Politics,Episodic,-0.032,-0.397,0,1,753,554,44,20,4.9104,0
+a_00836,2025-12-13,The Guardian,international,j_16_014,Politics,Morality,0.536,-0.592,0,1,1071,159,18,16,3.9876,0
+a_00837,2025-12-18,Vox,digital_explainer,j_11_034,Elections,Thematic,0.246,-0.246,1,1,1285,815,90,70,5.558,1
+a_00838,2025-09-04,The New York Times,legacy_mainstream,j_00_001,Health,Conflict,0.68,-0.11,0,0,915,103,30,8,3.7918,0
+a_00839,2025-08-03,The Daily Beast,digital_politics,j_19_025,Health,Human Interest,-0.489,-0.099,1,0,802,599,64,51,5.241,1
+a_00840,2026-01-05,MSNBC,cable_news,j_08_017,Health,Strategy/Game,-0.41,-0.428,1,1,671,639,41,35,5.0687,0
+a_00841,2025-09-19,NPR,public_media,j_05_011,Elections,Thematic,0.149,-0.126,0,0,587,156,17,13,3.923,0
+a_00842,2025-11-22,USA Today,legacy_mainstream,j_17_028,Climate,Economic Consequences,0.92,0.326,0,1,1013,352,56,93,5.0548,0
+a_00843,2026-01-05,The Daily Caller,partisan_right,j_14_018,Elections,Thematic,0.53,0.601,0,1,487,229,41,31,4.5335,0
+a_00844,2025-08-07,The Daily Caller,partisan_right,j_14_021,Health,Economic Consequences,-0.116,0.142,0,0,464,289,87,19,4.7773,0
+a_00845,2025-08-01,NPR,public_media,j_05_040,Politics,Morality,0.377,-0.149,0,1,1289,208,46,12,4.3392,0
+a_00846,2025-08-01,The Daily Beast,digital_politics,j_19_002,Climate,Human Interest,0.068,0.311,1,1,754,1200,173,21,5.7114,1
+a_00847,2025-08-28,Politico,digital_politics,j_09_011,Health,Morality,-0.261,-0.272,0,0,567,337,33,43,4.7263,0
+a_00848,2025-08-09,Axios,digital_politics,j_10_022,Foreign Policy,Thematic,0.411,0.057,1,0,1057,264,63,29,4.7178,0
+a_00849,2025-12-20,BuzzFeed News,digital_viral,j_15_005,Foreign Policy,Strategy/Game,0.3,-0.107,0,1,509,266,32,15,4.3971,0
+a_00850,2025-11-13,Breitbart,partisan_right,j_13_012,Technology,Episodic,-0.127,0.674,1,1,439,2291,246,83,6.4076,1
+a_00851,2026-01-17,Reuters,wire_service,j_03_017,Elections,Human Interest,0.157,0.049,0,1,925,264,31,11,4.3266,0
+a_00852,2025-12-17,CNN,cable_news,j_06_001,Climate,Thematic,0.293,0.185,0,1,658,233,20,22,4.2681,0
+a_00853,2026-01-14,Fox News,cable_news,j_07_008,Economy,Morality,-0.027,0.371,0,1,319,401,46,28,4.8267,0
+a_00854,2025-09-11,New York Post,tabloid,j_18_015,Technology,Strategy/Game,-0.412,0.519,0,1,548,681,85,71,5.4542,1
+a_00855,2025-09-19,The Daily Caller,partisan_right,j_14_010,Politics,Strategy/Game,0.297,0.521,1,0,649,580,101,45,5.3356,1
+a_00856,2025-12-25,Fox News,cable_news,j_07_008,Foreign Policy,Strategy/Game,-0.263,0.262,0,0,977,246,29,30,4.4619,0
+a_00857,2025-09-12,The Daily Caller,partisan_right,j_14_018,Politics,Responsibility,0.11,0.383,0,1,611,379,33,34,4.7391,0
+a_00858,2025-08-10,The Daily Caller,partisan_right,j_14_011,Health,Morality,0.506,0.096,0,1,759,602,46,68,5.2028,1
+a_00859,2025-11-24,Fox News,cable_news,j_07_002,Climate,Strategy/Game,0.374,0.419,0,1,970,404,59,11,4.7272,0
+a_00860,2025-12-17,MSNBC,cable_news,j_08_002,Politics,Thematic,0.363,0.214,0,1,547,280,39,11,4.4228,0
+a_00861,2026-01-15,USA Today,legacy_mainstream,j_17_032,Politics,Morality,0.436,0.065,0,0,945,189,21,12,4.0638,0
+a_00862,2026-01-08,Vox,digital_explainer,j_11_011,Immigration,Responsibility,0.923,-0.078,0,1,970,412,47,52,4.9671,0
+a_00863,2025-08-21,The Wall Street Journal,legacy_mainstream,j_02_018,Politics,Economic Consequences,-0.026,0.097,0,1,826,325,50,62,4.9016,0
+a_00864,2025-12-12,The Daily Caller,partisan_right,j_14_002,Technology,Human Interest,-0.031,0.489,0,0,569,639,141,44,5.4788,1
+a_00865,2025-12-25,Vox,digital_explainer,j_11_013,Health,Episodic,-0.131,-0.004,1,1,810,444,46,24,4.8479,0
+a_00866,2025-11-29,Axios,digital_politics,j_10_014,Economy,Strategy/Game,0.537,0.552,0,0,706,251,35,7,4.2557,0
+a_00867,2025-12-20,The Daily Caller,partisan_right,j_14_017,Economy,Economic Consequences,0.082,0.922,0,1,629,906,171,104,5.8801,1
+a_00868,2025-12-23,New York Post,tabloid,j_18_039,Education,Responsibility,0.516,0.401,0,0,463,231,24,13,4.2168,0
+a_00869,2025-10-17,CNN,cable_news,j_06_011,Elections,Episodic,0.141,-0.091,0,1,679,303,41,99,4.9008,0
+a_00870,2025-08-07,MSNBC,cable_news,j_08_019,Politics,Conflict,0.872,-0.248,0,1,592,312,42,16,4.5681,0
+a_00871,2025-10-18,Reuters,wire_service,j_03_029,Elections,Conflict,0.728,-0.188,0,0,600,89,8,19,3.5082,0
+a_00872,2025-09-04,HuffPost,digital_viral,j_12_009,Climate,Morality,0.14,-0.562,0,1,609,497,71,54,5.1898,1
+a_00873,2025-08-20,MSNBC,cable_news,j_08_006,Immigration,Strategy/Game,0.463,-0.582,0,1,592,488,67,22,4.9891,0
+a_00874,2025-08-22,CNN,cable_news,j_06_022,Immigration,Human Interest,0.128,-0.088,0,1,521,231,38,19,4.4216,0
+a_00875,2025-11-29,Breitbart,partisan_right,j_13_015,Immigration,Episodic,0.207,0.577,1,1,678,1888,169,206,6.3792,1
+a_00876,2025-10-27,MSNBC,cable_news,j_08_013,Foreign Policy,Episodic,0.188,-0.667,0,0,373,353,48,23,4.7378,0
+a_00877,2025-11-02,Politico,digital_politics,j_09_038,Technology,Responsibility,-0.21,0.041,0,1,519,321,70,36,4.8883,0
+a_00878,2025-12-07,MSNBC,cable_news,j_08_004,Technology,Morality,-0.051,-0.38,0,0,450,181,51,20,4.3963,0
+a_00879,2025-11-03,NPR,public_media,j_05_010,Health,Conflict,-0.155,-0.493,0,0,596,239,51,24,4.5695,0
+a_00880,2025-11-17,The Wall Street Journal,legacy_mainstream,j_02_001,Politics,Episodic,0.453,0.107,0,1,1273,335,30,25,4.5904,0
+a_00881,2025-08-15,The Guardian,international,j_16_010,Immigration,Thematic,-0.321,-0.38,0,0,863,671,106,28,5.3304,1
+a_00882,2025-12-26,The Washington Post,legacy_mainstream,j_01_006,Politics,Morality,0.185,-0.304,0,1,1012,471,54,34,4.9918,0
+a_00883,2025-10-17,CNN,cable_news,j_06_023,Economy,Responsibility,0.344,0.132,0,1,513,421,63,34,4.9812,0
+a_00884,2025-08-27,Breitbart,partisan_right,j_13_005,Politics,Episodic,0.452,0.174,0,1,717,250,26,7,4.1674,0
+a_00885,2025-12-19,The Wall Street Journal,legacy_mainstream,j_02_019,Economy,Strategy/Game,-0.382,-0.296,1,0,661,599,45,48,5.1254,1
+a_00886,2025-12-06,Breitbart,partisan_right,j_13_007,Immigration,Economic Consequences,0.122,0.651,0,1,589,1170,140,83,5.9036,1
+a_00887,2025-08-10,The Daily Caller,partisan_right,j_14_010,Climate,Strategy/Game,0.338,0.574,0,1,501,408,71,16,4.8565,0
+a_00888,2025-09-03,Breitbart,partisan_right,j_13_009,Crime,Thematic,0.266,0.751,0,0,420,681,102,43,5.4098,1
+a_00889,2025-08-03,CNN,cable_news,j_06_016,Politics,Episodic,0.503,-0.235,1,1,250,708,110,45,5.4605,1
+a_00890,2025-09-16,The New York Times,legacy_mainstream,j_00_013,Crime,Morality,0.203,-0.479,0,0,527,338,49,66,4.9275,0
+a_00891,2025-08-18,USA Today,legacy_mainstream,j_17_012,Health,Responsibility,-0.515,-0.052,0,0,1094,282,44,23,4.6003,0
+a_00892,2025-12-01,CNN,cable_news,j_06_015,Education,Human Interest,0.093,-0.21,0,0,649,201,33,25,4.3637,0
+a_00893,2025-10-30,The Guardian,international,j_16_010,Climate,Strategy/Game,0.039,0.088,0,0,1147,479,59,34,5.0263,0
+a_00894,2026-01-17,Reuters,wire_service,j_03_005,Technology,Economic Consequences,-0.578,-0.081,0,1,800,377,53,11,4.6611,0
+a_00895,2025-12-08,Reuters,wire_service,j_03_015,Technology,Human Interest,-0.298,-0.013,1,1,671,414,103,43,5.1643,1
+a_00896,2025-11-14,BuzzFeed News,digital_viral,j_15_009,Elections,Human Interest,0.519,0.569,0,0,548,243,35,13,4.3515,0
+a_00897,2025-10-28,New York Post,tabloid,j_18_002,Education,Human Interest,-0.529,0.151,0,0,263,412,57,26,4.889,0
+a_00898,2025-08-10,USA Today,legacy_mainstream,j_17_015,Technology,Human Interest,0.551,0.089,0,0,986,215,30,9,4.1784,0
+a_00899,2025-08-13,BuzzFeed News,digital_viral,j_15_004,Technology,Conflict,-0.001,0.112,0,1,492,366,46,28,4.7812,0
+a_00900,2025-11-15,AP News,wire_service,j_04_010,Politics,Strategy/Game,0.226,0.183,1,0,1199,470,55,59,5.1039,1
+a_00901,2025-08-01,New York Post,tabloid,j_18_024,Elections,Morality,-0.016,0.272,0,1,534,365,53,43,4.9048,0
+a_00902,2025-08-08,Breitbart,partisan_right,j_13_004,Health,Thematic,-0.038,0.698,0,1,925,503,57,83,5.2156,1
+a_00903,2025-09-07,Reuters,wire_service,j_03_018,Economy,Economic Consequences,0.06,0.025,0,0,622,153,20,27,4.0983,0
+a_00904,2025-12-31,The Wall Street Journal,legacy_mainstream,j_02_036,Elections,Strategy/Game,-0.047,0.056,0,1,1170,194,20,5,3.9082,0
+a_00905,2025-10-19,USA Today,legacy_mainstream,j_17_013,Education,Economic Consequences,0.798,0.031,0,0,1085,156,22,6,3.858,0
+a_00906,2025-12-01,NPR,public_media,j_05_013,Politics,Responsibility,0.051,0.307,0,1,716,233,39,7,4.2502,0
+a_00907,2025-10-11,BuzzFeed News,digital_viral,j_15_018,Politics,Morality,0.102,0.253,0,1,593,485,61,49,5.1136,1
+a_00908,2025-08-30,The Wall Street Journal,legacy_mainstream,j_02_032,Politics,Morality,0.541,0.276,0,0,794,495,33,26,4.8204,0
+a_00909,2025-10-04,NPR,public_media,j_05_010,Climate,Strategy/Game,0.744,0.014,0,1,629,85,14,5,3.3979,0
+a_00910,2025-08-16,NPR,public_media,j_05_005,Politics,Episodic,0.438,-0.417,1,0,1020,1005,142,67,5.7896,1
+a_00911,2025-12-12,NPR,public_media,j_05_009,Elections,Human Interest,-0.21,-0.265,0,1,815,296,28,27,4.5235,0
+a_00912,2025-09-01,Breitbart,partisan_right,j_13_020,Elections,Episodic,0.364,0.887,0,0,679,638,113,23,5.2864,1
+a_00913,2025-10-05,New York Post,tabloid,j_18_007,Technology,Economic Consequences,-0.614,0.572,0,0,550,477,40,19,4.798,0
+a_00914,2026-01-17,New York Post,tabloid,j_18_016,Climate,Human Interest,0.121,0.007,1,1,266,970,189,72,5.8714,1
+a_00915,2025-11-11,The Daily Caller,partisan_right,j_14_001,Health,Human Interest,-0.541,0.429,0,0,802,604,80,82,5.4047,1
+a_00916,2025-10-19,AP News,wire_service,j_04_015,Politics,Thematic,-0.291,0.545,1,0,687,538,33,39,4.9405,0
+a_00917,2025-11-02,The Daily Beast,digital_politics,j_19_008,Education,Conflict,0.249,-0.176,0,1,746,180,26,9,4.0485,0
+a_00918,2025-12-14,Axios,digital_politics,j_10_001,Politics,Morality,0.284,0.506,1,0,962,622,73,16,5.0751,0
+a_00919,2025-09-14,Axios,digital_politics,j_10_005,Politics,Morality,0.172,0.102,0,1,1097,454,51,54,5.047,0
+a_00920,2025-11-19,The Daily Caller,partisan_right,j_14_009,Health,Episodic,0.556,0.612,0,1,551,412,43,21,4.7652,0
+a_00921,2025-12-29,BuzzFeed News,digital_viral,j_15_007,Politics,Morality,0.467,-0.126,0,1,298,351,45,15,4.6349,0
+a_00922,2025-11-08,The Daily Beast,digital_politics,j_19_002,Crime,Thematic,0.443,0.036,0,1,610,400,46,13,4.6798,0
+a_00923,2025-10-17,Vox,digital_explainer,j_11_007,Immigration,Strategy/Game,-0.069,0.089,0,0,936,203,14,7,3.8874,0
+a_00924,2025-08-26,HuffPost,digital_viral,j_12_005,Foreign Policy,Strategy/Game,0.86,-0.459,0,1,494,515,109,24,5.177,1
+a_00925,2025-09-12,The Daily Caller,partisan_right,j_14_015,Climate,Episodic,-0.141,0.462,0,1,697,617,77,41,5.2678,1
+a_00926,2026-01-11,NPR,public_media,j_05_010,Foreign Policy,Economic Consequences,0.721,0.029,0,1,835,187,20,8,3.971,0
+a_00927,2025-11-02,CNN,cable_news,j_06_014,Crime,Morality,1.0,-0.132,0,0,250,169,15,14,3.9413,0
+a_00928,2025-09-22,HuffPost,digital_viral,j_12_008,Foreign Policy,Responsibility,0.404,-0.323,0,1,801,385,68,25,4.8998,0
+a_00929,2025-10-12,The Washington Post,legacy_mainstream,j_01_003,Technology,Economic Consequences,0.16,0.102,1,1,679,248,21,56,4.4946,0
+a_00930,2025-11-08,CNN,cable_news,j_06_001,Economy,Conflict,-0.625,0.176,1,1,527,1001,142,32,5.643,1
+a_00931,2025-11-01,The Daily Caller,partisan_right,j_14_005,Elections,Economic Consequences,0.191,0.438,0,1,587,344,38,28,4.6943,0
+a_00932,2025-11-30,The Daily Beast,digital_politics,j_19_017,Economy,Episodic,0.481,-0.147,0,0,972,453,51,37,4.9719,0
+a_00933,2025-09-14,Axios,digital_politics,j_10_030,Politics,Strategy/Game,0.577,-0.252,0,1,843,489,45,22,4.8729,0
+a_00934,2025-11-21,Fox News,cable_news,j_07_023,Economy,Human Interest,-0.366,0.126,0,1,614,644,70,50,5.2998,1
+a_00935,2025-10-16,MSNBC,cable_news,j_08_009,Health,Strategy/Game,0.012,-0.269,1,0,471,468,64,51,5.1179,1
+a_00936,2026-01-10,Breitbart,partisan_right,j_13_019,Health,Strategy/Game,-0.561,0.658,0,1,653,804,118,63,5.6109,1
+a_00937,2025-08-28,Axios,digital_politics,j_10_013,Technology,Episodic,0.124,-0.192,0,1,893,238,24,35,4.4206,0
+a_00938,2025-08-26,The New York Times,legacy_mainstream,j_00_012,Elections,Thematic,-0.415,-0.429,0,1,1047,1255,165,31,5.7946,1
+a_00939,2025-10-19,Axios,digital_politics,j_10_013,Health,Thematic,0.289,-0.216,0,1,824,249,46,12,4.4288,0
+a_00940,2025-10-27,MSNBC,cable_news,j_08_029,Technology,Economic Consequences,0.205,-0.186,1,0,609,196,15,30,4.1602,0
+a_00941,2025-11-28,The Daily Caller,partisan_right,j_14_025,Health,Episodic,-0.042,0.058,0,0,322,400,54,47,4.9734,0
+a_00942,2025-10-09,USA Today,legacy_mainstream,j_17_009,Foreign Policy,Morality,0.456,-0.303,0,0,822,353,34,34,4.7123,0
+a_00943,2026-01-06,The Daily Beast,digital_politics,j_19_014,Politics,Morality,0.185,-0.666,0,0,813,682,64,94,5.4263,1
+a_00944,2025-10-22,HuffPost,digital_viral,j_12_027,Politics,Strategy/Game,0.273,-0.095,1,1,549,798,118,23,5.411,1
+a_00945,2025-08-23,Fox News,cable_news,j_07_011,Technology,Responsibility,-0.344,-0.101,0,1,308,734,82,81,5.5069,1
+a_00946,2025-08-21,MSNBC,cable_news,j_08_015,Immigration,Morality,0.337,-0.292,1,1,263,528,47,67,5.1408,1
+a_00947,2026-01-16,Reuters,wire_service,j_03_003,Foreign Policy,Thematic,-0.492,0.41,1,0,508,204,44,11,4.3005,0
+a_00948,2025-08-24,New York Post,tabloid,j_18_039,Climate,Economic Consequences,-0.499,0.618,0,0,554,772,144,213,5.8914,1
+a_00949,2026-01-11,The Guardian,international,j_16_021,Education,Conflict,0.113,-0.751,1,1,748,1276,88,105,5.8554,1
+a_00950,2025-09-18,USA Today,legacy_mainstream,j_17_002,Crime,Conflict,0.587,0.025,0,0,587,135,11,3,3.4791,0
+a_00951,2025-08-17,CNN,cable_news,j_06_015,Politics,Episodic,0.282,-0.347,0,0,714,321,53,29,4.7642,0
+a_00952,2025-09-22,CNN,cable_news,j_06_001,Politics,Morality,0.055,-0.398,0,0,622,241,30,12,4.2877,0
+a_00953,2025-11-15,USA Today,legacy_mainstream,j_17_025,Politics,Morality,0.816,-0.078,0,0,1176,131,30,17,4.0497,0
+a_00954,2025-10-14,Axios,digital_politics,j_10_028,Health,Strategy/Game,0.248,0.357,0,1,671,567,95,55,5.3454,1
+a_00955,2025-12-14,The Daily Caller,partisan_right,j_14_022,Technology,Morality,0.12,0.7,0,1,645,1417,213,78,6.1122,1
+a_00956,2025-11-14,Politico,digital_politics,j_09_024,Health,Responsibility,0.159,-0.129,0,1,737,277,26,44,4.5639,0
+a_00957,2025-10-09,MSNBC,cable_news,j_08_003,Climate,Conflict,0.651,-0.124,0,1,398,240,39,29,4.5293,0
+a_00958,2025-11-18,HuffPost,digital_viral,j_12_010,Technology,Economic Consequences,0.123,-0.761,0,0,464,312,27,15,4.4273,0
+a_00959,2026-01-16,The Guardian,international,j_16_017,Immigration,Thematic,0.183,-0.488,0,1,638,450,96,31,5.1213,1
+a_00960,2025-10-11,CNN,cable_news,j_06_002,Immigration,Morality,0.471,-0.306,0,1,581,676,106,65,5.4986,1
+a_00961,2025-08-27,The Guardian,international,j_16_015,Health,Economic Consequences,-0.597,-0.28,1,1,676,500,51,31,4.9868,0
+a_00962,2025-10-10,AP News,wire_service,j_04_008,Health,Human Interest,-0.686,-0.051,1,0,669,452,81,28,5.0534,0
+a_00963,2025-12-24,MSNBC,cable_news,j_08_016,Climate,Human Interest,-0.073,-0.335,0,1,408,470,139,36,5.2821,1
+a_00964,2025-09-07,New York Post,tabloid,j_18_016,Climate,Human Interest,-0.109,0.156,0,1,603,655,82,29,5.249,1
+a_00965,2026-01-12,The Daily Beast,digital_politics,j_19_015,Health,Human Interest,0.124,-0.194,0,0,803,468,77,11,4.8793,0
+a_00966,2025-11-10,New York Post,tabloid,j_18_006,Health,Strategy/Game,0.206,0.335,0,1,663,955,111,80,5.7258,1
+a_00967,2025-11-13,CNN,cable_news,j_06_034,Immigration,Conflict,0.625,-0.063,0,1,462,208,29,6,4.0807,0
+a_00968,2025-09-24,The Guardian,international,j_16_017,Immigration,Human Interest,-0.324,-0.371,0,1,863,588,47,27,5.017,0
+a_00969,2026-01-07,New York Post,tabloid,j_18_012,Politics,Morality,0.247,0.3,0,1,683,461,62,14,4.8523,0
+a_00970,2025-08-07,The Daily Beast,digital_politics,j_19_018,Crime,Responsibility,-0.002,0.007,0,0,878,198,27,6,4.0355,0
+a_00971,2025-09-21,The New York Times,legacy_mainstream,j_00_007,Elections,Thematic,0.166,-0.389,1,0,663,708,180,65,5.6794,1
+a_00972,2025-10-12,The Daily Caller,partisan_right,j_14_007,Politics,Thematic,-0.513,0.535,0,1,556,1111,80,74,5.6888,1
+a_00973,2025-10-22,The Daily Beast,digital_politics,j_19_013,Foreign Policy,Human Interest,0.104,0.09,1,0,1355,581,71,38,5.1989,1
+a_00974,2025-10-22,BuzzFeed News,digital_viral,j_15_003,Politics,Responsibility,-0.241,-0.326,0,1,631,336,71,13,4.7209,0
+a_00975,2025-08-26,AP News,wire_service,j_04_012,Technology,Conflict,0.135,0.451,0,0,250,138,17,7,3.7502,0
+a_00976,2025-09-09,BuzzFeed News,digital_viral,j_15_017,Crime,Responsibility,0.668,-0.385,0,1,325,223,28,20,4.3249,0
+a_00977,2025-08-17,The Wall Street Journal,legacy_mainstream,j_02_012,Politics,Economic Consequences,0.218,0.114,0,1,482,221,22,16,4.2086,0
+a_00978,2025-11-08,Politico,digital_politics,j_09_023,Elections,Conflict,0.056,-0.188,0,0,843,323,32,36,4.6615,0
+a_00979,2025-09-30,HuffPost,digital_viral,j_12_011,Crime,Strategy/Game,0.298,0.347,0,1,576,435,31,52,4.8726,0
+a_00980,2025-11-06,Politico,digital_politics,j_09_032,Elections,Economic Consequences,-0.2,-0.076,0,1,636,440,48,29,4.8923,0
+a_00981,2025-11-11,Breitbart,partisan_right,j_13_012,Health,Morality,-0.358,0.525,0,0,485,428,41,13,4.6798,0
+a_00982,2025-11-30,AP News,wire_service,j_04_027,Foreign Policy,Conflict,0.535,-0.093,0,1,916,148,21,8,3.8687,0
+a_00983,2025-11-03,HuffPost,digital_viral,j_12_026,Elections,Strategy/Game,0.568,-0.176,0,1,315,440,45,31,4.8863,0
+a_00984,2025-11-21,HuffPost,digital_viral,j_12_003,Climate,Episodic,0.232,-0.282,0,0,392,254,29,13,4.3188,0
+a_00985,2025-11-10,HuffPost,digital_viral,j_12_021,Economy,Responsibility,0.331,-0.233,0,1,539,334,39,15,4.5682,0
+a_00986,2025-11-21,NPR,public_media,j_05_005,Immigration,Episodic,0.096,-1.0,1,0,665,642,85,49,5.3518,1
+a_00987,2025-11-15,CNN,cable_news,j_06_017,Technology,Morality,-0.032,-0.086,0,1,447,566,64,142,5.4151,1
+a_00988,2025-09-24,NPR,public_media,j_05_013,Elections,Economic Consequences,-0.072,-0.196,0,1,623,395,37,23,4.7176,0
+a_00989,2025-09-12,Politico,digital_politics,j_09_007,Crime,Economic Consequences,0.118,0.31,1,0,639,670,93,50,5.4037,1
+a_00990,2025-12-15,Vox,digital_explainer,j_11_018,Economy,Economic Consequences,-0.296,0.077,0,1,873,361,71,14,4.7704,0
+a_00991,2025-09-29,Fox News,cable_news,j_07_005,Politics,Economic Consequences,-0.104,0.303,0,1,799,378,54,52,4.965,0
+a_00992,2025-11-04,MSNBC,cable_news,j_08_014,Immigration,Human Interest,0.077,-0.096,0,0,636,484,53,56,5.0974,0
+a_00993,2025-09-04,NPR,public_media,j_05_018,Elections,Economic Consequences,0.215,-0.475,0,1,887,421,55,47,5.0043,0
+a_00994,2025-10-14,AP News,wire_service,j_04_002,Politics,Responsibility,1.0,0.192,1,1,490,176,12,26,4.0167,0
+a_00995,2025-10-31,Breitbart,partisan_right,j_13_014,Education,Economic Consequences,-0.554,0.507,1,1,609,2547,328,153,6.6677,1
+a_00996,2025-11-17,The Guardian,international,j_16_016,Elections,Responsibility,0.162,-0.596,1,0,850,504,59,32,5.0399,0
+a_00997,2025-10-31,NPR,public_media,j_05_002,Politics,Human Interest,-0.377,-0.246,0,0,870,451,44,79,5.0752,0
+a_00998,2025-10-02,USA Today,legacy_mainstream,j_17_015,Politics,Strategy/Game,0.184,0.3,0,1,1169,588,61,60,5.2495,1
+a_00999,2026-01-14,Vox,digital_explainer,j_11_006,Immigration,Responsibility,0.096,-0.205,0,1,771,225,26,6,4.0882,0
+a_01000,2025-10-28,Reuters,wire_service,j_03_011,Immigration,Thematic,0.303,0.374,0,1,893,261,50,24,4.6075,0
+a_01001,2025-12-18,Fox News,cable_news,j_07_003,Politics,Morality,0.115,0.163,0,1,960,561,111,31,5.2744,1
+a_01002,2025-12-06,The New York Times,legacy_mainstream,j_00_024,Foreign Policy,Human Interest,0.043,0.012,0,1,1116,1031,101,120,5.8163,1
+a_01003,2025-11-05,The New York Times,legacy_mainstream,j_00_019,Technology,Responsibility,-0.129,-0.413,0,1,603,354,40,32,4.7494,0
+a_01004,2026-01-01,CNN,cable_news,j_06_004,Elections,Strategy/Game,-0.02,-0.044,0,1,256,485,55,15,4.8552,0
+a_01005,2025-08-23,Politico,digital_politics,j_09_007,Foreign Policy,Morality,0.104,0.104,0,1,1044,364,65,31,4.9,0
+a_01006,2026-01-07,BuzzFeed News,digital_viral,j_15_011,Foreign Policy,Responsibility,0.135,0.115,0,1,700,206,29,17,4.2648,0
+a_01007,2025-12-26,The Wall Street Journal,legacy_mainstream,j_02_017,Technology,Morality,0.072,0.263,0,0,646,248,35,22,4.4609,0
+a_01008,2025-10-27,The Guardian,international,j_16_012,Economy,Human Interest,0.068,-0.485,1,1,1071,809,132,80,5.6945,1
+a_01009,2025-12-05,AP News,wire_service,j_04_005,Technology,Human Interest,-0.22,0.22,0,1,395,152,17,24,4.0261,0
+a_01010,2025-10-30,The Wall Street Journal,legacy_mainstream,j_02_004,Politics,Thematic,-0.026,0.633,0,1,904,586,128,54,5.4469,1
+a_01011,2025-09-16,Breitbart,partisan_right,j_13_033,Immigration,Strategy/Game,-0.216,0.504,0,1,714,1021,138,77,5.8164,1
+a_01012,2025-12-17,BuzzFeed News,digital_viral,j_15_016,Politics,Conflict,0.612,-0.509,0,0,480,269,27,35,4.5156,0
+a_01013,2025-09-12,HuffPost,digital_viral,j_12_021,Technology,Thematic,-0.459,-0.075,1,1,460,654,82,149,5.5701,1
+a_01014,2025-09-24,The Wall Street Journal,legacy_mainstream,j_02_011,Politics,Strategy/Game,0.424,0.117,1,0,1176,392,82,46,5.0826,0
+a_01015,2025-10-29,The Wall Street Journal,legacy_mainstream,j_02_033,Health,Conflict,0.745,0.167,0,1,868,228,27,19,4.3157,0
+a_01016,2025-12-23,Fox News,cable_news,j_07_004,Economy,Strategy/Game,0.194,0.489,0,1,825,555,105,51,5.3497,1
+a_01017,2025-10-06,Politico,digital_politics,j_09_005,Climate,Responsibility,-0.207,-0.064,0,1,1004,520,57,44,5.1073,1
+a_01018,2025-10-25,The Daily Beast,digital_politics,j_19_028,Education,Thematic,-0.155,-0.267,0,1,651,508,53,38,5.0456,0
+a_01019,2025-08-08,NPR,public_media,j_05_031,Politics,Morality,0.355,-0.225,0,0,479,96,16,21,3.7555,0
+a_01020,2025-08-21,Reuters,wire_service,j_03_008,Foreign Policy,Responsibility,0.155,0.367,0,1,551,167,17,9,3.8896,0
+a_01021,2025-08-10,New York Post,tabloid,j_18_009,Foreign Policy,Human Interest,-0.069,0.208,0,1,787,629,114,83,5.5325,1
+a_01022,2025-08-13,Reuters,wire_service,j_03_015,Health,Human Interest,0.119,-0.309,0,0,321,210,32,15,4.2794,0
+a_01023,2025-12-29,The New York Times,legacy_mainstream,j_00_015,Immigration,Responsibility,0.349,-0.549,0,0,821,524,52,19,4.9219,0
+a_01024,2025-12-24,MSNBC,cable_news,j_08_005,Crime,Episodic,0.296,-0.265,0,0,511,450,59,30,4.9708,0
+a_01025,2025-12-21,MSNBC,cable_news,j_08_027,Politics,Thematic,-0.446,-0.582,0,1,965,871,97,49,5.5433,1
+a_01026,2025-08-10,HuffPost,digital_viral,j_12_010,Technology,Episodic,0.137,-0.591,0,1,376,714,109,71,5.5516,1
+a_01027,2025-08-14,USA Today,legacy_mainstream,j_17_020,Politics,Responsibility,-0.03,0.109,0,1,864,181,47,14,4.305,0
+a_01028,2025-09-18,New York Post,tabloid,j_18_003,Foreign Policy,Responsibility,0.314,0.371,0,1,641,525,62,23,5.0112,0
+a_01029,2025-11-06,NPR,public_media,j_05_002,Elections,Human Interest,0.195,-0.292,0,1,913,187,31,29,4.3382,0
+a_01030,2025-09-27,The Daily Beast,digital_politics,j_19_012,Foreign Policy,Episodic,-0.317,-0.127,0,1,822,466,64,60,5.1477,1
+a_01031,2025-10-24,HuffPost,digital_viral,j_12_006,Climate,Human Interest,-0.026,-0.153,0,1,819,1196,163,196,6.1304,1
+a_01032,2025-08-30,The Washington Post,legacy_mainstream,j_01_020,Climate,Human Interest,0.004,0.001,1,1,786,717,92,60,5.4702,1
+a_01033,2025-12-05,New York Post,tabloid,j_18_003,Elections,Episodic,0.491,0.351,0,1,622,296,30,22,4.5042,0
+a_01034,2025-09-24,The Wall Street Journal,legacy_mainstream,j_02_034,Economy,Responsibility,0.185,-0.451,0,0,960,367,56,39,4.9047,0
+a_01035,2025-08-12,Vox,digital_explainer,j_11_029,Politics,Human Interest,-0.543,-0.31,0,1,928,425,52,24,4.8621,0
+a_01036,2025-12-07,BuzzFeed News,digital_viral,j_15_022,Climate,Episodic,0.483,0.079,0,1,781,218,21,17,4.1999,0
+a_01037,2026-01-04,AP News,wire_service,j_04_004,Health,Thematic,0.073,-0.103,0,0,627,347,67,24,4.8357,0
+a_01038,2025-08-03,NPR,public_media,j_05_012,Health,Human Interest,-0.411,-0.191,0,1,892,584,82,21,5.1297,1
+a_01039,2025-10-15,Politico,digital_politics,j_09_015,Politics,Responsibility,-0.036,0.238,0,0,885,314,39,25,4.6346,0
+a_01040,2025-12-22,USA Today,legacy_mainstream,j_17_020,Climate,Morality,0.219,-0.03,0,1,998,224,48,13,4.4034,0
+a_01041,2025-12-01,AP News,wire_service,j_04_009,Economy,Strategy/Game,0.454,0.377,0,0,536,127,9,8,3.5562,0
+a_01042,2025-12-27,Breitbart,partisan_right,j_13_003,Economy,Thematic,-0.146,0.932,0,0,506,1459,308,130,6.3381,1
+a_01043,2025-10-11,Politico,digital_politics,j_09_010,Politics,Responsibility,0.448,0.02,0,0,1070,244,24,34,4.4274,0
+a_01044,2025-10-04,The Wall Street Journal,legacy_mainstream,j_02_008,Health,Episodic,-0.438,0.15,0,0,944,136,20,7,3.7892,0
+a_01045,2025-12-01,The Daily Caller,partisan_right,j_14_013,Foreign Policy,Responsibility,-0.063,-0.163,0,1,536,996,110,63,5.697,1
+a_01046,2025-08-27,The Guardian,international,j_16_004,Health,Thematic,-0.669,-0.382,0,1,843,600,59,30,5.1144,1
+a_01047,2025-09-11,Vox,digital_explainer,j_11_009,Immigration,Morality,-0.019,-0.588,0,0,473,362,78,18,4.8469,0
+a_01048,2025-11-12,Reuters,wire_service,j_03_014,Education,Morality,0.502,0.055,0,0,447,142,37,8,4.0121,0
+a_01049,2025-11-24,Reuters,wire_service,j_03_009,Health,Morality,0.767,0.038,0,1,773,140,18,9,3.8182,0
+a_01050,2025-08-21,MSNBC,cable_news,j_08_008,Foreign Policy,Thematic,0.07,-0.126,1,0,677,609,93,61,5.3951,1
+a_01051,2025-10-27,Axios,digital_politics,j_10_018,Immigration,Responsibility,0.008,0.399,0,1,771,315,43,27,4.6796,0
+a_01052,2025-10-03,Vox,digital_explainer,j_11_031,Climate,Economic Consequences,-0.016,-0.257,0,1,407,197,49,9,4.2783,0
+a_01053,2025-10-26,AP News,wire_service,j_04_006,Politics,Conflict,0.592,0.57,0,0,679,209,14,30,4.1728,0
+a_01054,2026-01-13,Axios,digital_politics,j_10_013,Politics,Responsibility,-0.369,0.108,1,1,911,1108,171,132,6.0279,1
+a_01055,2025-08-14,NPR,public_media,j_05_021,Elections,Episodic,0.028,-0.528,1,0,934,415,44,20,4.7662,0
+a_01056,2026-01-20,Breitbart,partisan_right,j_13_012,Education,Morality,0.38,0.509,1,0,693,577,34,79,5.1228,1
+a_01057,2025-10-17,BuzzFeed News,digital_viral,j_15_017,Elections,Responsibility,-0.014,-0.143,0,1,592,523,62,46,5.1437,1
+a_01058,2025-12-12,Breitbart,partisan_right,j_13_031,Elections,Episodic,0.075,0.798,0,0,640,516,133,35,5.3101,1
+a_01059,2025-10-13,The New York Times,legacy_mainstream,j_00_002,Politics,Responsibility,0.204,-0.487,0,1,740,370,40,33,4.7774,0
+a_01060,2025-09-23,The Daily Beast,digital_politics,j_19_015,Foreign Policy,Thematic,0.185,-0.274,0,0,813,240,43,18,4.4665,0
+a_01061,2025-12-12,The New York Times,legacy_mainstream,j_00_028,Crime,Strategy/Game,0.312,-0.29,0,1,503,306,63,30,4.7979,0
+a_01062,2025-11-27,The Daily Beast,digital_politics,j_19_029,Education,Strategy/Game,0.123,-0.312,0,0,317,142,19,12,3.8931,0
+a_01063,2025-08-25,The New York Times,legacy_mainstream,j_00_017,Politics,Episodic,0.382,-0.047,0,0,785,174,25,11,4.0568,0
+a_01064,2025-12-01,Axios,digital_politics,j_10_002,Health,Strategy/Game,0.688,0.21,1,1,972,453,34,12,4.6386,0
+a_01065,2025-12-09,The Wall Street Journal,legacy_mainstream,j_02_015,Education,Conflict,0.212,0.492,0,1,731,416,44,40,4.9013,0
+a_01066,2025-10-07,The Washington Post,legacy_mainstream,j_01_002,Foreign Policy,Morality,0.288,-0.233,0,0,1020,402,75,25,4.9503,0
+a_01067,2026-01-08,Breitbart,partisan_right,j_13_025,Climate,Economic Consequences,0.508,0.951,0,1,578,1300,180,142,6.1376,1
+a_01068,2025-11-19,The Daily Caller,partisan_right,j_14_008,Health,Responsibility,-0.165,0.209,1,0,250,1023,157,97,5.9015,1
+a_01069,2025-09-27,The Wall Street Journal,legacy_mainstream,j_02_013,Health,Economic Consequences,-0.447,-0.147,1,0,999,1029,146,64,5.8007,1
+a_01070,2025-08-02,The Daily Beast,digital_politics,j_19_032,Elections,Responsibility,0.375,-0.503,0,0,409,287,84,36,4.8865,0
+a_01071,2025-11-25,CNN,cable_news,j_06_019,Crime,Human Interest,0.473,-0.098,1,1,350,355,41,29,4.739,0
+a_01072,2025-09-06,CNN,cable_news,j_06_024,Crime,Conflict,0.658,0.201,1,1,440,526,125,42,5.3367,1
+a_01073,2025-12-09,NPR,public_media,j_05_020,Climate,Conflict,0.321,-0.351,0,0,891,253,36,18,4.4408,0
+a_01074,2025-10-30,Politico,digital_politics,j_09_026,Crime,Responsibility,-0.135,-0.069,1,1,469,686,168,118,5.761,1
+a_01075,2025-10-20,Reuters,wire_service,j_03_025,Climate,Conflict,0.332,-0.054,0,0,369,129,11,7,3.5951,0
+a_01076,2025-08-29,MSNBC,cable_news,j_08_001,Crime,Episodic,0.67,-0.157,1,1,306,374,54,24,4.8094,0
+a_01077,2025-12-02,AP News,wire_service,j_04_010,Foreign Policy,Episodic,-0.12,-0.119,0,1,615,272,32,11,4.3507,0
+a_01078,2025-08-29,The Washington Post,legacy_mainstream,j_01_008,Elections,Strategy/Game,0.227,-0.283,1,1,791,973,138,104,5.8518,1
+a_01079,2025-10-12,Fox News,cable_news,j_07_017,Elections,Economic Consequences,0.134,0.014,0,1,825,561,116,31,5.2876,1
+a_01080,2025-12-23,Breitbart,partisan_right,j_13_023,Climate,Episodic,-0.109,0.507,0,1,452,623,96,37,5.318,1
+a_01081,2026-01-07,BuzzFeed News,digital_viral,j_15_012,Crime,Strategy/Game,0.474,0.244,1,1,484,372,77,21,4.886,0
+a_01082,2026-01-19,Fox News,cable_news,j_07_003,Immigration,Morality,0.383,0.373,0,1,628,290,31,22,4.5035,0
+a_01083,2026-01-13,CNN,cable_news,j_06_013,Foreign Policy,Conflict,0.53,-0.285,1,0,873,370,38,15,4.6117,0
+a_01084,2025-11-05,BuzzFeed News,digital_viral,j_15_024,Climate,Responsibility,-0.193,0.259,0,1,606,457,62,11,4.8034,0
+a_01085,2025-09-04,Breitbart,partisan_right,j_13_005,Immigration,Episodic,-0.294,0.504,0,0,762,723,97,68,5.5147,1
+a_01086,2025-12-24,The Guardian,international,j_16_003,Education,Conflict,0.329,0.055,0,0,729,112,14,3,3.4534,0
+a_01087,2025-12-17,New York Post,tabloid,j_18_024,Immigration,Conflict,0.198,0.551,1,1,628,853,83,97,5.6212,1
+a_01088,2026-01-19,The Guardian,international,j_16_026,Education,Morality,0.601,-0.286,0,0,489,193,40,31,4.4411,0
+a_01089,2025-11-21,New York Post,tabloid,j_18_004,Economy,Responsibility,0.715,-0.175,0,1,250,195,23,13,4.1203,0
+a_01090,2025-08-25,MSNBC,cable_news,j_08_007,Technology,Morality,0.647,0.272,0,0,568,238,53,34,4.646,0
+a_01091,2025-10-27,Fox News,cable_news,j_07_020,Climate,Morality,-0.132,0.447,0,1,728,516,70,38,5.1355,1
+a_01092,2025-10-17,CNN,cable_news,j_06_014,Politics,Human Interest,0.221,-0.181,0,0,786,211,36,35,4.4783,0
+a_01093,2025-12-24,AP News,wire_service,j_04_019,Foreign Policy,Conflict,0.661,0.239,1,0,656,218,36,13,4.3056,0
+a_01094,2025-10-07,The Daily Caller,partisan_right,j_14_007,Climate,Conflict,0.578,0.726,0,1,938,639,65,15,5.0421,0
+a_01095,2025-09-26,The Daily Caller,partisan_right,j_14_009,Politics,Conflict,0.244,0.878,1,0,637,723,111,52,5.502,1
+a_01096,2025-08-14,The Guardian,international,j_16_002,Foreign Policy,Strategy/Game,0.734,-0.466,0,1,1036,275,73,48,4.8798,0
+a_01097,2025-12-23,Reuters,wire_service,j_03_012,Education,Episodic,-0.1,0.08,1,1,657,408,60,40,4.9828,0
+a_01098,2025-12-09,Politico,digital_politics,j_09_002,Education,Morality,0.088,-0.246,0,1,959,264,49,15,4.518,0
+a_01099,2025-08-08,AP News,wire_service,j_04_001,Crime,Conflict,0.189,0.167,0,0,443,74,13,6,3.3396,0
+a_01100,2025-10-15,USA Today,legacy_mainstream,j_17_029,Foreign Policy,Morality,0.493,-0.056,0,1,862,126,19,15,3.8753,0
+a_01101,2025-10-22,NPR,public_media,j_05_038,Crime,Thematic,0.172,-0.13,0,0,380,134,19,10,3.8309,0
+a_01102,2025-10-21,The Wall Street Journal,legacy_mainstream,j_02_018,Climate,Economic Consequences,0.189,0.163,0,1,1209,220,36,61,4.6078,0
+a_01103,2026-01-06,Vox,digital_explainer,j_11_010,Politics,Morality,0.321,-0.313,0,1,1076,296,52,17,4.616,0
+a_01104,2025-08-27,USA Today,legacy_mainstream,j_17_011,Immigration,Responsibility,0.254,-0.267,0,0,962,425,36,52,4.9046,0
+a_01105,2025-09-22,New York Post,tabloid,j_18_017,Education,Human Interest,-0.164,0.398,0,0,1011,329,49,36,4.7953,0
+a_01106,2025-09-01,The Washington Post,legacy_mainstream,j_01_006,Climate,Morality,0.386,0.222,0,1,989,290,37,15,4.4825,0
+a_01107,2025-09-12,CNN,cable_news,j_06_019,Technology,Morality,-0.11,-0.239,1,0,266,1095,129,66,5.8009,1
+a_01108,2026-01-04,Reuters,wire_service,j_03_013,Foreign Policy,Morality,-0.137,0.138,0,0,715,217,46,27,4.5137,0
+a_01109,2026-01-10,CNN,cable_news,j_06_014,Immigration,Strategy/Game,0.471,0.008,0,1,425,236,25,19,4.3106,0
+a_01110,2025-08-08,Axios,digital_politics,j_10_028,Economy,Responsibility,-0.093,0.052,0,1,679,263,22,23,4.3642,0
+a_01111,2025-11-18,NPR,public_media,j_05_031,Elections,Conflict,0.153,-0.582,0,0,778,308,55,10,4.5539,0
+a_01112,2025-09-10,The Washington Post,legacy_mainstream,j_01_003,Immigration,Conflict,0.143,-0.475,0,1,774,762,63,79,5.4427,1
+a_01113,2025-09-03,Axios,digital_politics,j_10_010,Elections,Morality,0.435,-0.145,0,1,549,179,12,15,3.9205,0
+a_01114,2025-09-20,The Washington Post,legacy_mainstream,j_01_003,Elections,Thematic,0.121,-0.685,0,0,1217,412,77,30,5.0055,0
+a_01115,2025-09-03,AP News,wire_service,j_04_012,Elections,Conflict,-0.09,0.352,0,0,754,125,18,11,3.7985,0
+a_01116,2025-10-24,The New York Times,legacy_mainstream,j_00_006,Education,Conflict,0.135,-0.158,0,1,739,347,55,21,4.7519,0
+a_01117,2026-01-20,The Washington Post,legacy_mainstream,j_01_004,Climate,Strategy/Game,0.551,-0.157,0,0,1066,135,16,7,3.7222,0
+a_01118,2025-11-10,MSNBC,cable_news,j_08_013,Politics,Morality,0.015,-0.848,1,0,785,789,66,52,5.3915,1
+a_01119,2025-12-04,USA Today,legacy_mainstream,j_17_018,Technology,Economic Consequences,-0.1,-0.506,0,1,830,315,28,19,4.4872,0
+a_01120,2025-10-25,BuzzFeed News,digital_viral,j_15_029,Education,Economic Consequences,0.263,-0.051,0,1,603,460,57,102,5.2118,1
+a_01121,2025-08-03,The Washington Post,legacy_mainstream,j_01_002,Technology,Strategy/Game,0.339,0.343,0,0,804,258,22,30,4.4059,0
+a_01122,2025-08-15,The New York Times,legacy_mainstream,j_00_003,Foreign Policy,Responsibility,0.557,-0.425,0,1,1101,435,66,20,4.9091,0
+a_01123,2025-09-16,CNN,cable_news,j_06_007,Politics,Strategy/Game,-0.632,0.116,1,1,836,557,64,115,5.3652,1
+a_01124,2025-09-12,Breitbart,partisan_right,j_13_003,Crime,Human Interest,0.77,0.53,0,1,499,421,61,25,4.9123,0
+a_01125,2025-12-24,The Daily Caller,partisan_right,j_14_006,Technology,Responsibility,0.191,0.564,0,1,480,336,48,25,4.7292,0
+a_01126,2025-12-24,The Guardian,international,j_16_025,Crime,Episodic,1.0,0.004,0,0,985,115,18,13,3.7879,0
+a_01127,2025-12-26,CNN,cable_news,j_06_005,Politics,Human Interest,-0.185,-0.186,0,1,614,893,144,25,5.5425,1
+a_01128,2025-11-19,Reuters,wire_service,j_03_004,Politics,Morality,-0.379,-0.173,1,1,820,642,77,42,5.2923,1
+a_01129,2025-11-05,The New York Times,legacy_mainstream,j_00_011,Foreign Policy,Economic Consequences,0.202,0.105,0,1,1055,330,48,18,4.6575,0
+a_01130,2025-11-21,The Wall Street Journal,legacy_mainstream,j_02_013,Technology,Strategy/Game,0.017,0.211,0,1,670,1012,149,83,5.8497,1
+a_01131,2025-10-10,The Washington Post,legacy_mainstream,j_01_021,Politics,Conflict,0.546,0.123,1,1,835,338,20,30,4.5132,0
+a_01132,2025-11-24,USA Today,legacy_mainstream,j_17_008,Politics,Economic Consequences,0.372,-0.221,1,0,916,577,98,41,5.3059,1
+a_01133,2025-12-16,NPR,public_media,j_05_020,Technology,Strategy/Game,0.074,0.152,0,0,611,106,15,7,3.5841,0
+a_01134,2025-12-10,The Guardian,international,j_16_004,Politics,Conflict,0.378,-0.232,0,1,698,243,40,31,4.5558,0
+a_01135,2025-11-15,Vox,digital_explainer,j_11_015,Immigration,Thematic,0.207,-0.141,0,1,783,201,17,17,4.0993,0
+a_01136,2025-08-11,Axios,digital_politics,j_10_012,Foreign Policy,Morality,0.223,0.083,0,1,898,284,34,22,4.5199,0
+a_01137,2025-12-04,Politico,digital_politics,j_09_018,Economy,Morality,0.098,-0.076,0,1,978,304,28,24,4.5141,0
+a_01138,2025-10-03,The Guardian,international,j_16_014,Climate,Responsibility,0.411,-0.3,0,1,1010,276,48,51,4.7698,0
+a_01139,2025-12-07,The New York Times,legacy_mainstream,j_00_017,Politics,Strategy/Game,0.578,-0.361,1,1,512,894,74,72,5.5518,1
+a_01140,2025-11-02,The Washington Post,legacy_mainstream,j_01_003,Health,Morality,0.475,0.09,0,0,945,199,19,11,4.0449,0
+a_01141,2025-12-31,MSNBC,cable_news,j_08_004,Elections,Thematic,0.1,-0.351,0,0,550,329,54,9,4.5623,0
+a_01142,2025-09-28,Fox News,cable_news,j_07_003,Technology,Thematic,-0.792,-0.024,0,1,582,848,92,31,5.425,1
+a_01143,2026-01-09,Axios,digital_politics,j_10_021,Elections,Economic Consequences,0.106,-0.37,1,0,797,288,28,17,4.4215,0
+a_01144,2025-12-25,The Daily Caller,partisan_right,j_14_012,Economy,Strategy/Game,0.023,0.118,0,1,585,307,57,22,4.7103,0
+a_01145,2025-09-27,Vox,digital_explainer,j_11_011,Health,Human Interest,-0.089,-0.096,0,1,832,378,71,21,4.87,0
+a_01146,2025-10-23,NPR,public_media,j_05_001,Technology,Thematic,-0.351,-0.488,0,0,696,391,68,35,4.9726,0
+a_01147,2025-10-31,CNN,cable_news,j_06_035,Technology,Human Interest,-0.156,-0.025,0,1,742,608,111,34,5.3325,1
+a_01148,2025-12-11,BuzzFeed News,digital_viral,j_15_028,Elections,Human Interest,-0.262,-0.016,1,1,626,600,75,28,5.172,1
+a_01149,2025-11-28,AP News,wire_service,j_04_002,Politics,Strategy/Game,-0.184,-0.016,1,0,945,279,35,28,4.5659,0
+a_01150,2025-12-26,Axios,digital_politics,j_10_001,Foreign Policy,Episodic,0.617,0.16,0,1,1019,171,18,25,4.1087,0
+a_01151,2025-10-03,Axios,digital_politics,j_10_003,Foreign Policy,Economic Consequences,-0.191,0.09,1,0,970,535,77,23,5.0847,0
+a_01152,2025-10-27,BuzzFeed News,digital_viral,j_15_025,Climate,Responsibility,0.1,-0.727,0,1,308,430,48,36,4.9228,0
+a_01153,2025-10-14,The Daily Caller,partisan_right,j_14_008,Health,Human Interest,0.236,0.469,0,0,771,361,42,10,4.5538,0
+a_01154,2026-01-05,Politico,digital_politics,j_09_015,Technology,Responsibility,0.274,0.156,0,1,568,243,41,9,4.3304,0
+a_01155,2025-09-22,CNN,cable_news,j_06_015,Health,Responsibility,0.238,0.31,1,1,679,820,168,45,5.66,1
+a_01156,2025-11-10,Fox News,cable_news,j_07_018,Foreign Policy,Thematic,0.091,0.772,1,1,525,933,145,122,5.8773,1
+a_01157,2025-08-21,MSNBC,cable_news,j_08_019,Technology,Thematic,0.067,-0.641,0,0,287,266,67,13,4.5873,0
+a_01158,2025-12-26,AP News,wire_service,j_04_008,Elections,Strategy/Game,0.812,-0.087,0,0,1056,127,13,6,3.6069,0
+a_01159,2025-10-06,HuffPost,digital_viral,j_12_038,Climate,Strategy/Game,0.328,-0.592,0,0,458,118,8,9,3.5092,0
+a_01160,2025-09-28,AP News,wire_service,j_04_004,Technology,Thematic,-0.801,0.38,1,1,756,674,117,51,5.4788,1
+a_01161,2025-11-09,HuffPost,digital_viral,j_12_025,Education,Economic Consequences,-0.209,0.053,0,1,501,292,30,15,4.4248,0
+a_01162,2025-10-26,BuzzFeed News,digital_viral,j_15_003,Technology,Strategy/Game,0.309,0.038,0,1,404,433,53,87,5.1287,1
+a_01163,2025-12-25,The Daily Beast,digital_politics,j_19_011,Elections,Episodic,0.112,-0.158,0,1,792,282,21,18,4.3389,0
+a_01164,2025-10-31,The Wall Street Journal,legacy_mainstream,j_02_016,Economy,Economic Consequences,0.486,0.545,1,0,646,392,39,31,4.7867,0
+a_01165,2025-10-29,BuzzFeed News,digital_viral,j_15_012,Elections,Thematic,0.031,0.253,1,1,628,663,53,40,5.1886,1
+a_01166,2025-08-19,The Washington Post,legacy_mainstream,j_01_027,Foreign Policy,Strategy/Game,0.276,0.14,1,0,785,340,40,31,4.7232,0
+a_01167,2025-08-04,CNN,cable_news,j_06_009,Foreign Policy,Human Interest,0.437,0.014,0,1,629,221,26,30,4.3769,0
+a_01168,2025-10-08,Reuters,wire_service,j_03_016,Technology,Morality,-0.105,-0.087,1,0,717,288,40,49,4.7297,0
+a_01169,2026-01-20,Reuters,wire_service,j_03_006,Foreign Policy,Morality,0.253,0.192,1,0,796,222,46,11,4.3556,0
+a_01170,2026-01-06,Reuters,wire_service,j_03_013,Health,Thematic,0.22,0.204,0,1,333,136,23,18,4.0023,0
+a_01171,2025-11-17,The New York Times,legacy_mainstream,j_00_010,Education,Thematic,-0.592,-0.298,0,0,933,329,25,32,4.5763,0
+a_01172,2025-11-18,The Guardian,international,j_16_009,Politics,Episodic,0.014,-0.388,1,1,959,492,82,59,5.2448,1
+a_01173,2025-10-07,The Washington Post,legacy_mainstream,j_01_011,Health,Strategy/Game,0.449,0.133,0,0,732,208,29,15,4.246,0
+a_01174,2025-08-31,Fox News,cable_news,j_07_009,Crime,Conflict,0.67,0.766,0,0,584,464,61,31,5.0023,0
+a_01175,2025-08-02,Breitbart,partisan_right,j_13_014,Health,Thematic,0.39,0.463,0,1,540,335,45,40,4.7999,0
+a_01176,2025-09-28,The Daily Beast,digital_politics,j_19_003,Crime,Economic Consequences,-0.123,-0.266,0,1,390,540,79,65,5.2992,1
+a_01177,2025-09-24,USA Today,legacy_mainstream,j_17_031,Foreign Policy,Economic Consequences,-0.307,0.038,0,1,1313,505,54,82,5.1992,1
+a_01178,2025-09-03,The Wall Street Journal,legacy_mainstream,j_02_013,Economy,Conflict,0.631,0.322,0,0,877,305,39,25,4.6201,0
+a_01179,2025-09-14,The Daily Beast,digital_politics,j_19_004,Education,Thematic,0.11,-0.331,0,0,635,363,74,26,4.903,0
+a_01180,2025-08-05,Breitbart,partisan_right,j_13_019,Politics,Morality,0.092,1.0,1,0,647,1627,172,35,5.9602,1
+a_01181,2025-11-14,Reuters,wire_service,j_03_034,Education,Economic Consequences,0.07,0.106,0,1,762,395,37,13,4.6098,0
+a_01182,2026-01-08,MSNBC,cable_news,j_08_005,Foreign Policy,Conflict,0.724,-0.167,0,0,606,163,22,10,3.9702,0
+a_01183,2025-11-28,New York Post,tabloid,j_18_004,Crime,Morality,0.106,0.64,1,1,250,701,64,30,5.2161,1
+a_01184,2025-10-17,Fox News,cable_news,j_07_001,Education,Strategy/Game,-0.112,0.238,0,1,378,246,18,27,4.3045,0
+a_01185,2025-10-12,Reuters,wire_service,j_03_001,Elections,Thematic,0.207,-0.022,0,0,939,283,34,11,4.3881,0
+a_01186,2025-09-23,USA Today,legacy_mainstream,j_17_017,Foreign Policy,Responsibility,0.521,-0.363,0,1,1130,563,127,33,5.3284,1
+a_01187,2025-08-25,The Daily Beast,digital_politics,j_19_019,Crime,Responsibility,0.05,-0.243,0,1,554,243,32,14,4.3391,0
+a_01188,2025-11-12,The Daily Beast,digital_politics,j_19_001,Technology,Episodic,-0.059,-0.572,0,0,897,322,46,44,4.8052,0
+a_01189,2025-11-07,The Daily Beast,digital_politics,j_19_018,Education,Thematic,-0.223,-0.013,0,0,785,242,16,13,4.1243,0
+a_01190,2025-08-02,USA Today,legacy_mainstream,j_17_002,Health,Human Interest,-0.025,0.055,1,1,782,905,143,84,5.784,1
+a_01191,2025-10-11,Politico,digital_politics,j_09_022,Foreign Policy,Thematic,0.097,-0.019,0,1,820,199,28,16,4.226,0
+a_01192,2025-09-18,Reuters,wire_service,j_03_018,Health,Responsibility,-0.064,-0.025,0,1,659,90,10,11,3.4718,0
+a_01193,2025-08-30,HuffPost,digital_viral,j_12_013,Foreign Policy,Thematic,0.375,-0.01,1,1,530,1202,173,137,6.0795,1
+a_01194,2025-11-30,AP News,wire_service,j_04_001,Politics,Conflict,0.288,-0.284,0,1,751,257,37,19,4.4669,0
+a_01195,2025-10-30,Politico,digital_politics,j_09_014,Politics,Conflict,0.362,0.101,0,0,906,235,22,7,4.0885,0
+a_01196,2025-11-18,Breitbart,partisan_right,j_13_020,Elections,Thematic,-0.327,0.825,0,1,366,840,128,56,5.6338,1
+a_01197,2025-12-02,New York Post,tabloid,j_18_011,Foreign Policy,Strategy/Game,0.136,-0.246,0,1,616,522,107,38,5.2671,1
+a_01198,2026-01-17,NPR,public_media,j_05_005,Elections,Economic Consequences,0.405,-0.029,0,1,795,127,16,11,3.773,0
+a_01199,2025-12-17,NPR,public_media,j_05_004,Elections,Thematic,0.246,-0.619,0,1,1035,272,27,14,4.346,0
+a_01200,2025-11-16,The Daily Caller,partisan_right,j_14_014,Crime,Conflict,0.83,0.521,0,1,250,386,49,51,4.9431,0
