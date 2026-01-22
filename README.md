@@ -133,7 +133,7 @@ You have three options for the final research paper:
 
     This option requires students to collaborate in small groups (2-3 students per group). Your group should apply one or more computational methods covered in the course to an appropriate dataset to address a coherent set of hypotheses/research questions that could advance the literature in an area of your interest. There is no better way to learn methods than practice. Choosing this option is likely to generate the maximum value in taking this course, preparing you for submissions to academic conferences and/or journals.
 
-    You are encouraged to take advantage of the tweets archival made available to all enrolled students. Additionally, you are also encouraged to scrape digital sources or locate publicized datasets whenever necessary. Using datasets from previous work is also possible as long as the datasets are suitable for computational analyses. Given the tight timeline, gathering additional data from human subjects should be minimized.
+    You are encouraged to take advantage of data previously collected by yourself or shared online. Additionally, you are also encouraged to scrape digital sources or locate publicized datasets whenever necessary. Given the tight timeline, gathering additional data from human subjects should be minimized.
 
 2. [Individual Option 1] An individual research proposal
 
