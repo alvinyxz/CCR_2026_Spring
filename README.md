@@ -567,7 +567,8 @@ Final grades will be assigned according to the University of Minnesota Letter Gr
    - Nosek, B. A., Ebersole, C. R., DeHaven, A. C., & Mellor, D. T. (2018). The preregistration revolution. *Proceedings of the National Academy of Sciences, 115*(11), 2600–2606. <https://doi.org/10.1073/pnas.1708274114>
    - Chung-hong  Chan, Tim Schatto-Eckrodt, & Johannes Gruber. (2024). What makes computational communication science (ir)reproducible? *Computational Communication Research, 6*(1), 1. <https://doi.org/10.5117/CCR2024.1.5.CHAN>
    - Open Science Collaboration. (2015). Estimating the reproducibility of psychological science. *Science, 349*(6251), aac4716–aac4716. <https://doi.org/10.1126/science.aac4716>
-   - <https://retractionwatch.com>
+   - Retraction Watch <https://retractionwatch.com>
+   - Andrew Gelman's blog: *Statistical Modeling, Causal Inference, and Social Science* <https://statmodeling.stat.columbia.edu>
 
 ## 2.14. 2026/04/30 Final Week
 
