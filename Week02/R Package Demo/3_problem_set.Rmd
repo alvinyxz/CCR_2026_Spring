@@ -1,12 +1,12 @@
 ---
-title: "JOUR8500 Week02 Demo Problem Set (Completed)"
+title: "JOUR8500 Week02 R Package Demo Problem Set (Completed)"
 author: "Alvin Zhou"
 date: "`r Sys.Date()`"
 output:
   html_document:
     toc: true
-    toc_depth: 2
-    number_sections: true
+    toc_depth: 3
+    number_sections: false
 ---
 
 ```{r setup, include=FALSE}
@@ -15,7 +15,6 @@ knitr::opts_chunk$set(
   message = FALSE,
   warning = FALSE
 )
-options(scipen = 999)
 ```
 
 ## Overview
@@ -67,16 +66,16 @@ These are questions you could plausibly see in various top communication journal
 - `engagement_index`: proprietary engagement measure (continuous)
 - `high_engagement`: binary indicator (1 = top 30% of engagement)
 
-## Part 0: Setup
+## Part 1: Setup
 
 When coding, even if packages are invoked later, it's good practice to load all packages at the start of your script.
 
 If you have not yet installed the necessary packages, you should use install.packages() to install them first. Then load the packages using library().
 
-The packages we will use include: `skimr`, `lme4`, `lmerTest`, `plm`, `beepr`, and `modelsummary`. Google them, see their documentation, and get familiar with their functions. We will also use `glm`, which is a base R function for generalized linear models, so you do not need to install a separate package for it.
+The packages we will use include: `skimr`, `lme4`, `lmerTest`, `plm`, `beepr`, and `modelsummary`. Google them, see their documentation, and get familiar with their functions. We will also use `glm`, which is a base R function for generalized linear models, so you do not need to install a separate package for it. Write the code to load those libraries:
 
 ```{r}
-# If needed (uncomment):
+# If needed, you can deleted the "#" to uncomment the following line and install packages:
 # install.packages(c("skimr","lme4","lmerTest","plm","beepr","modelsummary"))
 
 library(skimr)
@@ -98,11 +97,11 @@ Use plain language to describe what each package/function is used for in practic
 - `beepr`: plays a sound when code finishes (helpful for long-running models, bootstraps, or simulations)  
 - `modelsummary`: generates clean, publication-ready regression tables across many model types  
 
-## Part 1: Data Inspection and Descriptives
+## Part 2: Data Inspection and Descriptives
 
-### Task 1.1 - Load and inspect the data
+### Task 2.1 — Load and inspect the data
 
-First load the dataset:
+First load the dataset `1_media_engagement.csv`:
 
 ```{r}
 # Load dataset.
@@ -132,7 +131,7 @@ head(df, 3)
 - **Unit of analysis:** one row is one news article.
 - **Numeric vs categorical:** numeric variables include `tone`, `slant`, `breaking`, `visuals`, `length_words`, `clicks`, `shares`, `comments`, `engagement_index`, `high_engagement`; categorical variables include variables like `topic`, `frame_type`, `outlet`, and `outlet_type`.
 
-### Task 1.2 - Descriptive statistics
+### Task 2.2 — Descriptive statistics
 
 Produce descriptive statistics for the key variables below:
 
@@ -143,7 +142,7 @@ Produce descriptive statistics for the key variables below:
 - `slant`
 - `length_words`
 
-You may use base R (`summary()`) or `skimr::skim()`. Questions to answer:
+You may use base R function (`summary()`) or the`skim()` function from the `skimr` package. Questions to answer:
 
 - How many unique topics and frame types are there?
 - How are topic and frame_type distributed?
@@ -217,7 +216,7 @@ desc_core
 - **Tone:** average tone is near neutral.
 - **Polarization:** mean absolute slant is 0.284 (higher implies more content away from center).
 
-### Task 1.3 - Outlet differences
+### Task 2.3 — Outlet differences
 
 Compute mean engagement by outlet and identify the top 5 and bottom 5 outlets. Question to answer:
 
@@ -232,7 +231,7 @@ outlet_mean_engagement <- numeric(length(outlets))
 names(outlet_mean_engagement) <- outlets
 
 # Step 3: compute mean engagement for each outlet
-for (i in seq_along(outlets)) {
+for (i in outlets) {
   current_outlet <- outlets[i]
   
   outlet_mean_engagement[i] <- mean(
@@ -267,11 +266,11 @@ bottom5
 
 **Answer:** Outlet differences are sizable: top-5 average engagement is ~5.152 versus bottom-5 ~4.477. This is large enough to justify either multilevel (random outlet intercepts) or fixed effects (outlet FE) approaches.
 
-## Part 2: Slant, Tone, and Engagement
+## Part 3: Slant, Tone, and Engagement
 
-### Task 2.1 - Predicting engagement from content features
+### Task 3.1 — Predicting engagement from content features
 
-Estimate a linear regression predicting engagement using three content features (`slant`, `tone`, and `length`):
+Estimate a linear regression predicting engagement (`engagement_index`) using three content features (`slant`, `tone`, and `length`):
 
 \[
 \text{engagement} = f(\text{slant}, \text{tone}, \text{length})
@@ -306,7 +305,7 @@ summary(m1)
 - **Substantive magnitude:** In `m1`, a 1 unit increase in absolute slant is associated with 0.979 positive change in engagement_index, holding other variables constant.  
 - **Extremity:** The absolute-slant model directly shows that ideological distance from neutral predicts engagement.
 
-### Task 2.2 - Add breaking news and visuals
+### Task 3.2 — Add breaking news and visuals
 
 Going forward, let's use absolute slant (|slant|) as our slant measure.
 
@@ -328,13 +327,13 @@ summary(m2)
 - **Visuals effect:** 0.337 (difference for visuals vs none).  
 - **Coefficient change:** If slant/tone coefficients shift compared to `m1`, it suggests breaking/visuals were correlated with content features and also mattered for engagement (classic omitted-variable story). However, here, slant/tone coefficients remain fairly stable.
 
-### Task 2.3 - Interpretation
+### Task 3.3 — Interpretation
 
 Pretend you are writing the results section using this dataset. Write a short paragraph (3-5 sentences) summarizing the key findings from tasks above, including coefficient estimates and substantive interpretations.
 
 **Answer:** In an OLS model predicting engagement, ideological extremity, negativity, and production cues all predict higher engagement. Holding other variables constant, the coefficient on absolute slant is positive and statistically significant ($B=1.00, se=.057, p<.001$), suggesting that articles further from the ideological center tend to receive more engagement. Tone is a significant negative predictor ($B=-.59, se=.035, p<.001$), consistent with the hypothesis regarding audiences' negativity bias that more negative coverage is associated with greater engagement. Breaking news is associated with an increase of engagement index of 0.541 ($se=.030, p<.001$), and visuals are associated with an increase of 0.337 ($se=.026, p<.001$). Overall, those results confirm our hypothesis: more extreme, more negative, and more packaging cues attracts attention.
 
-### Task 2.4 Robustness checks
+### Task 3.4 — Robustness checks
 
 Re-run your main model using:
 
@@ -362,6 +361,8 @@ m2_pol_no_tab_part <- lm(engagement_index ~ abs_slant + tone + breaking + visual
 summary(m2_pol_no_tab_part)
 ```
 
+Questions to answer: Are the substantive conclusions robust across these sample restrictions?
+
 **Answer:** The substantive conclusions are robust if core predictors keep the same sign and roughly comparable magnitudes across these restrictions. In practice, you should look for stability in the direction of `abs_slant`, `tone`, `breaking`, and `visuals`, and treat large swings as a diagnostic about which parts of the media ecosystem drive the headline result.
 
 What if the reviewer asks you to use the log of the sum of engagement indicators as the dependent variable instead of the proprietary score? Re-run your main model using log() as the DV. Does that change your conclusions? (also remember, be careful about zero values when using log; you can use log1p() to handle zeros).
@@ -379,11 +380,11 @@ Questions to answer: Are the substantive conclusions robust across this operatio
 
 **Answer:** Using `log1p(clicks + shares + comments)` preserves the story we just told, since the key predictors remain directionally consistent. Here, `abs_slant` is 1.034 and tone is -0.577 in the alternative DV specification.
 
-## Part 3: Binary Outcomes and Logistic Regression
+## Part 4: Binary Outcomes and Logistic Regression
 
 If audience engagement is operationalized as high vs. low attention, how should we proceed?
 
-### Task 3.1 - Logistic regression
+### Task 4.1 — Logistic regression
 
 Use `high_engagement` as a binary dependent variable, estimate a logistic regression predicting `high_engagement` using three content features (`slant`, `tone`, and `length`) plus breaking news and visuals:
 
@@ -403,7 +404,7 @@ summary(g1)
 - **Predictors increasing probability:** Positive coefficients increase the probability of high engagement; negative coefficients decrease it. In this dataset, absolute slant, breaking, and visuals typically increase the probability, while more positive tone tends to reduce it.
 - **OLS vs logit interpretation:** OLS changes the expected value of a continuous outcome; logit changes the probability of an event (high engagement), via log-odds. However, the qualitative story about directionality remains the same.
 
-### Task 3.2 - Predicted probabilities
+### Task 4.2 — Predicted probabilities
 
 Compute predicted probabilities for two cases:
 
@@ -440,7 +441,7 @@ pB
 
 **Answer:** Predicted probability increases from 0.012 (Case A) to 0.998793 (Case B), which is a substantively large shift.
 
-## Part 4: Outlet-Level Differences (Multilevel)
+## Part 5: Outlet-Level Differences (Multilevel)
 
 Articles are not independent. They are produced by outlets, and some outlets systematically generate more engagement than others. We can account for this nested structure using multilevel models.
 
@@ -466,7 +467,7 @@ Questions to answer:
 - **Random intercept meaning:** baseline engagement differs by outlet; the random-effect model estimates that heterogeneity instead of forcing one global intercept.  
 - **What changes vs OLS:** standard errors become more conservative; coefficients can even shift if outlet-level differences were confounding the OLS relationship. However, here in our dataset, the story remains, despite the coefficients being slightly smaller in magnitude.
 
-## Part 5: Panel Logic (Fixed Effects)
+## Part 6: Panel Logic (Fixed Effects)
 
 Another way to handle outlet differences is to compare outlets to themselves over time.
 
@@ -501,11 +502,11 @@ Questions to answer:
 - **Why variables shrink:** predictors that vary mostly *between* outlets (not within) will weaken under FE models.
 - **When reviewers prefer FE:** when worried about unobserved outlet traits confounding slant/tone effects, FE is a conservative model.
 
-## Part 6: Model Comparison and Reporting
+## Part 7: Model Comparison and Reporting
 
-### Task 6.1 - Create a regression table
+### Task 7.1 — Create a regression table
 
-Using `modelsummary()` to create a table comparing at least three models:
+You can easily use `modelsummary()` function from the `modelsummary` package to display regression models, for example `modelsummary(m2)`. The tutorial is here: <https://modelsummary.com/vignettes/modelsummary.html> Now let's make it a bit more complicated by comparing three models:
 
 - OLS (m2)
 - Multilevel (l1)
@@ -515,7 +516,7 @@ Using `modelsummary()` to create a table comparing at least three models:
 models <- list(
   "OLS (m2)" = m2,
   "Multilevel (l1)" = l1,
-  "Fixed effects (fe1)" = fe1
+  "Fixed Effects (fe1)" = fe1
 )
 
 modelsummary(models)
@@ -531,16 +532,13 @@ Questions to answer:
 - **Most stable results:** Look for predictors that keep the same sign and remain non-trivial across OLS, multilevel, and FE. Overall, `tone` seems the most stable.
 - **Most defensible model:** FE is most conservative for causal-ish claims about within-outlet change; multilevel is best for generalization across outlets. In many papers, presenting both as robustness is strongest.
 
-### Task 6.2 - Clean up the model output
+### Task 7.2 — Clean up the model output
 
 `modelsummary()` gave you many rows of output that are sometimes cluttered or hard to read. Also, it will show variable names as they appear in the dataset, which are not publication-ready.
 
-Clean up the output by:
+Step by step, clean up the output by:
 
-- Renaming variables to more reader-friendly names (e.g., "Absolute Slant", "Tone", "Article Length", "Breaking News", "Visuals")
-- Removing unneeded rows (e.g., intercepts, random effects variance components, fixed effects dummies)
-- Adding model fit statistics (e.g., AIC, BIC, R-squared)
-- Adding a title and notes
+- First, renaming variables to more reader-friendly names (e.g., "Absolute Slant", "Tone", "Breaking News", "Visuals", "Article Length") and removing unneeded rows (e.g., intercepts, random effects variance components) <https://modelsummary.com/vignettes/modelsummary.html#coef_map>
 
 ```{r}
 modelsummary(models,
@@ -548,23 +546,68 @@ modelsummary(models,
                "abs_slant" = "Absolute Slant",
                "tone" = "Tone",
                "breaking" = "Breaking News",
-               "visuals" = "Visuals Present",
-               "length_words" = "Article Length (words)"),
-             statistic = "({std.error})",
-             stars = TRUE,
-             title = "Predicting Audience Engagement from Content and Production Features",
-             notes = c("Standard errors in parentheses; OLS = Linear Regression; Multilevel includes random outlet intercept; FE estimates within-outlet effects."),
-             gof_map = data.frame(
-               raw = c("nobs","r.squared","adj.r.squared"),
-               clean = c("N","R-squared","Adj. R-squared"),
-               fmt = c(0,3,3)
-               )
+               "visuals" = "Visuals",
+               "length_words" = "Article Length")
+             )
+# `coef_map` tells the model what variables you want to keep
+# So the Intercept and SD (Intercept outlet) are also gone from the output
+# There are other ways to remove/rename unneeded rows, such as `coef_omit` and `coef_rename`
+# For example, using `coef_omit = "Intercept"` to remove the Intercept row
+```
+
+- Second, copy paste your code above, then add a few lines to only keep the three major model fit statistics (e.g., AIC, BIC, R-squared) <https://modelsummary.com/vignettes/modelsummary.html#gof_map>
+
+```{r}
+modelsummary(models,
+             coef_map = c(
+               "abs_slant" = "Absolute Slant",
+               "tone" = "Tone",
+               "breaking" = "Breaking News",
+               "visuals" = "Visuals",
+               "length_words" = "Article Length"),
+             gof_map = c("nobs", "aic", "bic")
+             )
+# nobs seems to be the default letters that refers to number of observations for this package
+```
+
+- Third, copy paste your code above, then add a line to add significance stars to the output (e.g., those "*** p<.001" stars) <https://modelsummary.com/vignettes/modelsummary.html#stars>
+
+```{r}
+modelsummary(models,
+             coef_map = c(
+               "abs_slant" = "Absolute Slant",
+               "tone" = "Tone",
+               "breaking" = "Breaking News",
+               "visuals" = "Visuals",
+               "length_words" = "Article Length"),
+             gof_map = c("nobs", "aic", "bic"),
+             stars = TRUE
              )
 ```
 
-### Task 6.3 - Save the table
+- Fourth, copy paste your code above, then add a line to add a title <Predicting Audience Engagement from Content and Production Features> and a few notes: <Standard errors in parentheses>, <OLS = Linear regression>, <Multilevel includes random outlet intercept>, and <FE estimates within-outlet effects> <https://modelsummary.com/vignettes/modelsummary.html#notes>
 
-`modelsummary()` gave you many ways to save the table. Save your cleaned-up table as a .docx or .html file for easy sharing. Use `beepr::beep()` at the end to notify you when it's done.
+```{r}
+modelsummary(models,
+             coef_map = c(
+               "abs_slant" = "Absolute Slant",
+               "tone" = "Tone",
+               "breaking" = "Breaking News",
+               "visuals" = "Visuals",
+               "length_words" = "Article Length"),
+             gof_map = c("nobs", "aic", "bic"),
+             stars = TRUE,
+             title = "Predicting Audience Engagement from Content and Production Features",
+             notes = list("Standard errors in parentheses",
+             "OLS = Linear regression",
+             "Multilevel includes random outlet intercept",
+             "FE estimates within-outlet effects")
+             )
+```
+
+### Task 7.3 — Save the table
+
+`modelsummary()` gave you many ways to save the table. Save your cleaned-up table as a .docx or .html file for easy sharing <https://modelsummary.com/vignettes/modelsummary.html#output>. Use `beepr::beep()` at the end to notify you when it's done <https://cran.r-project.org/web/packages/beepr/readme/README.html>
 
 ```{r}
 # Save as HTML (easy to view/share)
@@ -573,18 +616,18 @@ modelsummary(models,
                "abs_slant" = "Absolute Slant",
                "tone" = "Tone",
                "breaking" = "Breaking News",
-               "visuals" = "Visuals Present",
-               "length_words" = "Article Length (words)"),
-             statistic = "({std.error})",
+               "visuals" = "Visuals",
+               "length_words" = "Article Length"),
+             gof_map = c("nobs", "aic", "bic"),
              stars = TRUE,
              title = "Predicting Audience Engagement from Content and Production Features",
-             notes = c("Standard errors in parentheses; OLS = Linear Regression; Multilevel includes random outlet intercept; FE estimates within-outlet effects."),
-             gof_map = data.frame(
-               raw = c("nobs","r.squared","adj.r.squared"),
-               clean = c("N","R-squared","Adj. R-squared"),
-               fmt = c(0,3,3)
-               ),
+             notes = list("Standard errors in parentheses",
+             "OLS = Linear regression",
+             "Multilevel includes random outlet intercept",
+             "FE estimates within-outlet effects"),
              output = "3_problem_set_output.html")
+beep() # beep at end (comment out if annoying)
+
 # Save as docx (easy to copy paste)
 # might need to additionally install/load "pandoc" package for .docx output
 library("pandoc")
@@ -593,16 +636,15 @@ modelsummary(models,
                "abs_slant" = "Absolute Slant",
                "tone" = "Tone",
                "breaking" = "Breaking News",
-               "visuals" = "Visuals Present",
-               "length_words" = "Article Length (words)"),
-             statistic = "({std.error})",
+               "visuals" = "Visuals",
+               "length_words" = "Article Length"),
+             gof_map = c("nobs", "aic", "bic"),
              stars = TRUE,
              title = "Predicting Audience Engagement from Content and Production Features",
-             notes = c("Standard errors in parentheses; OLS = Linear Regression; Multilevel includes random outlet intercept; FE estimates within-outlet effects."),
-             gof_map = data.frame(
-               raw = c("nobs","r.squared","adj.r.squared"),
-               clean = c("N","R-squared","Adj. R-squared"),
-               fmt = c(0,3,3)),
+             notes = list("Standard errors in parentheses",
+             "OLS = Linear regression",
+             "Multilevel includes random outlet intercept",
+             "FE estimates within-outlet effects"),
              output = "3_problem_set_output.docx")
 beep() # beep at end (comment out if annoying)
 ```

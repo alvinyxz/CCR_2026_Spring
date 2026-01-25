@@ -11,9 +11,9 @@
 
 <meta name="author" content="Alvin Zhou" />
 
-<meta name="date" content="2026-01-22" />
+<meta name="date" content="2026-01-25" />
 
-<title>JOUR8500 Week02 Demo Problem Set (Completed)</title>
+<title>JOUR8500 Week02 R Package Demo Problem Set</title>
 
 <script>// Pandoc 2.9 adds attributes on both header and div. We remove the former (to
 // be compatible with the behavior of Pandoc < 2.8).
@@ -350,36 +350,73 @@ display: none;
 
 
 
-<h1 class="title toc-ignore">JOUR8500 Week02 Demo Problem Set
-(Completed)</h1>
+<h1 class="title toc-ignore">JOUR8500 Week02 R Package Demo Problem
+Set</h1>
 <h4 class="author">Alvin Zhou</h4>
-<h4 class="date">2026-01-22</h4>
+<h4 class="date">2026-01-25</h4>
 
 </div>
 
 <div id="TOC">
 <ul>
-<li><a href="#overview" id="toc-overview"><span class="toc-section-number">1</span> Overview</a></li>
-<li><a href="#research-context" id="toc-research-context"><span class="toc-section-number">2</span> Research Context</a></li>
-<li><a href="#key-variables" id="toc-key-variables"><span class="toc-section-number">3</span> Key Variables</a></li>
-<li><a href="#part-0-setup" id="toc-part-0-setup"><span class="toc-section-number">4</span> Part 0: Setup</a></li>
-<li><a href="#part-1-data-inspection-and-descriptives" id="toc-part-1-data-inspection-and-descriptives"><span class="toc-section-number">5</span> Part 1: Data Inspection and
-Descriptives</a></li>
-<li><a href="#part-2-slant-tone-and-engagement" id="toc-part-2-slant-tone-and-engagement"><span class="toc-section-number">6</span> Part 2: Slant, Tone, and
-Engagement</a></li>
-<li><a href="#part-3-binary-outcomes-and-logistic-regression" id="toc-part-3-binary-outcomes-and-logistic-regression"><span class="toc-section-number">7</span> Part 3: Binary Outcomes and Logistic
-Regression</a></li>
-<li><a href="#part-4-outlet-level-differences-multilevel" id="toc-part-4-outlet-level-differences-multilevel"><span class="toc-section-number">8</span> Part 4: Outlet-Level Differences
-(Multilevel)</a></li>
-<li><a href="#part-5-panel-logic-fixed-effects" id="toc-part-5-panel-logic-fixed-effects"><span class="toc-section-number">9</span> Part 5: Panel Logic (Fixed
+<li><a href="#overview" id="toc-overview">Overview</a></li>
+<li><a href="#research-context" id="toc-research-context">Research
+Context</a></li>
+<li><a href="#key-variables" id="toc-key-variables">Key Variables</a>
+<ul>
+<li><a href="#identifiers-and-structure" id="toc-identifiers-and-structure">Identifiers and structure</a></li>
+<li><a href="#content-and-production-features" id="toc-content-and-production-features">Content and production
+features</a></li>
+<li><a href="#outcomes" id="toc-outcomes">Outcomes</a></li>
+</ul></li>
+<li><a href="#part-1-setup" id="toc-part-1-setup">Part 1: Setup</a></li>
+<li><a href="#part-2-data-inspection-and-descriptives" id="toc-part-2-data-inspection-and-descriptives">Part 2: Data Inspection
+and Descriptives</a>
+<ul>
+<li><a href="#task-2.1-load-and-inspect-the-data" id="toc-task-2.1-load-and-inspect-the-data">Task 2.1 — Load and inspect
+the data</a></li>
+<li><a href="#task-2.2-descriptive-statistics" id="toc-task-2.2-descriptive-statistics">Task 2.2 — Descriptive
+statistics</a></li>
+<li><a href="#task-2.3-outlet-differences" id="toc-task-2.3-outlet-differences">Task 2.3 — Outlet
+differences</a></li>
+</ul></li>
+<li><a href="#part-3-slant-tone-and-engagement" id="toc-part-3-slant-tone-and-engagement">Part 3: Slant, Tone, and
+Engagement</a>
+<ul>
+<li><a href="#task-3.1-predicting-engagement-from-content-features" id="toc-task-3.1-predicting-engagement-from-content-features">Task 3.1 —
+Predicting engagement from content features</a></li>
+<li><a href="#task-3.2-add-breaking-news-and-visuals" id="toc-task-3.2-add-breaking-news-and-visuals">Task 3.2 — Add breaking
+news and visuals</a></li>
+<li><a href="#task-3.3-interpretation" id="toc-task-3.3-interpretation">Task 3.3 — Interpretation</a></li>
+<li><a href="#task-3.4-robustness-checks" id="toc-task-3.4-robustness-checks">Task 3.4 — Robustness
+checks</a></li>
+</ul></li>
+<li><a href="#part-4-binary-outcomes-and-logistic-regression" id="toc-part-4-binary-outcomes-and-logistic-regression">Part 4: Binary
+Outcomes and Logistic Regression</a>
+<ul>
+<li><a href="#task-4.1-logistic-regression" id="toc-task-4.1-logistic-regression">Task 4.1 — Logistic
+regression</a></li>
+<li><a href="#task-4.2-predicted-probabilities" id="toc-task-4.2-predicted-probabilities">Task 4.2 — Predicted
+probabilities</a></li>
+</ul></li>
+<li><a href="#part-5-outlet-level-differences-multilevel" id="toc-part-5-outlet-level-differences-multilevel">Part 5: Outlet-Level
+Differences (Multilevel)</a></li>
+<li><a href="#part-6-panel-logic-fixed-effects" id="toc-part-6-panel-logic-fixed-effects">Part 6: Panel Logic (Fixed
 Effects)</a></li>
-<li><a href="#part-6-model-comparison-and-reporting" id="toc-part-6-model-comparison-and-reporting"><span class="toc-section-number">10</span> Part 6: Model Comparison and
-Reporting</a></li>
+<li><a href="#part-7-model-comparison-and-reporting" id="toc-part-7-model-comparison-and-reporting">Part 7: Model Comparison
+and Reporting</a>
+<ul>
+<li><a href="#task-7.1-create-a-regression-table" id="toc-task-7.1-create-a-regression-table">Task 7.1 — Create a
+regression table</a></li>
+<li><a href="#task-7.2-clean-up-the-model-output" id="toc-task-7.2-clean-up-the-model-output">Task 7.2 — Clean up the
+model output</a></li>
+<li><a href="#task-7.3-save-the-table" id="toc-task-7.3-save-the-table">Task 7.3 — Save the table</a></li>
+</ul></li>
 </ul>
 </div>
 
-<div id="overview" class="section level2" number="1">
-<h2><span class="header-section-number">1</span> Overview</h2>
+<div id="overview" class="section level2">
+<h2>Overview</h2>
 <p>This problem set introduces a basic, but realistic, computational
 workflow commonly used in communication research on news framing, media
 bias, and audience engagement. The goal is to learn how computational
@@ -397,8 +434,8 @@ article published by a major media outlet. The dataset includes
 information about framing, tone, political slant, production features
 (e.g., visuals, breaking news), and audience engagement.</p>
 </div>
-<div id="research-context" class="section level2" number="2">
-<h2><span class="header-section-number">2</span> Research Context</h2>
+<div id="research-context" class="section level2">
+<h2>Research Context</h2>
 <p>Imagine you are studying <strong>how news content characteristics
 affect audience engagement</strong>, and whether these effects differ
 across media outlets.</p>
@@ -416,11 +453,10 @@ communication journals. They can also easily adapt to various other
 contexts (e.g., social media posts, advertising, political
 campaigns).</p>
 </div>
-<div id="key-variables" class="section level2" number="3">
-<h2><span class="header-section-number">3</span> Key Variables</h2>
-<div id="identifiers-and-structure" class="section level3" number="3.1">
-<h3><span class="header-section-number">3.1</span> Identifiers and
-structure</h3>
+<div id="key-variables" class="section level2">
+<h2>Key Variables</h2>
+<div id="identifiers-and-structure" class="section level3">
+<h3>Identifiers and structure</h3>
 <ul>
 <li><code>article_id</code>: unique article ID</li>
 <li><code>date</code>: publication date (YYYY-MM-DD)</li>
@@ -431,9 +467,8 @@ legacy_mainstream, cable_news, wire_service)</li>
 outlet)</li>
 </ul>
 </div>
-<div id="content-and-production-features" class="section level3" number="3.2">
-<h3><span class="header-section-number">3.2</span> Content and
-production features</h3>
+<div id="content-and-production-features" class="section level3">
+<h3>Content and production features</h3>
 <ul>
 <li><code>topic</code>: article topic</li>
 <li><code>frame_type</code>: framing category</li>
@@ -446,8 +481,8 @@ positive)</li>
 <li><code>length_words</code>: article length in words</li>
 </ul>
 </div>
-<div id="outcomes" class="section level3" number="3.3">
-<h3><span class="header-section-number">3.3</span> Outcomes</h3>
+<div id="outcomes" class="section level3">
+<h3>Outcomes</h3>
 <ul>
 <li><code>clicks</code>, <code>shares</code>, <code>comments</code>:
 engagement indicators (counts)</li>
@@ -458,8 +493,8 @@ engagement)</li>
 </ul>
 </div>
 </div>
-<div id="part-0-setup" class="section level2" number="4">
-<h2><span class="header-section-number">4</span> Part 0: Setup</h2>
+<div id="part-1-setup" class="section level2">
+<h2>Part 1: Setup</h2>
 <p>When coding, even if packages are invoked later, it’s good practice
 to load all packages at the start of your script.</p>
 <p>If you have not yet installed the necessary packages, you should use
@@ -470,52 +505,28 @@ library().</p>
 <code>beepr</code>, and <code>modelsummary</code>. Google them, see
 their documentation, and get familiar with their functions. We will also
 use <code>glm</code>, which is a base R function for generalized linear
-models, so you do not need to install a separate package for it.</p>
-<pre class="r"><code># If needed (uncomment):
-# install.packages(c(&quot;skimr&quot;,&quot;lme4&quot;,&quot;lmerTest&quot;,&quot;plm&quot;,&quot;beepr&quot;,&quot;modelsummary&quot;))
-
-library(skimr)
-library(lme4)
-library(lmerTest)
-library(plm)
-library(beepr)
-library(modelsummary)</code></pre>
+models, so you do not need to install a separate package for it. Write
+the code to load those libraries:</p>
+<pre class="r"><code># YOUR CODE HERE</code></pre>
 <p>Use plain language to describe what each package/function is used for
 in practical communication research workflows:</p>
 <ul>
-<li><code>skimr</code>: quick, readable descriptive statistics of
-data</li>
-<li><code>lm</code>: fits a linear regression model (ordinary least
-squares, OLS)</li>
-<li><code>lme4</code>: fits multilevel (mixed-effects) models to account
-for clustering/nesting (e.g., articles within outlets)<br />
-</li>
-<li><code>lmerTest</code>: adds p-values and inferential conveniences to
-<code>lme4</code> outputs, closer to what many reviewers expect<br />
-</li>
-<li><code>plm</code>: fits panel-data models (especially fixed effects)
-to compare units (e.g., outlets) to themselves over time</li>
-<li><code>glm()</code>: base R function for generalized linear models
-(e.g., logistic regression for binary outcomes)<br />
-</li>
-<li><code>beepr</code>: plays a sound when code finishes (helpful for
-long-running models, bootstraps, or simulations)<br />
-</li>
-<li><code>modelsummary</code>: generates clean, publication-ready
-regression tables across many model types</li>
+<li><code>skimr</code>: YOUR ANSWER HERE</li>
+<li><code>lm</code>: YOUR ANSWER HERE</li>
+<li><code>lme4</code>: YOUR ANSWER HERE</li>
+<li><code>lmerTest</code>: YOUR ANSWER HERE</li>
+<li><code>plm</code>: YOUR ANSWER HERE</li>
+<li><code>glm</code>: YOUR ANSWER HERE</li>
+<li><code>beepr</code>: YOUR ANSWER HERE</li>
+<li><code>modelsummary</code>: YOUR ANSWER HERE</li>
 </ul>
 </div>
-<div id="part-1-data-inspection-and-descriptives" class="section level2" number="5">
-<h2><span class="header-section-number">5</span> Part 1: Data Inspection
-and Descriptives</h2>
-<div id="task-1.1---load-and-inspect-the-data" class="section level3" number="5.1">
-<h3><span class="header-section-number">5.1</span> Task 1.1 - Load and
-inspect the data</h3>
-<p>First load the dataset:</p>
-<pre class="r"><code># Load dataset.
-# file name: &quot;1_media_engagement.csv&quot;
-
-df &lt;- read.csv(&quot;1_media_engagement.csv&quot;, stringsAsFactors = FALSE)</code></pre>
+<div id="part-2-data-inspection-and-descriptives" class="section level2">
+<h2>Part 2: Data Inspection and Descriptives</h2>
+<div id="task-2.1-load-and-inspect-the-data" class="section level3">
+<h3>Task 2.1 — Load and inspect the data</h3>
+<p>First load the dataset <code>1_media_engagement.csv</code>:</p>
+<pre class="r"><code># YOUR CODE HERE</code></pre>
 <p>Answer the following with code and one sentence each:</p>
 <ul>
 <li>How many rows and columns are in the dataset?</li>
@@ -524,63 +535,11 @@ df &lt;- read.csv(&quot;1_media_engagement.csv&quot;, stringsAsFactors = FALSE)<
 </ul>
 <p>Hint: Use <code>dim()</code>, <code>names()</code>,
 <code>str()</code>, <code>head()</code>.</p>
-<pre class="r"><code>dim(df)</code></pre>
-<pre><code>## [1] 1200   17</code></pre>
-<pre class="r"><code>names(df)</code></pre>
-<pre><code>##  [1] &quot;article_id&quot;       &quot;date&quot;             &quot;outlet&quot;           &quot;outlet_type&quot;     
-##  [5] &quot;journalist_id&quot;    &quot;topic&quot;            &quot;frame_type&quot;       &quot;tone&quot;            
-##  [9] &quot;slant&quot;            &quot;breaking&quot;         &quot;visuals&quot;          &quot;length_words&quot;    
-## [13] &quot;clicks&quot;           &quot;shares&quot;           &quot;comments&quot;         &quot;engagement_index&quot;
-## [17] &quot;high_engagement&quot;</code></pre>
-<pre class="r"><code>str(df)</code></pre>
-<pre><code>## &#39;data.frame&#39;:    1200 obs. of  17 variables:
-##  $ article_id      : chr  &quot;a_00001&quot; &quot;a_00002&quot; &quot;a_00003&quot; &quot;a_00004&quot; ...
-##  $ date            : chr  &quot;2025-08-16&quot; &quot;2025-12-12&quot; &quot;2025-11-22&quot; &quot;2025-10-15&quot; ...
-##  $ outlet          : chr  &quot;USA Today&quot; &quot;Politico&quot; &quot;The Daily Beast&quot; &quot;BuzzFeed News&quot; ...
-##  $ outlet_type     : chr  &quot;legacy_mainstream&quot; &quot;digital_politics&quot; &quot;digital_politics&quot; &quot;digital_viral&quot; ...
-##  $ journalist_id   : chr  &quot;j_17_009&quot; &quot;j_09_019&quot; &quot;j_19_020&quot; &quot;j_15_018&quot; ...
-##  $ topic           : chr  &quot;Climate&quot; &quot;Foreign Policy&quot; &quot;Education&quot; &quot;Elections&quot; ...
-##  $ frame_type      : chr  &quot;Strategy/Game&quot; &quot;Human Interest&quot; &quot;Human Interest&quot; &quot;Economic Consequences&quot; ...
-##  $ tone            : num  -0.149 0.429 -0.497 -0.245 0.54 0.026 -0.501 0.208 -0.447 -0.161 ...
-##  $ slant           : num  -0.145 -0.07 0.04 -0.061 1 0.366 -0.053 0.61 -0.289 0.015 ...
-##  $ breaking        : int  0 1 0 0 0 0 0 0 0 0 ...
-##  $ visuals         : int  0 1 1 1 1 0 1 1 1 0 ...
-##  $ length_words    : int  894 1127 711 667 882 747 941 826 860 830 ...
-##  $ clicks          : int  368 987 362 210 539 387 272 715 588 532 ...
-##  $ shares          : int  22 120 43 26 60 37 19 102 72 44 ...
-##  $ comments        : int  42 40 36 11 45 22 15 114 22 50 ...
-##  $ engagement_index: num  4.65 5.63 4.8 4.16 5.14 ...
-##  $ high_engagement : int  0 1 0 0 1 0 0 1 1 0 ...</code></pre>
-<pre class="r"><code>head(df, 3)</code></pre>
-<pre><code>##   article_id       date          outlet       outlet_type journalist_id
-## 1    a_00001 2025-08-16       USA Today legacy_mainstream      j_17_009
-## 2    a_00002 2025-12-12        Politico  digital_politics      j_09_019
-## 3    a_00003 2025-11-22 The Daily Beast  digital_politics      j_19_020
-##            topic     frame_type   tone  slant breaking visuals length_words
-## 1        Climate  Strategy/Game -0.149 -0.145        0       0          894
-## 2 Foreign Policy Human Interest  0.429 -0.070        1       1         1127
-## 3      Education Human Interest -0.497  0.040        0       1          711
-##   clicks shares comments engagement_index high_engagement
-## 1    368     22       42           4.6483               0
-## 2    987    120       40           5.6293               1
-## 3    362     43       36           4.8046               0</code></pre>
-<p><strong>Answers:</strong></p>
-<ul>
-<li><strong>Rows and columns:</strong> 1200 rows and 17 columns.</li>
-<li><strong>Unit of analysis:</strong> one row is one news article.</li>
-<li><strong>Numeric vs categorical:</strong> numeric variables include
-<code>tone</code>, <code>slant</code>, <code>breaking</code>,
-<code>visuals</code>, <code>length_words</code>, <code>clicks</code>,
-<code>shares</code>, <code>comments</code>,
-<code>engagement_index</code>, <code>high_engagement</code>; categorical
-variables include variables like <code>topic</code>,
-<code>frame_type</code>, <code>outlet</code>, and
-<code>outlet_type</code>.</li>
-</ul>
+<pre class="r"><code># YOUR CODE HERE</code></pre>
+<p>YOUR ANSWER HERE</p>
 </div>
-<div id="task-1.2---descriptive-statistics" class="section level3" number="5.2">
-<h3><span class="header-section-number">5.2</span> Task 1.2 -
-Descriptive statistics</h3>
+<div id="task-2.2-descriptive-statistics" class="section level3">
+<h3>Task 2.2 — Descriptive statistics</h3>
 <p>Produce descriptive statistics for the key variables below:</p>
 <ul>
 <li><code>topic</code></li>
@@ -590,8 +549,9 @@ Descriptive statistics</h3>
 <li><code>slant</code></li>
 <li><code>length_words</code></li>
 </ul>
-<p>You may use base R (<code>summary()</code>) or
-<code>skimr::skim()</code>. Questions to answer:</p>
+<p>You may use base R function (<code>summary()</code>) or
+the<code>skim()</code> function from the <code>skimr</code> package.
+Questions to answer:</p>
 <ul>
 <li>How many unique topics and frame types are there?</li>
 <li>How are topic and frame_type distributed?</li>
@@ -601,870 +561,28 @@ slant, and length_words?</li>
 <li>Are most articles neutral, positive, or negative in tone?</li>
 <li>How polarized is the distribution of slant?</li>
 </ul>
-<pre class="r"><code># Quick skim of key variables
-skim(df$topic)</code></pre>
-<table>
-<caption>Data summary</caption>
-<tbody>
-<tr class="odd">
-<td align="left">Name</td>
-<td align="left">df$topic</td>
-</tr>
-<tr class="even">
-<td align="left">Number of rows</td>
-<td align="left">1200</td>
-</tr>
-<tr class="odd">
-<td align="left">Number of columns</td>
-<td align="left">1</td>
-</tr>
-<tr class="even">
-<td align="left">_______________________</td>
-<td align="left"></td>
-</tr>
-<tr class="odd">
-<td align="left">Column type frequency:</td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td align="left">character</td>
-<td align="left">1</td>
-</tr>
-<tr class="odd">
-<td align="left">________________________</td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td align="left">Group variables</td>
-<td align="left">None</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Variable type: character</strong></p>
-<table>
-<colgroup>
-<col width="19%" />
-<col width="13%" />
-<col width="19%" />
-<col width="5%" />
-<col width="5%" />
-<col width="8%" />
-<col width="12%" />
-<col width="15%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left">skim_variable</th>
-<th align="right">n_missing</th>
-<th align="right">complete_rate</th>
-<th align="right">min</th>
-<th align="right">max</th>
-<th align="right">empty</th>
-<th align="right">n_unique</th>
-<th align="right">whitespace</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left">data</td>
-<td align="right">0</td>
-<td align="right">1</td>
-<td align="right">5</td>
-<td align="right">14</td>
-<td align="right">0</td>
-<td align="right">10</td>
-<td align="right">0</td>
-</tr>
-</tbody>
-</table>
-<pre class="r"><code>skim(df$frame_type)</code></pre>
-<table>
-<caption>Data summary</caption>
-<tbody>
-<tr class="odd">
-<td align="left">Name</td>
-<td align="left">df$frame_type</td>
-</tr>
-<tr class="even">
-<td align="left">Number of rows</td>
-<td align="left">1200</td>
-</tr>
-<tr class="odd">
-<td align="left">Number of columns</td>
-<td align="left">1</td>
-</tr>
-<tr class="even">
-<td align="left">_______________________</td>
-<td align="left"></td>
-</tr>
-<tr class="odd">
-<td align="left">Column type frequency:</td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td align="left">character</td>
-<td align="left">1</td>
-</tr>
-<tr class="odd">
-<td align="left">________________________</td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td align="left">Group variables</td>
-<td align="left">None</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Variable type: character</strong></p>
-<table>
-<colgroup>
-<col width="19%" />
-<col width="13%" />
-<col width="19%" />
-<col width="5%" />
-<col width="5%" />
-<col width="8%" />
-<col width="12%" />
-<col width="15%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left">skim_variable</th>
-<th align="right">n_missing</th>
-<th align="right">complete_rate</th>
-<th align="right">min</th>
-<th align="right">max</th>
-<th align="right">empty</th>
-<th align="right">n_unique</th>
-<th align="right">whitespace</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left">data</td>
-<td align="right">0</td>
-<td align="right">1</td>
-<td align="right">8</td>
-<td align="right">21</td>
-<td align="right">0</td>
-<td align="right">8</td>
-<td align="right">0</td>
-</tr>
-</tbody>
-</table>
-<pre class="r"><code>skim(df$engagement_index)</code></pre>
-<table>
-<caption>Data summary</caption>
-<tbody>
-<tr class="odd">
-<td align="left">Name</td>
-<td align="left">df$engagement_index</td>
-</tr>
-<tr class="even">
-<td align="left">Number of rows</td>
-<td align="left">1200</td>
-</tr>
-<tr class="odd">
-<td align="left">Number of columns</td>
-<td align="left">1</td>
-</tr>
-<tr class="even">
-<td align="left">_______________________</td>
-<td align="left"></td>
-</tr>
-<tr class="odd">
-<td align="left">Column type frequency:</td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td align="left">numeric</td>
-<td align="left">1</td>
-</tr>
-<tr class="odd">
-<td align="left">________________________</td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td align="left">Group variables</td>
-<td align="left">None</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Variable type: numeric</strong></p>
-<table>
-<colgroup>
-<col width="18%" />
-<col width="12%" />
-<col width="18%" />
-<col width="6%" />
-<col width="6%" />
-<col width="5%" />
-<col width="6%" />
-<col width="6%" />
-<col width="5%" />
-<col width="6%" />
-<col width="7%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left">skim_variable</th>
-<th align="right">n_missing</th>
-<th align="right">complete_rate</th>
-<th align="right">mean</th>
-<th align="right">sd</th>
-<th align="right">p0</th>
-<th align="right">p25</th>
-<th align="right">p50</th>
-<th align="right">p75</th>
-<th align="right">p100</th>
-<th align="left">hist</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left">data</td>
-<td align="right">0</td>
-<td align="right">1</td>
-<td align="right">4.8</td>
-<td align="right">0.59</td>
-<td align="right">3.1</td>
-<td align="right">4.39</td>
-<td align="right">4.78</td>
-<td align="right">5.2</td>
-<td align="right">6.99</td>
-<td align="left">▁▆▇▂▁</td>
-</tr>
-</tbody>
-</table>
-<pre class="r"><code>skim(df$tone)</code></pre>
-<table>
-<caption>Data summary</caption>
-<tbody>
-<tr class="odd">
-<td align="left">Name</td>
-<td align="left">df$tone</td>
-</tr>
-<tr class="even">
-<td align="left">Number of rows</td>
-<td align="left">1200</td>
-</tr>
-<tr class="odd">
-<td align="left">Number of columns</td>
-<td align="left">1</td>
-</tr>
-<tr class="even">
-<td align="left">_______________________</td>
-<td align="left"></td>
-</tr>
-<tr class="odd">
-<td align="left">Column type frequency:</td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td align="left">numeric</td>
-<td align="left">1</td>
-</tr>
-<tr class="odd">
-<td align="left">________________________</td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td align="left">Group variables</td>
-<td align="left">None</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Variable type: numeric</strong></p>
-<table>
-<colgroup>
-<col width="18%" />
-<col width="12%" />
-<col width="18%" />
-<col width="6%" />
-<col width="6%" />
-<col width="3%" />
-<col width="7%" />
-<col width="6%" />
-<col width="5%" />
-<col width="6%" />
-<col width="7%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left">skim_variable</th>
-<th align="right">n_missing</th>
-<th align="right">complete_rate</th>
-<th align="right">mean</th>
-<th align="right">sd</th>
-<th align="right">p0</th>
-<th align="right">p25</th>
-<th align="right">p50</th>
-<th align="right">p75</th>
-<th align="right">p100</th>
-<th align="left">hist</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left">data</td>
-<td align="right">0</td>
-<td align="right">1</td>
-<td align="right">0.15</td>
-<td align="right">0.35</td>
-<td align="right">-1</td>
-<td align="right">-0.09</td>
-<td align="right">0.15</td>
-<td align="right">0.4</td>
-<td align="right">1</td>
-<td align="left">▁▃▇▇▂</td>
-</tr>
-</tbody>
-</table>
-<pre class="r"><code>skim(df$slant)</code></pre>
-<table>
-<caption>Data summary</caption>
-<tbody>
-<tr class="odd">
-<td align="left">Name</td>
-<td align="left">df$slant</td>
-</tr>
-<tr class="even">
-<td align="left">Number of rows</td>
-<td align="left">1200</td>
-</tr>
-<tr class="odd">
-<td align="left">Number of columns</td>
-<td align="left">1</td>
-</tr>
-<tr class="even">
-<td align="left">_______________________</td>
-<td align="left"></td>
-</tr>
-<tr class="odd">
-<td align="left">Column type frequency:</td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td align="left">numeric</td>
-<td align="left">1</td>
-</tr>
-<tr class="odd">
-<td align="left">________________________</td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td align="left">Group variables</td>
-<td align="left">None</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Variable type: numeric</strong></p>
-<table style="width:100%;">
-<colgroup>
-<col width="17%" />
-<col width="12%" />
-<col width="17%" />
-<col width="6%" />
-<col width="6%" />
-<col width="3%" />
-<col width="7%" />
-<col width="7%" />
-<col width="6%" />
-<col width="6%" />
-<col width="7%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left">skim_variable</th>
-<th align="right">n_missing</th>
-<th align="right">complete_rate</th>
-<th align="right">mean</th>
-<th align="right">sd</th>
-<th align="right">p0</th>
-<th align="right">p25</th>
-<th align="right">p50</th>
-<th align="right">p75</th>
-<th align="right">p100</th>
-<th align="left">hist</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left">data</td>
-<td align="right">0</td>
-<td align="right">1</td>
-<td align="right">0</td>
-<td align="right">0.36</td>
-<td align="right">-1</td>
-<td align="right">-0.25</td>
-<td align="right">-0.03</td>
-<td align="right">0.21</td>
-<td align="right">1</td>
-<td align="left">▁▅▇▃▁</td>
-</tr>
-</tbody>
-</table>
-<pre class="r"><code>skim(df$length_words)</code></pre>
-<table>
-<caption>Data summary</caption>
-<tbody>
-<tr class="odd">
-<td align="left">Name</td>
-<td align="left">df$length_words</td>
-</tr>
-<tr class="even">
-<td align="left">Number of rows</td>
-<td align="left">1200</td>
-</tr>
-<tr class="odd">
-<td align="left">Number of columns</td>
-<td align="left">1</td>
-</tr>
-<tr class="even">
-<td align="left">_______________________</td>
-<td align="left"></td>
-</tr>
-<tr class="odd">
-<td align="left">Column type frequency:</td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td align="left">numeric</td>
-<td align="left">1</td>
-</tr>
-<tr class="odd">
-<td align="left">________________________</td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td align="left">Group variables</td>
-<td align="left">None</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Variable type: numeric</strong></p>
-<table style="width:100%;">
-<colgroup>
-<col width="17%" />
-<col width="12%" />
-<col width="17%" />
-<col width="8%" />
-<col width="8%" />
-<col width="5%" />
-<col width="5%" />
-<col width="5%" />
-<col width="5%" />
-<col width="6%" />
-<col width="7%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left">skim_variable</th>
-<th align="right">n_missing</th>
-<th align="right">complete_rate</th>
-<th align="right">mean</th>
-<th align="right">sd</th>
-<th align="right">p0</th>
-<th align="right">p25</th>
-<th align="right">p50</th>
-<th align="right">p75</th>
-<th align="right">p100</th>
-<th align="left">hist</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left">data</td>
-<td align="right">0</td>
-<td align="right">1</td>
-<td align="right">724.04</td>
-<td align="right">229.06</td>
-<td align="right">250</td>
-<td align="right">563</td>
-<td align="right">717</td>
-<td align="right">884</td>
-<td align="right">1397</td>
-<td align="left">▃▇▇▃▁</td>
-</tr>
-</tbody>
-</table>
-<pre class="r"><code>skim(df$breaking)</code></pre>
-<table>
-<caption>Data summary</caption>
-<tbody>
-<tr class="odd">
-<td align="left">Name</td>
-<td align="left">df$breaking</td>
-</tr>
-<tr class="even">
-<td align="left">Number of rows</td>
-<td align="left">1200</td>
-</tr>
-<tr class="odd">
-<td align="left">Number of columns</td>
-<td align="left">1</td>
-</tr>
-<tr class="even">
-<td align="left">_______________________</td>
-<td align="left"></td>
-</tr>
-<tr class="odd">
-<td align="left">Column type frequency:</td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td align="left">numeric</td>
-<td align="left">1</td>
-</tr>
-<tr class="odd">
-<td align="left">________________________</td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td align="left">Group variables</td>
-<td align="left">None</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Variable type: numeric</strong></p>
-<table>
-<colgroup>
-<col width="18%" />
-<col width="13%" />
-<col width="18%" />
-<col width="6%" />
-<col width="6%" />
-<col width="4%" />
-<col width="5%" />
-<col width="5%" />
-<col width="5%" />
-<col width="6%" />
-<col width="8%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left">skim_variable</th>
-<th align="right">n_missing</th>
-<th align="right">complete_rate</th>
-<th align="right">mean</th>
-<th align="right">sd</th>
-<th align="right">p0</th>
-<th align="right">p25</th>
-<th align="right">p50</th>
-<th align="right">p75</th>
-<th align="right">p100</th>
-<th align="left">hist</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left">data</td>
-<td align="right">0</td>
-<td align="right">1</td>
-<td align="right">0.21</td>
-<td align="right">0.41</td>
-<td align="right">0</td>
-<td align="right">0</td>
-<td align="right">0</td>
-<td align="right">0</td>
-<td align="right">1</td>
-<td align="left">▇▁▁▁▂</td>
-</tr>
-</tbody>
-</table>
-<pre class="r"><code>skim(df$visuals)</code></pre>
-<table>
-<caption>Data summary</caption>
-<tbody>
-<tr class="odd">
-<td align="left">Name</td>
-<td align="left">df$visuals</td>
-</tr>
-<tr class="even">
-<td align="left">Number of rows</td>
-<td align="left">1200</td>
-</tr>
-<tr class="odd">
-<td align="left">Number of columns</td>
-<td align="left">1</td>
-</tr>
-<tr class="even">
-<td align="left">_______________________</td>
-<td align="left"></td>
-</tr>
-<tr class="odd">
-<td align="left">Column type frequency:</td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td align="left">numeric</td>
-<td align="left">1</td>
-</tr>
-<tr class="odd">
-<td align="left">________________________</td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td align="left">Group variables</td>
-<td align="left">None</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Variable type: numeric</strong></p>
-<table>
-<colgroup>
-<col width="18%" />
-<col width="13%" />
-<col width="18%" />
-<col width="6%" />
-<col width="6%" />
-<col width="4%" />
-<col width="5%" />
-<col width="5%" />
-<col width="5%" />
-<col width="6%" />
-<col width="8%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left">skim_variable</th>
-<th align="right">n_missing</th>
-<th align="right">complete_rate</th>
-<th align="right">mean</th>
-<th align="right">sd</th>
-<th align="right">p0</th>
-<th align="right">p25</th>
-<th align="right">p50</th>
-<th align="right">p75</th>
-<th align="right">p100</th>
-<th align="left">hist</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left">data</td>
-<td align="right">0</td>
-<td align="right">1</td>
-<td align="right">0.62</td>
-<td align="right">0.48</td>
-<td align="right">0</td>
-<td align="right">0</td>
-<td align="right">1</td>
-<td align="right">1</td>
-<td align="right">1</td>
-<td align="left">▅▁▁▁▇</td>
-</tr>
-</tbody>
-</table>
-<pre class="r"><code># Unique counts and distributions for key categorical variables
-length(unique(df$topic))</code></pre>
-<pre><code>## [1] 10</code></pre>
-<pre class="r"><code>table(df$topic)</code></pre>
-<pre><code>## 
-##        Climate          Crime        Economy      Education      Elections 
-##            106            108            113             91            143 
-## Foreign Policy         Health    Immigration       Politics     Technology 
-##            115            102            106            219             97</code></pre>
-<pre class="r"><code>topic_counts &lt;- table(df$topic)
-
-n_frames &lt;- length(unique(df$frame_type))
-n_frames</code></pre>
-<pre><code>## [1] 8</code></pre>
-<pre class="r"><code>table(df$frame_type)</code></pre>
-<pre><code>## 
-##              Conflict Economic Consequences              Episodic 
-##                   141                   163                   134 
-##        Human Interest              Morality        Responsibility 
-##                   156                   157                   157 
-##         Strategy/Game              Thematic 
-##                   153                   139</code></pre>
-<pre class="r"><code>frame_counts &lt;- table(df$frame_type)
-
-topic_prop &lt;- prop.table(topic_counts)
-topic_prop</code></pre>
-<pre><code>## 
-##        Climate          Crime        Economy      Education      Elections 
-##     0.08833333     0.09000000     0.09416667     0.07583333     0.11916667 
-## Foreign Policy         Health    Immigration       Politics     Technology 
-##     0.09583333     0.08500000     0.08833333     0.18250000     0.08083333</code></pre>
-<pre class="r"><code>frame_prop &lt;- prop.table(frame_counts)
-frame_prop</code></pre>
-<pre><code>## 
-##              Conflict Economic Consequences              Episodic 
-##             0.1175000             0.1358333             0.1116667 
-##        Human Interest              Morality        Responsibility 
-##             0.1300000             0.1308333             0.1308333 
-##         Strategy/Game              Thematic 
-##             0.1275000             0.1158333</code></pre>
-<pre class="r"><code># Means and SDs for core continuous variables
-engagement_mean   &lt;- mean(df$engagement_index, na.rm = TRUE)
-engagement_sd     &lt;- sd(df$engagement_index, na.rm = TRUE)
-engagement_median &lt;- median(df$engagement_index, na.rm = TRUE)
-
-tone_mean   &lt;- mean(df$tone, na.rm = TRUE)
-tone_sd     &lt;- sd(df$tone, na.rm = TRUE)
-
-slant_mean  &lt;- mean(df$slant, na.rm = TRUE)
-slant_sd    &lt;- sd(df$slant, na.rm = TRUE)
-
-abs_slant_mean &lt;- mean(abs(df$slant), na.rm = TRUE)
-
-length_mean &lt;- mean(df$length_words, na.rm = TRUE)
-length_sd   &lt;- sd(df$length_words, na.rm = TRUE)
-
-desc_core &lt;- data.frame(
-  variable = c(&quot;Engagement&quot;, &quot;Tone&quot;, &quot;Slant&quot;, &quot;Absolute Slant&quot;, &quot;Article Length&quot;),
-  mean     = c(engagement_mean, tone_mean, slant_mean, abs_slant_mean, length_mean),
-  sd       = c(engagement_sd, tone_sd, slant_sd, NA, length_sd),
-  median   = c(engagement_median, NA, NA, NA, NA)
-)
-
-desc_core</code></pre>
-<pre><code>##         variable          mean          sd  median
-## 1     Engagement   4.795483500   0.5929702 4.77805
-## 2           Tone   0.150547500   0.3499185      NA
-## 3          Slant  -0.001375833   0.3583620      NA
-## 4 Absolute Slant   0.284072500          NA      NA
-## 5 Article Length 724.035833333 229.0591509      NA</code></pre>
-<p><strong>Answers:</strong></p>
-<ul>
-<li><strong>Unique topics / frames:</strong> 10 topics and 8 frame
-types.</li>
-<li><strong>Topic/frame distributions:</strong> see
-<code>topic_prop</code> and <code>frame_prop</code> above (some
-categories dominate).</li>
-<li><strong>Means/SDs (selected):</strong> engagement mean 4.795 (SD
-0.593); tone mean 0.151 (SD 0.350); slant mean -0.001 (SD 0.358); length
-mean 724.036 (SD 229.059).</li>
-<li><strong>Skew:</strong> engagement is right-skewed if mean &gt;
-median; here mean 4.795 vs median 4.778.</li>
-<li><strong>Tone:</strong> average tone is near neutral.</li>
-<li><strong>Polarization:</strong> mean absolute slant is 0.284 (higher
-implies more content away from center).</li>
-</ul>
+<pre class="r"><code># YOUR CODE HERE</code></pre>
+<p>YOUR ANSWER HERE</p>
 </div>
-<div id="task-1.3---outlet-differences" class="section level3" number="5.3">
-<h3><span class="header-section-number">5.3</span> Task 1.3 - Outlet
-differences</h3>
+<div id="task-2.3-outlet-differences" class="section level3">
+<h3>Task 2.3 — Outlet differences</h3>
 <p>Compute mean engagement by outlet and identify the top 5 and bottom 5
 outlets. Question to answer:</p>
 <ul>
 <li>Do outlet differences look large enough to justify multilevel or
 fixed-effects modeling?</li>
 </ul>
-<pre class="r"><code># Step 1: get the list of outlets
-outlets &lt;- unique(df$outlet)
-
-# Step 2: create an empty vector to store means
-outlet_mean_engagement &lt;- numeric(length(outlets))
-names(outlet_mean_engagement) &lt;- outlets
-
-# Step 3: compute mean engagement for each outlet
-for (i in seq_along(outlets)) {
-  current_outlet &lt;- outlets[i]
-  
-  outlet_mean_engagement[i] &lt;- mean(
-    df$engagement_index[df$outlet == current_outlet],
-    na.rm = TRUE
-  )
-}
-
-outlet_mean_engagement</code></pre>
-<pre><code>##               USA Today                Politico         The Daily Beast 
-##                4.701707                4.672122                4.776947 
-##           BuzzFeed News               Breitbart           New York Post 
-##                4.730425                5.448288                5.038964 
-##                   Axios        The Daily Caller                     NPR 
-##                4.696230                5.253016                4.547549 
-##                HuffPost     The Washington Post The Wall Street Journal 
-##                4.838023                4.953264                4.727777 
-##            The Guardian                   MSNBC                     Vox 
-##                4.765667                4.905922                4.727868 
-##                 Reuters                     CNN      The New York Times 
-##                4.253506                4.821954                4.893744 
-##                 AP News                Fox News 
-##                4.215086                5.065938</code></pre>
-<pre class="r"><code>outlet_counts &lt;- table(df$outlet)
-outlet_counts</code></pre>
-<pre><code>## 
-##                 AP News                   Axios               Breitbart 
-##                      59                      60                      57 
-##           BuzzFeed News                     CNN                Fox News 
-##                      60                      72                      52 
-##                HuffPost                   MSNBC           New York Post 
-##                      52                      64                      55 
-##                     NPR                Politico                 Reuters 
-##                      67                      58                      64 
-##         The Daily Beast        The Daily Caller            The Guardian 
-##                      68                      64                      48 
-##      The New York Times The Wall Street Journal     The Washington Post 
-##                      59                      65                      55 
-##               USA Today                     Vox 
-##                      68                      53</code></pre>
-<pre class="r"><code>outlet_summary &lt;- data.frame(
-  outlet = names(outlet_mean_engagement),
-  mean_engagement = as.numeric(outlet_mean_engagement),
-  n_articles = as.numeric(outlet_counts)
-)
-
-outlet_summary_sorted &lt;- outlet_summary[
-  order(outlet_summary$mean_engagement, decreasing = TRUE),
-]
-
-outlet_summary_sorted</code></pre>
-<pre><code>##                     outlet mean_engagement n_articles
-## 5                Breitbart        5.448288         72
-## 8         The Daily Caller        5.253016         64
-## 20                Fox News        5.065938         53
-## 6            New York Post        5.038964         52
-## 11     The Washington Post        4.953264         58
-## 14                   MSNBC        4.905922         64
-## 18      The New York Times        4.893744         55
-## 10                HuffPost        4.838023         67
-## 17                     CNN        4.821954         65
-## 3          The Daily Beast        4.776947         57
-## 13            The Guardian        4.765667         68
-## 4            BuzzFeed News        4.730425         60
-## 15                     Vox        4.727868         48
-## 12 The Wall Street Journal        4.727777         64
-## 1                USA Today        4.701707         59
-## 7                    Axios        4.696230         52
-## 2                 Politico        4.672122         60
-## 9                      NPR        4.547549         55
-## 16                 Reuters        4.253506         59
-## 19                 AP News        4.215086         68</code></pre>
-<pre class="r"><code>top5 &lt;- head(outlet_summary_sorted, 5)
-bottom5 &lt;- tail(outlet_summary_sorted, 5)
-
-top5</code></pre>
-<pre><code>##                 outlet mean_engagement n_articles
-## 5            Breitbart        5.448288         72
-## 8     The Daily Caller        5.253016         64
-## 20            Fox News        5.065938         53
-## 6        New York Post        5.038964         52
-## 11 The Washington Post        4.953264         58</code></pre>
-<pre class="r"><code>bottom5</code></pre>
-<pre><code>##      outlet mean_engagement n_articles
-## 7     Axios        4.696230         52
-## 2  Politico        4.672122         60
-## 9       NPR        4.547549         55
-## 16  Reuters        4.253506         59
-## 19  AP News        4.215086         68</code></pre>
-<p><strong>Answer:</strong> Outlet differences are sizable: top-5
-average engagement is ~5.152 versus bottom-5 ~4.477. This is large
-enough to justify either multilevel (random outlet intercepts) or fixed
-effects (outlet FE) approaches.</p>
+<pre class="r"><code># YOUR CODE HERE</code></pre>
+<p>YOUR ANSWER HERE</p>
 </div>
 </div>
-<div id="part-2-slant-tone-and-engagement" class="section level2" number="6">
-<h2><span class="header-section-number">6</span> Part 2: Slant, Tone,
-and Engagement</h2>
-<div id="task-2.1---predicting-engagement-from-content-features" class="section level3" number="6.1">
-<h3><span class="header-section-number">6.1</span> Task 2.1 - Predicting
-engagement from content features</h3>
-<p>Estimate a linear regression predicting engagement using three
-content features (<code>slant</code>, <code>tone</code>, and
-<code>length</code>):</p>
+<div id="part-3-slant-tone-and-engagement" class="section level2">
+<h2>Part 3: Slant, Tone, and Engagement</h2>
+<div id="task-3.1-predicting-engagement-from-content-features" class="section level3">
+<h3>Task 3.1 — Predicting engagement from content features</h3>
+<p>Estimate a linear regression predicting engagement
+(<code>engagement_index</code>) using three content features
+(<code>slant</code>, <code>tone</code>, and <code>length</code>):</p>
 <p><span class="math display">\[
 \text{engagement} = f(\text{slant}, \text{tone}, \text{length})
 \]</span></p>
@@ -1477,78 +595,11 @@ content features (<code>slant</code>, <code>tone</code>, and
 |slant|), how should we revise the model and does ideological extremity
 predict engagement? Name this model <code>m1</code>.</li>
 </ul>
-<pre class="r"><code># Baseline (signed slant)
-m1_signed &lt;- lm(engagement_index ~ slant + tone + length_words, data = df)
-summary(m1_signed)</code></pre>
-<pre><code>## 
-## Call:
-## lm(formula = engagement_index ~ slant + tone + length_words, 
-##     data = df)
-## 
-## Residuals:
-##     Min      1Q  Median      3Q     Max 
-## -1.5975 -0.3573 -0.0079  0.3445  1.7197 
-## 
-## Coefficients:
-##                 Estimate  Std. Error t value             Pr(&gt;|t|)    
-## (Intercept)   4.79937528  0.05257993  91.278 &lt; 0.0000000000000002 ***
-## slant         0.26068619  0.04395754   5.930        0.00000000395 ***
-## tone         -0.64412920  0.04460967 -14.439 &lt; 0.0000000000000002 ***
-## length_words  0.00012905  0.00006876   1.877               0.0608 .  
-## ---
-## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
-## 
-## Residual standard error: 0.5404 on 1196 degrees of freedom
-## Multiple R-squared:  0.1714, Adjusted R-squared:  0.1693 
-## F-statistic: 82.47 on 3 and 1196 DF,  p-value: &lt; 0.00000000000000022</code></pre>
-<pre class="r"><code># Revised model (absolute slant)
-df$abs_slant &lt;-  abs(df$slant)
-m1 &lt;- lm(engagement_index ~ abs_slant + tone + length_words, data = df)
-summary(m1)</code></pre>
-<pre><code>## 
-## Call:
-## lm(formula = engagement_index ~ abs_slant + tone + length_words, 
-##     data = df)
-## 
-## Residuals:
-##      Min       1Q   Median       3Q      Max 
-## -1.61667 -0.33336 -0.01497  0.32798  1.79815 
-## 
-## Coefficients:
-##                 Estimate  Std. Error t value             Pr(&gt;|t|)    
-## (Intercept)   4.49202652  0.05428533  82.748 &lt; 0.0000000000000002 ***
-## abs_slant     0.97850893  0.06721124  14.559 &lt; 0.0000000000000002 ***
-## tone         -0.64981436  0.04171029 -15.579 &lt; 0.0000000000000002 ***
-## length_words  0.00017032  0.00006406   2.659              0.00795 ** 
-## ---
-## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
-## 
-## Residual standard error: 0.5054 on 1196 degrees of freedom
-## Multiple R-squared:  0.2754, Adjusted R-squared:  0.2736 
-## F-statistic: 151.6 on 3 and 1196 DF,  p-value: &lt; 0.00000000000000022</code></pre>
-<pre class="r"><code># Basic hygiene: ensure date is Date type
-# df$date &lt;- as.Date(df$date)
-# however, in this practice, the above line is not strictly necessary</code></pre>
-<p><strong>Answer:</strong></p>
-<ul>
-<li><strong>Political slant:</strong> Yes. Signed slant tests left→right
-direction; absolute slant tests extremity. Here, <code>m1_signed</code>
-shows that right-leaning slant predicts higher engagement with a
-positive <code>slant</code> coefficient of 4.799.</li>
-<li><strong>Tone direction:</strong> In <code>m1_signed</code>, the tone
-coefficient is -0.644, consistent with the idea that more negative tone
-(lower values) predicts higher engagement.</li>
-<li><strong>Substantive magnitude:</strong> In <code>m1</code>, a 1 unit
-increase in absolute slant is associated with 0.979 positive change in
-engagement_index, holding other variables constant.<br />
-</li>
-<li><strong>Extremity:</strong> The absolute-slant model directly shows
-that ideological distance from neutral predicts engagement.</li>
-</ul>
+<pre class="r"><code># YOUR CODE HERE</code></pre>
+<p>YOUR ANSWER HERE</p>
 </div>
-<div id="task-2.2---add-breaking-news-and-visuals" class="section level3" number="6.2">
-<h3><span class="header-section-number">6.2</span> Task 2.2 - Add
-breaking news and visuals</h3>
+<div id="task-3.2-add-breaking-news-and-visuals" class="section level3">
+<h3>Task 3.2 — Add breaking news and visuals</h3>
 <p>Going forward, let’s use absolute slant (|slant|) as our slant
 measure.</p>
 <p>Estimate a linear regression predicting engagement using three
@@ -1560,68 +611,19 @@ visuals:</p>
 <li>Do they change the slant/tone coefficients? Why might that
 happen?</li>
 </ul>
-<pre class="r"><code>m2 &lt;- lm(engagement_index ~ abs_slant + tone + breaking + visuals + length_words, data = df)
-summary(m2)</code></pre>
-<pre><code>## 
-## Call:
-## lm(formula = engagement_index ~ abs_slant + tone + breaking + 
-##     visuals + length_words, data = df)
-## 
-## Residuals:
-##      Min       1Q   Median       3Q      Max 
-## -1.29357 -0.28032 -0.00063  0.28376  1.33019 
-## 
-## Coefficients:
-##                 Estimate  Std. Error t value             Pr(&gt;|t|)    
-## (Intercept)   4.11750729  0.04989064  82.531 &lt; 0.0000000000000002 ***
-## abs_slant     1.00020421  0.05705078  17.532 &lt; 0.0000000000000002 ***
-## tone         -0.59025108  0.03552947 -16.613 &lt; 0.0000000000000002 ***
-## breaking      0.54074853  0.03039960  17.788 &lt; 0.0000000000000002 ***
-## visuals       0.33715595  0.02561449  13.163 &lt; 0.0000000000000002 ***
-## length_words  0.00021632  0.00005442   3.975            0.0000745 ***
-## ---
-## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
-## 
-## Residual standard error: 0.4289 on 1194 degrees of freedom
-## Multiple R-squared:  0.479,  Adjusted R-squared:  0.4768 
-## F-statistic: 219.5 on 5 and 1194 DF,  p-value: &lt; 0.00000000000000022</code></pre>
-<p><strong>Answer:</strong></p>
-<ul>
-<li><strong>Breaking news effect:</strong> Coefficient +0.541 which is
-the difference in engagement for breaking vs non-breaking.</li>
-<li><strong>Visuals effect:</strong> 0.337 (difference for visuals vs
-none).<br />
-</li>
-<li><strong>Coefficient change:</strong> If slant/tone coefficients
-shift compared to <code>m1</code>, it suggests breaking/visuals were
-correlated with content features and also mattered for engagement
-(classic omitted-variable story). However, here, slant/tone coefficients
-remain fairly stable.</li>
-</ul>
+<pre class="r"><code># YOUR CODE HERE</code></pre>
+<p>YOUR ANSWER HERE</p>
 </div>
-<div id="task-2.3---interpretation" class="section level3" number="6.3">
-<h3><span class="header-section-number">6.3</span> Task 2.3 -
-Interpretation</h3>
+<div id="task-3.3-interpretation" class="section level3">
+<h3>Task 3.3 — Interpretation</h3>
 <p>Pretend you are writing the results section using this dataset. Write
 a short paragraph (3-5 sentences) summarizing the key findings from
 tasks above, including coefficient estimates and substantive
 interpretations.</p>
-<p><strong>Answer:</strong> In an OLS model predicting engagement,
-ideological extremity, negativity, and production cues all predict
-higher engagement. Holding other variables constant, the coefficient on
-absolute slant is positive and statistically significant (<span class="math inline">\(B=1.00, se=.057, p&lt;.001\)</span>), suggesting
-that articles further from the ideological center tend to receive more
-engagement. Tone is a significant negative predictor (<span class="math inline">\(B=-.59, se=.035, p&lt;.001\)</span>), consistent
-with the hypothesis regarding audiences’ negativity bias that more
-negative coverage is associated with greater engagement. Breaking news
-is associated with an increase of engagement index of 0.541 (<span class="math inline">\(se=.030, p&lt;.001\)</span>), and visuals are
-associated with an increase of 0.337 (<span class="math inline">\(se=.026, p&lt;.001\)</span>). Overall, those
-results confirm our hypothesis: more extreme, more negative, and more
-packaging cues attracts attention.</p>
+<p>YOUR ANSWER HERE</p>
 </div>
-<div id="task-2.4-robustness-checks" class="section level3" number="6.4">
-<h3><span class="header-section-number">6.4</span> Task 2.4 Robustness
-checks</h3>
+<div id="task-3.4-robustness-checks" class="section level3">
+<h3>Task 3.4 — Robustness checks</h3>
 <p>Re-run your main model using:</p>
 <ul>
 <li>Only political topics (e.g., Politics, Elections, Immigration)</li>
@@ -1629,148 +631,27 @@ checks</h3>
 <li>Only political topics (e.g., Politics, Elections, Immigration) and
 also excluding tabloid and partisan outlets</li>
 </ul>
-<pre class="r"><code># Let&#39;s create a new column/variable indicating if the article is on a political topic
-df$political_topic &lt;- df$topic %in% c(&quot;Politics&quot;,&quot;Elections&quot;,&quot;Immigration&quot;) # this will be TRUE/FALSE
-# (A) Only political topics
-df_pol &lt;- df[df$political_topic == TRUE, ]
-m2_pol &lt;- lm(engagement_index ~ abs_slant + tone + breaking + visuals + length_words, data = df_pol)
-summary(m2_pol)</code></pre>
-<pre><code>## 
-## Call:
-## lm(formula = engagement_index ~ abs_slant + tone + breaking + 
-##     visuals + length_words, data = df_pol)
-## 
-## Residuals:
-##      Min       1Q   Median       3Q      Max 
-## -1.29592 -0.26842  0.00054  0.26042  1.32481 
-## 
-## Coefficients:
-##                 Estimate  Std. Error t value             Pr(&gt;|t|)    
-## (Intercept)   4.16234558  0.08067884  51.592 &lt; 0.0000000000000002 ***
-## abs_slant     1.08625887  0.08514535  12.758 &lt; 0.0000000000000002 ***
-## tone         -0.59322999  0.05711682 -10.386 &lt; 0.0000000000000002 ***
-## breaking      0.55675705  0.04336660  12.838 &lt; 0.0000000000000002 ***
-## visuals       0.30812855  0.03919016   7.862   0.0000000000000268 ***
-## length_words  0.00013114  0.00008653   1.516                 0.13    
-## ---
-## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
-## 
-## Residual standard error: 0.4038 on 462 degrees of freedom
-## Multiple R-squared:  0.5175, Adjusted R-squared:  0.5122 
-## F-statistic: 99.08 on 5 and 462 DF,  p-value: &lt; 0.00000000000000022</code></pre>
-<pre class="r"><code>df$partisan_or_tabloid &lt;- df$outlet_type %in% c(&quot;tabloid&quot;,&quot;partisan_right&quot;)
-# (B) Excluding tabloid and partisan outlets
-df_no_tab_part &lt;- df[df$partisan_or_tabloid == FALSE, ]
-m2_no_tab_part &lt;- lm(engagement_index ~ abs_slant + tone + breaking + visuals + length_words, data = df_no_tab_part)
-summary(m2_no_tab_part)</code></pre>
-<pre><code>## 
-## Call:
-## lm(formula = engagement_index ~ abs_slant + tone + breaking + 
-##     visuals + length_words, data = df_no_tab_part)
-## 
-## Residuals:
-##      Min       1Q   Median       3Q      Max 
-## -1.25107 -0.27781  0.00718  0.27251  1.34335 
-## 
-## Coefficients:
-##                 Estimate  Std. Error t value             Pr(&gt;|t|)    
-## (Intercept)   4.04420655  0.05285752  76.511 &lt; 0.0000000000000002 ***
-## abs_slant     0.77238318  0.07136067  10.824 &lt; 0.0000000000000002 ***
-## tone         -0.56256678  0.03755230 -14.981 &lt; 0.0000000000000002 ***
-## breaking      0.54837958  0.03221689  17.021 &lt; 0.0000000000000002 ***
-## visuals       0.34395797  0.02711547  12.685 &lt; 0.0000000000000002 ***
-## length_words  0.00032489  0.00005742   5.658         0.0000000199 ***
-## ---
-## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
-## 
-## Residual standard error: 0.4211 on 1018 degrees of freedom
-## Multiple R-squared:  0.4538, Adjusted R-squared:  0.4511 
-## F-statistic: 169.2 on 5 and 1018 DF,  p-value: &lt; 0.00000000000000022</code></pre>
-<pre class="r"><code># (C) Political topics AND excluding tabloid/partisan
-df_pol_no_tab_part &lt;- df[df$political_topic == TRUE &amp; df$partisan_or_tabloid == FALSE, ]
-m2_pol_no_tab_part &lt;- lm(engagement_index ~ abs_slant + tone + breaking + visuals + length_words, data = df_pol_no_tab_part)
-summary(m2_pol_no_tab_part)</code></pre>
-<pre><code>## 
-## Call:
-## lm(formula = engagement_index ~ abs_slant + tone + breaking + 
-##     visuals + length_words, data = df_pol_no_tab_part)
-## 
-## Residuals:
-##      Min       1Q   Median       3Q      Max 
-## -1.24922 -0.26862 -0.00334  0.24560  1.27115 
-## 
-## Coefficients:
-##                 Estimate  Std. Error t value             Pr(&gt;|t|)    
-## (Intercept)   4.12757299  0.08473936  48.709 &lt; 0.0000000000000002 ***
-## abs_slant     0.80905036  0.11007039   7.350    0.000000000001152 ***
-## tone         -0.57816677  0.06077831  -9.513 &lt; 0.0000000000000002 ***
-## breaking      0.57792906  0.04664409  12.390 &lt; 0.0000000000000002 ***
-## visuals       0.32191578  0.04209653   7.647    0.000000000000159 ***
-## length_words  0.00020124  0.00009161   2.197               0.0286 *  
-## ---
-## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
-## 
-## Residual standard error: 0.4023 on 394 degrees of freedom
-## Multiple R-squared:  0.4869, Adjusted R-squared:  0.4804 
-## F-statistic: 74.77 on 5 and 394 DF,  p-value: &lt; 0.00000000000000022</code></pre>
-<p><strong>Answer:</strong> The substantive conclusions are robust if
-core predictors keep the same sign and roughly comparable magnitudes
-across these restrictions. In practice, you should look for stability in
-the direction of <code>abs_slant</code>, <code>tone</code>,
-<code>breaking</code>, and <code>visuals</code>, and treat large swings
-as a diagnostic about which parts of the media ecosystem drive the
-headline result.</p>
+<pre class="r"><code># YOUR CODE HERE</code></pre>
+<p>Questions to answer: Are the substantive conclusions robust across
+these sample restrictions?</p>
+<p>YOUR ANSWER HERE</p>
 <p>What if the reviewer asks you to use the log of the sum of engagement
 indicators as the dependent variable instead of the proprietary score?
 Re-run your main model using log() as the DV. Does that change your
 conclusions? (also remember, be careful about zero values when using
 log; you can use log1p() to handle zeros).</p>
-<pre class="r"><code># let&#39;s create a variable for the sum of engagement
-df$engagement_sum &lt;- df$clicks + df$shares + df$comments
-df$log_eng_sum &lt;- log(df$engagement_sum) # alternative: log1p(df$engagement_sum)
-
-m2_logsum &lt;- lm(log_eng_sum ~ abs_slant + tone + breaking + visuals + length_words, data = df)
-summary(m2_logsum)</code></pre>
-<pre><code>## 
-## Call:
-## lm(formula = log_eng_sum ~ abs_slant + tone + breaking + visuals + 
-##     length_words, data = df)
-## 
-## Residuals:
-##      Min       1Q   Median       3Q      Max 
-## -1.28885 -0.27006 -0.00883  0.26969  1.32637 
-## 
-## Coefficients:
-##                 Estimate  Std. Error t value             Pr(&gt;|t|)    
-## (Intercept)   5.40759997  0.04843462 111.647 &lt; 0.0000000000000002 ***
-## abs_slant     1.03440848  0.05538580  18.676 &lt; 0.0000000000000002 ***
-## tone         -0.57700181  0.03449257 -16.728 &lt; 0.0000000000000002 ***
-## breaking      0.55794768  0.02951241  18.906 &lt; 0.0000000000000002 ***
-## visuals       0.34051083  0.02486696  13.693 &lt; 0.0000000000000002 ***
-## length_words  0.00021840  0.00005283   4.134            0.0000381 ***
-## ---
-## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
-## 
-## Residual standard error: 0.4164 on 1194 degrees of freedom
-## Multiple R-squared:  0.5009, Adjusted R-squared:  0.4988 
-## F-statistic: 239.6 on 5 and 1194 DF,  p-value: &lt; 0.00000000000000022</code></pre>
+<pre class="r"><code># YOUR CODE HERE</code></pre>
 <p>Questions to answer: Are the substantive conclusions robust across
 this operationalization?</p>
-<p><strong>Answer:</strong> Using
-<code>log1p(clicks + shares + comments)</code> preserves the story we
-just told, since the key predictors remain directionally consistent.
-Here, <code>abs_slant</code> is 1.034 and tone is -0.577 in the
-alternative DV specification.</p>
+<p>YOUR ANSWER HERE</p>
 </div>
 </div>
-<div id="part-3-binary-outcomes-and-logistic-regression" class="section level2" number="7">
-<h2><span class="header-section-number">7</span> Part 3: Binary Outcomes
-and Logistic Regression</h2>
+<div id="part-4-binary-outcomes-and-logistic-regression" class="section level2">
+<h2>Part 4: Binary Outcomes and Logistic Regression</h2>
 <p>If audience engagement is operationalized as high vs. low attention,
 how should we proceed?</p>
-<div id="task-3.1---logistic-regression" class="section level3" number="7.1">
-<h3><span class="header-section-number">7.1</span> Task 3.1 - Logistic
-regression</h3>
+<div id="task-4.1-logistic-regression" class="section level3">
+<h3>Task 4.1 — Logistic regression</h3>
 <p>Use <code>high_engagement</code> as a binary dependent variable,
 estimate a logistic regression predicting <code>high_engagement</code>
 using three content features (<code>slant</code>, <code>tone</code>, and
@@ -1780,48 +661,11 @@ using three content features (<code>slant</code>, <code>tone</code>, and
 <li>Which predictors increase the probability of high engagement?</li>
 <li>How does interpretation differ from OLS?</li>
 </ul>
-<pre class="r"><code>g1 &lt;- glm(high_engagement ~ abs_slant + tone + breaking + visuals + length_words,
-          data = df, family = binomial())
-summary(g1)</code></pre>
-<pre><code>## 
-## Call:
-## glm(formula = high_engagement ~ abs_slant + tone + breaking + 
-##     visuals + length_words, family = binomial(), data = df)
-## 
-## Coefficients:
-##                Estimate Std. Error z value            Pr(&gt;|z|)    
-## (Intercept)  -3.9756426  0.3606597 -11.023 &lt;0.0000000000000002 ***
-## abs_slant     4.3304475  0.3836952  11.286 &lt;0.0000000000000002 ***
-## tone         -2.6008858  0.2521966 -10.313 &lt;0.0000000000000002 ***
-## breaking      2.1953925  0.1934425  11.349 &lt;0.0000000000000002 ***
-## visuals       1.5587154  0.1834723   8.496 &lt;0.0000000000000002 ***
-## length_words  0.0006100  0.0003433   1.777              0.0756 .  
-## ---
-## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
-## 
-## (Dispersion parameter for binomial family taken to be 1)
-## 
-##     Null deviance: 1466.1  on 1199  degrees of freedom
-## Residual deviance: 1025.5  on 1194  degrees of freedom
-## AIC: 1037.5
-## 
-## Number of Fisher Scoring iterations: 5</code></pre>
-<p><strong>Answer:</strong></p>
-<ul>
-<li><strong>Predictors increasing probability:</strong> Positive
-coefficients increase the probability of high engagement; negative
-coefficients decrease it. In this dataset, absolute slant, breaking, and
-visuals typically increase the probability, while more positive tone
-tends to reduce it.</li>
-<li><strong>OLS vs logit interpretation:</strong> OLS changes the
-expected value of a continuous outcome; logit changes the probability of
-an event (high engagement), via log-odds. However, the qualitative story
-about directionality remains the same.</li>
-</ul>
+<pre class="r"><code># YOUR CODE HERE</code></pre>
+<p>YOUR ANSWER HERE</p>
 </div>
-<div id="task-3.2---predicted-probabilities" class="section level3" number="7.2">
-<h3><span class="header-section-number">7.2</span> Task 3.2 - Predicted
-probabilities</h3>
+<div id="task-4.2-predicted-probabilities" class="section level3">
+<h3>Task 4.2 — Predicted probabilities</h3>
 <p>Compute predicted probabilities for two cases:</p>
 <ul>
 <li>Case A: 0.1 absolute slant, +.5 tone, not breaking, no visuals</li>
@@ -1831,94 +675,18 @@ probabilities</h3>
 <ul>
 <li>How big is the substantive difference in predicted probability?</li>
 </ul>
-<pre class="r"><code>caseA &lt;- data.frame(
-  abs_slant = abs(0.1),
-  tone = 0.5,
-  breaking = 0,
-  visuals = 0,
-  length_words = mean(df$length_words, na.rm = TRUE)
-)
-
-caseB &lt;- data.frame(
-  abs_slant = abs(0.9),
-  tone = -1,
-  breaking = 1,
-  visuals = 1,
-  length_words = mean(df$length_words, na.rm = TRUE)
-)
-
-pA &lt;- predict(g1, newdata = caseA, type = &quot;response&quot;)
-pB &lt;- predict(g1, newdata = caseB, type = &quot;response&quot;)
-
-pA</code></pre>
-<pre><code>##          1 
-## 0.01211154</code></pre>
-<pre class="r"><code>pB</code></pre>
-<pre><code>##        1 
-## 0.998793</code></pre>
-<p><strong>Answer:</strong> Predicted probability increases from 0.012
-(Case A) to 0.998793 (Case B), which is a substantively large shift.</p>
+<pre class="r"><code># YOUR CODE HERE</code></pre>
+<p>YOUR ANSWER HERE</p>
 </div>
 </div>
-<div id="part-4-outlet-level-differences-multilevel" class="section level2" number="8">
-<h2><span class="header-section-number">8</span> Part 4: Outlet-Level
-Differences (Multilevel)</h2>
+<div id="part-5-outlet-level-differences-multilevel" class="section level2">
+<h2>Part 5: Outlet-Level Differences (Multilevel)</h2>
 <p>Articles are not independent. They are produced by outlets, and some
 outlets systematically generate more engagement than others. We can
 account for this nested structure using multilevel models.</p>
 <p>Estimate a multilevel model, with the same variables used above, with
 articles nested within outlets. Name this model <code>l1</code>.</p>
-<pre class="r"><code># No need to load specify &quot;lmerTest&quot;
-# lmerTest modifies lmer() output behind the scenes to add p-values, etc.
-l1 &lt;- lmer(engagement_index ~ abs_slant + tone + breaking + visuals + length_words + (1 | outlet),
-           data = df)
-summary(l1)</code></pre>
-<pre><code>## Linear mixed model fit by REML. t-tests use Satterthwaite&#39;s method [
-## lmerModLmerTest]
-## Formula: 
-## engagement_index ~ abs_slant + tone + breaking + visuals + length_words +  
-##     (1 | outlet)
-##    Data: df
-## 
-## REML criterion at convergence: 1184.3
-## 
-## Scaled residuals: 
-##     Min      1Q  Median      3Q     Max 
-## -3.0507 -0.6604 -0.0439  0.6700  3.2065 
-## 
-## Random effects:
-##  Groups   Name        Variance Std.Dev.
-##  outlet   (Intercept) 0.04762  0.2182  
-##  Residual             0.14498  0.3808  
-## Number of obs: 1200, groups:  outlet, 20
-## 
-## Fixed effects:
-##                   Estimate    Std. Error            df t value
-## (Intercept)     4.18722375    0.06995392   68.09597038  59.857
-## abs_slant       0.68518627    0.06005242 1191.72924120  11.410
-## tone           -0.59494911    0.03173222 1176.15167930 -18.749
-## breaking        0.55721325    0.02723512 1176.91314983  20.459
-## visuals         0.27553449    0.02326044 1180.39912988  11.846
-## length_words    0.00029744    0.00005784 1190.37596457   5.143
-##                          Pr(&gt;|t|)    
-## (Intercept)  &lt; 0.0000000000000002 ***
-## abs_slant    &lt; 0.0000000000000002 ***
-## tone         &lt; 0.0000000000000002 ***
-## breaking     &lt; 0.0000000000000002 ***
-## visuals      &lt; 0.0000000000000002 ***
-## length_words          0.000000316 ***
-## ---
-## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
-## 
-## Correlation of Fixed Effects:
-##             (Intr) abs_sl tone   brekng visuls
-## abs_slant   -0.271                            
-## tone        -0.078 -0.014                     
-## breaking    -0.110  0.010  0.086              
-## visuals     -0.215  0.046  0.018  0.039       
-## length_wrds -0.604  0.026  0.005  0.019 -0.016
-## fit warnings:
-## Some predictor variables are on very different scales: consider rescaling</code></pre>
+<pre class="r"><code># YOUR CODE HERE</code></pre>
 <p>Questions to answer:</p>
 <ul>
 <li>Why is it reasonable to treat outlet as a random effect?</li>
@@ -1926,483 +694,22 @@ summary(l1)</code></pre>
 <li>Compare this model vs the previous linear model: what changes, and
 why?</li>
 </ul>
-<p><strong>Answer:</strong></p>
-<ul>
-<li><strong>Why outlet random effect:</strong> articles within the same
-outlet share audiences, distribution strategies, and editorial style;
-treating them as independent inflates certainty.<br />
-</li>
-<li><strong>Random intercept meaning:</strong> baseline engagement
-differs by outlet; the random-effect model estimates that heterogeneity
-instead of forcing one global intercept.<br />
-</li>
-<li><strong>What changes vs OLS:</strong> standard errors become more
-conservative; coefficients can even shift if outlet-level differences
-were confounding the OLS relationship. However, here in our dataset, the
-story remains, despite the coefficients being slightly smaller in
-magnitude.</li>
-</ul>
+<p>YOUR ANSWER HERE</p>
 </div>
-<div id="part-5-panel-logic-fixed-effects" class="section level2" number="9">
-<h2><span class="header-section-number">9</span> Part 5: Panel Logic
-(Fixed Effects)</h2>
+<div id="part-6-panel-logic-fixed-effects" class="section level2">
+<h2>Part 6: Panel Logic (Fixed Effects)</h2>
 <p>Another way to handle outlet differences is to compare outlets to
 themselves over time.</p>
 <p>Estimate a fixed-effects model with two fixed effects (outlet and
 date as fixed effects), using the same variables as above.</p>
 <p>You can use the <code>lm()</code> function with <code>factor()</code>
 to create fixed effects:</p>
-<pre class="r"><code>fe_lm &lt;- lm(engagement_index ~ abs_slant + tone + breaking + visuals + length_words +
-              factor(outlet) + factor(date),
-            data = df)
-summary(fe_lm)</code></pre>
-<pre><code>## 
-## Call:
-## lm(formula = engagement_index ~ abs_slant + tone + breaking + 
-##     visuals + length_words + factor(outlet) + factor(date), data = df)
-## 
-## Residuals:
-##      Min       1Q   Median       3Q      Max 
-## -1.07793 -0.23616  0.00518  0.23047  1.23550 
-## 
-## Coefficients:
-##                                          Estimate  Std. Error t value
-## (Intercept)                            3.75196966  0.18363672  20.431
-## abs_slant                              0.67988902  0.06490456  10.475
-## tone                                  -0.60462730  0.03329934 -18.157
-## breaking                               0.55378378  0.02914611  19.000
-## visuals                                0.24955949  0.02469822  10.104
-## length_words                           0.00030070  0.00006128   4.907
-## factor(outlet)Axios                    0.30026828  0.07506224   4.000
-## factor(outlet)Breitbart                0.82339042  0.08180052  10.066
-## factor(outlet)BuzzFeed News            0.54752018  0.07523268   7.278
-## factor(outlet)CNN                      0.55118859  0.07079328   7.786
-## factor(outlet)Fox News                 0.71471719  0.07860649   9.092
-## factor(outlet)HuffPost                 0.57643389  0.07799372   7.391
-## factor(outlet)MSNBC                    0.57482376  0.07367193   7.802
-## factor(outlet)New York Post            0.74610665  0.07715940   9.670
-## factor(outlet)NPR                      0.27470672  0.07316524   3.755
-## factor(outlet)Politico                 0.39899798  0.07503918   5.317
-## factor(outlet)Reuters                 -0.05341148  0.07302637  -0.731
-## factor(outlet)The Daily Beast          0.50207299  0.07235256   6.939
-## factor(outlet)The Daily Caller         0.74371867  0.07704806   9.653
-## factor(outlet)The Guardian             0.43316312  0.07960073   5.442
-## factor(outlet)The New York Times       0.53228192  0.07586497   7.016
-## factor(outlet)The Wall Street Journal  0.40296491  0.07446267   5.412
-## factor(outlet)The Washington Post      0.64607427  0.07685804   8.406
-## factor(outlet)USA Today                0.40784406  0.07268695   5.611
-## factor(outlet)Vox                      0.38731379  0.07896044   4.905
-## factor(date)2025-08-02                 0.15756081  0.21459467   0.734
-## factor(date)2025-08-03                 0.28305712  0.21996788   1.287
-## factor(date)2025-08-04                -0.11095691  0.21008832  -0.528
-## factor(date)2025-08-05                 0.12755579  0.25276298   0.505
-## factor(date)2025-08-06                -0.23273942  0.25297383  -0.920
-## factor(date)2025-08-07                 0.00959542  0.22124043   0.043
-## factor(date)2025-08-08                -0.05495164  0.20315759  -0.270
-## factor(date)2025-08-09                 0.02840201  0.25298582   0.112
-## factor(date)2025-08-10                 0.17952050  0.22099809   0.812
-## factor(date)2025-08-11                -0.22693625  0.27546253  -0.824
-## factor(date)2025-08-12                -0.36047212  0.22882465  -1.575
-## factor(date)2025-08-13                 0.25506863  0.27620007   0.923
-## factor(date)2025-08-14                -0.22209817  0.21982841  -1.010
-## factor(date)2025-08-15                -0.09255736  0.21538591  -0.430
-## factor(date)2025-08-16                 0.11537692  0.20604497   0.560
-## factor(date)2025-08-17                 0.14481289  0.20359456   0.711
-## factor(date)2025-08-18                -0.30056331  0.25300648  -1.188
-## factor(date)2025-08-19                 0.00796804  0.21030977   0.038
-## factor(date)2025-08-20                 0.10287961  0.23792414   0.432
-## factor(date)2025-08-21                -0.01243019  0.20155527  -0.062
-## factor(date)2025-08-22                 0.06650665  0.22188008   0.300
-## factor(date)2025-08-23                 0.07957627  0.20307788   0.392
-## factor(date)2025-08-24                -0.02529368  0.25085529  -0.101
-## factor(date)2025-08-25                -0.16140157  0.19495002  -0.828
-## factor(date)2025-08-26                 0.19292175  0.22187047   0.870
-## factor(date)2025-08-27                -0.22474980  0.20333058  -1.105
-## factor(date)2025-08-28                -0.05488172  0.22882040  -0.240
-## factor(date)2025-08-29                 0.10795194  0.21040869   0.513
-## factor(date)2025-08-30                 0.30562391  0.22145317   1.380
-## factor(date)2025-08-31                 0.16292348  0.22085997   0.738
-## factor(date)2025-09-01                -0.07966691  0.20982819  -0.380
-## factor(date)2025-09-02                -0.17449126  0.31554483  -0.553
-## factor(date)2025-09-03                -0.09482381  0.21521334  -0.441
-## factor(date)2025-09-04                -0.02888835  0.21946043  -0.132
-## factor(date)2025-09-05                 0.09288411  0.25291164   0.367
-## factor(date)2025-09-06                 0.28993934  0.31530965   0.920
-## factor(date)2025-09-07                 0.08072719  0.27505189   0.293
-## factor(date)2025-09-08                 0.21634191  0.41336566   0.523
-## factor(date)2025-09-09                -0.08185020  0.22896599  -0.357
-## factor(date)2025-09-10                 0.12040556  0.21055202   0.572
-## factor(date)2025-09-11                 0.02929645  0.22026522   0.133
-## factor(date)2025-09-12                -0.06846557  0.20657710  -0.331
-## factor(date)2025-09-13                 0.00267412  0.25328860   0.011
-## factor(date)2025-09-14                 0.25070771  0.25337345   0.989
-## factor(date)2025-09-15                 0.01809422  0.25329198   0.071
-## factor(date)2025-09-16                -0.00215882  0.21473847  -0.010
-## factor(date)2025-09-17                -0.03929901  0.22759489  -0.173
-## factor(date)2025-09-18                -0.19310545  0.21505148  -0.898
-## factor(date)2025-09-19                -0.01812521  0.21019008  -0.086
-## factor(date)2025-09-20                -0.08592875  0.23863058  -0.360
-## factor(date)2025-09-21                 0.20790800  0.22952025   0.906
-## factor(date)2025-09-22                -0.02058430  0.20677507  -0.100
-## factor(date)2025-09-23                -0.10516252  0.22788800  -0.461
-## factor(date)2025-09-24                 0.05189770  0.19832338   0.262
-## factor(date)2025-09-25                -0.10786339  0.22125431  -0.488
-## factor(date)2025-09-26                -0.34361847  0.25271773  -1.360
-## factor(date)2025-09-27                 0.00944043  0.21019852   0.045
-## factor(date)2025-09-28                 0.14082897  0.22859183   0.616
-## factor(date)2025-09-29                -0.40216591  0.31598968  -1.273
-## factor(date)2025-09-30                -0.05216367  0.27610995  -0.189
-## factor(date)2025-10-01                -0.48406969  0.31602460  -1.532
-## factor(date)2025-10-02                -0.07221935  0.23909541  -0.302
-## factor(date)2025-10-03                -0.11051377  0.21047978  -0.525
-## factor(date)2025-10-04                -0.12259577  0.21540115  -0.569
-## factor(date)2025-10-05                -0.15590940  0.23835869  -0.654
-## factor(date)2025-10-06                -0.12936775  0.25380480  -0.510
-## factor(date)2025-10-07                -0.16197231  0.23941839  -0.677
-## factor(date)2025-10-08                 0.26602173  0.27412893   0.970
-## factor(date)2025-10-09                -0.08629833  0.25299937  -0.341
-## factor(date)2025-10-10                -0.36447608  0.22125796  -1.647
-## factor(date)2025-10-11                 0.22646040  0.22066509   1.026
-## factor(date)2025-10-12                 0.09594410  0.20418779   0.470
-## factor(date)2025-10-13                -0.29633875  0.27434345  -1.080
-## factor(date)2025-10-14                 0.00969867  0.21384039   0.045
-## factor(date)2025-10-15                -0.17881313  0.19720369  -0.907
-## factor(date)2025-10-16                -0.10275680  0.23807723  -0.432
-## factor(date)2025-10-17                -0.23104226  0.19715720  -1.172
-## factor(date)2025-10-18                 0.17412147  0.22817270   0.763
-## factor(date)2025-10-19                 0.04517989  0.21021167   0.215
-## factor(date)2025-10-20                -0.11721684  0.21033253  -0.557
-## factor(date)2025-10-21                -0.04100264  0.22861612  -0.179
-## factor(date)2025-10-22                -0.21796054  0.20649040  -1.056
-## factor(date)2025-10-23                -0.12214881  0.27628393  -0.442
-## factor(date)2025-10-24                 0.15724371  0.22144084   0.710
-## factor(date)2025-10-25                 0.16199450  0.21453451   0.755
-## factor(date)2025-10-26                 0.01032775  0.21086743   0.049
-## factor(date)2025-10-27                -0.19834748  0.19885188  -0.997
-## factor(date)2025-10-28                 0.12650213  0.25285961   0.500
-## factor(date)2025-10-29                -0.23110120  0.22044962  -1.048
-## factor(date)2025-10-30                 0.05303168  0.20700479   0.256
-## factor(date)2025-10-31                 0.23260434  0.22004694   1.057
-## factor(date)2025-11-01                 0.20173521  0.22062844   0.914
-## factor(date)2025-11-02                -0.03717733  0.22097160  -0.168
-## factor(date)2025-11-03                -0.06923595  0.20990579  -0.330
-## factor(date)2025-11-04                -0.15370769  0.22085627  -0.696
-## factor(date)2025-11-05                -0.09838586  0.21551118  -0.457
-## factor(date)2025-11-06                 0.04478172  0.22792396   0.196
-## factor(date)2025-11-07                -0.05428512  0.23795836  -0.228
-## factor(date)2025-11-08                 0.01397488  0.22780205   0.061
-## factor(date)2025-11-09                -0.19127952  0.22790584  -0.839
-## factor(date)2025-11-10                 0.03625810  0.22117267   0.164
-## factor(date)2025-11-11                -0.10747379  0.22109644  -0.486
-## factor(date)2025-11-12                -0.20232991  0.21522781  -0.940
-## factor(date)2025-11-13                -0.00937817  0.22848158  -0.041
-## factor(date)2025-11-14                -0.00294959  0.22856325  -0.013
-## factor(date)2025-11-15                 0.20366447  0.21528960   0.946
-## factor(date)2025-11-16                 0.10778118  0.25393544   0.424
-## factor(date)2025-11-17                 0.04758790  0.22157179   0.215
-## factor(date)2025-11-18                -0.11086511  0.20063730  -0.553
-## factor(date)2025-11-19                 0.20760513  0.22149469   0.937
-## factor(date)2025-11-20                -0.34437063  0.27559073  -1.250
-## factor(date)2025-11-21                 0.02218468  0.20591192   0.108
-## factor(date)2025-11-22                 0.15053848  0.25268595   0.596
-## factor(date)2025-11-23                -0.00049383  0.21443859  -0.002
-## factor(date)2025-11-24                 0.16478837  0.20984142   0.785
-## factor(date)2025-11-25                -0.26211912  0.23785573  -1.102
-## factor(date)2025-11-26                -0.17058448  0.22836610  -0.747
-## factor(date)2025-11-27                -0.17712803  0.21044795  -0.842
-## factor(date)2025-11-28                 0.00324268  0.25289565   0.013
-## factor(date)2025-11-29                 0.10267707  0.22127277   0.464
-## factor(date)2025-11-30                 0.12513177  0.21513081   0.582
-## factor(date)2025-12-01                -0.14152868  0.22778593  -0.621
-## factor(date)2025-12-02                -0.04732610  0.27506643  -0.172
-## factor(date)2025-12-03                -0.20246365  0.20669645  -0.980
-## factor(date)2025-12-04                -0.18510688  0.21505172  -0.861
-## factor(date)2025-12-05                -0.13294688  0.22849052  -0.582
-## factor(date)2025-12-06                 0.24962943  0.19626529   1.272
-## factor(date)2025-12-07                -0.03813573  0.23829088  -0.160
-## factor(date)2025-12-08                -0.03583566  0.22919620  -0.156
-## factor(date)2025-12-09                 0.02109196  0.25180704   0.084
-## factor(date)2025-12-10                -0.35255188  0.22005024  -1.602
-## factor(date)2025-12-11                -0.27503845  0.21076520  -1.305
-## factor(date)2025-12-12                 0.05846937  0.20954131   0.279
-## factor(date)2025-12-13                -0.04465524  0.21475072  -0.208
-## factor(date)2025-12-14                 0.20422575  0.19827173   1.030
-## factor(date)2025-12-15                 0.02590715  0.25180608   0.103
-## factor(date)2025-12-16                -0.41424809  0.20745563  -1.997
-## factor(date)2025-12-17                -0.14433320  0.20616415  -0.700
-## factor(date)2025-12-18                 0.15548433  0.20644090   0.753
-## factor(date)2025-12-19                -0.29054692  0.31639812  -0.918
-## factor(date)2025-12-20                 0.07326075  0.25371685   0.289
-## factor(date)2025-12-21                 0.03429176  0.21451495   0.160
-## factor(date)2025-12-22                 0.27942038  0.21552169   1.296
-## factor(date)2025-12-23                -0.05701112  0.20652913  -0.276
-## factor(date)2025-12-24                -0.14812784  0.20480428  -0.723
-## factor(date)2025-12-25                -0.02223926  0.21021272  -0.106
-## factor(date)2025-12-26                -0.02191436  0.20073570  -0.109
-## factor(date)2025-12-27                 0.28876094  0.22058150   1.309
-## factor(date)2025-12-28                 0.27386600  0.31567034   0.868
-## factor(date)2025-12-29                 0.13894952  0.25313440   0.549
-## factor(date)2025-12-30                -0.04305507  0.27581657  -0.156
-## factor(date)2025-12-31                -0.45419688  0.25367748  -1.790
-## factor(date)2026-01-01                 0.04338758  0.25315011   0.171
-## factor(date)2026-01-02                 0.00097828  0.22752969   0.004
-## factor(date)2026-01-03                 0.00063689  0.23864328   0.003
-## factor(date)2026-01-04                 0.45771282  0.22924824   1.997
-## factor(date)2026-01-05                -0.20139826  0.25336111  -0.795
-## factor(date)2026-01-06                -0.06603328  0.21073587  -0.313
-## factor(date)2026-01-07                -0.14412780  0.20648371  -0.698
-## factor(date)2026-01-08                 0.15531657  0.20971679   0.741
-## factor(date)2026-01-09                -0.36524762  0.20747570  -1.760
-## factor(date)2026-01-10                 0.01702700  0.22060033   0.077
-## factor(date)2026-01-11                 0.12969786  0.25229027   0.514
-## factor(date)2026-01-12                 0.03376318  0.22090611   0.153
-## factor(date)2026-01-13                 0.27206595  0.22088925   1.232
-## factor(date)2026-01-14                 0.01792401  0.20608017   0.087
-## factor(date)2026-01-15                -0.00794363  0.21103155  -0.038
-## factor(date)2026-01-16                 0.05591844  0.22884404   0.244
-## factor(date)2026-01-17                 0.13442254  0.23737118   0.566
-## factor(date)2026-01-18                -0.25150655  0.27494706  -0.915
-## factor(date)2026-01-19                -0.02089322  0.22880250  -0.091
-## factor(date)2026-01-20                -0.11865754  0.21122233  -0.562
-##                                                   Pr(&gt;|t|)    
-## (Intercept)                           &lt; 0.0000000000000002 ***
-## abs_slant                             &lt; 0.0000000000000002 ***
-## tone                                  &lt; 0.0000000000000002 ***
-## breaking                              &lt; 0.0000000000000002 ***
-## visuals                               &lt; 0.0000000000000002 ***
-## length_words                            0.0000010774414848 ***
-## factor(outlet)Axios                     0.0000679228794133 ***
-## factor(outlet)Breitbart               &lt; 0.0000000000000002 ***
-## factor(outlet)BuzzFeed News             0.0000000000006846 ***
-## factor(outlet)CNN                       0.0000000000000172 ***
-## factor(outlet)Fox News                &lt; 0.0000000000000002 ***
-## factor(outlet)HuffPost                  0.0000000000003072 ***
-## factor(outlet)MSNBC                     0.0000000000000152 ***
-## factor(outlet)New York Post           &lt; 0.0000000000000002 ***
-## factor(outlet)NPR                                 0.000184 ***
-## factor(outlet)Politico                  0.0000001299094473 ***
-## factor(outlet)Reuters                             0.464706    
-## factor(outlet)The Daily Beast           0.0000000000070635 ***
-## factor(outlet)The Daily Caller        &lt; 0.0000000000000002 ***
-## factor(outlet)The Guardian              0.0000000663369955 ***
-## factor(outlet)The New York Times        0.0000000000041911 ***
-## factor(outlet)The Wall Street Journal   0.0000000781229874 ***
-## factor(outlet)The Washington Post     &lt; 0.0000000000000002 ***
-## factor(outlet)USA Today                 0.0000000260226156 ***
-## factor(outlet)Vox                       0.0000010885861440 ***
-## factor(date)2025-08-02                            0.462983    
-## factor(date)2025-08-03                            0.198457    
-## factor(date)2025-08-04                            0.597516    
-## factor(date)2025-08-05                            0.613918    
-## factor(date)2025-08-06                            0.357787    
-## factor(date)2025-08-07                            0.965414    
-## factor(date)2025-08-08                            0.786841    
-## factor(date)2025-08-09                            0.910634    
-## factor(date)2025-08-10                            0.416803    
-## factor(date)2025-08-11                            0.410228    
-## factor(date)2025-08-12                            0.115498    
-## factor(date)2025-08-13                            0.355973    
-## factor(date)2025-08-14                            0.312583    
-## factor(date)2025-08-15                            0.667486    
-## factor(date)2025-08-16                            0.575632    
-## factor(date)2025-08-17                            0.477076    
-## factor(date)2025-08-18                            0.235128    
-## factor(date)2025-08-19                            0.969785    
-## factor(date)2025-08-20                            0.665540    
-## factor(date)2025-08-21                            0.950837    
-## factor(date)2025-08-22                            0.764437    
-## factor(date)2025-08-23                            0.695252    
-## factor(date)2025-08-24                            0.919706    
-## factor(date)2025-08-25                            0.407917    
-## factor(date)2025-08-26                            0.384768    
-## factor(date)2025-08-27                            0.269277    
-## factor(date)2025-08-28                            0.810498    
-## factor(date)2025-08-29                            0.608023    
-## factor(date)2025-08-30                            0.167868    
-## factor(date)2025-08-31                            0.460883    
-## factor(date)2025-09-01                            0.704266    
-## factor(date)2025-09-02                            0.580398    
-## factor(date)2025-09-03                            0.659595    
-## factor(date)2025-09-04                            0.895301    
-## factor(date)2025-09-05                            0.713503    
-## factor(date)2025-09-06                            0.358035    
-## factor(date)2025-09-07                            0.769202    
-## factor(date)2025-09-08                            0.600835    
-## factor(date)2025-09-09                            0.720810    
-## factor(date)2025-09-10                            0.567547    
-## factor(date)2025-09-11                            0.894216    
-## factor(date)2025-09-12                            0.740390    
-## factor(date)2025-09-13                            0.991579    
-## factor(date)2025-09-14                            0.322667    
-## factor(date)2025-09-15                            0.943065    
-## factor(date)2025-09-16                            0.991981    
-## factor(date)2025-09-17                            0.862945    
-## factor(date)2025-09-18                            0.369428    
-## factor(date)2025-09-19                            0.931299    
-## factor(date)2025-09-20                            0.718855    
-## factor(date)2025-09-21                            0.365240    
-## factor(date)2025-09-22                            0.920722    
-## factor(date)2025-09-23                            0.644565    
-## factor(date)2025-09-24                            0.793620    
-## factor(date)2025-09-25                            0.626004    
-## factor(date)2025-09-26                            0.174233    
-## factor(date)2025-09-27                            0.964186    
-## factor(date)2025-09-28                            0.537987    
-## factor(date)2025-09-29                            0.203413    
-## factor(date)2025-09-30                            0.850191    
-## factor(date)2025-10-01                            0.125900    
-## factor(date)2025-10-02                            0.762675    
-## factor(date)2025-10-03                            0.599660    
-## factor(date)2025-10-04                            0.569381    
-## factor(date)2025-10-05                            0.513200    
-## factor(date)2025-10-06                            0.610364    
-## factor(date)2025-10-07                            0.498864    
-## factor(date)2025-10-08                            0.332068    
-## factor(date)2025-10-09                            0.733099    
-## factor(date)2025-10-10                            0.099812 .  
-## factor(date)2025-10-11                            0.305015    
-## factor(date)2025-10-12                            0.638542    
-## factor(date)2025-10-13                            0.280324    
-## factor(date)2025-10-14                            0.963834    
-## factor(date)2025-10-15                            0.364760    
-## factor(date)2025-10-16                            0.666117    
-## factor(date)2025-10-17                            0.241528    
-## factor(date)2025-10-18                            0.445576    
-## factor(date)2025-10-19                            0.829869    
-## factor(date)2025-10-20                            0.577452    
-## factor(date)2025-10-21                            0.857698    
-## factor(date)2025-10-22                            0.291429    
-## factor(date)2025-10-23                            0.658503    
-## factor(date)2025-10-24                            0.477811    
-## factor(date)2025-10-25                            0.450368    
-## factor(date)2025-10-26                            0.960947    
-## factor(date)2025-10-27                            0.318780    
-## factor(date)2025-10-28                            0.616983    
-## factor(date)2025-10-29                            0.294745    
-## factor(date)2025-10-30                            0.797860    
-## factor(date)2025-10-31                            0.290736    
-## factor(date)2025-11-01                            0.360744    
-## factor(date)2025-11-02                            0.866425    
-## factor(date)2025-11-03                            0.741587    
-## factor(date)2025-11-04                            0.486614    
-## factor(date)2025-11-05                            0.648113    
-## factor(date)2025-11-06                            0.844277    
-## factor(date)2025-11-07                            0.819593    
-## factor(date)2025-11-08                            0.951095    
-## factor(date)2025-11-09                            0.401506    
-## factor(date)2025-11-10                            0.869815    
-## factor(date)2025-11-11                            0.627006    
-## factor(date)2025-11-12                            0.347406    
-## factor(date)2025-11-13                            0.967268    
-## factor(date)2025-11-14                            0.989706    
-## factor(date)2025-11-15                            0.344375    
-## factor(date)2025-11-16                            0.671334    
-## factor(date)2025-11-17                            0.829987    
-## factor(date)2025-11-18                            0.580685    
-## factor(date)2025-11-19                            0.348834    
-## factor(date)2025-11-20                            0.211747    
-## factor(date)2025-11-21                            0.914225    
-## factor(date)2025-11-22                            0.551474    
-## factor(date)2025-11-23                            0.998163    
-## factor(date)2025-11-24                            0.432463    
-## factor(date)2025-11-25                            0.270722    
-## factor(date)2025-11-26                            0.455252    
-## factor(date)2025-11-27                            0.400173    
-## factor(date)2025-11-28                            0.989772    
-## factor(date)2025-11-29                            0.642727    
-## factor(date)2025-11-30                            0.560930    
-## factor(date)2025-12-01                            0.534528    
-## factor(date)2025-12-02                            0.863430    
-## factor(date)2025-12-03                            0.327558    
-## factor(date)2025-12-04                            0.389579    
-## factor(date)2025-12-05                            0.560799    
-## factor(date)2025-12-06                            0.203704    
-## factor(date)2025-12-07                            0.872883    
-## factor(date)2025-12-08                            0.875786    
-## factor(date)2025-12-09                            0.933262    
-## factor(date)2025-12-10                            0.109439    
-## factor(date)2025-12-11                            0.192209    
-## factor(date)2025-12-12                            0.780275    
-## factor(date)2025-12-13                            0.835318    
-## factor(date)2025-12-14                            0.303244    
-## factor(date)2025-12-15                            0.918075    
-## factor(date)2025-12-16                            0.046116 *  
-## factor(date)2025-12-17                            0.484034    
-## factor(date)2025-12-18                            0.451527    
-## factor(date)2025-12-19                            0.358685    
-## factor(date)2025-12-20                            0.772832    
-## factor(date)2025-12-21                            0.873026    
-## factor(date)2025-12-22                            0.195107    
-## factor(date)2025-12-23                            0.782571    
-## factor(date)2025-12-24                            0.469686    
-## factor(date)2025-12-25                            0.915767    
-## factor(date)2025-12-26                            0.913089    
-## factor(date)2025-12-27                            0.190804    
-## factor(date)2025-12-28                            0.385837    
-## factor(date)2025-12-29                            0.583185    
-## factor(date)2025-12-30                            0.875985    
-## factor(date)2025-12-31                            0.073683 .  
-## factor(date)2026-01-01                            0.863951    
-## factor(date)2026-01-02                            0.996570    
-## factor(date)2026-01-03                            0.997871    
-## factor(date)2026-01-04                            0.046141 *  
-## factor(date)2026-01-05                            0.426856    
-## factor(date)2026-01-06                            0.754083    
-## factor(date)2026-01-07                            0.485332    
-## factor(date)2026-01-08                            0.459108    
-## factor(date)2026-01-09                            0.078639 .  
-## factor(date)2026-01-10                            0.938492    
-## factor(date)2026-01-11                            0.607308    
-## factor(date)2026-01-12                            0.878556    
-## factor(date)2026-01-13                            0.218356    
-## factor(date)2026-01-14                            0.930708    
-## factor(date)2026-01-15                            0.969981    
-## factor(date)2026-01-16                            0.807008    
-## factor(date)2026-01-17                            0.571319    
-## factor(date)2026-01-18                            0.360545    
-## factor(date)2026-01-19                            0.927260    
-## factor(date)2026-01-20                            0.574401    
-## ---
-## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
-## 
-## Residual standard error: 0.3729 on 1003 degrees of freedom
-## Multiple R-squared:  0.6692, Adjusted R-squared:  0.6046 
-## F-statistic: 10.35 on 196 and 1003 DF,  p-value: &lt; 0.00000000000000022</code></pre>
+<pre class="r"><code># YOUR CODE HERE</code></pre>
 <p>However, a more efficient way is to use the <code>plm</code> package,
 which is designed for panel data. Use the <code>plm()</code> function to
 estimate the fixed effects model, and name this model
 <code>fe1</code>.</p>
-<pre class="r"><code>fe1 &lt;- plm(engagement_index ~ abs_slant + tone + breaking + visuals + length_words,
-           data = df, model = &quot;within&quot;, index = c(&quot;outlet&quot;, &quot;date&quot;))
-summary(fe1)</code></pre>
-<pre><code>## Oneway (individual) effect Within Model
-## 
-## Call:
-## plm(formula = engagement_index ~ abs_slant + tone + breaking + 
-##     visuals + length_words, data = df, model = &quot;within&quot;, index = c(&quot;outlet&quot;, 
-##     &quot;date&quot;))
-## 
-## Unbalanced Panel: n = 20, T = 48-72, N = 1200
-## 
-## Residuals:
-##      Min.   1st Qu.    Median   3rd Qu.      Max. 
-## -1.181341 -0.252294 -0.016193  0.257438  1.214046 
-## 
-## Coefficients:
-##                  Estimate   Std. Error  t-value              Pr(&gt;|t|)    
-## abs_slant     0.661006276  0.060698977  10.8899 &lt; 0.00000000000000022 ***
-## tone         -0.595013389  0.031739997 -18.7465 &lt; 0.00000000000000022 ***
-## breaking      0.558066615  0.027246352  20.4823 &lt; 0.00000000000000022 ***
-## visuals       0.271771746  0.023289190  11.6694 &lt; 0.00000000000000022 ***
-## length_words  0.000305979  0.000058502   5.2302          0.0000002003 ***
-## ---
-## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
-## 
-## Total Sum of Squares:    328.24
-## Residual Sum of Squares: 170.32
-## R-Squared:      0.4811
-## Adj. R-Squared: 0.4705
-## F-statistic: 217.884 on 5 and 1175 DF, p-value: &lt; 0.000000000000000222</code></pre>
+<pre class="r"><code># YOUR CODE HERE</code></pre>
 <p>Questions to answer:</p>
 <ul>
 <li>What variation is used to estimate effects in fixed effects?</li>
@@ -2410,574 +717,69 @@ summary(fe1)</code></pre>
 <li>When would a reviewer prefer FE over a random-intercept multilevel
 model?</li>
 </ul>
-<p><strong>Answer:</strong></p>
-<ul>
-<li><strong>Identifying variation:</strong> FE uses within-outlet
-changes over time (outlet is compared to itself).<br />
-</li>
-<li><strong>Why variables shrink:</strong> predictors that vary mostly
-<em>between</em> outlets (not within) will weaken under FE models.</li>
-<li><strong>When reviewers prefer FE:</strong> when worried about
-unobserved outlet traits confounding slant/tone effects, FE is a
-conservative model.</li>
-</ul>
+<p>YOUR ANSWER HERE</p>
 </div>
-<div id="part-6-model-comparison-and-reporting" class="section level2" number="10">
-<h2><span class="header-section-number">10</span> Part 6: Model
-Comparison and Reporting</h2>
-<div id="task-6.1---create-a-regression-table" class="section level3" number="10.1">
-<h3><span class="header-section-number">10.1</span> Task 6.1 - Create a
-regression table</h3>
-<p>Using <code>modelsummary()</code> to create a table comparing at
-least three models:</p>
+<div id="part-7-model-comparison-and-reporting" class="section level2">
+<h2>Part 7: Model Comparison and Reporting</h2>
+<div id="task-7.1-create-a-regression-table" class="section level3">
+<h3>Task 7.1 — Create a regression table</h3>
+<p>You can easily use <code>modelsummary()</code> function from the
+<code>modelsummary</code> package to display regression models, for
+example <code>modelsummary(m2)</code>. The tutorial is here: <a href="https://modelsummary.com/vignettes/modelsummary.html" class="uri">https://modelsummary.com/vignettes/modelsummary.html</a> Now
+let’s make it a bit more complicated by comparing three models:</p>
 <ul>
 <li>OLS (m2)</li>
 <li>Multilevel (l1)</li>
 <li>Fixed effects (fe1)</li>
 </ul>
-<pre class="r"><code>models &lt;- list(
-  &quot;OLS (m2)&quot; = m2,
-  &quot;Multilevel (l1)&quot; = l1,
-  &quot;Fixed effects (fe1)&quot; = fe1
-)
-
-modelsummary(models)</code></pre>
-<!-- preamble start -->
-
-    <script>
-
-      function styleCell_od7orh08mhsxmtfnh6ua(i, j, css_id) {
-          var table = document.getElementById("tinytable_od7orh08mhsxmtfnh6ua");
-          var cell = table.querySelector(`[data-row="${i}"][data-col="${j}"]`);
-          if (cell) {
-              console.log(`Styling cell at (${i}, ${j}) with class ${css_id}`);
-              cell.classList.add(css_id);
-          } else {
-              console.warn(`Cell at (${i}, ${j}) not found.`);
-          }
-      }
-      function insertSpanRow(i, colspan, content) {
-        var table = document.getElementById('tinytable_od7orh08mhsxmtfnh6ua');
-        // Find the row with data-row attribute matching i
-        var targetRow = table.querySelector(`tr [data-row="${i}"]`).closest('tr');
-        var newRow = table.insertRow(targetRow.rowIndex);
-        var newCell = newRow.insertCell(0);
-        newCell.setAttribute("colspan", colspan);
-        newCell.setAttribute("data-col", "0");
-        newCell.setAttribute("data-row", i - 1);
-        // newCell.innerText = content;
-        // this may be unsafe, but innerText does not interpret <br>
-        newCell.innerHTML = content;
-      }
-      function spanCell_od7orh08mhsxmtfnh6ua(i, j, rowspan, colspan) {
-        var table = document.getElementById("tinytable_od7orh08mhsxmtfnh6ua");
-        const targetCell = table.querySelector(`[data-row="${i}"][data-col="${j}"]`);
-        if (!targetCell) {
-          console.warn(`Cell at (${i}, ${j}) not found.`);
-        }
-
-        // Get all cells that need to be removed
-        const cellsToRemove = [];
-        for (let r = 0; r < rowspan; r++) {
-          for (let c = 0; c < colspan; c++) {
-            if (r === 0 && c === 0) continue; // Skip the target cell
-            const cell = table.querySelector(`[data-row="${i + r}"][data-col="${j + c}"]`);
-            if (cell) {
-              cellsToRemove.push(cell);
-            }
-          }
-        }
-
-        // Remove all cells
-        cellsToRemove.forEach(cell => cell.remove());
-
-        // Set rowspan and colspan of the target cell if it exists
-        if (targetCell) {
-          targetCell.rowSpan = rowspan;
-          targetCell.colSpan = colspan;
-        }
-      }
-      // tinytable span after
-      window.addEventListener('load', function () {
-          var cellsToStyle = [
-            // tinytable style arrays after
-          { positions: [ { i: '25', j: 1 }, { i: '25', j: 2 }, { i: '25', j: 3 },  ], css_id: 'tinytable_css_llihcwzuoq8r8vyep45z',}, 
-          { positions: [ { i: '14', j: 1 }, { i: '14', j: 2 }, { i: '14', j: 3 },  ], css_id: 'tinytable_css_wue2z6ockf6rsft9xyor',}, 
-          { positions: [ { i: '3', j: 1 }, { i: '4', j: 1 }, { i: '1', j: 1 }, { i: '2', j: 1 }, { i: '7', j: 1 }, { i: '8', j: 1 }, { i: '5', j: 1 }, { i: '6', j: 1 }, { i: '11', j: 1 }, { i: '12', j: 1 }, { i: '9', j: 1 }, { i: '10', j: 1 }, { i: '15', j: 1 }, { i: '16', j: 1 }, { i: '17', j: 1 }, { i: '1', j: 2 }, { i: '19', j: 1 }, { i: '20', j: 1 }, { i: '21', j: 1 }, { i: '18', j: 1 }, { i: '23', j: 1 }, { i: '24', j: 1 }, { i: '12', j: 2 }, { i: '22', j: 1 }, { i: '1', j: 3 }, { i: '2', j: 2 }, { i: '3', j: 2 }, { i: '4', j: 2 }, { i: '5', j: 2 }, { i: '6', j: 2 }, { i: '7', j: 2 }, { i: '8', j: 2 }, { i: '9', j: 2 }, { i: '10', j: 2 }, { i: '11', j: 2 }, { i: '12', j: 3 }, { i: '13', j: 1 }, { i: '18', j: 2 }, { i: '15', j: 2 }, { i: '16', j: 2 }, { i: '17', j: 2 }, { i: '22', j: 2 }, { i: '19', j: 2 }, { i: '20', j: 2 }, { i: '21', j: 2 }, { i: '13', j: 2 }, { i: '23', j: 2 }, { i: '24', j: 2 }, { i: '3', j: 3 }, { i: '4', j: 3 }, { i: '5', j: 3 }, { i: '2', j: 3 }, { i: '7', j: 3 }, { i: '8', j: 3 }, { i: '9', j: 3 }, { i: '6', j: 3 }, { i: '11', j: 3 }, { i: '16', j: 3 }, { i: '13', j: 3 }, { i: '10', j: 3 }, { i: '15', j: 3 }, { i: '20', j: 3 }, { i: '17', j: 3 }, { i: '18', j: 3 }, { i: '19', j: 3 }, { i: '24', j: 3 }, { i: '21', j: 3 }, { i: '22', j: 3 }, { i: '23', j: 3 },  ], css_id: 'tinytable_css_6vl4qv873qix1ahemeea',}, 
-          { positions: [ { i: '0', j: 1 }, { i: '0', j: 2 }, { i: '0', j: 3 },  ], css_id: 'tinytable_css_79k204ddtwp7qpr6tj6i',}, 
-          { positions: [ { i: '25', j: 0 },  ], css_id: 'tinytable_css_1egaswb4bl8xkyafay3o',}, 
-          { positions: [ { i: '14', j: 0 },  ], css_id: 'tinytable_css_gki5cw3rym7rypvyxlem',}, 
-          { positions: [ { i: '1', j: 0 }, { i: '2', j: 0 }, { i: '3', j: 0 }, { i: '4', j: 0 }, { i: '5', j: 0 }, { i: '6', j: 0 }, { i: '7', j: 0 }, { i: '8', j: 0 }, { i: '9', j: 0 }, { i: '10', j: 0 }, { i: '11', j: 0 }, { i: '12', j: 0 }, { i: '13', j: 0 }, { i: '18', j: 0 }, { i: '15', j: 0 }, { i: '16', j: 0 }, { i: '17', j: 0 }, { i: '22', j: 0 }, { i: '19', j: 0 }, { i: '20', j: 0 }, { i: '21', j: 0 }, { i: '23', j: 0 }, { i: '24', j: 0 },  ], css_id: 'tinytable_css_asir4tutz2fo8es9771v',}, 
-          { positions: [ { i: '0', j: 0 },  ], css_id: 'tinytable_css_etyrus2g8jd8f8d55h54',}, 
-          ];
-
-          // Loop over the arrays to style the cells
-          cellsToStyle.forEach(function (group) {
-              group.positions.forEach(function (cell) {
-                  styleCell_od7orh08mhsxmtfnh6ua(cell.i, cell.j, group.css_id);
-              });
-          });
-      });
-    </script>
-
-    <style>
-
-.table td.tinytable_css_llihcwzuoq8r8vyep45z, .table th.tinytable_css_llihcwzuoq8r8vyep45z { text-align: center; border-bottom: solid #d3d8dc 0.1em; }
-.table td.tinytable_css_wue2z6ockf6rsft9xyor, .table th.tinytable_css_wue2z6ockf6rsft9xyor { text-align: center; border-bottom: solid black 0.05em; }
-.table td.tinytable_css_6vl4qv873qix1ahemeea, .table th.tinytable_css_6vl4qv873qix1ahemeea { text-align: center; }
-.table td.tinytable_css_79k204ddtwp7qpr6tj6i, .table th.tinytable_css_79k204ddtwp7qpr6tj6i { text-align: center; border-top: solid #d3d8dc 0.1em; border-bottom: solid #d3d8dc 0.05em; }
-.table td.tinytable_css_1egaswb4bl8xkyafay3o, .table th.tinytable_css_1egaswb4bl8xkyafay3o { text-align: left; border-bottom: solid #d3d8dc 0.1em; }
-.table td.tinytable_css_gki5cw3rym7rypvyxlem, .table th.tinytable_css_gki5cw3rym7rypvyxlem { text-align: left; border-bottom: solid black 0.05em; }
-.table td.tinytable_css_asir4tutz2fo8es9771v, .table th.tinytable_css_asir4tutz2fo8es9771v { text-align: left; }
-.table td.tinytable_css_etyrus2g8jd8f8d55h54, .table th.tinytable_css_etyrus2g8jd8f8d55h54 { text-align: left; border-top: solid #d3d8dc 0.1em; border-bottom: solid #d3d8dc 0.05em; }
-</style>
-    <div class="container">
-      <table class="table table-borderless" id="tinytable_od7orh08mhsxmtfnh6ua" style="width: auto; margin-left: auto; margin-right: auto;" data-quarto-disable-processing="true">
-        <thead>
-        
-              <tr>
-                <th scope="col" data-row="0" data-col="0"> </th>
-                <th scope="col" data-row="0" data-col="1">OLS (m2)</th>
-                <th scope="col" data-row="0" data-col="2">Multilevel (l1)</th>
-                <th scope="col" data-row="0" data-col="3">Fixed effects (fe1)</th>
-              </tr>
-        </thead>
-        
-        <tbody>
-                <tr>
-                  <td data-row="1" data-col="0">(Intercept)</td>
-                  <td data-row="1" data-col="1">4.118</td>
-                  <td data-row="1" data-col="2">4.187</td>
-                  <td data-row="1" data-col="3"></td>
-                </tr>
-                <tr>
-                  <td data-row="2" data-col="0"></td>
-                  <td data-row="2" data-col="1">(0.050)</td>
-                  <td data-row="2" data-col="2">(0.070)</td>
-                  <td data-row="2" data-col="3"></td>
-                </tr>
-                <tr>
-                  <td data-row="3" data-col="0">abs_slant</td>
-                  <td data-row="3" data-col="1">1.000</td>
-                  <td data-row="3" data-col="2">0.685</td>
-                  <td data-row="3" data-col="3">0.661</td>
-                </tr>
-                <tr>
-                  <td data-row="4" data-col="0"></td>
-                  <td data-row="4" data-col="1">(0.057)</td>
-                  <td data-row="4" data-col="2">(0.060)</td>
-                  <td data-row="4" data-col="3">(0.061)</td>
-                </tr>
-                <tr>
-                  <td data-row="5" data-col="0">tone</td>
-                  <td data-row="5" data-col="1">-0.590</td>
-                  <td data-row="5" data-col="2">-0.595</td>
-                  <td data-row="5" data-col="3">-0.595</td>
-                </tr>
-                <tr>
-                  <td data-row="6" data-col="0"></td>
-                  <td data-row="6" data-col="1">(0.036)</td>
-                  <td data-row="6" data-col="2">(0.032)</td>
-                  <td data-row="6" data-col="3">(0.032)</td>
-                </tr>
-                <tr>
-                  <td data-row="7" data-col="0">breaking</td>
-                  <td data-row="7" data-col="1">0.541</td>
-                  <td data-row="7" data-col="2">0.557</td>
-                  <td data-row="7" data-col="3">0.558</td>
-                </tr>
-                <tr>
-                  <td data-row="8" data-col="0"></td>
-                  <td data-row="8" data-col="1">(0.030)</td>
-                  <td data-row="8" data-col="2">(0.027)</td>
-                  <td data-row="8" data-col="3">(0.027)</td>
-                </tr>
-                <tr>
-                  <td data-row="9" data-col="0">visuals</td>
-                  <td data-row="9" data-col="1">0.337</td>
-                  <td data-row="9" data-col="2">0.276</td>
-                  <td data-row="9" data-col="3">0.272</td>
-                </tr>
-                <tr>
-                  <td data-row="10" data-col="0"></td>
-                  <td data-row="10" data-col="1">(0.026)</td>
-                  <td data-row="10" data-col="2">(0.023)</td>
-                  <td data-row="10" data-col="3">(0.023)</td>
-                </tr>
-                <tr>
-                  <td data-row="11" data-col="0">length_words</td>
-                  <td data-row="11" data-col="1">0.000</td>
-                  <td data-row="11" data-col="2">0.000</td>
-                  <td data-row="11" data-col="3">0.000</td>
-                </tr>
-                <tr>
-                  <td data-row="12" data-col="0"></td>
-                  <td data-row="12" data-col="1">(0.000)</td>
-                  <td data-row="12" data-col="2">(0.000)</td>
-                  <td data-row="12" data-col="3">(0.000)</td>
-                </tr>
-                <tr>
-                  <td data-row="13" data-col="0">SD (Intercept outlet)</td>
-                  <td data-row="13" data-col="1"></td>
-                  <td data-row="13" data-col="2">0.218</td>
-                  <td data-row="13" data-col="3"></td>
-                </tr>
-                <tr>
-                  <td data-row="14" data-col="0">SD (Observations)</td>
-                  <td data-row="14" data-col="1"></td>
-                  <td data-row="14" data-col="2">0.381</td>
-                  <td data-row="14" data-col="3"></td>
-                </tr>
-                <tr>
-                  <td data-row="15" data-col="0">Num.Obs.</td>
-                  <td data-row="15" data-col="1">1200</td>
-                  <td data-row="15" data-col="2">1200</td>
-                  <td data-row="15" data-col="3">1200</td>
-                </tr>
-                <tr>
-                  <td data-row="16" data-col="0">R2</td>
-                  <td data-row="16" data-col="1">0.479</td>
-                  <td data-row="16" data-col="2"></td>
-                  <td data-row="16" data-col="3">0.481</td>
-                </tr>
-                <tr>
-                  <td data-row="17" data-col="0">R2 Adj.</td>
-                  <td data-row="17" data-col="1">0.477</td>
-                  <td data-row="17" data-col="2"></td>
-                  <td data-row="17" data-col="3">0.471</td>
-                </tr>
-                <tr>
-                  <td data-row="18" data-col="0">R2 Marg.</td>
-                  <td data-row="18" data-col="1"></td>
-                  <td data-row="18" data-col="2">0.423</td>
-                  <td data-row="18" data-col="3"></td>
-                </tr>
-                <tr>
-                  <td data-row="19" data-col="0">R2 Cond.</td>
-                  <td data-row="19" data-col="1"></td>
-                  <td data-row="19" data-col="2">0.566</td>
-                  <td data-row="19" data-col="3"></td>
-                </tr>
-                <tr>
-                  <td data-row="20" data-col="0">AIC</td>
-                  <td data-row="20" data-col="1">1381.8</td>
-                  <td data-row="20" data-col="2">1200.3</td>
-                  <td data-row="20" data-col="3">1074.6</td>
-                </tr>
-                <tr>
-                  <td data-row="21" data-col="0">BIC</td>
-                  <td data-row="21" data-col="1">1417.4</td>
-                  <td data-row="21" data-col="2">1241.0</td>
-                  <td data-row="21" data-col="3">1105.1</td>
-                </tr>
-                <tr>
-                  <td data-row="22" data-col="0">ICC</td>
-                  <td data-row="22" data-col="1"></td>
-                  <td data-row="22" data-col="2">0.2</td>
-                  <td data-row="22" data-col="3"></td>
-                </tr>
-                <tr>
-                  <td data-row="23" data-col="0">Log.Lik.</td>
-                  <td data-row="23" data-col="1">-683.905</td>
-                  <td data-row="23" data-col="2"></td>
-                  <td data-row="23" data-col="3"></td>
-                </tr>
-                <tr>
-                  <td data-row="24" data-col="0">F</td>
-                  <td data-row="24" data-col="1">219.537</td>
-                  <td data-row="24" data-col="2"></td>
-                  <td data-row="24" data-col="3"></td>
-                </tr>
-                <tr>
-                  <td data-row="25" data-col="0">RMSE</td>
-                  <td data-row="25" data-col="1">0.43</td>
-                  <td data-row="25" data-col="2">0.38</td>
-                  <td data-row="25" data-col="3">0.38</td>
-                </tr>
-        </tbody>
-      </table>
-    </div>
-<!-- hack to avoid NA insertion in last line -->
+<pre class="r"><code># YOUR CODE HERE</code></pre>
 <p>Questions to answer:</p>
 <ul>
 <li>Which results are most stable across models?</li>
 <li>Which model do you think is most defensible for publication, and
 why?</li>
 </ul>
-<p><strong>Answers:</strong></p>
-<ul>
-<li><strong>Most stable results:</strong> Look for predictors that keep
-the same sign and remain non-trivial across OLS, multilevel, and FE.
-Overall, <code>tone</code> seems the most stable.</li>
-<li><strong>Most defensible model:</strong> FE is most conservative for
-causal-ish claims about within-outlet change; multilevel is best for
-generalization across outlets. In many papers, presenting both as
-robustness is strongest.</li>
-</ul>
+<p>YOUR ANSWER HERE</p>
 </div>
-<div id="task-6.2---clean-up-the-model-output" class="section level3" number="10.2">
-<h3><span class="header-section-number">10.2</span> Task 6.2 - Clean up
-the model output</h3>
+<div id="task-7.2-clean-up-the-model-output" class="section level3">
+<h3>Task 7.2 — Clean up the model output</h3>
 <p><code>modelsummary()</code> gave you many rows of output that are
 sometimes cluttered or hard to read. Also, it will show variable names
 as they appear in the dataset, which are not publication-ready.</p>
-<p>Clean up the output by:</p>
+<p>Step by step, clean up the output by:</p>
 <ul>
-<li>Renaming variables to more reader-friendly names (e.g., “Absolute
-Slant”, “Tone”, “Article Length”, “Breaking News”, “Visuals”)</li>
-<li>Removing unneeded rows (e.g., intercepts, random effects variance
-components, fixed effects dummies)</li>
-<li>Adding model fit statistics (e.g., AIC, BIC, R-squared)</li>
-<li>Adding a title and notes</li>
+<li>First, renaming variables to more reader-friendly names (e.g.,
+“Absolute Slant”, “Tone”, “Breaking News”, “Visuals”, “Article Length”)
+and removing unneeded rows (e.g., intercepts, random effects variance
+components) <a href="https://modelsummary.com/vignettes/modelsummary.html#coef_map" class="uri">https://modelsummary.com/vignettes/modelsummary.html#coef_map</a></li>
 </ul>
-<pre class="r"><code>modelsummary(models,
-             coef_map = c(
-               &quot;abs_slant&quot; = &quot;Absolute Slant&quot;,
-               &quot;tone&quot; = &quot;Tone&quot;,
-               &quot;breaking&quot; = &quot;Breaking News&quot;,
-               &quot;visuals&quot; = &quot;Visuals Present&quot;,
-               &quot;length_words&quot; = &quot;Article Length (words)&quot;),
-             statistic = &quot;({std.error})&quot;,
-             stars = TRUE,
-             title = &quot;Predicting Audience Engagement from Content and Production Features&quot;,
-             notes = c(&quot;Standard errors in parentheses; OLS = Linear Regression; Multilevel includes random outlet intercept; FE estimates within-outlet effects.&quot;),
-             gof_map = data.frame(
-               raw = c(&quot;nobs&quot;,&quot;r.squared&quot;,&quot;adj.r.squared&quot;),
-               clean = c(&quot;N&quot;,&quot;R-squared&quot;,&quot;Adj. R-squared&quot;),
-               fmt = c(0,3,3)
-               )
-             )</code></pre>
-<!-- preamble start -->
-
-    <script>
-
-      function styleCell_phyymytceq0f4ihcll1w(i, j, css_id) {
-          var table = document.getElementById("tinytable_phyymytceq0f4ihcll1w");
-          var cell = table.querySelector(`[data-row="${i}"][data-col="${j}"]`);
-          if (cell) {
-              console.log(`Styling cell at (${i}, ${j}) with class ${css_id}`);
-              cell.classList.add(css_id);
-          } else {
-              console.warn(`Cell at (${i}, ${j}) not found.`);
-          }
-      }
-      function insertSpanRow(i, colspan, content) {
-        var table = document.getElementById('tinytable_phyymytceq0f4ihcll1w');
-        // Find the row with data-row attribute matching i
-        var targetRow = table.querySelector(`tr [data-row="${i}"]`).closest('tr');
-        var newRow = table.insertRow(targetRow.rowIndex);
-        var newCell = newRow.insertCell(0);
-        newCell.setAttribute("colspan", colspan);
-        newCell.setAttribute("data-col", "0");
-        newCell.setAttribute("data-row", i - 1);
-        // newCell.innerText = content;
-        // this may be unsafe, but innerText does not interpret <br>
-        newCell.innerHTML = content;
-      }
-      function spanCell_phyymytceq0f4ihcll1w(i, j, rowspan, colspan) {
-        var table = document.getElementById("tinytable_phyymytceq0f4ihcll1w");
-        const targetCell = table.querySelector(`[data-row="${i}"][data-col="${j}"]`);
-        if (!targetCell) {
-          console.warn(`Cell at (${i}, ${j}) not found.`);
-        }
-
-        // Get all cells that need to be removed
-        const cellsToRemove = [];
-        for (let r = 0; r < rowspan; r++) {
-          for (let c = 0; c < colspan; c++) {
-            if (r === 0 && c === 0) continue; // Skip the target cell
-            const cell = table.querySelector(`[data-row="${i + r}"][data-col="${j + c}"]`);
-            if (cell) {
-              cellsToRemove.push(cell);
-            }
-          }
-        }
-
-        // Remove all cells
-        cellsToRemove.forEach(cell => cell.remove());
-
-        // Set rowspan and colspan of the target cell if it exists
-        if (targetCell) {
-          targetCell.rowSpan = rowspan;
-          targetCell.colSpan = colspan;
-        }
-      }
-      // tinytable span after
-      window.addEventListener('load', function () {
-          var cellsToStyle = [
-            // tinytable style arrays after
-          { positions: [ { i: '13', j: 1 }, { i: '13', j: 2 }, { i: '13', j: 3 },  ], css_id: 'tinytable_css_78qiv0qjadhjmiqpf8ca',}, 
-          { positions: [ { i: '10', j: 1 }, { i: '10', j: 2 }, { i: '10', j: 3 },  ], css_id: 'tinytable_css_4h3ry1cro6fdlgcqwo7l',}, 
-          { positions: [ { i: '3', j: 1 }, { i: '4', j: 1 }, { i: '5', j: 1 }, { i: '6', j: 1 }, { i: '7', j: 1 }, { i: '8', j: 1 }, { i: '9', j: 1 }, { i: '9', j: 2 }, { i: '11', j: 1 }, { i: '12', j: 1 }, { i: '12', j: 2 }, { i: '1', j: 1 }, { i: '2', j: 1 }, { i: '2', j: 2 }, { i: '3', j: 2 }, { i: '4', j: 2 }, { i: '5', j: 2 }, { i: '6', j: 2 }, { i: '7', j: 2 }, { i: '8', j: 2 }, { i: '8', j: 3 }, { i: '9', j: 3 }, { i: '11', j: 2 }, { i: '11', j: 3 }, { i: '12', j: 3 }, { i: '1', j: 2 }, { i: '1', j: 3 }, { i: '2', j: 3 }, { i: '3', j: 3 }, { i: '4', j: 3 }, { i: '5', j: 3 }, { i: '6', j: 3 }, { i: '7', j: 3 },  ], css_id: 'tinytable_css_ff5vyxpi8le9hgapdr4t',}, 
-          { positions: [ { i: '0', j: 1 }, { i: '0', j: 2 }, { i: '0', j: 3 },  ], css_id: 'tinytable_css_olkpnp0sjw2a71q0mrdp',}, 
-          { positions: [ { i: '13', j: 0 },  ], css_id: 'tinytable_css_aqa38x1mdkdo5ocdqvnm',}, 
-          { positions: [ { i: '10', j: 0 },  ], css_id: 'tinytable_css_pqlymt0nd3oxo5ob1jxd',}, 
-          { positions: [ { i: '1', j: 0 }, { i: '2', j: 0 }, { i: '3', j: 0 }, { i: '4', j: 0 }, { i: '5', j: 0 }, { i: '6', j: 0 }, { i: '7', j: 0 }, { i: '8', j: 0 }, { i: '9', j: 0 }, { i: '11', j: 0 }, { i: '12', j: 0 },  ], css_id: 'tinytable_css_rrqaoxnuvjdb8uvqmnnd',}, 
-          { positions: [ { i: '0', j: 0 },  ], css_id: 'tinytable_css_e7sr4vt69urd4xjnt7ss',}, 
-          ];
-
-          // Loop over the arrays to style the cells
-          cellsToStyle.forEach(function (group) {
-              group.positions.forEach(function (cell) {
-                  styleCell_phyymytceq0f4ihcll1w(cell.i, cell.j, group.css_id);
-              });
-          });
-      });
-    </script>
-
-    <style>
-
-.table td.tinytable_css_78qiv0qjadhjmiqpf8ca, .table th.tinytable_css_78qiv0qjadhjmiqpf8ca { text-align: center; border-bottom: solid #d3d8dc 0.1em; }
-.table td.tinytable_css_4h3ry1cro6fdlgcqwo7l, .table th.tinytable_css_4h3ry1cro6fdlgcqwo7l { text-align: center; border-bottom: solid black 0.05em; }
-.table td.tinytable_css_ff5vyxpi8le9hgapdr4t, .table th.tinytable_css_ff5vyxpi8le9hgapdr4t { text-align: center; }
-.table td.tinytable_css_olkpnp0sjw2a71q0mrdp, .table th.tinytable_css_olkpnp0sjw2a71q0mrdp { text-align: center; border-top: solid #d3d8dc 0.1em; border-bottom: solid #d3d8dc 0.05em; }
-.table td.tinytable_css_aqa38x1mdkdo5ocdqvnm, .table th.tinytable_css_aqa38x1mdkdo5ocdqvnm { text-align: left; border-bottom: solid #d3d8dc 0.1em; }
-.table td.tinytable_css_pqlymt0nd3oxo5ob1jxd, .table th.tinytable_css_pqlymt0nd3oxo5ob1jxd { text-align: left; border-bottom: solid black 0.05em; }
-.table td.tinytable_css_rrqaoxnuvjdb8uvqmnnd, .table th.tinytable_css_rrqaoxnuvjdb8uvqmnnd { text-align: left; }
-.table td.tinytable_css_e7sr4vt69urd4xjnt7ss, .table th.tinytable_css_e7sr4vt69urd4xjnt7ss { text-align: left; border-top: solid #d3d8dc 0.1em; border-bottom: solid #d3d8dc 0.05em; }
-</style>
-    <div class="container">
-      <table class="table table-borderless" id="tinytable_phyymytceq0f4ihcll1w" style="width: auto; margin-left: auto; margin-right: auto;" data-quarto-disable-processing="true">
-        <thead>
-        <caption>Predicting Audience Engagement from Content and Production Features</caption>
-              <tr>
-                <th scope="col" data-row="0" data-col="0"> </th>
-                <th scope="col" data-row="0" data-col="1">OLS (m2)</th>
-                <th scope="col" data-row="0" data-col="2">Multilevel (l1)</th>
-                <th scope="col" data-row="0" data-col="3">Fixed effects (fe1)</th>
-              </tr>
-        </thead>
-        <tfoot><tr><td colspan="4">+ p &lt; 0.1, * p &lt; 0.05, ** p &lt; 0.01, *** p &lt; 0.001</td></tr>
-<tr><td colspan="4">Standard errors in parentheses; OLS = Linear Regression; Multilevel includes random outlet intercept; FE estimates within-outlet effects.</td></tr></tfoot>
-        <tbody>
-                <tr>
-                  <td data-row="1" data-col="0">Absolute Slant</td>
-                  <td data-row="1" data-col="1">1.000***</td>
-                  <td data-row="1" data-col="2">0.685***</td>
-                  <td data-row="1" data-col="3">0.661***</td>
-                </tr>
-                <tr>
-                  <td data-row="2" data-col="0"></td>
-                  <td data-row="2" data-col="1">(0.057)</td>
-                  <td data-row="2" data-col="2">(0.060)</td>
-                  <td data-row="2" data-col="3">(0.061)</td>
-                </tr>
-                <tr>
-                  <td data-row="3" data-col="0">Tone</td>
-                  <td data-row="3" data-col="1">-0.590***</td>
-                  <td data-row="3" data-col="2">-0.595***</td>
-                  <td data-row="3" data-col="3">-0.595***</td>
-                </tr>
-                <tr>
-                  <td data-row="4" data-col="0"></td>
-                  <td data-row="4" data-col="1">(0.036)</td>
-                  <td data-row="4" data-col="2">(0.032)</td>
-                  <td data-row="4" data-col="3">(0.032)</td>
-                </tr>
-                <tr>
-                  <td data-row="5" data-col="0">Breaking News</td>
-                  <td data-row="5" data-col="1">0.541***</td>
-                  <td data-row="5" data-col="2">0.557***</td>
-                  <td data-row="5" data-col="3">0.558***</td>
-                </tr>
-                <tr>
-                  <td data-row="6" data-col="0"></td>
-                  <td data-row="6" data-col="1">(0.030)</td>
-                  <td data-row="6" data-col="2">(0.027)</td>
-                  <td data-row="6" data-col="3">(0.027)</td>
-                </tr>
-                <tr>
-                  <td data-row="7" data-col="0">Visuals Present</td>
-                  <td data-row="7" data-col="1">0.337***</td>
-                  <td data-row="7" data-col="2">0.276***</td>
-                  <td data-row="7" data-col="3">0.272***</td>
-                </tr>
-                <tr>
-                  <td data-row="8" data-col="0"></td>
-                  <td data-row="8" data-col="1">(0.026)</td>
-                  <td data-row="8" data-col="2">(0.023)</td>
-                  <td data-row="8" data-col="3">(0.023)</td>
-                </tr>
-                <tr>
-                  <td data-row="9" data-col="0">Article Length (words)</td>
-                  <td data-row="9" data-col="1">0.000***</td>
-                  <td data-row="9" data-col="2">0.000***</td>
-                  <td data-row="9" data-col="3">0.000***</td>
-                </tr>
-                <tr>
-                  <td data-row="10" data-col="0"></td>
-                  <td data-row="10" data-col="1">(0.000)</td>
-                  <td data-row="10" data-col="2">(0.000)</td>
-                  <td data-row="10" data-col="3">(0.000)</td>
-                </tr>
-                <tr>
-                  <td data-row="11" data-col="0">N</td>
-                  <td data-row="11" data-col="1">1200</td>
-                  <td data-row="11" data-col="2">1200</td>
-                  <td data-row="11" data-col="3">1200</td>
-                </tr>
-                <tr>
-                  <td data-row="12" data-col="0">R-squared</td>
-                  <td data-row="12" data-col="1">0.479</td>
-                  <td data-row="12" data-col="2"></td>
-                  <td data-row="12" data-col="3">0.481</td>
-                </tr>
-                <tr>
-                  <td data-row="13" data-col="0">Adj. R-squared</td>
-                  <td data-row="13" data-col="1">0.477</td>
-                  <td data-row="13" data-col="2"></td>
-                  <td data-row="13" data-col="3">0.471</td>
-                </tr>
-        </tbody>
-      </table>
-    </div>
-<!-- hack to avoid NA insertion in last line -->
+<pre class="r"><code># YOUR CODE HERE</code></pre>
+<ul>
+<li>Second, copy paste your code above, then add a few lines to only
+keep the three major model fit statistics (e.g., AIC, BIC, R-squared) <a href="https://modelsummary.com/vignettes/modelsummary.html#gof_map" class="uri">https://modelsummary.com/vignettes/modelsummary.html#gof_map</a></li>
+</ul>
+<pre class="r"><code># YOUR CODE HERE</code></pre>
+<ul>
+<li>Third, copy paste your code above, then add a line to add
+significance stars to the output (e.g., those “*** p&lt;.001” stars) <a href="https://modelsummary.com/vignettes/modelsummary.html#stars" class="uri">https://modelsummary.com/vignettes/modelsummary.html#stars</a></li>
+</ul>
+<pre class="r"><code># YOUR CODE HERE</code></pre>
+<ul>
+<li>Fourth, copy paste your code above, then add a line to add a title
+<Predicting Audience Engagement from Content and Production Features>
+and a few notes: <Standard errors in parentheses>, &lt;OLS = Linear
+regression&gt;, <Multilevel includes random outlet intercept>, and
+<FE estimates within-outlet effects> <a href="https://modelsummary.com/vignettes/modelsummary.html#notes" class="uri">https://modelsummary.com/vignettes/modelsummary.html#notes</a></li>
+</ul>
+<pre class="r"><code># YOUR CODE HERE</code></pre>
 </div>
-<div id="task-6.3---save-the-table" class="section level3" number="10.3">
-<h3><span class="header-section-number">10.3</span> Task 6.3 - Save the
-table</h3>
+<div id="task-7.3-save-the-table" class="section level3">
+<h3>Task 7.3 — Save the table</h3>
 <p><code>modelsummary()</code> gave you many ways to save the table.
-Save your cleaned-up table as a .docx or .html file for easy sharing.
-Use <code>beepr::beep()</code> at the end to notify you when it’s
-done.</p>
-<pre class="r"><code># Save as HTML (easy to view/share)
-modelsummary(models,
-             coef_map = c(
-               &quot;abs_slant&quot; = &quot;Absolute Slant&quot;,
-               &quot;tone&quot; = &quot;Tone&quot;,
-               &quot;breaking&quot; = &quot;Breaking News&quot;,
-               &quot;visuals&quot; = &quot;Visuals Present&quot;,
-               &quot;length_words&quot; = &quot;Article Length (words)&quot;),
-             statistic = &quot;({std.error})&quot;,
-             stars = TRUE,
-             title = &quot;Predicting Audience Engagement from Content and Production Features&quot;,
-             notes = c(&quot;Standard errors in parentheses; OLS = Linear Regression; Multilevel includes random outlet intercept; FE estimates within-outlet effects.&quot;),
-             gof_map = data.frame(
-               raw = c(&quot;nobs&quot;,&quot;r.squared&quot;,&quot;adj.r.squared&quot;),
-               clean = c(&quot;N&quot;,&quot;R-squared&quot;,&quot;Adj. R-squared&quot;),
-               fmt = c(0,3,3)
-               ),
-             output = &quot;3_problem_set_output.html&quot;)
-# Save as docx (easy to copy paste)
-# might need to additionally install/load &quot;pandoc&quot; package for .docx output
-library(&quot;pandoc&quot;)
-modelsummary(models,
-             coef_map = c(
-               &quot;abs_slant&quot; = &quot;Absolute Slant&quot;,
-               &quot;tone&quot; = &quot;Tone&quot;,
-               &quot;breaking&quot; = &quot;Breaking News&quot;,
-               &quot;visuals&quot; = &quot;Visuals Present&quot;,
-               &quot;length_words&quot; = &quot;Article Length (words)&quot;),
-             statistic = &quot;({std.error})&quot;,
-             stars = TRUE,
-             title = &quot;Predicting Audience Engagement from Content and Production Features&quot;,
-             notes = c(&quot;Standard errors in parentheses; OLS = Linear Regression; Multilevel includes random outlet intercept; FE estimates within-outlet effects.&quot;),
-             gof_map = data.frame(
-               raw = c(&quot;nobs&quot;,&quot;r.squared&quot;,&quot;adj.r.squared&quot;),
-               clean = c(&quot;N&quot;,&quot;R-squared&quot;,&quot;Adj. R-squared&quot;),
-               fmt = c(0,3,3)),
-             output = &quot;3_problem_set_output.docx&quot;)
-beep() # beep at end (comment out if annoying)</code></pre>
+Save your cleaned-up table as a .docx or .html file for easy sharing <a href="https://modelsummary.com/vignettes/modelsummary.html#output" class="uri">https://modelsummary.com/vignettes/modelsummary.html#output</a>.
+Use <code>beepr::beep()</code> at the end to notify you when it’s done
+<a href="https://cran.r-project.org/web/packages/beepr/readme/README.html" class="uri">https://cran.r-project.org/web/packages/beepr/readme/README.html</a></p>
+<pre class="r"><code># YOUR CODE HERE</code></pre>
 </div>
 </div>
 

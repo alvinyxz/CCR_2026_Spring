@@ -1,0 +1,240 @@
+---
+title: "JOUR8500 Week02 R Markdown Demo Problem Set"
+author: "Alvin Zhou"
+date: "`r Sys.Date()`"
+output:
+  html_document:
+    toc: true
+    toc_depth: 3
+    number_sections: false
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+  echo = TRUE,
+  message = FALSE,
+  warning = FALSE
+)
+```
+
+## Overview
+
+Before we touch R Markdown, we need to understand Markdown itself. Markdown is a **plain-text** writing format that lets you control structure, such as headings, emphasis, lists, links, without using Word, Google Docs, or LaTeX. Think of it as: **Word formatting, but with the formatting instructions typed explicitly in text**. R Markdown simply adds R code on top of Markdown.
+
+## Step 1: Try Markdown in Your Browser (No R Required)
+
+Go to: <https://markdowntohtml.com/>
+
+You will see:
+
+- A left panel where you type Markdown
+- A right panel that shows the formatted output instantly
+
+Copy-paste the following text as-is into the left panel:
+
+````markdown
+# Audience Engagement and News Coverage
+
+This paragraph describes a **research question** about news media.
+
+We are interested in whether *negative tone* and *political slant* increase audience engagement.
+
+## Key Concepts
+
+- Political slant
+- Emotional tone
+- Breaking news
+- Visuals
+
+## Hypotheses
+
+1. More negative articles will receive more engagement.
+2. More politically extreme articles will receive more engagement.
+3. Breaking news articles will receive more engagement than non-breaking articles.
+
+For more information, see [Journal of Communication](https://academic.oup.com/joc).
+````
+
+Look at the right panel, and you will see how magical Markdown is :) Read through the instructions on <https://markdowntohtml.com/> more closely and remember all the formatting options you can use.
+
+For this course, we really only need five things to get started:
+
+| What You Want | What You Type |
+|--------------|---------------|
+| Section heading | `# Heading` |
+| Subsection | `## Subheading` |
+| Bold | `**bold**` |
+| Italics | `*italics*` |
+| Bullet list | `- item` |
+| Numbered list | `1. item` |
+| Link | `[text](url)` |
+
+## Step 2: R Markdown
+
+R Markdown is just Markdown + R code blocks. If you can write Markdown, you are already halfway there.
+
+A typical R Markdown document is:
+
+- Narrative text (Markdown, i.e., what you just tried)
+- Code (R)
+- Output (tables, figures, results) --- the output will show up when you "knit" the document.
+
+Follow the next few steps to recreate what you just did in your browser, but this time inside **RStudio**, using an R Markdown document.
+
+1. Open RStudio.
+2. Go to **File → New File → R Markdown…**
+3. Choose:
+   - Title: anything you want
+   - Author: your name
+   - Output format: **HTML**
+4. Click **OK**.
+
+RStudio will create a new `.Rmd` file with example content.
+
+### Step 2.1: Replace the text (but keep the code chunks)
+
+Delete **all the narrative text**, but **do not delete the R code chunks** (the parts surrounded by ```).
+
+Then paste the following Markdown **outside of any code chunk**:
+
+````markdown
+# Audience Engagement and News Coverage
+
+This paragraph describes a **research question** about news media.
+
+We are interested in whether *negative tone* and *political slant* increase audience engagement.
+
+## Key Concepts
+
+- Political slant
+- Emotional tone
+- Breaking news
+- Visuals
+
+## Hypotheses
+
+1. More negative articles will receive more engagement.
+2. More politically extreme articles will receive more engagement.
+3. Breaking news articles will receive more engagement than non-breaking articles.
+
+For more information, see [Journal of Communication](https://academic.oup.com/joc).
+````
+
+### Step 2.2: Knit the document
+
+Click the "Knit" button. You should see:
+
+- Your Markdown text rendered as a formatted document
+- No R code output yet (that comes next)
+- In your folder, there should be a new `.html` file that you can open in your browser
+
+### Step 2.3: What an R Code Chunk Is
+
+So far, you have only written Markdown text. Now we will add R code to the document. In R Markdown, R code always lives inside **code chunks**.
+
+A code chunk has:
+- a **start line**: ` ```{r} `
+- an **end line**: ` ``` `
+
+Everything in between is R code.
+
+Key rules:
+
+- Anything inside the chunk is R code
+- Anything outside the chunk is regular Markdown text
+
+### Step 2.4: Your First R Code Chunk
+
+Scroll to the first code chunk RStudio created for you. Inside that chunk (between ` ```{r} ` and ` ``` `), replace the code with:
+
+````markdown
+1 + 1
+````
+
+Now click **Knit** again. You should see the number `2` printed in the output.
+
+### Step 2.5: Controlling What Shows Up (Advanced)
+
+Sometimes you want:
+
+- to show code,  
+- sometimes to hide code,  
+- sometimes to hide output.
+
+This is controlled by chunk options. Chunk options are written in the chunk header, after `r`, separated by commas.
+
+For example, at the "1+1" code chunk, modify its header line so that it includes 
+`echo = FALSE`. The chunk should:
+
+- start with: ` ```{r, echo = FALSE} `
+- end with: ` ``` `
+- in the middle, it is still 1+1
+
+Knit again, and you will see the result (`2`) but **not** the code. This is useful when writing papers or reports.
+
+Common options you’ll use:
+
+| Option | What It Does |
+|------|-------------|
+| `echo=TRUE` | show code |
+| `echo=FALSE` | hide code |
+| `message=FALSE` | hide messages |
+| `warning=FALSE` | hide warnings |
+
+### Step 2.6: A Realistic Example
+
+Now let’s do something closer to real analysis.
+
+Add a new code chunk below your text and paste the following R code trunk
+
+[Minor Note: to add a new code chunk, you can type in "```" yourself, or, you can use the "+c" button to the top right of your editing window, or, use keyboard shortcut Ctrl + Alt + I (Windows) / Cmd + Option + I (Mac)]
+
+Remember, the following code trunk should be precededed by ` ```{r} ` and followed by ` ``` `.
+
+````markdown
+# Create a small example dataset
+x <- c(1, 2, 3, 4, 5)
+
+# Compute summary statistics
+mean(x)
+sd(x)
+````
+
+Knit again. You should see the mean and the standard deviation.
+
+# Appendix: Recommended "Top of the Document" Settings
+
+At the very top of every `.Rmd` file in this course, I recommend something like this:
+
+```yaml
+---
+title: "Your Title"
+author: "Your Name"
+date: "`r Sys.Date()`"
+output:
+  html_document:
+    toc: true
+    toc_depth: 3
+    number_sections: false
+---
+```
+
+And immediately after that, a **setup chunk** starting with ```{r setup, include=FALSE}``` and then:
+
+````markdown
+knitr::opts_chunk$set(
+  echo = TRUE,
+  message = FALSE,
+  warning = FALSE
+)
+````
+
+What this does:
+
+- Shows code by default
+- Hides annoying messages and warnings
+- Keeps output clean and readable
+
+You can always override these settings inside individual chunks later.
+
+In the [class repository](https://z.umn.edu/J8500), you should find a file named `Example.Rmd` that already has these settings at the top. You can use that as a template for your own R Markdown documents in this course.

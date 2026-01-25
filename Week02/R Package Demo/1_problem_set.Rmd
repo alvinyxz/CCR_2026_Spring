@@ -1,12 +1,12 @@
 ---
-title: "JOUR8500 Week02 Demo Problem Set"
+title: "JOUR8500 Week02 R Package Demo Problem Set"
 author: "Alvin Zhou"
 date: "`r Sys.Date()`"
 output:
   html_document:
     toc: true
-    toc_depth: 2
-    number_sections: true
+    toc_depth: 3
+    number_sections: false
 ---
 
 ```{r setup, include=FALSE}
@@ -66,15 +66,15 @@ These are questions you could plausibly see in various top communication journal
 - `engagement_index`: proprietary engagement measure (continuous)
 - `high_engagement`: binary indicator (1 = top 30% of engagement)
 
-## Part 0: Setup
+## Part 1: Setup
 
 When coding, even if packages are invoked later, it's good practice to load all packages at the start of your script.
 
 If you have not yet installed the necessary packages, you should use install.packages() to install them first. Then load the packages using library().
 
-The packages we will use include: `skimr`, `lme4`, `lmerTest`, `plm`, `beepr`, and `modelsummary`. Google them, see their documentation, and get familiar with their functions. We will also use `glm`, which is a base R function for generalized linear models, so you do not need to install a separate package for it.
+The packages we will use include: `skimr`, `lme4`, `lmerTest`, `plm`, `beepr`, and `modelsummary`. Google them, see their documentation, and get familiar with their functions. We will also use `glm`, which is a base R function for generalized linear models, so you do not need to install a separate package for it. Write the code to load those libraries:
 
-```r
+```{r}
 # YOUR CODE HERE
 ```
 
@@ -89,13 +89,13 @@ Use plain language to describe what each package/function is used for in practic
 - `beepr`: YOUR ANSWER HERE
 - `modelsummary`: YOUR ANSWER HERE
 
-## Part 1: Data Inspection and Descriptives
+## Part 2: Data Inspection and Descriptives
 
-### Task 1.1 — Load and inspect the data
+### Task 2.1 — Load and inspect the data
 
-First load the dataset:
+First load the dataset `1_media_engagement.csv`:
 
-```r
+```{r}
 # YOUR CODE HERE
 ```
 
@@ -107,11 +107,13 @@ Answer the following with code and one sentence each:
 
 Hint: Use `dim()`, `names()`, `str()`, `head()`.
 
-```r
+```{r}
 # YOUR CODE HERE
 ```
 
-### Task 1.2 — Descriptive statistics
+YOUR ANSWER HERE
+
+### Task 2.2 — Descriptive statistics
 
 Produce descriptive statistics for the key variables below:
 
@@ -122,7 +124,7 @@ Produce descriptive statistics for the key variables below:
 - `slant`
 - `length_words`
 
-You may use base R (`summary()`) or `skimr::skim()`. Questions to answer:
+You may use base R function (`summary()`) or the`skim()` function from the `skimr` package. Questions to answer:
 
 - How many unique topics and frame types are there?
 - How are topic and frame_type distributed?
@@ -131,29 +133,29 @@ You may use base R (`summary()`) or `skimr::skim()`. Questions to answer:
 - Are most articles neutral, positive, or negative in tone?
 - How polarized is the distribution of slant?
 
-```r
+```{r}
 # YOUR CODE HERE
 ```
 
 YOUR ANSWER HERE
 
-### Task 1.3 — Outlet differences
+### Task 2.3 — Outlet differences
 
 Compute mean engagement by outlet and identify the top 5 and bottom 5 outlets. Question to answer:
 
 - Do outlet differences look large enough to justify multilevel or fixed-effects modeling?
 
-```r
+```{r}
 # YOUR CODE HERE
 ```
 
 YOUR ANSWER HERE
 
-## Part 2: Slant, Tone, and Engagement
+## Part 3: Slant, Tone, and Engagement
 
-### Task 2.1 — Predicting engagement from content features
+### Task 3.1 — Predicting engagement from content features
 
-Estimate a linear regression predicting engagement using three content features (`slant`, `tone`, and `length`):
+Estimate a linear regression predicting engagement (`engagement_index`) using three content features (`slant`, `tone`, and `length`):
 
 \[
 \text{engagement} = f(\text{slant}, \text{tone}, \text{length})
@@ -166,13 +168,13 @@ Questions to answer:
 - How substantively large are these effects?
 - If we consider slant as "absolute distance from neutral" (i.e., |slant|), how should we revise the model and does ideological extremity predict engagement? Name this model `m1`.
 
-```r
+```{r}
 # YOUR CODE HERE
 ```
 
 YOUR ANSWER HERE
 
-### Task 2.2 — Add breaking news and visuals
+### Task 3.2 — Add breaking news and visuals
 
 Going forward, let's use absolute slant (|slant|) as our slant measure.
 
@@ -183,19 +185,19 @@ Name this model `m2`. Questions to answer:
 - Do breaking news and visuals predict engagement?
 - Do they change the slant/tone coefficients? Why might that happen?
 
-```r
+```{r}
 # YOUR CODE HERE
 ```
 
 YOUR ANSWER HERE
 
-### Task 2.3 — Interpretation
+### Task 3.3 — Interpretation
 
 Pretend you are writing the results section using this dataset. Write a short paragraph (3-5 sentences) summarizing the key findings from tasks above, including coefficient estimates and substantive interpretations.
 
 YOUR ANSWER HERE
 
-### Task 2.4 Robustness checks
+### Task 3.4 — Robustness checks
 
 Re-run your main model using:
 
@@ -203,7 +205,7 @@ Re-run your main model using:
 - Excluding tabloid and partisan outlets
 - Only political topics (e.g., Politics, Elections, Immigration) and also excluding tabloid and partisan outlets
 
-```r
+```{r}
 # YOUR CODE HERE
 ```
 
@@ -213,7 +215,7 @@ YOUR ANSWER HERE
 
 What if the reviewer asks you to use the log of the sum of engagement indicators as the dependent variable instead of the proprietary score? Re-run your main model using log() as the DV. Does that change your conclusions? (also remember, be careful about zero values when using log; you can use log1p() to handle zeros).
 
-```r
+```{r}
 # YOUR CODE HERE
 ```
 
@@ -221,11 +223,11 @@ Questions to answer: Are the substantive conclusions robust across this operatio
 
 YOUR ANSWER HERE
 
-## Part 3: Binary Outcomes and Logistic Regression
+## Part 4: Binary Outcomes and Logistic Regression
 
 If audience engagement is operationalized as high vs. low attention, how should we proceed?
 
-### Task 3.1 — Logistic regression
+### Task 4.1 — Logistic regression
 
 Use `high_engagement` as a binary dependent variable, estimate a logistic regression predicting `high_engagement` using three content features (`slant`, `tone`, and `length`) plus breaking news and visuals:
 
@@ -234,13 +236,13 @@ Name this model `g1`. Questions to answer:
 - Which predictors increase the probability of high engagement?
 - How does interpretation differ from OLS?
 
-```r
+```{r}
 # YOUR CODE HERE
 ```
 
 YOUR ANSWER HERE
 
-### Task 3.2 — Predicted probabilities
+### Task 4.2 — Predicted probabilities
 
 Compute predicted probabilities for two cases:
 
@@ -251,19 +253,19 @@ Question to answer:
 
 - How big is the substantive difference in predicted probability?
 
-```r
+```{r}
 # YOUR CODE HERE
 ```
 
 YOUR ANSWER HERE
 
-## Part 4: Outlet-Level Differences (Multilevel)
+## Part 5: Outlet-Level Differences (Multilevel)
 
 Articles are not independent. They are produced by outlets, and some outlets systematically generate more engagement than others. We can account for this nested structure using multilevel models.
 
 Estimate a multilevel model, with the same variables used above, with articles nested within outlets. Name this model `l1`.
 
-```r
+```{r}
 # YOUR CODE HERE
 ```
 
@@ -275,7 +277,7 @@ Questions to answer:
 
 YOUR ANSWER HERE
 
-## Part 5: Panel Logic (Fixed Effects)
+## Part 6: Panel Logic (Fixed Effects)
 
 Another way to handle outlet differences is to compare outlets to themselves over time.
 
@@ -283,13 +285,13 @@ Estimate a fixed-effects model with two fixed effects (outlet and date as fixed 
 
 You can use the `lm()` function with `factor()` to create fixed effects:
 
-```r
+```{r}
 # YOUR CODE HERE
 ```
 
 However, a more efficient way is to use the `plm` package, which is designed for panel data. Use the `plm()` function to estimate the fixed effects model, and name this model `fe1`.
 
-```r
+```{r}
 # YOUR CODE HERE
 ```
 
@@ -301,17 +303,17 @@ Questions to answer:
 
 YOUR ANSWER HERE
 
-## Part 6: Model Comparison and Reporting
+## Part 7: Model Comparison and Reporting
 
-### Task 6.1 — Create a regression table
+### Task 7.1 — Create a regression table
 
-Using `modelsummary()` to create a table comparing at least three models:
+You can easily use `modelsummary()` function from the `modelsummary` package to display regression models, for example `modelsummary(m2)`. The tutorial is here: <https://modelsummary.com/vignettes/modelsummary.html> Now let's make it a bit more complicated by comparing three models:
 
 - OLS (m2)
 - Multilevel (l1)
 - Fixed effects (fe1)
 
-```r
+```{r}
 # YOUR CODE HERE
 ```
 
@@ -322,25 +324,40 @@ Questions to answer:
 
 YOUR ANSWER HERE
 
-### Task 6.2 — Clean up the model output
+### Task 7.2 — Clean up the model output
 
 `modelsummary()` gave you many rows of output that are sometimes cluttered or hard to read. Also, it will show variable names as they appear in the dataset, which are not publication-ready.
 
-Clean up the output by:
+Step by step, clean up the output by:
 
-- Renaming variables to more reader-friendly names (e.g., "Absolute Slant", "Tone", "Article Length", "Breaking News", "Visuals")
-- Removing unneeded rows (e.g., intercepts, random effects variance components, fixed effects dummies)
-- Adding model fit statistics (e.g., AIC, BIC, R-squared)
-- Adding a title and notes
+- First, renaming variables to more reader-friendly names (e.g., "Absolute Slant", "Tone", "Breaking News", "Visuals", "Article Length") and removing unneeded rows (e.g., intercepts, random effects variance components) <https://modelsummary.com/vignettes/modelsummary.html#coef_map>
 
-```r
+```{r}
 # YOUR CODE HERE
 ```
 
-### Task 6.3 — Save the table
+- Second, copy paste your code above, then add a few lines to only keep the three major model fit statistics (e.g., AIC, BIC, R-squared) <https://modelsummary.com/vignettes/modelsummary.html#gof_map>
 
-`modelsummary()` gave you many ways to save the table. Save your cleaned-up table as a .docx or .html file for easy sharing. Use `beepr::beep()` at the end to notify you when it's done.
+```{r}
+# YOUR CODE HERE
+```
 
-```r
+- Third, copy paste your code above, then add a line to add significance stars to the output (e.g., those "*** p<.001" stars) <https://modelsummary.com/vignettes/modelsummary.html#stars>
+
+```{r}
+# YOUR CODE HERE
+```
+
+- Fourth, copy paste your code above, then add a line to add a title <Predicting Audience Engagement from Content and Production Features> and a few notes: <Standard errors in parentheses>, <OLS = Linear regression>, <Multilevel includes random outlet intercept>, and <FE estimates within-outlet effects> <https://modelsummary.com/vignettes/modelsummary.html#notes>
+
+```{r}
+# YOUR CODE HERE
+```
+
+### Task 7.3 — Save the table
+
+`modelsummary()` gave you many ways to save the table. Save your cleaned-up table as a .docx or .html file for easy sharing <https://modelsummary.com/vignettes/modelsummary.html#output>. Use `beepr::beep()` at the end to notify you when it's done <https://cran.r-project.org/web/packages/beepr/readme/README.html>
+
+```{r}
 # YOUR CODE HERE
 ```

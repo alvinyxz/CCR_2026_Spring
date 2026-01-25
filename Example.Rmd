@@ -1,0 +1,55 @@
+---
+title: "JOUR8500 WeekXX Demo Problem Set"
+author: "YOUR NAME"
+date: "`r Sys.Date()`"
+output:
+  html_document:
+    toc: true
+    toc_depth: 3
+    number_sections: false
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+  echo = TRUE,
+  message = FALSE,
+  warning = FALSE
+)
+```
+
+## Step 1 - Audience Engagement and News Coverage
+
+This paragraph describes a **research question** about news media.
+
+We are interested in whether *negative tone* and *political slant* increase audience engagement.
+
+- Political slant
+- Emotional tone
+- Breaking news
+- Visuals
+
+Our hypotheses are:
+
+1. More negative articles will receive more engagement.
+2. More politically extreme articles will receive more engagement.
+3. Breaking news articles will receive more engagement than non-breaking articles.
+
+For more information, see [Journal of Communication](https://academic.oup.com/joc).
+
+R code should look like this:
+
+```{r}
+1 + 1
+```
+
+You should click **Knit** and then upload both .Rmd and the resulting .html file to Canvas. Also, you can "Knit" to PDF if you prefer that format.
+
+## Step 2 - XXX
+
+Type your code here:
+
+```{r}
+# YOUR CODE HERE
+```
+
+YOUR ANSWER HERE
