@@ -253,8 +253,8 @@ Final grades will be assigned according to the University of Minnesota Letter Gr
    - Lu, X., Das, D., Huh, J., & Srivastava, J. (2022). Influence of consumers’ temporary affect on ad engagement: A computational research approach. *Journal of Advertising, 51*(3), 352–368. <https://doi.org/10.1080/00913367.2021.1977202>
 
 3. Computational Toolkit Demo
-   - lm, glm, lme4, lmerTest, plm, skim, beepr [Alvin Zhou]
-   - modelsummary, stargazer, R Markdown [Alvin Zhou]
+   - lm, glm, lme4, lmerTest, plm [Alvin Zhou]
+   - skim, beepr, modelsummary, R Markdown [Alvin Zhou]
 
 4. Optional Readings
    - Grinberg, N., Joseph, K., Friedland, L., Swire-Thompson, B., & Lazer, D. (2019). Fake news on Twitter during the 2016 U.S. presidential election. *Science, 363*(6425), 374–378. <https://doi.org/10.1126/science.aau2706>

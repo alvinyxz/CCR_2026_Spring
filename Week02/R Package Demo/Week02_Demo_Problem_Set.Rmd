@@ -25,7 +25,7 @@ This problem set introduces a basic, but realistic, computational workflow commo
 2. Translate familiar communication-theory intuitions into statistical models
 3. Get comfortable running, inspecting, and interpreting models in R
 
-The dataset, `1_media_engagement.csv`, is an **article-level dataset** where each row represents a news article published by a major media outlet. The dataset includes information about framing, tone, political slant, production features (e.g., visuals, breaking news), and audience engagement.
+The dataset, `Week02_media_engagement.csv`, is an **article-level dataset** where each row represents a news article published by a major media outlet. The dataset includes information about framing, tone, political slant, production features (e.g., visuals, breaking news), and audience engagement.
 
 ## Research Context
 
@@ -93,7 +93,7 @@ Use plain language to describe what each package/function is used for in practic
 
 ### Task 2.1 — Load and inspect the data
 
-First load the dataset `1_media_engagement.csv`:
+First load the dataset `Week02_media_engagement.csv`:
 
 ```{r}
 # YOUR CODE HERE
