@@ -75,7 +75,8 @@ If you have not yet installed the necessary packages, you should use install.pac
 The packages we will use include: `skimr`, `lme4`, `lmerTest`, `plm`, `beepr`, and `modelsummary`. Google them, see their documentation, and get familiar with their functions. We will also use `glm`, which is a base R function for generalized linear models, so you do not need to install a separate package for it. Write the code to load those libraries:
 
 ```{r}
-# YOUR CODE HERE
+library(skimr)
+library(lme4)
 ```
 
 Use plain language to describe what each package/function is used for in practical communication research workflows:
