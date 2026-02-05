@@ -1,0 +1,147 @@
+---
+title: "JOUR8500 Week03 qualtRics Package Demo Problem Set (in class)"
+author: "Carolina Aguiar, Isabel Garlough-Shah, Ruiheng Sun"
+date: "`r Sys.Date()`"
+output:
+  html_document:
+    toc: true
+    toc_depth: 3
+    number_sections: false
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+  echo = TRUE,
+  message = FALSE,
+  warning = FALSE
+)
+```
+
+# Overview
+
+
+This problem set introduces a basic run down of installing the `qualtRics` package, how to use API keys in Qualtrics, importing data directly from Qualtrics to R, and practice filtering data.
+
+
+# Step 1 Installing and loading qualtRics
+
+The packages we will use include:
+- `qualtRics`: for retrieve a data set from Qualtrics
+- `tidyverse`, `dplyr`, `tidyr`,`psych`: for data selection
+
+Steps:
+
+1. Install them using `install.packages()`
+
+2. Load them into your library using `library()`
+
+```{r}
+library(qualtRics)
+library(tidyverse)
+library(dplyr)
+library(tidyr)
+library(psych)
+```
+
+# Step 2 Import data
+
+To import data directly from Qualtrics into R, we first need to register the **Qualtrics API credentials** with the qualtRics R package so that R can securely communicate with the Qualtrics account. 
+
+Steps:
+First use the code `qualtrics_api_credentials()` and then in the brackets fill in the code `api_key =`. 
+
+After the equal sign, fill in the API key "Iq3etyjeqW28MpNq9AkPbl02xqLa50ALfmmzrygf".
+
+To find your personal API key navigate to Account settings, scroll down to the API header and click the `Generate Token` button
+
+
+After inputting the API key, in the next line of code you will use the code `base_url =` and fill in "yul1.qualtrics.com". To find your personal base url navigate to Account settings, scroll down to the User header, and locate Datacenter ID. Here you will see a 2-3 letter and number code (e.g., az1, co1, eu1). From here your base URL will be in the format: "[2-3 letter and number code].qualtrics.com"
+
+
+In the next line of code input `install = TRUE` and in the line after that input `overwrite = TRUE` and end the bracket. In the final line of code input `surveys <- all_surveys()` to load all the surveys.
+
+Use `?fetch_survey()` to find the code template.
+
+```{r}
+# qualtrics_api_credentials()
+```
+
+
+Finally, to import the survey data into R, use the `fetch_survey()` function. Inside the function use the `surveyID` argument to search the `surveys$id[which(surveys$name=="NameofSurvery"`. Fill in the name of the survey "AI CAN HELP_Study2_Main". This line of code extracts this specific survey from `surveys` object (generated earlier with `all_surveys()`) and the survey's unique ID. 
+
+
+In the next 5 lines you will add additional arguments to control for how the data is downloaded: `verbose = TRUE` shows a progress bar during the download, `force_request = TRUE` ensures a fresh pull from Qualtrics rather than cached data, `include_display_order = FALSE` removes question order metadata, `label = FALSE` keeps the original Qualtrics variable names, and `convert = FALSE` imports the data in its raw format. Finally create an object at the beginning of this code entitled `data_main` to label the data set. 
+
+
+For the next lines of code follow these same steps, but input the `For R - The Role of Generative AI in Overcoming Ideological Bias in News Consumption - Copy` for the survey name. Additionally create an object at the beginning of this code entitled `data_embedded` to label the data set. 
+
+```{r}
+# data_main <- fetch_survey()
+
+# data_embedded <- fetch_survey()
+```
+
+# Step 3 Filter data
+
+After connecting with Qualtrics dataset, we are able to explore some features.
+
+For example, we want to filter out participants based on time.
+
+### Check time zone
+
+First, we need check which time zone is attached to the StartDate column in the dataset, using`attr(x, which)`
+
+- x means the column you want to select: `data_main$StartDate`
+- which is the name of the specific piece of information you want to extract: `"tzone"` (you need the double quotation marks)
+- If the result shows `"America/Chicago"`, you are correct!
+
+Also, check `?attr()` for more information
+
+```{r}
+# attr()
+```
+
+### Filter out participants based on your criteria
+
+Next, we filter out participants who start after Oct 12th, 2024, 10am.
+
+- Use `data_main[data_main$StartDate, ]` to select subset data
+- After `data_main$StartDate`, use `as.POSIXct(x, tz = ""),` to compare the time zone
+
+Also, check `?as.POSIXct()` for more information
+
+```{r}
+# data_start <- data_main[]
+```
+
+We also want to include participants who finish
+
+- Use column `Progress` and it should be 100
+
+```{r}
+# data_progress <- data_main[]
+```
+
+We want to see how many participants see FOX in the column `Stimuli_AA`
+
+```{r}
+# data_AA <- data_main[]
+```
+
+Keep only the ro where the `prolific_id` value is present (not missing)
+
+- Use `is.na()` for missing values
+
+```{r}
+# data_prolific_id <- data_main[]
+```
+
+### Other notes
+
+- Change the Qualtrics question name so that the variable name in R is easy to understand.
+- Use "_" instead of a space in a variable name.
+- Recode values on Qualtrics.
+
+
+

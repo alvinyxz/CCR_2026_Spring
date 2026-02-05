@@ -9,11 +9,11 @@
 <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
-<meta name="author" content="Alvin Zhou" />
+<meta name="author" content="Quin &amp; Namuun" />
 
-<meta name="date" content="2026-01-30" />
+<meta name="date" content="2026-02-02" />
 
-<title>JOUR8500 Week02 R Markdown Demo Problem Set</title>
+<title>JOUR 8500 Tidyverse Demo</title>
 
 <script>// Pandoc 2.9 adds attributes on both header and div. We remove the former (to
 // be compatible with the behavior of Pandoc < 2.8).
@@ -350,309 +350,294 @@ display: none;
 
 
 
-<h1 class="title toc-ignore">JOUR8500 Week02 R Markdown Demo Problem
-Set</h1>
-<h4 class="author">Alvin Zhou</h4>
-<h4 class="date">2026-01-30</h4>
+<h1 class="title toc-ignore">JOUR 8500 Tidyverse Demo</h1>
+<h4 class="author">Quin &amp; Namuun</h4>
+<h4 class="date">2026-02-02</h4>
 
 </div>
 
-<div id="TOC">
+
+<div id="install-and-load-package-libraries-easily-with-librarian" class="section level1">
+<h1>Install and load package libraries easily with {librarian}</h1>
+<p>While not a part of the {tidyverse} suite of R packages, librarian is
+very useful for sharing code (with new packages) easily with others in
+your scripts.</p>
+<p>Our setup here will use librarian instead of the traditional
+library() list. We can avoid having to install multiple packages at once
+this way. You’ll get a popup at the top of your RStudio that asks if you
+want to install missing packages listed in the shelf() command.</p>
+</div>
+<div id="about-tidyverse" class="section level1">
+<h1>About Tidyverse</h1>
+<p>The official documentation website is here: <a href="https://tidyverse.org/packages/" class="uri">https://tidyverse.org/packages/</a></p>
+<p>Tidyverse isn’t just one package, but includes a total of 9 packages.
+Each has a reference page linked which describe all of the different
+functions included!</p>
 <ul>
-<li><a href="#overview" id="toc-overview">Overview</a></li>
-<li><a href="#step-1-try-markdown-in-your-browser-no-r-required" id="toc-step-1-try-markdown-in-your-browser-no-r-required">Step 1: Try
-Markdown in Your Browser (No R Required)</a></li>
-<li><a href="#step-2-r-markdown" id="toc-step-2-r-markdown">Step 2: R
-Markdown</a>
-<ul>
-<li><a href="#step-2.1-replace-the-text-but-keep-the-code-chunks" id="toc-step-2.1-replace-the-text-but-keep-the-code-chunks">Step 2.1:
-Replace the text (but keep the code chunks)</a></li>
-<li><a href="#step-2.2-knit-the-document" id="toc-step-2.2-knit-the-document">Step 2.2: Knit the document</a></li>
-<li><a href="#step-2.3-what-an-r-code-chunk-is" id="toc-step-2.3-what-an-r-code-chunk-is">Step 2.3: What an R Code Chunk
-Is</a></li>
-<li><a href="#step-2.4-your-first-r-code-chunk" id="toc-step-2.4-your-first-r-code-chunk">Step 2.4: Your First R Code
-Chunk</a></li>
-<li><a href="#step-2.5-controlling-what-shows-up-advanced" id="toc-step-2.5-controlling-what-shows-up-advanced">Step 2.5:
-Controlling What Shows Up (Advanced)</a></li>
-<li><a href="#step-2.6-a-realistic-example" id="toc-step-2.6-a-realistic-example">Step 2.6: A Realistic
-Example</a></li>
-</ul></li>
-<li><a href="#appendix-recommended-top-of-the-document-settings" id="toc-appendix-recommended-top-of-the-document-settings">Appendix:
-Recommended “Top of the Document” Settings</a></li>
+<li>dplyr: <a href="https://dplyr.tidyverse.org/reference/index.html" class="uri">https://dplyr.tidyverse.org/reference/index.html</a> better
+grammar and piping for data manipulation.</li>
+<li>tidyr: <a href="https://tidyr.tidyverse.org/reference/index.html" class="uri">https://tidyr.tidyverse.org/reference/index.html</a>
+functions for tidying data, like pivoting and splitting columns into new
+ones.</li>
+<li>readr: <a href="https://readr.tidyverse.org/reference/index.html" class="uri">https://readr.tidyverse.org/reference/index.html</a>
+functions for reading in matrices like .csv files. To read in other file
+types like .xlsx or .dta (from Stata), you’ll need separate packages for
+those.</li>
+<li>stringr: <a href="https://stringr.tidyverse.org/reference/index.html" class="uri">https://stringr.tidyverse.org/reference/index.html</a>
+functions for parsing strings and extracting information from cells
+similar to LOOKUPS in Excel or other SQL/data management systems.</li>
+<li>forcats: <a href="https://forcats.tidyverse.org/reference/index.html" class="uri">https://forcats.tidyverse.org/reference/index.html</a>
+functions for working with categorical or factor variables.</li>
+<li>lubridate: <a href="https://lubridate.tidyverse.org/reference/index.html" class="uri">https://lubridate.tidyverse.org/reference/index.html</a>
+functions for working with dates and times.</li>
+<li>the tibble, purrr and ggplot2 packages also automatically load with
+library(tidyverse), but those will be covered by others in class
+(especially ggplot2)</li>
 </ul>
 </div>
-
-<div id="overview" class="section level2">
-<h2>Overview</h2>
-<p>Before we touch R Markdown, we need to understand Markdown itself.
-Markdown is a <strong>plain-text</strong> writing format that lets you
-control structure, such as headings, emphasis, lists, links, without
-using Word, Google Docs, or LaTeX. Think of it as: <strong>Word
-formatting, but with the formatting instructions typed explicitly in
-text</strong>. R Markdown simply adds R code on top of Markdown.</p>
-</div>
-<div id="step-1-try-markdown-in-your-browser-no-r-required" class="section level2">
-<h2>Step 1: Try Markdown in Your Browser (No R Required)</h2>
-<p>Go to: <a href="https://markdowntohtml.com/" class="uri">https://markdowntohtml.com/</a></p>
-<p>You will see:</p>
+<div id="data-piping-structure" class="section level1">
+<h1>Data &amp; Piping Structure</h1>
 <ul>
-<li>A left panel where you type Markdown</li>
-<li>A right panel that shows the formatted output instantly</li>
+<li>We’ll reuse the data from Week 2 (Week02_media_engagement.csv)</li>
+<li>There are differences in how tidyverse uses piping compared to base
+R (which uses |&gt;).</li>
+<li>Since R version 4.4.0(?) the native pipe operator works with all
+packages. HOWEVER, tidyverse code often uses “%&gt;%” for its
+piping.</li>
 </ul>
-<p>Copy-paste the following text as-is into the left panel:</p>
-<pre class="markdown"><code># Audience Engagement and News Coverage
-
-This paragraph describes a **research question** about news media.
-
-We are interested in whether *negative tone* and *political slant* increase audience engagement.
-
-## Key Concepts
-
-- Political slant
-- Emotional tone
-- Breaking news
-- Visuals
-
-## Hypotheses
-
-1. More negative articles will receive more engagement.
-2. More politically extreme articles will receive more engagement.
-3. Breaking news articles will receive more engagement than non-breaking articles.
-
-For more information, see [Journal of Communication](https://academic.oup.com/joc).</code></pre>
-<p>Look at the right panel, and you will see how magical Markdown is :)
-Read through the instructions on <a href="https://markdowntohtml.com/" class="uri">https://markdowntohtml.com/</a> more closely and remember
-all the formatting options you can use.</p>
-<p>For this course, we really only need five things to get started:</p>
-<table>
-<thead>
-<tr class="header">
-<th>What You Want</th>
-<th>What You Type</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Section heading</td>
-<td><code># Heading</code></td>
-</tr>
-<tr class="even">
-<td>Subsection</td>
-<td><code>## Subheading</code></td>
-</tr>
-<tr class="odd">
-<td>Bold</td>
-<td><code>**bold**</code></td>
-</tr>
-<tr class="even">
-<td>Italics</td>
-<td><code>*italics*</code></td>
-</tr>
-<tr class="odd">
-<td>Bullet list</td>
-<td><code>- item</code></td>
-</tr>
-<tr class="even">
-<td>Numbered list</td>
-<td><code>1. item</code></td>
-</tr>
-<tr class="odd">
-<td>Link</td>
-<td><code>[text](url)</code></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div id="step-2-r-markdown" class="section level2">
-<h2>Step 2: R Markdown</h2>
-<p>R Markdown is just Markdown + R code blocks. If you can write
-Markdown, you are already halfway there.</p>
-<p>A typical R Markdown document is:</p>
+<div id="dplyr-viewing-data-with-the-tidy-piping-structure" class="section level2">
+<h2>dplyr: Viewing data with the tidy piping structure</h2>
+<p>dplyr has four main command functions that help us view and clean our
+data:</p>
 <ul>
-<li>Narrative text (Markdown, i.e., what you just tried)</li>
-<li>Code (R)</li>
-<li>Output (tables, figures, results) — the output will show up when you
-“knit” the document.</li>
+<li>select()</li>
+<li>filter()</li>
+<li>arrange()</li>
+<li>group_by()</li>
 </ul>
-<p>Follow the next few steps to recreate what you just did in your
-browser, but this time inside <strong>RStudio</strong>, using an R
-Markdown document.</p>
+<p>And two commands that help us transform our data into new variables
+or summarize into new data.frames:</p>
+<ul>
+<li><p>mutate()</p></li>
+<li><p>summarize(), or summarise()</p></li>
+<li><p><em>NOTE:</em> mutate() and summarize() are similar, but
+different: mutate() adds new columns to the dataset. summarize() will
+collapse down your data to smaller tables which are typically better for
+plotting and understanding your data.</p></li>
+</ul>
+<p>Let’s say we want to view our data by topic. So we should cut out
+some of the variables we aren’t interested in or don’t need. - group_by
+is prioritized, so we group first - then select columns we want to
+include in our tibble with select:</p>
+<pre class="r"><code>#first call our data.frame:
+media1 &lt;- media %&gt;%
+  group_by(topic) %&gt;%
+  select(topic, date, outlet, outlet_type, frame_type, tone, slant,
+         breaking, visuals, length_words)
+
+media1</code></pre>
+<pre><code>## # A tibble: 1,200 × 10
+## # Groups:   topic [10]
+##    topic      date  outlet outlet_type frame_type   tone  slant breaking visuals
+##    &lt;chr&gt;      &lt;chr&gt; &lt;chr&gt;  &lt;chr&gt;       &lt;chr&gt;       &lt;dbl&gt;  &lt;dbl&gt;    &lt;int&gt;   &lt;int&gt;
+##  1 Climate    2025… USA T… legacy_mai… Strategy/… -0.149 -0.145        0       0
+##  2 Foreign P… 2025… Polit… digital_po… Human Int…  0.429 -0.07         1       1
+##  3 Education  2025… The D… digital_po… Human Int… -0.497  0.04         0       1
+##  4 Elections  2025… BuzzF… digital_vi… Economic … -0.245 -0.061        0       1
+##  5 Foreign P… 2025… Breit… partisan_r… Conflict    0.54   1            0       1
+##  6 Economy    2025… New Y… tabloid     Responsib…  0.026  0.366        0       0
+##  7 Climate    2025… Axios  digital_po… Thematic   -0.501 -0.053        0       1
+##  8 Health     2025… The D… partisan_r… Economic …  0.208  0.61         0       1
+##  9 Health     2025… NPR    public_med… Morality   -0.447 -0.289        0       1
+## 10 Elections  2025… The D… digital_po… Thematic   -0.161  0.015        0       0
+## # ℹ 1,190 more rows
+## # ℹ 1 more variable: length_words &lt;int&gt;</code></pre>
+</div>
+</div>
+<div id="problem-1-with-dplyr" class="section level1">
+<h1>Problem 1 (with dplyr):</h1>
+<div id="wrangling-data-summarizing" class="section level2">
+<h2>Wrangling data &amp; summarizing</h2>
+<ul>
+<li>Summarize the mean length_words by topic among legacy_mainstream
+outlet types, and arrange them in descending order (highest mean to
+smallest).</li>
+</ul>
+</div>
+<div id="requirements" class="section level2">
+<h2>Requirements:</h2>
+<ul>
+<li>Use filter(), group_by(), summarize() (or summarise()), and
+arrange()</li>
+<li>Name the output column mean_words</li>
+</ul>
+<pre class="r"><code># Create an object called media_e1
+# Start from media1
+# Filter to legacy_mainstream
+# Group by topic
+# Summarize mean length_words as mean_words
+# Arrange descending by mean_words
+
+# YOUR CODE HERE</code></pre>
+</div>
+</div>
+<div id="problem-2-with-forcats" class="section level1">
+<h1>Problem 2 (with forcats):</h1>
+<div id="categorical-variables-factoring" class="section level2">
+<h2>Categorical variables &amp; factoring</h2>
+<ul>
+<li>forcats is great for handling categorical variables and
+relabeling/releveling (especially for plotting them properly).</li>
+<li>all forcats functions usually have a fct_*() structure.</li>
+</ul>
+<p>Task: Create a new variable breaking_cha that converts breaking into
+“Yes” and “No”. Hint: Use factor() and fct_recode().</p>
+</div>
+<div id="requirements-1" class="section level2">
+<h2>Requirements:</h2>
+<ul>
+<li>breaking_cha must be a factor</li>
+<li>Recode “0” -&gt; “No” and “1” -&gt; “Yes”</li>
+<li>Show your result with a select() that includes breaking_cha,
+breaking, and a few context columns</li>
+</ul>
+<pre class="r"><code># Create an object called media2a
+# Start from media1
+# Create breaking_cha using factor() + fct_recode() in mutate function
+# Select breaking_cha, topic, date, outlet, outlet_type, frame_type, tone, slant, breaking, visuals, length_words
+
+# YOUR CODE HERE</code></pre>
+<p>You can also collapse variables into more broad categories with
+fct_collapse():</p>
+<p>Here is an example of collapsing some of the topic variable into
+broader categories:</p>
+</div>
+</div>
+<div id="problem-3-with-stringr" class="section level1">
+<h1>Problem 3 (with stringr):</h1>
+<div id="extracting-parts-of-an-observations-text" class="section level2">
+<h2>Extracting parts of an observation’s text</h2>
+<ul>
+<li>str_detect() is the most useful function from stringr (in my
+opinion), since it doesn’t require implementing regular expressions to
+work well.</li>
+</ul>
+<p>Let’s say we want to look only at our digital outlet_types,
+regardless of what they cover (digital_politics, digital_viral, and
+digital_explainer).</p>
+<ul>
+<li>We can filter() from dplyr with str_detect() to look only at the
+outlet_types that contain “digital” observations into a new column:</li>
+</ul>
+<p><strong>Task A:</strong> Filter the dataset to keep only rows where
+outlet_type contains “digital”.</p>
+<p><strong>Task B:</strong> Create a new variable outlet_medium:</p>
+<p>“digital” if outlet_type contains “digital”</p>
+<p>“other” otherwise</p>
+</div>
+<div id="requirements-2" class="section level2">
+<h2>Requirements:</h2>
+<ul>
+<li>Use str_detect()</li>
+<li>Use filter()</li>
+<li>Use mutate() + case_when()</li>
+</ul>
+<p>Select and print: outlet_medium, outlet_type, topic, outlet, slant,
+length_words</p>
+<pre class="r"><code># Task A
+# Create an object called media2a
+# Start from media1
+# Filter to outlet_type values that contain &quot;digital&quot;
+
+# YOUR CODE HERE</code></pre>
+<ul>
+<li>and also create new categorical (or dummy) variables with mutate()
+and case_when() from dplyr, using str_detect().</li>
+<li>case_when() operates like your classic “if/else statement” in other
+coding or data wrangling programs.</li>
+</ul>
+<pre class="r"><code># Task B
+# Create an object called media3b
+# Start from media1
+# Create outlet_medium using case_when() + str_detect()
+# Select requested columns or variables
+
+# YOUR CODE HERE</code></pre>
+</div>
+</div>
+<div id="problem-4-with-lubridate" class="section level1">
+<h1>Problem 4 (with lubridate):</h1>
+<div id="parsing-dates-and-times-and-pivoting-to-new-columns" class="section level2">
+<h2>Parsing dates and times and pivoting to new columns</h2>
+<p>Let’s say we want to be able to look at longitudinal patterns in the
+data aggregated by month and year (if we had multiple years in this
+data). Well, as it stand with the media data.frame, we only have the
+date column…which is in YYYY-MM-DD (ymd) format.</p>
+<ul>
+<li>We can combine forcats and lubridate so R easily recognizes the date
+structure, and pulls out what we need to relevel the new variable.</li>
+<li>we can also use fct_relevel() to set the order in which the months
+should appear in figures, or tibbles with arrange().</li>
+</ul>
+</div>
+<div id="create-a-dataset-that" class="section level2">
+<h2>Create a dataset that:</h2>
 <ol style="list-style-type: decimal">
-<li>Open RStudio.</li>
-<li>Go to <strong>File → New File → R Markdown…</strong></li>
-<li>Choose:
-<ul>
-<li>Title: anything you want</li>
-<li>Author: your name</li>
-<li>Output format: <strong>HTML</strong></li>
-</ul></li>
-<li>Click <strong>OK</strong>.</li>
+<li>Creates a month label from date</li>
+<li>Orders months Jan–Dec</li>
+<li>Groups by month and topic</li>
+<li>Creates topic_count = n()</li>
+<li>Selects: month, topic, topic_count, outlet, outlet_type, frame_type,
+tone, slant, breaking, visuals, length_words</li>
+<li>Arranges by month</li>
 </ol>
-<p>RStudio will create a new <code>.Rmd</code> file with example
-content.</p>
-<div id="step-2.1-replace-the-text-but-keep-the-code-chunks" class="section level3">
-<h3>Step 2.1: Replace the text (but keep the code chunks)</h3>
-<p>Delete <strong>all the narrative text</strong>, but <strong>do not
-delete the R code chunks</strong> (the parts surrounded by ```).</p>
-<p>Then paste the following Markdown <strong>outside of any code
-chunk</strong>:</p>
-<pre class="markdown"><code># Audience Engagement and News Coverage
-
-This paragraph describes a **research question** about news media.
-
-We are interested in whether *negative tone* and *political slant* increase audience engagement.
-
-## Key Concepts
-
-- Political slant
-- Emotional tone
-- Breaking news
-- Visuals
-
-## Hypotheses
-
-1. More negative articles will receive more engagement.
-2. More politically extreme articles will receive more engagement.
-3. Breaking news articles will receive more engagement than non-breaking articles.
-
-For more information, see [Journal of Communication](https://academic.oup.com/joc).</code></pre>
 </div>
-<div id="step-2.2-knit-the-document" class="section level3">
-<h3>Step 2.2: Knit the document</h3>
-<p>Click the “Knit” button. You should see:</p>
+<div id="requirements-3" class="section level2">
+<h2>Requirements:</h2>
 <ul>
-<li>Your Markdown text rendered as a formatted document</li>
-<li>No R code output yet (that comes next)</li>
-<li>In your folder, there should be a new <code>.html</code> file that
-you can open in your browser</li>
+<li>Use ymd()</li>
+<li>Use month(…, label = TRUE)</li>
+<li>Use fct_relevel() with the month order: Jan, Feb, Mar, …, Dec</li>
 </ul>
-</div>
-<div id="step-2.3-what-an-r-code-chunk-is" class="section level3">
-<h3>Step 2.3: What an R Code Chunk Is</h3>
-<p>So far, you have only written Markdown text. Now we will add R code
-to the document. In R Markdown, R code always lives inside <strong>code
-chunks</strong>.</p>
-<p>A code chunk has: - a <strong>start line</strong>:
-<code>```{r}</code> - an <strong>end line</strong>: <code>```</code></p>
-<p>Everything in between is R code.</p>
-<p>Key rules:</p>
-<ul>
-<li>Anything inside the chunk is R code</li>
-<li>Anything outside the chunk is regular Markdown text</li>
-</ul>
-</div>
-<div id="step-2.4-your-first-r-code-chunk" class="section level3">
-<h3>Step 2.4: Your First R Code Chunk</h3>
-<p>Scroll to the first code chunk RStudio created for you. Inside that
-chunk (between <code>```{r}</code> and <code>```</code>), replace the
-code with:</p>
-<pre class="markdown"><code>1 + 1</code></pre>
-<p>Now click <strong>Knit</strong> again. You should see the number
-<code>2</code> printed in the output.</p>
-</div>
-<div id="step-2.5-controlling-what-shows-up-advanced" class="section level3">
-<h3>Step 2.5: Controlling What Shows Up (Advanced)</h3>
-<p>Sometimes you want:</p>
-<ul>
-<li>to show code,<br />
-</li>
-<li>sometimes to hide code,<br />
-</li>
-<li>sometimes to hide output.</li>
-</ul>
-<p>This is controlled by chunk options. Chunk options are written in the
-chunk header, after <code>r</code>, separated by commas.</p>
-<p>For example, at the “1+1” code chunk, modify its header line so that
-it includes <code>echo = FALSE</code>. The chunk should:</p>
-<ul>
-<li>start with: <code>```{r, echo = FALSE}</code></li>
-<li>end with: <code>```</code></li>
-<li>in the middle, it is still 1+1</li>
-</ul>
-<p>Knit again, and you will see the result (<code>2</code>) but
-<strong>not</strong> the code. This is useful when writing papers or
-reports.</p>
-<p>Common options you’ll use:</p>
-<table>
-<thead>
-<tr class="header">
-<th>Option</th>
-<th>What It Does</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><code>echo=TRUE</code></td>
-<td>show code</td>
-</tr>
-<tr class="even">
-<td><code>echo=FALSE</code></td>
-<td>hide code</td>
-</tr>
-<tr class="odd">
-<td><code>message=FALSE</code></td>
-<td>hide messages</td>
-</tr>
-<tr class="even">
-<td><code>warning=FALSE</code></td>
-<td>hide warnings</td>
-</tr>
-</tbody>
-</table>
-</div>
-<div id="step-2.6-a-realistic-example" class="section level3">
-<h3>Step 2.6: A Realistic Example</h3>
-<p>Now let’s do something closer to real analysis.</p>
-<p>Add a new code chunk below your text and paste the following R code
-trunk</p>
-<p>[Minor Note: to add a new code chunk, you can type in “```” yourself,
-or, you can use the “+c” button to the top right of your editing window,
-or, use keyboard shortcut Ctrl + Alt + I (Windows) / Cmd + Option + I
-(Mac)]</p>
-<p>Remember, the following code trunk should be precededed by
-<code>```{r}</code> and followed by <code>```</code>.</p>
-<pre class="markdown"><code># Create a small example dataset
-x &lt;- c(1, 2, 3, 4, 5)
+<pre class="r"><code># Create an object called media4a
+# Start from media
+# Convert date -&gt; month label using ymd() and month(..., label = TRUE)
+# Relevel months Jan-Dec
+# Group by month and topic
+# Create topic_count = n()
+# Select columns or variables and arrange by month
 
-# Compute summary statistics
-mean(x)
-sd(x)</code></pre>
-<p>Knit again. You should see the mean and the standard deviation.</p>
+# YOUR CODE HERE</code></pre>
 </div>
 </div>
-<div id="appendix-recommended-top-of-the-document-settings" class="section level1">
-<h1>Appendix: Recommended “Top of the Document” Settings</h1>
-<p>At the very top of every <code>.Rmd</code> file in this course, I
-recommend something like this:</p>
-<pre class="yaml"><code>---
-title: &quot;Your Title&quot;
-author: &quot;Your Name&quot;
-date: &quot;2026-01-30&quot;
-output:
-  html_document:
-    toc: true
-    toc_depth: 3
-    number_sections: false
----</code></pre>
-<p>And immediately after that, a <strong>setup chunk</strong> starting
-with <code>{r setup, include=FALSE}</code> and then:</p>
-<pre class="markdown"><code>knitr::opts_chunk$set(
-  echo = TRUE,
-  message = FALSE,
-  warning = FALSE
-)</code></pre>
-<p>What this does:</p>
+<div id="problem-5-tidyr-lubridate-split-and-rebuild-date" class="section level1">
+<h1>Problem 5 (tidyr + lubridate): Split and rebuild date</h1>
+<p>We can split a date column into components and then rebuild a proper
+Date.</p>
+<p><strong>Task A:</strong> Use separate() to split date into year,
+month, day.</p>
+<p><strong>Task B:</strong> Rebuild date using make_date(year, month,
+day).</p>
+<div id="requirements-4" class="section level2">
+<h2>Requirements:</h2>
 <ul>
-<li>Shows code by default</li>
-<li>Hides annoying messages and warnings</li>
-<li>Keeps output clean and readable</li>
+<li>Use separate(date, into = c(“year”,“month”,“day”), sep = “-”)</li>
 </ul>
-<p>You can always override these settings inside individual chunks
-later.</p>
-<p>In the <a href="https://z.umn.edu/J8500">class repository</a>, you
-should find a file named <code>Example.Rmd</code> that already has these
-settings at the top. You can use that as a template for your own R
-Markdown documents in this course.</p>
+<pre class="r"><code># Task A
+# Create media4b
+# Start from media
+# separate date into year/month/day
+
+# YOUR CODE HERE
+
+# Task B
+# Create media4c
+# Start with media4b
+# rebuild date with make_date() in mutate function
+# We can also break apart the date column with tidyr using separate():
+
+# YOUR CODE HERE</code></pre>
+</div>
 </div>
 
 

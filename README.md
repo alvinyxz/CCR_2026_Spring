@@ -372,7 +372,7 @@ Final grades will be assigned according to the University of Minnesota Letter Gr
 1. Required Instructional Readings
    - Joo, J., & Steinert-Threlkeld, Z. C. (2022). Image as data: Automated content analysis for visual presentations of political actors and events. *Computational Communication Research, 4*(1). <https://doi.org/10.5117/CCR2022.1.001.JOO>
    - Peng, Y., & Lu, Y. (2023). Computational visual analysis in political communication. In D. Lilleker & A. Veneti (Eds.), *Research Handbook on Visual Politics* (pp. 42–54). Edward Elgar Publishing. <https://doi.org/10.4337/9781800376939.00010>
-   - Webb Williams, N., Casas, A., & Wilkerson, J. D. (2020). *Images as data for social science research: An introduction to convolutional neural nets for image classification*. Cambridge University Press. <https://doi.org/10.1017/9781108860741>
+   - [Skim] Webb Williams, N., Casas, A., & Wilkerson, J. D. (2020). *Images as data for social science research: An introduction to convolutional neural nets for image classification*. Cambridge University Press. <https://doi.org/10.1017/9781108860741>
 
 2. Required Empirical Readings
    - Qian, S., Lu, Y., Peng, Y., Shen, C., & Xu, H. (2024). Convergence or divergence? A cross-platform analysis of climate change visual content categories, features, and social media engagement on Twitter and Instagram. *Public Relations Review, 50*(2), 102454. <https://doi.org/10.1016/j.pubrev.2024.102454>

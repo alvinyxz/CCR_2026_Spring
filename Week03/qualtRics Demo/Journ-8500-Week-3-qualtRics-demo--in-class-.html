@@ -9,11 +9,11 @@
 <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
-<meta name="author" content="Alvin Zhou" />
+<meta name="author" content="Carolina Aguiar, Isabel Garlough-Shah, Ruiheng Sun" />
 
-<meta name="date" content="2026-01-30" />
+<meta name="date" content="2026-02-02" />
 
-<title>JOUR8500 Week02 R Markdown Demo Problem Set</title>
+<title>JOUR8500 Week03 qualtRics Package Demo Problem Set (in class)</title>
 
 <script>// Pandoc 2.9 adds attributes on both header and div. We remove the former (to
 // be compatible with the behavior of Pandoc < 2.8).
@@ -350,309 +350,162 @@ display: none;
 
 
 
-<h1 class="title toc-ignore">JOUR8500 Week02 R Markdown Demo Problem
-Set</h1>
-<h4 class="author">Alvin Zhou</h4>
-<h4 class="date">2026-01-30</h4>
+<h1 class="title toc-ignore">JOUR8500 Week03 qualtRics Package Demo
+Problem Set (in class)</h1>
+<h4 class="author">Carolina Aguiar, Isabel Garlough-Shah, Ruiheng
+Sun</h4>
+<h4 class="date">2026-02-02</h4>
 
 </div>
 
 <div id="TOC">
 <ul>
 <li><a href="#overview" id="toc-overview">Overview</a></li>
-<li><a href="#step-1-try-markdown-in-your-browser-no-r-required" id="toc-step-1-try-markdown-in-your-browser-no-r-required">Step 1: Try
-Markdown in Your Browser (No R Required)</a></li>
-<li><a href="#step-2-r-markdown" id="toc-step-2-r-markdown">Step 2: R
-Markdown</a>
+<li><a href="#step-1-installing-and-loading-qualtrics" id="toc-step-1-installing-and-loading-qualtrics">Step 1 Installing and
+loading qualtRics</a></li>
+<li><a href="#step-2-import-data" id="toc-step-2-import-data">Step 2
+Import data</a></li>
+<li><a href="#step-3-filter-data" id="toc-step-3-filter-data">Step 3
+Filter data</a>
 <ul>
-<li><a href="#step-2.1-replace-the-text-but-keep-the-code-chunks" id="toc-step-2.1-replace-the-text-but-keep-the-code-chunks">Step 2.1:
-Replace the text (but keep the code chunks)</a></li>
-<li><a href="#step-2.2-knit-the-document" id="toc-step-2.2-knit-the-document">Step 2.2: Knit the document</a></li>
-<li><a href="#step-2.3-what-an-r-code-chunk-is" id="toc-step-2.3-what-an-r-code-chunk-is">Step 2.3: What an R Code Chunk
-Is</a></li>
-<li><a href="#step-2.4-your-first-r-code-chunk" id="toc-step-2.4-your-first-r-code-chunk">Step 2.4: Your First R Code
-Chunk</a></li>
-<li><a href="#step-2.5-controlling-what-shows-up-advanced" id="toc-step-2.5-controlling-what-shows-up-advanced">Step 2.5:
-Controlling What Shows Up (Advanced)</a></li>
-<li><a href="#step-2.6-a-realistic-example" id="toc-step-2.6-a-realistic-example">Step 2.6: A Realistic
-Example</a></li>
+<li><a href="#check-time-zone" id="toc-check-time-zone">Check time
+zone</a></li>
+<li><a href="#filter-out-participants-based-on-your-criteria" id="toc-filter-out-participants-based-on-your-criteria">Filter out
+participants based on your criteria</a></li>
+<li><a href="#other-notes" id="toc-other-notes">Other notes</a></li>
 </ul></li>
-<li><a href="#appendix-recommended-top-of-the-document-settings" id="toc-appendix-recommended-top-of-the-document-settings">Appendix:
-Recommended “Top of the Document” Settings</a></li>
 </ul>
 </div>
 
-<div id="overview" class="section level2">
-<h2>Overview</h2>
-<p>Before we touch R Markdown, we need to understand Markdown itself.
-Markdown is a <strong>plain-text</strong> writing format that lets you
-control structure, such as headings, emphasis, lists, links, without
-using Word, Google Docs, or LaTeX. Think of it as: <strong>Word
-formatting, but with the formatting instructions typed explicitly in
-text</strong>. R Markdown simply adds R code on top of Markdown.</p>
+<div id="overview" class="section level1">
+<h1>Overview</h1>
+<p>This problem set introduces a basic run down of installing the
+<code>qualtRics</code> package, how to use API keys in Qualtrics,
+importing data directly from Qualtrics to R, and practice filtering
+data.</p>
 </div>
-<div id="step-1-try-markdown-in-your-browser-no-r-required" class="section level2">
-<h2>Step 1: Try Markdown in Your Browser (No R Required)</h2>
-<p>Go to: <a href="https://markdowntohtml.com/" class="uri">https://markdowntohtml.com/</a></p>
-<p>You will see:</p>
-<ul>
-<li>A left panel where you type Markdown</li>
-<li>A right panel that shows the formatted output instantly</li>
-</ul>
-<p>Copy-paste the following text as-is into the left panel:</p>
-<pre class="markdown"><code># Audience Engagement and News Coverage
-
-This paragraph describes a **research question** about news media.
-
-We are interested in whether *negative tone* and *political slant* increase audience engagement.
-
-## Key Concepts
-
-- Political slant
-- Emotional tone
-- Breaking news
-- Visuals
-
-## Hypotheses
-
-1. More negative articles will receive more engagement.
-2. More politically extreme articles will receive more engagement.
-3. Breaking news articles will receive more engagement than non-breaking articles.
-
-For more information, see [Journal of Communication](https://academic.oup.com/joc).</code></pre>
-<p>Look at the right panel, and you will see how magical Markdown is :)
-Read through the instructions on <a href="https://markdowntohtml.com/" class="uri">https://markdowntohtml.com/</a> more closely and remember
-all the formatting options you can use.</p>
-<p>For this course, we really only need five things to get started:</p>
-<table>
-<thead>
-<tr class="header">
-<th>What You Want</th>
-<th>What You Type</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Section heading</td>
-<td><code># Heading</code></td>
-</tr>
-<tr class="even">
-<td>Subsection</td>
-<td><code>## Subheading</code></td>
-</tr>
-<tr class="odd">
-<td>Bold</td>
-<td><code>**bold**</code></td>
-</tr>
-<tr class="even">
-<td>Italics</td>
-<td><code>*italics*</code></td>
-</tr>
-<tr class="odd">
-<td>Bullet list</td>
-<td><code>- item</code></td>
-</tr>
-<tr class="even">
-<td>Numbered list</td>
-<td><code>1. item</code></td>
-</tr>
-<tr class="odd">
-<td>Link</td>
-<td><code>[text](url)</code></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div id="step-2-r-markdown" class="section level2">
-<h2>Step 2: R Markdown</h2>
-<p>R Markdown is just Markdown + R code blocks. If you can write
-Markdown, you are already halfway there.</p>
-<p>A typical R Markdown document is:</p>
-<ul>
-<li>Narrative text (Markdown, i.e., what you just tried)</li>
-<li>Code (R)</li>
-<li>Output (tables, figures, results) — the output will show up when you
-“knit” the document.</li>
-</ul>
-<p>Follow the next few steps to recreate what you just did in your
-browser, but this time inside <strong>RStudio</strong>, using an R
-Markdown document.</p>
+<div id="step-1-installing-and-loading-qualtrics" class="section level1">
+<h1>Step 1 Installing and loading qualtRics</h1>
+<p>The packages we will use include: - <code>qualtRics</code>: for
+retrieve a data set from Qualtrics - <code>tidyverse</code>,
+<code>dplyr</code>, <code>tidyr</code>,<code>psych</code>: for data
+selection</p>
+<p>Steps:</p>
 <ol style="list-style-type: decimal">
-<li>Open RStudio.</li>
-<li>Go to <strong>File → New File → R Markdown…</strong></li>
-<li>Choose:
-<ul>
-<li>Title: anything you want</li>
-<li>Author: your name</li>
-<li>Output format: <strong>HTML</strong></li>
-</ul></li>
-<li>Click <strong>OK</strong>.</li>
+<li><p>Install them using <code>install.packages()</code></p></li>
+<li><p>Load them into your library using <code>library()</code></p></li>
 </ol>
-<p>RStudio will create a new <code>.Rmd</code> file with example
-content.</p>
-<div id="step-2.1-replace-the-text-but-keep-the-code-chunks" class="section level3">
-<h3>Step 2.1: Replace the text (but keep the code chunks)</h3>
-<p>Delete <strong>all the narrative text</strong>, but <strong>do not
-delete the R code chunks</strong> (the parts surrounded by ```).</p>
-<p>Then paste the following Markdown <strong>outside of any code
-chunk</strong>:</p>
-<pre class="markdown"><code># Audience Engagement and News Coverage
-
-This paragraph describes a **research question** about news media.
-
-We are interested in whether *negative tone* and *political slant* increase audience engagement.
-
-## Key Concepts
-
-- Political slant
-- Emotional tone
-- Breaking news
-- Visuals
-
-## Hypotheses
-
-1. More negative articles will receive more engagement.
-2. More politically extreme articles will receive more engagement.
-3. Breaking news articles will receive more engagement than non-breaking articles.
-
-For more information, see [Journal of Communication](https://academic.oup.com/joc).</code></pre>
+<pre class="r"><code>library(qualtRics)
+library(tidyverse)
+library(dplyr)
+library(tidyr)
+library(psych)</code></pre>
 </div>
-<div id="step-2.2-knit-the-document" class="section level3">
-<h3>Step 2.2: Knit the document</h3>
-<p>Click the “Knit” button. You should see:</p>
+<div id="step-2-import-data" class="section level1">
+<h1>Step 2 Import data</h1>
+<p>To import data directly from Qualtrics into R, we first need to
+register the <strong>Qualtrics API credentials</strong> with the
+qualtRics R package so that R can securely communicate with the
+Qualtrics account.</p>
+<p>Steps: First use the code <code>qualtrics_api_credentials()</code>
+and then in the brackets fill in the code <code>api_key =</code>.</p>
+<p>After the equal sign, fill in the API key
+“Iq3etyjeqW28MpNq9AkPbl02xqLa50ALfmmzrygf”.</p>
+<p>To find your personal API key navigate to Account settings, scroll
+down to the API header and click the <code>Generate Token</code>
+button</p>
+<p>After inputting the API key, in the next line of code you will use
+the code <code>base_url =</code> and fill in “yul1.qualtrics.com”. To
+find your personal base url navigate to Account settings, scroll down to
+the User header, and locate Datacenter ID. Here you will see a 2-3
+letter and number code (e.g., az1, co1, eu1). From here your base URL
+will be in the format: “[2-3 letter and number code].qualtrics.com”</p>
+<p>In the next line of code input <code>install = TRUE</code> and in the
+line after that input <code>overwrite = TRUE</code> and end the bracket.
+In the final line of code input <code>surveys &lt;- all_surveys()</code>
+to load all the surveys.</p>
+<p>Use <code>?fetch_survey()</code> to find the code template.</p>
+<pre class="r"><code># qualtrics_api_credentials()</code></pre>
+<p>Finally, to import the survey data into R, use the
+<code>fetch_survey()</code> function. Inside the function use the
+<code>surveyID</code> argument to search the
+<code>surveys$id[which(surveys$name==&quot;NameofSurvery&quot;</code>. Fill in the
+name of the survey “AI CAN HELP_Study2_Main”. This line of code extracts
+this specific survey from <code>surveys</code> object (generated earlier
+with <code>all_surveys()</code>) and the survey’s unique ID.</p>
+<p>In the next 5 lines you will add additional arguments to control for
+how the data is downloaded: <code>verbose = TRUE</code> shows a progress
+bar during the download, <code>force_request = TRUE</code> ensures a
+fresh pull from Qualtrics rather than cached data,
+<code>include_display_order = FALSE</code> removes question order
+metadata, <code>label = FALSE</code> keeps the original Qualtrics
+variable names, and <code>convert = FALSE</code> imports the data in its
+raw format. Finally create an object at the beginning of this code
+entitled <code>data_main</code> to label the data set.</p>
+<p>For the next lines of code follow these same steps, but input the
+<code>For R - The Role of Generative AI in Overcoming Ideological Bias in News Consumption - Copy</code>
+for the survey name. Additionally create an object at the beginning of
+this code entitled <code>data_embedded</code> to label the data set.</p>
+<pre class="r"><code># data_main &lt;- fetch_survey()
+
+# data_embedded &lt;- fetch_survey()</code></pre>
+</div>
+<div id="step-3-filter-data" class="section level1">
+<h1>Step 3 Filter data</h1>
+<p>After connecting with Qualtrics dataset, we are able to explore some
+features.</p>
+<p>For example, we want to filter out participants based on time.</p>
+<div id="check-time-zone" class="section level3">
+<h3>Check time zone</h3>
+<p>First, we need check which time zone is attached to the StartDate
+column in the dataset, using<code>attr(x, which)</code></p>
 <ul>
-<li>Your Markdown text rendered as a formatted document</li>
-<li>No R code output yet (that comes next)</li>
-<li>In your folder, there should be a new <code>.html</code> file that
-you can open in your browser</li>
+<li>x means the column you want to select:
+<code>data_main$StartDate</code></li>
+<li>which is the name of the specific piece of information you want to
+extract: <code>&quot;tzone&quot;</code> (you need the double quotation marks)</li>
+<li>If the result shows <code>&quot;America/Chicago&quot;</code>, you are
+correct!</li>
+</ul>
+<p>Also, check <code>?attr()</code> for more information</p>
+<pre class="r"><code># attr()</code></pre>
+</div>
+<div id="filter-out-participants-based-on-your-criteria" class="section level3">
+<h3>Filter out participants based on your criteria</h3>
+<p>Next, we filter out participants who start after Oct 12th, 2024,
+10am.</p>
+<ul>
+<li>Use <code>data_main[data_main$StartDate, ]</code> to select subset
+data</li>
+<li>After <code>data_main$StartDate</code>, use
+<code>as.POSIXct(x, tz = &quot;&quot;),</code> to compare the time zone</li>
+</ul>
+<p>Also, check <code>?as.POSIXct()</code> for more information</p>
+<pre class="r"><code># data_start &lt;- data_main[]</code></pre>
+<p>We also want to include participants who finish</p>
+<ul>
+<li>Use column <code>Progress</code> and it should be 100</li>
+</ul>
+<pre class="r"><code># data_progress &lt;- data_main[]</code></pre>
+<p>We want to see how many participants see FOX in the column
+<code>Stimuli_AA</code></p>
+<pre class="r"><code># data_AA &lt;- data_main[]</code></pre>
+<p>Keep only the ro where the <code>prolific_id</code> value is present
+(not missing)</p>
+<ul>
+<li>Use <code>is.na()</code> for missing values</li>
+</ul>
+<pre class="r"><code># data_prolific_id &lt;- data_main[]</code></pre>
+</div>
+<div id="other-notes" class="section level3">
+<h3>Other notes</h3>
+<ul>
+<li>Change the Qualtrics question name so that the variable name in R is
+easy to understand.</li>
+<li>Use “_” instead of a space in a variable name.</li>
+<li>Recode values on Qualtrics.</li>
 </ul>
 </div>
-<div id="step-2.3-what-an-r-code-chunk-is" class="section level3">
-<h3>Step 2.3: What an R Code Chunk Is</h3>
-<p>So far, you have only written Markdown text. Now we will add R code
-to the document. In R Markdown, R code always lives inside <strong>code
-chunks</strong>.</p>
-<p>A code chunk has: - a <strong>start line</strong>:
-<code>```{r}</code> - an <strong>end line</strong>: <code>```</code></p>
-<p>Everything in between is R code.</p>
-<p>Key rules:</p>
-<ul>
-<li>Anything inside the chunk is R code</li>
-<li>Anything outside the chunk is regular Markdown text</li>
-</ul>
-</div>
-<div id="step-2.4-your-first-r-code-chunk" class="section level3">
-<h3>Step 2.4: Your First R Code Chunk</h3>
-<p>Scroll to the first code chunk RStudio created for you. Inside that
-chunk (between <code>```{r}</code> and <code>```</code>), replace the
-code with:</p>
-<pre class="markdown"><code>1 + 1</code></pre>
-<p>Now click <strong>Knit</strong> again. You should see the number
-<code>2</code> printed in the output.</p>
-</div>
-<div id="step-2.5-controlling-what-shows-up-advanced" class="section level3">
-<h3>Step 2.5: Controlling What Shows Up (Advanced)</h3>
-<p>Sometimes you want:</p>
-<ul>
-<li>to show code,<br />
-</li>
-<li>sometimes to hide code,<br />
-</li>
-<li>sometimes to hide output.</li>
-</ul>
-<p>This is controlled by chunk options. Chunk options are written in the
-chunk header, after <code>r</code>, separated by commas.</p>
-<p>For example, at the “1+1” code chunk, modify its header line so that
-it includes <code>echo = FALSE</code>. The chunk should:</p>
-<ul>
-<li>start with: <code>```{r, echo = FALSE}</code></li>
-<li>end with: <code>```</code></li>
-<li>in the middle, it is still 1+1</li>
-</ul>
-<p>Knit again, and you will see the result (<code>2</code>) but
-<strong>not</strong> the code. This is useful when writing papers or
-reports.</p>
-<p>Common options you’ll use:</p>
-<table>
-<thead>
-<tr class="header">
-<th>Option</th>
-<th>What It Does</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><code>echo=TRUE</code></td>
-<td>show code</td>
-</tr>
-<tr class="even">
-<td><code>echo=FALSE</code></td>
-<td>hide code</td>
-</tr>
-<tr class="odd">
-<td><code>message=FALSE</code></td>
-<td>hide messages</td>
-</tr>
-<tr class="even">
-<td><code>warning=FALSE</code></td>
-<td>hide warnings</td>
-</tr>
-</tbody>
-</table>
-</div>
-<div id="step-2.6-a-realistic-example" class="section level3">
-<h3>Step 2.6: A Realistic Example</h3>
-<p>Now let’s do something closer to real analysis.</p>
-<p>Add a new code chunk below your text and paste the following R code
-trunk</p>
-<p>[Minor Note: to add a new code chunk, you can type in “```” yourself,
-or, you can use the “+c” button to the top right of your editing window,
-or, use keyboard shortcut Ctrl + Alt + I (Windows) / Cmd + Option + I
-(Mac)]</p>
-<p>Remember, the following code trunk should be precededed by
-<code>```{r}</code> and followed by <code>```</code>.</p>
-<pre class="markdown"><code># Create a small example dataset
-x &lt;- c(1, 2, 3, 4, 5)
-
-# Compute summary statistics
-mean(x)
-sd(x)</code></pre>
-<p>Knit again. You should see the mean and the standard deviation.</p>
-</div>
-</div>
-<div id="appendix-recommended-top-of-the-document-settings" class="section level1">
-<h1>Appendix: Recommended “Top of the Document” Settings</h1>
-<p>At the very top of every <code>.Rmd</code> file in this course, I
-recommend something like this:</p>
-<pre class="yaml"><code>---
-title: &quot;Your Title&quot;
-author: &quot;Your Name&quot;
-date: &quot;2026-01-30&quot;
-output:
-  html_document:
-    toc: true
-    toc_depth: 3
-    number_sections: false
----</code></pre>
-<p>And immediately after that, a <strong>setup chunk</strong> starting
-with <code>{r setup, include=FALSE}</code> and then:</p>
-<pre class="markdown"><code>knitr::opts_chunk$set(
-  echo = TRUE,
-  message = FALSE,
-  warning = FALSE
-)</code></pre>
-<p>What this does:</p>
-<ul>
-<li>Shows code by default</li>
-<li>Hides annoying messages and warnings</li>
-<li>Keeps output clean and readable</li>
-</ul>
-<p>You can always override these settings inside individual chunks
-later.</p>
-<p>In the <a href="https://z.umn.edu/J8500">class repository</a>, you
-should find a file named <code>Example.Rmd</code> that already has these
-settings at the top. You can use that as a template for your own R
-Markdown documents in this course.</p>
 </div>
 
 
