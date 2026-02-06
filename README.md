@@ -301,7 +301,7 @@ Final grades will be assigned according to the University of Minnesota Letter Gr
 
 3. Computational Toolkit Demo
    - quanteda (<https://tutorials.quanteda.io>)
-   - LIWC and Google Perspective API
+   - LIWC and HuggingFace API
 
 4. Due before the Week 5 class (2026/02/18): [Week 5] Final Paper - Paper Idea Pitch
 
