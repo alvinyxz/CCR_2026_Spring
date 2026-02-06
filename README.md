@@ -272,9 +272,9 @@ Final grades will be assigned according to the University of Minnesota Letter Gr
 2. Required Empirical Readings
    - Robertson, R. E., Green, J., Ruck, D. J., Ognyanova, K., Wilson, C., & Lazer, D. (2023). Users choose to engage with more partisan news than they are exposed to on Google Search. *Nature, 618*(7964), 342–348. <https://doi.org/10.1038/s41586-023-06078-5>
    - Haroon, M., Wojcieszak, M., Chhabra, A., Liu, X., Mohapatra, P., & Shafiq, Z. (2023). Auditing YouTube’s recommendation system for ideologically congenial, extreme, and problematic recommendations. *Proceedings of the National Academy of Sciences, 120*(50), e2213020120. <https://doi.org/10.1073/pnas.2213020120>
+   - Lam, M. S., Pandit, A., Kalicki, C. H., Gupta, R., Sahoo, P., & Metaxa, D. (2023). Sociotechnical audits: Broadening the algorithm auditing lens to investigate targeted advertising. *Proceedings of the ACM on Human-Computer Interaction, 7*(CSCW2), 1–37. https://doi.org/10.1145/3610209
    - Bail, C. A., Argyle, L. P., Brown, T. W., Bumpus, J. P., Chen, H., Hunzaker, M. B. F., Lee, J., Mann, M., Merhout, F., & Volfovsky, A. (2018). Exposure to opposing views on social media can increase political polarization. *Proceedings of the National Academy of Sciences, 115*(37), 9216–9221. <https://doi.org/10.1073/pnas.1804840115>
    - Guess, A. M. (2021). (Almost) everything in moderation: New evidence on Americans’ online media diets. *American Journal of Political Science, 65*(4), 1007–1022. <https://doi.org/10.1111/ajps.12589>
-   - Zhou, A., Yang, T., & González-Bailón, S. (2025). The puzzle of misinformation: Exposure to unreliable content in the United States is higher among the better informed. *New Media & Society, 27*(3), 1526–1543. <https://doi.org/10.1177/14614448231196863>
 
 3. Computational Toolkit Demo
    - tidyverse (dplyr, readr, tidyr, stringr, lubridate)
@@ -284,6 +284,7 @@ Final grades will be assigned according to the University of Minnesota Letter Gr
    - Theocharis, Y., & Jungherr, A. (2021). Computational social science and the study of political communication. *Political Communication, 38*(1–2), 1–22. <https://doi.org/10.1080/10584609.2020.1833121>
    - Clemm Von Hohenberg, B., Stier, S., Cardenal, A. S., Guess, A. M., Menchen-Trevino, E., & Wojcieszak, M. (2024). Analysis of web browsing data: A guide. *Social Science Computer Review, 42*(6), 1479–1504. <https://doi.org/10.1177/08944393241227868>
    - Guess, A. M., Nyhan, B., & Reifler, J. (2020). Exposure to untrustworthy websites in the 2016 US election. *Nature Human Behaviour, 4*(5), 472–480. <https://doi.org/10.1038/s41562-020-0833-x>
+   - Zhou, A., Yang, T., & González-Bailón, S. (2025). The puzzle of misinformation: Exposure to unreliable content in the United States is higher among the better informed. *New Media & Society, 27*(3), 1526–1543. <https://doi.org/10.1177/14614448231196863>
 
 ## 2.4. 2026/02/12 Text as Data: Overview and Dictionaries
 
