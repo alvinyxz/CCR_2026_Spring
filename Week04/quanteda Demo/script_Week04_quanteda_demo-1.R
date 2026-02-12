@@ -4,7 +4,7 @@
 
 #setwd([your file path here])
 
-install.packages(librarian)
+install.packages("librarian")
 
 library(librarian)
 shelf(tidyverse, quanteda, readxl)
@@ -76,7 +76,10 @@ print(dict_tokens)
 ##### Step 6: Make a Document-feature matrix #####
 
 # The simplest way to apply our dfm is to nest our tokens_lookup() command inside dfm():
-aian_dfm <- dfm(tokens_lookup(aian_tokens_sw, dict_A, valuetype = "glob", verbose = TRUE))
+aian_dfm <- dfm(tokens_lookup(aian_tokens_sw,
+                              dict_A,
+                              valuetype = "glob",
+                              verbose = TRUE))
 
 # We can also trim down our dfm with dfm_trim() to include only dictionary categories that have at least 1 dictionary term for at least 1 document.
 aian_dfm_trim <- aian_dfm %>%

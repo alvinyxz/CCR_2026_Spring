@@ -332,8 +332,8 @@ Final grades will be assigned according to the University of Minnesota Letter Gr
    - Mukerjee, S., Yang, T., & Peng, Y. (2023). Metrics in action: How social media metrics shape news production on Facebook. *Journal of Communication, 73*(3), 260–272. <https://doi.org/10.1093/joc/jqad012>
 
 3. Computational Toolkit Demo
-   - stm
    - topicmodels
+   - stm
 
 4. Due before the Week 6 class (2026/02/25): [Week 6] Final Paper - Paper Idea Pitch Peer Review
 
