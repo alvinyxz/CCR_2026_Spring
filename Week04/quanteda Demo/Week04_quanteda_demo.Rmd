@@ -1,0 +1,156 @@
+---
+title: "JOUR 8500 Quanteda Demo"
+author: Quin, Kaiyi, Stasi
+output: html_document
+date: "`r Sys.Date()`"
+---
+
+```{r setup, include=true}
+# setwd()
+install.packages(librarian)
+
+library(librarian)
+shelf(tidyverse, quanteda, readxl) 
+# load quanteda
+# and readxl: a package that allows us to read .xlsx files
+
+# the quanteda.dictionaries package requires devtools to install from GitHub.
+
+
+# We can use some of my (Quin's) data: 
+aian_snippets <- read_xlsx("Week04_aian_snippets.xlsx")
+# This data contains closed caption snippets of evening, local TV news 
+# from an initial keyword search for "American Indian" and "Alaska Native". 
+
+# This dataset was sourced from the Wesleyan Media Project's partnership with TVEyes, a third party company who tracks network television video, audio, closed captions, and subsequent metadata throughout the United States (among other places).  
+
+# I got permission from my collaborators at WMP to use this subset for class! So please don't share this data outside of the course :)
+
+```
+
+## About Quanteda
+
+The official website is <https://quanteda.io/> and tutorials are available at <https://tutorials.quanteda.io/>
+The Quanteda package includes functions that help researchers apply natural language processing to texts.
+
+Quanteda has three basic types of objects:
+-Corpus (tutorial: <https://tutorials.quanteda.io/basic-operations/corpus/>)
+A Corpus helps to create a data frame that stores character strings of the actual text, as well as other document-level information, such as the author, date, and source of the text.
+
+-Tokens (tutorial: <https://tutorials.quanteda.io/basic-operations/tokens/>)
+With the `Tokens()` function, each document is stored as a vector of tokens. This means that, instead of storing one long character string (such as a sentence), the text is split into a list of separate tokens, such as words. You can remove white spaces, punctuation, and numbers using the `tokens()` function
+
+-Document-feature-matrix (tutorial: <https://tutorials.quanteda.io/basic-operations/dfm/>)
+A dfm stores how often each feature appears in each document. The frequencies of features in documents are stored in a matrix format. `dfm()` function constructs a document-feature matrix (DFM) from a tokens object. 
+
+## Step 1: Creating a corpus() & docvars()
+## A corpus is a specialized object that stores text documents along with the associated metadata. 
+##i.e. a structured contained for text data that preserves (1) raw data text and (2) document-level info 
+```{r include = TRUE}
+### Creating a corpus from a character vector 
+texts <- c(
+  "Doc one", 
+  "Doc two", 
+  "Doc three", 
+)
+corp <- corpus(texts)
+print(corp)
+
+### Creating a corpus with document-level metadata (docvars) 
+corp_meta <- corpus(texts, 
+                    docvars = data.frame(
+                      author = c("Alice", "Bob", "Charlie"), 
+                      year = c(2020, 2021, 2022), 
+                      category = c("news", "blog", "news")
+                    ))
+print(corp_meta)
+
+##Access the texts
+texts(corp_meta)
+
+# Access document variables (metadata)
+docvars(corp_meta)
+
+# construct a corpus from "snippet" column in aian_snippets
+aian_corpus <- corpus(aian_snippets, text_field = "snippet")
+print(aian_corpus)
+summary(aian_corpus, 5) #show the first 5 documents with all the docvars
+docvars(aian_corpus)
+```
+
+
+## Step 2: Tokenization and Removing Stopwords
+```{r include = TRUE}
+##Before removing stopwords, tokenize the text and view the tokens 
+aian_tokens <- tokens(aian_corpus, what = "word", 
+                      remove_punct = TRUE, 
+                      remove_symbols = TRUE, 
+                      include_docvars = TRUE, 
+                      verbose = TRUE) 
+# verbose gives you some information while the tokenization is happening, and lets you know when it's done
+# quanteda defaults to words, but some people may want to parse sentences, keep punctuation and/or symbols for other reasons.
+
+##Remove English stopwords using quanteda's build-in list 
+aian_tokens_sw <- tokens_select(aian_tokens, 
+                                pattern = stopwords("en"),
+                                selection = "remove")
+
+print(aian_tokens_sw)
+```
+
+
+## Step 3: Creating a Dictionary with dictionary()
+`dictionary()` is a function used to create a dictionary for text analysis. For example, `dictionary()` can be used to scan words, categorize them, and count how often each category appears. You can use `dictionary()` to create a dictionary object by your own by listing some character vectors. You can also import an existing dictionary file in formats such as WordStat, LIWC, Yoshikoder, Lexicoder, YAML.
+
+If you use `dictionary()` to create your own dictionary. Inside `dictionary()`, we use `list()` to collect different categories of vectors. For example, if we want to create two categories, positive and negative, to categorize the text, we can write it as `dictionary(list(positive = ..., negative = ...))`. Inside each category, we use quotation marks (`""`)to specify multiple words under one category, for example: `dictionary(list(positive = c("happy", "smile"), negative = c("unhappy")))`. An asterisk (`*`) can be used to match all variations of a root word. For example, happ* can include happiness and happy.
+
+
+``` {r include = TRUE}
+
+# create a dictionary with school, art, and sports categories
+dict_A<- dictionary(list(school = c("school*", "child*", "student*", "campus*"),
+                       art = c("art*", "museum*", "perform*", "music*", "craft*"),
+                       sport = c("mascot", "athlet*", "sport*")
+                       ))
+print(dict_A)
+
+```
+
+## Step 4: Applying the dictionary to our tokenized data
+token_lookup() is the most flexible dictionary look up function in quanteda. Simply out, it is used to match tokens to a dictionary, check whether certain token appears in a dictionary. We can write it as `token_lookup(token object, dictionary = dictionary object)`.
+
+Task: 
+(1) Create a dictionary with two categories, school and art. The words that belong to school include school, child, student, and campus. The words that belong to art include art, museum, and perform.
+(2) Apply the dictionary you created to a tokenized object
+``` {r include = TRUE}
+
+# apply token_lookup to the tokenized object
+dict_toks <- tokens_lookup(toks_A, dictionary = dict_A)
+print(dict_toks)
+
+```
+
+
+
+## Applying Dictionaries & Document-Feature Matrices with dfm()
+- A Document-Feature matrix (DFM) provides frequencies of features (our dictionary keyword category groups) for each document (snippet) in our data.
+- We can use DFMs to plot and visualize our data and help us analyze sentiments or the distribution of topics captured in a set of text-based data.
+
+- To do this, we nest our tokens_lookup() object into our dfm() command
+
+``` {r include = TRUE}
+# The simplest way to apply our dfm:
+aian_dfm <- dfm(tokens_lookup(aian_tokens, dict, valuetype = "glob", verbose = TRUE))
+
+# We can also trim down our dfm with dfm_trim() to include only dictionary categories that have at least 1 dictionary term for at least 1 document.
+aian_dfm_trim <- aian_dfm %>%
+dfm_trim(min_termfreq = 1, min_docfreq = 1, verbose = TRUE)
+  
+# We could also group up our dfm by another variable for analysis.
+aian_dfm_trim <- aian_dfm_group %>%
+dfm_group(groups = MarketName, verbose = TRUE)
+
+
+```
+
+

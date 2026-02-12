@@ -1,0 +1,257 @@
+---
+title: "JOUR8500 Week 04 LIWC and Hugging Face API Demo Problem Set
+(In Class)"
+author: "Carolina Aguiar, Isabel Garlough-Shah, and
+Anastasia Micich"
+date: "`r Sys.Date()`"
+output:
+  html_document:
+    toc: true
+    toc_depth: 3
+    number_sections: false
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+  echo = TRUE,
+  message = FALSE,
+  warning = FALSE
+)
+```
+
+## Overview
+
+This problem set introduces the software "LIWC" (pronounced "Luke") and
+Hugging Face API.
+
+In part 1 we will overview the LIWC software and primary features, how
+to upload user generated dictionaries into LIWC, analyze a Redditt data
+set on depression in LIWC, and work through descriptive analysis of a
+complete CSV LIWC file.
+
+## LIWC
+### Part 1.1: LIWC software
+
+LIWC-22 (Linguistic Inquiry and Word Count) is a text analysis program
+used to quantify psychological, emotional, and structural features of
+language. Researchers commonly use LIWC to analyze open-ended survey
+responses, social media posts, interviews, and other text data to
+understand patterns in how people communicate.
+
+In this demo, we will explore how LIWC-22 works using the Desktop app.
+To download the Desktop app click here:
+[LIWC-22.app](https://www.liwc.app/download/dl-select)
+
+Download the application based on your OS or Platform system. From here
+input the Serial Number: "LIWC22-ED9FB079-8ED94179-9F5D63C2-75DE33EC" to
+access LIWC until **Saturday, March 7th, 2026**
+
+### Part 1.2: Exploring base LIWC Dictionaries
+
+One of the most important features of LIWC-22 is the dictionaries tab.
+You can find the dictionaries available in the base verison of LIWC-22
+in the second tab under LIWC analysis section.
+
+```{r, echo=FALSE, out.width="75%", fig.align="center"}
+knitr::include_graphics("LIWC-22 dictionaries tab.png")
+```
+
+-   Here, you can:
+    -   View the default LIWC-22 dictionary categories
+    -   See how words are grouped into psychological and linguistic
+        constructs
+    -   Explore specialized dictionaries (e.g., emotion, cognition,
+        social processes)
+-   This is where the core logic of LIWC lives — the dictionaries
+    determine how text is classified so it is important to understand
+    what aspects or kind of text dictionaries analyze to ensure that is
+    your intended operationalization as well.
+
+```{r, echo=FALSE, out.width="75%", fig.align="center"}
+knitr::include_graphics("liwc_dictionary.png")
+```
+
+-   A new feature of LIWC-22 is multilingual support.
+    -   LIWC now includes validated dictionaries for multiple languages,
+        allowing researchers to analyze text data beyond English. This
+        is especially useful for cross-cultural research, international
+        datasets, and multilingual social media content.
+    -   You can select different language dictionaries directly within
+        the interface before running your analysis.
+
+```{r, echo=FALSE, out.width="75%", fig.align="center"}
+knitr::include_graphics("Multilingual Dictionary.png")
+```
+
+### Part 1.3: Uploading User-Created LIWC Dictionaries
+
+In addition to the built-in LIWC dictionaries, LIWC-22 allows
+researchers to upload their own custom dictionaries. This is useful when
+you want to analyze text using categories or languages that are specific
+to your research project, population, or theory. To explore the
+User-Created LIWC Dictionaries click here: [User Created
+Dictionaries](https://www.liwc.app/dictionaries/dict-user)
+
+```{r, echo=FALSE, out.width="75%", fig.align="center"}
+knitr::include_graphics("User-Created LIWC Dictionaries.png")
+```
+
+### Part 1.4: Analyzing data in LIWC
+
+To begin analyzing a data set in LIWC, you need to upload a clean CSV
+file. This means that the CSV file should only contain text; no content
+analysis data, images, links. Furthermore, for social media data in
+particular, you should remove hashtags within text so that LIWC can
+properly run, and check for spelling errors and formatting issues so
+that LIWC can properly evaluate text data.
+
+```{r, echo=FALSE, out.width="75%", fig.align="center"}
+knitr::include_graphics("Uploading Dataset in LIWC.png")
+```
+
+In our analysis we will run the
+[depression_dataset_reddit_cleaned.csv](https://www.kaggle.com/datasets/infamouscoder/depression-reddit-cleaned)
+and use the User-Created dictionary entitled ["Stress Dictionary" by Wei
+Wang et al.](https://www.liwc.app/dictionaries/dict-user)
+
+After uploading the
+[depression_dataset_reddit_cleaned.csv](https://www.kaggle.com/datasets/infamouscoder/depression-reddit-cleaned)
+in LIWC you will use the check box to designate which column will be
+used for analysis.
+
+After this you will go to the Dictionary tab and designate which
+dictionaries you want to run. For this analysis run "LIWC-22 Dictionary
+(English)" and "stress-dictionary.dicx".
+
+In the categories section you can choose specific elements you want to
+analyze. Once you've finalized your categories click the [<code>RUN
+LIWC</code>]{style="color: orange;"} button in the bottom right corner.
+
+### Problem Set 1: Cleaning data and descriptive analysis of LIWC data in R
+
+First in this problem set we need to load in the program `dplyr` and the CSV files from LIWC using the `read.csv("[Name_of_file]", stringsAsFactors = FALSE).` and investigate column names.
+
+```{r}
+
+
+```
+
+Let's say we want to get rid of the `Segment` column because all the
+values are 1 and we want a cleaner data set. 
+
+- First what would we do to confirm that all the rows are filled with 1?
+- Second, what would we do to remove the `Segment` column?
+
+```{r}
+
+
+```
+
+In LIWC data is displayed as numerical, but it is meant to represent the
+average percentage of words appearing in the overall text. If we wanted
+to change the numeric into a decimal to better represent the data what are two ways to change the data set?
+
+```{r}
+
+
+```
+
+To understand the average stress, affect, mental, and death
+language percentage within Reddit posts discussing depression you
+would use which code?
+
+```{r}
+
+
+```
+
+## Hugging Face API
+### Part 2.1: What even is an API? 
+An API (Application Programming Interface) is used for one program to talk to another program over the internet.
+
+Instead of downloading a large machine-learning model to your computer, you can send text to a company’s server and ask their model to analyze it for you. The server runs the model and sends the results back to R.
+
+In this demo, we use the Hugging Face Inference API to send text to a pre-trained language model and receive percentages on particular language dimensions. 
+
+### Part 2.1: What is Hugging Face API? 
+Hugging Face is a platform where those who work on machine learning collaborates on models, data sets, and applications. It provides a well-organized library of machine learning models that other people have already trained. 
+
+The Hugging Face Inference API allows you to use those models directly from your own code without needing to download them, train them, or host them yourself. 
+
+### Part 2.2: Installing Hugging Face API into R
+
+To connect R to the Hugging Face Inference API, we first need to install and load in your library two packages that allow R to communicate with web-based services. These packages are entitled `httr2` and `jsonlite`. Once installed, these packages allow R to send text to Hugging Face’s servers and receive model predictions back in a format you can easily work with.
+
+```{r}
+
+
+```
+
+### Part 2.3: Retrieving and installing Hugging Face API token in R
+
+- Create a free account at [Hugging Face](https://huggingface.co)
+- Go to [Settings > Access Tokens](https://huggingface.co/settings/tokens)
+- Create a new token (read access is sufficient for inference)
+- Once you've created a token, use the code `Sys.setenv(HF_API_TOKEN = "[API Token]"` to install your Hugging Face API to R
+  - For this problem set use the token `"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"` 
+
+```{r}
+
+
+```
+
+For future coding to check that this token is saved as an environmental variable in your computer use the code `Sys.getenv("HF_API_TOKEN")`. This code retrieves your Hugging Face API token from your computer’s environment variables rather than hard-coding it directly into the script. This will keep authentication credentials and API keys secure and separate from your code if you are sharing R scripts. 
+
+```{r}
+
+
+```
+
+### Problem Set 2: Hugging API Sentiment Analyis
+#### Step 1: Loading sentiment analysis and single sentence evaluation
+
+To run analysis using Hugging API. This code defines a reusable R function, `multilingual_sentiment()`, that sends text from R to a Hugging Face sentiment analysis model. The function begins by creating an object labeled `multilingual_sentiment` and beginning the code with `function(text) {`. Within the brace retrieve the  `Sys.getenv("HF_API_TOKEN")`. 
+
+Then use the `POST("https://router.huggingface.co/hf-inference/models/cardiffnlp/twitter-roberta-base-sentiment-latest",` function from `httr package` to send the input text from the sentiment model. In the next three lines  `add_headers(Authorization = paste("Bearer", hf_token)),` `encode = "json",` `body = list(inputs = text)` and end the function with a closing bracket.
+
+Then add the `Sys.sleep(1.1)` code to pause execution briefly to prevent exceeding the API’s rate limits. In the next line use the function called `stop_for_status(res)` to ensure that any HTTP errors are caught immediately. After this create a `txt` object for this line of code `content(res, as = "text", encoding = "UTF-8")`. In the final line use the code `fromJSON(txt)[[1]]` to extract the plain text to prepare it for the sentiment model.
+
+```{r}
+
+
+```
+
+Next try evaluating sentences like "I like you" or "te amo" in the `multilingual_sentiment()` you created. 
+
+```{r}
+
+
+```
+#### Step 2: Evaluate a whole CSV file. 
+
+Now lets say you have a whole CSV data set you want to analyze. For the purpose of this problem set use the `LIWC2015 Results (Isa_SelfCare) (1).csv` in the [[Week 4] Computational Toolkit Demo](https://canvas.umn.edu/courses/537884/discussion_topics/3363516). In the next line load in the CSV file and with an object create a shorter name.  
+
+```{r}
+
+
+``` 
+
+Next you will run a similar set of code in Step 1. Instead you will add `function(text, max_chars = 4000)` to set a limit on evaluation character count. Below the `Sys.getenv("HF_API_TOKEN")` you will add `text <- as.character(text)`, `text <- enc2utf8(text)`, `text <- gsub("[[:cntrl:]]", " ", text)`, `text <- trimws(text)` and `if (nchar(text) > max_chars) text <- substr(text, 1, max_chars)`. Finally after the `Sys.sleep(1.1)` code in the next line add `if (http_error(res)) return(list(label = NA_character_, score = NA_real_))`. 
+
+```{r}
+
+
+```
+
+Next load in `dplyr` and `tidyr` to run the sentiment analysis in the `LIWC2015 Results (Isa_SelfCare) (1).csv`. 
+
+After loading in the CSV create a pipe (`%>%`) and in the next line use the `rowwise() %>%` command ensures the function runs once for each individual text entry rather than across the whole column at once. Next use the ` mutate(sentiment = list(multilingual_sentiment(Source))) %>%` code to run the sentiment analysis on each text entry and turns the result into real columns in the data set. Finally use `unnest_wider(sentiment)` and check out your updated `LIWC2015 Results (Isa_SelfCare) (1).csv`data set    
+
+```{r}
+
+
+```
+
+
+### Other Notes 
+- Here is a video tutorial on the basics of LIWC-22 if you have any additional questions [LIWC-22 2022 Tutorial 1: Getting started with LIWC-22](https://www.youtube.com/watch?v=IGBI8LnYGNs&t=125s) 

@@ -1,0 +1,102 @@
+---
+title: "JOUR 8500 Quanteda Demo"
+author: Quin, Kaiyi, Stasi
+output: html_document
+date: "`r Sys.Date()`"
+---
+
+```{r setup, include=true}
+# setwd()
+install.packages(librarian)
+
+library(librarian)
+shelf(tidyverse, quanteda, readxl) 
+# load quanteda
+# and readxl: a package that allows us to read .xlsx files
+
+# the quanteda.dictionaries package requires devtools to install from GitHub.
+
+
+# We can use some of Quin's data: 
+aian_snippets <- read_xlsx("Week04_aian_snippets.xlsx")
+# This data contains closed caption snippets of evening, local TV news 
+# from an initial keyword search for "American Indian" and "Alaska Native". 
+
+# This dataset was sourced from the Wesleyan Media Project's partnership with TVEyes, a third party company who tracks network television video, audio, closed captions, and subsequent metadata throughout the United States (among other places).  
+
+# I got permission from my collaborators at WMP to use this subset for class! So please don't share this data outside of the course :)
+
+```
+
+## About Quanteda
+
+The official website is <https://quanteda.io/> and tutorials are available at <https://tutorials.quanteda.io/>
+The Quanteda package includes functions that help researchers apply natural language processing to texts.
+
+Quanteda has three basic types of objects:
+-Corpus (tutorial: <https://tutorials.quanteda.io/basic-operations/corpus/>)
+A Corpus helps to create a data frame that stores character strings of the actual text, as well as other document-level information, such as the author, date, and source of the text.
+
+-Tokens (tutorial: <https://tutorials.quanteda.io/basic-operations/tokens/>)
+With the `Tokens()` function, each document is stored as a vector of tokens. This means that, instead of storing one long character string (such as a sentence), the text is split into a list of separate tokens, such as words. You can remove white spaces, punctuation, and numbers using the `tokens()` function
+
+-Document-feature-matrix (tutorial: <https://tutorials.quanteda.io/basic-operations/dfm/>)
+A dfm stores how often each feature appears in each document. The frequencies of features in documents are stored in a matrix format. `dfm()` function constructs a document-feature matrix (DFM) from a tokens object. 
+
+## Step 1: Creating a corpus() & docvars()
+## A corpus is a specialized object that stores text documents along with the associated metadata. 
+##i.e. a structured contained for text data that preserves (1) raw data text and (2) document-level info
+
+Task:
+(1) Create your corpus and subset the corpus into two new objects
+```{r include = TRUE}
+
+```
+
+
+## Step 2: Tokenization and Removing Stopwords
+
+Task: 
+(1) Tokenize the corpus with corpus() and remove stopwords with tokens_select()
+```{r include = TRUE}
+
+```
+
+
+## Step 3: Creating a Dictionary with dictionary()
+`dictionary()` is a function used to create a dictionary for text analysis. For example, `dictionary()` can be used to scan words, categorize them, and count how often each category appears. You can use `dictionary()` to create a dictionary object by your own by listing some character vectors. You can also import an existing dictionary file in formats such as WordStat, LIWC, Yoshikoder, Lexicoder, YAML.
+
+If you use `dictionary()` to create your own dictionary. Inside `dictionary()`, we use `list()` to collect different categories of vectors. For example, if we want to create two categories, positive and negative, to categorize the text, we can write it as `dictionary(list(positive = ..., negative = ...))`. Inside each category, we use quotation marks (`""`)to specify multiple words under one category, for example: `dictionary(list(positive = c("happy", "smile"), negative = c("unhappy")))`. An asterisk (`*`) can be used to match all variations of a root word. For example, happ* can include happiness and happy.
+
+Task: 
+(1) Create a dictionary with two categories, school and art. The words that belong to school include school, child, student, and campus. The words that belong to art include art, museum, and perform.
+
+``` {r include = TRUE}
+
+
+```
+
+## Step 4: Applying the dictionary to our tokenized data
+token_lookup() is the most flexible dictionary look up function in quanteda. Simply out, it is used to match tokens to a dictionary, check whether certain token appears in a dictionary. We can write it as `token_lookup(token object, dictionary = dictionary object)`.
+
+Task: 
+(1) Apply the dictionary you created to a tokenized object
+``` {r include = TRUE}
+
+
+```
+
+
+## Applying Dictionaries & Document-Feature Matrices with dfm()
+- A Document-Feature matrix (DFM) provides frequencies of features (our dictionary keyword category groups) for each document (snippet) in our data.
+- We can use DFMs to plot and visualize our data and help us analyze sentiments or the distribution of topics captured in a set of text-based data.
+
+Task:
+(1) Nest the tokens_lookup() object into the dfm() command and turn your results into a data.frame.
+
+``` {r include = TRUE}
+
+
+```
+
+

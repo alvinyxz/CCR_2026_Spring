@@ -1,0 +1,323 @@
+---
+title: "JOUR 8500 Tidyverse Demo"
+author: "Quin & Namuun"
+date: "`r Sys.Date()`"
+output: html_document
+---
+# Install and load package libraries easily with {librarian}
+
+While not a part of the {tidyverse} suite of R packages, librarian is very useful for sharing code (with new packages) easily with others in your scripts.
+
+Our setup here will use librarian instead of the traditional library() list. We can avoid having to install multiple packages at once this way. You'll get a popup at the top of your RStudio that asks if you want to install missing packages listed in the shelf() command.
+
+```{r setup, include=FALSE, echo = FALSE}
+# set your working director with setwd(), 
+# OR on the top bar under Session > Set Working Directory...
+
+
+# Install {librarian} if you don't have it
+library(librarian) # We use the traditional library() call to load librarian()
+shelf(dplyr, tidyr, readr, stringr, forcats, lubridate) 
+#But shelf() makes our lives easier -- list all the packages you want to include
+# in the script!
+
+# you can also simply call tidyverse's whole collection by including tidyverse
+#in shelf() and it will load all of the core packages at once.
+
+# readr (one of the tidyverse packages) is where read.csv() comes from!
+# select the path for your media engagement data file
+media <- read.csv(file = "Week02_media_engagement.csv")
+
+media
+```
+
+# About Tidyverse
+
+The official documentation website is here: <https://tidyverse.org/packages/>
+
+Tidyverse isn't just one package, but includes a total of 9 packages. 
+Each has a reference page linked which describe all of the different functions included!
+
+- dplyr: <https://dplyr.tidyverse.org/reference/index.html> 
+better grammar and piping for data manipulation.
+- tidyr: <https://tidyr.tidyverse.org/reference/index.html> 
+functions for tidying data, like pivoting and splitting columns into new ones.
+- readr: <https://readr.tidyverse.org/reference/index.html> 
+functions for reading in matrices like .csv files. To read in other file types like .xlsx or .dta (from Stata), you'll need separate packages for those.
+- stringr: <https://stringr.tidyverse.org/reference/index.html> 
+functions for parsing strings and extracting information from cells similar to LOOKUPS in Excel or other SQL/data management systems.
+- forcats: <https://forcats.tidyverse.org/reference/index.html> 
+functions for working with categorical or factor variables.
+- lubridate: <https://lubridate.tidyverse.org/reference/index.html> 
+functions for working with dates and times.
+- the tibble, purrr and ggplot2 packages also automatically load with library(tidyverse), but those will be covered by others in class (especially ggplot2)
+
+# Data & Piping Structure
+- We'll reuse the data from Week 2 (Week02_media_engagement.csv)
+- There are differences in how tidyverse uses piping compared to base R (which uses |>).
+- Since R version 4.4.0(?) the native pipe operator works with all packages. HOWEVER, tidyverse code often uses "%>%" for its piping.
+
+## dplyr: Viewing data with the tidy piping structure
+dplyr has four main command functions that help us view and clean our data:
+
+- select()
+- filter()
+- arrange()
+- group_by()
+
+And two commands that help us transform our data into new variables or summarize into new data.frames:
+
+- mutate()
+- summarize(), or summarise()
+
+- *NOTE:* mutate() and summarize() are similar, but different: mutate() adds new columns to the dataset. summarize() will collapse down your data to smaller tables which are typically better for plotting and understanding your data.
+
+Let's say we want to view our data by topic. So we should cut out some of the variables we aren't interested in or don't need.
+- group_by is prioritized, so we group first
+- then select columns we want to include in our tibble with select:
+```{r include = TRUE}
+#first call our data.frame:
+media1 <- media %>%
+  group_by(topic) %>%
+  select(topic, date, outlet, outlet_type, frame_type, tone, slant,
+         breaking, visuals, length_words)
+
+media1
+```
+
+# Problem 1 (with dplyr): 
+## Wrangling data & summarizing
+- Summarize the mean length_words by topic among legacy_mainstream outlet types, and arrange them in descending order (highest mean to smallest).
+
+## Requirements:
+- Use filter(), group_by(), summarize() (or summarise()), and arrange()
+- Name the output column mean_words
+```{r include = TRUE}
+# Create an object called media_e1
+# Start from media1
+# Filter to legacy_mainstream
+# Group by topic
+# Summarize mean length_words as mean_words
+# Arrange descending by mean_words
+
+# KEY
+media_e1 <- media1 %>%
+  group_by(topic) %>%
+  filter(outlet_type == c("legacy_mainstream")) %>%
+  summarize(mean_words = mean(length_words)) %>%
+  arrange(desc(mean_words))
+  
+media_e1
+```
+
+# Problem 2 (with forcats): 
+## Categorical variables & factoring
+- forcats is great for handling categorical variables and relabeling/releveling (especially for plotting them properly).
+- all forcats functions usually have a fct_*() structure.
+
+Task: Create a new variable breaking_cha that converts breaking into "Yes" and "No".
+Hint: Use factor() and fct_recode().
+
+## Requirements:
+- breaking_cha must be a factor
+- Recode "0" -> "No" and "1" -> "Yes"
+- Show your result with a select() that includes breaking_cha, breaking, and a few context columns
+
+```{r include = TRUE}
+# Create an object called media2a
+# Start from media1
+# Create breaking_cha using factor() + fct_recode() in mutate function
+# Select breaking_cha, topic, date, outlet, outlet_type, frame_type, tone, slant, breaking, visuals, length_words
+
+# KEY
+
+# We almost always need to set the variable we want to mutate as a factor() 
+# before messing with it further
+# fct_recode is the most long-winded of the forcats functions,
+# where you are changing the current values to new ones by hand
+# NOTE: when reassigning, format as such: "[new var]" = "[old var]"
+media2a <- media1 %>%
+  mutate(breaking_cha = factor(breaking),
+         breaking_cha = fct_recode(breaking_cha,
+                                   "No" = "0",
+                                   "Yes" = "1")
+         ) %>%
+  select(breaking_cha, topic, date, outlet, outlet_type, frame_type, tone, slant, breaking, visuals, length_words)
+# selecting the columns we want to see, in the order we want them to be -- 
+# and we'll more quickly see if our new "issues" column is there
+
+media2a
+```
+
+You can also collapse variables into more broad categories with fct_collapse():
+
+Here is an example of collapsing some of the topic variable into broader categories:
+```{r include = FALSE}
+media2b <- media1 %>%
+  mutate(issues = factor(topic),
+         issues = fct_collapse(topic,
+                                "Political" = c("Elections", "Politics",
+                                                "Foreign Policy", "Immigration",
+                                                "Crime", "Education"),
+                                "Socioeconomic" = c("Health", "Climate",
+                                                    "Economy", "Technology")
+                                )
+         ) %>%
+  select(issues, topic, date, outlet, outlet_type, frame_type, tone, slant, 
+         breaking, visuals, length_words)
+```
+
+# Problem 3 (with stringr): 
+## Extracting parts of an observation's text
+- str_detect() is the most useful function from stringr (in my opinion), since it doesn't require implementing regular expressions to work well.
+
+Let's say we want to look only at our digital outlet_types, regardless of what they cover (digital_politics, digital_viral, and digital_explainer).
+
+- We can filter() from dplyr with str_detect() to look only at the outlet_types that contain "digital" observations into a new column:
+
+**Task A:** Filter the dataset to keep only rows where outlet_type contains "digital".
+
+**Task B:** Create a new variable outlet_medium:
+
+"digital" if outlet_type contains "digital"
+
+"other" otherwise
+
+## Requirements:
+- Use str_detect()
+- Use filter()
+- Use mutate() + case_when()
+
+Select and print: outlet_medium, outlet_type, topic, outlet, slant, length_words
+
+```{r include = TRUE}
+# Task A
+# Create an object called media2a
+# Start from media1
+# Filter to outlet_type values that contain "digital"
+
+# KEY
+# this is different than using filter alone,
+# which would only take included observed variables one at a time
+media3a <- media1 %>%
+  filter(str_detect(outlet_type, "digital")) 
+media3a
+```
+
+- and also create new categorical (or dummy) variables with mutate() and case_when() from dplyr, using str_detect().
+- case_when() operates like your classic "if/else statement" in other coding or data wrangling programs.
+```{r include = TRUE}
+# Task B
+# Create an object called media3b
+# Start from media1
+# Create outlet_medium using case_when() + str_detect()
+# Select requested columns or variables
+
+# KEY
+media3b <- media1 %>%
+# pulls all outlet_types that contain "digital" at once and labels them as such. 
+  mutate(outlet_medium = case_when(str_detect(outlet_type, "digital") ~ "digital", 
+# We can add other conditions in between, BUT add them from most to least specific.  
+                                   .default = as.character("other") 
+# .default arg sets the value for any variables that don't match any other conditions.
+                                   )
+  ) %>%
+  select(outlet_medium, outlet_type, topic, outlet, frame_type, tone, slant, breaking, visuals, length_words)
+
+media3b
+```
+
+
+# Problem 4 (with lubridate): 
+## Parsing dates and times and pivoting to new columns
+
+Let's say we want to be able to look at longitudinal patterns in the data aggregated by month and year (if we had multiple years in this data).
+Well, as it stand with the media data.frame, we only have the date column...which is in YYYY-MM-DD (ymd) format.
+
+- We can combine forcats and lubridate so R easily recognizes the date structure, and pulls out what we need to relevel the new variable.
+- we can also use fct_relevel() to set the order in which the months should appear in figures, or tibbles with arrange().
+
+## Create a dataset that:
+1. Creates a month label from date
+2. Orders months Jan–Dec
+3. Groups by month and topic
+4. Creates topic_count = n()
+5. Selects: month, topic, topic_count, outlet, outlet_type, frame_type, tone, slant, breaking, visuals, length_words
+6. Arranges by month
+
+## Requirements:
+- Use ymd()
+- Use month(..., label = TRUE)
+- Use fct_relevel() with the month order: Jan, Feb, Mar, ..., Dec
+
+```{r include = TRUE}
+# Create an object called media4a
+# Start from media
+# Convert date -> month label using ymd() and month(..., label = TRUE)
+# Relevel months Jan-Dec
+# Group by month and topic
+# Create topic_count = n()
+# Select columns or variables and arrange by month
+
+# KEY
+
+media4a <- media %>%
+  mutate(month = factor(date),
+         month = ymd(month), # converts month to a ymd() format date-time class object
+         month = month(month, label = TRUE),
+         month = fct_relevel(month, c("Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec")) # puts the months in order!
+  ) %>%
+  group_by(month, topic) %>%
+  mutate(topic_count = n()) %>%
+  select(month, topic, topic_count, outlet, outlet_type, frame_type, tone, slant, breaking, visuals, length_words) %>%
+  arrange(month)
+  
+head(media4a)
+```
+
+# Problem 5 (tidyr + lubridate): Split and rebuild date
+We can split a date column into components and then rebuild a proper Date.
+
+**Task A:** Use separate() to split date into year, month, day.
+
+**Task B:** Rebuild date using make_date(year, month, day).
+
+## Requirements:
+- Use separate(date, into = c("year","month","day"), sep = "-")
+
+```{r}
+# Task A
+# Create media4b
+# Start from media
+# separate date into year/month/day
+
+# KEY
+
+# We can break apart the date column with tidyr using separate():
+media4b <- media %>%
+  separate(date, into = c("year", "month", "day"), sep = "-")
+
+# note that the separated columns will maintain their type (character),
+# and do not convert to a datetime structure from lubridate. 
+
+# check result. note that the date column goes away!
+# preview first rows of the data, or else it will show all the entries
+head(media4b)
+
+# Task B
+# Create media4c
+# Start with media4b
+# rebuild date with make_date() in mutate function
+# We can also break apart the date column with tidyr using separate():
+
+# KEY
+
+# We can reassemble the date column back together in a few ways:
+# First using make_date():
+media4c <- media4b %>%
+  mutate(date = make_date(year = year, month = month, day = day))
+
+# check result. the separated columns are maintained and the date column returns
+head(media4c) 
+```
+
