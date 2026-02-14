@@ -384,7 +384,7 @@ Final grades will be assigned according to the University of Minnesota Letter Gr
 
 3. Computational Toolkit Demo
    - athec (Python; if you are familiar with Python, sign up here; <https://doi.org/10.5117/CCR2022.1.009.PENG>)
-   - Face++ API
+   - Face++ API & DeepFace
 
 4. Optional Readings
    - Webb Williams, N., Casas, A., & Wilkerson, J. D. (2020). *Images as Data for Social Science Research* (Version 1.1) [Computer software]. Code Ocean. <https://doi.org/10.24433/CO.2462313.V1>
