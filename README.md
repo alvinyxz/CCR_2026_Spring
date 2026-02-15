@@ -544,18 +544,17 @@ Final grades will be assigned according to the University of Minnesota Letter Gr
 
 2. Required Empirical Readings "The Meta 2020 Project"
    - Press Release: *New Facebook and Instagram Research Initiative to Look at US 2020 Presidential Election*. <https://about.fb.com/news/2020/08/research-impact-of-facebook-and-instagram-on-us-election/>
+   - Commentary: Wagner, M. W. (2023). Independence by permission. *Science, 381*(6656), 388–391. <https://doi.org/10.1126/science.adi2430>
    - González-Bailón, S., Lazer, D., Barberá, P., Zhang, M., Allcott, H., Brown, T., Crespo-Tenorio, A., Freelon, D., Gentzkow, M., Guess, A. M., Iyengar, S., Kim, Y. M., Malhotra, N., Moehler, D., Nyhan, B., Pan, J., Rivera, C. V., Settle, J., Thorson, E., … Tucker, J. A. (2023). Asymmetric ideological segregation in exposure to political news on Facebook. *Science, 381*(6656), 392–398. <https://doi.org/10.1126/science.ade7138>
+     - Critique and Response 1
+       - Messing, S. (2023). Are algorithmic bias claims supported? *Science, 381*(6665), 1420–1420. <https://doi.org/10.1126/science.adk1211>
+       - González-Bailón, S., & Lazer, D. (2023). Are algorithmic bias claims supported?—Response. *Science, 381*(6665), 1420–1420. <https://doi.org/10.1126/science.adk4899>
+     - Critique and Response 2
+       - Krause, N. M., Freiling, I., & Scheufele, D. A. (2025). Our changing information ecosystem for science and why it matters for effective science communication. *Proceedings of the National Academy of Sciences, 122*(27), e2400928121. <https://doi.org/10.1073/pnas.2400928121>
+       - González-Bailón, S., & Lazer, D. (2025). Scientific standards suffer from misrepresenting past work. *Proceedings of the National Academy of Sciences, 122*(47), e2522011122. <https://doi.org/10.1073/pnas.2522011122>
+       - Freiling, I., & Scheufele, D. A. (2025). Reply to González-Bailón and Lazer: Industry control and conflicts of interest in social media research. *Proceedings of the National Academy of Sciences, 122*(47), e2522924122. <https://doi.org/10.1073/pnas.2522924122>
    - Guess, A. M., Malhotra, N., Pan, J., Barberá, P., Allcott, H., Brown, T., Crespo-Tenorio, A., Dimmery, D., Freelon, D., Gentzkow, M., González-Bailón, S., Kennedy, E., Kim, Y. M., Lazer, D., Moehler, D., Nyhan, B., Rivera, C. V., Settle, J., Thomas, D. R., … Tucker, J. A. (2023). How do social media feed algorithms affect attitudes and behavior in an election campaign? *Science, 381*(6656), 398–404. <https://doi.org/10.1126/science.abp9364>
-   - Guess, A. M., Malhotra, N., Pan, J., Barberá, P., Allcott, H., Brown, T., Crespo-Tenorio, A., Dimmery, D., Freelon, D., Gentzkow, M., González-Bailón, S., Kennedy, E., Kim, Y. M., Lazer, D., Moehler, D., Nyhan, B., Rivera, C. V., Settle, J., Thomas, D. R., … Tucker, J. A. (2023). Reshares on social media amplify political news but do not detectably affect beliefs or opinions. *Science, 381*(6656), 404–408. <https://doi.org/10.1126/science.add8424>
-   - Commentary
-     - Wagner, M. W. (2023). Independence by permission. *Science, 381*(6656), 388–391. <https://doi.org/10.1126/science.adi2430>
-   - Critique and Response 1
-     - Messing, S. (2023). Are algorithmic bias claims supported? *Science, 381*(6665), 1420–1420. <https://doi.org/10.1126/science.adk1211>
-     - González-Bailón, S., & Lazer, D. (2023). Are algorithmic bias claims supported?—Response. *Science, 381*(6665), 1420–1420. <https://doi.org/10.1126/science.adk4899>
-   - Critique and Response 2
-     - Krause, N. M., Freiling, I., & Scheufele, D. A. (2025). Our changing information ecosystem for science and why it matters for effective science communication. *Proceedings of the National Academy of Sciences, 122*(27), e2400928121. <https://doi.org/10.1073/pnas.2400928121>
-     - González-Bailón, S., & Lazer, D. (2025). Scientific standards suffer from misrepresenting past work. *Proceedings of the National Academy of Sciences, 122*(47), e2522011122. <https://doi.org/10.1073/pnas.2522011122>
-     - Freiling, I., & Scheufele, D. A. (2025). Reply to González-Bailón and Lazer: Industry control and conflicts of interest in social media research. *Proceedings of the National Academy of Sciences, 122*(47), e2522924122. <https://doi.org/10.1073/pnas.2522924122>
+   - Guess, A. M., Malhotra, N., Pan, J., Barberá, P., Allcott, H., Brown, T., Crespo-Tenorio, A., Dimmery, D., Freelon, D., Gentzkow, M., González-Bailón, S., Kennedy, E., Kim, Y. M., Lazer, D., Moehler, D., Nyhan, B., Rivera, C. V., Settle, J., Thomas, D. R., … Tucker, J. A. (2023). Reshares on social media amplify political news but do not detectably affect beliefs or opinions. *Science, 381*(6656), 404–408. <https://doi.org/10.1126/science.add8424>  
 
 3. Computational Tookit Demo
    - OSF Walkthrough (Preprint and Preregistration)
