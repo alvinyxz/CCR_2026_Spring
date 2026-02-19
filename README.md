@@ -272,7 +272,7 @@ Final grades will be assigned according to the University of Minnesota Letter Gr
 2. Required Empirical Readings
    - Robertson, R. E., Green, J., Ruck, D. J., Ognyanova, K., Wilson, C., & Lazer, D. (2023). Users choose to engage with more partisan news than they are exposed to on Google Search. *Nature, 618*(7964), 342–348. <https://doi.org/10.1038/s41586-023-06078-5>
    - Haroon, M., Wojcieszak, M., Chhabra, A., Liu, X., Mohapatra, P., & Shafiq, Z. (2023). Auditing YouTube’s recommendation system for ideologically congenial, extreme, and problematic recommendations. *Proceedings of the National Academy of Sciences, 120*(50), e2213020120. <https://doi.org/10.1073/pnas.2213020120>
-   - Lam, M. S., Pandit, A., Kalicki, C. H., Gupta, R., Sahoo, P., & Metaxa, D. (2023). Sociotechnical audits: Broadening the algorithm auditing lens to investigate targeted advertising. *Proceedings of the ACM on Human-Computer Interaction, 7*(CSCW2), 1–37. https://doi.org/10.1145/3610209
+   - Lam, M. S., Pandit, A., Kalicki, C. H., Gupta, R., Sahoo, P., & Metaxa, D. (2023). Sociotechnical audits: Broadening the algorithm auditing lens to investigate targeted advertising. *Proceedings of the ACM on Human-Computer Interaction, 7*(CSCW2), 1–37. <https://doi.org/10.1145/3610209>
    - Bail, C. A., Argyle, L. P., Brown, T. W., Bumpus, J. P., Chen, H., Hunzaker, M. B. F., Lee, J., Mann, M., Merhout, F., & Volfovsky, A. (2018). Exposure to opposing views on social media can increase political polarization. *Proceedings of the National Academy of Sciences, 115*(37), 9216–9221. <https://doi.org/10.1073/pnas.1804840115>
    - Guess, A. M. (2021). (Almost) everything in moderation: New evidence on Americans’ online media diets. *American Journal of Political Science, 65*(4), 1007–1022. <https://doi.org/10.1111/ajps.12589>
 
@@ -363,6 +363,7 @@ Final grades will be assigned according to the University of Minnesota Letter Gr
    - text2vec
 
 4. Optional Readings
+   - *What is Accuracy, Precision, Recall and F1 Score?* <https://www.labelf.ai/blog/what-is-accuracy-precision-recall-and-f1-score>
    - Garg, N., Schiebinger, L., Jurafsky, D., & Zou, J. (2018). Word embeddings quantify 100 years of gender and ethnic stereotypes. *Proceedings of the National Academy of Sciences, 115*(16), E3635–E3644. <https://doi.org/10.1073/pnas.1720347115>
    - Rudkowsky, E., Haselmayer, M., Wastian, M., Jenny, M., Emrich, Š., & Sedlmair, M. (2018). More than bags of words: Sentiment analysis with word embeddings. *Communication Methods and Measures, 12*(2–3), 140–157. <https://doi.org/10.1080/19312458.2018.1455817>
    - Wang, S.-Y. N., & Inbar, Y. (2021). Moral-language use by U.S. political elites. *Psychological Science, 32*(1), 14–26. <https://doi.org/10.1177/0956797620960397>

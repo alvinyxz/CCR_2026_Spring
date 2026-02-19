@@ -1,0 +1,209 @@
+---
+title: "Topic_model_answerkey"
+output: html_document
+---
+
+
+### Section 1: Introduction of Topic Modeling
+
+```{r}
+knitr::include_graphics("https://aiml.com/wp-content/uploads/2023/09/example-of-topic-modeling.png")
+```
+
+Topic modeling is a method for unsupervised classification. Latent Dirichlet allocation (LDA) is a particularly popular method for fitting a topic model. This allows documents to “overlap” each other in terms of content, rather than being separated into discrete groups, in a way that mirrors typical use of natural language.
+
+- use package `topicmodels` in `library()`
+- call `data("AssociatedPress")` and also check data `AssociatedPress`
+
+```{r}
+library(topicmodels)
+
+data("AssociatedPress")
+AssociatedPress
+```
+
+We can use the `LDA()` function from the topicmodels package, setting `k = 2`, to create a two-topic LDA model.
+
+```{r}
+# set a seed so that the output of the model is predictable
+ap_lda <- LDA(AssociatedPress, k = 2, control = list(seed = 1234))
+ap_lda
+```
+
+
+### Section 2: Word-topic probabilities
+The tidytext package provides this method for extracting the per-topic-per-word probabilities, called β (“beta”), from the model.
+
+```{r}
+library(tidytext)
+ap_topics <- tidy(ap_lda, matrix = "beta")
+```
+
+
+```{r}
+
+library(tidytext)
+ap_topics <- tidy(ap_lda, matrix = "beta")
+ap_topics
+
+```
+
+use dplyr’s slice_max() to find the 10 terms that are most common within each topic. As a tidy data frame, this lends itself well to a ggplot2 visualization 
+
+```{r}
+library(ggplot2)
+library(dplyr)
+
+ap_top_terms <- ap_topics %>%
+  group_by(topic) %>%
+  slice_max(beta, n = 10) %>% 
+  ungroup() %>%
+  arrange(topic, -beta)
+
+ap_top_terms %>%
+  mutate(term = reorder_within(term, beta, topic)) %>%
+  ggplot(aes(beta, term, fill = factor(topic))) +
+  geom_col(show.legend = FALSE) +
+  facet_wrap(~ topic, scales = "free") +
+  scale_y_reordered()
+``` 
+## explanation
+
+```{r}
+library(tidyr)
+
+beta_wide <- ap_topics %>%
+  mutate(topic = paste0("topic", topic)) %>%
+  pivot_wider(names_from = topic, values_from = beta) %>% 
+  filter(topic1 > .001 | topic2 > .001) %>%
+  mutate(log_ratio = log2(topic2 / topic1))
+
+beta_wide
+```
+
+
+### Section 3: Document-topic probabilities
+Besides estimating each topic as a mixture of words, LDA also models each document as a mixture of topics. We can examine the per-document-per-topic probabilities, called γ (“gamma”), with the matrix = "gamma" argument to tidy().
+
+```{r}
+ap_documents <- tidy(ap_lda, matrix = "gamma")
+ap_documents
+```
+
+We can see that many of these documents were drawn from a mix of the two topics, but that document 6 was drawn almost entirely from topic 2, having a γfrom topic 1 close to zero. To check this answer, we could tidy() the document-term matrix and check what the most common words in that document were.
+
+```{r}
+tidy(AssociatedPress) %>%
+  filter(document == 6) %>%
+  arrange(desc(count))
+```
+
+
+### Section 4: How to find K with `FindTopicsNumber()`
+
+The previous steps have already shown the output when topic number is 2 (k=2). When doing LDA in practice, determining K is key. If the topic number (k) is too small, the categorization of the dataset could be very general. However, if the topic number (K) is too large, topics may overlap and become hard to interpret. 
+
+In real analysis, we can re-run the unsupervised model multiple times, manually adjusting the number of topics (k) that LDA looks for, for example, k = 2, k = 3, and so on. We should then manually inspect the terms associated with the topics to check their thematic consistency. We should evaluate whether the topics and associated terms are coherent, consistent, and accurately reflect the themes present in the data. Through this evaluation process, we can determine the optimal number of topics (k = ?). We can also manually identify the topics and associated terms to develop a dictionary and conduct semi-supervised, seeded topic modeling <https://ladal.edu.au/tutorials/topic/topic.html#human-in-the-loop-topic-modelling>)
+
+Here we focus on `FindTopicsNumber()` to determine the optimal topic number K. 
+
+first, we install `ldatuning` from Github
+
+```{r}
+# Load remotes package
+library(remotes)
+
+# Install ldatuning from GitHub
+install_github("nikita-moor/ldatuning")
+```
+
+Second, we use `FindTopicsNumber()` function to create models with different numbers of topics (from k =2 to k = 20).
+
+Note that the `FindTopicsNumber()` function has four metrics: Griffiths2004, CaoJuan2009, Arun2010, and Deveaud2014. Here we focus on Caojuan2009 <https://doi.org/10.1016/j.neucom.2008.06.011>and Deveaud2014 <https://hal.science/hal-01002716v1>. CaoJuan2009 can be simply understood as minimizing similarities between topics, so you need to identify the minimum point to determine the optimal K. Deveaud2014 measures the divergence between topics, which suggests that we should identify the maximum point.
+
+```{r}
+# Load ldatuning package
+library(ldatuning)
+
+# Use FindTopicsNumber() to fit models with topic numbers from 2 to 20
+result <- ldatuning::FindTopicsNumber(
+  AssociatedPress,
+  topics = seq(from = 2, to = 20, by = 1),
+  metrics = c("CaoJuan2009",  "Deveaud2014"),
+  method = "Gibbs",  # Gibbs sampling is an estimation method, usually taking longer time?
+  control = list(seed = 77),
+  verbose = TRUE # Show progress method
+)
+```
+
+Now, we can plot the results using `FindTopicsNumber_plot()`.
+
+To identify the optimal K, several methods should converge. For example, here, we should look for the peak value for Deveaud2014 and the dip value for CaoJuan2009.
+
+```{r}
+FindTopicsNumber_plot(result)
+```
+
+Next, we use the number of topics identified from the plot to fit the model. For example, here we choose k = 13.
+
+```{r}
+# number of topics
+K <- 13
+
+# set random number generator seed (randomness start point)
+set.seed(9161)
+
+# compute the LDA model, inference via 500 iterations of Gibbs sampling
+topicModel1 <- LDA(AssociatedPress, K, method="Gibbs", control=list(iter = 500, verbose = 25)) 
+#iter refers to how many times algorithm reassigns topic labels, for the purpose of convergence
+#verbose = 25 refers to show progress every 25 iterations
+```
+
+We need to save the results of LDA model. `posterior()` can help extract the topic and term distributions, including topic–word and document–topic probabilities.
+
+```{r}
+# save results
+tmResult <- posterior(topicModel1)
+# save theta values
+theta <- tmResult$topics  #document-topic probability distribution 
+# save beta values
+beta <- tmResult$terms  #topic-word probability distribution
+
+```
+
+In the next step, we concatenate the five most likely terms of each topic into a string. We use this string of terms to represent the name of the topic containing these terms.
+
+`terms(topicModel1, 5)` helps us extract the top five most probable words for each topic. `apply(...,2...)`  means operate column-by-column; one column refers to one topic. The remaining part of the code joins the terms under one topic together.
+
+```{r}
+topicNames <- apply(terms(topicModel1, 5), 2, paste, collapse = " ")
+
+topicNames[1:3] # inspect first 3 topic names
+```
+
+We can use the results of the model to visualize the topics and terms in the document-term matrix (DTM). Here, we demonstrate an example of creating a word cloud for Topic 2 using `wordcloud()`. 
+
+```{r}
+#install and load packages RColorBrewer and wordcloud
+library(RColorBrewer)
+library(wordcloud)
+
+# visualize topics as word cloud
+# choose topic of interest by a term contained in its name
+topicToViz <- grep("attorney", topicNames)[1] #search for the topic containing the word "attorney"
+
+# select to 50 most probable terms from the topic by sorting the term-topic-probability vector in decreasing order
+top50terms <- sort(tmResult$terms[topicToViz, ], decreasing = TRUE)[1:50]
+words <- names(top50terms)
+
+# extract the probabilities of each of the 50 terms
+probabilities <- sort(tmResult$terms[topicToViz, ], decreasing = TRUE)[1:50]
+
+# visualize the terms as wordcloud
+mycolors <- brewer.pal(8, "Dark2")
+wordcloud(words, probabilities, random.order = FALSE, color = mycolors)
+```
+
+
+
+
