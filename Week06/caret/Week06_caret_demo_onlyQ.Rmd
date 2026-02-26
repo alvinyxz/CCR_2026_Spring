@@ -1,0 +1,208 @@
+---
+title: "JOUR 8500 CARET Demo"
+author: "Eunsun & Namuun"
+date: "`r Sys.Date()`"
+output: html_document
+---
+## About caret
+
+caret stands for Classification And Regression Training. It is an R package that streamlines the process of building machine learning models.
+
+The main advantage of caret is that it provides a consistent interface for fitting many different models. Instead of learning separate syntax for each algorithm (e.g., random forest, k-nearest neighbors, SVM), we can use the same train() function and simply change the method argument.
+
+This makes it easy to:
+
+- Fit multiple models
+- Compare performance
+- Perform cross-validation
+- Tune hyperparameters
+- Evaluate results in a standardized way
+
+In our case, we use caret to fit a random forest model to predict whether there is higher sales based on ad expenditure.
+
+To learn more about caret, please visit https://topepo.github.io/caret/index.html
+
+```{r echo=TRUE, message=FALSE, warning=FALSE, results='hide'}
+# prepare packages
+if (!require("caret")) install.packages("caret")
+if (!require("ranger")) install.packages("ranger")
+if (!require("tidyverse")) install.packages("tidyverse")
+if (!require("e1071")) install.packages("e1071")
+
+# Load packages
+library(caret)
+library(ranger)
+library(tidyverse)
+library(e1071)
+
+# Load dataset
+ad_data <- read.csv("https://raw.githubusercontent.com/selva86/datasets/master/Advertising.csv")
+
+# remove the index column
+ad_data <- ad_data[, -1]
+
+# check dataset if index column is removed
+head(ad_data)
+
+# add a logical variable for "high-sales" (sales > median)
+ad_data <- ad_data %>%
+  mutate(high_sales = sales > median(sales)) %>%
+  # remove the original "sales" variable
+  select(-sales)
+
+table(ad_data$high_sales)
+
+# split into training and testing
+set.seed(123)
+train_index <- sample(1:nrow(ad_data), 0.9 * nrow(ad_data)) 
+ad_train <- ad_data[train_index, ]
+ad_test  <- ad_data[-train_index, ]
+
+# remove the original dataset
+rm(ad_data)
+
+# view the first 6 rows of the training data
+head(ad_train)
+```
+It looks like we have 180 ads:
+
+```{r echo=TRUE}
+dim(ad_train)
+```
+
+Time to fit a random forest model using caret. Anytime we want to fit a model using train() we tell it which model to fit by providing a formula as the first argument.
+
+as.factor(high_sales) ~ . means that we want to model high_sales (whether an advertising expenditure generated high sales or not) as a function of all of the other variables in the dataset (TV, radio, and newspaper spending).
+
+Then we need to provide a method. We specify "ranger" to implement a random forest model.
+
+```{r echo=TRUE}
+# fit a random forest model (using ranger)
+rf_fit <- train(as.factor(high_sales) ~ ., 
+                data = ad_train, 
+                method = "ranger"
+)
+```
+By default, the train function without any arguments re-runs the model over 25 bootstrap samples and across 3 options of the tuning parameter (the tuning parameter for ranger is mtry; the number of randomly selected predictors at each cut in the tree).
+
+```{r echo=TRUE}
+rf_fit
+```
+To test the data on an independent test set is equally as simple using the inbuilt predict function.
+
+```{r echo=TRUE}
+# predict the outcome on the test set
+ad_rf_pred <- predict(rf_fit, ad_test)
+
+# compare predicted outcome and true outcome
+confusionMatrix(ad_rf_pred, as.factor(ad_test$high_sales))
+```
+The random forest model achieved 95% accuracy on the test set, substantially outperforming chance (50%) and showing strong agreement beyond chance (Kappa = 0.90). However, because the test sample is small (n = 20), these results should be interpreted with caution.
+
+## Cross-Validation with trainControl()
+
+So far, we evaluated our model using one train/test split. However, results can vary depending on how the data is split. A more stable way to evaluate model performance is cross-validation.
+
+In k-fold cross-validation, the training data is split into k parts (folds). The model is trained on k−1 folds and validated on the remaining fold. This process repeats k times, and the results are averaged.
+
+# Exercise: Question 1-3
+In this exercise, we will apply k-fold cross-validation using `method = "cv"`.
+If you want to split the training data into K folds and perform validation, use the following code:
+
+fit_control <- trainControl(method = "cv",
+                            number = K)
+
+Using this setup, answer Questions 1–3.
+The remaining steps follow the same procedure as previously introduced.
+# Question 1: 
+Specify 10-fold cross-validation
+```{r echo=TRUE}
+
+
+```
+# Question 2
+Then, ensure reproducibility by setting the seed as 825 (You can use any numbers for seed)
+```{r echo=TRUE}
+
+```
+# Question 3
+Finally, train a Random Forest classification model using the `ranger` method with 10-fold cross-validation on the training data and display the results.
+```{r echo=TRUE}
+
+
+
+
+
+```
+
+## Other Classification Methods
+
+One advantage of caret is that we can easily try different classification algorithms by simply changing the method argument in train().
+
+The formula and data stay exactly the same — only the method changes.
+
+```{r echo=TRUE}
+fit_control <- trainControl(method = "cv", number = 10)
+set.seed(123)
+
+# Logistic Regression
+fit_glm <- train(as.factor(high_sales) ~ ., 
+                 data = ad_train, 
+                 method = "glm",
+                 trControl = fit_control)
+
+# K-Nearest Neighbors
+fit_knn <- train(as.factor(high_sales) ~ ., 
+                 data = ad_train, 
+                 method = "knn",
+                 trControl = fit_control)
+
+fit_glm
+fit_knn
+```
+
+## Resampling options
+
+Many machine learning models have tuning parameters that affect performance. To choose good parameter values, we use resampling methods such as cross-validation. In caret, the trainControl() function specifies how resampling is performed and is passed into train().
+
+```{r}
+# specify 10-fold cross-validation
+fit_control <- trainControl(method = "cv",
+                            number = 10)
+```
+
+```{r echo=TRUE}
+# run a random forest model
+set.seed(825)
+
+rf_fit <- train(as.factor(high_sales) ~ ., 
+                data = ad_train, 
+                method = "ranger",
+                trControl = fit_control)
+rf_fit
+```
+
+## Model parameter tuning options
+
+Now instead of letting caret automatically choose tuning parameters, we manually define a tuning grid.
+
+```{r echo=TRUE}
+# define a grid of parameter options to try
+rf_grid <- expand.grid(
+  mtry = c(1, 2, 3),                  # cannot exceed number of predictors
+  splitrule = c("gini", "extratrees"),
+  min.node.size = c(1, 3, 5)
+)
+
+rf_grid
+```
+
+```{r echo=TRUE}
+rf_fit <- train(as.factor(high_sales) ~ .,
+                data = ad_train,
+                method = "ranger",
+                trControl = fit_control,
+                tuneGrid = rf_grid)
+rf_fit
+```
+

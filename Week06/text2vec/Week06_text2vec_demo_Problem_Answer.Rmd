@@ -1,0 +1,326 @@
+---
+title: "JOUR8500 Week06 - Text2Vec"
+author: "Eunsun, Jikai, Qiling (based on Alvin's code)"
+date: "`r Sys.Date()`"
+output:
+  html_document:
+    toc: true
+    toc_depth: 3
+    number_sections: false
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+  echo = TRUE,
+  message = FALSE,
+  warning = FALSE
+)
+```
+
+## Overview
+Today we will learn something about text2vec, including: (1) A basic introduction about what text2vec is and some basic parts of its mechanism; (2) some common pre-trained embedding (e.g., glove) and ways to load them (step 2-4); (3) some functions that we can see to look into the relationship between different words, like find similar words (step 5), compute analogies (step 6), and compute similarity between two words (step 7), and finally, the (4) visualization part (Step 8). 
+
+
+## Introduction
+Text2vec is an approach that maps words in natural language to numerical vector representations that can be processed by computers. A vector can be understood as a point in an n-dimensional space. For example, in a one-dimensional space, a vector can be represented by a single number, while in a two-dimensional space, it can be represented by two numbers, such as (x, y). Similarly, in higher-dimensional spaces, a vector consists of more numbers.
+
+
+
+## Step 0: Set working directory
+
+Everything starts from here! Set the working directory you want!
+
+```{r}
+#setwd()
+```
+
+
+
+
+## Step 1: Install required packages
+
+`tidyverse` is what we learned from previous classes.
+`text2vec`is the core package we need in today's class. It transfers words into vectors.
+`Rtsne` is used for reducing dimensions.
+`ggplot` is used for visualization
+
+
+```{r}
+if (!require("tidyverse")) install.packages("tidyverse")
+if (!require("text2vec")) install.packages("text2vec")
+if (!require("Rtsne")) install.packages("Rtsne")
+if (!require("ggplot2")) install.packages("ggplot2")
+```
+
+
+
+## Step 2: Download pre-trained GloVe embedding (glove.twitter.27B.100d.txt)
+
+`embedding` is a technique that represents words as vectors in a high-dimensional space, enabling computers to capture semantic relationships between words and machines should learn it from a large corpus.
+
+`Pre-trained embedding` is the embedding already trained based on certain corpus.
+
+Common pre-trained embedding includes GloVe embedding, Google embedding, etc. In this example, we will use GloVe.twitter.27B.100d.
+
+Here is the way to download it:
+source: <https://nlp.stanford.edu/projects/glove/>
+kaggle link: <https://www.kaggle.com/datasets/bertcarremans/glovetwitter27b100dtxt?resource=download>
+Download the zip file
+Then extract it
+
+
+## Step 3: Load pre-trained GloVe vectors into R
+
+For pre-trained embedding, there may be different data formats. Let's use .txt format this time. 
+
+```{r}
+# Load the GloVe 100-dimensional embedding
+glove_embeddings <- read_delim("glove.twitter.27B.100d.txt",
+                               delim = " ", quote = "", col_names = FALSE)
+# The first column is the word, the rest are vector values
+word_vectors <- as.matrix(glove_embeddings[, -1])
+rownames(word_vectors) <- glove_embeddings[[1]]
+# You now have a word embedding matrix: rows = words, columns = dimensions
+```
+
+
+
+## Step 4: Explore the loaded model
+Let's figure out how many words and dimensions do we have, and get a sample of 50 words.
+
+
+```{r}
+# How many words and dimensions
+# You have 1193514 words, each word is represented by a 100-dimensional vector (i.e., 100 numbers)
+print(dim(word_vectors))
+# View a random sample of 50 words in the embedding
+sample(rownames(word_vectors), 50)
+```
+
+
+
+
+
+## Step 5: Find similar words
+
+Example 1: words similar to "king"
+```{r}
+king_vec <- word_vectors["king", , drop = FALSE]
+# Compute "King"'s cosine similarity with other words
+similar_words <- sim2(word_vectors, king_vec, method = "cosine", norm = "l2")
+# Sort by similarity and show top 10 similar words
+head(sort(similar_words[,1], decreasing = TRUE), 10)
+```
+
+Example 2: words similar to "happy"
+```{r}
+happy_vec <- word_vectors["happy", , drop = FALSE]
+# Compute "happy"'s cosine similarity with other words
+similar_words <- sim2(word_vectors, happy_vec, method = "cosine", norm = "l2")
+# Sort by similarity and show top 10 similar words
+head(sort(similar_words[,1], decreasing = TRUE), 10)
+```
+
+
+Example 3: words similar to "democrat"
+```{r}
+democrat_vec <- word_vectors["democrat", , drop = FALSE]
+# Compute "democrat"'s cosine similarity with other words
+similar_words <- sim2(word_vectors, democrat_vec, method = "cosine", norm = "l2")
+# Sort by similarity and show top 10 similar words
+head(sort(similar_words[,1], decreasing = TRUE), 10)
+```
+
+
+## Step 6: Compute analogies
+
+Word algebra: king - man + woman ≈ queen
+Explanation:
+Each word is represented as a vector in a high-dimensional semantic space.
+By subtracting "man" from "king", we remove the "male" component,leaving the "royalty" concept.
+Then, by adding "woman", we introduce the "female" component.
+The resulting vector should be closest to words representing a female royal role, such as "queen".
+```{r}
+analogy_vec <- word_vectors["king", ] - word_vectors["man", ] + word_vectors["woman", ]
+analogy_result <- sim2(word_vectors, matrix(analogy_vec, nrow = 1), method = "cosine", norm = "l2")
+# Show the top 10 most similar words
+# If the embedding captures semantic relationships well,
+# "queen" should appear among the top results.
+head(sort(analogy_result[,1], decreasing = TRUE), 10)
+```
+
+Word algebra 2:  puppy - dog + cat ≈ kitten
+Explanation:
+This captures the young-of relationship.
+"puppy" is a young dog, so applying the same relationship to "cat"
+should lead to "kitten", which is a young cat.
+```{r}
+analogy_vec <- word_vectors["puppy", ] - word_vectors["dog", ] + word_vectors["cat", ]
+analogy_res <- sim2(word_vectors, matrix(analogy_vec, nrow = 1), method = "cosine", norm = "l2")
+head(sort(analogy_res[,1], decreasing = TRUE), 10)
+```
+
+More analogies (some of them might not be perfect)
+```{r}
+analogy_vec <- word_vectors["guy", ] - word_vectors["man", ] + word_vectors["woman", ]
+print(head(sort(sim2(word_vectors, matrix(analogy_vec, nrow = 1), method = "cosine")[,1], decreasing = TRUE), 10))
+
+analogy_vec <- word_vectors["china", ] - word_vectors["beijing", ] + word_vectors["tokyo", ]
+print(head(sort(sim2(word_vectors, matrix(analogy_vec, nrow = 1), method = "cosine")[,1], decreasing = TRUE), 10))
+
+analogy_vec <- word_vectors["tokyo", ] - word_vectors["japan", ] + word_vectors["germany", ]
+print(head(sort(sim2(word_vectors, matrix(analogy_vec, nrow = 1), method = "cosine")[,1], decreasing = TRUE), 10))
+```
+
+## Step 7: Compute similarity between two words
+Example 1: Compare semantic similarity between "beijing", "china", and "chair"
+Cosine similarity measures how close two word vectors are in meaning.
+A higher value means the words appear in more similar contexts and have more similar meanings.
+```{r}
+sim2(word_vectors["beijing", , drop = FALSE],
+     word_vectors["china", , drop = FALSE],
+     method = "cosine")
+
+sim2(word_vectors["beijing", , drop = FALSE],
+     word_vectors["chair", , drop = FALSE],
+     method = "cosine")
+```
+
+You can see that "beijing" is more similar to "china" than to "chair"
+Interpretation:
+"beijing" and "china" have a higher similarity score because they are semantically related
+(Beijing is the capital of China).
+"beijing" and "chair" have a lower similarity because they are unrelated concepts.
+
+
+Example 2 (cute example): Compare "dog", "cat", and "table"
+This example is easier to understand because dogs and cats are both animals, while a table is an unrelated object.
+```{r}
+sim2(word_vectors["dog", , drop = FALSE],
+     word_vectors["cat", , drop = FALSE],
+     method = "cosine")
+
+sim2(word_vectors["dog", , drop = FALSE],
+     word_vectors["table", , drop = FALSE],
+     method = "cosine")
+```
+you can see that "dog" is more similar to "cat" than to "table"
+Interpretation:
+"dog" and "cat" should have a higher similarity score because they are both animals and appear in similar contexts.
+"dog" and "table" should have a lower similarity score because they are unrelated.
+
+
+## Step 8: Visualize word embeddings with t-SNE
+
+Pick some words to visualize 1
+```{r}
+words_to_plot <- c("king", "prince", "queen", "legend",
+                   "jack", "happy", "china", "beijing", "japan")
+```
+Extract their vectors
+```{r}
+word_matrix <- word_vectors[words_to_plot, ]
+```
+You can print out the matrix to see the vectors
+```{r}
+print(word_matrix)
+```
+Run t-SNE (dimensionality reduction to 2D)
+```{r}
+tsne_result <- Rtsne(word_matrix, dims = 2, perplexity = 2)
+```
+Create data frame for plotting
+```{r}
+tsne_df <- data.frame(x = tsne_result$Y[,1],
+                      y = tsne_result$Y[,2],
+                      word = words_to_plot)
+```
+Plot using ggplot2
+```{r}
+ggplot(tsne_df, aes(x = x, y = y, label = word)) +
+  geom_text(size = 5) +
+  ggtitle("t-SNE Visualization of Word Embeddings") +
+  theme_minimal()
+```
+
+Pick some words to visualize 2
+Question 1: use words happy, birthday, puppy, kitten, love,
+                   hope, king, jack, legend, prince 
+                   and visualize word embeddings with t-SNE
+Answer:
+```{r}
+words_to_plot <- c("happy", "birthday", "puppy", "kitten", "love",
+                   "hope", "king", "jack", "legend", "prince" )
+
+word_matrix <- word_vectors[words_to_plot, ]
+
+print(word_matrix)
+
+tsne_result <- Rtsne(word_matrix, dims = 2, perplexity = 2)
+
+tsne_df <- data.frame(x = tsne_result$Y[,1],
+                      y = tsne_result$Y[,2],
+                      word = words_to_plot)
+
+ggplot(tsne_df, aes(x = x, y = y, label = word)) +
+  geom_text(size = 5) +
+  ggtitle("t-SNE Visualization of Word Embeddings") +
+  theme_minimal()
+```
+
+Pick some words to visualize 3
+Question 2: use words puppy, kitten, kitty,
+                   hope, king, prince,queen,
+                   democrat, republican, politician,
+                   happy, love
+Answer:
+```{r}
+words_to_plot <- c("puppy", "kitten", "kitty",
+                   "hope", "king", "prince","queen",
+                   "democrat", "republican", "politician",
+                   "happy", "love")
+
+word_matrix <- word_vectors[words_to_plot, ]
+
+print(word_matrix)
+
+tsne_result <- Rtsne(word_matrix, dims = 2, perplexity = 2)
+
+tsne_df <- data.frame(x = tsne_result$Y[,1],
+                      y = tsne_result$Y[,2],
+                      word = words_to_plot)
+
+ggplot(tsne_df, aes(x = x, y = y, label = word)) +
+  geom_text(size = 3) +
+  ggtitle("t-SNE Visualization of Word Embeddings") +
+  theme_minimal()
+```
+
+Pick some words to visualize 4
+```{r}
+words_to_plot <- c("tokyo", "beijing", "chair", "china",
+                   "guy", "japan", "man", "woman",
+                   "germany", "cat", "dog","puppy",
+                   "happy", "king", "democrat")
+# Extract their vectors
+word_matrix <- word_vectors[words_to_plot, ]
+# You can print out the matrix to see the vectors
+print(word_matrix)
+# Run t-SNE (dimensionality reduction to 2D)
+tsne_result <- Rtsne(word_matrix, dims = 2, perplexity = 2)
+# Create data frame for plotting
+tsne_df <- data.frame(x = tsne_result$Y[,1],
+                      y = tsne_result$Y[,2],
+                      word = words_to_plot)
+# Plot using ggplot2
+ggplot(tsne_df, aes(x = x, y = y, label = word)) +
+  geom_text(size = 3) +
+  ggtitle("t-SNE Visualization of Word Embeddings") +
+  theme_minimal()
+```
+
+
+
+
+
+
