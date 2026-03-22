@@ -1,0 +1,596 @@
+---
+title: "W8_igraph_demo"
+author: "Jiarou, Kaiyi, Qiling"
+date: "2026-03-14"
+references: https://kateto.net/network-visualization/
+output:
+  html_document:
+    toc: true
+    toc_depth: 3
+    number_sections: false
+editor_options: 
+  markdown: 
+    wrap: 72
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+  echo = TRUE,
+  message = FALSE,
+  warning = FALSE
+)
+```
+
+## Contents
+
+1.  Building a network
+2.  Describing a network
+3.  Layout & Highlighting
+
+### Building a network
+
+**Social network**: a set of social entities, such as people, groups,
+and organizations, with some relationships or interactions between them
+(Tabassum et al., 2018) 
+
+-   Vertices/Nodes: social entities, e.g.,individuals, groups, organizations
+-   Edges/Links: ties between entities
+
+```{r}
+setwd("D:/UMN/26spring/Computational social methods/W9/Data_files")
+```
+
+
+```{r}
+# install.packages("igraph")
+library(igraph)
+```
+
+-   Step 1: data preparation
+
+    -   The data used here includes network of hyperlinks and mentions
+        among news sources
+    -   nodes: includes ID (must), other features we are interested in,
+        e.g., name, audience size... (optional)
+    -   links: includes the source ("from") and target ("to") (must),
+        other features we are interested in, e.g., weight, types (optional)
+
+    ```{r}
+    nodes <- read.csv("Dataset1-Media-Example-NODES.csv", header = T, as.is = T)
+    links <- read.csv("Dataset1-Media-Example-EDGES.csv", header=T, as.is=T)
+    # different way of reading data
+    # nodes <- read.csv(file.choose(), header = TRUE, as.is = TRUE)
+    # links <- read.csv(file.choose(), header = TRUE, as.is = TRUE)
+    ```
+
+```{r}
+# have a quick look
+head(nodes)
+head(links)
+```
+
+-   Step 2: Creating an igraph object
+
+```{r}
+net <- graph_from_data_frame(d=links, vertices=nodes, directed=T) 
+net
+```
+
+From "IGRAPH b3af137 DNW- 17 49 -- ", we can read some basic features of
+this network 
+
+-   D/U: Directed or Undirected 
+
+-   N: the nodes have Names
+
+-   W: the edges are Weighted 
+
+-   B: for a bipartite (two-mode) graph (where nodes have a type attribute) - 
+not included in this network
+
+
+-   "17": the number of nodes; "49": the number of edges
+
+-   the format of attributes: name (action object/data type) : e.g., 
+    
+    - media (v/c): it describes a vertex-level attribute, it is a character 
+    
+    - (g/c): graph-level, character - (e/n): edge-level, numeric
+
+
+-   Step 3: Describing the network (overall)
+
+```{r}
+plot(net) # a bit ugly
+```
+
+```{r}
+find("simplify")
+```
+
+```{r}
+net_simple <- igraph::simplify(
+  net,
+  remove.multiple = FALSE,
+  remove.loops = TRUE
+)
+
+#if remove.multiple = TRUE
+#simplify(
+  #net,
+  #remove.multiple = TRUE,
+  #remove.loops = TRUE,
+  #edge.attr.comb = list(weight = "sum", type = "ignore") #If there are multiple edges between A and B, these edges will be "merged" into one. For "weight" attribute, add the weights of multiple edges. For "type" attribute, discard them.
+#)
+
+```
+
+```{r}
+# We can reduce the arrow size and remove the labels
+plot(net_simple, edge.arrow.size=.4,vertex.label=NA) # a bit better
+```
+
+-   Some overall indicators to describe the network
+
+1.  *Density*: Existing number of connections/Possible number of
+    connections
+
+-   the degree of closeness of internal connections within a group
+-   if Density = 1, it means that all entities are connected
+
+```{r}
+edge_density(net, loops=F)
+```
+
+2.  *Average Path Length*: The average number of steps required between
+    any two entities in the network
+
+-   The smaller this number is, the faster the information spreads in
+    this network
+
+```{r}
+mean_distance(net, directed=T)
+
+avg_dist <- mean_distance(net, directed=T, weights=NA)
+print(avg_dist)
+```
+
+3.  *Diameter*: The shortest path length between the two farthest
+    entities on the network
+
+```{r}
+diameter(net, directed=T, weights=NA)
+```
+
+4.  *Transitivity/Clustering Coefficient*: the degree to which nodes in
+    a graph tend to cluster together
+
+```{r}
+#global transitivity: the number of closed triplets (or 3 x triangles) over the total number of triplets (both open and closed)
+#closed triplets: A-B,B-C,A-C
+#open triplets: A-B,B-C
+transitivity(net, type="global")
+```
+
+```{r}
+#local transitivity: The probability that the neighbors of a entity are themselves connected
+transitivity(net, type="local")
+```
+
+### Problem set
+
+### Task for practice: Build a network and describe its overall characteristics
+
+Please use the "Airlines" data
+
+1.  Building the network
+
+```{r}
+
+```
+
+2.  Calculate the overall indicators
+
+-   Density
+
+```{r}
+
+```
+
+-   Average Path Length
+
+```{r}
+
+```
+
+-   Diameter
+
+```{r}
+
+```
+
+-   Transitivity
+
+```{r}
+
+```
+
+### Node-level centrality measures
+
+Centrality measures help us identify which nodes are more important in
+the network from different perspectives. Here we introduce four common
+node-level indicators: degree centrality, closeness centrality,
+betweenness centrality, and eigenvector centrality.
+
+#### Degree centrality
+
+Degree centrality measures how many direct connections a node has.
+
+In a directed network, we can distinguish:
+
+In-degree: how many ties a node receives
+
+Out-degree: how many ties a node sends
+
+Nodes with higher degree centrality are more directly connected to
+others.
+
+```{r}
+# degree centrality
+deg_all <- degree(net, mode = "all")
+deg_in  <- degree(net, mode = "in")
+deg_out <- degree(net, mode = "out")
+
+# combine into a table
+degree_result <- data.frame(
+  media = V(net)$media,
+  degree_all = deg_all,
+  degree_in = deg_in,
+  degree_out = deg_out
+)
+
+degree_result
+```
+
+```{r}
+# show the top nodes by total degree
+degree_result[order(-degree_result$degree_all), ]
+```
+
+#### Closeness centrality
+
+Closeness centrality measures how close a node is to all other nodes in
+the network based on shortest paths.
+
+A node with high closeness centrality can reach other nodes more
+quickly.
+
+This may indicate faster access to information in the network.
+
+```{r}
+# closeness centrality
+close_out <- closeness(net, mode = "out", normalized = TRUE)
+close_in  <- closeness(net, mode = "in", normalized = TRUE)
+
+closeness_result <- data.frame(
+  media = V(net)$media,
+  closeness_out = close_out,
+  closeness_in = close_in
+)
+
+closeness_result
+```
+
+```{r}
+# show the top nodes by out-closeness
+closeness_result[order(-closeness_result$closeness_out), ]
+```
+
+#### Betweenness centrality
+
+Betweenness centrality measures how often a node lies on the shortest
+paths between other nodes.
+
+Nodes with high betweenness may act as bridges or brokers.
+
+They can play an important role in connecting different parts of the
+network.
+
+```{r}
+# betweenness centrality
+btw <- betweenness(net, directed = TRUE, normalized = TRUE)
+
+betweenness_result <- data.frame(
+  media = V(net)$media,
+  betweenness = btw
+)
+
+betweenness_result
+```
+
+```{r}
+# show the top nodes by betweenness
+betweenness_result[order(-betweenness_result$betweenness), ]
+```
+
+#### Eigenvector centrality
+
+Eigenvector centrality measures not only how many connections a node
+has, but also how important its connected neighbors are.
+
+A node connected to many well-connected nodes will have a higher
+eigenvector centrality.
+
+This indicator captures influence or prestige in the network.
+
+```{r}
+# eigenvector centrality
+eig <- eigen_centrality(net, directed = TRUE, scale = TRUE)
+
+eigen_result <- data.frame(
+  media = V(net)$media,
+  eigenvector = eig$vector
+)
+
+eigen_result
+```
+
+```{r}
+# show the top nodes by eigenvector centrality
+eigen_result[order(-eigen_result$eigenvector), ]
+```
+
+Combine all centrality measures in one table
+
+```{r}
+centrality_result <- data.frame(
+  media = V(net)$media,
+  degree_all = degree(net, mode = "all"),
+  degree_in = degree(net, mode = "in"),
+  degree_out = degree(net, mode = "out"),
+  closeness_out = closeness(net, mode = "out", normalized = TRUE),
+  closeness_in = closeness(net, mode = "in", normalized = TRUE),
+  betweenness = betweenness(net, directed = TRUE, normalized = TRUE),
+  eigenvector = eigen_centrality(net, directed = TRUE, scale = TRUE)$vector
+)
+
+centrality_result
+```
+
+#### Visualize degree centrality
+
+We can also use node size to reflect degree centrality in the graph.
+
+```{r}
+V(net)$size <- degree(net, mode = "all") * 2 + 8
+V(net)$label <- V(net)$media
+
+plot(net,
+     edge.arrow.size = .3,
+     vertex.color = "lightblue",
+     vertex.frame.color = "gray40",
+     vertex.label.color = "black")
+```
+
+### Layout and highlighting
+
+plotting parameters: we can set different parameters for nodes and
+edges, such as colors, shapes, sizes, and labels. To specify graphical
+parameters, we can supply name arguments to the plotting command
+`plot()`. Parameters for vertices start with prefix `vertex.`,
+parameters for edges have prefix `edge.` You can use `?igraph.plotting`
+to get more information about parameters.
+
+```{r}
+
+?igraph.plotting
+
+```
+
+-   Step 1: Set parameters using `plot()` function
+
+Plot with curved edges (`edge.curved=.1`) and reduce arrow size
+(`edge.arrow.size=.4`).
+
+```{r}
+
+plot(net_simple, edge.arrow.size=.4, edge.curved=.1)
+
+```
+
+Set edge color to red (`edge.color =`), the node color to orange
+(`vertex.color=`) and border color to yellow (`vertex.frame.color=`).
+Replace the vertex label with the node names stored in "media"
+(```` vertex.label= ```); set the label color to black ( ````vertex.label.color=
+\`)
+
+```{r}
+
+plot(net_simple, edge.arrow.size=.2, edge.color="red",
+     vertex.color="orange", vertex.frame.color="yellow", #set the border color of the nodes to white
+     vertex.label=V(net_simple)$media, vertex.label.color="black") 
+
+```
+
+### Task for practice: visualize net_simple and adjust parameters
+
+in the following code chunk, plot the net_simple using `plot()`
+function. Set the edges as black with small arrows (.4). Set nodes to be
+blue with gray borders. Make each node to display a label from the
+variable `type.label`. Also adjust the labels to be yellow.
+
+```{r}
+
+```
+
+-   Step 2: Network layouts
+
+Network layouts are methods that decide the coordinates of each node,
+where each node should appear when we draw a network. To explore and
+demonstrate different layouts, we first create a 100-node graph using
+`sample_pa()`. Using this function, the computer will automatically
+generate a network showing 100 nodes and the edges (links between nodes.
+This graph is based on preferential attachment (Barabasi-Albert model).
+
+```{r}
+
+net.bg <- sample_pa(100)  #create a network
+V(net.bg)$size <- 8  #set the size of node to 8
+V(net.bg)$frame.color <- "white" #set the border color
+V(net.bg)$color <- "orange" #set the fill color of nodes
+V(net.bg)$label <- ""  #remove node label
+E(net.bg)$arrow.mode <- 0 #remove arrows for edges
+plot(net.bg) 
+
+```
+
+Next, we will introduce several layout types. first, `layout_randomly`
+helps place the nodes in random positions.`layout_in_circle` helps
+arrange all the nodes in a circle. `layout_on_sphere` calculates
+positions for each node as if the nodes were placed on the surface of a
+sphere (a 3D ball).
+
+```{r}
+#layout randomly
+plot(net.bg, layout=layout_randomly)
+
+#layout nodes in circle
+l <- layout_in_circle(net.bg)
+plot(net.bg, layout=l)
+
+#layout in 3d sphere
+l <- layout_on_sphere(net.bg)
+plot(net.bg, layout=l)
+
+```
+
+Fruchterman-Reingold is one of the most used force-directed layout
+algorithms out there. We can use `layout_with_fr()` to plot the graph.
+You can understand this function as to help us draw connected nodes
+closer to each other while unconnected nodes appear far from each other.
+Some other layout types include Kamada Kawai (kk), which is also a force
+directed algorithm. kk is similar to fr. The function used for kk is
+`layout_with_kk`. Another force-directed algorithm is GEM
+(`layout_with_gem`). Graphopt is another force directed algorithm,
+particularly helpful for visualizing large networks
+(`layout_with_graphopt`). The MDS (multidimensional scaling) algorithm
+is another layout type that places nodes that similar to and closer to
+each other closer together in the graph (`layout_with_mds`).
+
+```{r}
+
+#Fruchterman-Reingold layout
+l <- layout_with_fr(net.bg)
+plot(net.bg, layout=l)
+
+#Kamada Kawai layout
+l <- layout_with_kk(net.bg)
+plot(net.bg, layout=l)
+
+#GEM layout
+l <- layout_with_gem(net.bg)
+plot(net.bg, layout=l)
+
+#graphopt layout
+l <- layout_with_graphopt(net.bg)
+plot(net.bg, layout=l)
+
+#MDS layout
+plot(net.bg, layout=layout_with_mds)
+```
+
+The following codes show all the avaiable layouts in igraph.
+
+```{r}
+
+layouts <- grep("^layout_", ls("package:igraph"), value=TRUE)[-1] 
+# Remove layouts that do not apply to our graph.
+layouts <- layouts[!grepl("bipartite|merge|norm|sugiyama|tree", layouts)]
+
+par(mfrow=c(3,3), mar=c(1,1,1,1))
+for (layout in layouts) {
+  print(layout)
+  l <- do.call(layout, list(net)) 
+  plot(net, edge.arrow.mode=0, layout=l, main=layout) }
+
+```
+
+-   Step 3: Highlight networks If our network structure is too dense, we
+    cannot observe it carefully and extract the most important
+    information. Sometimes we just want to highlight the most important
+    ties in the graph. The first way is to sparsify the network, keeping
+    only the most important ties (that of higher weight).
+
+```{r}
+
+hist(links$weight) #create a histogram of distribution of the weight
+mean(links$weight) #calculate the mean value of the weight
+sd(links$weight) #calculate the standard deviation of the weight
+
+# Here, we only keep edges that have weight higher than the mean for the network
+cut.off <- mean(links$weight) 
+net.sp <- delete_edges(net, E(net)[weight<cut.off])
+plot(net.sp, layout=layout_with_kk) 
+
+```
+
+Another way to highlight part of networks is to highlight a group of
+particular nodes. Following is an example. In this example, we focus on
+NYT and visualize distances from NTY in the graph.
+
+```{r}
+
+#calculate distances from NYT node
+dist.from.NYT <- distances(net, v=V(net)[media=="NY Times"], 
+                           to=V(net), weights=NA)
+
+# Set colors to plot the distances:
+oranges <- colorRampPalette(c("dark red", "gold")) #create a color scale from dark red to gold.
+col <- oranges(max(dist.from.NYT)+1)
+col <- col[dist.from.NYT+1] #assign colors to each node based on distances 
+
+plot(net, vertex.color=col, vertex.label=dist.from.NYT, edge.arrow.size=.6, 
+     vertex.label.color="white") #vertex.label shows the distance from NYT on each node.
+
+```
+
+Another way to highlight part of networks is to highlight a path in the
+network. The following codes demonstrate an example to find the shortest
+connection path between MSNBC and the New York Post and highlights it in
+the network graph
+
+```{r}
+
+#find the shortest path between MSNBC and New York Post.
+news.path <- shortest_paths(net, 
+                            from = V(net)[media=="MSNBC"], 
+                             to  = V(net)[media=="New York Post"],
+                             output = "both") # both path nodes and edges
+
+# Generate edge color variable to plot the path:
+ecol <- rep("gray80", ecount(net)) #all edges are colored light gray
+ecol[unlist(news.path$epath)] <- "orange" #change the color of those edges on the shortest path to orange
+# Generate edge width variable to plot the path:
+ew <- rep(2, ecount(net)) #create default edge width
+ew[unlist(news.path$epath)] <- 4 #make the path edge width thicker
+# Generate node color variable to plot the path:
+vcol <- rep("gray40", vcount(net)) #create default node colors
+vcol[unlist(news.path$vpath)] <- "gold" #change the color of the nodes on path
+
+plot(net, vertex.color=vcol, edge.color=ecol, 
+     edge.width=ew, edge.arrow.mode=0)
+```
+
+Another way to draw attention to a group of nodes (we saw this before
+with communities) is to mark and highlight the group of nodes.
+
+```{r}
+
+par(mfrow=c(1,2)) #split the graph area into one row and two columns.
+#mark one group
+plot(net, mark.groups=c(1,4,5,8), mark.col="#C5E5E7", mark.border=NA) #highlight nodes 1,4,5,7 and cover them in light blue.
+
+#mark two groups
+plot(net, mark.groups=list(c(1,4,5,8), c(15:17)), #group nodes 1,4,5,8 and 15,17 separately.
+          mark.col=c("#C5E5E7","#ECD89A"), mark.border=NA)
+```

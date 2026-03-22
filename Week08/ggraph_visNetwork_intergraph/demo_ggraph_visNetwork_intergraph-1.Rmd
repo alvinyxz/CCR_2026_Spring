@@ -1,0 +1,372 @@
+---
+title: "demo_ggraph_visNetwork_intergraph"
+author: "Wenwen Cao, Qiling Wu, Ruiheng Sun"
+output: html_document
+---
+
+# ggraph
+
+**ggraph** is a R package for network visualization, using ggplot2 syntax.
+The ggplot2 package and its extensions are known for offering the most meaningfully structured and advanced way to visualize data in R. In ggplot2, you can select from a variety of visual building blocks and add them to your graphics one by one, a layer at a time.
+
+The ggraph package takes this principle and extends it to network data. In this section, we’ll cover the basics of graphics approach. For a deeper look, it would be best to get familiar with ggplot2 first, then learn the specifics of ggraph.
+
+Import data
+```{r}
+nodes <- data.frame(id=1:7, # id column (must be called id)
+                    name=c("Asher","Bella","Chloe","Daniel","Emma","Frank","Gabriel"), # student names
+                    major=c("CS","CS","CS","STAT","DS","DS","DS"), # CS: computer science major, STAT: statistics major, DS: data science major
+                    major.type=c(1,1,1,2,3,3,3)) # 1: CS, 2: STAT, 3: DS
+data.frame(nodes)
+edges <- data.frame(from=c(1,1,2,3,5,5,6,7),
+                    to=c(2,4,3,1,4,6,7,5),
+                    weight=c(1,1,1,1,1,1,1,1))
+data.frame(edges)
+```
+
+## Package you need for ggraph
+```{r}
+#install.packages("igraph")
+# install.packages("ggraph")
+
+library(igraph)
+library(ggraph)
+```
+
+## Create New Object
+- `graph_from_data_frame()`: create a network object from nodes and edges
+- `edges`: defines connections between nodes
+- `vertices = nodes`: provides node attributes (e.g., name, major)
+- `directed = TRUE`: indicates the network is directed
+```{r}
+net <- graph_from_data_frame(edges, vertices = nodes, directed = TRUE)
+```
+
+## Basic Visualization
+- `ggraph(net)`: initialize the plot with the network object
+- `geom_edge_link()`: draw edges (connections between nodes)
+- `geom_node_point()`: draw nodes (vertices)
+```{r}
+library(ggraph)
+
+ggraph(net) +
+  geom_edge_link() +   # edges
+  geom_node_point()    # nodes
+```
+
+## Layout
+- `layout = "fr"`: force-directed layout (Fruchterman-Reingold)
+```{r}
+ggraph(net, layout = "fr") +
+  geom_edge_link() +
+  geom_node_point()
+```
+- `"circle"`: place nodes in a circular layout
+```{r}
+ggraph(net, layout = "circle") +
+  geom_edge_link() +
+  geom_node_point()
+```
+
+
+## Edge styles
+- `geom_edge_fan()`: draw curved edges (useful for overlapping edges)
+- `color`: edge color
+- `width`: edge thickness
+- `alpha`: transparency (0–1)
+- `theme_void()`: remove background and axes
+```{r}
+ggraph(net, layout = "fr") +
+  geom_edge_fan(color = "gray50", width = 0.8, alpha = 0.5) + 
+  geom_node_point(size = 6) +
+  theme_void()
+```
+
+## Node Aesthetics
+- `aes()`: map data variables to visual properties
+- `color = major`: color nodes based on attribute `major`
+- `size`: node size
+```{r}
+ggraph(net, layout = "fr") +
+  geom_edge_link(alpha = 0.5) +
+  geom_node_point(aes(color = major), size = 6) +
+  theme_void()
+```
+
+## Add Labels
+- `geom_node_text()`: add labels to nodes
+- `label = name`: use node attribute `name`
+- `repel = TRUE`: avoid overlapping labels
+```{r}
+ggraph(net, layout = "fr") +
+  geom_edge_link(color = "gray") +
+  geom_node_point(aes(color = major), size = 6) +
+  geom_node_text(aes(label = name), repel = TRUE) +
+  theme_void()
+```
+
+## Combining Example
+- combine edges, nodes, and labels into one plot
+```{r}
+ggraph(net, layout = "fr") +
+  geom_edge_link(color = "gray70", alpha = 0.5) +
+  geom_node_point(aes(color = major), size = 6) +
+  geom_node_text(aes(label = name), repel = TRUE, size = 4) +
+  theme_void()
+```
+
+
+# visNetwork
+
+**visNetwork** is a R package for network visualization, using vis.js javascript library (<https://visjs.org>).
+
+Package you need for visNetwork
+
+```{r}
+# install.packages("visNetwork")
+library(visNetwork)
+```
+
+visNetwork needs at least two informations :
+
+-   a nodes data.frame, with id column
+-   a edges data.frame, with from and to columns
+
+### Nodes
+
+-   A nodes data.frame must have an `id` column
+-   Other optional columns can also be added into our nodes data.frame
+
+```{r}
+nodes <- data.frame(id=1:7, # id column (must be called id)
+                    name=c("Asher","Bella","Chloe","Daniel","Emma","Frank","Gabriel"), # student names
+                    major=c("CS","CS","CS","STAT","DS","DS","DS"), # CS: computer science major, STAT: statistics major, DS: data science major
+                    major.type=c(1,1,1,2,3,3,3)) # 1: CS, 2: STAT, 3: DS
+data.frame(nodes)
+```
+
+### Edges
+
+-   An edges data.frame must include a `from` column and a `to` column
+-   We also add a `weight` column on our edges data.frame to describe the frequency of interactions between two nodes.
+-   For example, in the first row, we know student 1 reached out to student 2 once.
+
+```{r}
+edges <- data.frame(from=c(1,1,2,3,5,5,6,7),
+                    to=c(2,4,3,1,4,6,7,5),
+                    weight=c(1,1,1,1,1,1,1,1))
+data.frame(edges)
+```
+
+### Visualiztion
+
+```{r}
+visNetwork(nodes, edges)
+```
+
+### Customize Node
+
+```{r}
+# install.packages("RColorBrewer")
+# install.packages("dplyr")
+library(RColorBrewer)
+library(dplyr)
+
+# use three colors to distinguish students by their majors
+colors <- colorRampPalette(brewer.pal(3, "RdBu"))(3) 
+
+nodes <- nodes %>% 
+  mutate(shape="dot", # "shape" variable: customize shape of nodes ("dot", "square", "triangle")
+         shadow=TRUE, # "shadow" variable: include/exclude shadow of nodes
+         title=major, # "title" variable: tooltip (html or character), when the mouse is above
+         label=name, # "label" variable: add labels on nodes
+         size=20, # "size" variable: set size of nodes
+         borderWidth=1, # "borderWidth" variable: set border width of nodes
+         color.background=colors[major.type], # "color.background" variable: set color of nodes
+         color.border="grey", # "color.border" variable: set frame color
+         color.highlight.background="yellow", # "color.highlight.background" variable: set color of the selected node
+         color.highlight.border="black") # "color.highlight.border" variable: set frame color of the selected node
+
+visNetwork(nodes, edges, width="100%", main="Student Interaction Network") %>% # "main" variable: add a title
+  visLayout(randomSeed=4) # give a random seed manually so that the layout will be the same every time
+```
+
+### Customize Edge
+
+```{r}
+edges <- edges %>% mutate(width=weight*3, # "width" variable: set width of each edge
+                          color="lightgrey", # "color" variable: set color of edges
+                          arrows="to", # "arrows" variable: set arrow for each edge ("to", "middle", "from ")
+                          smooth=TRUE) # "smooth" variable: each edge to be curved or not
+
+visNetwork(nodes, edges, width="100%", main="Student Interaction Network") %>% 
+  visLayout(randomSeed=4)
+```
+
+### Add Legend Based on Groups
+
+```{r}
+nodes <- nodes %>% mutate(group=major) # add a "group" column on node data.frame and add groups on nodes
+visNetwork(nodes, edges, width="100%", main="Student Interaction Network") %>%
+  visLayout(randomSeed=4) %>% 
+  visGroups(groupname="CS", color=colors[1]) %>% # color "colors[1]" for "CS" group 
+  visGroups(groupname="STAT", color=colors[2]) %>%
+  visGroups(groupname="DS", color=colors[3]) %>%
+  visLegend(width=0.1, position="right", main="Academic Major") # "position" variable: set position ("left", "right") 
+```
+
+### Select by Node
+
+```{r}
+nodes <- nodes %>% select(-group) # remove "group" column because we don't want to show legend this time
+visNetwork(nodes, edges, width="100%", main="Student Interaction Network") %>%
+  visLayout(randomSeed=4) %>% 
+  visOptions(nodesIdSelection=TRUE, # "nodesIdSelection" variable: select a node by id
+             selectedBy="major") %>% # "selectedBy" variable: select a node by the values of a column such as "major" column
+  visLegend()
+```
+
+### Highlight Nearest Nodes
+
+```{r}
+visNetwork(nodes, edges, width="100%", main="Student Interaction Network") %>% 
+  visLayout(randomSeed=4) %>% 
+  visOptions(highlightNearest = list(enabled = TRUE, # "enabled" variable: highlight nearest nodes and edges by clicking on a node
+  degree = 2)) # "degree" variable: set degree of depth
+```
+
+### Edit Network
+
+```{r}
+visNetwork(nodes, edges, width="100%", main="Student Interaction Network") %>%
+  visLayout(randomSeed=4) %>% 
+  visOptions(highlightNearest=TRUE, # degree of depth = 1
+             nodesIdSelection=TRUE,
+             selectedBy="major",
+             manipulation=TRUE) %>%  # "manipulation" variable: add/delete nodes/edges or change edges
+  visLegend()
+```
+
+### Add Navigation Buttons and Control Interactions
+
+```{r}
+our_network <- visNetwork(nodes, edges, width="100%", main="Student Interaction Network") %>%
+  visLayout(randomSeed=4) %>%
+  visOptions(highlightNearest=TRUE,
+             nodesIdSelection=TRUE,
+             selectedBy="major") %>% 
+  visInteraction(hideEdgesOnDrag=TRUE, # "hideEdgesOnDrag" variable: hide edges when dragging the view
+  dragNodes=TRUE, # "dragNodes" variable: hide nodes when dragging the view
+  dragView=TRUE, # "dragView" variable: enable or not the movement of the full network
+  zoomView=TRUE, # "zoomView" variable: enable or not the zoom (use mouse scroll)
+  navigationButtons=TRUE) %>% # "navigationButtons" variable: show navigation buttons
+  visLegend()
+```
+
+### Export
+
+we use `visSave()` to save network in html file.
+
+```{r}
+visSave(our_network, file = "Student Interaction Network.html", background="white")
+```
+
+# intergraph and igraph
+
+**intergraph** is an R package used to convert network objects between `network` and `igraph`.
+
+**igraph** is a R package for network analysis and visualization.
+
+Packages you need for intergraph and igraph
+
+```{r}
+# install.packages("intergraph")
+# install.packages("igraph")
+# install.packages("network")
+
+library(intergraph)
+library(igraph)
+library(network)
+```
+
+**intergraph** mainly works with two types of network objects: a network object an igraph object
+
+## Two common conversion functions are:
+
+asIgraph() : convert a network object to an igraph object
+
+asNetwork() : convert an igraph object to a network object
+
+### Network conversion: igraph and network
+
+**intergraph** is used to convert between `igraph` and `network` objects.
+
+```{r}
+library(intergraph) 
+library(igraph) 
+library(network)
+
+# Create a sumple edge list 
+edges <- data.frame(
+  from = c("A", "A", "B", "C"),
+  to   = c("B", "C", "D", "D")
+)
+
+edges
+```
+
+Create an igraph object from the edge list
+
+```{r}
+g <- graph_from_data_frame(edges, directed = FALSE)
+
+g
+summary(g)
+```
+
+Convert igraph to network
+
+```{r}
+net <- asNetwork(g)
+
+net
+summary(net)
+```
+
+Check the edge list of the network object
+
+```{r}
+as.matrix(net, "edgelist")
+```
+
+Convert network back to igraph
+
+```{r}
+g2 <- asIgraph(net)
+
+g2
+summary(g2)
+```
+
+Check the edge list of the converted igraph object
+
+```{r}
+igraph::as_edgelist(g2)
+```
+
+Compare whether the two objects represent the same network
+
+```{r}
+all.equal(
+  igraph::as_edgelist(g),
+  structure(as.matrix(net, "edgelist"), ncol = 2)
+)
+```
+
+Compare them more formally
+
+```{r}
+netcompare(g, net)
+```
+
+Here we compare the edge lists to check whether the connections between nodes are preserved after conversion. Although all.equal() shows some mismatches due to different data types and attribute formats, the adjacency matrices are identical, which means the network structure is preserved.

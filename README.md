@@ -40,12 +40,13 @@
 - Email: <alvinyxz@umn.edu>
 - Date: Thursdays 2:30-5pm, Jan 22 – Apr 30, 2026 (No class on Mar 12)
 - Location: In person, Murphy Hall 25 (basement)
-- Primary Language: R (no prior coding assumed)
+- Coding Language: 70% R & 30% Python (no prior coding assumed)
 - Syllabus: <https://z.umn.edu/J8500_Syllabus>
 - Materials: <https://z.umn.edu/J8500>
 - Reading and Demo Sign-Up Sheet: <https://z.umn.edu/J8500_SignUp>
 - In-Person Office Hours: Thursdays 1:30-2:30 pm, Murphy Hall 325
 - Or book me for virtual office hours on Google Calendar: <https://z.umn.edu/Alvin_Meeting> and we will meet on Zoom
+- Syllabus adapted from [Dr. Sijia Yang](https://sjmc.wisc.edu/news/staff/yang-sijia/)'s similar class at University of Wisconsin-Madison.
 
 ## 1.1. Reading (30%)
 
@@ -562,6 +563,7 @@ Final grades will be assigned according to the University of Minnesota Letter Gr
    - Github and Github Desktop
 
 4. Optional Readings
+   - Allcott, H., Gentzkow, M., Levy, R., Crespo-Tenorio, A., Dumas, N., Mason, W., Moehler, D., Barberá, P., Brown, T., Cisneros, J. C., Dimmery, D., Freelon, D., González-Bailón, S., Guess, A. M., Kim, Y. M., Lazer, D., Malhotra, N., Nair-Desai, S., Nyhan, B., … Tucker, J. A. (2026). The effects of political advertising on Facebook and Instagram before the 2020 US election. *Nature Human Behaviour*. https://doi.org/10.1038/s41562-025-02328-w
    - Nyhan, B., Settle, J., Thorson, E., Wojcieszak, M., Barberá, P., Chen, A. Y., Allcott, H., Brown, T., Crespo-Tenorio, A., Dimmery, D., Freelon, D., Gentzkow, M., González-Bailón, S., Guess, A. M., Kennedy, E., Kim, Y. M., Lazer, D., Malhotra, N., Moehler, D., … Tucker, J. A. (2023). Like-minded sources on Facebook are prevalent but not polarizing. *Nature, 620*(7972), 137–144. <https://doi.org/10.1038/s41586-023-06297-w>
    - Allcott, H., Gentzkow, M., Mason, W., Wilkins, A., Barberá, P., Brown, T., Cisneros, J. C., Crespo-Tenorio, A., Dimmery, D., Freelon, D., González-Bailón, S., Guess, A. M., Kim, Y. M., Lazer, D., Malhotra, N., Moehler, D., Nair-Desai, S., Nait El Barj, H., Nyhan, B., … Tucker, J. A. (2024). The effects of Facebook and Instagram on the 2020 election: A deactivation experiment. *Proceedings of the National Academy of Sciences, 121*(21), e2321584121. <https://doi.org/10.1073/pnas.2321584121>
    - Freiling, I., Krause, N. M., Scheufele, D. A., & Chen, K. (2021). The science of open (communication) science: Toward an evidence-driven understanding of quality criteria in communication research. *Journal of Communication, 71*(5), 686–714. <https://doi.org/10.1093/joc/jqab032>
