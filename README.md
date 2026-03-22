@@ -46,7 +46,7 @@
 - Reading and Demo Sign-Up Sheet: <https://z.umn.edu/J8500_SignUp>
 - In-Person Office Hours: Thursdays 1:30-2:30 pm, Murphy Hall 325
 - Or book me for virtual office hours on Google Calendar: <https://z.umn.edu/Alvin_Meeting> and we will meet on Zoom
-- Syllabus adapted from [Dr. Sijia Yang](https://sjmc.wisc.edu/news/staff/yang-sijia/)'s similar class at University of Wisconsin-Madison.
+- Syllabus adapted from [Dr. Sijia Yang](https://sjmc.wisc.edu/news/staff/yang-sijia/)'s similar class at the University of Wisconsin-Madison.
 
 ## 1.1. Reading (30%)
 
