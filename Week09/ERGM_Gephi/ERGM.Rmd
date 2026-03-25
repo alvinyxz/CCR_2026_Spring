@@ -1,0 +1,345 @@
+---
+title: "ERGM Tutorial"
+author: "Alvin Zhou"
+date: "`r Sys.Date()`"
+output:
+  html_document:
+    toc: true
+    toc_depth: 2
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+  echo = TRUE,
+  message = FALSE,
+  warning = FALSE
+)
+```
+
+## 1) Load Packages and Set Data Path
+
+```{r libraries}
+# clean up the environment
+rm(list = ls())
+library("tidyverse")
+library("igraph")
+library("network")
+library("ergm")
+library("intergraph")
+
+DATA_DIR <- "network_data"
+```
+
+## 2) Import the Same Network in Multiple Ways
+
+### Method 1A: CSV Files (node list + edge list)
+
+```{r import-csv-edgelist}
+nodes_df <- read_csv(file.path(DATA_DIR, "ergm_node_list.csv"))
+edges_df <- read_csv(file.path(DATA_DIR, "ergm_edge_list.csv"))
+
+g_from_edgelist <- graph_from_data_frame(
+  d = edges_df,
+  directed = FALSE,
+  vertices = nodes_df
+)
+```
+
+### Method 1B: CSV Files (node list + adjacency matrix)
+
+```{r import-csv-adj}
+adj_df <- read_csv(file.path(DATA_DIR, "ergm_adjacency_matrix.csv"))
+
+adj_from_adjcsv <- adj_df |>
+  select(-id) |>
+  as.matrix()
+
+rownames(adj_from_adjcsv) <- adj_df$id
+colnames(adj_from_adjcsv) <- names(adj_df)[-1]
+
+g_from_adjcsv <- graph_from_adjacency_matrix(
+  adj_from_adjcsv,
+  mode = "undirected",
+  diag = FALSE
+)
+
+idx_csv <- match(V(g_from_adjcsv)$name, nodes_df$id)
+V(g_from_adjcsv)$party <- nodes_df$party[idx_csv]
+V(g_from_adjcsv)$gender <- nodes_df$gender[idx_csv]
+V(g_from_adjcsv)$age <- nodes_df$age[idx_csv]
+V(g_from_adjcsv)$outgoingness <- nodes_df$outgoingness[idx_csv]
+```
+
+### Method 2: One RDS File
+
+```{r import-rds}
+g_from_rds <- readRDS(file.path(DATA_DIR, "ergm_network_rds.rds"))
+
+nodes_rds <- tibble(
+  id = V(g_from_rds)$name,
+  party = V(g_from_rds)$party,
+  gender = V(g_from_rds)$gender,
+  age = V(g_from_rds)$age,
+  outgoingness = V(g_from_rds)$outgoingness
+)
+```
+
+For the rest of this walkthrough, we use the RDS import.
+
+```{r choose-source}
+g <- g_from_rds
+
+nodes <- tibble(
+  id = V(g)$name,
+  party = V(g)$party,
+  gender = V(g)$gender,
+  age = V(g)$age,
+  outgoingness = V(g)$outgoingness
+)
+adj <- as.matrix(as_adjacency_matrix(g, sparse = FALSE))
+
+# Calculate network summary statistics
+num_nodes <- nrow(nodes)
+num_edges <- sum(adj) / 2
+net_density <- sum(adj) / (nrow(adj) * (nrow(adj) - 1))
+```
+
+**Network summary**: Our network has **`r num_nodes` nodes** and **`r num_edges` edges**, with a density of **`r signif(net_density, 3)`**.
+
+The network density tells us what fraction of all possible ties actually exist. In this case, about 
+`r round(100 * net_density, 1)`% of all possible connections between pairs of nodes are realized.
+
+## 3) Basic igraph Visualization
+
+```{r igraph-setup}
+V(g)$label <- NA_character_
+
+set.seed(1)
+lay <- layout_with_fr(g)
+
+party_cols <- c("Democrat" = "#0033CC", "Republican" = "#CC0000")
+gender_cols <- c("Woman" = "#8000CC", "Man" = "#808080")
+
+# Age coloring: dark grey (older) to bright orange (younger)
+age_min <- min(V(g)$age)
+age_max <- max(V(g)$age)
+age_normalized <- (V(g)$age - age_min) / (age_max - age_min)
+# Interpolate from dark grey (#404040) to bright orange (#FF8C00)
+age_cols <- rgb(
+  0.25 + 0.75 * age_normalized,  # R: 0.25 (dark) to 1.0 (bright)
+  0.25 + 0.30 * age_normalized,  # G: 0.25 to 0.55
+  0.25 - 0.25 * age_normalized   # B: 0.25 to 0.0
+)
+
+outgoing_sizes <- 4 + V(g)$outgoingness
+```
+
+```{r igraph-plot, fig.width=16, fig.height=4}
+par(mfrow = c(1, 4), mar = c(1, 1, 3, 1))
+plot(
+  g,
+  layout = lay,
+  vertex.color = party_cols[V(g)$party],
+  vertex.size = 8,
+  vertex.label = NA,
+  edge.color = adjustcolor("grey30", alpha.f = 0.35),
+  main = "Color by Party\n(Democrat = Blue, Republican = Red)"
+)
+plot(
+  g,
+  layout = lay,
+  vertex.color = gender_cols[V(g)$gender],
+  vertex.size = 8,
+  vertex.label = NA,
+  edge.color = adjustcolor("grey30", alpha.f = 0.35),
+  main = "Color by Gender\n(Woman = Purple, Man = Grey)"
+)
+plot(
+  g,
+  layout = lay,
+  vertex.color = age_cols,
+  vertex.size = 8,
+  vertex.label = NA,
+  edge.color = adjustcolor("grey30", alpha.f = 0.35),
+  main = "Color by Age\n(Older = Dark Grey , Younger = Orange)"
+)
+plot(
+  g,
+  layout = lay,
+  vertex.color = "#5A8C5A",
+  vertex.size = outgoing_sizes,
+  vertex.label = NA,
+  edge.color = adjustcolor("grey30", alpha.f = 0.35),
+  main = "Size by Outgoingness\n(Larger = More Outgoing)"
+)
+```
+
+**Now think:** What mechanisms might generate this structure? Think about:
+
+- Does partisan sorting (homophily) appear stronger or weaker than you'd expect?
+- How does gender or age similarity show up in ties?
+- What role might outgoingness play in who connects to whom?
+- Is triadic closure (transitivity; "my friends are also friends") a trend here?
+
+## 4) Build a statnet Network Object
+
+**Why convert from igraph to statnet?**
+
+So far we've used `igraph` for visualization and summary statistics---it's great for those tasks. However, **ERGM fitting requires the `statnet` ecosystem**, specifically the `network` object class from the `network` package. Here's why:
+
+- The `ergm()` function (and the whole `ergm` package) is built around `network` objects, not `igraph` objects.
+- `igraph` and `network` are fundamentally different graph representation systems with different APIs and underlying assumptions, think of it as Android vs. iOS.
+- The `statnet` ecosystem (`network`, `ergm`, `ergm.ego`, `tergm`, etc.) all use `network` objects as their standard format.
+
+The `intergraph` package bridges these two worlds: it lets us convert our `igraph` graph into a `network` object, preserving vertex attributes and edge structure. Once converted, we can fit ERGM models and use other `statnet` tools.
+
+**Note:** After we fit the ERGM, we could convert back to `igraph` for visualization if desired, but the modeling step *requires* `statnet`/`network` objects.
+
+```{r build-statnet-network}
+net1 <- intergraph::asNetwork(g)
+set.vertex.attribute(net1, "party", nodes$party)
+set.vertex.attribute(net1, "gender", nodes$gender)
+set.vertex.attribute(net1, "age", nodes$age)
+set.vertex.attribute(net1, "outgoingness", nodes$outgoingness)
+```
+
+## 5) Fit an ERGM Sequence
+
+### Fitting Models
+
+**ERGM Terms Explained:**
+
+- **`nodematch("attr")`**: Tests for **homophily** on a categorical attribute. Positive coefficient means people with the same attribute value are more likely to be connected (e.g., Democrats connecting with Democrats).
+
+- **`absdiff("attr")`**: Tests the effect of **absolute difference** on a continuous attribute. Negative coefficient means larger differences *reduce* the probability of a tie (e.g., people of similar ages are more likely to connect).
+
+- **`gwesp()`**: Geometrically-weighted edgewise shared partners. Tests for **triadic closure** / clustering. This captures the tendency for "my friends' friends become my friends." Positive coefficient indicates strong clustering.
+
+  - In `gwesp(0.5, fixed = TRUE)`, **`0.5`** is the decay parameter ($\alpha$).
+  - It controls how strongly extra shared partners are weighted.
+  - Smaller decay: higher shared-partner counts still matter a lot.
+  - Larger decay: diminishing returns are stronger; going from 0 to 1 matters much more than from 4 to 5.
+  - So `0.5` is a moderate choice that rewards closure but with diminishing returns.
+
+  - **`fixed = TRUE`** means the decay value (`0.5`) is held fixed, not estimated from data.
+  - Pros: simpler model, often more stable and faster.
+  - Cons: you assume the decay shape instead of learning it.
+  - If `fixed = FALSE`, ERGM also estimates the decay parameter (more flexible, but can be harder to fit/converge).
+
+**Other common ERGM terms:**
+
+- `triangle`: Count of triangles (simple triadic closure)
+- `twopath`: Two-paths (paths of length 2), relates to clustering
+- `sender("attr")`, `receiver("attr")`: Directional effects (for directed networks)
+- `nodefactor("attr")`: Main effect of being in a particular category
+- `nodecov("attr")`: Effect of a continuous attribute on degree
+- `mutual`: Reciprocity (for directed networks)
+- `isolates`: Number of isolated vertices
+
+```{r fit-ergms}
+m0 <- ergm(net1 ~ edges)
+m1 <- ergm(net1 ~ edges + nodematch("party"))
+m2 <- ergm(net1 ~ edges + nodematch("party") + nodematch("gender") + absdiff("age") + absdiff("outgoingness"))
+m3 <- ergm(net1 ~ edges + nodematch("party") + nodematch("gender") + absdiff("age") + absdiff("outgoingness") + gwesp(0.5, fixed = TRUE))
+```
+
+### Model m3 Summary
+
+```{r fit-ergms-summary}
+print(summary(m3))
+```
+
+### How to Interpret m3 Coefficients
+
+**Coefficient interpretation guide:**
+
+- **Coefficients** are in log-odds.
+- **exp(coef)** gives an odds ratio (multiplicative change in odds).
+- **Positive coef** -> tie is more likely; **negative coef** -> tie is less likely.
+- **For nodematch('party') / nodematch('gender'):** positive means same-group pairs are more likely tied.
+- **For absdiff('age') / absdiff('outgoingness'):** negative means larger differences reduce tie odds.
+- **For gwesp:** positive means stronger triadic closure / clustering tendency.
+
+### Understanding the `edges` Term
+
+The **`edges` coefficient is the baseline/intercept** of your ERGM. It captures the natural tendency toward tie formation before any attributes matter.
+
+**What `edges` values mean:**
+
+- **Potential range:** From $-\infty$ to $+\infty$ (log-odds scale), but typical social networks range from $-5$ to $+2$.
+- **Interpretation:**
+  - **Negative `edges`** (e.g., $-2.80$): Baseline network is **sparse**. Most random pairs are NOT connected. This is typical for social networks.
+  - **Positive `edges`** (e.g., $+0.50$): Baseline network is **dense**. Most random pairs WOULD be connected. Very rare in real social networks; might indicate a very cohesive or small group.
+  - **Zero `edges`**: Exactly 50/50 baseline odds-neither sparse nor dense.
+
+**Important clarification on density:**
+
+- If the model is only `~ edges`, then `edges = 0` implies tie probability $p=0.5$, so expected density is 0.5.
+- In a fuller ERGM (like this one, with `nodematch`, `absdiff`, `gwesp`), `edges = 0` is only a baseline reference point. Other terms shift dyad probabilities, so overall density can still be far from 0.5.
+
+**Examples:**
+
+1. **Negative example (our data):** `edges = -2.80`
+  - Odds ratio: $e^{-2.80} \approx 0.061$
+  - Interpretation: 1/0.061 = 16.39. For any random pair, the baseline odds of a tie are about 16.39:1 *against* a connection. Our network is sparse.
+  - p-value: highly significant (< 1e-04), confirming this sparsity is real, not random noise.
+
+2. **Positive example (hypothetical):** `edges = +1.00`
+  - Odds ratio: $e^{1.00} \approx 2.72$
+  - Interpretation: For any random pair, the baseline odds of a tie are about 2.7:1 *in favor* of a connection. A very dense network where people tend to connect unless there's a reason not to.
+
+```{r coef-interpretation}
+coef_tbl <- tibble(
+  term = names(coef(m3)),
+  log_odds = unname(coef(m3)),
+  odds_ratio = exp(log_odds)
+)
+
+coef_tbl
+```
+
+### AIC Comparison
+
+**How to interpret AIC:**
+
+- **Lower AIC is better.** AIC balances model fit (likelihood) with model complexity (number of parameters).
+- **Difference >10:** Strong evidence the lower-AIC model is better.
+- **Difference 4-7:** Moderate evidence the lower-AIC model is better.
+- **Difference <4:** Competing models have similar support; prefer the simpler one (fewer parameters).
+- If AIC increases when you add a term, that term is not worth the added complexity.
+
+```{r fit-ergms-aic}
+print(AIC(m0, m1, m2, m3))
+```
+
+### Goodness-of-Fit Diagnostics
+
+**How to read GOF and assess model fit:**
+
+GOF compares observed network statistics to those simulated from the fitted model:
+
+- **Basics:** The table shows observed statistics (Obs), mean simulated (Mean Sim), and standard deviation (Std Dev Sim).
+- **Boxplots:** Each box summarizes the distribution from simulated networks at each x-axis value.
+  - Middle line = median simulated value
+  - Box = interquartile range (25th to 75th percentile)
+  - Whiskers = typical spread beyond the box (R boxplot rule)
+  - Open circles = simulated outliers
+- **Blue diamonds:** Mean (average) of the simulated values.
+- **Black line/points:** Observed statistic from the real network.
+- **Range/spread:** The vertical spread (box + whiskers) shows how much variation the model produces for that statistic.
+  - Narrow range = model predicts that feature consistently
+  - Wide range = model allows more variability
+- **Good fit:** Observed statistics should fall within ~1-2 standard deviations of the simulated mean. If observed is much farther, the model is misspecifying that aspect.
+- **Min, Max, Median, Mean:** Check if the model captures both average cases and extreme numbers.
+
+**What should we look for?** No perfect fit exists, but we want:
+
+- Most statistics within ~1 SD of observed
+- Random scatter around the diagonal (no systematic bias)
+- Worst fit usually happen at extreme nodes, which in some cases can be acceptable
+
+```{r gof}
+gof_m3 <- gof(m3)
+print(gof_m3)
+plot(gof_m3)
+```

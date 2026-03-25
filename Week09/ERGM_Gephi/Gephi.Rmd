@@ -1,0 +1,221 @@
+---
+title: "Gephi Tutorial"
+author: "Alvin Zhou"
+date: "`r Sys.Date()`"
+output:
+  html_document:
+    toc: true
+    toc_depth: 2
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
+```
+
+## 1) What is Gephi?
+
+**Gephi** is a free, open-source desktop application for interactive network visualization and exploration. Unlike `igraph` in R (which is code-driven), Gephi provides a point-and-click interface that lets you:
+
+- Visually explore network structure at a glance
+- Apply layouts, colors, and sizes interactively
+- Filter nodes/edges dynamically
+- Export publication-quality images
+
+**When should you use Gephi vs. igraph?**
+
+| Task | Gephi | igraph in R |
+|------|-------|-------------|
+| Quick visual exploration | ✅ Best | ✗ |
+| Reproducible analysis | ✗ | ✅ Best |
+| Interactive filtering | ✅ Best | ✗ |
+| Statistical modeling (ERGM) | ✗ | ✅ Best |
+| Publication figures with fine control | ✅ | ✅ |
+
+**Download Gephi:** [https://gephi.org](https://gephi.org)
+
+---
+
+## 2) The Data Files
+
+We will use two CSV files from the ERGM tutorial:
+
+- **`ergm_node_list.csv`** — One row per node (person), with columns:
+  - `id`: unique node identifier (1–60)
+  - `party`: Democrat or Republican
+  - `gender`: Woman or Man
+  - `age`: integer age (18–75)
+  - `outgoingness`: sociability score (1–7)
+
+- **`ergm_edge_list.csv`** — One row per edge (connection), with columns:
+  - `from`: id of the first person
+  - `to`: id of the second person
+
+- **`ergm_edge_list_gephi.csv`** — Same edge list, but with columns renamed to `Source` and `Target` as required by Gephi's importer. Use this file (not `ergm_edge_list.csv`) when importing into Gephi.
+
+This is an **undirected** network, so each row represents a mutual connection.
+
+---
+
+## 3) Import the Data into Gephi
+
+### Step 1: Open Gephi and create a new project
+
+Open Gephi. You will see a "Welcome" screen. Click **New Project**.
+
+> **Tip:** Gephi can be a little buggy. Get in the habit of saving your `.gephi` project file periodically as you work.
+
+### Step 2: Import the edge list
+
+> **Important:** Gephi requires the edge list columns to be named exactly **`Source`** and **`Target`** (capital S and T). The original `ergm_edge_list.csv` uses `from` and `to`, which Gephi will not recognize automatically. A ready-to-use copy with the correct column names has already been prepared as **`ergm_edge_list_gephi.csv`** — use that file for import.
+
+1. Go to **File → Import Spreadsheet...**
+2. Navigate to `ergm_edge_list_gephi.csv` and select it.
+3. In the import dialog:
+   - Set **Import as:** `Edges table`
+   - Set **Separator:** `Comma`
+   - Confirm that `Source` → **Source** and `Target` → **Target** (these should auto-map correctly)
+   - Check **Create missing nodes** (this auto-creates 60 nodes from the edge list)
+4. Click **Next → Finish**.
+5. When prompted, choose **Append to existing workspace**.
+6. Set **Graph type: Undirected** and click **OK**.
+
+You should now see 60 nodes and the edges loaded in the **Data Laboratory** tab at the top.
+
+### Step 3: Import the node attributes
+
+Our nodes are already created, but they have no attributes yet. Let's add them:
+
+1. Go to **File → Import Spreadsheet...** again.
+2. Navigate to `ergm_node_list.csv` and select it.
+3. In the import dialog:
+   - Set **Import as:** `Nodes table`
+   - Set **Separator:** `Comma`
+   - Make sure `id` is mapped as the **Node ID** column
+4. Click **Next**.
+5. Again, graph type is `Undirected`. Also confirm the columns: `party` (String), `gender` (String), `age` (Integer), `outgoingness` (Integer).
+6. Click **Finish → Append to existing workspace → OK**.
+
+Check the **Data Laboratory → Nodes** tab — you should now see all 60 nodes with their `party`, `gender`, `age`, and `outgoingness` attributes populated.
+
+---
+
+## 4) Apply a Layout
+
+Switch to the **Overview** tab at the top of Gephi. You should see your nodes scattered randomly. We will apply a layout to make the structure visible.
+
+### ForceAtlas 2 Layout (recommended)
+
+ForceAtlas 2 is fast, intuitive, and often produces clearer community separation for social networks.
+
+1. In the **Layout** panel (bottom-left), select **ForceAtlas 2** from the dropdown.
+2. Keep default settings to start, then adjust **Scaling** and **Gravity** if needed.
+3. Click **Run** and then **Stop** once the graph stabilizes (usually 5–15 seconds).
+
+> **Tip:** You can also try **Fruchterman-Reingold** (same family as `igraph`'s `layout_with_fr()`), especially if you want a direct comparison with your R plots.
+
+---
+
+## 5) Visualize Node Attributes
+
+### 5a) Color Nodes by Party
+
+1. In the **Appearance** panel (top-left), click the **Nodes** tab, then the paint bucket icon (**Color**).
+2. Click **Partition** and select `party` from the dropdown.
+3. Click the colored squares to assign:
+   - **Democrat** → Blue (`#0033CC`)
+   - **Republican** → Red (`#CC0000`)
+4. Click **Apply**.
+
+You should now see Democrats in blue and Republicans in red. Look for **partisan clusters** — are same-party members sitting close together?
+
+### 5b) Color Nodes by Gender
+
+Repeat the same steps but select `gender`:
+
+- **Woman** → Purple (`#8000CC`)
+- **Man** → Gray (`#808080`)
+
+### 5c) Size Nodes by Outgoingness
+
+1. In the **Appearance** panel, click **Nodes → Size** (the resize icon).
+2. Click **Ranking** and select `outgoingness`.
+3. Set **Min size** to `5` and **Max size** to `20`.
+4. Click **Apply**.
+
+Nodes with higher outgoingness (more sociable people) will appear larger. Do larger nodes tend to sit more centrally?
+
+### 5d) Color Nodes by Age
+
+1. In the **Appearance** panel, click **Nodes → Color → Ranking → age**.
+2. Click the gradient bar at the bottom of the panel.
+3. Set the left color (minimum age = 18) to **orange** (`#FF8C00`).
+4. Set the right color (maximum age = 75) to **dark grey** (`#404040`).
+5. You might need to drag the middle tick away to let it disappear, so you get a smooth gradient from orange to grey.
+6. Click **Apply**.
+
+Younger nodes appear orange, older nodes appear dark grey — consistent with the igraph visualization.
+
+---
+
+## 6) Label Nodes
+
+To display node IDs as labels:
+
+1. At the bottom of the **Overview** canvas, click the `T` (label) button in the toolbar to toggle labels on.
+   - If you notice some nodes do not show meaningful labels, go back to **Data Laboratory → Nodes** and check the **Label** column. You can manually type labels for each node there. Once that column is filled, Gephi can display those labels in your visualization.
+   - You can also copy-paste a column and let it become the label by: go to **Data Laboratory → Nodes**, double-click values in the `Label` column, and choose **Copy data to other column → Party**. It will confirm "Copy data from 'party' Copy to 'Label'".
+   - But then you will see how messy the labels are when you have 60 nodes. You can click the `T` button again to hide labels.
+2. In the **Appearance → Nodes → Label Color** panel, you can adjust label color and size.
+
+---
+
+## 7) Filter the Network
+
+The **Filters** panel (right side) lets you interactively show subsets of the network.
+
+### Example: Show only Democrats
+
+1. Open the **Filters** panel.
+2. Expand **Attributes → Partition → party**.
+3. Drag the `party` filter into the **Queries** box below.
+4. Uncheck **Republican** to show only Democrat nodes and their edges.
+5. Click **Filter**.
+
+This is useful for exploring within-group and cross-group connection patterns.
+
+---
+
+## 8) Compute and Display Network Statistics
+
+Gephi can compute basic statistics built-in:
+
+1. Open the **Statistics** panel (right side).
+2. Run **Average Degree** → shows mean number of connections per node.
+3. Run **Network Diameter** → computes shortest paths and labels each node with its betweenness centrality.
+4. Run **Modularity** → detects communities. The result is stored as a new node attribute called `Modularity Class`.
+   - After running, **color nodes by Modularity Class** to see detected communities.
+
+---
+
+## 9) Export
+
+### Export as Image
+
+1. Go to **File → Export → SVG/PDF/PNG file...**
+2. Choose **PNG** for a high-resolution image.
+3. Set resolution (e.g., 300 DPI for print, 72 DPI for web).
+4. Click **OK**.
+
+### Export the Graph File
+
+To save in a format you can re-open in Gephi later:
+
+1. Go to **File → Save As...**
+2. Save as a `.gephi` project file.
+
+### Export for Other Tools
+
+To export back to CSV or GEXF (an XML-based graph format readable by many tools):
+
+1. **File → Export → Graph file...**
+2. Choose format: `.gexf`, `.graphml`, or `.csv`.
