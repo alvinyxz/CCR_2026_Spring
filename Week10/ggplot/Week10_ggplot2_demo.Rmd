@@ -1,0 +1,394 @@
+---
+title: "Week10_ggplot2_demo"
+author: "Jiakun Liang, Quin Mudry Nelson"
+date: "2026-03-30"
+output: html_document
+---
+
+
+```{r setup, echo = FALSE}
+knitr::opts_chunk$set(eval = TRUE,echo = FALSE,warning = FALSE,message = FALSE)
+
+library(librarian)
+shelf(tidyverse, ggrepel, cowplot, ggthemes, datasets, plotly, RColorBrewer)
+
+```
+
+# Line Plots: geom_line()
+
+The project this study selected is "Alcohol Posts and Alcohol Use". The packages we used are as follows: tidyverse[@tidyverse], dplyr[@dplyr], plotly[@plotly], RColorBrewer[@RColorBrewer], lubridate[@lubridate], ggthemes[@ggthemes].
+
+## The daily alcohol use frequency by sex and condition
+
+### Question
+
+How did the daily drinking frequency (number of glasses) change for males and females in each experimental group?
+
+### Observations
+
+The graph describes how many glasses of alcohol used by students during a period of 43 days. During the first three weeks, students saw posts by other participants. In the last three weeks, they also saw posts by fake participants (the researcher). The latter posts had a negative or positive context, and they were social or not social (i.e., no people visible). Groups were randomly assigned to one of the four conditions in this 2 (negative versus positive) x 2 (not social versus social) between subjects experimental design. In the graph, the x-axis represents the day number, the y-axis represents alcohol use frequency (number of glasses of alcohol they used), and the vertical dotted lines indicate the start day of introducing the experimental manipulation. Lines are drawn connecting points on the plot, and the lines are colored based on their sex (blue for male, red for female). The plot is divided into multiple panels, each representing a different level of condition (negative/social, negative/non-social, positive/social, positive/non-social).
+
+Following the introduction of experimental manipulation at the three-week mark (21 days), there appears to be a consistent pattern in alcohol use for both males and females. Interestingly, males consistently exhibit a higher frequency of alcohol consumption compared to females across all four experimental conditions. The observed patterns suggest that the experimental manipulation did not lead to discernible differences in alcohol use behavior between genders, reinforcing the overall trend of higher alcohol consumption among males throughout the analyzed conditions.
+
+```{r}
+Alcohol_Day <- read.csv("Alcohol_Day.csv")
+# make sure it's in your working directory!
+```
+
+```{r}
+##Visualization
+#Convert the Alc_Freq column to numeric format while removing any missing values during the conversion.
+Alcohol_Day$Alc_Freq <- as.numeric(Alcohol_Day$Alc_Freq, na.rm = TRUE) 
+#Convert the Gender column to character format while removing any missing values during the conversion.
+Alcohol_Day$Gender <- as.character(Alcohol_Day$Gender, na.rm = TRUE) 
+#Group the data by day_nr, Gender, and Condition, calculate the mean of Alc_Freq within each group, filter out rows with missing "Condition" values, recode the Gender column to sex to clearly represent different genders, and then filter out rows with missing Sex values.
+Alcohol_Day |>
+  filter(!is.na(condition)) |>
+  filter(!is.na(Gender)) |>
+  group_by(day_nr, Gender, condition) |>
+  summarise(Alc_con = mean(Alc_Freq, na.rm = TRUE)) |>
+  filter(!is.na(Alc_con)) |>
+  mutate(Sex = case_when(
+    Gender == "1" ~ "male",
+    Gender == "2" ~ "female")) |>
+  #Create a ggplot object with the specified aesthetics and layers. It generates a line plot of alcohol use frequency over day number, colored by sex, with separate facets for different conditions. It adds vertical dotted lines at x = 22， representing the start day of manipulation introduction, with text annotations at aesthetically comfortable coordinates. Finally, it sets the plot title and axis labels.
+  ggplot(aes(x = day_nr, y = Alc_con, group = Sex, color = Sex)) +
+    geom_line() +
+    scale_color_manual(values = c("male" = "blue", "female" = "red")) +
+    facet_wrap(~condition) +
+    geom_vline(xintercept = 22, linetype="dotted") +
+    annotate("text", x = 28, y = 22, label = "manipulation", vjust = 0, hjust = 0, size = 2) +
+    annotate("text", x = 5, y = 22, label = "no manipulation", vjust = 0, hjust = 0, size = 2) +
+    labs(title = "Alcohol use frequency by sex and condition",
+       x = "Day number",
+       y = "Alcohol use frequency/glasses")
+```
+
+
+# Bar Plots: geom_bar() and geom_col()
+
+Bar plots are great at visualizing **categorical data**. Let's explore some bar plots using the 
+{admissions} dataset included in base R.
+
+## Using geom_bar to make a simple plot
+Keeping it simple, let's just make a plot of Admitted vs. Rejected Students:
+
+```{r, echo = TRUE}
+admissions <- as.data.frame(UCBAdmissions)
+
+barplot1 <- admissions %>%
+  ggplot(aes(x=Admit)) +
+  geom_bar() +
+  labs(title = "Admitted vs. Rejected Students",
+       x = "Admitted Status")
+barplot1
+```
+
+**This plot is boring though and doesn't really tell us much about our data.**
+
+Let's add another variable in the mix to display our data better:
+
+``` {r, echo = TRUE}
+admissions %>%
+  group_by(Dept, Gender) %>%
+  ggplot() +
+  geom_bar(aes(x=Dept, fill = Admit)) +
+  labs(title = "Admissions Rates by Department",
+       x = "Department") 
+```
+
+### See anything weird about this plot compared to the data?
+
+**Well, geom_bar() is a bit "out of fashion":** 
+
+- We can't specify our own y-axis variable with geom_bar()
+- Rather than showing the *Freq* variable in our data, it instead shows the *count of rows* that include Admitted or Rejected, of which there are equal numbers.
+- geom_bar() also does strange things with scales that typically don't make sense or follow the data properly.
+- geom_bar() is best used alongside summarize() when you don't have counts in a specified column already.
+
+**So what do we do instead?** 
+
+We use the more adaptable **geom_col()** (for column instead of bar)
+
+## Bar plots with geom_col()
+Our code doesn't change much here. **We simply get to add our own y**, which is the *Freq* column.
+
+```{r, echo = TRUE}
+admissions %>%
+  group_by(Dept, Gender) %>%
+  ggplot() +
+  geom_col(aes(x=Dept, y = Freq, fill = Admit)) +
+  labs(title = "Admissions Rates by Department",
+       x = "Department") 
+
+```
+Now our chart much better represents our data!
+
+Note that we use **fill = Admit** here. This is what happens if you use **color = Admit** instead for a geom type that prefers fill:
+``` {r, echo = TRUE}
+admissions %>%
+  group_by(Dept, Gender) %>%
+  ggplot() +
+  geom_col(aes(x=Dept, y = Freq, color = Admit)) +
+  labs(title = "Admissions Rates by Department",
+       x = "Department") 
+  
+```
+
+### Different position types 
+There are a many types of **position** arguments that can be used in ggplot2.
+
+The main three position types used for bar charts are **stack**, **dodge**, and **fill**.
+
+Let's look at our barplot so far in each:
+
+### position = "stack"
+- Places bars on top of one another by raw count.
+```{r, echo = TRUE}
+admissions %>%
+  group_by(Dept) %>%
+  ggplot() +
+  geom_col(aes(x=Dept, y = Freq, fill = Admit), position = "stack") +
+  labs(title = "Admissions Rates by Department",
+       x = "Department")
+
+```
+
+### position = "dodge"
+- Places bars next to one another.
+```{r, echo= TRUE} 
+admissions %>%
+  group_by(Dept) %>%
+  ggplot() +
+  geom_col(aes(x=Dept, y = Freq, fill = Admit), position = "dodge") +
+  labs(title = "Admissions Rates by Department",
+       x = "Department")
+```
+### position = "fill"
+- Creates full size, proportional bars for each group, and modifies the scale.
+```{r, echo= TRUE} 
+admissions %>%
+  group_by(Dept) %>%
+  ggplot() +
+  geom_col(aes(x=Dept, y = Freq, fill = Admit), position = "fill") +
+  labs(title = "Admissions Rates by Department",
+       x = "Department", y = "Prop")
+```
+
+## Creating faceted plots
+Unfortunately a column chart is only able to capture so much at once. 
+
+Let's say we want to add the Gender variable to this chart somehow. We kinda can't as things are.
+
+However, we can add another variable into our group_by() function, and use that variable to create multiple bar plots at once -- aka, a **faceted plot**.
+
+This will allow us to compare Admitted and Rejected students for each Department by Gender, side by side!
+
+There are two types of facet functions: **facet_wrap()** and **facet_grid()**. Let's compare:
+
+### facet_wrap()
+```{r, echo = TRUE}
+admissions %>%
+  group_by(Dept, Gender) %>%
+  ggplot() +
+  geom_col(aes(x=Dept, y = Freq, fill = Admit), position = "stack") +
+  labs(title = "Admissions Rates by Gender for each Department",
+       x = "Department") +
+  facet_wrap(~Gender)
+```
+- facet_wrap() will always have a vertical facet.
+
+### facet_grid()
+Now let's look at **facet_grid()** which gives us more flexibility than facet_wrap().
+
+We can recreate the facet_wrap() plot using facet_grid() to see this in practice:
+
+- Note how facet_grid() only adds a "." in front of "~Gender" to recreate the same plot!
+```{r, echo = TRUE}
+admissions %>%
+  group_by(Dept, Gender) %>%
+  ggplot() +
+  geom_col(aes(x=Dept, y = Freq, fill = Admit), position = "stack") +
+  labs(title = "Admissions Rates by Gender for each Department",
+       x = "Department") +
+  facet_grid(.~Gender)
+```
+
+Now let's change the ordering around, where Gender comes first:
+``` {r, echo = TRUE}
+admissions %>%
+  group_by(Dept, Gender) %>%
+  ggplot() +
+  geom_col(aes(x=Dept, y = Freq, fill = Admit), position = "stack") +
+  labs(title = "Admissions Rates by Gender for each Department",
+       x = "Department") +
+  facet_grid(Gender~.)
+```
+
+Now our plot is faceted with a horizontal orientation where we get separate figures for both Male and Female.
+
+Additionally, **facet_grid()** allows you to better specify the number of rows and columns, and facet by more than one variable.
+
+- BUT, beware making too busy or unnecessary of a visualization by faceting when you don't need to! For example:
+
+``` {r, echo = TRUE}
+admissions %>%
+  group_by(Dept, Gender) %>%
+  ggplot() +
+  geom_col(aes(x=Dept, y = Freq, fill = Admit), position = "stack") +
+  labs(title = "Admissions Rates by Gender for each Department",
+       x = "Department") +
+  facet_grid(Gender~Admit)
+```
+
+- This facet_grid() looks cool, but doesn't really contribute anything new/unique compared to facet_wrap() visualization.
+
+## Additional Themes and Visualization Tweaks
+There's so many things you can do in ggplot2 to a meticulous degree!
+
+But here are **a few tricks** that can help elevate your visualizations without adding much complexity:
+
+### Overall theme functions
+There are *many* different theme_*() functions in ggplot2 alone, and countless added by other packages as well.
+
+- theme_*() functions change the overall layout and appearance of your plot entirely. They create different text sizes, headings, shaded backgrounds, and add/remove axis grids. 
+- You can often scroll through them while coding by typing "theme_" and many of them will pop up to choose from and auto-complete.
+
+Here are two of the most common ones displaying our facet_wrap() plot for Admits by Department:
+
+**theme_classic()**
+``` {r, echo = TRUE}
+admissions %>%
+  group_by(Dept, Gender) %>%
+  ggplot() +
+  geom_col(aes(x=Dept, y = Freq, fill = Admit), position = "stack") +
+  labs(title = "Admissions Rates by Gender for each Department",
+       x = "Department") +
+  facet_wrap(~Gender) +
+  theme_classic()
+```
+
+- Removes grid and separators in favor of a simpler plot
+
+**theme_bw()**
+``` {r, echo = TRUE}
+admissions %>%
+  group_by(Dept, Gender) %>%
+  ggplot() +
+  geom_col(aes(x=Dept, y = Freq, fill = Admit), position = "stack") +
+  labs(title = "Admissions Rates by Gender for each Department",
+       x = "Department") +
+  facet_wrap(~Gender) +
+  theme_bw()
+```
+
+- Removes the gray background in favor of more minimalistic gridlines and uses gray strip labels.
+
+We'll show off **theme_minimal()** and **theme_cowplot()** below too!
+
+## Using theme() to adjust the plot title
+Personally, I can't stand when my plot titles aren't centered properly. 
+
+Thankfully, it's easy to fix using **theme()**.
+
+- Note that theme_*() functions and theme() are different, and serve very different purposes!
+
+Let's briefly look at how theme() works to **shift our plot title**.
+
+``` {r, echo = TRUE}
+admissions %>%
+  group_by(Dept, Gender) %>%
+  ggplot() +
+  geom_col(aes(x=Dept, y = Freq, fill = Admit), position = "stack") +
+  labs(title = "Admissions Rates by Department",
+       x = "Department") +
+  theme_minimal() + # another theme, theme_minimal()!
+  theme(plot.title = element_text(hjust = 0.5))
+```
+
+Because the title is a form of text, we use the **element_text()** function within theme to "horizontally adjust" (hjust) the plot's title **on a scale of 0-1** to the very center.
+- *Note that this centering does not consider the legend area.*
+
+- theme() has many specific "plot elements" that can be edited using this format.
+- *For a complete list and more detailed explanation on using theme() to make specific adjustments to your plots, head to ggplot2's documentation on it here:*  <https://ggplot2.tidyverse.org/reference/theme.html>
+
+## Using scale_fill_manual to manually assign legend colors
+The **scale_x/y_* family** of functions can modify your scales in many ways and serve many purposes.
+
+Here, we'll introduce the **scale_fill_manual()** function as a means of **manually assigning specific colors** to your fill = <var>.
+
+At present, our plot doesn't really align with commonly associated "accept" or "reject" colors. 
+
+So **let's change each to green and red respectively so our plot is more intuitive:**
+
+```{r, echo = TRUE}
+admissions %>%
+  group_by(Dept) %>%
+  ggplot() +
+  geom_col(aes(x=Dept, y = Freq, fill = Admit), position = "stack") +
+  labs(title = "Admissions Rates by Department",
+       x = "Department") +
+  scale_fill_manual(name = "Admission Status", values = c("green4", "red3")) +
+  # name allows us to rename the plot. 
+  # values is where we list our colors in the order of our variable.
+    theme_bw() +
+    theme(plot.title = element_text(hjust = 0.5))
+```
+
+- We assign each fill color using the **values** argument, followed by a vector list.
+- We can also easily rename our legend this way, using the **name** argument!
+
+- There are many types of scales in base ggplot2, but other packages include their own scale functions that integrate their own color scales more easily.
+- *For more information on scales, here is a link to ggplot2's scales documentation:* <https://ggplot2.tidyverse.org/reference/index.html#scales>
+
+## Pro Move: Get rid of that (ugly) gap between 0 and x axis!
+We can also use **multiple scales at once** for different plot elements.
+
+If you're bothered by the weird gap between the bar start and the axes (like I am), here's how you get rid of it by adding another scale: **scale_y_continous()**, which is almost always used for making changes to the y axis. 
+
+Though this function can be used in many complex ways, here we only add the **expand** argument:
+```{r, echo = TRUE}
+admissions %>%
+  group_by(Dept, Gender) %>%
+  ggplot() +
+  geom_col(aes(x=Dept, y = Freq, fill = Admit), position = "stack") +
+  labs(title = "Admissions Rates by Department",
+       x = "Department") +
+  scale_fill_manual(name = "Admission Status", values = c("green4", "red3")) +
+  scale_y_continuous(expand = c(0,0)) + 
+  # this expand arg allows us to start our bars at the very edge of the plot.
+  theme_bw()
+```
+
+- Adding the **expand** argument and the vector list for 0,0 allows the columns to align nicely with the x axis rather than floating around. Nice and clean!
+
+## Is a horizontal orientation better for your data? Use coord_flip()!
+What if we liked the horizontal orientation we explored earlier with facet_grid()?
+
+We can make one last adjustment to our plot to do this by tacking **coord_flip()** onto the *very end* of our plot.
+
+- This flip applies to *everything*. So *we'll mutate our Dept variable beforehand to reverse the order of Dept* so they still appear alphabetically.
+```{r , echo = TRUE}
+admissions %>%
+  mutate(Dept = fct_rev(Dept)) %>% 
+  # mutating and using fct_rev will keep the order from flipping with the rest of the plot!
+  group_by(Dept) %>%
+  ggplot() +
+  geom_col(aes(x=Dept, y = Freq, fill = Admit), position = "fill") +
+  labs(title = "Admissions Rates by Department",
+       x = "Department") +
+  scale_y_continuous(expand = c(0,0)) +
+  scale_fill_manual(name = "Admission Status", values = c("green4", "red3")) +
+  theme_cowplot() + # and we'll use the cowplot theme since it's quite nice!
+  theme(plot.title = element_text(hjust = 0.5)) +
+  coord_flip()
+```
+
+- Now our plot has a horizontal orientation, which I find best to use with the "fill" position. We get proportional bars that are *much easier* to read. *Beloved by Likert scale users and public opinion researchers everywhere.*
+
+## Color Palettes and Package Resources
+There are an infinite number of packages that are solely dedicated to creating appealing color palettes.
+Packages such as {viridis}, {paletteer}, {ggthemes}, and {RColorBrewer} are a few of the most common palette packages.
+
+This site <https://r-charts.com/color-palettes/> is amazing for finding tons of palettes and their respective packages.
+
