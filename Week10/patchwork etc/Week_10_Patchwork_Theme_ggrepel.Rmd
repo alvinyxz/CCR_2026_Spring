@@ -93,6 +93,9 @@ gp <- ggplot(data = contraception, aes(x = educ_female, y = contraceptive)) +
 
 print(gp)
 ```
+
+
+
 ```{r, echo=TRUE}
 #### add color
 
@@ -125,6 +128,7 @@ print(gp4)
 
 ```{r, echo=TRUE}
 gp5 <- ggplot(data = contraception, aes(x = educ_female, y = contraceptive)) + geom_point(colour = "red", size = 3)+
+geom_smooth(method = "lm", se = FALSE)+
 theme_minimal()
 
 print(gp5)
@@ -257,12 +261,66 @@ Use this code:
 g1 <- ggplot(data = contraception, aes(x = , y = )) + 
   geom_point()
   
+```{r, echo=TRUE}
+e1 <- ggplot(data = contraception, aes(x = gni, y = contraceptive)) + 
+  geom_point()
+
+print(e1)
+```
+  
+  
 b. color the points with any color of your choice
+
+
+```{r, echo=TRUE}
+#### add color
+
+e1b <- ggplot(data = contraception, aes(x = gni, y = contraceptive)) + geom_point(colour = "blue", size = 3)
+
+print(e1b)
+```
 
 
 ### Question 2
 
 Nest the plot using this cod: (p1 + p2) / p1. Chunk code can be found above
+
+```{r, echo=TRUE}
+# Create density plot of contraception
+e2 = ggplot(data = contraception, aes(x = contraceptive)) + 
+  geom_density() +
+  theme_bw() +
+  labs(
+    x = "Contraceptive useage"
+  ) 
+
+# Create density plot of female education level
+e2a = ggplot(data = contraception, aes(x = gni)) + 
+  geom_bar() +
+  theme_bw() +
+  labs(
+    x = "GNI"
+  ) 
+
+
+# Condition the relationship on GNI
+e2b = ggplot(data = contraception, aes(x = gni, y = contraceptive, color = gni)) + 
+  geom_point() +
+  geom_smooth(method = "lm", se = FALSE) +
+  theme_bw() +
+  labs(
+    x = "Region",
+    y = "Contraceptive useage"
+  ) +
+  facet_wrap(~region)
+
+# Layout plots with patchwork
+(e2 + e2a) / e2b
+
+```
+
+
+
 
 
 ## Notes
