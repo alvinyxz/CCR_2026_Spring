@@ -501,7 +501,7 @@ Final grades will be assigned according to the University of Minnesota Letter Gr
    - Way, S. F., Morgan, A. C., Larremore, D. B., & Clauset, A. (2019). Productivity, prominence, and the effects of academic environment. *Proceedings of the National Academy of Sciences, 116*(22), 10729–10733. <https://doi.org/10.1073/pnas.1817431116>
    - Schneider, P. J., & Rizoiu, M.-A. (2023). The effectiveness of moderating harmful online content. *Proceedings of the National Academy of Sciences, 120*(34), e2307360120. <https://doi.org/10.1073/pnas.2307360120>
    - Dash Nelson, G., & Rae, A. (2016). An economic geography of the United States: From commutes to megaregions. *PLoS ONE, 11*(11), e0166083. <https://doi.org/10.1371/journal.pone.0166083>
-   - Huang, J., Hurst, B., Capizzo, L. W., & Zhou, A. (2026). *Mapping conceptual boundaries: Using structural topic modeling and word embedding to contrast CSA and CSR in public relations research*. Working Paper.
+   - Huang, J., Hurst, B., Capizzo, L. W., & Zhou, A. (2026). *Mapping conceptual boundaries: Using structural topic modeling and word embedding to contrast CSA and CSR in public relations research*. Working Paper (PDF in Github Repository).
    - Waller, I., & Anderson, A. (2021). Quantifying social organization and political polarization in online platforms. *Nature, 600*(7888), 264–268. <https://doi.org/10.1038/s41586-021-04167-x>
 
 3. Computational Toolkit Demo
