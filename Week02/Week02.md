@@ -1,0 +1,319 @@
+# 1. Discussion Topic: [Week 2] Readings[Week 2] Readings
+
+Find the readings for the week at: https://z.umn.edu/J8500_Syllabus
+
+The course is organized as a seminar, which means all students are expected to attend all classes, have read and thought about all readings prior to each class, and participate actively and productively in class discussion.
+
+In general, before class, you should have carefully thought about: (1) how the computational methods used in each study helped address the specific research questions of interest to the authors, (2) in what sense these computational methods could extend conventional methods, (3) what are their major assumptions and limitations, and (4) what new arenas for future research these computational methods could open.
+
+To facilitate discussion, each week, all students will submit (to the whole class and me) at least TWO thoughtful questions or comments of interest to you emerging from the week's readings. These discussion questions/comments should be posted to the "Discussions" section on Canvas (named "[Week X] Readings") at least 24 hours before the scheduled class meeting. You are also encouraged to read other students' questions/comments and reply to them. Regardless of whether you are the Reading Lead for a certain week's readings, you should still post to participate in the discussion.
+
+Canvas Discussion & In-Class Participation will be evaluated based on: (1) the depth and quality of your contributions to the Canvas Discussion, and (2) the engagement and quality of your participation in class.
+
+
+## 1.1. Carolina Aguiar Da Silva
+
+Jan 25 5:05pm | Last reply Jan 29 9:23pm
+
+I've just read everything, and I have a few questions that are across different readings. First of all, I’m speechless about the amount of data the articles present. Now I see why the Bit by Bit textbook discusses some of the problematic characteristics of Big Data for research. Still thinking about the textbook, it says that mechanisms explain why and how something happens. I understood mechanisms as something that could be measured. But in Lee, J. K. (2021), what are the mechanisms in this study then? Inferred status and rules of communication?
+
+Continuing with the idea of mechanisms, do they have to be related? In Yang, T., Yang, X., Peng, Y., & Mukerjee, S. (2025), they use likes, shares, and comments as synonyms for real visibility or exposure to news. Is that valid? Because they are different measures.
+
+Overall, I can see that all the articles include a lot of data. But how is this data collected? And if I understand it correctly after watching the bootcamp, they collect the data, load it into R, and then perform data wrangling with tidyverse to reshape and cross-analyze it. All the conclusions came from reshaping and cross analyzing the data rather than simply collecting the data for all questions?
+
+### 1.1.1. Namuun Tsegmid
+
+Carol, I had the exact same thoughts while reading Yang et al. (2025), particularly regarding their operationalization of news exposure through likes, shares, and comments. While these engagement metrics are commonly used, I also wondered how well they actually represent exposure itself. To strengthen validity, future studies could collaborate with organizations that have access to the types of data discussed in Salganik (2018), such as server-side or platform-level exposure data, which could provide a more direct and accurate measure of news exposure.
+
+I also found myself questioning why the authors did not include the number of followers for each media outlet’s page on each platform. Even though platforms have distinct affordances and opaque “black box” algorithms that shape content visibility, I still think follower count could meaningfully influence potential exposure. At minimum, it seems like an important contextual variable that could help interpret differences in engagement and visibility across outlets and platforms.
+
+### 1.1.2. Alvin Zhou (he/him)
+
+Great questions. Computational methods are well suited to large-scale description and to answering questions that would be nearly impossible to study using other approaches. That said, it is genuinely difficult to identify mechanisms using observational computational data alone. Without experiments, mechanisms are usually inferred rather than directly tested. Different methods do different kinds of work. And we can all agree that computational methods are indispensable for answering the questions posed in these readings.
+
+Using likes, shares, and comments as indicators of visibility is a common proxy in computational research. It is imperfect, but often “the best we can get.” This is not unique to computational methods, as we discussed in class; surveys also rely on proxies for hard-to-measure concepts. Some research (may have) indicated that these metrics are correlated with real-world visibility, although they are not identical.
+
+Finally, most insights come from how data are wrangled and analyzed, not from data collection alone. Data wrangling and statistical analysis are where conclusions are drawn. Collecting large-scale data enables researchers to ask these questions, but theory-driven analyses are where conclusions are actually produced. Taking Yang et al. (2025) as an example, the study design is relatively simple: the authors collect data and compare platforms using regression models. The question, however, is important and engaging, and that is why the paper appears in a top journal.
+
+## 1.2. Kaiyi Yu
+Jan 27 4:15pm | Last reply Jan 29 9:29pm
+
+The questions constantly appearing when reading these articles are about technical details of the methods, since I am too unfamiliar with them. I noticed that these papers collected and used massive amounts of data. Some are based on APIs, and some are based on existing datasets, such as the ComScore PlanMetrix database for Yang et al. (2025). Does knowledge of the database come from previous studies that already used the same database to measure the same variables? Also, all these studies collected millions of posts. How do they assess how much data is enough? I mean, for experiments, power analysis is done to calculate the minimum sample size needed to detect an effect. But for this big data method, how should we calculate the amount of data collected to ensure that we get a true effect from it?. Both Yang et al. (2025) and King et al. (2013) used six months as a standard duration to collect social media posts. Is this time duration a rule of thumb? It reminds me that, in digital ethnography, researchers normally spend around  6 months to 1year at minimum. 
+
+I read King et al.'s (2013) article most carefully because it aligns most closely with my research interests. I feel the data collection and coding workload is really massive. They had to collect the data in a timely manner when posts were published and revisit them several times to see whether they were censored. This sounds like they are collecting data in a synchronous and time-consuming way. The coding seemed to be a huge amount of work because they seemed to classify posts manually. I like the way they presented their work by combining both big data analysis and statistical results with a focus on single, granular cases, giving example posts and analyses of specific events. It also gives me some insights to test findings from my qualitative work, including how platforms play a role in both cooperating with and pushing back against the CCP in moderation, and how the CCP has expanded its control from political censorship to online public opinion atmosphere and values.
+
+### 1.2.1. Namuun Tsegmid
+Jan 27 6:29pm
+
+Kaiyi, I really liked how you brought in power analysis from experimental research to think about data volume, as well as how qualitative studies approach questions of optimal timeframes for data collection. That made me wonder whether there are established baselines or bodies of literature that computational researchers can draw on when designing studies, particularly when deciding how much data is “enough” or what time window is theoretically meaningful.
+
+Building on your discussion of King et al. (2013), I also thought their analysis relied heavily on qualitative interpretation and manual work to support their findings. Their research questions about censoring high, medium, and low sensitivity topics were grounded in state critique theory and collective action potential. In that sense, the computational strength of the study seemed to lie more in their data collection strategy, especially their ability to capture “bursts” and instances of censorship at scale, while the interpretive and theoretical insights were strongly complemented by qualitative analysis.
+
+### 1.2.2. Alvin Zhou (he/him)
+
+Jan 29 9:29pm
+
+On data sources and “how much is enough”: power analysis does not map cleanly onto most computational studies unless there is an experimental component. Instead, decisions about data volume and time windows are driven by the research question and scope: what population you are trying to observe and what patterns you need to detect. Six months is not a rule of thumb, it is often a pragmatic choice to smooth short-term spikes while staying feasible. Over time, you’ll also notice that many communication studies rely on a relatively small set of familiar data sources (e.g., ComScore or Nielsen for traffic, platform APIs for content, etc.). Once you read enough papers, the data landscape becomes much less mysterious.
+
+On King et al. (2013): they did not manually code all posts I think. Instead, they manually coded a subset and used that as training data for a classifier to scale the analysis. The truly demanding part was the time-sensitive data collection (i.e., revisiting posts to see whether they were censored).
+
+## 1.3. Anastasia Micich
+Jan 28 3:37pm
+
+I was also very interested in King et al. (2013)'s study, and I was particularly interested in the actual download of the data, especially considering that the researchers were checking in on posts multiple times to check on the censorship. It was interesting that they were able to use automation to streamline this process. The Salganik chapters also discussed temporal limitations for data extraction, and so it was interesting to read these together. Considering that this study was done almost 13 years ago, I have to imagine that the automation methods to collect this data has come very far. With advancement in AI, is there an easier way now to perform this kind of study? 
+
+Additionally, looking at Lu et al. (2022), I thought it was interesting how an additional content analysis of advertisements was paired with the computational element to measure consumers' temporary affective states. The Salganik book also breifly discussed mixed methods, but I am very interested in how often this kind of approach is taken -- i.e. a qualitative methodology mixed with a computational methodology, and what are the best practices to take when approaching this kind of study? 
+
+### 1.3.1. Alvin Zhou (he/him)
+Jan 29 9:25pm
+
+On King et al. (2013): I’m not sure that AI necessarily makes this kind of study easier today. If researchers wanted to replicate this work now, they would likely still rely on fairly standard scraping approaches (e.g., BeautifulSoup in Python or its R equivalents), much like what we discussed in class. While agentic AI could potentially help automate parts of the process, I have not yet seen published work that uses agentic AI in a systematic or validated way for large-scale censorship auditing.
+
+On mixed methods: pairing computational approaches with qualitative or manual content analysis is actually quite common and increasingly encouraged. Lu et al. (2022) (also the Lee paper) is a good example, and I would recommend the Yotam Ophir study that combines computational analysis with ethnography. You may also find “The Influencer Pay Gap: Platform Labor Meets Racial Capitalism” to be a strong example of integrating computational data with qualitative interpretation. Best practices generally involve being very explicit about what each method contributes and what its limitations are, rather than expecting one method to do everything.
+
+## 1.4. Isabel Garlough-Shah
+Jan 27 5:04pm | Last reply Jan 29 9:24pm
+
+Throughout the empirical readings this week the majority of studies used large social media datasets. In chapter two of “Bit by bit: Social research in the digital age”, Salganik spoke about how issues of incompleteness are more extreme in big data compared to other methodologies. Given that data sizes varied greatly throughout the empirical studies we read this week, I was wondering how computational social science researchers assess how much data they need to pull in order to ensure accuracy within data analysis? What is the normal approximate range for data collection in computational methods?
+
+Additionally, I had some questions about supervised learning models that stemmed from the Salganik chapter 2 mention of, and from actually reading, the King, Pan, and Robert’s article. I was wondering how reliability is confirmed with supervised learning models? Is it confirmed in the preprocessing stage where content is hand-coded? Is it a more iterative process after hand-coded data is input into machine learning models?
+
+### 1.4.1. Namuun Tsegmid
+Jan 28 9:12am
+
+Isa, we can definitely discuss training data and the level of reliability of learning models during class.
+
+### 1.4.2. Alvin Zhou (he/him)
+Jan 29 9:24pm
+
+Great questions. On data size: there is no predetermined or “correct” amount of data in computational social science. The scope is usually informed by the research question, the size of the underlying data population, practical constraints (e.g., time, money, API limits), and whether a subset of the data is theoretically and empirically informative. In practice, many projects start by aiming to collect all relevant data and then adjust the scope when constraints arise, trying to reduce the data without sacrificing rigor. Bigger is not automatically better, I think "appropriateness" matters more.
+
+On supervised learning reliability: reliability matters most in the human coding stage. The hand-coded data becomes the training dataset for the model, so if the human labels are unreliable, the model will simply learn that noise. As a result, studies typically train multiple coders, resolve disagreements, and report intercoder reliability, just as in traditional quantitative content analysis. Model validation then happens after training (e.g., holdout tests, cross-validation, go search what those terms mean~), but it cannot compensate for poor initial human coding.
+
+## 1.5. Namuun Tsegmid
+Jan 27 6:10pm | Last reply Jan 29 9:27pm
+
+This week’s readings introduced a broad range of communication theories and computational methods across different subfields of the communication discipline. While it was overwhelming to fully grasp every approach, the readings were generative in helping me see how different research questions and naturally occurring events can be explored using corresponding methods within their respective fields. For instance,  the use of social media data trace in journalism research (Yang et al., 2025), web-crawling to examine censorship on Chinese social media (King et al., 2013), mixed-method designs combining textual analysis, visual analysis, and surveys to evaluate the relationship between emotions and brand status (Lee, 2021), systems approaches to understand disinformation on Twitter (Zhang et al., 2021), and analyses of consumers’ affective states in response to advertisements shown during the Super Bowl (Lu et al., 2022).
+
+I appreciated that these studies employed rigorous designs that went beyond simply automating data collection or analysis through computational methods. Many integrated additional manual coding, traditional methods such as surveys, and careful contextualization of the events or cases under study. These approaches demonstrated the potential of computational methods to explain, test, or expand social science theories, rather than merely producing large-scale descriptive findings.
+
+The readings were also helpful in reinforcing key ideas from the instructional chapters (Salganik, 2018), particularly the argument that much of the data used in computational social science is “found” rather than “designed,” which aligns closely with this week’s focus on digital trace data. Similar to Carol's point in her discussion, I have same question regarding the use of proxies for theoretical variables, as this approach feels unconventional to me. At the same time, these studies employed complex designs involving multiple studies (Lee, 2021), sophisticated data-matching strategies (Lu et al., 2022), and analyses that accounted for multiple characteristics of media content and audience exposure across platforms (Yang et al., 2025). While such complexity seems more feasible through computational research, I am left wondering how complex a study design should be for researchers attempting their first computational projects.
+
+Additionally, one of the readings (King et al., 2013) mentioned using a portion of the data for training purposes. I am curious about the conditions under which researchers need to train their data and in which cases training may not be necessary.
+
+### 1.5.1. Alvin Zhou (he/him)
+
+Jan 29 9:27pm
+
+These are excellent reflections and get at several core issues in computational social science. Likes, shares, and comments are imperfect but widely accepted proxy measures for engagement or visibility. This is not unique to computational work. Every method relies on proxies for theoretical constructs. Server-side or platform-level exposure data may seem more direct, but we will discuss in the final (ethics) class why such data also raises serious methodological and ethical concerns around access, transparency, and power. I also recommend the Lazer papers on the reading list, which directly address these measurement issues.
+
+On design and data: traditional power analysis does not translate cleanly to most computational projects unless there is an experimental component. Decisions about data volume are usually theory- and context-driven rather than rule-based. Training data are needed for supervised machine learning; in such cases, reliability is established primarily at the human coding stage (multiple coders, disagreement resolution, intercoder reliability) before scaling with models. The algorithm can extend human judgment, but it cannot correct unreliable labels.
+
+## 1.6. Eun Sun Kyoung
+Jan 27 9:24pm | Last reply Jan 29 9:24pm
+
+1. From Salganik (2018), I learned that the advantage of big data is not only massive volume, but big data has unique characteristics that can complement weaknesses of conventional methods. What stood out to me among ten characteristics Salganik (2018) stated was "Nonreactive". Observation study using big data can be free from social desirability, Hawthorne effect and demand characteristics that either survey study or experimental study has.
+
+This weeks's reading such as King, G., Pan, J., & Roberts, M. E. (2013) show this advantage. Method like survey could never have figured out which kinds of online posts the government censor. 
+
+However, secondary analysis or observational study cannot claim causal relationship as experiment study. What are the ways to use both conventional methods and computational methods to complement each other?
+
+I think conduct descriptive study using computational methods and examine causal relationship with additional study as used in Lee, J. K. (2021) is great way. What else could we think of?
+
+2. Nonrepresentative issue is critical. For now, of course, fallacy such as generalizing findings from Twitter studies to entire populations as the example in  Salganik (2018) is hard to find. However, Zhang et al(2021) made me wonder the criteria when sampling from big data, or from social media in particular. Is a random 1% appropriate sample in big data? Why the study chose "4" IRA accounts? How much they can represent the IRA account and its interaction in media ecosystem? Also, I doubt that whether the findings of this study is valid given that it samples accounts that follow Trump’s account to address RQ1.
+
+### 1.6.1. Namuun Tsegmid
+
+Eun Sun, I had the same impression that the study design in King et al. (2013) was advantageous and well suited for identifying the large volume of posts that were either removed or remained after a certain period of time. It is interesting to consider whether we can reasonably assume that the cause of censorship was either government criticism or collective action potential in users’ posts. We can definitely discuss different ways to examine causal relationships in studies that use computational methods.
+
+### 1.6.2. Alvin Zhou (he/him)
+
+Jan 29 9:24pm
+
+On combining methods: using computational methods alongside quantitative or qualitative approaches is often ideal. Computational methods excel at large-scale, nonreactive description, while experiments, surveys, and qualitative work are better for causal inference and mechanism testing. That is exactly why I included Lee (2021). You may also find the Yotam Ophir paper on computational methods combined with ethnography useful.
+
+On representativeness: your concerns are valid. In big data research, sampling is often driven by theoretical/practical relevance rather than population representativeness. The choice of the four IRA accounts reflects the specific research question rather than an attempt to generalize to all users --- after all, it is the most popular accounts that have (potentially) influenced the election the most. As we discussed in class, what matters most is whether the sample fits the question being asked.
+
+## 1.7. Qiling Wu (she/her)
+Jan 28 8:20am | Last reply Jan 29 9:28pm
+
+Yang et al., 2025
+
+This research is solid and impressive; however, a potential limitation lies in the operationalization of “visibility” as engagement (likes, comments, shares), which implicitly treats user interaction as a proxy for exposure. I saw this on peers' replies as well.
+
+Engagement-based measures do not necessarily capture whether content was ever seen in the first place. Even view-based metrics, which appear to be a more direct proxy for visibility, remain incomplete in environments where platform algorithmic moderation, downranking, or deletion, intervene prior to any opportunity for engagement. This raises following questions about platform governance and the generalizability of engagement-based visibility measures. In such contexts, engagement metrics risk conflating user behavior with platform control, making it difficult to distinguish between lack of attention and lack of access. As a result, the validity of engagement as a proxy for platformized visibility may be contingent on platform-specific governance regimes.
+
+King et al., 2013
+
+Because of this concern about how platform mechanisms shape what can and cannot become visible in the first place, I was particularly struck by how tightly theory and method are connected in this article. What surprised me is that the authors do not begin with large-scale data and then use theory to interpret the findings post hoc. Instead, they explicitly formulate two competing theoretical explanations at first: one suggesting that censorship is primarily aimed at suppressing criticism of the government, policies, or leaders, and another arguing that censorship is fundamentally concerned with preventing collective action, regardless of whether the content is supportive or critical of the state.
+
+What makes the study compelling is that the data collection strategy and computational methods are deliberately designed to directly test between these two theories. By using large-scale data on censored posts and comparing censorship patterns across different types of events, the authors are able to directly test what censorship mechanisms are actually targeting. To me, this strong alignment between theoretical expectations, platform governance, and measurement stands out in contrast to the first reading, and it shows how sensitive computational measures must be to the institutional and regulatory contexts in which platforms operate.
+
+### 1.7.1. Namuun Tsegmid
+
+Qiling, I really appreciated your critical takes and questions about the Yang et al. (2025) and King et al. (2013) studies. You raised several thoughtful points that I think would be great to unpack together during class. I am looking forward to continuing that discussion.
+
+We can discuss:
+
+Operationalization and the gap between proxy measures and theoretical concepts
+
+Data driven vs. Theory driven approaches
+
+### 1.7.2. Alvin Zhou (he/him)
+Jan 29 9:28pm
+
+On engagement as visibility: You are absolutely right that no measure is perfect. Views, likes, comments, shares, even eye-tracking, are all proxies, and each captures something slightly different. Even if someone’s eyes are on a screen, we still cannot be sure they are cognitively engaged. This problem is not unique to engagement metrics; it is a general measurement problem in social science. A common and increasingly recommended solution is to use multiple proxies for the same construct, report them transparently, and show that results are consistent across measures rather than relying on a single indicator.
+
+On King et al. (2013): your observation is exactly why that paper is so influential. The strength of the study lies in the tight alignment between theory, data, and method. I would add one small clarification: it is unlikely that the authors collected the data after fully writing the theory section. In practice, theory development, literature review, and data collection often happen in parallel. What matters is that the data collection and measurement strategy are clearly designed to reflect competing theoretical explanations. That kind of theory-method alignment is something computational work does especially well when done carefully, as in this case.
+
+##  1.8. Jiarou Chen (she/her)
+Jan 28 11:17am
+| Last edited Jan 28 11:19am
+
+Lu et al. (2022)'s approach of linking the real-time emotional state of fans during the sports competition and their subsequent attention to the advertisement through the theory of emotion management is very enlightening. It also substantiates the rationality of  advertisings being dominated by positive emotions during sports events. However, I am confused about the operationalization of user emotional state and advertising engagement:
+
+User emotions are indeed related to whether the team they support is leading, but events often involve more complex dynamics. For instance, the team trailing may narrow the gap, and the leading team gains more advantage. Considering this, I believe that getting one point might have different impacts on the audience's emotions. For the former, the audience (coded as negative state in this paper) may have a more positive emotion, while for the latter, they (coded as positive state) may have a negative emotion. Since the author has collected all the social media content related to the event, why not directly analyze the emotions reflected in social media content? In the Chinese context, analyzing live chat comments might also be a feasible approach.
+
+Secondly, can the content posted by the audience during the same commercial advertisement truly represent their engagement with the advertisement? For example, they may not have watched the entire advertisement (because it is still playing), so when evaluating the participation level of an advertisement, should the time of posting the content be later than the advertisement duration? If the research is about real-time participation, then it might be feasible. But another issue is that consumers may even not really pay attention to the advertisement content.
+
+Lee (2021)'s article is inspiring for my thinking on multi-study design and multi-modality research design. From my understanding, it might not be that hard to find significant patterns using computational methods, but it's truly hard to identify a meaningful one. This study, after discovering the relevant patterns that conform to the theory through computational methods, then verified the mediating and moderating variables through experiments, further demonstrating the theoretical significance of the patterns. What I find curious is why it only analyzed the emotions of the images but did not take into account the moderation of the characteristics of the people themselves (for example, using endorsers who could be associated with a wealthy population vs. anonymous figures)? This study also reminds me of similar research conducted by Wang et al. (2017). They found that people's emotionally warm expressions (big laughter, compared to a small smile) are more likely to be perceived as lower competence. Transferring this research context, I wonder if the warmth/competence model could also explain people's perception of brands' status from their emotional expressions?
+
+### 1.8.1. Alvin Zhou (he/him)
+
+Jan 29 9:23pm
+
+These are excellent observations. For Lu et al. (2022), you’re right that the authors could have directly analyzed emotions expressed in social media content. That would be a reasonable alternative operationalization. In many computational papers, this kind of approach appears as a robustness check, using different proxies or data sources to estimate the same construct. If the results hold, it strengthens the conclusion.
+
+Your concern about advertising engagement is also well taken. Precisely matching posts to specific ad exposures is extremely difficult, especially when ads air multiple times during an NFL game. That complexity likely explains why the authors aggregate engagement. Whether users actually paid attention to the ad is a broader limitation that appears across advertising and news research and is often unavoidable in observational studies. The thing is that, maybe this paper they only collected the tweets about the ad, so the tweeters should be paying attention to the ad.
+
+For Lee (2021), yes, large datasets make it easy to find statistically significant patterns. Additional moderators (e.g., endorser characteristics or warmth/competence cues) would be interesting extensions, but they also add complexity. This is why strong theory and research design matter as much as the data itself.
+
+## 1.9. Ruiheng (Rachel) Sun (she/her)
+Jan 28 12:48pm
+| Last edited Jan 28 8:52pm
+| Last reply Jan 29 9:27pm
+
+I think Lu et al. (2022)'s article provides a good example of how conventional content analysis can be extended through the application of computational methods. As discussed in the Bit by Bit chapters, big data can be categorized in different ways, and this study primarily draws on digital trace data. However, Lu et al. (2022) still relies on manual coding for some variables, meaning that part of the dataset is not “big data” in the strict sense, but rather human-generated data (content analysis). I wonder how this decision could be possibly made and what factors are involved when they try to combine computational methods and conventional methods? 
+
+I found one similar concept could be operationalized very differently across studies. For example, Yang et al. (2025) and Lu et al. (2022) both examine engagement, but they rely on different types of data and analytic procedures. Similarly, Lee (2021) and Lu et al. (2022) focus on emotion, with Lee (2021) using LIWC and Lu et al. (2022) using content analysis through manual coding. This aspect makes computational research involving big data more complicated, since both data type and measurement could vary. How do researchers ensure conceptual consistency when measure the same construct?
+
+### 1.9.1. Alvin Zhou (he/him)
+Jan 29 9:27pm
+
+On combining computational and conventional methods: it’s important to recognize that many computational papers, especially those published before the generative-AI era, still rely heavily on manual coding. Human coding is often used to create training and validation datasets, which are then scaled up by training classifiers. We discussed this workflow in class. The decision to mix methods is usually pragmatic: some constructs are still measured more accurately by humans, while computation is used to extend those measures to larger datasets.
+
+On conceptual consistency: this is a real and ongoing challenge. Many studies examine the same constructs (e.g., engagement, emotion) using different proxies, operationalizations, methods, and measures. I don’t think this is inherently a problem, because all of these measures are proxies for underlying theoretical concepts. In practice, different operationalizations often point to similar substantive conclusions for the paper. That said, this is exactly why reviewers increasingly expect multiple measures, robustness checks, or alternative specifications in computational papers (often reported in appendices) to demonstrate that findings are not an artifact of a single measurement choice.
+
+## 1.10. Jikai Sun (he/him)
+Jan 28 2:38pm
+| Last reply Jan 29 9:26pm
+
+This week’s readings prompted me to think about how we can more effectively and accurately connect observational data stored online with real-world social concepts. This relates to a frequently discussed issue: research based on social media observational data is often limited to the analysis of engagement data such as likes, shares, and comments, because these metrics are relatively easy to obtain and process. However, they are difficult to link to social science concepts that many social science scholars care about, such as preferences, support or opposition, and purchase intentions. 
+
+We can see that in this week’s readings, some articles do not focus on engagement data; instead, they extract meaning from other forms of online data, such as text and images. For example, Lee (2021) analyzes the emotional expressions of brands through textual and image analysis, and conducted follow-up, self-report-based experiments, thereby enhancing robustness. For works that analysed engagement data, such as the work of Yang et al. (2025), in which they investigated how factors like information reliability and media partisanship influence visibility, whose metrics are partly based on engagement data. In this work, they made very cautious inferences, linking these indicators to exposure and attention rather than preferences.
+
+Based on these, I have the following two questions:
+
+When we attempt to extract meaning from different types of observational data, are there any common approaches across different levels of analysis? For example, at the most basic level, we know that texts vary in length, linguistic complexity, and style, while images may differ in color, brightness, and richness of content. Moving beyond that, we often analyze the emotions conveyed by these media. What other dimensions might we consider?
+
+Inferring support or opposition, as well as likes and dislikes, from observational data is difficult. Even when we are able to analyze specific textual data (such as comments), we must account for the fact that many users may hold attitudes but do not express them online. How can research based on observational data avoid overlooking these individuals?
+
+
+### 1.10.1. Alvin Zhou (he/him)
+
+Jan 29 9:26pm
+
+For the first one: the dimensions we extract from text, images, or engagement data usually do not come from computational methods themselves. They come from theory or prior research. Computational approaches mainly help us operationalize those concepts at scale. In that sense, computational social science has not created many fundamentally new variables; instead, it has enabled mid-level constructs (i.e., not raw metrics). You can think of them like the middle layers of a neural network: features that summarize meaningful aspects of data (e.g., emotional tone, visual richness, stylistic cues) grounded in theory but computed algorithmically.
+
+For the second question: observational data, by definition, only capture what is observable. People who hold attitudes but do not express them online are simply outside the data. That limitation cannot be “fixed” computationally. What researchers can do is be explicit about this boundary and, when necessary, combine methods. Qualitative interviews, ethnography, or surveys can surface unexpressed attitudes, and computational methods can still be used to analyze those materials at scale. This is why hybrid designs, such as the work by Yotam Ophir combining ethnography with computational analysis, are especially valuable.
+
+## 1.11. Wenwen Cao
+Jan 28 3:01pm
+| Last edited Jan 28 3:01pm
+| Last reply Jan 29 9:23pm
+View History
+
+What do computational proxies actually capture and what do they miss?
+Across this week’s empirical readings, a common strength lies in the creative use of large-scale digital trace data as proxies for constructs. For example, King, Pan, and Roberts infer government intent from censorship behavior; Lu et al. infer viewers’ temporary affect from real-time social media activity during the Super Bowl; and Lee (2021) operationalizes emotional expression through textual paralanguage and visual cues in brand communication.
+
+However, these studies also raise a shared methodological question: to what extent do computational proxies capture the underlying psychological or political constructs, rather than platform-specific behaviors? For instance, is deletion a clean indicator of “collective action potential,” or could it also reflect logistical constraints or uneven enforcement? Similarly, do tweets during a live broadcast reliably indicate viewers’ affective states, or do they reflect only highly expressive users?
+
+This raises a broader discussion question: how should we evaluate construct validity in computational communication research when direct measurement is infeasible? Should robustness checks across platforms, cultures, or data sources be considered a minimum standard?
+
+Do computational methods emphasize certain research questions over others?
+Several readings demonstrate how computational approaches excel at identifying large-scale patterns such as diffusion, engagement, censorship, or status signaling, but they also seem to subtly shape the kinds of questions scholars ask. For example, many studies focus on whether certain content thrives, spreads, or is suppressed, rather than how individuals interpret or negotiate meaning in situation.
+
+This is particularly evident when comparing Lee’s brand emotionality studies with Lu et al.’s affect-based engagement study: both rely on computational measurement, yet the psychological mechanisms are often inferred rather than directly observed. This leads me to wonder whether computational methods may unintentionally bias the field toward outcome-oriented questions (visibility, engagement, deletion) rather than interpretive or process-oriented ones.
+
+Therefore, my question is: how can computational communication research better integrate theory-driven mechanisms without reverting entirely to small-scale experiments or surveys? Are hybrid designs (computational + experimental or qualitative validation) the most promising path forward?
+
+### 1.11.1. Alvin Zhou (he/him)
+
+Jan 29 9:23pm
+
+This is an important question. Yes, computational methods do emphasize certain research questions over others. That’s not a flaw, however. Different methods make different questions answerable. There are questions that computational methods can address that qualitative or traditional quantitative methods simply cannot, and vice versa.
+
+For example, if you want to study large-scale coordination or information flows, computational methods are extremely powerful. But if you want to understand how someone becomes a terrorist, a small-N, deeply contextual process, ethnography or qualitative document analysis is far more appropriate. Computational methods are simply not suited for that kind of question.
+
+This connects to a broader, more philosophical point in computational social science. I encourage you to read Watts’s piece on whether social science should be more solution-oriented (should be in the optional reading list). Computational methods are best understood as another lens on the social world, distinct from but complementary to quantitative and qualitative approaches.
+
+This is also why many scholars view computational social science as its own paradigm. Paradigms shape the questions we value, the outcomes we consider legitimate (e.g., engagement as a dependent variable), and the methods we consider appropriate. Different traditions evaluate research through different lenses, and that’s exactly why multiple approaches are necessary.
+
+## 1.12. Quin Mudry Nelson (she/they)
+Jan 28 5:29pm
+| Last reply Jan 29 9:26pm
+
+1. Considering the findings of the Yang et al. article, what are the implications of legacy media being less likely to pick up steam on social media algorithms when users often use these platforms as a source of news and information? Is this a problem for researchers when academics, journalists, and the general public all acquire new, yet different information due to algorithms?
+
+2. The Zhang et al. article was super interesting to me, especially following the reveal of the locations tied to multiple Twitter accounts late last year through a newly implemented feature. I was curious if this may open up a new area of research: we have evidence from this study that these disinformation campaigns were well supported by news media and other known political figures -- but following these accounts having their location revealed to be places other than the United States, my question is if people who follow these accounts actually care about where these figures are based. To phrase this better, do followers of these disinformation-involved social media accounts care or change their views of these accounts and the opinions they post after learning that they aren't who they say they are? And if they don't -- what does this say about who or what is seen as a legitimate source of information or popular opinion?
+
+### 1.12.1. Alvin Zhou (he/him)
+
+Jan 29 9:26pm
+
+These are really good questions. For the first one: from a computational social science lens, it is actually very hard to answer this directly with data alone. Most studies, including Yang et al., can document patterns (e.g., differential amplification), but the broader implications for how and why algorithms shape those dynamics often remain theoretical. This is where theory/story still matters a lot in computational work: framing results, and sometimes even extrapolating from results to talk about big-picture problems.
+
+Regarding the location question, this is a fascinating direction, and I’m not aware of a paper that directly addresses whether followers care once they learn that an account is not who it claims to be. Importantly, this may be better suited to an experimental design than to a purely computational one (e.g., by manipulating whether location cues are made salient). There are related studies asking whether making location information more visible changes behavior, such as <Civilizing Social Media: The Effect of Geolocation on the Incivility of News Comments>.
+
+## 1.13. Jiakun Liang
+Jan 28 7:07pm
+| Last reply Jan 29 9:25pm
+
+1. I was really impressed by the article of King et al. (2013) since the conclusion that online censorship in China systematically tolerates criticism of the government while  targeting expressions related to collective action potential challenges my intuition that authoritarian censorship primarily suppresses political ciriticism and dissent. Additionally, I also like the innovative data collection and analysis strategy of tracking large volumes of social media posts using automatic text analysis. However, Chinese political expression online larely rely on satire, metaphor, or characters that have unrelated meanings but sound alike. Even if automated text estimation is accurate at the aggregate level, could it systematically underestimate the prevalence of implicit criticism? Additionally, the data was collected in 2011, during the early stage of Sina Weibo before the emergence of AI-assisted censorship system, and when people had limited freedom of political expression under the leadership of Hu Jintao. Therefore, to what extent can the findings be generalized to later periods characterized by more automated and AI driven censorship, and more authoritarian regime?
+
+2. Lu et al. (2022) proposed an innovative computational approach to studying selective engagement with Super Bowl advertisements by combining real-time affect inference with tweet-ad matching. I have two technical questions as a beginner of computational social science. First, selective engagement is theorized as a choice within commercial break, but the tweet-ad matching procedure is trained over the full pool of approximately 60 advertisements. This raises the question of why the authors trained the tweet–ad matching on the whole ad pool rather than restricting the matching task to the smaller set of advertisements airing within each commercial break. Second, although the authors reformulate ad classification as a binary semantic matching task between tweets and ad descriptions, it remains unclear why a direct multiclass approach over the full ad set would necessarily fail to capture tweet–ad correspondence, especially given the intelligence NLP. 
+
+### 1.13.1. Alvin Zhou (he/him)
+
+Jan 29 9:25pm
+
+On King et al. (2013): your concern about implicit criticism, satire, and metaphor is well taken. One important clarification, however, is that the authors did not analyze the content of posts in a fine-grained way. Instead, they focused on the rate at which posts were removed and compared removal probabilities across events classified as having high versus low collective action potential. In short, the key outcome is deletion, and the "textual meaning" of posts is never a variable of concern.
+
+Your point about time-boundedness is also important. This is where the idea of temporal validity comes in, as we discussed in class regarding Kevin Munger’s work. Findings from 2011 capture a specific censorship regime and may not generalize cleanly to today’s more automated, AI-driven systems. That is why contemporary research increasingly relies on audit-style approaches to study current platform behavior, as we mentioned in class as well.
+
+On Lu et al. (2022): this is a very technical but good question. One likely reason for training the classifier on the full ad pool is to reduce overfitting. Restricting the task to a small set of ads within each commercial break could make the model perform well in-sample but generalize poorly. Framing the task as binary semantic matching rather than multiclass classification also helps stabilize performance when the number of ads is large and unevenly represented. Computational papers usually have these kinds of compromises.
+
+## 1.14. Jessica Tuleassi
+Jan 28 9:41pm
+| Last reply Jan 29 9:28pm
+
+This week’s readings were particularly interesting because they illustrate how different researchers conceptualize and operationalize key concepts in their studies. I also appreciated Salganik’s (2018) clarification that big data is not limited to the analysis of social media content but can also include various forms of government and corporate data.
+
+More specifically, Yang et al. (2025) examine how social media platforms reshape visibility among different media outlets. Focusing on three social media platforms, the authors highlight how these platforms influence patterns of media visibility. While reading this study, several questions came to mind.
+
+1. The authors note that data were collected between February 2022 and July 2022 and explain that the six-month window was used to “enhance the reliability of our web traffic and social media engagement measures by accounting for irregular fluctuations and spikes over time.” However, the rationale for selecting this particular time period is not clearly discussed.
+
+2. The authors analyze engagement levels using likes, comments, and shares. I wondered whether the nature of the content posted by these media organizations may have influenced user engagement levels, and if so, how this factor was accounted for in the analysis.
+
+I was especially impressed by the level of methodological depth and clarity in Lu et al. (2022). I was aware that conventional content analysis could be extended through computational approaches, but I had not previously understood how this could be implemented in practice. As a result, this article was particularly eye-opening. That said, I am still somewhat unclear about how audience Twitter accounts were used to determine real-time affective fluctuations among viewers during the 2019 Super Bowl broadcast. Additionally, the content analysis section does not specify how many items were analyzed by the two human coders. Given the large dataset, it is unclear whether a subset of data was manually coded and the remainder analyzed using computational methods.
+
+### 1.14.1. Alvin Zhou (he/him)
+
+Jan 29 9:28pm
+
+
+On Yang et al. (2025)’s time window: in practice, these choices are often driven by data access and feasibility as much as theory (I think they probably have 2022 data --- the comScore data is expensive). Every empirical method has this problem (including surveys): you have to pick a window, justify it, and hope it is not a weird period. Their stated logic (e.g., smoothing spikes) is reasonable, but you are right that the substantive rationale for Feb–July 2022 is not fully articulated. That's also why we need replications. Also, why "Temporal Validity" is important, see Kevin Munger's argument on it.
+
+On engagement and content: you’re also right that content differences could drive engagement. My read is that they largely treat engagement as a descriptive outcome and do not fully model content-level variation. That missing piece could be a plausible mechanism (e.g., partisan outlets post more “algorithm-friendly” content or invest more in platform-native formats), but it is not directly tested.
+
+On Lu et al. (2022): their use of Twitter accounts is essentially a proxy for real-time affect. Imperfect, but workable for the question. And your critique of manual coding transparency is fair: they should clearly report how many items were human-coded, what was sampled, how (and where) computational scaling was used, and how many items were scaled. If page limits constrain the main text, that information belongs in the appendix.
