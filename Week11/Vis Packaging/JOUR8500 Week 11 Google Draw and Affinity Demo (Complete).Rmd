@@ -1,0 +1,167 @@
+---
+title: "JOUR8500 Week 11 Google Draw and Affinity Demo
+(Complete)"
+author: "Carolina Aguiar and Isabel Garlough-Shah"
+date: "`r Sys.Date()`"
+output:
+  html_document:
+    toc: true
+    toc_depth: 3
+    number_sections: false
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+  echo = TRUE,
+  message = FALSE,
+  warning = FALSE
+)
+```
+
+## Overview
+
+This problem set introduces the programs Google Draw and Affinity. These programs help you create clean figures for your publications.   
+
+## Google Draw
+### What is Google Draw?
+
+[Google Draw](https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://docs.google.com/drawings/&ved=2ahUKEwjupMqfwcOTAxXj4ckDHTrVNe0QFnoECBAQAQ&usg=AOvVaw3SfX-AkHwrvXS1ABuC-C6T) is Google’s simple diagramming and graphic-design tool inside Google Drive. You can use it to create and edit shapes, lines, text boxes, arrows, and images, then insert those drawings into Google Docs. Google’s help page describes it as a way to “create, insert and edit drawings” and notes you can make drawings directly in Drive or from inside Docs.
+
+### What are some basic features in Google Draw?
+- **Shapes tool**
+  - Rectangles, circles, arrows, callouts  
+  - Used to build the structure of your figure  
+- **Line & arrow tool**
+  - Straight/curved lines, arrowheads  
+  - Shows relationships and direction  
+- **Text box tool**
+  - Add and format labels  
+  - Control font, size, and alignment  
+- **Arrange tools**
+  - Align (left, center, right, top, middle)  
+  - Distribute spacing evenly  
+  - Group/ungroup elements  
+  - Layering (bring forward/send backward)  
+- **Fill & border styling**
+  - Change fill color, border color, thickness, and style  
+  - Controls visual clarity and hierarchy  
+- **Grouping tool**
+  - Combine multiple elements into one unit  
+  - Keeps figures organized and easy to edit  
+- **Layering (order tools)**
+  - Bring forward / send backward  
+  - Ensures elements display correctly  
+- **Canvas & page setup**
+  - Set custom dimensions (e.g., 6x4 inches)  
+  - Prepares figure for publication formatting  
+- **Insert image**
+  - Add charts, icons, or external visuals  
+  - Combine multiple elements into one figure  
+- **Export options**
+  - Download as PDF, SVG, PNG, or JPEG  
+  - PDF/SVG preferred for publication  
+
+### Basic rules for design 
+-   **Alignment** 
+    - When elements (boxes, arrows, text) are perfectly aligned, the figure feels organized and intentional. Misalignment can signals sloppiness
+    - Reviewers and readers unconsciously use visual cues to judge rigor. A messy figure can make strong research feel weak.
+-  **Consistency throughout the entire figure**
+    - Use the same:
+      - Font type
+      - Font size
+      - Line thickness
+      - Arrow style
+      - Color scheme
+    - Consistency reduces cognitive load. Readers don’t have to “relearn” the visual language as they move through the figure.
+-   **Less is more**
+    - Remove anything that isn’t essential to understanding the figure.Clutter competes with your actual message
+    - Cut:
+      - Extra borders
+      - Shadows
+      - Redundant labels
+      - Over-explained text
+-   **Color must have purpose**
+    - Color should encode meaning, not just make things look nice.
+    - Good uses of color:
+      - Differentiate groups (e.g., adolescents vs adults)
+      - Highlight key variables
+      - Show categories or pathways
+    - Bad uses:
+      - Random colors for decoration
+      - Too many colors (rainbow effect)
+-   **Design for grayscale + accessibility**
+    - Your figure should still work if:
+      - Printed in black & white
+      - Viewed by someone with color vision deficiency
+    - Many journals print in grayscale
+      - Accessibility = ethical + professional standard
+
+### Downloading files off Google Draw
+
+The best way to download Google Draw materials is by using a vector or svg. file. To do that go to the `Files tab`, scroll down to `Download`, and select the `Scalable Vector Graphics`
+
+```{r, echo=FALSE, out.width="75%", fig.align="center"}
+knitr::include_graphics("GoogleDraw_svg_photo.png")
+```
+
+## Affinity 
+[Affinity](https://www.affinity.studio/get-affinity) is a set of professional creative applications that support vector design, raster image editing, and layout production, offering an integrated workflow for producing high-quality visual and publication materials. The suite includes Affinity Designer, Affinity Photo, and Affinity Publisher, which work together to streamline the creation of publication-ready graphics and layouts.
+
+Compared to Adobe Creative Cloud, Affinity offers similar core functionality to tools like Adobe Illustrator, Photoshop, and InDesign, but is a one-time purchase model rather than a subscription. While Adobe’s ecosystem is more widely used and includes advanced collaborative and cloud-based features. Either Affinity or Adobe Products are helpful tools for further advancing and creating clean figures.  
+
+### Opening svg. files in Affinity 
+Going back to Google draw, using the svg. file you downloaded you can upload this into Affinity by going into the `Files tab` and scroll down to `Open`.
+```{r, echo=FALSE, out.width="75%", fig.align="center"}
+knitr::include_graphics("Affinity.svg.export.png")
+```
+From here you can select your svg. file and press 'Open' to have the graphic appear in Affinity. Now it's ready for editing!
+```{r, echo=FALSE, out.width="75%", fig.align="center"}
+knitr::include_graphics("Affinity.svg.export2.png")
+```
+
+### Key Features of Affinity
+
+- **Vector design (Affinity Designer)**
+  - Create scalable graphics, diagrams, and illustrations  
+  - Precision tools (pen tool, shapes, snapping)  
+- **Raster image editing (Affinity Photo)**
+  - Photo editing and retouching  
+  - Layer-based, non-destructive workflows  
+- **Layout & publishing (Affinity Publisher)**
+  - Multi-page documents (papers, posters, figures)  
+  - Text flow, grids, and layout tools  
+- **StudioLink integration**
+  - Switch between design, photo, and layout tools seamlessly  
+- **Layers & non-destructive editing**
+  - Organize elements and edit without altering originals  
+- **Precision & alignment tools**
+  - Grids, guides, snapping, and alignment  
+- **Color & styling controls**
+  - RGB, CMYK, HEX color options  
+  - Gradients, opacity, stroke customization  
+- **Typography tools**
+  - Advanced text formatting and styles  
+- **Export options**
+  - PDF, SVG, PNG, TIFF for publication-ready output  
+- **Performance**
+  - Fast, smooth editing  
+  - One-time purchase (no subscription)  
+  
+```{r, echo=FALSE, out.width="50%", fig.align="center"}
+knitr::include_graphics("Affinity-Studio-Shortcuts-Cleansheet-Infographic-100-scaled.png")
+```
+
+### Exporting PDF file out of Affinity 
+Once you are happy with your design you can export this file into a PDF by going into the `Files tab` and scrolling down to `Export`. Here select `PDF (digital-high quality)`
+```{r, echo=FALSE, out.width="75%", fig.align="center"}
+knitr::include_graphics("Affinity.PDF.export.png")
+```
+
+## Overleaf 
+Now that you have your clean and professional graphic you can use a program like [Overleaf](https://www.overleaf.com) to embed your work into your writing. Using a program like Overleaf is helpful for collaborative writing and cleanly embeds PDFs into PDFS to get the cleanest figure possible. 
+```{r, echo=FALSE, out.width="75%", fig.align="center"}
+knitr::include_graphics("Screenshot_of_Overleaf.png")
+```
+
+### Other Notes 
+- Here is a video tutorial on the basics of [Google Draw](https://youtu.be/eSU0JbxWpoc?si=qzROA5fmuOqEzHWI) and [Affinity](https://youtu.be/lTeperbIZBc?si=zD32XdvYINVZFjg2) if you have any additional questions 
