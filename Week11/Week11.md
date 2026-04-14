@@ -1,0 +1,403 @@
+# 1. Discussion Topic: [Week 11] Readings[Week 11] Readings
+
+The course is organized as a seminar, which means all students are expected to attend all classes, have read and thought about all readings prior to each class, and participate actively and productively in class discussion.
+
+In general, before class, you should have carefully thought about: (1) how the computational methods used in each study helped address the specific research questions of interest to the authors, (2) in what sense these computational methods could extend conventional methods, (3) what are their major assumptions and limitations, and (4) what new arenas for future research these computational methods could open.
+
+To facilitate discussion, each week, all students will submit (to the whole class and me) at least TWO thoughtful questions or comments of interest to you emerging from the week's readings. These discussion questions/comments should be posted to the "Discussions" section on Canvas (named "[Week X] Readings") at least 24 hours before the scheduled class meeting. You are also encouraged to read other students' questions/comments and reply to them. Regardless of whether you are the Reading Lead for a certain week's readings, you should still post to participate in the discussion.
+
+Canvas Discussion & In-Class Participation will be evaluated based on: (1) the depth and quality of your contributions to the Canvas Discussion, and (2) the engagement and quality of your participation in class.
+
+
+## 1.1. Namuun Tsegmid
+Apr 3 4:52pm
+| Last reply Apr 14 4:09pm
+
+Reply from Namuun Tsegmid
+It was insightful to read the instructional reading Venturini (2021) about visual network analysis, its strengths, and criticisms. It was very illustrative. From this reading, the heatmap in Figure 7 was particularly interesting to me, and I hoped to find other examples of heatmaps in the other readings but did not find many, except in Way et al. (2019). I would like to better understand the use and application of heatmaps in visualization, and in what situations heatmaps are most appropriate.
+
+I found Huang et al. (2026) to be interesting, and the PR-Embed application seems useful for comparing topics in public relations scholarship. As a descriptive study, the figures did a good job explaining the methods in Figure 1 and presenting more specific findings in the subsequent visualizations. I would like to better understand Figure 4: which quadrant represents CSR–CSA, CSR-more, CSA-more, and neither? Also, it is interesting that the left side of the visualization appears sparse, while the right side shows words that are closer and more densely clustered. What does this distance and clustering indicate in terms of the method and the context?
+
+In Way et al. (2019), Figure 3 includes error bars that represent 95% confidence intervals. I understand that they show uncertainty, but I would like to better understand how to interpret them in this context. What does the Figure 3 communicate by showing error bars?
+
+### 1.1.1. Alvin Zhou (he/him)
+AUTHORTEACHER
+Apr 14 4:09pm
+
+Reply from Alvin Zhou
+On your first question about heatmaps/colormaps, this connects nicely to what I replied to Isa below just now: Colormaps are not tied to any specific method (e.g., self-exciting point processes); they are a general visualization technique.
+
+The key idea is that color represents a third dimension (a “z-axis”) on top of a two-dimensional plot. You can think of them in two common ways. First, heatmap-style colormaps, where both axes represent the same type of unit (e.g., pairwise comparisons or similarity matrices or networks), and color encodes the strength of the relationship—like in Figure 4B of Waller and Anderson (2021). Second, surface-style colormaps, where the x- and y-axes define a grid and color represents how a third variable changes across that space—like in Schneider and Rizoiu (2023), where color captures modeled outcomes such as harm reduction.
+
+In short, colormaps are a general solution for visualizing three-dimensional relationships in a two-dimensional figure, and they are widely applicable across different types of data and methods.
+
+For your question about Huang et al. (2026), I think you may have looked at an earlier version of the figure. I’ve since updated it. I would actually recommend you go to Github and download the latest version and compare it to the original (do not delete the original that you downloaded. A great opportunity to see their differences). I added a clearer legend, along with changes in color and shape, to make the quadrant interpretation (CSA vs. CSR) more explicit. That comparison should give you a concrete sense of how small design choices can improve interpretability.
+
+On your point about clustering and density in that figure: I would not over-interpret it. The fact that points appear closer together mainly reflects that those topics have similar CSA and CSR affinity values. It does not necessarily carry a deeper substantive meaning beyond that similarity.
+
+Finally, on Figure 3 in Way et al. (2019), the error bars represent 95% confidence intervals around the mean values. In this case, each point is not a single institution but a bin—specifically, each bin includes about 10 institutions (look at the X axis closely, there are only 5 bins between 0 and 50, so each bin is 10 institutions). The error bars show the variation within each bin.
+
+## 1.2. Anastasia Micich
+Apr 4 4:15pm
+| Last reply Apr 14 3:27pm
+
+Reply from Anastasia Micich
+(Way et al., 2019)
+
+In figure 1, the scatter plot uses two y-axes, one for publications and one for citations, which are overlaid on the same x-axis, which represents institutional prestige. Are there risks of reader misunderstanding or misinterpretation in a dual-axis chart such as this one? Additionally, as the authors show alignment between these two x-axes, is this potentially a result of the way the results are scaled on the axes?
+
+ 
+
+(Waller & Anderson, 2021)
+
+In figure 3, the distribution of political activity on Reddit, each bar in the figure represents one month of comment activity in political communities on Reddit, which are colored according to the distribution of partisan scores of comments posted during the month. Often, stacked bar charts over time are useful for showing compositional change, but I feel like my eye was caught more by the size of the bars rather than the shifts in color. How well does this design choice separate the key finding of the distributional shift in partisanship, rather than a change in total volume? Is there a better visualization to demonstrate this idea?
+
+### 1.2.1. Alvin Zhou (he/him)
+AUTHORTEACHER
+Apr 14 3:27pm
+
+Reply from Alvin Zhou
+For Figure 1, your concern about potential misinterpretation is valid. Dual-axis charts always carry some risk because readers may incorrectly assume the two y-axes are directly comparable. That said, I think the authors handled this relatively well. They consistently use color to differentiate the two measures: black for publications and red for citations, and apply that color not only to the points and lines, but also to the corresponding axes and labels. This reduces confusion substantially.
+
+One possible improvement would be to vary the shape of the markers (e.g., circles vs. triangles) in addition to color, which would further strengthen the visual distinction.
+
+More broadly, it is useful to become comfortable reading this type of figure. Dual-axis plots are fairly common in computational research when two related outcomes share the same x-axis but differ in scale. An alternative would be to split the figure into two aligned panels with a shared x-axis, but combining them allows for quicker visual comparison.
+
+On your scaling question: the apparent alignment between the two trends is not due to rescaling the x-axis. The x-axis (institutional prestige) is shared and fixed. What you’re seeing is that both outcomes (median publications and median citations) are plotted separately against that *same* ordering of departments. Any visual alignment reflects the underlying relationship in the data, not an artifact of axis manipulation.
+
+For Figure 3 in Waller and Anderson (2021), I don’t think your interpretation is technically correct. Because the bars are normalized, they are not conveying differences in total volume. The Panel B is *only* about composition change. So in that sense, the figure is doing what it is supposed to do. That said, your reaction actually highlights a more important point about visualization: it is fundamentally audience-centric. What matters is not just whether a figure is technically correct, but whether it communicates the intended message clearly to the viewer. If a reader finds themselves focusing on the wrong visual cue, that suggests there is still room to improve the design. So I wouldn’t treat this as “your misunderstanding,” but rather as evidence that even well-constructed figures can be refined further. If the audience is not reading the figure as intended, the burden is on the author to make that interpretation more intuitive. Realistically speaking, though, I think the authors did a good job here. The figure is effective overall, even if it is not perfectly aligned with every viewer’s perceptual tendencies.
+
+## 1.3. Carolina Aguiar Da Silva
+Apr 7 9:56am
+| Last reply Apr 14 1:36pm
+
+Reply from Carolina Aguiar Da Silva
+Way et al. (2019):
+First, I like the content of the paper. It is quite useful for us graduate students. Second, I'm in peace with this figures, they are simpler and easier to understand than the figures from last week. Figure 2, for example, has more information but it sa more organized in the visualization. About Figure 2, I was wondering if using only difference scores might hide differences in absolute productivity levels. Also, since the analysis focuses on early-career years, could it be that the effect of doctoral training appears later, as scholars develop over time?
+
+Waller and Anderson (2021):
+I found Figure 4b somewhat difficult to interpret. Since it relies on pairwise comparisons and a threshold of one standard deviation, why did the authors choose a threshold-based heatmap instead of showing continuous changes in polarization over time? Additionally, I found the color scale makes it difficult to clearly see the variation in values.
+
+
+### 1.3.1. Alvin Zhou (he/him)
+AUTHORTEACHER
+Apr 14 1:36pm
+
+Reply from Alvin Zhou
+Yes, the figures in this paper are simpler and easier to understand in comparison to other visualizations we have seen. I think the goal, especially for Figure 1, is to familiarize you with a visualization that uses two y-axes to display different outcomes over the same x-axis (time).
+
+For Figure 2, you’re right that plotting absolute productivity (e.g., two lines) could work. However, that would not directly visualize what the authors are trying to show. Their focus is on the *difference* between groups, so plotting the difference along with its 95% confidence interval is a more direct way to communicate that comparison. Showing absolute productivity is not wrong, but it answers a slightly different question and shows additional information that might distract users. Here, the emphasis is on relative differences rather than absolute levels.
+
+Regarding the early-career focus, we mentioned it in class. If the effects of doctoral training emerge later (i.e., the observed differences in publications and citations during the first six years post-hire are affected by doctoral training, instead of the effect of the new workplace), the “treatment” (working in a more prestigious environment) is not fully realized/implemented within this six-year window. You can think of it as a conservative estimate—if anything, the true effect of "working in a more pretigious environment" may have been even larger.
+
+For Figure 4b in Waller and Anderson (2021), I think the main issue is the color scale. Your suggestion of using a continuous measure is reasonable, but that is essentially what panel 4A already shows. Panels 4A and 4B are based on the same underlying data but present it differently: 4A shows the average polarization of the cohort over time, while 4B shows the proportion of users who experience polarization (based on a threshold).
+
+4B thus gives us (some) additional information. Figure 4A cannot tell us how many individuals are driving the average change. Figure 4B addresses that by showing that the overall pattern may be driven by a subset of users (e.g., a smaller group, around 30%, becoming highly polarized). That said, I agree that the added value of 4B is somewhat limited, and the color palette could be improved. A clearer scale, such as white for zero and a stronger color (e.g., red) for higher proportions, would make the variation much easier to interpret, or maybe from a lighter blue to a more saturated red.
+
+## 1.4. Qiling Wu (she/her)
+Apr 7 8:04pm
+| Last reply Apr 14 4:28pm
+
+Reply from Qiling Wu
+Schneider and Rizoiu, 2023
+
+This paper's figures are really fancy. For example, figure 2 is a perfect example. It does a really good job integrating empirical data and model-based predictions into one single visualization, which I find quite impressive. But at the same time, I struggled quite a bit to fully understand it. There are just so many layers, scatter points, density, contour lines, and heatmaps, all combined in one panel, which makes it hard to figure out what to focus on and increases the cognitive load. That said, I’m not sure it’s entirely the figure’s fault; the underlying model and research question are already quite complex, so maybe this level of visual complexity is somewhat unavoidable.
+
+Waller & Anderson, 2021
+
+I really like their figure 1. This is perfect!!! This figure is really well designed, I feel like it’s complex, but still very easy to follow. What I like most is that it breaks everything into multiple panels, and each panel does one specific thing. Panel a shows the overall structure, panel b explains the mechanism, panel c shows the distribution, and panel d helps interpret what those patterns actually mean. Compared to the previous figure, this one feels much clearer because it avoids putting too many layers into a single plot. Instead of overwhelming the reader, it kind of guides you step by step. It almost reads like a story, from the network structure to polarization and then to real communities and language, which I think is really effective for explaining their methods.
+
+### 1.4.1. Alvin Zhou (he/him)
+AUTHORTEACHER
+Apr 14 4:28pm
+
+Reply from Alvin Zhou
+I think your reaction to the Schneider and Rizoiu paper is exactly right. That figure feels overwhelming, but it’s largely because the underlying model and data structure are complex. They are essentially trying to show how two variables (x and y) jointly influence a third (z). A 3D plot would be one option, but that tends to be even harder to read, so they use a colormap to encode the third dimension. Given that goal, this is probably close to the most efficient way to represent the data.
+
+So the takeaway here is not that we should always make figures this complex, but that this kind of visualization is available when the problem requires it. In most empirical communication papers, you won’t need something like this. But it’s useful to know what is possible.
+
+I also agree with your appreciation of Waller and Anderson’s Figure 1. This is a very different design philosophy. Instead of layering everything into a single plot, they break the logic into multiple panels, each doing one specific job. That structure reduces cognitive load and guides the reader step by step, which is why it feels much clearer.
+
+This is similar to what we discussed (and showed with demo) with Figure 1 in the Huang paper as well. When the underlying data or argument is more straightforward, a multi-panel design is often more effective. So a good rule of thumb is: if the data are relatively simple, use multiple panels to tell the story progressively; if the data are inherently high-dimensional, then more complex visualizations like colormaps become necessary.
+
+## 1.5. Isabel Garlough-Shah
+Apr 8 1:37pm
+| Last edited Apr 8 1:50pm
+| Last reply Apr 14 2:51pm
+View History
+
+Reply from Isabel Garlough-Shah
+Schneider and Rizoiu, 2023
+
+The methodology, concept, and the figures displayed within this piece were incredibly fascinating. I’m mainly going to address Figure 2 because I wasn’t familiar with colormaping as a visualization technique, but I was really intrigued by it and the narrative it conveyed. Specifically it did an amazing job representing how reaction removal time and harm reduction was correlated with the trend lines. Especially with the deepening gradient in the background to indicate what percentage of all harmful posts (direct and indirect) are avoided if platforms delete within 24 hours. Almost everything in this graph is perfect, but the one aspect I still have a question about is the line graph above Figure 2A (see in the red box below). I was wondering what that graph is meant to represent? Is it meant to represent something about the relationship between #climatescam and #americafirst?  Are these standard in colormap visualizations?
+
+Screenshot 2026-04-08 at 1.33.38 PM.png
+
+Another question I had was a broader question about colormap visualizations; I was wondering if modeling self-exciting point processes is the only method that uses colormaps or can colormaps be utilized in other methods? What kinds of results should utilize colormaps? Thank you for any clarification on these questions!
+
+### 1.5.1. Alvin Zhou (he/him)
+AUTHORTEACHER
+Apr 14 2:51pm
+
+Reply from Alvin Zhou
+As we discussed in class, the graph in the red box represents the distribution (density) of the x-axis variable, which is n*. Because the authors use two different datasets, the two lines correspond to those distributions: the red line shows the distribution for #americafirst, and the green line shows the distribution for #climatescam. So your interpretation is correct: it is not about the relationship between the two hashtags directly, but rather about how each dataset is distributed along the x-axis.
+
+This type of marginal distribution plot is not specific to colormap visualizations. More generally, when the distribution of a key variable (on the x- or y-axis) is important for interpreting the main figure, researchers sometimes include an auxiliary plot like this to provide additional context. It is not extremely common, but it is also not unusual in more technical papers.
+
+On your broader question about colormaps: they are not limited to self-exciting point process models. Colormaps are simply a visualization technique and can be used across many different methods. The key idea is that color encodes a third dimension (a “z-axis”) on a two-dimensional plot. For example, in the Schneider and Rizoiu figure, color represents a third variable (e.g., harm reduction or some modeled outcome) over a grid defined by the x- and y-axes. In contrast, in Figure 4B in Waller & Anderson (2021), the colormap is used in a matrix-style heatmap where the x- and y-axes represent the same type of units (e.g., pairwise comparisons), and color encodes the strength of the relationship.
+
+So conceptually, there are at least two common uses: 1. Heatmap-style colormaps: used for pairwise comparisons, similarity matrices, or network-related structures; 2. Surface-style colormaps: used when you have three variables and want to visualize how a third variable changes over combinations of two others (you can certainly do a x-y-z 3D plot, but that would be less visually clean than heatmaps). In short, you can think of colormaps as a general solution for visualizing three-dimensional relationships in a two-dimensional space.
+
+## 1.6. Ruiheng (Rachel) Sun (she/her)
+Apr 8 1:51pm
+| Last reply Apr 14 3:58pm
+
+Reply from Ruiheng (Rachel) Sun
+Huang et al.’s article is really insightful! I especially find word embedding compelling in this context, given how semantically similar many of the words are, STM may fail to capture subtle nuances. I really appreciate the authors' use of consistent colors for CSA and CSR in their visualizations (which is better than some of the readings from last week). Overall, visualization is excellent.
+
+Way et al.’s (2019) article reminds me of the hiring hierarchy paper we read a few weeks ago. It is particularly interesting that department prestige rather than doctoral institution prestige appears to have a substantial impact on productivity. Beyond the authors’ interpretations, I guess citation bias might also play a role. Scholars affiliated with more prestigious departments may be perceived as more credible, especially early in their careers, which could lead to greater visibility and higher citations. For visualization, Figure 1 only includes median publications. I was wondering whether there is a way to adjust this one by including variations. Additionally, I have to say their Figure 2 is really great, because I could understand their quasi experiment before reading the article deeply. It is also smart to use triangulation shapes in Figure 4 to incorporate both models in one figure for comparison. I think some visualizations really need some creativity!
+
+Dash Nelson and Rae’s (2016) article has a lot of geographical visualizations. Most figures include the point-to-point flows, and the density of the flows could be easily recognized. However, when flows become highly dense, it may be difficult to distinguish how many individual flows overlap with one another. There might be a limitation for current figures, and I wonder if it is practical to achieve this.
+
+### 1.6.1. Alvin Zhou (he/him)
+AUTHORTEACHER
+Apr 14 3:58pm
+
+Reply from Alvin Zhou
+Your point about citation bias is a good one, but it addresses a different question from what the authors are trying to do. The paper is primarily descriptive: it shows that scholars in more prestigious departments receive more citations. Explaining why that pattern exists (whether due to citation bias, visibility, or perceived credibility) is a separate step that the paper does not attempt to fully unpack.
+
+On your question about Figure 1, there are ways to incorporate variation, but each comes with tradeoffs. In principle, you could plot all individual data points (for example, instead of showing one median value per department, you could plot every scholar within each department). But in practice, that would make the figure extremely cluttered and difficult to read.
+
+What the authors do instead (plotting department-level medians, fitting a line, and adding confidence intervals for that fitted lines for medians) is a deliberate simplification. It sacrifices some granularity in order to communicate the overall relationship clearly. If you wanted to show more detailed variation, that is often better suited for tables, appendices, or supplementary figures rather than the main visualization. This reflects a broader principle: figures are for communicating the main pattern, not for displaying every detail in the data.
+
+I also agree with your appreciation of Figure 4. It is a creative way to present multiple models in a single visualization. That said, I want to flag a practical consideration. These kinds of figures (where visualizations effectively replace regression tables) can receive pushback from reviewers, especially in more traditional areas. So while they are effective, it is often useful to be prepared to revert to more conventional presentations if needed.
+
+For the Dash Nelson and Rae (2016) point, I think you may be focusing on something the authors are *not trying to* show. The goal of those maps is not to display every individual flow or precisely distinguish overlapping connections. Instead, the goal is to reveal large-scale structure, specifically, the emergence of megaregions based on commuting patterns.
+
+In that sense, the “loss” of individual detail is intentional. Visualization always involves abstraction. Even if it were technically possible to show every overlapping flow, doing so would likely obscure the main message rather than clarify it. Effective visualizations are not about maximizing data fidelity. They are really about *selectively* simplifying the data to communicate the core idea.
+
+## 1.7. Wenwen Cao
+Apr 8 4:19pm
+| Last reply Apr 14 1:54pm
+
+Reply from Wenwen Cao
+Way et al., (2019)
+
+Figure 2 reports mean differences across matched pairs, while Figure 1 presents median publication and citation counts at the institutional level . Given that publication and citation distributions are often highly skewed, I wonder how the results in Figure 2 might differ if median differences were used instead of means. Would using medians provide a more robust representation of typical outcomes? Additionally, would adopting a consistent summary statistic across figures (either mean or median) improve interpretability and coherence in the paper’s visualizations?
+
+Another question I had is whether these findings can be extended to other academic fields, given that the study is based entirely on computer science faculty . In Figure 4, department size and the number of PhD students per faculty appear to be among the strongest predictors of publication output. However, these structural features may differ substantially in other fields, such as the social sciences, where departments are often smaller and have fewer PhD students. Given this, is it appropriate for the authors to present their conclusions in relatively general terms, without clearly limiting them to computer science?
+
+Huang et al. (2026)
+
+In Figure 2, I found the use of color gradients along the CSA–CSR spectrum particularly effective in guiding interpretation, as the gradual transition makes it easy to see how topics are distributed across the continuum. In contrast, Figure 4 feels more visually dense and somewhat harder to interpret at first glance, as it includes many labeled points, multiple categories, and overlapping text, which creates a sense of clutter. This made me wonder whether the figure could be improved by simplifying some visual elements—for example, by reducing the number of labels, using transparency to de-emphasize less important points, or highlighting only a subset of key topics. This also reminded me of Schwabish (2014), particularly Figure 2A and 2B, where removing unnecessary elements significantly improves clarity. Applying a similar approach here might help Figure 4 better balance information richness and readability?
+
+### 1.7.1. Alvin Zhou (he/him)
+AUTHORTEACHER
+Apr 14 1:54pm
+
+Reply from Alvin Zhou
+Your question is a really good one. After reading your comment, I went back to Figure 2 and noticed the same issue, you’re right that they use the mean there instead of the median. I also found it a bit inconsistent. I did a quick scan of the paper and realized that they switch between mean and median across different parts of the analysis.
+
+In general, a cleaner approach would be to choose one primary statistic (either mean or median) for the main text and then report the alternative in the appendix as a robustness check. For example, if the main analysis uses medians, then the same analysis using means could be included in the appendix. That would improve consistency and transparency.
+
+My guess is that their choice is partly driven by presentation. In some cases, the median produces a cleaner or more stable-looking pattern, while in others the mean may better reflect differences across groups. ***If the authors are confident that the results are robust to both specifications***, then the decision becomes partly about communication/presentation: how to present the findings in the clearest way. That said, I still agree with you that using a consistent summary statistic across figures in the main text would improve coherence.
+
+On your second question, I think your concern is valid. The study is based entirely on computer science faculty, so strictly speaking, the conclusions should be bounded to that context. However, in general-interest journals, it is common to frame findings more broadly than the data strictly justify. This is partly a strategic choice: broader framing attracts more attention and signals wider relevance (we usually consider Science/Nature/PNAS/NHB etc as "tabloid journals," you need some "wow" factors for the paper). In practice, though, the validity of the findings is still tied to the specific data and context. So a more precise title would likely reference computer science (and possibly the U.S.).
+
+Your comment on Figure 4 in the Huang paper is also well taken. I think one approach would be to align the figure more closely with the main text: emphasize the topics that are discussed in main text and de-emphasize the rest. Right now, the figure tries to show everything, but that may not be necessary for effective communication. I have relayed your comment to Jiacheng.
+
+## 1.8. Jiarou Chen (she/her)
+Apr 8 4:38pm
+| Last edited Apr 8 4:39pm
+| Last reply Apr 14 2:37pm
+View History
+
+Reply from Jiarou Chen
+(Huang et al., 2026)
+
+Figure C shows the trends of vector similarity of CSA and CSR at the word level and at the level of related papers over time. However, 1) Why do the trends of the two graphs appear to be opposite in the ranges of 18-22 and 23-24? (What I originally expected was that their trends should be consistent?) 2) Line graphs can clearly show the trend of changes over time. But since there seems to be no equivalent alternative significant indicators like p-values, how should we determine whether these fluctuations are meaningful or merely random variations? 3) In Figure 3C2, two baselines are presented. However, from the figure caption, it seems that there is no clear difference between them. How can we determine which one belongs to the CSA-CSR baseline and which one belongs to all-paper?
+
+Figure 4 is extremely helpful for understanding the classification of different research topics! But I would like to know how the coordinate axes of this graph and the positions of the different points were calculated? If the number of studies on a certain topic is particularly large, will this have any impact on the position of this coordinate and the "origin"? Are there any similar procedures like standardization?
+
+### 1.8.1. Alvin Zhou (he/him)
+AUTHORTEACHER
+Apr 14 2:37pm
+
+Reply from Alvin Zhou
+For Figure C, I would not expect the two trends to be consistent. Panel C1 measures vector similarity at the word level, whereas C2 measures similarity at the paper level. These are similar, but fundamentally different units of analysis. The meanings of the terms “CSA” and “CSR” may converge over time in language use, while the bodies of research associated with those terms may diverge or evolve differently. So it is entirely plausible for the two trends to move in different directions. That said, for the purposes of this paper, the main goal is to illustrate the visualization rather than to make a strong empirical claim. Still, it is important to understand why such differences can occur conceptually.
+
+For your second question, this is a key limitation of this type of analysis. The figure does not provide a formal way to distinguish meaningful patterns from random variation. There is no causal inference or hypothesis testing here, and no p-values. The baselines (CSA–CSR and all-paper) serve only as reference points to *suggest* patterns rather than to confirm them.
+
+If one wanted to push this further, a more rigorous approach could involve simulation—for example, generating expected distributions of vector similarity under some null model and comparing the observed values against that distribution. That would allow for something closer to statistical inference. But in the current paper, that step is not taken.
+
+Your third point about the baselines is a good catch. Originally, the two lines were plotted with different line styles. I changed them to the same dotted line format, assuming the ordering in the legend would be sufficient for interpretation (i.e., the upper line corresponds to the CSA–CSR baseline, and the lower one to the all-paper baseline). In hindsight, that makes the figure harder to interpret, and your suggestion is valid. I have gone back to the code and changed it, now it looks like this:
+
+image.png
+
+For Figure 4, if you look at the main text, the axes are based on mean values. Specifically, we calculate CSA/CSR's affinity towards each topic, and then take the mean affinity as the coordinate (the vertical X and the horizontal Y) on each axis. Because there is more research on CSR than CSA, the scale of the y-axis is larger than that of the x-axis. This reflects the underlying data rather than any transformation. There is no standardization applied here. In principle, we could rescale both axes (e.g., to 0–1), but that would not change the relative positioning of points—it would only rescale the visualization. I think keeping the absolute values should be fine here.
+
+## 1.9. Eun Sun Kyoung
+Apr 8 6:03pm
+| Last edited Apr 11 10:58am
+| Last reply Apr 14 3:06pm
+View History
+
+Reply from Eun Sun Kyoung
+Schneider & Rizoiu (2023):
+
+Although Figure 2’s caption provides an additional explanation, I still found the notation somewhat hard to process at once. It might be more convenient if Table 1 were placed on the same page as Figure 2 (either directly above or below it) for easier reference. Alternatively, I wonder whether the symbols used in the graph could be made more visually intuitive, or whether symbols(notation) must remain consistent with Table 1 for some academic reasons.
+
+I am also curious if there might be easier ways to present A and B in Figure 2. It would be interesting to hear others’ ideas on how to make Figure 2 more intuitive.
+
+Way et al. (2019):
+
+I was very impressed by how rigorous and compelling the analysis is, particularly the use of exact matching and caliper matching along with various control variables.
+
+In Clauset et al. (2015) we read in week 8, I was curious if number or quality of publications should be taken into account when comparing effects of institutional prestige and merit. Since that study used network analysis, I wonder whether incorporating such control variables is inherently more difficult network analysis. In contrast, does the methodology used in this paper make it easier to include control variables?
+
+Dash Nelson & Rae (2016):
+
+In this paper, Figure 6 additionally visualizes flows that are color-coded according to the assigned community of their destination node. Although this is beyond the scope of the current study, it seems that future research could deepen our understanding of megaregions by incorporating directionality in addition to simply connecting commuting nodes. I wonder whether accounting for directionality could help in defining megaregions, beyond just showing where jobs are located or highlighting dependencies.
+
+### 1.9.1. Alvin Zhou (he/him)
+AUTHORTEACHER
+Apr 14 3:06pm
+
+Reply from Alvin Zhou
+Your question about placing Table 1 closer to Figure 2 is a good one. I suspect this is more a typesetting issue than an intentional design choice by the authors. In many cases, when authors submit a manuscript, tables and figures are positioned exactly where they are meant to appear (Table 1 right before Figure 2), but during the publisher’s layout process, they can end up separated due to formatting constraints. This is also why careful proofreading at the production stage matters: you can often request specific figure and table placements from the publisher.
+
+Regarding the symbols in the graph, I assume you are referring to notations like n*, T_1, and Delta. Some of these are reasonably clear, for example, Delta is labeled as reaction time, and panel B specifies X as harm reduction. The main issue is that variables like n* and T_1 are not immediately intuitive. I agree that adding more descriptive axis labels or annotations would make the figure easier to interpret, even if the notation itself needs to remain consistent with Table 1.
+
+More broadly, I think we all agree that Figure 2 is difficult to interpret, but also close to the best possible solution given what the authors are trying to show. They are essentially visualizing relationships among three variables, where color represents a third dimension (e.g., Delta or harm reduction) over combinations of two others (n* and T_1). If you avoid this type of visualization, the alternative would likely be a 3D plot, which is often harder to read. In that sense, a heatmap-style representation is a reasonable choice, even if it requires some effort to interpret.
+
+On your question about Clauset et al. (2015), I think it is helpful to distinguish between goals. That paper is primarily descriptive rather than causal. In principle, network analyses could incorporate variables like publication count or quality, but they would not typically be used as “controls” in the same sense as in regression-based designs. Instead, those factors might be incorporated into simulations or used to generate expected network structures, which can then be compared to observed patterns. In contrast, the matching approach used in Way et al. (2019) is explicitly designed to facilitate comparison while controlling for confounding variables. So yes, this methodology makes it more straightforward to incorporate controls, because it is built around isolating differences between comparable units.
+
+Finally, on your point about directionality in Dash Nelson & Rae (2016), I think directionality is somewhat implicitly conveyed in Figure 6. For example, central cities like Minneapolis are positioned at the core of the network, suggesting that commuting flows are primarily directed toward them. That said, this is only an approximation: commuting flows are not strictly one-directional, there could be people driving from Minneapolis to Edina to work. Incorporating explicit directionality could add nuance, but I am not sure it would fundamentally change the identification of megaregions. The overall structure is likely to remain similar, even if directional flows are modeled more precisely.
+
+## 1.10. Jiakun Liang
+Apr 8 6:23pm
+| Last reply Apr 14 3:15pm
+
+Reply from Jiakun Liang
+1. Schneider & Rizoiu (2023): Figure 2 provides a very clear and policy-relevant visualization of content moderation effectiveness by integrating key parameters, including potential harm and content half-life. By mapping these onto modeled reaction time and expected harm reduction, it offers a clear framework for understanding how response speed interacts with diffusion patterns. However, the boundary lines appear like a clear decision boundaries between safe and unsafe reaction time. Does the model actually imply such hard threshold for moderation effectiveness, or is the effectiveness a continuous variable? Can continuous color instead of clear lines better represent such patterns?
+
+2. Dash Nelson & Rae (2016): I think Figure 6 is particularly helpful to understand the key results of the article by clearly visualizing the patterns of interconnectivity within and across communities. The figure clearly demonstrates that areas within the same community are densely interconnected, while connections across communities are relatively weaker, providing strong visual support for the idea that these regions are not arbitrarily assigned, but are functionally meaningful. However, I am still confused about the boundary areas. How should we interpret these boundary zones where different colors are connected for a very distinct partitions? 
+
+### 1.10.1. Alvin Zhou (he/him)
+AUTHORTEACHER
+Apr 14 3:15pm
+
+Reply from Alvin Zhou
+For your first question, you’re right that the underlying variable in Figure 2 is continuous. In principle, the authors could have used a fully continuous color gradient instead of dividing the space into discrete regions with boundary lines.
+
+However, those lines serve an important interpretive function. Without them, the figure would rely entirely on subtle color variation, which can be difficult to read precisely. Right now, the boundaries help readers map ranges of values more clearly. For example, distinguishing intervals like 30 to 60 minutes. In that sense, transforming a continuous variable into discrete bins makes the visualization more interpretable, even if it introduces somewhat arbitrary thresholds.
+
+So conceptually, effectiveness is continuous, not defined by hard thresholds. The boundary lines are a visualization choice rather than a claim about sharp decision cutoffs. A fully continuous gradient would be more faithful to the data, but likely less readable/interpretable.
+
+For your second question, the boundary areas in Figure 6 indicate regions that are not strongly associated with a single community. Instead, they are areas with relatively balanced connections to multiple communities. In other words, if a location sits on a boundary, it is connected to different megaregions to a similar degree. That is why you see different colors meeting in those areas.
+
+## 1.11. Quin Mudry Nelson (she/they)
+Apr 8 7:02pm
+| Last reply Apr 14 3:34pm
+
+Reply from Quin Mudry Nelson
+Dash Nelson and Rae 2016: I work with maps a lot, and I really like these visualizations. While maps are super digestible for lay people it's easy to get lost without familiar boundaries or landmarks for reference, so I appreciate the major cities' inclusion (and NOT the census tract boundaries which are not as familiar to people broadly, and are small boundaries that would clutter the map) to give the reader context about where these commuter flows between tracts are central to. I also appreciated the extra nod to the Twin Cities metro in this paper which display the differences between San Francisco and the Bay area's commuting relationships compared to ours. And their description of their findings does match what I think people typically experience here as far as travel in and out of the metro area. I found it cool that their approach even captured the Western Wisconsin relationship (i.e. Hudson and a bit beyond) as an added bonus.
+
+Way et al. 2019: I found this article very interesting and especially appreciated their visualizations (and that they didn't label their study a difference in difference when it's definitely a quasi-experiment like they state, but I've seen people make figures like these and get it wrong in my field). My favorite visualization in this paper is Figure 4, especially how they convey the results of both regression analyses with colored boxes rather than throwing all of the regression coefficients up into one massive table. The colors (or lack of color/just a dot) made it easier to understand the results more quickly than a table, which is hard to do even with one model...much less two! I also appreciated the comprehensiveness of their visuals for Figure 2 which made it clear how they matched scholars and outcomes of prominence versus prestige. 
+
+This is more so a methods question than a visualization one, but I noticed in the Way et al. paper and a few of the papers from last week that a log10 is more common to use than reporting a natural log scale (of which a lot of logistic regression function on when reporting log-odds, which people typically transform to odds ratios or report marginal effects instead if they're using a frequentist approach). Is there a reason log10 is more commonly used in mass communication or computational methods papers? 
+
+### 1.11.1. Alvin Zhou (he/him)
+AUTHORTEACHER
+Apr 14 3:34pm
+
+Reply from Alvin Zhou
+I agree with your observation about the maps. Highlighting major cities is a very effective design choice, it anchors the visualization in something familiar and makes the patterns much easier to interpret. I also share your appreciation for Figure 4 in Way et al. (2019). It is a very efficient way to communicate regression results without forcing readers to parse a dense table. That said, I want to flag a practical consideration. While this kind of visualization tends to be well received in computational or methods-oriented spaces, it can generate pushback in more traditional or less quantitatively oriented areas. I’ve used similar figures before and encountered resistance, even when they were arguably clearer than tables. So it’s a good design, but one that is still somewhat audience-dependent.
+
+On your question about log transformations: there isn’t a strict disciplinary rule that favors log10 over the natural log. Statistically, the choice does not change the underlying results, it only rescales the variable. The difference is mainly interpretive. Log10 can feel more intuitive because it maps directly onto base-10 reasoning (e.g., we all know 10^2=100), whereas the natural log is less immediately interpretable unless you are used to thinking in terms of e. In practice, researchers often choose based on what makes the results easier to communicate, rather than any methodological necessity. I found this Reddit discussion when thinking about your comment: https://www.reddit.com/r/statistics/comments/em0t0e/q_is_there_general_advice_for_when_to_use_log_vs/ Links to an external site.
+
+## 1.12. Jikai Sun (he/him)
+Apr 8 7:36pm
+| Last reply Apr 14 3:49pm
+
+Reply from Jikai Sun
+In Way et al. (2019), should their Figure 1 add a legend about what different colors mean? At least at my first glance, this visual is not that intuitive. Using both a left y-axis and a right y-axis in the same figure may not be ideal since it could cause some confusion. Would it be possible to replace this figure with two sub-figures instead?
+
+In Figure 3 C2 of Huang et al. (2026), I’m curious about what kind of y-axis scale should be used when presenting data in figures. For example, the difference between 0.90 and 0.96 may look quite large when the y-axis ranges from 0.9 to 1, but it may look much smaller under a different y-axis scale, like 0 to 1.
+
+### 1.12.1. Alvin Zhou (he/him)
+AUTHORTEACHER
+Apr 14 3:49pm
+
+Reply from Alvin Zhou
+For Figure 1 in Way et al. (2019), I don’t think an additional legend is necessary. The mapping is already embedded in the design: the black dots and line correspond to the left y-axis (median publications), and the red dots and line correspond to the right y-axis (median citations). The authors reinforce this consistently by coloring not just the data points, but also the axis labels, ticks, and titles. So the figure is internally coherent.
+
+What you’re reacting to is the cognitive load of dual-axis plots. They require the reader to mentally separate two scales at once, which is not always intuitive at first glance. That said, this type of visualization is quite common, especially when two related outcomes share the same x-axis. Could this be split into two sub-figures? Yes, and some papers do exactly that, often at the request of reviewers. But there is a tradeoff. Keeping them together makes comparison more immediate and saves space, while separating them reduces cognitive burden but weakens the direct visual alignment. Personally, I would keep them combined unless there is strong feedback from reviewers pushing for separation.
+
+For Figure 3C2 in Huang et al. (2026), your question about the y-axis scale is an important one. In general, axis scaling can strongly shape perception. A narrow range (e.g., 0.90 to 1.00) can visually exaggerate small differences, whereas a full range (0 to 1) compresses them. The key issue here is what the y-axis represents. When the variable has a clear, concrete meaning (e.g., counts), there is a stronger expectation to anchor the axis at a meaningful baseline like zero. For example, if you are plotting population counts from 1.0 million to 1.2 million, choosing whether the y-axis starts at 0 or at 1.0 million will dramatically change how large those differences appear. In those cases, the axis choice directly affects substantive interpretation, so starting at zero (or at least lower number, like 300k) is often expected.
+
+But in this case, the y-axis is cosine similarity, which is a derived metric that does not have a natural “zero point” in a substantive sense. It is already an abstract index rather than a directly interpretable quantity. Because of that, it is reasonable to focus on a narrower range where the variation actually occurs. If all meaningful values cluster around, say in our paper’s case around 0.95, then plotting from 0 to 1 would mostly add empty space and obscure the pattern. So while the choice of scale does affect perception, using a restricted range here is defensible and arguably more informative.
+
+## 1.13. Jessica Tuleassi
+Apr 8 8:35pm
+| Last edited Apr 8 8:35pm
+| Last reply Apr 14 4:23pm
+View History
+
+Reply from Jessica Tuleassi
+Waller and Anderson (2021)
+
+I did my RLA on this paper and I found it to be super interesting. The large dataset used and complex methodology used in this paper is top notch. My question is: 
+
+The authors chose to measure polarization using the mean absolute partisan z-score (measuring distance from the center regardless of direction) rather than directional scores. How does this specific mathematical representation in Figures 4 and 5 affect our technical understanding of the "spike" in 2016, and would a visualization based on raw directional shifts have obscured the "stark ideological asymmetry" found in the right-wing activity?
+
+ 
+
+Way et al. (2019)
+
+This is an interesting article because I always had the impression that prestigious departments are more productive simply because the hire better or more inherently talented people. By utilizing a matched-pairs experimental design, the authors demonstrate that an individual’s productivity is largely a product of their current work environment, effectively "locking in" past successes through institutional facilitation rather than just doctoral prestige. 
+
+In Figure 4, how does the heatmap's design allow for the simultaneous comparison of two different regression models within a single cell, and what visual cue is used to denote results that lack statistical significance? Would this have been better represented using tables?
+
+ 
+
+### 1.13.1. Alvin Zhou (he/him)
+AUTHORTEACHER
+Apr 14 4:23pm
+
+Reply from Alvin Zhou
+You’re pointing to an important design choice. If the authors had used raw partisan z-scores instead of absolute values, both the visualization and interpretation would look very different.
+
+Using the mean absolute partisan z-score emphasizes overall polarization: how far users are from the center, regardless of direction. This allows the authors to first establish a broad pattern: polarization increases sharply around 2016. That framing is relatively neutral and focuses on magnitude. Only later (in Figure 5) do they introduce directionality and show that this increase is asymmetrical, driven primarily by right-leaning activity. If directional scores were used from the beginning, that asymmetry would appear earlier, but the narrative would shift from "when polarization increases" (to show the face validity of their methods) to "who drives it" (which seems more of a substansive research question, which is not their goal of the paper).
+
+So this is less a technical choice and more a framing decision. The paper is primarily about measuring and mapping polarization as a general phenomenon---essentially a methodological contribution. You can see this in earlier figures (e.g., male/female, young/old in Figure 2). The 2016 asymmetry is just one illustrative case. Starting with asymmetry would disrupt that broader flow, so using absolute values early on makes sense.
+
+For Figure 4 in Way et al. (2019), the design compresses a large number of regression results into a single visual. Each cell represents a predictor–outcome pair across model specifications, with shapes indicating significant effects and empty cells indicating non-significance. So, the non-signficant coefficients are literally those "no triangle" "no cube", for example the "Local population" variable.
+
+While these results could be presented in tables, that would involve dozens of coefficients across roughly 20 models, making it difficult to identify patterns quickly. The visualization instead foregrounds the key signal—what matters, where, and under which specifications—allowing for faster comparison.
+
+There is, however, a tradeoff. As mentioned to other students, these “table-replacement” visualizations are often appreciated in computational or methods-oriented work but can receive pushback in more traditional disciplines. Some reviewers prefer full regression tables for transparency or are less comfortable with visual encodings. In practice, many papers address this by including visual summaries in the main text and full tables in the appendix.
+
+## 1.14. Kaiyi Yu
+Apr 8 9:44pm
+| Last reply Apr 14 4:48pm
+
+Reply from Kaiyi Yu
+I am doing RLA for Schneider & Rizoiu (2023). I think their figures are amazing. The article is short compared to other journal articles, so the figures are really helpful for readers to understand the findings. Panel A and B actually demonstrate all the main findings of this study. I think Figure 1 is very helpful for people like me who do not know the self-exciting point process or the complicated equations at the end of the method section. It is understandable to use visualization to demonstrate all the variables rather than only giving test-based definitions.
+
+For Figure 2, one question is why the line plot above Panel A is only based on the x-axis. I understand the line plot shows the density of harmful posts across different levels of potential harm. Another question is that I noticed that the scales on the right, for both harm reduction and reaction time, are not evenly spaced. For example, some intervals are 5% but some intervals are 10%. I wonder why they designed it this way.
+
+Not for visualization, but I find it difficult to interpret their findings. For example, from my intuition, although the harm reduction percentage is high, the absolute amount of remaining harmful posts may still be larger due to the higher baseline level of potential harm. I feel I may misunderstand their findings, because potential harm (the number of direct offspring posts) is not an observable quantity in the real world but is a model-derived parameter.
+
+### 1.14.1. Alvin Zhou (he/him)
+AUTHORTEACHER
+Apr 14 4:48pm
+
+Reply from Alvin Zhou
+I agree with your appreciation of Figure 1. As I mentioned in class, while most attention goes to Figure 2, Figure 1 is actually doing a lot of important work. It provides a clear and intuitive illustration of the phenomenon before introducing the more complex modeling, which is especially helpful if you are not familiar with the method.
+
+For your Figure 2 question, the line plot above Panel A is based on the x-axis because the authors chose to show the empirical distribution of harmful posts (n^*) for the two datasets. You’re right that both the x-axis and y-axis (content half-life, T_1) are observed in principle, so they could have plotted a density for the y-axis as well. The reason they likely did not is because the x-axis distribution is more central to interpreting the model outputs, whereas the y-axis is treated more as a parameter over which outcomes are evaluated.
+
+On your second question about uneven scales: your observation is correct. The spacing is not linear, which can introduce some visual distortion. My interpretation is that the authors selected intervals that are more intuitive in practice (e.g., 5 minutes, 15 minutes, 1 hour, 24 hours), especially in the context of content moderation. This improves interpretability but reduces strict visual accuracy. Ideally, spacing would reflect the true scale more closely.
+
+Finally, your confusion about interpretation is understandable. Honestly, I also had difficult time intepretating the paper. That said, I would not focus too much on fully unpacking the empirical meaning here. The main takeaway for this class is methodological: this figure shows how to visualize relationships among three variables (x, y, z) using a colormap, instead of a 3D plot. And knowing what's possible here opens up possibilities for your future visualizations.
