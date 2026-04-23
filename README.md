@@ -35,7 +35,7 @@
 
 # 1. Syllabus, Components, and Assignments
 
-- Course: JOUR 8500 Computational Communication Research
+- Course: HI JOUR 8500 Computational Communication Research
 - Instructor: Alvin Zhou
 - Email: <alvinyxz@umn.edu>
 - Date: Thursdays 2:30-5pm, Jan 22 – Apr 30, 2026 (No class on Mar 12)
