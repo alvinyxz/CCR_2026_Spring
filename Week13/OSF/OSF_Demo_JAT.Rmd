@@ -1,0 +1,105 @@
+---
+title: "OSF Demo"
+author: "Jessica Tuleassi"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+
+## About Open Science Framework
+
+The Open Science Framework (OSF) is an online platform created by the Center for Open Science (founded in 2013) to support transparent and reproducible research. Researchers can share data, materials, and research plans. This repository was created to mitigate the reproducibility or replication crisis.
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(eval = TRUE,echo = FALSE,warning = FALSE,message = FALSE)
+```
+
+
+```{r, echo=TRUE}
+knitr::include_graphics("osf_home.png")
+```
+
+You first have to create an account if you don't have one yet. It is easy to create an 
+
+```{r, echo=TRUE}
+knitr::include_graphics("osf_signup.png")
+```
+
+
+### Types of Projects 
+Preprints
+Replication Projects (project folder)
+Preregistration and registration
+
+## Preprints
+A preprint is a version of a research paper that is shared publicly before peer review. Preprints allow fast sharing of research and open access to scientific work.
+
+```{r, echo=TRUE}
+knitr::include_graphics("osf_preprints.png")
+```
+
+Let's browse some preprints available on the OSF page. We will use Preprints from Dr. Alvin Zhou. Because we have created an account, you can browse the website and look for authors and projects that have been published on the platfrom. You simply use the Search OSF button on the left side of the screen. 
+
+
+```{r, echo=TRUE}
+knitr::include_graphics("osf_preprint_eg.png")
+```
+
+More features
+
+```{r, echo=TRUE, out.width="45%"}
+knitr::include_graphics(c("osf_pp_feature_1.png", "osf_pp_feature_2.png"))
+```
+
+You can learn more about how to upload preprints here <https://help.osf.io/article/376-preprints-home-page#How-to-Prepare-Your-Preprint-UwA-q>
+
+
+## Replication Projects (project folder)
+
+An OSF project acts as a central workspace where all research materials are stored.It is a curated container within an OSF project, component, or registration that houses all necessary files to reproduce a study's findings or replicate the research. 
+
+```{r, echo=TRUE, out.width="45%"}
+
+##How to create a project
+
+knitr::include_graphics("osf_rp_create.png")
+```
+
+
+
+
+```{r, echo=TRUE, out.width="45%"}
+
+# Examples of Replication project
+
+knitr::include_graphics(c("osf_rep_1.png", "osf_rep_2.png", "osf_rep_3.png"))
+```
+
+
+## Preregistration
+
+Preregistration involves documenting research plans before conducting the study.This is where researchers specify hypotheses, methods, analysis plan, etc.Preregistration increases transparency and prevents bias in research.
+
+
+```{r, echo=TRUE, out.width="45%"}
+
+# How to Preregister your study
+#NB: If there are several authors you list as part of your study, they all need to accept the invitation to preregister the study. This confirmation is sent to their email
+#Until you submit the study, it still remains in your draft. 
+
+knitr::include_graphics(c("osf_prer_1.png", "osf_prer_2.png", "osf_prer_3.png"))
+```
+
+
+### Example of a preregistered study
+<https://osf.io/k37pb/overview> 
+
+More links: <https://osf.io/registries/osf/new>
+
+## Summary
+Preprints → Share research early
+Project folders → Share data and code
+Preregistration → Plan research in advance
+
+OSF supports open, transparent, and reproducible science. You can also learn more on the [website](https://osf.io/). If you are new to the website, there are templates you can adapt to suit your study. 
